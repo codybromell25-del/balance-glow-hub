@@ -9,8 +9,8 @@ const ClassLevelsSection = () => {
       level: "Foundation",
       title: "New to Reformer?",
       description: "Perfect for beginners. Learn the fundamentals, build confidence, and master proper form in a supportive environment.",
-      color: "from-teal-500/10 to-teal-600/5",
-      borderColor: "border-teal-500/20",
+      color: "from-primary/10 to-primary/5",
+      borderColor: "border-primary/20",
     },
     {
       icon: Zap,
@@ -25,8 +25,8 @@ const ClassLevelsSection = () => {
       level: "Advanced",
       title: "Challenge Yourself",
       description: "Complex sequences and specialty classes like Slow Burn. For experienced practitioners seeking intensity and variety.",
-      color: "from-accent/10 to-accent/5",
-      borderColor: "border-accent/20",
+      color: "from-primary/10 to-primary/5",
+      borderColor: "border-primary/20",
     },
   ];
 
