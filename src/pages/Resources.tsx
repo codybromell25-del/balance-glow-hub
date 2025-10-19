@@ -12,7 +12,7 @@ const Resources = () => {
     },
     {
       title: "The Benefits of Small Group Classes",
-      excerpt: "Why boutique class sizes make all the difference in your Pilates journey.",
+      excerpt: "Why small class sizes make all the difference in your Pilates journey.",
       category: "Wellness Insights",
       date: "Coming Soon",
     },

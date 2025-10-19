@@ -16,7 +16,7 @@ const About = () => {
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Balance Studios was born from a simple belief: that strength, flexibility and confidence 
-                are for every body. We're here to make boutique reformer Pilates accessible, welcoming, 
+                are for every body. We're here to make reformer Pilates accessible, welcoming, 
                 and transformative.
               </p>
             </div>
@@ -37,7 +37,7 @@ const About = () => {
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   At Balance Studios, we believe that wellness should be personal, supportive, and 
-                  empowering. With five boutique locations across Kildare, Wicklow, and Meath, we've 
+                  empowering. With five locations across Kildare, Wicklow, and Meath, we've 
                   created spaces where small groups, expert instruction, and genuine community come together.
                 </p>
                 

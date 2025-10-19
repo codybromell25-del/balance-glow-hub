@@ -30,7 +30,7 @@ const HeroSection = () => {
           </p>
           
           <p className="text-lg text-foreground/80 mb-8 max-w-2xl leading-relaxed">
-            Experience boutique reformer Pilates with expert instructors across five beautifully designed studios in Kildare and Wicklow. Small groups, personalized attention, transformative results.
+            Experience premium reformer Pilates with expert instructors across five beautifully designed studios in Kildare and Wicklow. Small groups, personalized attention, transformative results.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

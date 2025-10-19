@@ -70,7 +70,7 @@ const Locations = () => {
                 Visit Us
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Five beautifully designed boutique studios across Kildare, Wicklow, and Meath. 
+                Five beautifully designed studios across Kildare, Wicklow, and Meath. 
                 Find the location that's most convenient for you.
               </p>
             </div>

@@ -10,7 +10,7 @@ const PhilosophySection = () => {
     {
       icon: Users,
       title: "Small Group Experience",
-      description: "Boutique class sizes ensure personalized attention from our expert instructors. You're not just a number—you're part of our community.",
+      description: "Small class sizes ensure personalized attention from our expert instructors. You're not just a number—you're part of our community.",
     },
     {
       icon: Target,
@@ -28,7 +28,7 @@ const PhilosophySection = () => {
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             At Balance Studios, we believe that strength, flexibility and confidence are for every body. 
-            With small-group boutique reformer classes, expert instructors and five beautifully designed 
+            With small-group reformer classes, expert instructors and five beautifully designed 
             studios across Kildare and Wicklow, we tailor your Pilates journey so you feel great in body and mind.
           </p>
         </div>

@@ -39,7 +39,7 @@ const LocationsSection = () => {
             Find Your Nearest Studio
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Five beautifully designed boutique studios across Kildare, Wicklow, and Meath. 
+            Five beautifully designed studios across Kildare, Wicklow, and Meath. 
             Each location offers the same exceptional experience with our signature warm welcome.
           </p>
         </div>

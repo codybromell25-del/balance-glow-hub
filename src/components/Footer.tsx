@@ -18,7 +18,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-heading font-bold text-primary mb-4">Balance Studios</h3>
             <p className="text-muted-foreground mb-4">
-              Boutique reformer Pilates across Kildare & Wicklow. 
+              Reformer Pilates across Kildare & Wicklow. 
               <span className="block mt-2 font-medium">Every body is beautiful.</span>
             </p>
             <div className="flex space-x-4">
