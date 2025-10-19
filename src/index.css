@@ -10,39 +10,39 @@ All colors MUST be HSL.
   :root {
     /* Balance Studios Feminine Luxe - Gold & Deep Emerald */
     
-    /* Backgrounds - Deep Forest Green */
-    --background: 160 40% 8%;
-    --foreground: 49 20% 95%;
+    /* Backgrounds - Clean White */
+    --background: 0 0% 100%;
+    --foreground: 160 40% 12%;
 
-    /* Cards - Rich emerald depth */
-    --card: 160 38% 12%;
-    --card-foreground: 49 20% 95%;
+    /* Cards - Soft cream */
+    --card: 49 30% 98%;
+    --card-foreground: 160 40% 12%;
 
-    --popover: 160 38% 12%;
-    --popover-foreground: 49 20% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 40% 12%;
 
     /* Primary - Luxurious Gold #C3AD49 */
     --primary: 49 59% 53%;
-    --primary-foreground: 160 40% 8%;
+    --primary-foreground: 0 0% 100%;
     
     /* Secondary - Deep Emerald Green */
     --secondary: 160 45% 22%;
-    --secondary-foreground: 49 59% 53%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Muted - Soft forest tones */
-    --muted: 160 35% 18%;
-    --muted-foreground: 49 18% 75%;
+    /* Muted - Soft neutral tones */
+    --muted: 49 20% 95%;
+    --muted-foreground: 160 30% 35%;
 
     /* Accent - Rich Green Accent */
-    --accent: 160 40% 28%;
-    --accent-foreground: 49 59% 53%;
+    --accent: 160 40% 95%;
+    --accent-foreground: 160 45% 22%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 49 20% 95%;
+    --destructive-foreground: 0 0% 100%;
 
-    /* Borders - Golden warmth */
-    --border: 49 35% 28%;
-    --input: 160 30% 20%;
+    /* Borders - Soft neutral */
+    --border: 49 25% 85%;
+    --input: 49 25% 85%;
     --ring: 49 59% 53%;
 
     --radius: 0.75rem;
