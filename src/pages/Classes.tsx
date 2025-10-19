@@ -72,7 +72,7 @@ const Classes = () => {
                 Start where you are, progress at your pace, and feel confident every step of the way.
               </p>
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link to="/book">Book a Class Now</Link>
+                <Link to="/locations">Book a Class Now</Link>
               </Button>
             </div>
           </div>

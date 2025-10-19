@@ -167,8 +167,8 @@ const Locations = () => {
                 get started.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  Book a Class
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                  <Link to="/schedule">Book a Class</Link>
                 </Button>
                 <Button
                   size="lg"

@@ -39,7 +39,7 @@ const HeroSection = () => {
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8"
             >
-              <Link to="/book">Book a Class</Link>
+              <Link to="/locations">Book a Class</Link>
             </Button>
             
             <Button 

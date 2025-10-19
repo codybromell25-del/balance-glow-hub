@@ -37,7 +37,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button asChild variant="default" className="bg-primary hover:bg-primary/90">
-              <Link to="/book">Book a Class</Link>
+              <Link to="/locations">Book a Class</Link>
             </Button>
           </div>
 
@@ -66,7 +66,7 @@ const Navigation = () => {
                 </Link>
               ))}
               <Button asChild variant="default" className="bg-primary hover:bg-primary/90 w-full">
-                <Link to="/book" onClick={() => setIsOpen(false)}>
+                <Link to="/locations" onClick={() => setIsOpen(false)}>
                   Book a Class
                 </Link>
               </Button>
