@@ -18,9 +18,9 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 pt-20 md:pt-0">
+      <div className="container mx-auto px-4 relative z-10 pt-32 md:pt-0">
         <div className="max-w-3xl animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-heading font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-4xl md:text-7xl font-heading font-bold text-foreground mb-6 leading-tight">
             Strength, Grace <br />
             <span className="text-primary">& Balance</span>
           </h1>
