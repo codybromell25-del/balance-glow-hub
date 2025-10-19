@@ -55,15 +55,15 @@ const HeroSection = () => {
           {/* Trust Badge */}
           <div className="mt-12 flex items-center gap-4 sm:gap-8">
             <div>
-              <p className="text-3xl sm:text-4xl md:text-2xl font-heading font-bold text-primary">5</p>
+              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-primary">5</p>
               <p className="text-sm sm:text-base text-muted-foreground">Studio Locations</p>
             </div>
             <div>
-              <p className="text-3xl sm:text-4xl md:text-2xl font-heading font-bold text-primary">1000+</p>
+              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-primary">1000+</p>
               <p className="text-sm sm:text-base text-muted-foreground">Happy Clients</p>
             </div>
             <div>
-              <p className="text-3xl sm:text-4xl md:text-2xl font-heading font-bold text-primary">Expert</p>
+              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-primary">Expert</p>
               <p className="text-sm sm:text-base text-muted-foreground">Instructors</p>
             </div>
           </div>
