@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { MapPin, Clock, Phone, Mail, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import studioClane from "@/assets/studio-clane.png";
 
 const Locations = () => {
   const studios = [
@@ -13,6 +14,7 @@ const Locations = () => {
       email: "clane@balancestudios.ie",
       parking: "Free parking available nearby",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
+      image: studioClane,
     },
     {
       name: "Kildare Town Studio",
@@ -21,6 +23,7 @@ const Locations = () => {
       email: "kildare@balancestudios.ie",
       parking: "Street parking and public car park",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
+      image: studioClane, // Placeholder - replace with actual image
     },
     {
       name: "Blessington Studio",
@@ -29,6 +32,7 @@ const Locations = () => {
       email: "blessington@balancestudios.ie",
       parking: "Free parking on-site",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
+      image: studioClane, // Placeholder - replace with actual image
     },
     {
       name: "Enfield Studio",
@@ -37,6 +41,7 @@ const Locations = () => {
       email: "enfield@balancestudios.ie",
       parking: "Free parking available",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
+      image: studioClane, // Placeholder - replace with actual image
     },
     {
       name: "Bray Studio",
@@ -45,6 +50,7 @@ const Locations = () => {
       email: "bray@balancestudios.ie",
       parking: "Public car parks nearby",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
+      image: studioClane, // Placeholder - replace with actual image
     },
   ];
 
@@ -74,80 +80,78 @@ const Locations = () => {
               {studios.map((studio, index) => (
                 <div
                   key={studio.name}
-                  className="bg-card p-8 rounded-xl border border-border hover:shadow-lg transition-all animate-fade-in"
+                  className="relative overflow-hidden rounded-xl border border-border hover:shadow-2xl transition-all animate-fade-in group"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {/* Studio Info */}
-                    <div className="lg:col-span-2">
-                      <h2 className="text-3xl font-heading font-bold text-foreground mb-6">
-                        {studio.name}
-                      </h2>
+                  {/* Background Image */}
+                  <div 
+                    className="absolute inset-0 z-0"
+                    style={{
+                      backgroundImage: `url(${studio.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 group-hover:from-black/90 group-hover:via-black/75 transition-all duration-500" />
+                  </div>
 
-                      <div className="space-y-4">
-                        <div className="flex items-start gap-3">
-                          <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                          <div>
-                            <p className="font-medium text-foreground">Address</p>
-                            <p className="text-muted-foreground">{studio.address}</p>
-                            <p className="text-sm text-muted-foreground mt-1">{studio.parking}</p>
-                          </div>
-                        </div>
+                  {/* Content */}
+                  <div className="relative z-10 p-8">
+                    <h2 className="text-3xl font-heading font-bold text-white mb-6">
+                      {studio.name}
+                    </h2>
 
-                        <div className="flex items-start gap-3">
-                          <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                          <div>
-                            <p className="font-medium text-foreground">Hours</p>
-                            <p className="text-muted-foreground">{studio.hours}</p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start gap-3">
-                          <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                          <div>
-                            <p className="font-medium text-foreground">Phone</p>
-                            <a
-                              href={`tel:${studio.phone}`}
-                              className="text-primary hover:underline"
-                            >
-                              {studio.phone}
-                            </a>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start gap-3">
-                          <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                          <div>
-                            <p className="font-medium text-foreground">Email</p>
-                            <a
-                              href={`mailto:${studio.email}`}
-                              className="text-primary hover:underline"
-                            >
-                              {studio.email}
-                            </a>
-                          </div>
+                    <div className="space-y-4 mb-6">
+                      <div className="flex items-start gap-3">
+                        <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <p className="font-medium text-white">Address</p>
+                          <p className="text-white/80">{studio.address}</p>
+                          <p className="text-sm text-white/70 mt-1">{studio.parking}</p>
                         </div>
                       </div>
 
-                      <Link to="/schedule" className="mt-6 inline-block">
-                        <Button className="w-full sm:w-auto bg-primary hover:bg-primary/90">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          See Class Schedule
-                        </Button>
-                      </Link>
-                    </div>
+                      <div className="flex items-start gap-3">
+                        <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <p className="font-medium text-white">Hours</p>
+                          <p className="text-white/80">{studio.hours}</p>
+                        </div>
+                      </div>
 
-                    {/* Map Placeholder */}
-                    <div className="lg:col-span-1">
-                      <div className="bg-muted/50 rounded-lg h-64 lg:h-full flex items-center justify-center border border-border">
-                        <div className="text-center p-6">
-                          <MapPin className="w-12 h-12 text-primary mx-auto mb-3" />
-                          <p className="text-muted-foreground text-sm">
-                            Interactive map coming soon
-                          </p>
+                      <div className="flex items-start gap-3">
+                        <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <p className="font-medium text-white">Phone</p>
+                          <a
+                            href={`tel:${studio.phone}`}
+                            className="text-primary hover:text-primary/80 transition-colors"
+                          >
+                            {studio.phone}
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <p className="font-medium text-white">Email</p>
+                          <a
+                            href={`mailto:${studio.email}`}
+                            className="text-primary hover:text-primary/80 transition-colors"
+                          >
+                            {studio.email}
+                          </a>
                         </div>
                       </div>
                     </div>
+
+                    <Link to="/schedule">
+                      <Button className="w-full sm:w-auto bg-primary hover:bg-primary/90 shadow-lg">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        See Class Schedule
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               ))}
