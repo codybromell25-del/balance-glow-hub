@@ -4,25 +4,15 @@ import { Calendar } from "lucide-react";
 
 const FloatingBookButton = () => {
   return (
-    <div 
-      style={{ 
-        position: 'fixed', 
-        bottom: '24px', 
-        right: '24px', 
-        zIndex: 99999,
-        pointerEvents: 'auto'
-      }}
-    >
-      <Link to="/locations">
-        <Button 
-          size="lg"
-          className="bg-primary hover:bg-primary/90 shadow-2xl transition-all duration-300 rounded-full px-6 py-3 text-base font-semibold"
-        >
-          <Calendar className="w-5 h-5 mr-2" />
-          <span>Book Now</span>
-        </Button>
-      </Link>
-    </div>
+    <Link to="/locations" className="fixed bottom-6 right-6 z-50 animate-fade-in">
+      <Button 
+        size="lg"
+        className="bg-primary hover:bg-primary/90 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 rounded-full px-6 py-6 text-base font-semibold"
+      >
+        <Calendar className="w-5 h-5 mr-2" />
+        Book Now
+      </Button>
+    </Link>
   );
 };
 
