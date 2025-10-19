@@ -53,27 +53,20 @@ const HeroSection = () => {
           </div>
 
           {/* Trust Badge */}
-          <div className="mt-12 flex items-center gap-8 text-sm text-muted-foreground">
+          <div className="mt-12 flex items-center gap-4 sm:gap-8">
             <div>
-              <p className="text-2xl font-heading font-bold text-primary">5</p>
-              <p>Studio Locations</p>
+              <p className="text-3xl sm:text-4xl md:text-2xl font-heading font-bold text-primary">5</p>
+              <p className="text-sm sm:text-base text-muted-foreground">Studio Locations</p>
             </div>
             <div>
-              <p className="text-2xl font-heading font-bold text-primary">1000+</p>
-              <p>Happy Clients</p>
+              <p className="text-3xl sm:text-4xl md:text-2xl font-heading font-bold text-primary">1000+</p>
+              <p className="text-sm sm:text-base text-muted-foreground">Happy Clients</p>
             </div>
             <div>
-              <p className="text-2xl font-heading font-bold text-primary">Expert</p>
-              <p>Instructors</p>
+              <p className="text-3xl sm:text-4xl md:text-2xl font-heading font-bold text-primary">Expert</p>
+              <p className="text-sm sm:text-base text-muted-foreground">Instructors</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-primary/50 rounded-full" />
         </div>
       </div>
     </section>
