@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BookOpen, Video, Users } from "lucide-react";
 
-const Resources = () => {
+const Blogs = () => {
   const blogPosts = [
     {
       title: "Getting Started with Reformer Pilates",
@@ -33,7 +33,7 @@ const Resources = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
-                Resources & Blog
+                Blog
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Tips, insights, and stories from our community to support your wellness journey.
@@ -137,4 +137,4 @@ const Resources = () => {
   );
 };
 
-export default Resources;
+export default Blogs;
