@@ -26,7 +26,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-light">
-            Every body is beautiful
+            Balance is for everyone
           </p>
           
           <p className="text-lg text-foreground/80 mb-8 max-w-2xl leading-relaxed">
@@ -55,15 +55,15 @@ const HeroSection = () => {
           {/* Trust Badge */}
           <div className="mt-12 flex items-center gap-4 sm:gap-8">
             <div>
-              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-primary">5</p>
+              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-foreground">5</p>
               <p className="text-sm sm:text-base text-muted-foreground">Studio Locations</p>
             </div>
             <div>
-              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-primary">1000+</p>
+              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-foreground">1000+</p>
               <p className="text-sm sm:text-base text-muted-foreground">Happy Clients</p>
             </div>
             <div>
-              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-primary">Expert</p>
+              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-foreground">Expert</p>
               <p className="text-sm sm:text-base text-muted-foreground">Instructors</p>
             </div>
           </div>
