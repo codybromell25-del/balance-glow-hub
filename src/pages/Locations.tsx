@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { MapPin, Clock, Phone, Mail } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Locations = () => {
   const studios = [
@@ -127,6 +128,13 @@ const Locations = () => {
                           </div>
                         </div>
                       </div>
+
+                      <Link to="/schedule" className="mt-6 inline-block">
+                        <Button className="w-full sm:w-auto bg-primary hover:bg-primary/90">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          See Class Schedule
+                        </Button>
+                      </Link>
                     </div>
 
                     {/* Map Placeholder */}
