@@ -14,8 +14,8 @@ All colors MUST be HSL.
     --background: 0 0% 100%;
     --foreground: 0 0% 10%;
 
-    /* Cards - Soft cream */
-    --card: 49 30% 98%;
+    /* Cards - Warm gold background */
+    --card: 49 40% 92%;
     --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
