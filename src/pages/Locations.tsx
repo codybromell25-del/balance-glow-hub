@@ -4,6 +4,10 @@ import { MapPin, Clock, Phone, Mail, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import studioClane from "@/assets/studio-clane.png";
+import studioKildare from "@/assets/studio-kildare.png";
+import studioBlessington from "@/assets/studio-blessington.png";
+import studioEnfield from "@/assets/studio-enfield.png";
+import studioBray from "@/assets/studio-bray.png";
 
 const Locations = () => {
   const studios = [
@@ -23,7 +27,7 @@ const Locations = () => {
       email: "kildare@balancestudios.ie",
       parking: "Street parking and public car park",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
-      image: studioClane, // Placeholder - replace with actual image
+      image: studioKildare,
     },
     {
       name: "Blessington Studio",
@@ -32,7 +36,7 @@ const Locations = () => {
       email: "blessington@balancestudios.ie",
       parking: "Free parking on-site",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
-      image: studioClane, // Placeholder - replace with actual image
+      image: studioBlessington,
     },
     {
       name: "Enfield Studio",
@@ -41,7 +45,7 @@ const Locations = () => {
       email: "enfield@balancestudios.ie",
       parking: "Free parking available",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
-      image: studioClane, // Placeholder - replace with actual image
+      image: studioEnfield,
     },
     {
       name: "Bray Studio",
@@ -50,7 +54,7 @@ const Locations = () => {
       email: "bray@balancestudios.ie",
       parking: "Public car parks nearby",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
-      image: studioClane, // Placeholder - replace with actual image
+      image: studioBray,
     },
   ];
 
