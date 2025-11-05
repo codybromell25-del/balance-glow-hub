@@ -80,12 +80,15 @@ const Locations = () => {
         {/* Studios Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
               {studios.map((studio, index) => (
                 <div
                   key={studio.name}
-                  className="rounded-2xl overflow-hidden border border-border hover:shadow-2xl transition-all animate-fade-in aspect-square"
-                  style={{ animationDelay: `${index * 0.05}s` }}
+                  className="rounded-2xl overflow-hidden border border-border hover:shadow-2xl transition-all animate-fade-in w-full"
+                  style={{ 
+                    animationDelay: `${index * 0.05}s`,
+                    aspectRatio: '1 / 1'
+                  }}
                 >
                   <div 
                     className="relative overflow-hidden h-full"
