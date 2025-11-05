@@ -1,4 +1,4 @@
-import { Quote, BadgeCheck } from "lucide-react";
+import { Quote, BadgeCheck, ChevronRight } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -82,18 +82,19 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          plugins={[
-            Autoplay({
-              delay: 4000,
-            }),
-          ]}
-          className="w-full"
-        >
+        <div className="relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+              }),
+            ]}
+            className="w-full"
+          >
           <CarouselContent className="-ml-4">
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
@@ -124,7 +125,15 @@ const TestimonialsSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
+          
+          {/* Mobile swipe indicator */}
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 md:hidden pointer-events-none">
+            <div className="animate-pulse">
+              <ChevronRight className="w-8 h-8 text-muted-foreground/30" />
+            </div>
+          </div>
         </Carousel>
+        </div>
       </div>
     </section>
   );
