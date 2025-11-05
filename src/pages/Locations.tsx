@@ -80,16 +80,15 @@ const Locations = () => {
         {/* Studios Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-7xl mx-auto space-y-8">
+            <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
               {studios.map((studio, index) => (
                 <div
                   key={studio.name}
-                  className="grid lg:grid-cols-2 rounded-2xl overflow-hidden border border-border hover:shadow-2xl transition-all animate-fade-in h-[500px]"
+                  className="rounded-2xl overflow-hidden border border-border hover:shadow-2xl transition-all animate-fade-in aspect-square"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  {/* Left Side - Studio Image with Info */}
                   <div 
-                    className="relative overflow-hidden"
+                    className="relative overflow-hidden h-full"
                     style={{
                       backgroundImage: `url(${studio.image})`,
                       backgroundSize: 'cover',
@@ -98,13 +97,13 @@ const Locations = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60" />
                     
-                    <div className="relative z-10 p-8 h-full flex flex-col justify-between">
+                    <div className="relative z-10 p-6 h-full flex flex-col justify-between">
                       <div>
-                        <h2 className="text-3xl font-heading font-bold text-white mb-6">
+                        <h2 className="text-2xl font-heading font-bold text-white mb-4">
                           {studio.name}
                         </h2>
 
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                           <div className="flex items-start gap-3">
                             <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                             <div>
@@ -124,11 +123,11 @@ const Locations = () => {
                         </div>
                       </div>
 
-                      <div className="flex flex-col sm:flex-row gap-3 mt-6">
+                      <div className="flex flex-col gap-3 mt-6">
                         <Button 
                           asChild
                           size="lg"
-                          className="bg-primary hover:bg-primary/90 text-white font-semibold"
+                          className="bg-primary hover:bg-primary/90 text-white font-semibold w-full"
                         >
                           <Link to="/schedule">Book Now</Link>
                         </Button>
@@ -136,7 +135,7 @@ const Locations = () => {
                           asChild
                           size="lg"
                           variant="outline"
-                          className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:text-white"
+                          className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:text-white w-full"
                         >
                           <a 
                             href={studio.directionsUrl}
@@ -148,21 +147,6 @@ const Locations = () => {
                         </Button>
                       </div>
                     </div>
-                  </div>
-
-                  {/* Right Side - Google Maps */}
-                  <div className="relative">
-                    <iframe
-                      src={studio.mapEmbed}
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title={`Map of ${studio.name}`}
-                      className="absolute inset-0"
-                    />
                   </div>
                 </div>
               ))}
