@@ -54,7 +54,7 @@ const Locations = () => {
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       image: studioBray,
       mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.2!2d-6.0983!3d53.2026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDEyJzA5LjQiTiA2wrAwNScxNy45Ilc!5e0!3m2!1sen!2sie!4v1234567890",
-      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Industrial+Development+Agency+Business+Park+Southern+Cross+Rd+Irishtown+Bray+Co.+Wicklow+A98+T276+Ireland",
+      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Balance+Bray+Industrial+Development+Agency+Business+Park+Southern+Cross+Rd+Irishtown+Bray+Co.+Wicklow+A98+T276+Ireland",
     },
   ];
 
