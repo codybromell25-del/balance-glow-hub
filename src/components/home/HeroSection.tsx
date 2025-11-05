@@ -1,6 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-studio-bg.png";
+// Hero image options - currently using option 1
+import heroImage1 from "@/assets/hero-option-1.avif";
+import heroImage2 from "@/assets/hero-option-2.avif";
+import heroImage3 from "@/assets/hero-option-3.avif";
+import heroImage4 from "@/assets/hero-option-4.avif";
+import heroImage5 from "@/assets/hero-option-5.avif";
+import heroImage6 from "@/assets/hero-option-6.avif";
+import heroImage7 from "@/assets/hero-option-7.avif";
+import heroImage8 from "@/assets/hero-option-8.avif";
+
+// Change this to test different images (1-8)
+const heroImage = heroImage1;
 
 const HeroSection = () => {
   return (
