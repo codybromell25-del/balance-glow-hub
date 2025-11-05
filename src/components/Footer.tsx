@@ -12,12 +12,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-secondary/30 border-t border-border mt-12 md:mt-24">
+    <footer className="bg-gradient-to-t from-secondary via-secondary/40 to-secondary/10 border-t border-border mt-12 md:mt-24">
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <img src={balanceLogo} alt="Balance Reformer Pilates" className="h-24 w-auto mb-4" />
+            <img src={balanceLogo} alt="Balance Reformer Pilates" className="h-32 w-auto mb-4" />
             <p className="text-black mb-4">
               Reformer Pilates across Kildare & Wicklow. 
               <span className="block mt-2 font-medium">Balance is for everyone.</span>
