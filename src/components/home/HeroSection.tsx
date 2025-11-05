@@ -20,7 +20,7 @@ const HeroSection = () => {
             <Button 
               asChild 
               size="lg" 
-              className="bg-foreground hover:bg-foreground/90 text-background text-base px-8 py-6 rounded-full"
+              className="text-base px-8 py-6 rounded-full"
             >
               <Link to="/schedule">Get Started</Link>
             </Button>
