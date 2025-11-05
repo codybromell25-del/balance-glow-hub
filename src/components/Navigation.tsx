@@ -12,7 +12,7 @@ const Navigation = () => {
     { name: "About", path: "/about" },
     { name: "Classes", path: "/classes" },
     { name: "Pricing", path: "/pricing" },
-    { name: "Locations", path: "/locations" },
+    { name: "Book a Class", path: "/locations" },
     { name: "Instructors", path: "/instructors" },
     { name: "Blogs", path: "/blogs" },
     { name: "Shop", path: "/shop" },

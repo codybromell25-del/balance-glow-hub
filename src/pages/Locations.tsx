@@ -67,7 +67,7 @@ const Locations = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
-                Visit Us
+                Book a Class
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Five beautifully designed studios across Kildare, Wicklow, and Meath. 
