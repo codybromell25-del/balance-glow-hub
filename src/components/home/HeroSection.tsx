@@ -4,68 +4,35 @@ import heroImage from "@/assets/hero-studio-bg.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
-      </div>
-
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 pt-20 md:pt-0">
-        <div className="max-w-3xl animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-heading font-bold text-foreground mb-6 leading-tight">
-            Strength, Grace <br />
-            <span className="text-primary">& Balance</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-light">
-            Balance is for everyone
-          </p>
-          
-          <p className="text-lg text-foreground/80 mb-8 max-w-2xl leading-relaxed">
-            Experience premium reformer Pilates with expert instructors across five beautifully designed studios in Kildare and Wicklow. Small groups, personalized attention, transformative results.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
-              asChild 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8"
-            >
-              <Link to="/locations">Book a Class</Link>
-            </Button>
+    <section className="min-h-screen flex items-center bg-background">
+      <div className="container mx-auto px-4 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          {/* Left Content */}
+          <div className="animate-fade-in">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+              Transform your body and mind with Reformer Pilates at Balance
+            </h1>
             
+            <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
+              Balance's ethos revolves around fostering a supportive, mindful environment where clients are empowered to achieve sustainable health and fitness. It values inclusivity, education, and the mind-body connection, ensuring that movement is always purposeful and aligned with long-term wellness goals. New clients are welcome, join our community today!
+            </p>
+
             <Button 
               asChild 
               size="lg" 
-              variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary/10 text-lg px-8"
+              className="bg-foreground hover:bg-foreground/90 text-background text-base px-8 py-6 rounded-full"
             >
-              <Link to="/pricing">View Intro Offer</Link>
+              <Link to="/schedule">Get Started</Link>
             </Button>
           </div>
 
-          {/* Trust Badge */}
-          <div className="mt-12 flex items-center gap-4 sm:gap-8">
-            <div>
-              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-foreground">5</p>
-              <p className="text-sm sm:text-base text-muted-foreground">Studio Locations</p>
-            </div>
-            <div>
-              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-foreground">1000+</p>
-              <p className="text-sm sm:text-base text-muted-foreground">Happy Clients</p>
-            </div>
-            <div>
-              <p className="text-4xl sm:text-5xl md:text-4xl font-heading font-bold text-foreground">Expert</p>
-              <p className="text-sm sm:text-base text-muted-foreground">Instructors</p>
-            </div>
+          {/* Right Image */}
+          <div className="animate-fade-in lg:animate-delay-200">
+            <img 
+              src={heroImage} 
+              alt="Balance Studios Reformer Pilates Class"
+              className="w-full h-auto rounded-3xl shadow-2xl object-cover"
+            />
           </div>
         </div>
       </div>
