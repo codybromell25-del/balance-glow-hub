@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { MapPin, Clock, Phone, Mail, Calendar } from "lucide-react";
+import { MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import studioClane from "@/assets/studio-clane.png";
@@ -13,48 +13,48 @@ const Locations = () => {
   const studios = [
     {
       name: "Clane Studio",
-      address: "Main Street, Clane, Co. Kildare",
-      phone: "+353 (0)45 XXX XXX",
-      email: "clane@balancestudios.ie",
+      address: "Unit 4a, Yew Tree Square, Prosperous Rd, Abbeyland, Clane, Co. Kildare, W91 R642, Ireland",
       parking: "Free parking available nearby",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       image: studioClane,
+      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.2!2d-6.6889!3d53.2919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDE3JzMwLjgiTiA2wrA0MScyMC4wIlc!5e0!3m2!1sen!2sie!4v1234567890",
+      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+4a+Yew+Tree+Square+Prosperous+Rd+Abbeyland+Clane+Co.+Kildare+W91+R642+Ireland",
     },
     {
       name: "Kildare Town Studio",
-      address: "Market Square, Kildare Town, Co. Kildare",
-      phone: "+353 (0)45 XXX XXX",
-      email: "kildare@balancestudios.ie",
+      address: "Unit 3 Claregate St, Kildare, R51 E772, Ireland",
       parking: "Street parking and public car park",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       image: studioKildare,
+      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.2!2d-6.9108!3d53.1596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDA5JzM0LjYiTiA2wrA1NCczOC45Ilc!5e0!3m2!1sen!2sie!4v1234567890",
+      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Claregate+St+Kildare+R51+E772+Ireland",
     },
     {
       name: "Blessington Studio",
-      address: "Main Street, Blessington, Co. Wicklow",
-      phone: "+353 (0)45 XXX XXX",
-      email: "blessington@balancestudios.ie",
+      address: "1a The Green, Main St, Blessington, Co. Wicklow, W91 PNV2, Ireland",
       parking: "Free parking on-site",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       image: studioBlessington,
+      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.2!2d-6.5349!3d53.1711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDEwJzE2LjAiTiA2wrAzMicwNS42Ilc!5e0!3m2!1sen!2sie!4v1234567890",
+      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=1a+The+Green+Main+St+Blessington+Co.+Wicklow+W91+PNV2+Ireland",
     },
     {
       name: "Enfield Studio",
-      address: "Main Street, Enfield, Co. Meath",
-      phone: "+353 (0)46 XXX XXX",
-      email: "enfield@balancestudios.ie",
+      address: "Unit 3, Main Street, Enfield, Co. Meath, A83 RP84",
       parking: "Free parking available",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       image: studioEnfield,
+      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.2!2d-6.8309!3d53.4164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDI0JzU5LjAiTiA2wrA0OSc1MS4yIlc!5e0!3m2!1sen!2sie!4v1234567890",
+      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Main+Street+Enfield+Co.+Meath+A83+RP84",
     },
     {
       name: "Bray Studio",
-      address: "Main Street, Bray, Co. Wicklow",
-      phone: "+353 (0)1 XXX XXXX",
-      email: "bray@balancestudios.ie",
-      parking: "Public car parks nearby",
+      address: "Industrial Development Agency Business Park, Southern Cross Rd, Irishtown, Bray, Co. Wicklow, A98 T276, Ireland",
+      parking: "Free on-site parking",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       image: studioBray,
+      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.2!2d-6.0983!3d53.2026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDEyJzA5LjQiTiA2wrAwNScxNy45Ilc!5e0!3m2!1sen!2sie!4v1234567890",
+      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Industrial+Development+Agency+Business+Park+Southern+Cross+Rd+Irishtown+Bray+Co.+Wicklow+A98+T276+Ireland",
     },
   ];
 
@@ -80,84 +80,89 @@ const Locations = () => {
         {/* Studios Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto space-y-6">
+            <div className="max-w-7xl mx-auto space-y-8">
               {studios.map((studio, index) => (
                 <div
                   key={studio.name}
-                  className="relative overflow-hidden rounded-xl border border-border hover:shadow-2xl transition-all animate-fade-in group h-[400px]"
+                  className="grid lg:grid-cols-2 rounded-2xl overflow-hidden border border-border hover:shadow-2xl transition-all animate-fade-in h-[500px]"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  {/* Background Image */}
+                  {/* Left Side - Studio Image with Info */}
                   <div 
-                    className="absolute inset-0 z-0"
+                    className="relative overflow-hidden"
                     style={{
                       backgroundImage: `url(${studio.image})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                     }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/30 to-transparent group-hover:from-black/50 group-hover:via-black/40 transition-all duration-500" />
-                  </div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60" />
+                    
+                    <div className="relative z-10 p-8 h-full flex flex-col justify-between">
+                      <div>
+                        <h2 className="text-3xl font-heading font-bold text-white mb-6">
+                          {studio.name}
+                        </h2>
 
-                  {/* Content */}
-                  <div className="relative z-10 p-6 h-full flex flex-col justify-between">
-                    <div>
-                      <h2 className="text-2xl font-heading font-bold text-white mb-4">
-                        {studio.name}
-                      </h2>
-
-                      <div className="space-y-3 mb-4">
-                        <div className="flex items-start gap-3">
-                          <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                          <div>
-                            <p className="font-medium text-white">Address</p>
-                            <p className="text-white/80 text-sm">{studio.address}</p>
-                            <p className="text-xs text-white/70 mt-1">{studio.parking}</p>
+                        <div className="space-y-4">
+                          <div className="flex items-start gap-3">
+                            <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                            <div>
+                              <p className="font-semibold text-white mb-1">Address</p>
+                              <p className="text-white/90 text-sm leading-relaxed">{studio.address}</p>
+                              <p className="text-xs text-white/70 mt-2">{studio.parking}</p>
+                            </div>
                           </div>
-                        </div>
 
-                        <div className="flex items-start gap-3">
-                          <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                          <div>
-                            <p className="font-medium text-white">Hours</p>
-                            <p className="text-white/80 text-sm">{studio.hours}</p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start gap-3">
-                          <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                          <div>
-                            <p className="font-medium text-white">Phone</p>
-                            <a
-                              href={`tel:${studio.phone}`}
-                              className="text-primary hover:text-primary/80 transition-colors text-sm"
-                            >
-                              {studio.phone}
-                            </a>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start gap-3">
-                          <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                          <div>
-                            <p className="font-medium text-white">Email</p>
-                            <a
-                              href={`mailto:${studio.email}`}
-                              className="text-primary hover:text-primary/80 transition-colors text-sm"
-                            >
-                              {studio.email}
-                            </a>
+                          <div className="flex items-start gap-3">
+                            <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                            <div>
+                              <p className="font-semibold text-white mb-1">Studio Hours</p>
+                              <p className="text-white/90 text-sm">{studio.hours}</p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
 
-                    <Link to="/schedule" className="mt-auto">
-                      <Button className="w-full sm:w-auto bg-primary hover:bg-primary/90 shadow-lg">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        See Class Schedule
-                      </Button>
-                    </Link>
+                      <div className="flex flex-col sm:flex-row gap-3 mt-6">
+                        <Button 
+                          asChild
+                          size="lg"
+                          className="bg-primary hover:bg-primary/90 text-white font-semibold"
+                        >
+                          <Link to="/schedule">Book Now</Link>
+                        </Button>
+                        <Button 
+                          asChild
+                          size="lg"
+                          variant="outline"
+                          className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:text-white"
+                        >
+                          <a 
+                            href={studio.directionsUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Get Directions
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Side - Google Maps */}
+                  <div className="relative">
+                    <iframe
+                      src={studio.mapEmbed}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title={`Map of ${studio.name}`}
+                      className="absolute inset-0"
+                    />
                   </div>
                 </div>
               ))}
