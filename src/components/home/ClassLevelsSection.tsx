@@ -49,7 +49,7 @@ const ClassLevelsSection = () => {
             return (
               <div
                 key={level.level}
-                className="relative bg-background p-4 md:p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                className="relative bg-background p-4 md:p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -67,13 +67,16 @@ const ClassLevelsSection = () => {
                   {level.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                   {level.description}
                 </p>
 
-                <div className="absolute bottom-4 right-4">
-                  <ArrowRight className="w-5 h-5 text-primary/40" />
-                </div>
+                <Button asChild variant="outline" className="w-full">
+                  <Link to="/classes">
+                    Learn More
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
               </div>
             );
           })}

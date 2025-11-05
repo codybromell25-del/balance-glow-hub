@@ -1,6 +1,4 @@
 import { Heart, Users, Target } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import bgImage1 from "@/assets/hero-option-2.avif";
 import bgImage2 from "@/assets/hero-option-4.avif";
 import bgImage3 from "@/assets/hero-option-6.avif";
@@ -58,19 +56,16 @@ const PhilosophySection = () => {
                 <div className="absolute inset-0 bg-white/85" />
                 
                 {/* Content */}
-                <div className="relative z-10 flex flex-col flex-grow">
+                <div className="relative z-10">
                   <div className="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-6">
                     <Icon className="w-7 h-7 text-primary" />
                   </div>
                   <h3 className="text-xl font-heading font-semibold mb-4 text-foreground">
                     {value.title}
                   </h3>
-                  <p className="text-foreground/80 leading-relaxed mb-6 flex-grow">
+                  <p className="text-foreground/80 leading-relaxed">
                     {value.description}
                   </p>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link to="/classes">Learn More</Link>
-                  </Button>
                 </div>
               </div>
             );
