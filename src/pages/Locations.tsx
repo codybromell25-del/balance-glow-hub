@@ -84,7 +84,7 @@ const Locations = () => {
               {studios.map((studio, index) => (
                 <div
                   key={studio.name}
-                  className="bg-card p-4 md:p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all animate-fade-in"
+                  className="bg-white p-4 md:p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all animate-fade-in"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   {/* Studio Image */}
