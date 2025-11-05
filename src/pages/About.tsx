@@ -110,11 +110,11 @@ const About = () => {
                 <div className="grid md:grid-cols-5 gap-8 items-start">
                   {/* Image */}
                   <div className="md:col-span-2">
-                    <div className="relative">
+                    <div className="relative flex justify-center">
                       <img 
                         src={kellyOwner} 
                         alt="Kelly, Owner of Balance Studios"
-                        className="w-full rounded-lg shadow-lg"
+                        className="w-64 h-64 object-cover rounded-full border-4 border-primary/30 shadow-lg"
                       />
                     </div>
                   </div>
