@@ -125,6 +125,10 @@ const Classes = () => {
                             ))}
                           </ul>
                         </div>
+
+                        <Button asChild className="bg-white hover:bg-white/90 border-2 border-primary/40 hover:border-primary/60 text-foreground w-full sm:w-auto">
+                          <Link to="/locations">Book Class</Link>
+                        </Button>
                       </div>
                     </div>
                   </div>
