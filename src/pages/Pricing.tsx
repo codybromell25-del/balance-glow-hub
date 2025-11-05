@@ -66,7 +66,7 @@ const Pricing = () => {
         </section>
 
         {/* Class Packs */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
@@ -181,7 +181,7 @@ const Pricing = () => {
                 ))}
               </div>
 
-              <div className="mt-8 p-6 bg-muted/50 rounded-lg border border-border">
+              <div className="mt-8 p-6 bg-secondary/30 rounded-lg border border-border">
                 <h4 className="font-semibold text-foreground mb-2">Membership Terms:</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>• Memberships auto-renew on the same date each month</li>

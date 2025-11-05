@@ -105,7 +105,7 @@ const About = () => {
         </section>
 
         {/* Values */}
-        <section className="py-24 bg-muted/30">
+        <section className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-heading font-bold text-foreground mb-12 text-center">

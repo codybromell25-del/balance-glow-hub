@@ -84,7 +84,7 @@ const Blogs = () => {
         </section>
 
         {/* Blog Posts Preview */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl font-heading font-bold text-foreground mb-8 text-center">
