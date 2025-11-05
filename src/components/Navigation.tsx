@@ -10,8 +10,8 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show button after scrolling past hero (approximately 100vh)
-      setShowBookButton(window.scrollY > window.innerHeight);
+      // Show button as soon as user starts scrolling
+      setShowBookButton(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
