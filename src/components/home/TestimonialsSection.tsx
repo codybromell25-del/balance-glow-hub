@@ -1,23 +1,71 @@
-import { Quote } from "lucide-react";
+import { Quote, BadgeCheck } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Sarah M.",
-      location: "Clane",
-      text: "I was nervous about trying reformer Pilates, but the instructors at Balance made me feel so welcome. Three months in and I've never felt stronger!",
+      name: "Vanessa McIntyre",
+      text: "I have been attending Balance for reformer pilates for over 2 years now. I took a break when I fell pregnant and recently returned to classes. The girls are so helpful and knowledgeable about which exercise is best for you. Beautiful studio and the staff are just amazing. Thank you all for everything, really enjoy being back!",
       rating: 5,
     },
     {
-      name: "John D.",
-      location: "Kildare Town",
-      text: "The small class sizes make all the difference. I get personalized attention every session and can really see my progress.",
+      name: "Collette Coyne",
+      text: "Really enjoyed the taster class, the teacher was very experienced and very informative on all aspects of reformer pilates. Would highly recommend.",
       rating: 5,
     },
     {
-      name: "Emma L.",
-      location: "Bray",
-      text: "Beautiful studio, fantastic instructors, and a genuinely supportive community. Balance Studios has transformed my wellness routine.",
+      name: "Jennie Kenna",
+      text: "Always friendly and welcoming in Balance Clane, the girls are fantastic and I'm absolutely hooked. I can feel the strength in my body and I'm only a few classes in.",
+      rating: 5,
+    },
+    {
+      name: "Maureen Stanley",
+      text: "Super focussed classes with really experienced instructors.",
+      rating: 5,
+    },
+    {
+      name: "Orlaith Kelly",
+      text: "I am hooked! My healthy addiction! I just can't get enough of these classes! Every time I go, I feel myself getting stronger mentally and physically. All the instructors are amazing and are so knowledgeable! I am telling everyone to go to Balance.",
+      rating: 5,
+    },
+    {
+      name: "Fossil Specialist",
+      text: "What a find… Kelly is an amazing teacher with an outstanding way with her. A brilliant business and the most enjoyable exercise classes. Her attention to detail and commitment is outstanding. Would recommend to every level of fitness — even if you haven't done anything in years you will be amazed at how quickly you can start gaining back strength and agility.",
+      rating: 5,
+    },
+    {
+      name: "Orla Anderson",
+      text: "Balance is great. I've gone to over 100 classes here and reformer pilates keeps my back pain at bay. Highly recommend for anyone with back issues — give it a try.",
+      rating: 5,
+    },
+    {
+      name: "Tara McCormack",
+      text: "Great classes that change and challenge you all the time, instructors very helpful and informative. Once you start you won't be able to stop 😃",
+      rating: 5,
+    },
+    {
+      name: "Kath",
+      text: "First time trying it, made sure I knew what I needed to know before we started and helped me when I got stuck. Felt individual service while part of the class. Looking forward to my next class.",
+      rating: 5,
+    },
+    {
+      name: "Natasha Dolly",
+      text: "Huge variety in every class. Excellent full body strength workout.",
+      rating: 5,
+    },
+    {
+      name: "Olive Aylward",
+      text: "Amazing teachers, beautiful studio, friendly atmosphere.",
+      rating: 5,
+    },
+    {
+      name: "Fiona O'Reilly",
+      text: "I've been going to classes at the Balance studio in Kildare Town since it opened in October 2023. The classes are always well planned out and challenging. The studio is gorgeous and the equipment is spotless. All the instructors are fantastic, but Ciara is my favourite ☺️",
       rating: 5,
     },
   ];
@@ -30,37 +78,53 @@ const TestimonialsSection = () => {
             What Our Community Says
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Real stories from real clients who've found their balance with us.
+            Real Google reviews from real clients who've found their balance with us.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={testimonial.name}
-              className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <Quote className="w-10 h-10 text-primary/20 mb-4" />
-              
-              <p className="text-foreground leading-relaxed mb-6 italic">
-                "{testimonial.text}"
-              </p>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 4000,
+            }),
+          ]}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <div className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                  <Quote className="w-10 h-10 text-primary/20 mb-4" />
+                  
+                  <p className="text-foreground leading-relaxed mb-6 italic flex-grow">
+                    "{testimonial.text}"
+                  </p>
 
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div>
+                        <div className="flex items-center gap-1.5">
+                          <p className="font-semibold text-foreground">{testimonial.name}</p>
+                          <BadgeCheck className="w-4 h-4 text-blue-500" />
+                        </div>
+                        <p className="text-sm text-muted-foreground">Google Review</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-0.5">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <span key={i} className="text-yellow-500 text-lg">★</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <div className="flex gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-primary">★</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );
