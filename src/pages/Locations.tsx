@@ -80,11 +80,11 @@ const Locations = () => {
         {/* Studios Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto space-y-8">
+            <div className="max-w-6xl mx-auto space-y-6">
               {studios.map((studio, index) => (
                 <div
                   key={studio.name}
-                  className="relative overflow-hidden rounded-xl border border-border hover:shadow-2xl transition-all animate-fade-in group"
+                  className="relative overflow-hidden rounded-xl border border-border hover:shadow-2xl transition-all animate-fade-in group h-[400px]"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   {/* Background Image */}
@@ -100,57 +100,59 @@ const Locations = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="relative z-10 p-8">
-                    <h2 className="text-3xl font-heading font-bold text-white mb-6">
-                      {studio.name}
-                    </h2>
+                  <div className="relative z-10 p-6 h-full flex flex-col justify-between">
+                    <div>
+                      <h2 className="text-2xl font-heading font-bold text-white mb-4">
+                        {studio.name}
+                      </h2>
 
-                    <div className="space-y-4 mb-6">
-                      <div className="flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-white">Address</p>
-                          <p className="text-white/80">{studio.address}</p>
-                          <p className="text-sm text-white/70 mt-1">{studio.parking}</p>
+                      <div className="space-y-3 mb-4">
+                        <div className="flex items-start gap-3">
+                          <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                          <div>
+                            <p className="font-medium text-white">Address</p>
+                            <p className="text-white/80 text-sm">{studio.address}</p>
+                            <p className="text-xs text-white/70 mt-1">{studio.parking}</p>
+                          </div>
                         </div>
-                      </div>
 
-                      <div className="flex items-start gap-3">
-                        <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-white">Hours</p>
-                          <p className="text-white/80">{studio.hours}</p>
+                        <div className="flex items-start gap-3">
+                          <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                          <div>
+                            <p className="font-medium text-white">Hours</p>
+                            <p className="text-white/80 text-sm">{studio.hours}</p>
+                          </div>
                         </div>
-                      </div>
 
-                      <div className="flex items-start gap-3">
-                        <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-white">Phone</p>
-                          <a
-                            href={`tel:${studio.phone}`}
-                            className="text-primary hover:text-primary/80 transition-colors"
-                          >
-                            {studio.phone}
-                          </a>
+                        <div className="flex items-start gap-3">
+                          <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                          <div>
+                            <p className="font-medium text-white">Phone</p>
+                            <a
+                              href={`tel:${studio.phone}`}
+                              className="text-primary hover:text-primary/80 transition-colors text-sm"
+                            >
+                              {studio.phone}
+                            </a>
+                          </div>
                         </div>
-                      </div>
 
-                      <div className="flex items-start gap-3">
-                        <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-white">Email</p>
-                          <a
-                            href={`mailto:${studio.email}`}
-                            className="text-primary hover:text-primary/80 transition-colors"
-                          >
-                            {studio.email}
-                          </a>
+                        <div className="flex items-start gap-3">
+                          <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                          <div>
+                            <p className="font-medium text-white">Email</p>
+                            <a
+                              href={`mailto:${studio.email}`}
+                              className="text-primary hover:text-primary/80 transition-colors text-sm"
+                            >
+                              {studio.email}
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
 
-                    <Link to="/schedule">
+                    <Link to="/schedule" className="mt-auto">
                       <Button className="w-full sm:w-auto bg-primary hover:bg-primary/90 shadow-lg">
                         <Calendar className="w-4 h-4 mr-2" />
                         See Class Schedule
