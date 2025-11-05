@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Cormorant Garamond', 'Georgia', 'serif'],
+        sans: ['Libre Baskerville', 'Georgia', 'serif'],
+        heading: ['Cardo', 'Georgia', 'serif'],
+        subheading: ['Libre Baskerville', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
