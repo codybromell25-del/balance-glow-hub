@@ -1,4 +1,7 @@
 import { Heart, Users, Target } from "lucide-react";
+import bgImage1 from "@/assets/hero-option-2.avif";
+import bgImage2 from "@/assets/hero-option-4.avif";
+import bgImage3 from "@/assets/hero-option-6.avif";
 
 const PhilosophySection = () => {
   const values = [
@@ -6,16 +9,19 @@ const PhilosophySection = () => {
       icon: Heart,
       title: "Every Body Welcome",
       description: "We believe that strength, flexibility and confidence are for every body. Our inclusive approach means you'll feel supported regardless of your starting point.",
+      bgImage: bgImage1,
     },
     {
       icon: Users,
       title: "Small Group Experience",
       description: "Small class sizes ensure personalized attention from our expert instructors. You're not just a number—you're part of our community.",
+      bgImage: bgImage2,
     },
     {
       icon: Target,
       title: "Tailored Journey",
       description: "From foundation to advanced, we guide your Pilates journey at your pace. Clear progression pathways help you achieve your wellness goals.",
+      bgImage: bgImage3,
     },
   ];
 
@@ -39,18 +45,28 @@ const PhilosophySection = () => {
             return (
               <div
                 key={value.title}
-                className="bg-background p-4 md:p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                className="relative overflow-hidden bg-background p-4 md:p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in min-h-[300px] flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                  <Icon className="w-7 h-7 text-primary" />
+                {/* Background Image with Overlay */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${value.bgImage})` }}
+                />
+                <div className="absolute inset-0 bg-white/85" />
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-6">
+                    <Icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-heading font-semibold mb-4 text-foreground">
+                    {value.title}
+                  </h3>
+                  <p className="text-foreground/80 leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-heading font-semibold mb-4 text-foreground">
-                  {value.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {value.description}
-                </p>
               </div>
             );
           })}
