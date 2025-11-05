@@ -46,9 +46,10 @@ const LocationsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-12">
           {locations.map((location, index) => (
-            <div
+            <Link
               key={location.name}
-              className="bg-background p-4 md:p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-md transition-all duration-300 animate-fade-in"
+              to="/locations"
+              className="bg-background p-4 md:p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-md transition-all duration-300 animate-fade-in cursor-pointer"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="flex items-start gap-3 mb-3">
@@ -65,7 +66,7 @@ const LocationsSection = () => {
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {location.description}
               </p>
-            </div>
+            </Link>
           ))}
 
           {/* CTA Card */}
