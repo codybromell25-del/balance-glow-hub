@@ -49,7 +49,7 @@ const ClassLevelsSection = () => {
             return (
               <div
                 key={level.level}
-                className={`relative bg-gradient-to-br ${level.color} p-8 rounded-xl border ${level.borderColor} hover:shadow-lg transition-all duration-300 animate-fade-in`}
+                className="relative bg-background p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -80,7 +80,7 @@ const ClassLevelsSection = () => {
         </div>
 
         <div className="text-center">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+          <Button asChild size="lg">
             <Link to="/classes">
               Explore All Classes
               <ArrowRight className="ml-2 w-5 h-5" />

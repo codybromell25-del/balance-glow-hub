@@ -39,7 +39,7 @@ const PhilosophySection = () => {
             return (
               <div
                 key={value.title}
-                className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-all duration-300 animate-fade-in"
+                className="bg-background p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">

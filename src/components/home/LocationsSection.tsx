@@ -48,7 +48,7 @@ const LocationsSection = () => {
           {locations.map((location, index) => (
             <div
               key={location.name}
-              className="bg-card p-6 rounded-lg border border-border hover:shadow-md transition-all duration-300 animate-fade-in"
+              className="bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-md transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="flex items-start gap-3 mb-3">
@@ -69,11 +69,11 @@ const LocationsSection = () => {
           ))}
 
           {/* CTA Card */}
-          <div className="bg-primary/5 p-6 rounded-lg border-2 border-primary/20 flex flex-col items-center justify-center text-center hover:shadow-md transition-all duration-300">
+          <div className="bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 flex flex-col items-center justify-center text-center hover:shadow-md transition-all duration-300">
             <p className="text-lg font-heading font-semibold text-foreground mb-4">
               Ready to visit?
             </p>
-            <Button asChild variant="default" className="bg-primary hover:bg-primary/90">
+            <Button asChild variant="default">
               <Link to="/locations">View All Locations</Link>
             </Button>
           </div>
