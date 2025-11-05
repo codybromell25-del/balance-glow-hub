@@ -1,6 +1,10 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
+import studioClane from "@/assets/studio-clane.png";
+import studioKildare from "@/assets/studio-kildare.png";
+import studioBlessington from "@/assets/studio-blessington.png";
+import studioEnfield from "@/assets/studio-enfield.png";
+import studioBray from "@/assets/studio-bray.png";
 
 const LocationsSection = () => {
   const locations = [
@@ -8,26 +12,36 @@ const LocationsSection = () => {
       name: "Clane",
       county: "Co. Kildare",
       description: "Our original studio in the heart of Clane",
+      image: studioClane,
+      size: "tall", // tall, wide, or normal
     },
     {
       name: "Kildare Town",
       county: "Co. Kildare",
       description: "Convenient town center location",
+      image: studioKildare,
+      size: "normal",
     },
     {
       name: "Blessington",
       county: "Co. Wicklow",
       description: "Scenic lakeside wellness space",
+      image: studioBlessington,
+      size: "wide",
     },
     {
       name: "Enfield",
       county: "Co. Meath",
       description: "Modern studio with ample parking",
+      image: studioEnfield,
+      size: "normal",
     },
     {
       name: "Bray",
       county: "Co. Wicklow",
       description: "Coastal studio with natural light",
+      image: studioBray,
+      size: "tall",
     },
   ];
 
@@ -44,40 +58,56 @@ const LocationsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-12">
-          {locations.map((location, index) => (
-            <Link
-              key={location.name}
-              to="/locations"
-              className="bg-background p-4 md:p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-md transition-all duration-300 animate-fade-in cursor-pointer"
-              style={{ animationDelay: `${index * 0.05}s` }}
-            >
-              <div className="flex items-start gap-3 mb-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-primary" />
+        {/* Masonry Grid */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 md:gap-6 space-y-4 md:space-y-6">
+          {locations.map((location, index) => {
+            const heightClass = location.size === "tall" 
+              ? "h-96" 
+              : location.size === "wide" 
+              ? "h-64" 
+              : "h-80";
+            
+            return (
+              <Link
+                key={location.name}
+                to="/locations"
+                className={`group relative block ${heightClass} break-inside-avoid rounded-lg overflow-hidden animate-fade-in hover:scale-[1.02] transition-all duration-300`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${location.image})` }}
+                />
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
+                
+                {/* Content */}
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <div className="flex items-center gap-2 mb-2">
+                      <MapPin className="w-5 h-5 text-white" />
+                      <p className="text-sm text-white/90 font-medium">{location.county}</p>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-2">
+                      {location.name}
+                    </h3>
+                    <p className="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {location.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-heading font-semibold text-foreground mb-1">
-                    {location.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2">{location.county}</p>
-                </div>
-              </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {location.description}
-              </p>
-            </Link>
-          ))}
 
-          {/* CTA Card */}
-          <div className="bg-background p-4 md:p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 flex flex-col items-center justify-center text-center hover:shadow-md transition-all duration-300">
-            <p className="text-lg font-heading font-semibold text-foreground mb-4">
-              Ready to visit?
-            </p>
-            <Button asChild variant="default">
-              <Link to="/locations">View All Locations</Link>
-            </Button>
-          </div>
+                {/* Book Now Badge */}
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-xs font-semibold text-primary uppercase tracking-wide">
+                    Book Now
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
