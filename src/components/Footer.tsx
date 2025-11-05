@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Mail, Phone, MapPin } from "lucide-react";
 import balanceLogo from "@/assets/balance-logo-transparent.png";
 
 const Footer = () => {
@@ -23,10 +23,12 @@ const Footer = () => {
               <span className="block mt-2 font-medium">Balance is for everyone.</span>
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-black hover:text-primary transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-black hover:text-primary transition-colors">
+              <a 
+                href="https://www.instagram.com/balancereformer/?hl=en" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-black hover:text-primary transition-colors"
+              >
                 <Instagram size={20} />
               </a>
             </div>

@@ -27,7 +27,7 @@ const About = () => {
                 Meet Kelly, Owner of Balance
               </h2>
               
-              <div className="bg-card p-4 md:p-8 lg:p-12 rounded-lg border-2 border-primary/40">
+              <div className="bg-white p-4 md:p-8 lg:p-12 rounded-lg border-2 border-primary/40">
                 <div className="grid md:grid-cols-5 gap-4 md:gap-8 items-start">
                   {/* Image */}
                   <div className="md:col-span-2">
@@ -131,7 +131,7 @@ const About = () => {
                     description: "Real results through consistent, mindful, empowered practice.",
                   },
                 ].map((value) => (
-                  <div key={value.title} className="bg-card p-4 md:p-6 rounded-lg border border-border">
+                  <div key={value.title} className="bg-white p-4 md:p-6 rounded-lg border-2 border-primary/40">
                     <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
                       {value.title}
                     </h3>
