@@ -1,11 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import balanceLogo from "@/assets/balance-logo.png";
+import balanceLogo from "@/assets/balance-logo-new.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showBookButton, setShowBookButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show button after scrolling past hero (approximately 100vh)
+      setShowBookButton(window.scrollY > window.innerHeight);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -38,9 +49,11 @@ const Navigation = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild variant="default" className="bg-primary hover:bg-primary/90">
-              <Link to="/locations">Book a Class</Link>
-            </Button>
+            {showBookButton && (
+              <Button asChild variant="default" className="bg-primary hover:bg-primary/90 transition-all animate-fade-in">
+                <Link to="/locations">Book a Class</Link>
+              </Button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,11 +80,13 @@ const Navigation = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button asChild variant="default" className="bg-primary hover:bg-primary/90 w-full">
-                <Link to="/locations" onClick={() => setIsOpen(false)}>
-                  Book a Class
-                </Link>
-              </Button>
+              {showBookButton && (
+                <Button asChild variant="default" className="bg-primary hover:bg-primary/90 w-full">
+                  <Link to="/locations" onClick={() => setIsOpen(false)}>
+                    Book a Class
+                  </Link>
+                </Button>
+              )}
             </div>
           </div>
         )}
