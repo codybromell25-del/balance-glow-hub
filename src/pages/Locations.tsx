@@ -84,72 +84,66 @@ const Locations = () => {
               {studios.map((studio, index) => (
                 <div
                   key={studio.name}
-                  className="rounded-2xl overflow-hidden border border-border hover:shadow-2xl transition-all animate-fade-in w-full"
-                  style={{ 
-                    animationDelay: `${index * 0.05}s`,
-                    aspectRatio: '1 / 1'
-                  }}
+                  className="bg-card p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all animate-fade-in"
+                  style={{ animationDelay: `${index * 0.05}s` }}
                 >
+                  {/* Studio Image */}
                   <div 
-                    className="relative overflow-hidden h-full"
+                    className="w-full h-48 rounded-lg mb-6 overflow-hidden"
                     style={{
                       backgroundImage: `url(${studio.image})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                     }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60" />
-                    
-                    <div className="relative z-10 p-6 h-full flex flex-col justify-between">
+                  />
+
+                  {/* Studio Info */}
+                  <h2 className="text-2xl font-heading font-bold text-foreground mb-6">
+                    {studio.name}
+                  </h2>
+
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h2 className="text-2xl font-heading font-bold text-white mb-4">
-                          {studio.name}
-                        </h2>
-
-                        <div className="space-y-3">
-                          <div className="flex items-start gap-3">
-                            <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                            <div>
-                              <p className="font-semibold text-white mb-1">Address</p>
-                              <p className="text-white/90 text-sm leading-relaxed">{studio.address}</p>
-                              <p className="text-xs text-white/70 mt-2">{studio.parking}</p>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start gap-3">
-                            <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                            <div>
-                              <p className="font-semibold text-white mb-1">Studio Hours</p>
-                              <p className="text-white/90 text-sm">{studio.hours}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="flex flex-col gap-3 mt-6">
-                        <Button 
-                          asChild
-                          size="lg"
-                          className="bg-primary hover:bg-primary/90 text-white font-semibold w-full"
-                        >
-                          <Link to="/schedule">Book Now</Link>
-                        </Button>
-                        <Button 
-                          asChild
-                          size="lg"
-                          variant="outline"
-                          className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:text-white w-full"
-                        >
-                          <a 
-                            href={studio.directionsUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Get Directions
-                          </a>
-                        </Button>
+                        <p className="font-semibold text-foreground mb-1">Address</p>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{studio.address}</p>
+                        <p className="text-xs text-muted-foreground mt-2">{studio.parking}</p>
                       </div>
                     </div>
+
+                    <div className="flex items-start gap-3">
+                      <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground mb-1">Studio Hours</p>
+                        <p className="text-muted-foreground text-sm">{studio.hours}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex flex-col gap-3">
+                    <Button 
+                      asChild
+                      size="lg"
+                      className="bg-primary hover:bg-primary/90 w-full"
+                    >
+                      <Link to="/schedule">Book Now</Link>
+                    </Button>
+                    <Button 
+                      asChild
+                      size="lg"
+                      variant="outline"
+                      className="border-primary text-primary hover:bg-primary/10 w-full"
+                    >
+                      <a 
+                        href={studio.directionsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Get Directions
+                      </a>
+                    </Button>
                   </div>
                 </div>
               ))}
