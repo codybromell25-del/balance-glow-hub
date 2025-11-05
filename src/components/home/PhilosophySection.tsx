@@ -53,7 +53,7 @@ const PhilosophySection = () => {
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${value.bgImage})` }}
                 />
-                <div className="absolute inset-0 bg-white/85" />
+                <div className="absolute inset-0 bg-white/60" />
                 
                 {/* Content */}
                 <div className="relative z-10">
