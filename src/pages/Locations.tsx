@@ -126,7 +126,7 @@ const Locations = () => {
                     <Button 
                       asChild
                       size="lg"
-                      className="bg-primary hover:bg-primary/90 w-full"
+                      className="bg-white hover:bg-white/90 border-2 border-primary/40 hover:border-primary/60 text-foreground w-full"
                     >
                       <Link to="/schedule">Book Now</Link>
                     </Button>
@@ -134,7 +134,7 @@ const Locations = () => {
                       asChild
                       size="lg"
                       variant="outline"
-                      className="border-primary text-primary hover:bg-primary/10 w-full"
+                      className="bg-white border-2 border-primary/40 text-foreground hover:bg-white/90 hover:border-primary/60 w-full"
                     >
                       <a 
                         href={studio.directionsUrl}
