@@ -27,7 +27,7 @@ const Pricing = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
-              <div className="relative bg-gradient-to-br from-primary/10 to-primary/5 p-10 rounded-2xl border-2 border-primary/30 shadow-lg">
+              <div className="relative bg-background p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-primary text-primary-foreground px-6 py-2 rounded-full font-semibold flex items-center gap-2">
                     <Sparkles className="w-5 h-5" />
@@ -88,7 +88,7 @@ const Pricing = () => {
                 ].map((pack) => (
                   <div
                     key={pack.classes}
-                    className="bg-card p-6 rounded-lg border border-border hover:shadow-md transition-all"
+                    className="bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300"
                   >
                     <div className="text-center mb-4">
                       <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
@@ -99,7 +99,7 @@ const Pricing = () => {
                       </p>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
-                    <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10">
+                    <Button className="w-full">
                       Buy Pack
                     </Button>
                   </div>
@@ -140,11 +140,7 @@ const Pricing = () => {
                 ].map((membership) => (
                   <div
                     key={membership.classes}
-                    className={`relative p-8 rounded-xl border ${
-                      membership.popular
-                        ? "bg-gradient-to-br from-primary/10 to-primary/5 border-primary/30"
-                        : "bg-card border-border"
-                    }`}
+                    className="relative bg-background p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300"
                   >
                     {membership.popular && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -178,13 +174,7 @@ const Pricing = () => {
                       ))}
                     </ul>
 
-                    <Button
-                      className={`w-full ${
-                        membership.popular
-                          ? "bg-primary hover:bg-primary/90"
-                          : "bg-secondary hover:bg-secondary/80"
-                      }`}
-                    >
+                    <Button className="w-full">
                       Join Now
                     </Button>
                   </div>
