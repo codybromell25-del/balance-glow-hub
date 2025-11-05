@@ -96,7 +96,7 @@ const Locations = () => {
                       backgroundPosition: 'center',
                     }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 group-hover:from-black/90 group-hover:via-black/75 transition-all duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/30 to-transparent group-hover:from-black/50 group-hover:via-black/40 transition-all duration-500" />
                   </div>
 
                   {/* Content */}
@@ -163,32 +163,6 @@ const Locations = () => {
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-heading font-bold text-foreground mb-6">
-                Ready to Visit?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Book your first class or get in touch with any questions. We're here to help you 
-                get started.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                  <Link to="/schedule">Book a Class</Link>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-primary text-primary hover:bg-primary/10"
-                >
-                  Contact Us
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
