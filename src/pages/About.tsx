@@ -15,11 +15,58 @@ const About = () => {
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
                 Our Story
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Balance Studios was born from a simple belief: that strength, flexibility and confidence 
-                are for every body. We're here to make reformer Pilates accessible, welcoming, 
-                and transformative.
-              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Meet Kelly */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-4xl font-heading font-bold text-foreground mb-12 text-center">
+                Meet Kelly, Owner of Balance
+              </h2>
+              
+              <div className="bg-card p-8 md:p-12 rounded-lg border-2 border-primary/40">
+                <div className="grid md:grid-cols-5 gap-8 items-start">
+                  {/* Image */}
+                  <div className="md:col-span-2">
+                    <div className="relative flex justify-center">
+                      <img 
+                        src={kellyOwner} 
+                        alt="Kelly, Owner of Balance Studios"
+                        className="w-64 h-64 object-cover rounded-full border-4 border-primary/30 shadow-lg"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="md:col-span-3 space-y-4">
+                    <p className="text-muted-foreground leading-relaxed">
+                      Meet Kelly, the driving force behind a thriving community at her studios, where 
+                      exceptional care is the cornerstone of every interaction. With a deep commitment 
+                      to her clients, Kelly has honed her skills through extensive training with the NTC 
+                      and Balanced Body, but it's her years of hands-on experience in private Pilates 
+                      sessions that truly set her apart.
+                    </p>
+                    
+                    <p className="text-muted-foreground leading-relaxed">
+                      Navigating through the complexities of various client needs, Kelly has cultivated 
+                      a sense of trust and confidence, fostering an ever-growing circle of satisfied 
+                      clients. Her passion for helping others shines through in every session, as she 
+                      tirelessly works to ensure her clients feel their best.
+                    </p>
+
+                    <p className="text-muted-foreground leading-relaxed">
+                      With her warm and approachable demeanour, Kelly has cultivated a welcoming 
+                      atmosphere, where laughter and camaraderie abound. Together with her team of 
+                      instructors, known for their dedication to detail and penchant for fun, Kelly 
+                      has built a reputation for delivering not just workouts, but transformative 
+                      experiences.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -98,57 +145,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Meet Kelly */}
-        <section className="py-24">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl font-heading font-bold text-foreground mb-12 text-center">
-                Meet Kelly, Owner of Balance
-              </h2>
-              
-              <div className="bg-card p-8 md:p-12 rounded-lg border-2 border-primary/40">
-                <div className="grid md:grid-cols-5 gap-8 items-start">
-                  {/* Image */}
-                  <div className="md:col-span-2">
-                    <div className="relative flex justify-center">
-                      <img 
-                        src={kellyOwner} 
-                        alt="Kelly, Owner of Balance Studios"
-                        className="w-64 h-64 object-cover rounded-full border-4 border-primary/30 shadow-lg"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="md:col-span-3 space-y-4">
-                    <p className="text-muted-foreground leading-relaxed">
-                      Meet Kelly, the driving force behind a thriving community at her studios, where 
-                      exceptional care is the cornerstone of every interaction. With a deep commitment 
-                      to her clients, Kelly has honed her skills through extensive training with the NTC 
-                      and Balanced Body, but it's her years of hands-on experience in private Pilates 
-                      sessions that truly set her apart.
-                    </p>
-                    
-                    <p className="text-muted-foreground leading-relaxed">
-                      Navigating through the complexities of various client needs, Kelly has cultivated 
-                      a sense of trust and confidence, fostering an ever-growing circle of satisfied 
-                      clients. Her passion for helping others shines through in every session, as she 
-                      tirelessly works to ensure her clients feel their best.
-                    </p>
-
-                    <p className="text-muted-foreground leading-relaxed">
-                      With her warm and approachable demeanour, Kelly has cultivated a welcoming 
-                      atmosphere, where laughter and camaraderie abound. Together with her team of 
-                      instructors, known for their dedication to detail and penchant for fun, Kelly 
-                      has built a reputation for delivering not just workouts, but transformative 
-                      experiences.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
