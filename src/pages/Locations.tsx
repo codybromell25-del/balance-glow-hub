@@ -63,7 +63,7 @@ const Locations = () => {
       <Navigation />
       <main className="pt-20">
         {/* Hero */}
-        <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-12 md:py-24 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
@@ -78,13 +78,13 @@ const Locations = () => {
         </section>
 
         {/* Studios Grid */}
-        <section className="py-16">
+        <section className="py-8 md:py-16">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-6xl mx-auto">
               {studios.map((studio, index) => (
                 <div
                   key={studio.name}
-                  className="bg-card p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all animate-fade-in"
+                  className="bg-card p-4 md:p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all animate-fade-in"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   {/* Studio Image */}

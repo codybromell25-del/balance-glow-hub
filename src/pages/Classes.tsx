@@ -61,7 +61,7 @@ const Classes = () => {
       <Navigation />
       <main className="pt-20">
         {/* Hero */}
-        <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-12 md:py-24 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
@@ -79,18 +79,18 @@ const Classes = () => {
         </section>
 
         {/* Class Levels Detail */}
-        <section className="py-24">
+        <section className="py-12 md:py-24">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto space-y-16">
+            <div className="max-w-5xl mx-auto space-y-8 md:space-y-16">
               {classLevels.map((classLevel, index) => {
                 const Icon = classLevel.icon;
                 return (
                   <div
                     key={classLevel.level}
-                    className="bg-background p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                    className="bg-background p-4 md:p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8">
                       {/* Level Header */}
                       <div className="lg:col-span-1">
                         <div className="flex items-center gap-3 mb-4">
@@ -135,7 +135,7 @@ const Classes = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-24 bg-secondary/30">
+        <section className="py-12 md:py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-heading font-bold text-foreground mb-6">

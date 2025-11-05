@@ -32,9 +32,9 @@ const LocationsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
             Find Your Nearest Studio
           </h2>
@@ -44,11 +44,11 @@ const LocationsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-12">
           {locations.map((location, index) => (
             <div
               key={location.name}
-              className="bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-md transition-all duration-300 animate-fade-in"
+              className="bg-background p-4 md:p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-md transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="flex items-start gap-3 mb-3">
@@ -69,7 +69,7 @@ const LocationsSection = () => {
           ))}
 
           {/* CTA Card */}
-          <div className="bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 flex flex-col items-center justify-center text-center hover:shadow-md transition-all duration-300">
+          <div className="bg-background p-4 md:p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 flex flex-col items-center justify-center text-center hover:shadow-md transition-all duration-300">
             <p className="text-lg font-heading font-semibold text-foreground mb-4">
               Ready to visit?
             </p>

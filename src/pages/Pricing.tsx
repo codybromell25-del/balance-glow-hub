@@ -66,7 +66,7 @@ const Pricing = () => {
         </section>
 
         {/* Class Packs */}
-        <section className="py-16 bg-secondary/30">
+        <section className="py-8 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">

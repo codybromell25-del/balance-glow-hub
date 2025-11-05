@@ -71,9 +71,9 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
             What Our Community Says
           </h2>
@@ -98,7 +98,7 @@ const TestimonialsSection = () => {
           <CarouselContent className="-ml-4">
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="bg-background p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div className="bg-background p-4 md:p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                   <Quote className="w-10 h-10 text-primary/20 mb-4" />
                   
                   <p className="text-foreground leading-relaxed mb-6 italic flex-grow">

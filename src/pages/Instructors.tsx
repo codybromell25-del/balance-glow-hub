@@ -56,7 +56,7 @@ const Instructors = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
+      <section className="relative py-10 md:py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             Meet Our Instructors
@@ -68,9 +68,9 @@ const Instructors = () => {
       </section>
 
       {/* Instructors Grid */}
-      <section className="py-16 px-4">
+      <section className="py-8 md:py-16 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {instructors.map((instructor, index) => (
               <Card 
                 key={index} 
@@ -124,7 +124,7 @@ const Instructors = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-primary/5">
+      <section className="py-10 md:py-20 px-4 bg-primary/5">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Journey?

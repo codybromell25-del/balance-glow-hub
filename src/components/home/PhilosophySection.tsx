@@ -20,9 +20,9 @@ const PhilosophySection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
             Why Balance Studios?
           </h2>
@@ -33,13 +33,13 @@ const PhilosophySection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (
               <div
                 key={value.title}
-                className="bg-background p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                className="bg-background p-4 md:p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">

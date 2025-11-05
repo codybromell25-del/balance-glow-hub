@@ -9,7 +9,7 @@ const About = () => {
       <Navigation />
       <main className="pt-20">
         {/* Hero */}
-        <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-12 md:py-24 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
@@ -20,15 +20,15 @@ const About = () => {
         </section>
 
         {/* Meet Kelly */}
-        <section className="py-24">
+        <section className="py-12 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl font-heading font-bold text-foreground mb-12 text-center">
+              <h2 className="text-4xl font-heading font-bold text-foreground mb-6 md:mb-12 text-center">
                 Meet Kelly, Owner of Balance
               </h2>
               
-              <div className="bg-card p-8 md:p-12 rounded-lg border-2 border-primary/40">
-                <div className="grid md:grid-cols-5 gap-8 items-start">
+              <div className="bg-card p-4 md:p-8 lg:p-12 rounded-lg border-2 border-primary/40">
+                <div className="grid md:grid-cols-5 gap-4 md:gap-8 items-start">
                   {/* Image */}
                   <div className="md:col-span-2">
                     <div className="relative flex justify-center">
@@ -72,7 +72,7 @@ const About = () => {
         </section>
 
         {/* Mission */}
-        <section className="py-24">
+        <section className="py-12 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center gap-4 mb-8">
@@ -105,14 +105,14 @@ const About = () => {
         </section>
 
         {/* Values */}
-        <section className="py-24 bg-secondary/30">
+        <section className="py-12 md:py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold text-foreground mb-12 text-center">
+              <h2 className="text-3xl font-heading font-bold text-foreground mb-6 md:mb-12 text-center">
                 What We Stand For
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                 {[
                   {
                     title: "Inclusivity",
@@ -131,7 +131,7 @@ const About = () => {
                     description: "Real results through consistent, mindful, empowered practice.",
                   },
                 ].map((value) => (
-                  <div key={value.title} className="bg-card p-6 rounded-lg border border-border">
+                  <div key={value.title} className="bg-card p-4 md:p-6 rounded-lg border border-border">
                     <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
                       {value.title}
                     </h3>
