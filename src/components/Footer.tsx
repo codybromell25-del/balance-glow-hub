@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
-import balanceLogo from "@/assets/balance-logo-new.png";
+import balanceLogo from "@/assets/balance-logo-transparent.png";
 
 const Footer = () => {
   const locations = [
