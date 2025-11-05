@@ -87,42 +87,44 @@ const Classes = () => {
                 return (
                   <div
                     key={classLevel.level}
-                    className="grid grid-cols-1 lg:grid-cols-3 gap-8 animate-fade-in"
+                    className="bg-background p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    {/* Level Header */}
-                    <div className="lg:col-span-1">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center">
-                          <Icon className="w-7 h-7 text-primary" />
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                      {/* Level Header */}
+                      <div className="lg:col-span-1">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center">
+                            <Icon className="w-7 h-7 text-primary" />
+                          </div>
                         </div>
+                        <h2 className="text-3xl font-heading font-bold text-foreground mb-2">
+                          {classLevel.level}
+                        </h2>
+                        <p className="text-sm text-primary font-semibold uppercase tracking-wide mb-4">
+                          {classLevel.suitable}
+                        </p>
                       </div>
-                      <h2 className="text-3xl font-heading font-bold text-foreground mb-2">
-                        {classLevel.level}
-                      </h2>
-                      <p className="text-sm text-primary font-semibold uppercase tracking-wide mb-4">
-                        {classLevel.suitable}
-                      </p>
-                    </div>
 
-                    {/* Content */}
-                    <div className="lg:col-span-2 space-y-6">
-                      <p className="text-lg text-muted-foreground leading-relaxed">
-                        {classLevel.description}
-                      </p>
+                      {/* Content */}
+                      <div className="lg:col-span-2 space-y-6">
+                        <p className="text-lg text-muted-foreground leading-relaxed">
+                          {classLevel.description}
+                        </p>
 
-                      <div>
-                        <h3 className="text-lg font-semibold text-foreground mb-3">
-                          What to Expect:
-                        </h3>
-                        <ul className="space-y-2">
-                          {classLevel.whatToExpect.map((item) => (
-                            <li key={item} className="flex items-start gap-2">
-                              <span className="text-primary mt-1">•</span>
-                              <span className="text-muted-foreground">{item}</span>
-                            </li>
-                          ))}
-                        </ul>
+                        <div>
+                          <h3 className="text-lg font-semibold text-foreground mb-3">
+                            What to Expect:
+                          </h3>
+                          <ul className="space-y-2">
+                            {classLevel.whatToExpect.map((item) => (
+                              <li key={item} className="flex items-start gap-2">
+                                <span className="text-primary mt-1">•</span>
+                                <span className="text-muted-foreground">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
