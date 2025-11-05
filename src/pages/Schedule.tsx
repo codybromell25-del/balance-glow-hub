@@ -6,7 +6,7 @@ const Schedule = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-20">
-        <section className="py-12 bg-gradient-to-br from-primary/5 to-background">
+        <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 text-center">
