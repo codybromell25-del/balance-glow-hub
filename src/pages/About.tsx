@@ -42,27 +42,13 @@ const About = () => {
 
                   {/* Content */}
                   <div className="md:col-span-3 space-y-4">
-                    <p className="text-muted-foreground leading-relaxed">
-                      Meet Kelly, the driving force behind a thriving community at her studios, where 
-                      exceptional care is the cornerstone of every interaction. With a deep commitment 
-                      to her clients, Kelly has honed her skills through extensive training with the NTC 
-                      and Balanced Body, but it's her years of hands-on experience in private Pilates 
-                      sessions that truly set her apart.
+                    <p className="text-muted-foreground leading-relaxed text-lg">
+                      Kelly is the founder and business lead at Balance. She creates gorgeous studios, 
+                      handpicks and develops incredible instructors, and protects the high Balance standard.
                     </p>
                     
-                    <p className="text-muted-foreground leading-relaxed">
-                      Navigating through the complexities of various client needs, Kelly has cultivated 
-                      a sense of trust and confidence, fostering an ever-growing circle of satisfied 
-                      clients. Her passion for helping others shines through in every session, as she 
-                      tirelessly works to ensure her clients feel their best.
-                    </p>
-
-                    <p className="text-muted-foreground leading-relaxed">
-                      With her warm and approachable demeanour, Kelly has cultivated a welcoming 
-                      atmosphere, where laughter and camaraderie abound. Together with her team of 
-                      instructors, known for their dedication to detail and penchant for fun, Kelly 
-                      has built a reputation for delivering not just workouts, but transformative 
-                      experiences.
+                    <p className="text-muted-foreground leading-relaxed text-lg">
+                      Growth focused, always modern, never stuck.
                     </p>
                   </div>
                 </div>
