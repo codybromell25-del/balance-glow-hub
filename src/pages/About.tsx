@@ -135,47 +135,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Values */}
-        <section className="py-12 md:py-24 bg-secondary/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold text-foreground mb-6 md:mb-12 text-center">
-                What We Stand For
-              </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-                {[
-                  {
-                    title: "Inclusivity",
-                    description: "Every body, every age, every fitness level—all are welcome here.",
-                  },
-                  {
-                    title: "Excellence",
-                    description: "Expert instructors committed to your form, safety, and progress.",
-                  },
-                  {
-                    title: "Community",
-                    description: "More than a studio—a supportive space where you belong.",
-                  },
-                  {
-                    title: "Transformation",
-                    description: "Real results through consistent, mindful, empowered practice.",
-                  },
-                ].map((value) => (
-                  <div key={value.title} className="bg-white p-4 md:p-6 rounded-lg border-2 border-primary/40">
-                    <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
-                      {value.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {value.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
       </main>
       <Footer />
     </div>
