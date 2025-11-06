@@ -8,82 +8,82 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Balance Studios - Refined Rose Gold #d8c9c2 */
+    /* Balance Studios - Soft Green #a3c1ad */
     
     /* Backgrounds - Clean White */
     --background: 0 0% 100%;
     --foreground: 0 0% 10%;
 
-    /* Cards - Soft rose gold background */
-    --card: 19 22% 95%;
+    /* Cards - Soft neutral background */
+    --card: 0 0% 98%;
     --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    /* Primary - Rose Gold #d8c9c2 */
-    --primary: 19 22% 80%;
+    /* Primary - Soft Green #a3c1ad */
+    --primary: 160 30% 70%;
     --primary-foreground: 0 0% 10%;
     
-    /* Secondary - Rose Gold */
-    --secondary: 19 22% 80%;
+    /* Secondary - Soft Green */
+    --secondary: 160 30% 70%;
     --secondary-foreground: 0 0% 10%;
 
     /* Muted - Soft neutral tones */
-    --muted: 19 10% 95%;
+    --muted: 0 0% 95%;
     --muted-foreground: 0 0% 40%;
 
-    /* Accent - Soft Rose Gold Accent */
-    --accent: 19 22% 92%;
-    --accent-foreground: 19 30% 30%;
+    /* Accent - Soft Green Accent */
+    --accent: 160 25% 85%;
+    --accent-foreground: 160 30% 30%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
     /* Borders - Soft neutral */
-    --border: 19 20% 85%;
-    --input: 19 20% 85%;
-    --ring: 19 22% 80%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 160 30% 70%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens - Feminine & Luxurious */
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 5% / 0.7), hsl(0 0% 2%));
-    --gradient-gold: linear-gradient(135deg, hsl(19 22% 80%), hsl(19 25% 82%));
-    --shadow-soft: 0 4px 24px hsl(19 22% 80% / 0.15);
-    --shadow-elevated: 0 12px 48px hsl(19 22% 80% / 0.25);
-    --shadow-glow: 0 0 40px hsl(19 22% 80% / 0.2);
+    --gradient-green: linear-gradient(135deg, hsl(160 30% 70%), hsl(160 30% 75%));
+    --shadow-soft: 0 4px 24px hsl(160 30% 70% / 0.15);
+    --shadow-elevated: 0 12px 48px hsl(160 30% 70% / 0.25);
+    --shadow-glow: 0 0 40px hsl(160 30% 70% / 0.2);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
     --background: 0 0% 6%;
-    --foreground: 19 15% 97%;
+    --foreground: 0 0% 97%;
 
     --card: 0 0% 10%;
-    --card-foreground: 19 15% 97%;
+    --card-foreground: 0 0% 97%;
 
     --popover: 0 0% 10%;
-    --popover-foreground: 19 15% 97%;
+    --popover-foreground: 0 0% 97%;
 
-    --primary: 19 22% 80%;
+    --primary: 160 30% 70%;
     --primary-foreground: 0 0% 10%;
 
-    --secondary: 19 22% 80%;
+    --secondary: 160 30% 70%;
     --secondary-foreground: 0 0% 10%;
 
     --muted: 0 0% 15%;
-    --muted-foreground: 19 15% 78%;
+    --muted-foreground: 0 0% 78%;
 
-    --accent: 19 20% 25%;
-    --accent-foreground: 19 22% 80%;
+    --accent: 160 20% 25%;
+    --accent-foreground: 160 30% 70%;
 
     --destructive: 0 62% 50%;
-    --destructive-foreground: 19 15% 97%;
+    --destructive-foreground: 0 0% 97%;
 
-    --border: 19 20% 25%;
+    --border: 0 0% 25%;
     --input: 0 0% 18%;
-    --ring: 19 22% 80%;
+    --ring: 160 30% 70%;
   }
 }
 
