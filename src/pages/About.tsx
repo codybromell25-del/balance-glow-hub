@@ -35,7 +35,8 @@ const About = () => {
                       <img 
                         src={kellyOwner} 
                         alt="Kelly, Owner of Balance Studios"
-                        className="w-64 h-64 object-cover rounded-full border-4 border-primary/30 shadow-lg"
+                        className="w-64 h-64 object-cover object-center rounded-full border-4 border-primary/30 shadow-lg scale-150"
+                        style={{ objectPosition: 'center 30%' }}
                       />
                     </div>
                   </div>
