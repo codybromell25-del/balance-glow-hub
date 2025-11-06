@@ -2,6 +2,12 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Heart } from "lucide-react";
 import kellyOwner from "@/assets/kelly-owner-new.png";
+import studioInterior1 from "@/assets/studio-interior-1.png";
+import studioHallway from "@/assets/studio-hallway.png";
+import studioEntrance from "@/assets/studio-entrance.png";
+import studioExterior from "@/assets/studio-exterior.png";
+import heroStudio from "@/assets/hero-studio.jpg";
+import heroStudioInterior from "@/assets/hero-studio-interior.png";
 
 const About = () => {
   return (
@@ -55,34 +61,62 @@ const About = () => {
           </div>
         </section>
 
-        {/* Mission */}
-        <section className="py-12 md:py-24">
+        {/* Our Growth */}
+        <section className="py-12 md:py-24 bg-secondary/20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Heart className="w-6 h-6 text-primary" />
-                </div>
-                <h2 className="text-3xl font-heading font-bold text-foreground">Our Mission</h2>
-              </div>
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6 text-center">
+                Our Growth
+              </h2>
+              <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+                Quality is the reason we've grown to where we are now. Expertly designed studios, 
+                top-class instructors who deliver real results to real people.
+              </p>
               
-              <div className="prose prose-lg max-w-none">
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  At Balance Studios, we believe that wellness should be personal, supportive, and 
-                  empowering. With five locations across Kildare, Wicklow, and Meath, we've 
-                  created spaces where small groups, expert instruction, and genuine community come together.
-                </p>
-                
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Every studio is thoughtfully designed to feel like a sanctuary—calm, light-filled, 
-                  and welcoming. Our instructors are more than just teachers; they're your partners 
-                  in building strength, grace, and balance that extends far beyond the reformer.
-                </p>
-
-                <p className="text-muted-foreground leading-relaxed">
-                  Whether you're stepping onto a reformer for the first time or you're an experienced 
-                  practitioner, you'll find your place here. Because at Balance, every body truly is beautiful.
-                </p>
+              {/* Pinterest-style Grid */}
+              <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+                <div className="break-inside-avoid">
+                  <img 
+                    src={studioInterior1} 
+                    alt="Balance Studio interior with reformers"
+                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                  />
+                </div>
+                <div className="break-inside-avoid">
+                  <img 
+                    src={studioExterior} 
+                    alt="Balance Studio storefront"
+                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                  />
+                </div>
+                <div className="break-inside-avoid">
+                  <img 
+                    src={studioHallway} 
+                    alt="Balance Studio hallway"
+                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                  />
+                </div>
+                <div className="break-inside-avoid">
+                  <img 
+                    src={heroStudio} 
+                    alt="Balance Studio space"
+                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                  />
+                </div>
+                <div className="break-inside-avoid">
+                  <img 
+                    src={studioEntrance} 
+                    alt="Balance Studio entrance view"
+                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                  />
+                </div>
+                <div className="break-inside-avoid">
+                  <img 
+                    src={heroStudioInterior} 
+                    alt="Balance Studio interior design"
+                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                  />
+                </div>
               </div>
             </div>
           </div>
