@@ -20,12 +20,10 @@ const Navigation = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Classes", path: "/classes" },
+    { name: "Class Types", path: "/classes" },
     { name: "Pricing", path: "/pricing" },
     { name: "Book a Class", path: "/locations" },
-    { name: "Instructors", path: "/instructors" },
-    { name: "Blogs", path: "/blogs" },
+    { name: "About", path: "/about" },
     { name: "Shop", path: "/shop" },
   ];
 

@@ -10,10 +10,8 @@ import About from "./pages/About";
 import Classes from "./pages/Classes";
 import Pricing from "./pages/Pricing";
 import Locations from "./pages/Locations";
-import Blogs from "./pages/Blogs";
 import Shop from "./pages/Shop";
 import Schedule from "./pages/Schedule";
-import Instructors from "./pages/Instructors";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,14 +26,12 @@ const App = () => (
         <FloatingBookButton />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
           <Route path="/classes" element={<Classes />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/locations" element={<Locations />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/about" element={<About />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/schedule" element={<Schedule />} />
-          <Route path="/instructors" element={<Instructors />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
