@@ -28,27 +28,24 @@ const About = () => {
               </h2>
               
               <div className="bg-white p-4 md:p-8 lg:p-12 rounded-lg border-2 border-primary/40">
-                <div className="grid md:grid-cols-5 gap-4 md:gap-8 items-start">
+                <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
                   {/* Image */}
-                  <div className="md:col-span-2">
-                    <div className="relative flex justify-center">
-                      <img 
-                        src={kellyOwner} 
-                        alt="Kelly, Owner of Balance Studios"
-                        className="w-64 h-64 object-cover object-center rounded-full border-4 border-primary/30 shadow-lg scale-150"
-                        style={{ objectPosition: 'center 30%' }}
-                      />
-                    </div>
+                  <div className="order-2 md:order-1">
+                    <img 
+                      src={kellyOwner} 
+                      alt="Kelly, Owner of Balance Studios"
+                      className="w-full h-auto rounded-lg shadow-lg"
+                    />
                   </div>
 
                   {/* Content */}
-                  <div className="md:col-span-3 space-y-4">
+                  <div className="order-1 md:order-2 space-y-6">
                     <p className="text-muted-foreground leading-relaxed text-lg">
                       Kelly is the founder and business lead at Balance. She creates gorgeous studios, 
                       handpicks and develops incredible instructors, and protects the high Balance standard.
                     </p>
                     
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-lg font-medium">
                       Growth focused, always modern, never stuck.
                     </p>
                   </div>
