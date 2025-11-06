@@ -7,11 +7,10 @@ const PricingPreview = () => {
     <section className="py-12 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Start Your Journey Today
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">New Here?</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Special intro offer for new clients. Experience the Balance difference with no commitment.
+            Perfect. Dip your toes in with our intro offer—get hooked on the Balance vibe without locking yourself into
+            anything (except great form).
           </p>
         </div>
 
@@ -25,9 +24,7 @@ const PricingPreview = () => {
             </div>
 
             <div className="text-center mb-6 mt-4">
-              <h3 className="text-3xl font-heading font-bold text-foreground mb-3">
-                Intro Offer: 4 Classes for €60
-              </h3>
+              <h3 className="text-3xl font-heading font-bold text-foreground mb-3">Intro Offer: 4 Classes for €60</h3>
               <p className="text-muted-foreground">The perfect way to discover Balance Studios</p>
             </div>
 
@@ -46,14 +43,15 @@ const PricingPreview = () => {
               ))}
             </ul>
 
-            <Button className="w-full bg-primary hover:bg-primary/90 text-lg py-6">
-              Purchase Intro Offer
-            </Button>
+            <Button className="w-full bg-primary hover:bg-primary/90 text-lg py-6">Purchase Intro Offer</Button>
           </div>
         </div>
 
         <p className="text-center text-muted-foreground mt-8">
-          Questions about pricing? <Link to="/contact" className="text-primary hover:underline">Get in touch</Link>
+          Questions about pricing?{" "}
+          <Link to="/contact" className="text-primary hover:underline">
+            Get in touch
+          </Link>
         </p>
       </div>
     </section>
