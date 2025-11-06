@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Heart } from "lucide-react";
-import kellyOwner from "@/assets/kelly-owner.avif";
+import kellyOwner from "@/assets/kelly-owner-new.png";
 
 const About = () => {
   return (
