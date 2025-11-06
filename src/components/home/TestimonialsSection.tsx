@@ -1,9 +1,5 @@
 import { Quote, BadgeCheck, ChevronRight } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
 const TestimonialsSection = () => {
@@ -75,10 +71,10 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            What Our Community Says
+            Why People Keep Coming Back
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Real Google reviews from real clients who've found their balance with us.
+            Honest words from the people living their best Balance life.
           </p>
         </div>
 
@@ -95,44 +91,44 @@ const TestimonialsSection = () => {
             ]}
             className="w-full"
           >
-          <CarouselContent className="-ml-4">
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="bg-background p-4 md:p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-                  <Quote className="w-10 h-10 text-primary/20 mb-4" />
-                  
-                  <p className="text-foreground leading-relaxed mb-6 italic flex-grow">
-                    "{testimonial.text}"
-                  </p>
+            <CarouselContent className="-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="bg-background p-4 md:p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                    <Quote className="w-10 h-10 text-primary/20 mb-4" />
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div>
-                        <div className="flex items-center gap-1.5">
-                          <p className="font-semibold text-foreground">{testimonial.name}</p>
-                          <BadgeCheck className="w-4 h-4 text-blue-500" />
+                    <p className="text-foreground leading-relaxed mb-6 italic flex-grow">"{testimonial.text}"</p>
+
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div>
+                          <div className="flex items-center gap-1.5">
+                            <p className="font-semibold text-foreground">{testimonial.name}</p>
+                            <BadgeCheck className="w-4 h-4 text-blue-500" />
+                          </div>
+                          <p className="text-sm text-muted-foreground">Google Review</p>
                         </div>
-                        <p className="text-sm text-muted-foreground">Google Review</p>
+                      </div>
+                      <div className="flex gap-0.5">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <span key={i} className="text-yellow-500 text-lg">
+                            ★
+                          </span>
+                        ))}
                       </div>
                     </div>
-                    <div className="flex gap-0.5">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <span key={i} className="text-yellow-500 text-lg">★</span>
-                      ))}
-                    </div>
                   </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          
-          {/* Mobile swipe indicator */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 md:hidden pointer-events-none">
-            <div className="animate-pulse">
-              <ChevronRight className="w-8 h-8 text-muted-foreground/30" />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+
+            {/* Mobile swipe indicator */}
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 md:hidden pointer-events-none">
+              <div className="animate-pulse">
+                <ChevronRight className="w-8 h-8 text-muted-foreground/30" />
+              </div>
             </div>
-          </div>
-        </Carousel>
+          </Carousel>
         </div>
       </div>
     </section>
