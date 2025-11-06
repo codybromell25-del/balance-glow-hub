@@ -2,12 +2,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Heart } from "lucide-react";
 import kellyOwner from "@/assets/kelly-owner-new.png";
-import studioInterior1 from "@/assets/studio-interior-1.png";
-import studioHallway from "@/assets/studio-hallway.png";
-import studioEntrance from "@/assets/studio-entrance.png";
-import studioExterior from "@/assets/studio-exterior.png";
-import heroStudio from "@/assets/hero-studio.jpg";
-import heroStudioInterior from "@/assets/hero-studio-interior.png";
+import studioClane from "@/assets/studio-clane.png";
+import studioKildare from "@/assets/studio-kildare.png";
+import studioBlessington from "@/assets/studio-blessington.png";
+import studioEnfield from "@/assets/studio-enfield.png";
+import studioBray from "@/assets/studio-bray.png";
 
 const About = () => {
   return (
@@ -77,44 +76,37 @@ const About = () => {
               <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
                 <div className="break-inside-avoid">
                   <img 
-                    src={studioInterior1} 
-                    alt="Balance Studio interior with reformers"
-                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                    src={studioClane} 
+                    alt="Balance Studio Clane location"
+                    className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid">
                   <img 
-                    src={studioExterior} 
-                    alt="Balance Studio storefront"
-                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                    src={studioKildare} 
+                    alt="Balance Studio Kildare Town location"
+                    className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid">
                   <img 
-                    src={studioHallway} 
-                    alt="Balance Studio hallway"
-                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                    src={studioBlessington} 
+                    alt="Balance Studio Blessington location"
+                    className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid">
                   <img 
-                    src={heroStudio} 
-                    alt="Balance Studio space"
-                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                    src={studioEnfield} 
+                    alt="Balance Studio Enfield location"
+                    className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid">
                   <img 
-                    src={studioEntrance} 
-                    alt="Balance Studio entrance view"
-                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
-                  />
-                </div>
-                <div className="break-inside-avoid">
-                  <img 
-                    src={heroStudioInterior} 
-                    alt="Balance Studio interior design"
-                    className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                    src={studioBray} 
+                    alt="Balance Studio Bray location"
+                    className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
               </div>
