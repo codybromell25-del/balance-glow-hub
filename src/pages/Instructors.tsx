@@ -109,7 +109,7 @@ const Instructors = () => {
                     
                     <Button 
                       asChild 
-                      className="w-full bg-primary hover:bg-primary/90 transition-all duration-300 group-hover:shadow-lg mt-auto"
+                      className="w-full transition-all duration-300 group-hover:shadow-lg mt-auto"
                     >
                       <Link to="/locations">
                         Book a Class
@@ -132,7 +132,7 @@ const Instructors = () => {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Choose your location and join one of our amazing instructors for an unforgettable Pilates experience
           </p>
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+          <Button asChild size="lg">
             <Link to="/locations">View Locations</Link>
           </Button>
         </div>

@@ -57,7 +57,7 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <Button className="w-full bg-primary hover:bg-primary/90 text-lg py-6">
+                <Button className="w-full text-lg py-6">
                   Purchase Intro Offer
                 </Button>
               </div>

@@ -67,7 +67,7 @@ const Classes = () => {
                 Clear progression pathways mean you'll always know which class level suits you best. Start where you
                 are, progress at your pace, and feel confident every step of the way.
               </p>
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+              <Button asChild size="lg">
                 <Link to="/locations">Book a Class Now</Link>
               </Button>
             </div>
@@ -116,7 +116,7 @@ const Classes = () => {
 
                         <Button
                           asChild
-                          className="bg-white hover:bg-white/90 border-2 border-primary/40 hover:border-primary/60 text-foreground w-full sm:w-auto"
+                          className="w-full sm:w-auto"
                         >
                           <Link to="/locations">Book Class</Link>
                         </Button>
@@ -139,14 +139,13 @@ const Classes = () => {
                 Foundation class to begin your journey.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                <Button asChild size="lg">
                   <Link to="/book">Book Foundation Class</Link>
                 </Button>
                 <Button
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-2 border-primary text-primary hover:bg-primary/10"
                 >
                   <Link to="/contact">Ask Us Anything</Link>
                 </Button>

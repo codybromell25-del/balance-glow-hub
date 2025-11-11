@@ -48,7 +48,7 @@ const Navigation = () => {
               </Link>
             ))}
             {showBookButton && (
-              <Button asChild variant="default" className="bg-primary hover:bg-primary/90 transition-all animate-fade-in">
+              <Button asChild variant="default" className="transition-all animate-fade-in">
                 <Link to="/locations">Book a Class</Link>
               </Button>
             )}
@@ -79,7 +79,7 @@ const Navigation = () => {
                 </Link>
               ))}
               {showBookButton && (
-                <Button asChild variant="default" className="bg-primary hover:bg-primary/90 w-full">
+                <Button asChild variant="default" className="w-full">
                   <Link to="/locations" onClick={() => setIsOpen(false)}>
                     Book a Class
                   </Link>
