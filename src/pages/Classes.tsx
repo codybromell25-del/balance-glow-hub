@@ -10,7 +10,6 @@ const Classes = () => {
       icon: TrendingUp,
       level: "Foundation / Beginner",
       suitable: "Brand new to reformer Pilates",
-      description: "Learn the fundamentals in a supportive, low-pressure environment. We'll guide you through basic movements, proper form, and machine setup. Perfect for building confidence before progressing.",
       whatToExpect: [
         "Slower pace with detailed instruction",
         "Focus on alignment and breathing",
@@ -22,7 +21,6 @@ const Classes = () => {
       icon: Zap,
       level: "Level 1 & 2",
       suitable: "Comfortable with basics, ready to progress",
-      description: "Build on your foundation with more dynamic sequences and flowing transitions. Increase challenge while maintaining proper form. Ideal for regular practitioners.",
       whatToExpect: [
         "Faster-paced sequences",
         "More complex movement patterns",
@@ -34,7 +32,6 @@ const Classes = () => {
       icon: Award,
       level: "Advanced",
       suitable: "Experienced practitioners seeking intensity",
-      description: "Master challenging sequences with precision and control. These classes demand strength, flexibility, and mind-body connection. Push your limits safely.",
       whatToExpect: [
         "Complex choreography",
         "High intensity and endurance",
@@ -46,7 +43,6 @@ const Classes = () => {
       icon: Activity,
       level: "Specialty Classes",
       suitable: "Varies by class type",
-      description: "Unique formats like Reformer Slow Burn (low-impact, high-intensity) and Mat Pilates. Add variety to your routine and target specific goals.",
       whatToExpect: [
         "Reformer Slow Burn: controlled holds",
         "Mat Pilates: core-focused floor work",
@@ -68,8 +64,8 @@ const Classes = () => {
                 Find Your Perfect Class
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                Clear progression pathways mean you'll always know which class level suits you best. 
-                Start where you are, progress at your pace, and feel confident every step of the way.
+                Clear progression pathways mean you'll always know which class level suits you best. Start where you
+                are, progress at your pace, and feel confident every step of the way.
               </p>
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link to="/locations">Book a Class Now</Link>
@@ -98,9 +94,7 @@ const Classes = () => {
                             <Icon className="w-7 h-7 text-primary" />
                           </div>
                         </div>
-                        <h2 className="text-3xl font-heading font-bold text-foreground mb-2">
-                          {classLevel.level}
-                        </h2>
+                        <h2 className="text-3xl font-heading font-bold text-foreground mb-2">{classLevel.level}</h2>
                         <p className="text-sm text-primary font-semibold uppercase tracking-wide mb-4">
                           {classLevel.suitable}
                         </p>
@@ -108,14 +102,10 @@ const Classes = () => {
 
                       {/* Content */}
                       <div className="lg:col-span-2 space-y-6">
-                        <p className="text-lg text-muted-foreground leading-relaxed">
-                          {classLevel.description}
-                        </p>
+                        <p className="text-lg text-muted-foreground leading-relaxed">{classLevel.description}</p>
 
                         <div>
-                          <h3 className="text-lg font-semibold text-foreground mb-3">
-                            What to Expect:
-                          </h3>
+                          <h3 className="text-lg font-semibold text-foreground mb-3">What to Expect:</h3>
                           <ul className="space-y-2">
                             {classLevel.whatToExpect.map((item) => (
                               <li key={item} className="flex items-start gap-2">
@@ -126,7 +116,10 @@ const Classes = () => {
                           </ul>
                         </div>
 
-                        <Button asChild className="bg-white hover:bg-white/90 border-2 border-primary/40 hover:border-primary/60 text-foreground w-full sm:w-auto">
+                        <Button
+                          asChild
+                          className="bg-white hover:bg-white/90 border-2 border-primary/40 hover:border-primary/60 text-foreground w-full sm:w-auto"
+                        >
                           <Link to="/locations">Book Class</Link>
                         </Button>
                       </div>
@@ -142,18 +135,21 @@ const Classes = () => {
         <section className="py-12 md:py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-heading font-bold text-foreground mb-6">
-                Still Not Sure Which Level?
-              </h2>
+              <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Still Not Sure Which Level?</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Our instructors are happy to help you find the right starting point. 
-                Get in touch or simply book a Foundation class to begin your journey.
+                Our instructors are happy to help you find the right starting point. Get in touch or simply book a
+                Foundation class to begin your journey.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                   <Link to="/book">Book Foundation Class</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary/10">
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-primary text-primary hover:bg-primary/10"
+                >
                   <Link to="/contact">Ask Us Anything</Link>
                 </Button>
               </div>
