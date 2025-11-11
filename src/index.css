@@ -50,6 +50,7 @@ All colors MUST be HSL.
     /* Custom design tokens - Feminine & Luxurious */
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 5% / 0.7), hsl(0 0% 2%));
     --gradient-gold: linear-gradient(135deg, hsl(19 22% 80%), hsl(19 25% 82%));
+    --gradient-button: linear-gradient(135deg, hsl(340 60% 75%), hsl(19 40% 80%), hsl(340 50% 85%));
     --shadow-soft: 0 4px 24px hsl(19 22% 80% / 0.15);
     --shadow-elevated: 0 12px 48px hsl(19 22% 80% / 0.25);
     --shadow-glow: 0 0 40px hsl(19 22% 80% / 0.2);
