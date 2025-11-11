@@ -12,7 +12,7 @@ All colors MUST be HSL.
     
     /* Backgrounds - Clean White */
     --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --foreground: 0 0% 0%;
 
     /* Cards - Soft rose gold background */
     --card: 19 22% 95%;

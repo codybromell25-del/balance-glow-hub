@@ -102,8 +102,6 @@ const Classes = () => {
 
                       {/* Content */}
                       <div className="lg:col-span-2 space-y-6">
-                        <p className="text-lg text-muted-foreground leading-relaxed">{classLevel.description}</p>
-
                         <div>
                           <h3 className="text-lg font-semibold text-foreground mb-3">What to Expect:</h3>
                           <ul className="space-y-2">
