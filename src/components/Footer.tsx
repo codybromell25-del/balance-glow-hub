@@ -50,8 +50,10 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-lg text-black mb-4">Our Studios</h4>
             <ul className="space-y-2">
               {locations.map((location) => (
-                <li key={location.name} className="text-black text-sm">
-                  {location.name}
+                <li key={location.name}>
+                  <Link to="/our-studios" className="text-black hover:text-primary transition-colors text-sm">
+                    {location.name}
+                  </Link>
                 </li>
               ))}
             </ul>
