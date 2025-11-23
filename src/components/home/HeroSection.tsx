@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-studio-interior.png";
 const HeroSection = () => {
   return (
     <section
-      className="min-h-screen flex items-center bg-cover bg-center relative"
+      className="min-h-[70vh] flex items-center bg-cover bg-center relative"
       style={{ backgroundImage: `url(${heroImage})` }}
     >
       {/* Dark overlay for text readability */}
