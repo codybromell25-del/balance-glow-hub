@@ -65,7 +65,7 @@ const Classes = () => {
                 Find Your Vibe
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                From "wait, what's a reformer?" to full-on reformer royalty. Pick your level, own your journey, and show up exactly as you are. No judgment, just progression.
+                From "wait, what's a reformer?" to full-on reformer royalty. Pick your level, own your journey, and get ready to feel amazing.
               </p>
               <Button asChild size="lg">
                 <a href="/book-class">Book a Class Now</a>
