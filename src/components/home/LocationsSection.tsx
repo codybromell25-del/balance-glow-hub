@@ -66,7 +66,7 @@ const LocationsSection = () => {
             return (
               <Link
                 key={location.name}
-                to="/locations"
+                to="/book-class"
                 className={`group relative block ${heightClass} break-inside-avoid rounded-lg overflow-hidden animate-fade-in hover:scale-[1.02] transition-all duration-300`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >

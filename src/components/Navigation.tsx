@@ -22,7 +22,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "Class Types", path: "/classes" },
     { name: "Pricing", path: "/pricing" },
-    { name: "Book a Class", path: "/locations" },
+    { name: "Book a Class", path: "/book-class" },
     { name: "About", path: "/about" },
     { name: "Shop", path: "/shop" },
   ];
@@ -49,7 +49,7 @@ const Navigation = () => {
             ))}
             {showBookButton && (
               <Button asChild variant="default" className="transition-all animate-fade-in">
-                <Link to="/locations">Book a Class</Link>
+                <Link to="/book-class">Book a Class</Link>
               </Button>
             )}
           </div>
@@ -80,7 +80,7 @@ const Navigation = () => {
               ))}
               {showBookButton && (
                 <Button asChild variant="default" className="w-full">
-                  <Link to="/locations" onClick={() => setIsOpen(false)}>
+                  <Link to="/book-class" onClick={() => setIsOpen(false)}>
                     Book a Class
                   </Link>
                 </Button>

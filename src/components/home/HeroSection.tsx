@@ -20,7 +20,7 @@ const HeroSection = () => {
           </h1>
 
           <Button asChild size="lg" className="text-base px-8 py-6 rounded-full">
-            <Link to="/locations">Book a Class</Link>
+            <Link to="/book-class">Book a Class</Link>
           </Button>
         </div>
       </div>

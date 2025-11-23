@@ -111,7 +111,7 @@ const Instructors = () => {
                       asChild 
                       className="w-full transition-all duration-300 group-hover:shadow-lg mt-auto"
                     >
-                      <Link to="/locations">
+                      <Link to="/book-class">
                         Book a Class
                       </Link>
                     </Button>
