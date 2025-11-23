@@ -43,7 +43,7 @@ const PricingPreview = () => {
               ))}
             </ul>
 
-            <Button className="w-full text-lg py-6 font-heading font-medium">Purchase Intro Offer</Button>
+            <Button className="w-full text-lg py-6 font-heading font-medium bg-gradient-to-r from-[#c4b5ad] via-[#d8c9c2] to-[#c4b5ad] text-foreground border-0 shadow-lg hover:brightness-105">Purchase Intro Offer</Button>
           </div>
         </div>
 
