@@ -15,6 +15,7 @@ import Schedule from "./pages/Schedule";
 import TestBooking from "./pages/TestBooking";
 import BookingBray from "./pages/BookingBray";
 import BookingClane from "./pages/BookingClane";
+import BookingEnfield from "./pages/BookingEnfield";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/test-booking" element={<TestBooking />} />
           <Route path="/booking/bray" element={<BookingBray />} />
           <Route path="/booking/clane" element={<BookingClane />} />
+          <Route path="/booking/enfield" element={<BookingEnfield />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
