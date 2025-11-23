@@ -26,7 +26,7 @@ const Pricing = () => {
         <section className="pt-4 pb-8 md:pt-6 md:pb-12">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
-              <div className="relative bg-background p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300">
+              <div className="relative bg-background p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-primary text-primary-foreground px-6 py-2 rounded-full font-semibold flex items-center gap-2">
                     <Sparkles className="w-5 h-5" />
@@ -84,10 +84,11 @@ const Pricing = () => {
                   { classes: 6, price: "€115", validity: "Valid 3 months" },
                   { classes: 10, price: "€180", validity: "Valid 4 months" },
                   { classes: 20, price: "€340", validity: "Valid 6 months" },
-                ].map((pack) => (
+                ].map((pack, index) => (
                   <div
                     key={pack.classes}
-                    className="bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300"
+                    className="bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="text-center mb-4">
                       <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
@@ -105,7 +106,7 @@ const Pricing = () => {
                 ))}
 
                 {/* Info Card */}
-                <div className="bg-primary/5 p-6 rounded-lg border border-primary/20 flex flex-col justify-center">
+                <div className="bg-primary/5 p-6 rounded-lg border border-primary/20 flex flex-col justify-center animate-fade-in" style={{ animationDelay: "0.5s" }}>
                   <Info className="w-8 h-8 text-primary mb-3" />
                   <p className="text-sm text-foreground leading-relaxed">
                     All class packs can be used at any of our 5 locations. Expiry begins from 
@@ -136,10 +137,11 @@ const Pricing = () => {
                   { classes: "6", price: "€108", perClass: "€18/class", popular: false },
                   { classes: "8", price: "€136", perClass: "€17/class", popular: true },
                   { classes: "Unlimited", price: "€160", perClass: "Best Value", popular: true },
-                ].map((membership) => (
+                ].map((membership, index) => (
                   <div
                     key={membership.classes}
-                    className="relative bg-background p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300"
+                    className="relative bg-background p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {membership.popular && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
