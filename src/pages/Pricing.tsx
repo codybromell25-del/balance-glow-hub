@@ -28,8 +28,8 @@ const Pricing = () => {
             <div className="max-w-2xl mx-auto">
               <div className="relative bg-background p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="relative bg-gradient-to-r from-rose-400 via-rose-500 to-rose-400 text-white px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/10 rounded-full" />
+                  <div className="relative bg-gradient-to-r from-[#d8a4a8] via-[#e8b4b8] to-[#d8a4a8] text-white px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/5 rounded-full" />
                     <Sparkles className="w-5 h-5 relative z-10" />
                     <span className="relative z-10">New Client Special</span>
                   </div>
@@ -37,6 +37,7 @@ const Pricing = () => {
 
                 <div className="text-center mb-6 mt-4">
                   <h2 className="text-3xl font-heading font-bold text-foreground mb-3">
+                    Intro Offer: 4 Classes for €60
                     Intro Offer: 4 Classes for €60
                     Intro Offer: 4 Classes for €60
                   </h2>
@@ -58,8 +59,8 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <Button className="w-full text-lg py-6 relative bg-gradient-to-r from-rose-400 via-rose-500 to-rose-400 text-white border-0 shadow-lg hover:brightness-105 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/10" />
+                <Button className="w-full text-lg py-6 relative bg-gradient-to-r from-[#d8a4a8] via-[#e8b4b8] to-[#d8a4a8] text-white border-0 shadow-lg hover:brightness-105 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/5" />
                   <span className="relative z-10">Purchase Intro Offer</span>
                 </Button>
               </div>
