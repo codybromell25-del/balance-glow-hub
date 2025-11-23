@@ -45,7 +45,7 @@ const BookingBlessington = () => {
                 Reserve your spot at our Blessington location
               </p>
               
-              <div className="bg-card rounded-xl border border-border p-4 shadow-lg">
+              <div className="bg-card rounded-xl border border-border p-4 shadow-lg min-h-[600px] mb-16">
                 <div id="ribbon-schedule"></div>
               </div>
             </div>
