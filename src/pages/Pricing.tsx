@@ -41,7 +41,6 @@ const Pricing = () => {
                   </h2>
                   <p className="text-muted-foreground">The perfect way to discover Balance Studios</p>
                 </div>
-                </div>
 
                 <ul className="space-y-3 mb-8">
                   {[
