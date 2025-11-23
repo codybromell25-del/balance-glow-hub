@@ -28,7 +28,7 @@ const Pricing = () => {
             <div className="max-w-2xl mx-auto">
               <div className="relative bg-background p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-rose-300 via-rose-400 to-rose-300 text-white px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg">
+                  <div className="bg-gradient-to-r from-[#c4b5ad] via-[#d8c9c2] to-[#c4b5ad] text-foreground px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg">
                     <Sparkles className="w-5 h-5" />
                     New Client Special
                   </div>
