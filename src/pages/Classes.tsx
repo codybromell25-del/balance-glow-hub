@@ -58,7 +58,7 @@ const Classes = () => {
       <Navigation />
       <main className="pt-20">
         {/* Hero */}
-        <section className="pt-8 pb-12 md:pt-12 md:pb-24 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="pt-8 pb-4 md:pt-12 md:pb-8 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
@@ -75,7 +75,7 @@ const Classes = () => {
         </section>
 
         {/* Class Levels Detail */}
-        <section className="py-12 md:py-24">
+        <section className="pt-8 pb-12 md:pt-12 md:pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto space-y-8 md:space-y-16">
               {classLevels.map((classLevel) => {
