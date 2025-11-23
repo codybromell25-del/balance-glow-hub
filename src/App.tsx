@@ -10,7 +10,6 @@ import About from "./pages/About";
 import Classes from "./pages/Classes";
 import Pricing from "./pages/Pricing";
 import Locations from "./pages/Locations";
-import Shop from "./pages/Shop";
 import Schedule from "./pages/Schedule";
 import TestBooking from "./pages/TestBooking";
 import BookingBray from "./pages/BookingBray";
@@ -39,7 +38,6 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/locations" element={<Locations />} />
           <Route path="/about" element={<About />} />
-          <Route path="/shop" element={<Shop />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/test-booking" element={<TestBooking />} />
           <Route path="/booking/bray" element={<BookingBray />} />
