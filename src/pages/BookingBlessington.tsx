@@ -1,44 +1,6 @@
-import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 
-
 const BookingBlessington = () => {
-  useEffect(() => {
-    // Reset any existing Momence script and widget
-    const existingScript = document.querySelector(
-      'script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]'
-    );
-    if (existingScript && existingScript.parentNode) {
-      existingScript.parentNode.removeChild(existingScript);
-    }
-
-    const container = document.getElementById("ribbon-schedule");
-    if (container) {
-      container.innerHTML = "";
-    }
-
-    // Load the Momence script for Blessington
-    const script = document.createElement("script");
-    script.src = "https://momence.com/plugin/host-schedule/host-schedule.js";
-    script.async = true;
-    script.type = "module";
-    script.setAttribute("host_id", "62930");
-    script.setAttribute("teacher_ids", "[]");
-    script.setAttribute("location_ids", "[117424]");
-    script.setAttribute("tag_ids", "[]");
-    script.setAttribute("default_filter", "show-all");
-    script.setAttribute("locale", "en");
-
-    if (container) {
-      container.appendChild(script);
-    }
-
-    return () => {
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
-    };
-  }, []);
 
   return (
     <div className="min-h-screen">
@@ -54,8 +16,13 @@ const BookingBlessington = () => {
                 Reserve your spot at our Blessington location
               </p>
               
-              <div className="bg-card rounded-xl border border-border p-4 shadow-lg min-h-[600px] mb-16">
-                <div id="ribbon-schedule"></div>
+              <div className="bg-card rounded-xl border border-border overflow-hidden shadow-lg" style={{ height: 'calc(100vh - 200px)', minHeight: '600px' }}>
+                <iframe 
+                  src="https://momence.com/m/62930?location_id=117424"
+                  className="w-full h-full border-0"
+                  title="Book Blessington Studio"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
