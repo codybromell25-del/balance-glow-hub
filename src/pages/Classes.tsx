@@ -62,11 +62,10 @@ const Classes = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
-                Find Your Perfect Class
+                Find Your Vibe
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                Clear progression pathways mean you'll always know which class level suits you best. Start where you
-                are, progress at your pace, and feel confident every step of the way.
+                From "wait, what's a reformer?" to full-on reformer royalty. Pick your level, own your journey, and show up exactly as you are. No judgment, just progression.
               </p>
               <Button asChild size="lg">
                 <a href="/book-class">Book a Class Now</a>
