@@ -39,15 +39,25 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="text-foreground hover:text-primary transition-colors font-medium"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.path === "/book-class" ? (
+                <a
+                  key={link.path}
+                  href={link.path}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
             {showBookButton && (
               <Button asChild variant="default" className="transition-all animate-fade-in">
                 <a href="/book-class">Book a Class</a>
@@ -69,16 +79,27 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="text-foreground hover:text-primary transition-colors font-medium py-2"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.path === "/book-class" ? (
+                  <a
+                    key={link.path}
+                    href={link.path}
+                    className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                )
+              )}
               {showBookButton && (
                 <Button asChild variant="default" className="w-full">
                   <a href="/book-class" onClick={() => setIsOpen(false)}>
