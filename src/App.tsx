@@ -19,6 +19,7 @@ import BookingEnfield from "./pages/BookingEnfield";
 import BookingKildare from "./pages/BookingKildare";
 import BookingBlessington from "./pages/BookingBlessington";
 import BookAll from "./pages/BookAll";
+import OurStudios from "./pages/OurStudios";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/booking/kildare" element={<BookingKildare />} />
           <Route path="/booking/blessington" element={<BookingBlessington />} />
           <Route path="/book-class" element={<BookAll />} />
+          <Route path="/our-studios" element={<OurStudios />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
