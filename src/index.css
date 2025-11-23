@@ -6,6 +6,39 @@
 All colors MUST be HSL.
 */
 
+/* Custom Caros Font Family */
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Black-Italic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Bold-Italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-ExtraBold-Italic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     /* Balance Studios - Refined Rose Gold #d8c9c2 */
