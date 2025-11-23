@@ -133,7 +133,7 @@ const Locations = () => {
                       size="lg"
                       className="w-full"
                     >
-                      <Link to={studio.bookingUrl}>Book Now</Link>
+                      <Link to="/book-class">Book Now</Link>
                     </Button>
                     <Button 
                       asChild
