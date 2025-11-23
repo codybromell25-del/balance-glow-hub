@@ -22,11 +22,14 @@ const BookingBlessington = () => {
     script.setAttribute('default_filter', 'show-all');
     script.setAttribute('locale', 'en');
     
-    document.body.appendChild(script);
+    const container = document.getElementById("ribbon-schedule");
+    if (container) {
+      container.appendChild(script);
+    }
     
     return () => {
-      if (script.parentNode) {
-        document.body.removeChild(script);
+      if (container && container.contains(script)) {
+        container.removeChild(script);
       }
     };
   }, []);
