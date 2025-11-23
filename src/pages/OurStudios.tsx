@@ -67,11 +67,11 @@ const OurStudios = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
-                Our Studios
+                Find Your Flow
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Five beautifully designed studios across Kildare, Wicklow, and Meath. 
-                Find the location that's most convenient for you.
+                Five stunning studios across Kildare, Wicklow & Meath—each one designed to help you move, sweat, and thrive. 
+                Pick your perfect spot and let's make magic happen!
               </p>
             </div>
           </div>
