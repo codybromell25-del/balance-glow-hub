@@ -24,7 +24,7 @@ const Navigation = () => {
     { name: "Pricing", path: "/pricing" },
     { name: "Book a Class", path: "/book-class" },
     { name: "Our Studios", path: "/our-studios" },
-    { name: "About", path: "/about" },
+    { name: "Our Story", path: "/about" },
   ];
 
   return (
