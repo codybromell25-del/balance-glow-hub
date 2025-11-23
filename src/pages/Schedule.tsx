@@ -16,7 +16,7 @@ const Schedule = () => {
                 Book your classes across all our studio locations
               </p>
               
-              <div className="bg-card rounded-xl border border-border p-4 shadow-lg">
+              <div className="bg-card rounded-xl border border-border p-4 shadow-lg animate-fade-in">
                 <iframe 
                   src="https://brandedweb-next.mindbodyonline.com/components/widgets/schedules/view/8c318465eea/schedule"
                   width="100%" 

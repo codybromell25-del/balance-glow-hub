@@ -110,8 +110,8 @@ const Shop = () => {
         <section className="py-8 md:py-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-              {products.map((product) => (
-                <Card key={product.id} className="flex flex-col hover:shadow-lg transition-shadow">
+              {products.map((product, index) => (
+                <Card key={product.id} className="flex flex-col hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 0.05}s` }}>
                   <CardHeader className="p-0">
                     <div className="relative aspect-square overflow-hidden rounded-t-lg">
                       <img 
