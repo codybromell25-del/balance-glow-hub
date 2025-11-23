@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Libre Baskerville', 'Georgia', 'serif'],
+        sans: ['Caros Soft', 'Caros', 'sans-serif'],
         heading: ['Caros', 'sans-serif'],
-        subheading: ['Libre Baskerville', 'Georgia', 'serif'],
+        subheading: ['Caros Soft', 'Caros', 'sans-serif'],
       },
       fontWeight: {
         thin: '100',

@@ -63,7 +63,7 @@ const PhilosophySection = () => {
                   <h3 className="text-xl font-heading font-bold mb-4 text-foreground tracking-tight">
                     {value.title}
                   </h3>
-                  <p className="text-foreground/80 leading-relaxed font-light">
+                  <p className="text-foreground/80 leading-relaxed">
                     {value.description}
                   </p>
                 </div>

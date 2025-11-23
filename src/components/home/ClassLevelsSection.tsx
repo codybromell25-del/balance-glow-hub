@@ -37,7 +37,7 @@ const ClassLevelsSection = () => {
           <h2 className="text-4xl md:text-5xl font-heading font-black text-foreground mb-6 tracking-tight">
             Your Pilates Journey
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed font-light">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Clear progression pathways mean you always know which class is right for you. 
             Start where you are, progress at your pace.
           </p>
@@ -67,7 +67,7 @@ const ClassLevelsSection = () => {
                   {level.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow font-light">
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                   {level.description}
                 </p>
 
