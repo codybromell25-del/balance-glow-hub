@@ -4,6 +4,12 @@ import Footer from "@/components/Footer";
 
 const BookingBlessington = () => {
   useEffect(() => {
+    // Check if script already exists
+    const existingScript = document.querySelector('script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]');
+    if (existingScript) {
+      return;
+    }
+
     // Load the Momence script for Blessington
     const script = document.createElement('script');
     script.src = 'https://momence.com/plugin/host-schedule/host-schedule.js';
@@ -19,7 +25,9 @@ const BookingBlessington = () => {
     document.body.appendChild(script);
     
     return () => {
-      document.body.removeChild(script);
+      if (script.parentNode) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 
