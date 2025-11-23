@@ -28,7 +28,7 @@ const Pricing = () => {
             <div className="max-w-2xl mx-auto">
               <div className="relative bg-background p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="relative bg-gradient-to-r from-[#d8a4a8] via-[#e8b4b8] to-[#d8a4a8] text-white px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg overflow-hidden">
+                  <div className="relative bg-gradient-to-r from-[#d8a4a8] via-[#e8b4b8] to-[#d8a4a8] text-black px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/5 rounded-full" />
                     <Sparkles className="w-5 h-5 relative z-10" />
                     <span className="relative z-10">New Client Special</span>
@@ -59,7 +59,7 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <Button className="w-full text-lg py-6 relative bg-gradient-to-r from-[#d8a4a8] via-[#e8b4b8] to-[#d8a4a8] text-white border-0 shadow-lg hover:brightness-105 overflow-hidden">
+                <Button className="w-full text-lg py-6 relative bg-gradient-to-r from-[#d8a4a8] via-[#e8b4b8] to-[#d8a4a8] text-black border-0 shadow-lg hover:brightness-105 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/5" />
                   <span className="relative z-10">Purchase Intro Offer</span>
                 </Button>
