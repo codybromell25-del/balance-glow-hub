@@ -27,6 +27,7 @@ const BookAll = () => {
     script.setAttribute("teacher_ids", "[]");
     script.setAttribute("location_ids", "[]");
     script.setAttribute("tag_ids", "[]");
+    script.setAttribute("lite_mode", "true");
     script.setAttribute("default_filter", "show-all");
     script.setAttribute("locale", "en");
 
