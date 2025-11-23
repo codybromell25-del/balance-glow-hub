@@ -13,11 +13,10 @@ const Pricing = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
-                Simple, Transparent Pricing
+                Pick Your Plan
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Choose the option that fits your lifestyle. All packs and memberships are valid 
-                across our 5 studio locations.
+                Whether you're all-in or just dipping your toes, we've got you covered. One price, all 5 studios—zero confusion.
               </p>
             </div>
           </div>
