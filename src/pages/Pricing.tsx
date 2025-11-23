@@ -28,7 +28,7 @@ const Pricing = () => {
             <div className="max-w-2xl mx-auto">
               <div className="relative bg-background p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-[#c4b5ad] via-[#d8c9c2] to-[#c4b5ad] text-foreground px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg">
+                  <div className="bg-gradient-to-r from-[#8db09a] via-[#a3c1ad] to-[#8db09a] text-foreground px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg">
                     <Sparkles className="w-5 h-5" />
                     New Client Special
                   </div>
@@ -56,7 +56,7 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <Button className="w-full text-lg py-6 bg-gradient-to-r from-[#c4b5ad] via-[#d8c9c2] to-[#c4b5ad] text-foreground border-0 shadow-lg hover:brightness-105">
+                <Button className="w-full text-lg py-6 bg-gradient-to-r from-[#8db09a] via-[#a3c1ad] to-[#8db09a] text-foreground border-0 shadow-lg hover:brightness-105">
                   Purchase Intro Offer
                 </Button>
               </div>
