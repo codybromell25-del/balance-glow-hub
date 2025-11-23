@@ -58,10 +58,10 @@ const BookAll = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 text-center">
-                Book a Class
+                Find Your Flow
               </h1>
               <p className="text-lg text-foreground text-center mb-8">
-                Choose your studio location and reserve your spot
+                Pick your favorite studio and let's get moving together!
               </p>
               
               <div className="bg-card rounded-xl border border-border p-4 shadow-lg min-h-[600px]">
