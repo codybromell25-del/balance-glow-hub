@@ -17,6 +17,7 @@ import BookingBray from "./pages/BookingBray";
 import BookingClane from "./pages/BookingClane";
 import BookingEnfield from "./pages/BookingEnfield";
 import BookingKildare from "./pages/BookingKildare";
+import BookingBlessington from "./pages/BookingBlessington";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/booking/clane" element={<BookingClane />} />
           <Route path="/booking/enfield" element={<BookingEnfield />} />
           <Route path="/booking/kildare" element={<BookingKildare />} />
+          <Route path="/booking/blessington" element={<BookingBlessington />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
