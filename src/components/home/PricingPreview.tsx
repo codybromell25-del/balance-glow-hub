@@ -17,8 +17,8 @@ const PricingPreview = () => {
         <div className="max-w-2xl mx-auto">
           <div className="relative bg-background p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300">
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <div className="relative bg-gradient-to-r from-[#9d8473] via-[#ad9383] to-[#9d8473] text-foreground px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-black/10 rounded-full"></div>
+              <div className="relative bg-gradient-to-r from-rose-400 via-rose-500 to-rose-400 text-white px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/10 rounded-full" />
                 <Sparkles className="w-5 h-5 relative z-10" />
                 <span className="relative z-10">New Client Special</span>
               </div>
@@ -44,8 +44,8 @@ const PricingPreview = () => {
               ))}
             </ul>
 
-            <Button className="w-full text-lg py-6 font-heading font-medium relative bg-gradient-to-r from-[#9d8473] via-[#ad9383] to-[#9d8473] text-foreground border-0 shadow-lg hover:brightness-105 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-black/10"></div>
+            <Button className="w-full text-lg py-6 font-heading font-medium relative bg-gradient-to-r from-rose-400 via-rose-500 to-rose-400 text-white border-0 shadow-lg hover:brightness-105 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/10" />
               <span className="relative z-10">Purchase Intro Offer</span>
             </Button>
           </div>
