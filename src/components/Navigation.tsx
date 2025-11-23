@@ -50,7 +50,7 @@ const Navigation = () => {
             ))}
             {showBookButton && (
               <Button asChild variant="default" className="transition-all animate-fade-in">
-                <Link to="/book-class">Book a Class</Link>
+                <a href="/book-class">Book a Class</a>
               </Button>
             )}
           </div>
@@ -81,9 +81,9 @@ const Navigation = () => {
               ))}
               {showBookButton && (
                 <Button asChild variant="default" className="w-full">
-                  <Link to="/book-class" onClick={() => setIsOpen(false)}>
+                  <a href="/book-class" onClick={() => setIsOpen(false)}>
                     Book a Class
-                  </Link>
+                  </a>
                 </Button>
               )}
             </div>

@@ -133,7 +133,7 @@ const Locations = () => {
                       size="lg"
                       className="w-full"
                     >
-                      <Link to="/book-class">Book Now</Link>
+                      <a href="/book-class">Book Now</a>
                     </Button>
                     <Button 
                       asChild

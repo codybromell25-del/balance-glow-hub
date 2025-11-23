@@ -68,7 +68,7 @@ const Classes = () => {
                 are, progress at your pace, and feel confident every step of the way.
               </p>
               <Button asChild size="lg">
-                <Link to="/book-class">Book a Class Now</Link>
+                <a href="/book-class">Book a Class Now</a>
               </Button>
             </div>
           </div>
