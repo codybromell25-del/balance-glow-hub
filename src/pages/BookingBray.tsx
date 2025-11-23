@@ -4,26 +4,38 @@ import Footer from "@/components/Footer";
 
 const BookingBray = () => {
   useEffect(() => {
-    // Load the Momence script for Bray
-    const script = document.createElement('script');
-    script.src = 'https://momence.com/plugin/host-schedule/host-schedule.js';
-    script.async = true;
-    script.type = 'module';
-    script.setAttribute('host_id', '62930');
-    script.setAttribute('teacher_ids', '[]');
-    script.setAttribute('location_ids', '[117426]');
-    script.setAttribute('tag_ids', '[]');
-    script.setAttribute('default_filter', 'show-all');
-    script.setAttribute('locale', 'en');
-    
+    // Reset any existing Momence script and widget
+    const existingScript = document.querySelector(
+      'script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]'
+    );
+    if (existingScript && existingScript.parentNode) {
+      existingScript.parentNode.removeChild(existingScript);
+    }
+
     const container = document.getElementById("ribbon-schedule");
+    if (container) {
+      container.innerHTML = "";
+    }
+
+    // Load the Momence script for Bray
+    const script = document.createElement("script");
+    script.src = "https://momence.com/plugin/host-schedule/host-schedule.js";
+    script.async = true;
+    script.type = "module";
+    script.setAttribute("host_id", "62930");
+    script.setAttribute("teacher_ids", "[]");
+    script.setAttribute("location_ids", "[117426]");
+    script.setAttribute("tag_ids", "[]");
+    script.setAttribute("default_filter", "show-all");
+    script.setAttribute("locale", "en");
+
     if (container) {
       container.appendChild(script);
     }
-    
+
     return () => {
-      if (container && container.contains(script)) {
-        container.removeChild(script);
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
       }
     };
   }, []);
