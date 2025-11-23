@@ -111,6 +111,63 @@ All colors MUST be HSL.
   font-display: swap;
 }
 
+/* Caros Soft (Alternative Version) - Enhanced Variants */
+@font-face {
+  font-family: 'Caros Soft';
+  src: url('/fonts/Caros-Thin-2.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros Soft';
+  src: url('/fonts/Caros-Thin-Italic-2.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros Soft';
+  src: url('/fonts/Caros-Light-2.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros Soft';
+  src: url('/fonts/Caros-Light-Italic-2.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros Soft';
+  src: url('/fonts/Caros-Regular-2.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros Soft';
+  src: url('/fonts/Caros-Medium-2.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros Soft';
+  src: url('/fonts/Caros-Medium-Italic-2.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     /* Balance Studios - Refined Rose Gold #d8c9c2 */
@@ -199,7 +256,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Caros Soft', 'Caros', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {

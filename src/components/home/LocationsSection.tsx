@@ -51,7 +51,7 @@ const LocationsSection = () => {
           <h2 className="text-4xl md:text-5xl font-heading font-black text-foreground mb-6 tracking-tight">
             Pick Your Pilates Playground
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed font-light">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Five beautifully designed studios across Kildare, Wicklow, and Meath. Each location offers the same
             exceptional experience with our signature warm welcome.
           </p>
@@ -86,7 +86,7 @@ const LocationsSection = () => {
                       <p className="text-sm text-white/90 font-medium">{location.county}</p>
                     </div>
                     <h3 className="text-2xl md:text-3xl font-heading font-extrabold text-white mb-2 tracking-tight">{location.name}</h3>
-                    <p className="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-light">
+                    <p className="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {location.description}
                     </p>
                   </div>
