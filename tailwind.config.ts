@@ -18,6 +18,16 @@ export default {
         heading: ['Caros', 'sans-serif'],
         subheading: ['Libre Baskerville', 'Georgia', 'serif'],
       },
+      fontWeight: {
+        thin: '100',
+        light: '300',
+        normal: '400',
+        medium: '500',
+        bold: '700',
+        extrabold: '800',
+        black: '900',
+        heavy: '950',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

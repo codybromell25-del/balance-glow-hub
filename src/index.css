@@ -6,7 +6,87 @@
 All colors MUST be HSL.
 */
 
-/* Custom Caros Font Family */
+/* Custom Caros Font Family - Complete Luxury Weight Range */
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Thin-Italic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Light-Italic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Medium-Italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-Bold-Italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros-ExtraBold-Italic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Caros';
   src: url('/fonts/Caros-Black.otf') format('opentype');
@@ -25,17 +105,9 @@ All colors MUST be HSL.
 
 @font-face {
   font-family: 'Caros';
-  src: url('/fonts/Caros-Bold-Italic.otf') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Caros';
-  src: url('/fonts/Caros-ExtraBold-Italic.otf') format('opentype');
-  font-weight: 800;
-  font-style: italic;
+  src: url('/fonts/Caros-Heavy.otf') format('opentype');
+  font-weight: 950;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -132,6 +204,15 @@ All colors MUST be HSL.
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+  
+  /* Luxurious typography styles */
+  h1 {
+    @apply tracking-tight;
+  }
+  
+  h2, h3 {
+    @apply tracking-tight;
   }
 }
 

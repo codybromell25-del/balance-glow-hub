@@ -34,10 +34,10 @@ const ClassLevelsSection = () => {
     <section className="py-12 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-heading font-black text-foreground mb-6 tracking-tight">
             Your Pilates Journey
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed font-light">
             Clear progression pathways mean you always know which class is right for you. 
             Start where you are, progress at your pace.
           </p>
@@ -63,11 +63,11 @@ const ClassLevelsSection = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-heading font-semibold mb-3 text-foreground">
+                <h3 className="text-2xl font-heading font-bold mb-3 text-foreground tracking-tight">
                   {level.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow font-light">
                   {level.description}
                 </p>
 
