@@ -19,6 +19,7 @@ const Locations = () => {
       image: studioClane,
       mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.2!2d-6.6889!3d53.2919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDE3JzMwLjgiTiA2wrA0MScyMC4wIlc!5e0!3m2!1sen!2sie!4v1234567890",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+4a+Yew+Tree+Square+Prosperous+Rd+Abbeyland+Clane+Co.+Kildare+W91+R642+Ireland",
+      bookingUrl: "/booking/clane",
     },
     {
       name: "Kildare Town Studio",
@@ -28,6 +29,7 @@ const Locations = () => {
       image: studioKildare,
       mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.2!2d-6.9108!3d53.1596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDA5JzM0LjYiTiA2wrA1NCczOC45Ilc!5e0!3m2!1sen!2sie!4v1234567890",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Claregate+St+Kildare+R51+E772+Ireland",
+      bookingUrl: "/booking/kildare",
     },
     {
       name: "Blessington Studio",
@@ -37,6 +39,7 @@ const Locations = () => {
       image: studioBlessington,
       mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.2!2d-6.5349!3d53.1711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDEwJzE2LjAiTiA2wrAzMicwNS42Ilc!5e0!3m2!1sen!2sie!4v1234567890",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=1a+The+Green+Main+St+Blessington+Co.+Wicklow+W91+PNV2+Ireland",
+      bookingUrl: "/booking/blessington",
     },
     {
       name: "Enfield Studio",
@@ -46,6 +49,7 @@ const Locations = () => {
       image: studioEnfield,
       mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.2!2d-6.8309!3d53.4164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDI0JzU5LjAiTiA2wrA0OSc1MS4yIlc!5e0!3m2!1sen!2sie!4v1234567890",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Main+Street+Enfield+Co.+Meath+A83+RP84",
+      bookingUrl: "/booking/enfield",
     },
     {
       name: "Bray Studio",
@@ -55,6 +59,7 @@ const Locations = () => {
       image: studioBray,
       mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.2!2d-6.0983!3d53.2026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDEyJzA5LjQiTiA2wrAwNScxNy45Ilc!5e0!3m2!1sen!2sie!4v1234567890",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Balance+Bray+Industrial+Development+Agency+Business+Park+Southern+Cross+Rd+Irishtown+Bray+Co.+Wicklow+A98+T276+Ireland",
+      bookingUrl: "/booking/bray",
     },
   ];
 
@@ -128,7 +133,7 @@ const Locations = () => {
                       size="lg"
                       className="w-full"
                     >
-                      <Link to="/schedule">Book Now</Link>
+                      <Link to={studio.bookingUrl}>Book Now</Link>
                     </Button>
                     <Button 
                       asChild
