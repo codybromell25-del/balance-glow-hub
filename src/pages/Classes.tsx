@@ -120,7 +120,7 @@ const Classes = () => {
 
                         <Button
                           asChild
-                          className="w-full sm:w-auto"
+                          className="w-full sm:w-auto relative bg-gradient-to-r from-[#d8a4a8] via-[#e8b4b8] to-[#d8a4a8] text-foreground border-0 shadow-lg hover:brightness-105"
                         >
                           <Link to="/locations">Book Class</Link>
                         </Button>
