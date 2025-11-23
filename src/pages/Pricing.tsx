@@ -9,10 +9,10 @@ const Pricing = () => {
       <Navigation />
       <main className="pt-20">
         {/* Hero */}
-        <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="pt-8 pb-4 md:pt-12 md:pb-6 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
+              <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-4">
                 Pick Your Plan
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
@@ -23,7 +23,7 @@ const Pricing = () => {
         </section>
 
         {/* Intro Offer */}
-        <section className="py-16">
+        <section className="pt-4 pb-8 md:pt-6 md:pb-12">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
               <div className="relative bg-background p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300">
@@ -118,7 +118,7 @@ const Pricing = () => {
         </section>
 
         {/* Memberships */}
-        <section className="py-16">
+        <section className="pt-8 pb-12 md:pt-12 md:pb-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
