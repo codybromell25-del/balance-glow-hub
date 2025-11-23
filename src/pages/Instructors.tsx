@@ -74,7 +74,8 @@ const Instructors = () => {
             {instructors.map((instructor, index) => (
               <Card 
                 key={index} 
-                className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card flex flex-col"
+                className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card flex flex-col animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-0 flex flex-col flex-1">
                   {/* Image Container */}
