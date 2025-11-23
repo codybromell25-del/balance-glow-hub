@@ -30,9 +30,8 @@ const BookAll = () => {
     script.setAttribute("default_filter", "show-all");
     script.setAttribute("locale", "en");
 
-    if (container) {
-      container.appendChild(script);
-    }
+    // Append script to document body, not inside the container
+    document.body.appendChild(script);
 
     return () => {
       if (script.parentNode) {
