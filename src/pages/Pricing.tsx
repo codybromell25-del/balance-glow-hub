@@ -93,13 +93,13 @@ const Pricing = () => {
                       <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
                         {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
                       </h3>
-                      <p className="text-3xl font-heading font-bold text-primary mb-1">
+                      <p className="text-3xl font-heading font-bold text-black mb-1">
                         {pack.price}
                       </p>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
                     <Button className="w-full">
-                      Buy Pack
+                      Buy Now
                     </Button>
                   </div>
                 ))}
@@ -153,7 +153,7 @@ const Pricing = () => {
                       <h3 className="text-xl font-heading font-bold text-foreground mb-2">
                         {membership.classes} Classes
                       </h3>
-                      <p className="text-4xl font-heading font-bold text-primary mb-1">
+                      <p className="text-4xl font-heading font-bold text-black mb-1">
                         {membership.price}
                       </p>
                       <p className="text-sm text-muted-foreground mb-6">{membership.perClass}</p>
