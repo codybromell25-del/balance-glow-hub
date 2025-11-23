@@ -19,8 +19,7 @@ const Footer = () => {
           <div>
             <img src={balanceLogo} alt="Balance Reformer Pilates" className="h-32 w-auto mb-4" />
             <p className="text-black mb-4">
-              Reformer Pilates across Kildare & Wicklow. 
-              <span className="block mt-2 font-medium">Balance is for everyone.</span>
+              Reformer Pilates across Kildare & Wicklow.
             </p>
             <div className="flex space-x-4">
               <a 
