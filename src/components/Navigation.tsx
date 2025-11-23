@@ -52,7 +52,7 @@ const Navigation = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
+                  className="text-foreground hover:text-primary transition-colors font-heading font-medium"
                 >
                   {link.name}
                 </Link>

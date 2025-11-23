@@ -29,10 +29,10 @@ const PhilosophySection = () => {
     <section className="py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-heading font-black text-foreground mb-6 tracking-tight">
             Why Balance Studios?
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed font-light">
             At Balance Studios, we believe that strength, flexibility and confidence are for every body. 
             With small-group reformer classes, expert instructors and five beautifully designed 
             studios across Kildare and Wicklow, we tailor your Pilates journey so you feel great in body and mind.
@@ -60,10 +60,10 @@ const PhilosophySection = () => {
                   <div className="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-6">
                     <Icon className="w-7 h-7 text-primary" />
                   </div>
-                  <h3 className="text-xl font-heading font-semibold mb-4 text-foreground">
+                  <h3 className="text-xl font-heading font-bold mb-4 text-foreground tracking-tight">
                     {value.title}
                   </h3>
-                  <p className="text-foreground/80 leading-relaxed">
+                  <p className="text-foreground/80 leading-relaxed font-light">
                     {value.description}
                   </p>
                 </div>

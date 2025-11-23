@@ -70,10 +70,10 @@ const TestimonialsSection = () => {
     <section className="py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-heading font-black text-foreground mb-6 tracking-tight">
             Why People Keep Coming Back
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed font-light">
             Honest words from the people living their best Balance life.
           </p>
         </div>
@@ -97,16 +97,16 @@ const TestimonialsSection = () => {
                   <div className="bg-background p-4 md:p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                     <Quote className="w-10 h-10 text-primary/20 mb-4" />
 
-                    <p className="text-foreground leading-relaxed mb-6 italic flex-grow">"{testimonial.text}"</p>
+                    <p className="text-foreground leading-relaxed mb-6 italic flex-grow font-light">"{testimonial.text}"</p>
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <div>
                           <div className="flex items-center gap-1.5">
-                            <p className="font-semibold text-foreground">{testimonial.name}</p>
+                            <p className="font-heading font-medium text-foreground">{testimonial.name}</p>
                             <BadgeCheck className="w-4 h-4 text-blue-500" />
                           </div>
-                          <p className="text-sm text-muted-foreground">Google Review</p>
+                          <p className="text-sm text-muted-foreground font-light">Google Review</p>
                         </div>
                       </div>
                       <div className="flex gap-0.5">
