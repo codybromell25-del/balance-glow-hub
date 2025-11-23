@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Libre Baskerville', 'Georgia', 'serif'],
-        heading: ['Cardo', 'Georgia', 'serif'],
+        heading: ['Caros', 'sans-serif'],
         subheading: ['Libre Baskerville', 'Georgia', 'serif'],
       },
       colors: {
