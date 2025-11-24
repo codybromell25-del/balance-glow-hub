@@ -57,9 +57,11 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <Button className="w-full text-lg py-6 relative bg-gradient-to-r from-[#d8a4a8] via-[#e8b4b8] to-[#d8a4a8] text-black border-0 shadow-lg hover:brightness-105 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/5" />
-                  <span className="relative z-10">Purchase Intro Offer</span>
+                <Button asChild className="w-full text-lg py-6 relative bg-gradient-to-r from-[#d8a4a8] via-[#e8b4b8] to-[#d8a4a8] text-black border-0 shadow-lg hover:brightness-105 overflow-hidden">
+                  <a href="https://momence.com/sign-up/visitor" target="_blank" rel="noopener noreferrer">
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/5" />
+                    <span className="relative z-10">Purchase Intro Offer</span>
+                  </a>
                 </Button>
               </div>
             </div>
