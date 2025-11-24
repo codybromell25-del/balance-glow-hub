@@ -17,8 +17,19 @@ const About = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-20">
+        {/* Hero */}
+        <section className="pt-8 pb-4 md:pt-12 md:pb-6 bg-gradient-to-b from-secondary/30 to-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-4">
+                who are balance.
+              </h1>
+            </div>
+          </div>
+        </section>
+
         {/* Meet Kelly */}
-        <section className="py-12 md:py-24 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-12 md:py-24 bg-gradient-to-b from-background to-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-4xl font-heading font-bold text-foreground mb-6 md:mb-12 text-center">
