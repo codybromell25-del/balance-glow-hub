@@ -10,8 +10,7 @@ const PricingPreview = () => {
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-heading font-black text-foreground mb-6 tracking-tight">New Here?</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Perfect. Dip your toes in with our intro offer—get hooked on the Balance vibe without locking yourself into
-            anything (except great form).
+            Perfect. Try our intro offer, feel the balance difference and decide in your own time.
           </p>
         </div>
 
