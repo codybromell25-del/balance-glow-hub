@@ -9,7 +9,7 @@ const BrandStatement = () => {
           <img 
             src={balanceLogo} 
             alt="Balance Logo" 
-            className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-8 object-contain"
+            className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-8 object-contain animate-scale-in"
           />
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-black mb-6 tracking-tight">
