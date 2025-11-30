@@ -15,11 +15,11 @@ const EmailCaptureSection = () => {
     <section className="py-16 md:py-20 bg-gradient-to-br from-[#f5a5b8] via-[#f8b5c5] to-[#f5a5b8]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-white text-lg md:text-xl font-heading font-bold mb-4 tracking-wide uppercase">
+          <p className="text-black text-lg md:text-xl font-heading font-bold mb-4 tracking-wide uppercase">
             THEY SAY ALL GOOD THINGS MUST COME TO AN END
           </p>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white mb-8 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-black mb-8 leading-tight">
             BUT THIS IS JUST THE
             <br />
             BEGINNING
@@ -33,7 +33,7 @@ const EmailCaptureSection = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="flex-1 h-12 bg-white/20 border-white/30 text-white placeholder:text-white/70 font-heading"
+                className="flex-1 h-12 bg-white/20 border-white/30 text-black placeholder:text-black/70 font-heading"
               />
               <Button
                 type="submit"
@@ -45,9 +45,9 @@ const EmailCaptureSection = () => {
             </div>
           </form>
 
-          <p className="text-white/80 text-xs md:text-sm font-heading">
+          <p className="text-black/80 text-xs md:text-sm font-heading">
             By submitting this form, you consent to receive marketing emails from Balance and agree to our{" "}
-            <a href="/terms" className="underline hover:text-white">
+            <a href="/terms" className="underline hover:text-black">
               Terms & Conditions
             </a>{" "}
             and Privacy Policy
