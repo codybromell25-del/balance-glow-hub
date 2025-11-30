@@ -5,6 +5,7 @@ import BrandStatement from "@/components/home/BrandStatement";
 import LocationsSection from "@/components/home/LocationsSection";
 import PricingPreview from "@/components/home/PricingPreview";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
+import EmailCaptureSection from "@/components/home/EmailCaptureSection";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
         <PricingPreview />
         <LocationsSection />
         <TestimonialsSection />
+        <EmailCaptureSection />
       </main>
       <Footer />
     </div>
