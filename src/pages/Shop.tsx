@@ -91,9 +91,9 @@ const Shop = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      <main className="flex-1 pt-20">
+      <main className="flex-1 pt-16">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-secondary/30 to-background py-8 md:py-16">
+        <section className="bg-gradient-to-b from-secondary/30 to-background py-8 md:py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
@@ -107,7 +107,7 @@ const Shop = () => {
         </section>
 
         {/* Products Grid */}
-        <section className="py-8 md:py-16">
+        <section className="py-10 md:py-14">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
               {products.map((product, index) => (
@@ -152,7 +152,7 @@ const Shop = () => {
         </section>
 
         {/* Info Section */}
-        <section className="bg-secondary/20 py-8 md:py-12">
+        <section className="bg-secondary/20 py-10 md:py-14">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="font-heading text-3xl font-bold mb-6">Need Help Choosing?</h2>

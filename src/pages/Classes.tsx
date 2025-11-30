@@ -97,13 +97,13 @@ const Classes = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-20">
+      <main className="pt-16">
         <ClassesBrandStatement />
         
         {/* Class Levels Detail */}
-        <section className="pt-8 pb-12 md:pt-12 md:pb-24">
+        <section className="py-10 md:py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto space-y-8 md:space-y-16">
+            <div className="max-w-5xl mx-auto space-y-6 md:space-y-10">
               {classLevels.map((classLevel) => {
                 const Icon = classLevel.icon;
                 const ClassLevelCard = () => {
@@ -163,7 +163,7 @@ const Classes = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-12 md:py-24 bg-secondary/30">
+        <section className="py-10 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Still Not Sure Which Level?</h2>
