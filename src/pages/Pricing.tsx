@@ -68,26 +68,25 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* Class Packs */}
+        {/* Reformer Class Packs */}
         <section className="py-8 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
-                  Class Packs
+                  Reformer Class Packs
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Flexible options for occasional practice. Purchase multiple packs for better value.
+                  Flexible options for reformer pilates. Valid at all 5 studio locations.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { classes: 1, price: "€22", validity: "Valid 1 month" },
-                  { classes: 3, price: "€60", validity: "Valid 2 months" },
-                  { classes: 6, price: "€115", validity: "Valid 3 months" },
-                  { classes: 10, price: "€180", validity: "Valid 4 months" },
-                  { classes: 20, price: "€340", validity: "Valid 6 months" },
+                  { classes: 1, price: "€24", validity: "Valid 30 days" },
+                  { classes: 3, price: "€65", validity: "Valid 30 days" },
+                  { classes: 10, price: "€215", validity: "Valid 310 days" },
+                  { classes: 20, price: "€400", validity: "Valid 610 days" },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
@@ -108,22 +107,62 @@ const Pricing = () => {
                     </Button>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
-                {/* Info Card */}
-                <div className="bg-primary/5 p-6 rounded-lg border border-primary/20 flex flex-col justify-center animate-fade-in" style={{ animationDelay: "0.5s" }}>
-                  <Info className="w-8 h-8 text-primary mb-3" />
-                  <p className="text-sm text-foreground leading-relaxed">
-                    All class packs can be used at any of our 5 locations. Expiry begins from 
-                    date of purchase.
-                  </p>
-                </div>
+        {/* Mat Class Packs - Kildare Only */}
+        <section className="py-8 md:py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
+                  Mat Class Packs
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Available at our Kildare studio only
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                {[
+                  { classes: 1, price: "€15", validity: "Valid 30 days" },
+                  { classes: 4, price: "€50", validity: "Valid 120 days" },
+                ].map((pack, index) => (
+                  <div
+                    key={pack.classes}
+                    className="bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="text-center mb-4">
+                      <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
+                        {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
+                      </h3>
+                      <p className="text-3xl font-heading font-bold text-black mb-1">
+                        {pack.price}
+                      </p>
+                      <p className="text-sm text-muted-foreground">{pack.validity}</p>
+                    </div>
+                    <Button className="w-full">
+                      Buy Now
+                    </Button>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 p-4 bg-primary/5 rounded-lg border border-primary/20 text-center">
+                <Info className="w-6 h-6 text-primary mx-auto mb-2" />
+                <p className="text-sm text-foreground">
+                  Mat classes are exclusively available at our Kildare Town studio
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Memberships */}
-        <section className="pt-8 pb-12 md:pt-12 md:pb-16">
+        <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -131,16 +170,16 @@ const Pricing = () => {
                   Monthly Memberships
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Best value for regular practice. Memberships renew automatically each month.
+                  Best value for regular practice. Auto-renews monthly, classes don't carry over.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
                   { classes: "4", price: "€80", perClass: "€20/class", popular: false },
-                  { classes: "6", price: "€108", perClass: "€18/class", popular: false },
-                  { classes: "8", price: "€136", perClass: "€17/class", popular: true },
-                  { classes: "Unlimited", price: "€160", perClass: "Best Value", popular: true },
+                  { classes: "6", price: "€120", perClass: "€20/class", popular: false },
+                  { classes: "8", price: "€180", perClass: "€22.50/class", popular: true },
+                  { classes: "Unlimited", price: "€240", perClass: "Best Value", popular: true },
                 ].map((membership, index) => (
                   <div
                     key={membership.classes}
@@ -186,11 +225,11 @@ const Pricing = () => {
                 ))}
               </div>
 
-              <div className="mt-8 p-6 bg-secondary/30 rounded-lg border border-border">
+              <div className="mt-8 p-6 bg-background rounded-lg border border-border">
                 <h4 className="font-semibold text-foreground mb-2">Membership Terms:</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>• Memberships auto-renew on the same date each month</li>
-                  <li>• Unused classes do not roll over to the next month</li>
+                  <li>• Classes do not carry over to the next month</li>
                   <li>• Cancel anytime with 7 days notice before next billing date</li>
                   <li>• Valid across all 5 Balance Studios locations</li>
                 </ul>
