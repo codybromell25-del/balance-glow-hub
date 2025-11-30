@@ -3,13 +3,13 @@ import balanceLogo from "@/assets/balance-logo-transparent.png";
 
 const ClassesBrandStatement = () => {
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-br from-[#f5a5b8] via-[#f8b5c5] to-[#f5a5b8]">
+    <section className="py-10 md:py-12 bg-gradient-to-br from-[#f5a5b8] via-[#f8b5c5] to-[#f5a5b8]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <img 
             src={balanceLogo} 
             alt="Balance Logo" 
-            className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-8 object-contain animate-scale-in"
+            className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 object-contain animate-scale-in"
           />
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-black mb-6 tracking-tight">
