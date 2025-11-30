@@ -9,7 +9,7 @@ const ClassesBrandStatement = () => {
             A BETTER CLASS
           </h2>
           
-          <p className="text-base md:text-lg text-black/90 font-heading font-black mb-0 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-black/90 font-heading font-normal mb-0 leading-relaxed max-w-3xl mx-auto">
             "A Better Class" isn't just a tagline, it's a promise. We love reformer pilates, and we're here to share that love. 
             Better workouts, better vibes, and a genuine commitment to making you feel incredible. Simple, honest, and yes, better.
           </p>
