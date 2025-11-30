@@ -3,7 +3,7 @@ import balanceLogo from "@/assets/balance-logo-transparent.png";
 
 const ClassesBrandStatement = () => {
   return (
-    <section className="py-10 md:py-12 bg-gradient-to-br from-[#f5a5b8] via-[#f8b5c5] to-[#f5a5b8]">
+    <section className="py-8 md:py-10 bg-gradient-to-br from-[#f5a5b8] via-[#f8b5c5] to-[#f5a5b8]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <img 
@@ -16,19 +16,10 @@ const ClassesBrandStatement = () => {
             A BETTER CLASS
           </h2>
           
-          <p className="text-base md:text-lg text-black/90 font-heading font-bold mb-8 leading-relaxed max-w-3xl mx-auto">
-            Forget boring workouts. Our classes are designed to challenge, energize, and transform. 
-            Whether you're just starting or you're a reformer pro, we've got the vibe to match your goals. 
-            Come ready to work.
+          <p className="text-base md:text-lg text-black/90 font-heading font-bold mb-0 leading-relaxed max-w-3xl mx-auto">
+            "A Better Class" isn't just a tagline, it's a promise. We love reformer pilates, and we're here to share that love. 
+            Better workouts, better vibes, and a genuine commitment to making you feel incredible. Simple, honest, and yes, better.
           </p>
-          
-          <Button 
-            asChild 
-            size="lg" 
-            className="text-base px-8 py-6 rounded-full font-heading font-bold bg-white text-black hover:bg-white/90 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all"
-          >
-            <a href="/book-class">BOOK YOUR CLASS</a>
-          </Button>
         </div>
       </div>
     </section>
