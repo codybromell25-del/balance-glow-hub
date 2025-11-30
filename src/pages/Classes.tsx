@@ -124,8 +124,8 @@ const Classes = () => {
                             <Icon className="w-7 h-7 text-primary" />
                           </div>
                         </div>
-                        <h2 className="text-3xl font-heading font-bold text-foreground mb-2">{classLevel.level}</h2>
-                        <p className="text-sm text-primary font-semibold uppercase tracking-wide mb-4">
+                      <h2 className="text-3xl font-heading font-bold text-foreground mb-2">{classLevel.level}</h2>
+                        <p className="text-sm text-black font-semibold uppercase tracking-wide mb-4">
                           {classLevel.suitable}
                         </p>
                       </div>
