@@ -17,8 +17,8 @@ const BrandStatement = () => {
           </h2>
           
           <p className="text-base md:text-lg text-black/90 font-heading font-normal mb-0 leading-relaxed max-w-3xl mx-auto">
-            Balance isn't your average pilates studio. We're here to push you, challenge you, and help you feel ridiculously good. 
-            Real results, real vibes, zero BS. Come find out for yourself what makes us the best.
+            Balance isn't your average pilates studio. We're here to help you get stronger, move better, and feel ridiculously good. 
+            Real results, an atmosphere you'll actually enjoy. Come find out for yourself why we are the fastest growing studio on the Island.
           </p>
         </div>
       </div>
