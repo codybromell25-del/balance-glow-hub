@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import balanceLogo from "@/assets/balance-logo-transparent.png";
+import reformerIcon from "@/assets/reformer-icon.png";
 
 const ClassesBrandStatement = () => {
   return (
@@ -7,9 +7,9 @@ const ClassesBrandStatement = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <img 
-            src={balanceLogo} 
-            alt="Balance Logo" 
-            className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 object-contain animate-scale-in"
+            src={reformerIcon} 
+            alt="Reformer Icon" 
+            className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 object-contain animate-scale-in mix-blend-multiply"
           />
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-black mb-6 tracking-tight">
