@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import balanceLogo from "@/assets/balance-logo-main.png";
+import balanceLogo from "@/assets/balance-logo-transparent-new.png";
 
 const BrandStatement = () => {
   return (
