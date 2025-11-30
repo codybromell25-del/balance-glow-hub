@@ -16,7 +16,7 @@ const BrandStatement = () => {
             A BETTER STUDIO
           </h2>
           
-          <p className="text-base md:text-lg text-black/90 font-heading font-black mb-0 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-black/90 font-heading font-normal mb-0 leading-relaxed max-w-3xl mx-auto">
             Balance isn't your average pilates studio. We're here to push you, challenge you, and help you feel ridiculously good. 
             Real results, real vibes, zero BS. Come find out for yourself what makes us the best.
           </p>
