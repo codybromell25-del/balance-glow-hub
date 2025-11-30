@@ -10,8 +10,9 @@ const ClassesBrandStatement = () => {
           </h2>
           
           <p className="text-base md:text-lg text-black/90 font-heading font-normal mb-0 leading-relaxed max-w-3xl mx-auto">
-            "A Better Class" isn't just a tagline, it's a promise. We love reformer pilates, and we're here to share that love. 
-            Better workouts, better vibes, and a genuine commitment to making you feel incredible. Simple, honest, and yes, better.
+            "A Better Class" isn't just a tagline—it's what we deliver. We're obsessed with reformer pilates, and we think you should be too. 
+            Expect workouts that actually work, a space where you'll want to show up, and a studio that genuinely wants you to feel amazing. 
+            We keep it real, keep it fun, and yeah—we keep it better.
           </p>
         </div>
       </div>
