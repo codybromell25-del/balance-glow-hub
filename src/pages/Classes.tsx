@@ -60,23 +60,6 @@ const Classes = () => {
       <main className="pt-20">
         <ClassesBrandStatement />
         
-        {/* Hero */}
-        <section className="pt-8 pb-4 md:pt-12 md:pb-8 bg-gradient-to-b from-secondary/30 to-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
-                Find Your Vibe
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                From "wait, what's a reformer?" to full-on reformer royalty. Pick your level, own your journey, and get ready to feel amazing.
-              </p>
-              <Button asChild size="lg">
-                <a href="/book-class">Book a Class Now</a>
-              </Button>
-            </div>
-          </div>
-        </section>
-
         {/* Class Levels Detail */}
         <section className="pt-8 pb-12 md:pt-12 md:pb-24">
           <div className="container mx-auto px-4">
