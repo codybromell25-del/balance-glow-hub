@@ -5,9 +5,9 @@ import { ExternalLink } from "lucide-react";
 
 const PricingPreview = () => {
   return (
-    <section className="py-12 md:py-24">
+    <section className="py-10 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-heading font-black text-foreground mb-6 tracking-tight">New Here?</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Perfect. Try our intro offer, feel the balance difference and decide in your own time.

@@ -61,9 +61,9 @@ const OurStudios = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-20">
+      <main className="pt-16">
         {/* Hero */}
-        <section className="pt-8 pb-4 md:pt-12 md:pb-6 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-8 md:py-10 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-4">
@@ -78,7 +78,7 @@ const OurStudios = () => {
         </section>
 
         {/* Studios Grid */}
-        <section className="pt-4 pb-8 md:pt-6 md:pb-16">
+        <section className="py-8 md:py-12">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-6xl mx-auto">
               {studios.map((studio, index) => (

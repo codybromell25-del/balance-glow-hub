@@ -16,9 +16,9 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-20">
+      <main className="pt-16">
         {/* Hero */}
-        <section className="pt-8 pb-4 md:pt-12 md:pb-6 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-8 md:py-10 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-4">
@@ -29,10 +29,10 @@ const About = () => {
         </section>
 
         {/* Meet Kelly */}
-        <section className="py-12 md:py-24 bg-gradient-to-b from-background to-secondary/30">
+        <section className="py-10 md:py-16 bg-gradient-to-b from-background to-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl font-heading font-bold text-foreground mb-6 md:mb-12 text-center">
+              <h2 className="text-4xl font-heading font-bold text-foreground mb-6 md:mb-8 text-center">
                 Meet Kelly, Owner of Balance
               </h2>
               
@@ -65,13 +65,13 @@ const About = () => {
         </section>
 
         {/* Our Growth */}
-        <section className="py-12 md:py-24 bg-secondary/20">
+        <section className="py-10 md:py-16 bg-secondary/20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6 text-center">
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 md:mb-6 text-center">
                 Our Growth
               </h2>
-              <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+              <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-10 md:mb-12">
                 Quality is the reason we've grown to where we are now. Expertly designed studios, 
                 top-class instructors who deliver real results to real people.
               </p>

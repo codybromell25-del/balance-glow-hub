@@ -7,9 +7,9 @@ const Pricing = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-20">
+      <main className="pt-16">
         {/* Hero */}
-        <section className="pt-8 pb-4 md:pt-12 md:pb-6 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-8 md:py-10 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-4">
@@ -23,7 +23,7 @@ const Pricing = () => {
         </section>
 
         {/* Intro Offer */}
-        <section className="pt-4 pb-8 md:pt-6 md:pb-12">
+        <section className="py-8 md:py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
               <div className="relative bg-background p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in">
@@ -69,10 +69,10 @@ const Pricing = () => {
         </section>
 
         {/* Reformer Class Packs */}
-        <section className="py-8 md:py-16 bg-secondary/30">
+        <section className="py-10 md:py-14 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-12">
+              <div className="text-center mb-10 md:mb-12">
                 <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
                   Reformer Class Packs
                 </h2>
@@ -113,10 +113,10 @@ const Pricing = () => {
         </section>
 
         {/* Mat Class Packs - Kildare Only */}
-        <section className="py-8 md:py-16">
+        <section className="py-10 md:py-14">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
+              <div className="text-center mb-10 md:mb-12">
                 <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
                   Mat Class Packs
                 </h2>
@@ -162,10 +162,10 @@ const Pricing = () => {
         </section>
 
         {/* Memberships */}
-        <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-secondary/30">
+        <section className="py-10 md:py-14 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
+              <div className="text-center mb-10 md:mb-12">
                 <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
                   Monthly Memberships
                 </h2>
