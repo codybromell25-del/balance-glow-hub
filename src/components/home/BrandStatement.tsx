@@ -16,18 +16,10 @@ const BrandStatement = () => {
             A BETTER STUDIO
           </h2>
           
-          <p className="text-base md:text-lg text-black/90 font-heading font-bold mb-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-black/90 font-heading font-bold mb-0 leading-relaxed max-w-3xl mx-auto">
             Balance isn't your average pilates studio. We're here to push you, challenge you, and help you feel ridiculously good. 
             Real results, real vibes, zero BS. Come sweat with us.
           </p>
-          
-          <Button 
-            asChild 
-            size="lg" 
-            className="text-base px-8 py-6 rounded-full font-heading font-bold bg-white text-black hover:bg-white/90 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all"
-          >
-            <a href="/about">LEARN ABOUT BALANCE</a>
-          </Button>
         </div>
       </div>
     </section>
