@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ClassesBrandStatement from "@/components/home/ClassesBrandStatement";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { TrendingUp, Zap, Award, Activity } from "lucide-react";
@@ -57,6 +58,8 @@ const Classes = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-20">
+        <ClassesBrandStatement />
+        
         {/* Hero */}
         <section className="pt-8 pb-4 md:pt-12 md:pb-8 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
