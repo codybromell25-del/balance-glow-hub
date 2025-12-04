@@ -17,7 +17,7 @@ const InsideScoop = () => {
           </h2>
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-xs mx-auto">
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <video
               src="/videos/sculpt-class.mp4"
