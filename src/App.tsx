@@ -19,6 +19,7 @@ import BookingKildare from "./pages/BookingKildare";
 import BookingBlessington from "./pages/BookingBlessington";
 import BookAll from "./pages/BookAll";
 import OurStudios from "./pages/OurStudios";
+import OurStory from "./pages/OurStory";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/booking/blessington" element={<BookingBlessington />} />
           <Route path="/book-class" element={<BookAll />} />
           <Route path="/our-studios" element={<OurStudios />} />
+          <Route path="/our-story" element={<OurStory />} />
           <Route path="/terms" element={<Terms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
