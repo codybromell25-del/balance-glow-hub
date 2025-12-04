@@ -1,6 +1,32 @@
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 
 const BookingBlessington = () => {
+  useEffect(() => {
+    // Create and inject the Momence script
+    const script = document.createElement('script');
+    script.async = true;
+    script.type = 'module';
+    script.setAttribute('host_id', '62930');
+    script.setAttribute('teacher_ids', '[]');
+    script.setAttribute('location_ids', '[117424]');
+    script.setAttribute('tag_ids', '[]');
+    script.setAttribute('default_filter', 'show-all');
+    script.setAttribute('locale', 'en');
+    script.src = 'https://momence.com/plugin/host-schedule/host-schedule.js';
+    
+    const container = document.getElementById('ribbon-schedule');
+    if (container) {
+      container.appendChild(script);
+    }
+
+    return () => {
+      // Cleanup script on unmount
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -16,19 +42,13 @@ const BookingBlessington = () => {
                 Reserve your spot at our Blessington location
               </p>
               
-              <div className="bg-card rounded-xl border border-border overflow-hidden shadow-lg" style={{ height: 'calc(100vh - 200px)', minHeight: '600px' }}>
-                <iframe 
-                  src="https://momence.com/m/62930?location_id=117424"
-                  className="w-full h-full border-0"
-                  title="Book Blessington Studio"
-                  loading="lazy"
-                />
+              <div className="bg-card rounded-xl border border-border overflow-hidden shadow-lg p-4" style={{ minHeight: '600px' }}>
+                <div id="ribbon-schedule"></div>
               </div>
             </div>
           </div>
         </section>
       </main>
-      
     </div>
   );
 };
