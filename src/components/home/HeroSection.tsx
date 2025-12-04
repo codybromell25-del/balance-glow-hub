@@ -14,9 +14,9 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white mb-12 leading-tight tracking-tight">
-            Reformer Pilates.
+            balance. Reformer Pilates.
             <br />
-            <span className="block font-light italic">Done Right.</span>
+            <span className="block font-light italic">Redefined.</span>
           </h1>
 
           <Button asChild size="lg" className="text-base px-8 py-6 rounded-full mt-8 font-heading font-medium">
