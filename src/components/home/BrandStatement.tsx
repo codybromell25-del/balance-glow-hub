@@ -4,7 +4,7 @@ const BrandStatement = () => {
   return (
     <section className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto bg-gradient-to-br from-[#f5a5b8] via-[#f8b5c5] to-[#f5a5b8] rounded-3xl p-8 md:p-12 lg:p-16 text-center shadow-lg">
+        <div className="max-w-3xl mx-auto bg-gradient-button rounded-3xl p-8 md:p-12 lg:p-16 text-center shadow-lg">
           <img 
             src={balanceLogo} 
             alt="Balance Logo" 

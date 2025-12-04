@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const ClassesBrandStatement = () => {
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-br from-[#f5a5b8] via-[#f8b5c5] to-[#f5a5b8]">
+    <section className="py-8 md:py-10 bg-gradient-button">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-black mb-6 tracking-tight">
