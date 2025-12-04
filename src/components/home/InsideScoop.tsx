@@ -46,7 +46,7 @@ const InsideScoop = () => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-foreground mb-4">
-            Take a Step Into Balance
+            Take a Step Into balance
           </h2>
         </div>
 

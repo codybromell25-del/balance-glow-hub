@@ -12,7 +12,7 @@ const EmailCaptureSection = () => {
   };
 
   return (
-    <section className="py-10 md:py-16 bg-gradient-to-br from-[#f5a5b8] via-[#f8b5c5] to-[#f5a5b8]">
+    <section className="py-10 md:py-16 bg-gradient-button">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-black text-lg md:text-xl font-heading font-bold mb-4 tracking-wide uppercase">
@@ -46,7 +46,7 @@ const EmailCaptureSection = () => {
           </form>
 
           <p className="text-black/80 text-xs md:text-sm font-heading">
-            By submitting this form, you consent to receive marketing emails from Balance and agree to our{" "}
+            By submitting this form, you consent to receive marketing emails from balance and agree to our{" "}
             <a href="/terms" className="underline hover:text-black">
               Terms & Conditions
             </a>{" "}

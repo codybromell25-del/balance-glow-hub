@@ -76,7 +76,7 @@ const Classes = () => {
         "Perfect balance of strength, cardio & Reformer Pilates",
         "Back-to-back combos with energizing music on and off Reformer",
         "Heart-thumping, muscle-burning, seriously fun",
-        "Balance focus on form and control maintained throughout",
+        "balance focus on form and control maintained throughout",
         "Available at Studio 2, Kildare Town only",
       ],
     },
@@ -89,7 +89,7 @@ const Classes = () => {
         "Slow, steady circuits that fire up every muscle group",
         "Full-body burner without jumping or chaos",
         "Dials up intensity through controlled, purposeful movement",
-        "Pure fire, delivered the Balance way: strong, smart, satisfying",
+        "Pure fire, delivered the balance way: strong, smart, satisfying",
       ],
     },
   ];

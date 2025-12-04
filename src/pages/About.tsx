@@ -33,7 +33,7 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-4xl font-heading font-bold text-foreground mb-6 md:mb-8 text-center">
-                Meet Kelly, Owner of Balance
+                Meet Kelly, Owner of balance
               </h2>
               
               <div className="bg-white p-4 md:p-8 lg:p-12 rounded-lg border-2 border-primary/40 animate-fade-in">
@@ -42,7 +42,7 @@ const About = () => {
                   <div className="order-2 md:order-1">
                     <img 
                       src={kellyOwner} 
-                      alt="Kelly, Owner of Balance Studios"
+                      alt="Kelly, Owner of balance studios"
                       className="w-full h-auto rounded-lg shadow-lg"
                     />
                   </div>
@@ -50,8 +50,8 @@ const About = () => {
                   {/* Content */}
                   <div className="order-1 md:order-2 space-y-6">
                     <p className="text-muted-foreground leading-relaxed text-lg">
-                      Kelly is the founder and business lead at Balance. She creates gorgeous studios, 
-                      handpicks and develops incredible instructors, and protects the high Balance standard.
+                      Kelly is the founder and business lead at balance. She creates gorgeous studios, 
+                      handpicks and develops incredible instructors, and protects the high balance standard.
                     </p>
                     
                     <p className="text-muted-foreground leading-relaxed text-lg font-medium">
@@ -81,63 +81,63 @@ const About = () => {
                 <div className="break-inside-avoid animate-fade-in" style={{ animationDelay: "0.1s" }}>
                   <img 
                     src={studioInterior1} 
-                    alt="Balance Studio interior with reformers"
+                    alt="balance studio interior with reformers"
                     className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid animate-fade-in" style={{ animationDelay: "0.2s" }}>
                   <img 
                     src={studioClane} 
-                    alt="Balance Studio Clane location"
+                    alt="balance studio Clane location"
                     className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid animate-fade-in" style={{ animationDelay: "0.3s" }}>
                   <img 
                     src={studioHallway} 
-                    alt="Balance Studio hallway"
+                    alt="balance studio hallway"
                     className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid animate-fade-in" style={{ animationDelay: "0.4s" }}>
                   <img 
                     src={studioKildare} 
-                    alt="Balance Studio Kildare Town location"
+                    alt="balance studio Kildare Town location"
                     className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid animate-fade-in" style={{ animationDelay: "0.5s" }}>
                   <img 
                     src={studioEntrance} 
-                    alt="Balance Studio entrance"
+                    alt="balance studio entrance"
                     className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid animate-fade-in" style={{ animationDelay: "0.6s" }}>
                   <img 
                     src={studioBlessington} 
-                    alt="Balance Studio Blessington location"
+                    alt="balance studio Blessington location"
                     className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid animate-fade-in" style={{ animationDelay: "0.7s" }}>
                   <img 
                     src={studioExterior} 
-                    alt="Balance Studio storefront"
+                    alt="balance studio storefront"
                     className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid animate-fade-in" style={{ animationDelay: "0.8s" }}>
                   <img 
                     src={studioEnfield} 
-                    alt="Balance Studio Enfield location"
+                    alt="balance studio Enfield location"
                     className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
                 <div className="break-inside-avoid animate-fade-in" style={{ animationDelay: "0.9s" }}>
                   <img 
                     src={studioBray} 
-                    alt="Balance Studio Bray location"
+                    alt="balance studio Bray location"
                     className="w-full h-auto rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>

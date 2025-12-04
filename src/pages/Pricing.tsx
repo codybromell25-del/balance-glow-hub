@@ -39,7 +39,7 @@ const Pricing = () => {
                   <h2 className="text-3xl font-heading font-bold text-foreground mb-3">
                     Intro Offer: 4 Classes for €60
                   </h2>
-                  <p className="text-muted-foreground">The perfect way to discover Balance Studios</p>
+                  <p className="text-muted-foreground">The perfect way to discover balance studios</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
@@ -231,7 +231,7 @@ const Pricing = () => {
                   <li>• Memberships auto-renew on the same date each month</li>
                   <li>• Classes do not carry over to the next month</li>
                   <li>• Cancel anytime with 7 days notice before next billing date</li>
-                  <li>• Valid across all 5 Balance Studios locations</li>
+                  <li>• Valid across all 5 balance studios locations</li>
                 </ul>
               </div>
             </div>

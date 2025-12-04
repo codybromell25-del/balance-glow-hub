@@ -6,7 +6,7 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Vanessa McIntyre",
-      text: "I have been attending Balance for reformer pilates for over 2 years now. I took a break when I fell pregnant and recently returned to classes. The girls are so helpful and knowledgeable about which exercise is best for you. Beautiful studio and the staff are just amazing. Thank you all for everything, really enjoy being back!",
+      text: "I have been attending balance for reformer pilates for over 2 years now. I took a break when I fell pregnant and recently returned to classes. The girls are so helpful and knowledgeable about which exercise is best for you. Beautiful studio and the staff are just amazing. Thank you all for everything, really enjoy being back!",
       rating: 5,
     },
     {
@@ -16,7 +16,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "Jennie Kenna",
-      text: "Always friendly and welcoming in Balance Clane, the girls are fantastic and I'm absolutely hooked. I can feel the strength in my body and I'm only a few classes in.",
+      text: "Always friendly and welcoming in balance Clane, the girls are fantastic and I'm absolutely hooked. I can feel the strength in my body and I'm only a few classes in.",
       rating: 5,
     },
     {
@@ -26,7 +26,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "Orlaith Kelly",
-      text: "I am hooked! My healthy addiction! I just can't get enough of these classes! Every time I go, I feel myself getting stronger mentally and physically. All the instructors are amazing and are so knowledgeable! I am telling everyone to go to Balance.",
+      text: "I am hooked! My healthy addiction! I just can't get enough of these classes! Every time I go, I feel myself getting stronger mentally and physically. All the instructors are amazing and are so knowledgeable! I am telling everyone to go to balance.",
       rating: 5,
     },
     {
@@ -36,7 +36,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "Orla Anderson",
-      text: "Balance is great. I've gone to over 100 classes here and reformer pilates keeps my back pain at bay. Highly recommend for anyone with back issues — give it a try.",
+      text: "balance is great. I've gone to over 100 classes here and reformer pilates keeps my back pain at bay. Highly recommend for anyone with back issues — give it a try.",
       rating: 5,
     },
     {
@@ -61,7 +61,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "Fiona O'Reilly",
-      text: "I've been going to classes at the Balance studio in Kildare Town since it opened in October 2023. The classes are always well planned out and challenging. The studio is gorgeous and the equipment is spotless. All the instructors are fantastic, but Ciara is my favourite ☺️",
+      text: "I've been going to classes at the balance studio in Kildare Town since it opened in October 2023. The classes are always well planned out and challenging. The studio is gorgeous and the equipment is spotless. All the instructors are fantastic, but Ciara is my favourite ☺️",
       rating: 5,
     },
   ];
@@ -74,7 +74,7 @@ const TestimonialsSection = () => {
             Why People Keep Coming Back
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Honest words from the people living their best Balance life.
+            Honest words from the people living their best balance life.
           </p>
         </div>
 
