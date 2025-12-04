@@ -45,12 +45,15 @@ const MasonryItem = ({ item, index }: { item: MediaItem; index: number }) => {
       {item.type === 'video' ? (
         <video
           src={item.src}
-          className="w-full h-full object-cover min-h-[300px]"
+          className="w-full h-full object-cover min-h-[300px] bg-black"
           autoPlay
           muted
           loop
           playsInline
-        />
+          controls
+        >
+          <source src={item.src} type="video/mp4" />
+        </video>
       ) : (
         <img
           src={item.src}
