@@ -29,6 +29,13 @@ const InsideScoop = () => {
   const centerIndex = activeIndex;
   const rightIndex = getVideoIndex(1);
 
+  const getPosition = (index: number) => {
+    if (index === centerIndex) return "center";
+    if (index === leftIndex) return "left";
+    if (index === rightIndex) return "right";
+    return "hidden";
+  };
+
   return (
     <section className="py-16 md:py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
@@ -53,52 +60,40 @@ const InsideScoop = () => {
             <ChevronLeft className="w-6 h-6 text-foreground" />
           </button>
 
-          {/* Videos Container */}
+          {/* Videos Container - All videos stay mounted */}
           <div className="flex items-center justify-center gap-3 md:gap-6 px-12">
-            {/* Left Video */}
-            <div
-              onClick={scrollPrev}
-              className="rounded-2xl overflow-hidden shadow-lg transition-all duration-500 cursor-pointer flex-shrink-0 w-28 md:w-40 scale-90 opacity-60 hover:opacity-80"
-            >
-              <video
-                key={videos[leftIndex]}
-                src={videos[leftIndex]}
-                className="w-full aspect-[9/16] object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-            </div>
-
-            {/* Center Video (Active) */}
-            <div className="rounded-2xl overflow-hidden shadow-xl transition-all duration-500 flex-shrink-0 w-48 md:w-64 scale-100 opacity-100 z-10">
-              <video
-                key={videos[centerIndex]}
-                src={videos[centerIndex]}
-                className="w-full aspect-[9/16] object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-            </div>
-
-            {/* Right Video */}
-            <div
-              onClick={scrollNext}
-              className="rounded-2xl overflow-hidden shadow-lg transition-all duration-500 cursor-pointer flex-shrink-0 w-28 md:w-40 scale-90 opacity-60 hover:opacity-80"
-            >
-              <video
-                key={videos[rightIndex]}
-                src={videos[rightIndex]}
-                className="w-full aspect-[9/16] object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-            </div>
+            {videos.map((video, index) => {
+              const position = getPosition(index);
+              
+              return (
+                <div
+                  key={video}
+                  onClick={() => {
+                    if (position === "left") scrollPrev();
+                    if (position === "right") scrollNext();
+                  }}
+                  className={`rounded-2xl overflow-hidden shadow-lg transition-all duration-300 flex-shrink-0 ${
+                    position === "center"
+                      ? "w-48 md:w-64 scale-100 opacity-100 z-10 order-2 shadow-xl"
+                      : position === "left"
+                      ? "w-28 md:w-40 scale-90 opacity-60 hover:opacity-80 cursor-pointer order-1"
+                      : position === "right"
+                      ? "w-28 md:w-40 scale-90 opacity-60 hover:opacity-80 cursor-pointer order-3"
+                      : "w-0 scale-0 opacity-0 absolute pointer-events-none"
+                  }`}
+                >
+                  <video
+                    src={video}
+                    className="w-full aspect-[9/16] object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                  />
+                </div>
+              );
+            })}
           </div>
 
           {/* Right Arrow */}
