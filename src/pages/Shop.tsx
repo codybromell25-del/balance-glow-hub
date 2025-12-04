@@ -12,7 +12,7 @@ const Shop = () => {
   const products = [
     {
       id: 1,
-      name: "Balance Studios Grip Socks",
+      name: "balance studios Grip Socks",
       category: "Apparel",
       price: 15,
       description: "Non-slip grip socks perfect for reformer Pilates. Available in multiple colors.",
@@ -41,7 +41,7 @@ const Shop = () => {
       name: "Premium Yoga Mat",
       category: "Equipment",
       price: 65,
-      description: "Extra thick 6mm mat with Balance Studios branding. Perfect for mat Pilates.",
+      description: "Extra thick 6mm mat with balance studios branding. Perfect for mat Pilates.",
       image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500&q=80",
     },
     {
@@ -54,7 +54,7 @@ const Shop = () => {
     },
     {
       id: 6,
-      name: "Balance Studios Tote Bag",
+      name: "balance studios Tote Bag",
       category: "Accessories",
       price: 18,
       description: "Stylish canvas tote bag for carrying your Pilates essentials.",
@@ -97,7 +97,7 @@ const Shop = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-                Shop Balance Studios
+                Shop balance studios
               </h1>
               <p className="text-lg text-muted-foreground">
                 Elevate your practice with our curated selection of Pilates essentials, apparel, and gift vouchers

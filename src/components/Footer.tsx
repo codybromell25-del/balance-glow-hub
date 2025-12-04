@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <img src={balanceLogo} alt="Balance Reformer Pilates" className="h-32 w-auto mb-4" />
+            <img src={balanceLogo} alt="balance reformer pilates" className="h-32 w-auto mb-4" />
             <p className="text-black mb-4">
               Reformer Pilates across Kildare & Wicklow.
             </p>
@@ -86,7 +86,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-black">
-          <p>&copy; {new Date().getFullYear()} Balance Studios. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} balance studios. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link to="/privacy" className="text-black hover:text-primary transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="text-black hover:text-primary transition-colors">Terms & Conditions</Link>

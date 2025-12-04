@@ -26,7 +26,7 @@ const PricingPreview = () => {
 
             <div className="text-center mb-6 mt-4">
               <h3 className="text-3xl font-heading font-extrabold text-foreground mb-3 tracking-tight">Intro Offer: 4 Classes for €60</h3>
-              <p className="text-muted-foreground">The perfect way to discover Balance Studios</p>
+              <p className="text-muted-foreground">The perfect way to discover balance studios</p>
             </div>
 
             <ul className="space-y-3 mb-8">

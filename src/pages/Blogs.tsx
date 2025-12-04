@@ -60,7 +60,7 @@ const Blogs = () => {
                 {
                   icon: Users,
                   title: "Community Stories",
-                  description: "Real transformations from real Balance Studios clients",
+                  description: "Real transformations from real balance studios clients",
                 },
               ].map((category, index) => {
                 const Icon = category.icon;

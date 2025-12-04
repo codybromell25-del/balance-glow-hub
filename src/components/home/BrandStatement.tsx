@@ -7,7 +7,7 @@ const BrandStatement = () => {
         <div className="max-w-3xl mx-auto bg-gradient-button rounded-3xl p-8 md:p-12 lg:p-16 text-center shadow-lg">
           <img 
             src={balanceLogo} 
-            alt="Balance Logo" 
+            alt="balance logo" 
             className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-6 object-contain animate-scale-in"
           />
           
@@ -16,7 +16,7 @@ const BrandStatement = () => {
           </h2>
           
           <p className="text-base md:text-lg text-black/90 font-heading font-normal mb-0 leading-relaxed">
-            Balance isn't your average pilates studio. We're here to help you get stronger, move better, and feel ridiculously good. 
+            balance isn't your average pilates studio. We're here to help you get stronger, move better, and feel ridiculously good. 
             Real results, an atmosphere you'll actually enjoy. Come find out for yourself why we are the fastest growing studio on the Island.
           </p>
         </div>

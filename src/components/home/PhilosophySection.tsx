@@ -30,10 +30,10 @@ const PhilosophySection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-heading font-black text-foreground mb-6 tracking-tight">
-            Why Balance Studios?
+            Why balance studios?
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed font-light">
-            At Balance Studios, we believe that strength, flexibility and confidence are for every body. 
+            At balance studios, we believe that strength, flexibility and confidence are for every body. 
             With small-group reformer classes, expert instructors and five beautifully designed 
             studios across Kildare and Wicklow, we tailor your Pilates journey so you feel great in body and mind.
           </p>

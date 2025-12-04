@@ -71,7 +71,7 @@ const Terms = () => {
                     We cannot facilitate class swaps or transfer cancellations to another date.
                   </p>
                   <p>
-                    Cancellations must be made via our online booking system or the Balance Ireland App.
+                    Cancellations must be made via our online booking system or the balance Ireland App.
                   </p>
                   <p>
                     This policy applies uniformly and cannot be adjusted on a case-by-case basis.
@@ -95,7 +95,7 @@ const Terms = () => {
                     You must agree to and sign our Health & Safety Waiver when creating an account.
                   </p>
                   <p>
-                    It is your responsibility to inform Balance of any injuries or health changes during your time with us. We may require written clearance from your Medical Practitioner or Physiotherapist before you can attend classes.
+                    It is your responsibility to inform balance of any injuries or health changes during your time with us. We may require written clearance from your Medical Practitioner or Physiotherapist before you can attend classes.
                   </p>
                   <p>
                     If you experience middle-ear issues, please note this may cause disorientation on the Reformer. We suggest booking a single class first to assess suitability.
@@ -125,7 +125,7 @@ const Terms = () => {
                     Class Packs are non-transferable and cannot be shared. You may purchase a class for another client by adding them as a Family Member on your account.
                   </p>
                   <p>
-                    Balance reserves the right to change instructors if cover is required. Packages are not sold with a guarantee of a specific teacher.
+                    balance reserves the right to change instructors if cover is required. Packages are not sold with a guarantee of a specific teacher.
                   </p>
                   <p>
                     We reserve the right to cancel classes if attendance numbers are low.
