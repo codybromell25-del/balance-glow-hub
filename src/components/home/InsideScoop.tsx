@@ -9,11 +9,11 @@ const InsideScoop = () => {
         <div
           ref={ref}
           className={`text-center mb-10 transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-foreground mb-4">
-            Inside Scoop
+            Step Inside Our Studios
           </h2>
         </div>
 
