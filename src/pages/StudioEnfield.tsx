@@ -19,6 +19,7 @@ const StudioEnfield = () => {
     ],
     image: studioEnfield,
     locationId: "117425",
+    showScheduleWidget: true,
   };
 
   return <StudioPage studioInfo={studioInfo} />;
