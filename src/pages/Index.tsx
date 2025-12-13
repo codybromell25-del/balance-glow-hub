@@ -8,15 +8,13 @@ import LocationsSection from "@/components/home/LocationsSection";
 import PricingPreview from "@/components/home/PricingPreview";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import EmailCaptureSection from "@/components/home/EmailCaptureSection";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <main>
         <HeroSection />
-        <BrandStatement />
-        <HumanMoments />
+        
+        
         <PricingPreview />
         <InsideScoop />
         <LocationsSection />
@@ -24,8 +22,6 @@ const Index = () => {
         <EmailCaptureSection />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
