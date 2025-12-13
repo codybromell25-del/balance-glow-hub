@@ -86,7 +86,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
     script.src = "https://momence.com/plugin/host-schedule/host-schedule.js";
     script.setAttribute("host_id", "62930");
     script.setAttribute("teacher_ids", "[]");
-    script.setAttribute("location_ids", "[117422]");
+    script.setAttribute("location_ids", `[${studioInfo.locationId}]`);
     script.setAttribute("tag_ids", "[]");
     script.setAttribute("lite_mode", "true");
     script.setAttribute("default_filter", "show-all");
