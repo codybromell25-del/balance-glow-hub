@@ -1,13 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, CalendarDays } from "lucide-react";
 import heroImage from "@/assets/hero-studio-new.png";
-
 const HeroSection = () => {
-  return (
-    <section 
-      className="min-h-[85vh] flex items-end bg-cover bg-center relative" 
-      style={{ backgroundImage: `url(${heroImage})` }}
-    >
+  return <section className="min-h-[85vh] flex items-end bg-cover bg-center relative" style={{
+    backgroundImage: `url(${heroImage})`
+  }}>
       {/* Dramatic gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
 
@@ -32,7 +29,7 @@ const HeroSection = () => {
           {/* Buttons - refined and mobile optimized */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
             <Button asChild size="lg" className="rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center">
-              <a href="/pricing">
+              <a href="/pricing" className="text-primary-foreground bg-[#52220a]">
                 Buy now
                 <ShoppingCart className="w-4 h-4 ml-2" />
               </a>
@@ -46,8 +43,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
