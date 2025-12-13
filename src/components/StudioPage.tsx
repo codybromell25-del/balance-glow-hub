@@ -210,11 +210,11 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
         </section>
 
         {/* Memberships Section */}
-        <section className="py-10 md:py-16">
+        <section className="py-10 md:py-16 bg-gradient-to-b from-background to-secondary/20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-10">
+            <div className="text-center mb-12">
               <p className="text-primary text-sm tracking-widest mb-4">— Enjoy exclusive benefits</p>
-              <h2 className="text-2xl md:text-3xl font-heading italic text-foreground">
+              <h2 className="text-2xl md:text-4xl font-heading italic text-foreground">
                 Flexible Memberships
               </h2>
             </div>
@@ -223,27 +223,33 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
               {memberships.map((membership, index) => (
                 <div
                   key={membership.classes}
-                  className="relative bg-background p-6 rounded-xl border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all duration-300 animate-fade-in flex flex-col"
+                  className={`relative p-6 rounded-2xl transition-all duration-300 animate-fade-in flex flex-col group
+                    ${membership.classes === "Unlimited" 
+                      ? "bg-gradient-to-br from-primary/10 via-background to-primary/5 border-2 border-primary/30 shadow-xl shadow-primary/10 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1" 
+                      : "bg-background border border-border shadow-lg hover:shadow-xl hover:border-primary/30 hover:-translate-y-1"
+                    }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {membership.classes === "Unlimited" && (
                     <div className="absolute -top-3 right-4">
-                      <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                      <span className="bg-gradient-button text-black px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
                         Best Choice
                       </span>
                     </div>
                   )}
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  
                   <h3 className="text-lg md:text-xl font-bold text-foreground mb-0">
                     balance. {membership.classes}
                   </h3>
-                  <p className="text-sm font-semibold text-foreground mb-1">
+                  <p className="text-sm font-semibold text-primary mb-1">
                     {membership.subtitle}
                   </p>
                   <p className="text-xs text-muted-foreground mb-4">
                     {membership.classCount}
                   </p>
                   
-                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow leading-relaxed">
                     {membership.description}
                   </p>
                   
@@ -251,11 +257,11 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     {membership.terms}
                   </p>
                   
-                  <div className="flex items-end justify-between mt-auto">
+                  <div className="flex items-end justify-between mt-auto pt-4 border-t border-border/50">
                     <p className="text-2xl md:text-3xl font-heading italic text-foreground">
                       {membership.price}
                     </p>
-                    <Button size="sm" className="flex items-center gap-2">
+                    <Button size="sm" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow">
                       Buy Now
                       <ShoppingCart className="w-4 h-4" />
                     </Button>
@@ -267,11 +273,11 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
         </section>
 
         {/* Class Packs Section */}
-        <section className="py-10 md:py-16 bg-secondary/30">
+        <section className="py-10 md:py-16 bg-gradient-to-b from-secondary/40 to-secondary/20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-10">
+            <div className="text-center mb-12">
               <p className="text-primary text-sm tracking-widest mb-4">— Ideal for occasional visits</p>
-              <h2 className="text-2xl md:text-3xl font-heading italic text-foreground">
+              <h2 className="text-2xl md:text-4xl font-heading italic text-foreground">
                 Class Packs
               </h2>
             </div>
@@ -279,35 +285,42 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
             {/* Cards Grid including Intro Offer */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {/* Intro Offer Card */}
-              <div className="relative bg-background p-6 rounded-xl border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all duration-300 animate-fade-in flex flex-col">
+              <div className="relative p-6 rounded-2xl bg-gradient-to-br from-primary/15 via-background to-primary/5 border-2 border-primary/40 shadow-xl shadow-primary/10 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1 transition-all duration-300 animate-fade-in flex flex-col group md:col-span-2 lg:col-span-1">
                 <div className="absolute -top-3 left-4">
-                  <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                  <span className="bg-gradient-button text-black px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                    </span>
                     Best Choice
                   </span>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-foreground mb-0 mt-2">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-primary/80 to-primary rounded-t-2xl" />
+                
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-0 mt-3">
                   INTRO OFFER
                 </h3>
-                <p className="text-sm font-semibold text-foreground mb-1">
+                <p className="text-base font-semibold text-primary mb-1">
                   3 Classes for €45
                 </p>
-                <p className="text-xs text-primary font-medium mb-4">
+                <p className="text-sm text-primary font-medium mb-4 flex items-center gap-2">
+                  <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />
                   Limited offer!
                 </p>
                 
-                <p className="text-sm text-muted-foreground mb-4 flex-grow">
-                  Secure your spot with our limited Intro Offer: 3 classes for just €45.
+                <p className="text-sm text-muted-foreground mb-4 flex-grow leading-relaxed">
+                  Secure your spot with our limited Intro Offer: 3 classes for just €45. Perfect for first-timers!
                 </p>
                 
                 <p className="text-xs text-muted-foreground italic mb-6">
                   Expires 14 days from purchase.
                 </p>
                 
-                <div className="flex items-end justify-between mt-auto">
-                  <p className="text-2xl md:text-3xl font-heading italic text-foreground">
+                <div className="flex items-end justify-between mt-auto pt-4 border-t border-primary/20">
+                  <p className="text-3xl md:text-4xl font-heading italic text-foreground">
                     €45
                   </p>
-                  <Button asChild size="sm" className="flex items-center gap-2">
+                  <Button asChild size="default" className="flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow">
                     <a href="https://momence.com/sign-up/visitor" target="_blank" rel="noopener noreferrer">
                       Buy Now
                       <ShoppingCart className="w-4 h-4" />
@@ -320,20 +333,22 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
               {classPacks.map((pack, index) => (
                 <div
                   key={pack.classes}
-                  className="relative bg-background p-6 rounded-xl border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all duration-300 animate-fade-in flex flex-col"
+                  className="relative p-6 rounded-2xl bg-background border border-border shadow-lg hover:shadow-xl hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 animate-fade-in flex flex-col group"
                   style={{ animationDelay: `${(index + 1) * 0.1}s` }}
                 >
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/30 via-primary/60 to-primary/30 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  
                   <h3 className="text-lg md:text-xl font-bold text-foreground mb-0">
                     {pack.classes} Class Pack
                   </h3>
-                  <p className="text-sm font-semibold text-foreground mb-1">
+                  <p className="text-sm font-semibold text-primary mb-1">
                     Class Pack
                   </p>
-                  <p className="text-xs text-primary font-medium mb-4">
+                  <p className="text-xs text-primary/80 font-medium mb-4">
                     Limited offer!
                   </p>
                   
-                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow leading-relaxed">
                     {pack.description}
                   </p>
                   
@@ -341,11 +356,11 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     {pack.validity}
                   </p>
                   
-                  <div className="flex items-end justify-between mt-auto">
+                  <div className="flex items-end justify-between mt-auto pt-4 border-t border-border/50">
                     <p className="text-2xl md:text-3xl font-heading italic text-foreground">
                       {pack.price}
                     </p>
-                    <Button size="sm" className="flex items-center gap-2">
+                    <Button size="sm" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow">
                       Buy Now
                       <ShoppingCart className="w-4 h-4" />
                     </Button>
