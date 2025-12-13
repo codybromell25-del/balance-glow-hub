@@ -22,8 +22,8 @@ const HeroSection = () => {
           </div>
 
           {/* Intro Offer */}
-          <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-6 md:mb-8 max-w-xl italic font-light tracking-wide">
-            Intro Offer: <span className="text-primary font-semibold">3 Classes for €45</span>
+          <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-6 md:mb-8 max-w-xl italic font-light tracking-wide">Intro Offer:
+  3 Classes for €45<span className="text-primary font-semibold">3 Classes for €45</span>
           </p>
 
           {/* Tagline - elegant and impactful */}
