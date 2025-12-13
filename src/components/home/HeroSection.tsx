@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, CalendarDays } from "lucide-react";
-import heroImage from "@/assets/hero-studio-chandelier.png";
+import heroImage from "@/assets/hero-studio-new.png";
 const HeroSection = () => {
   return <section className="min-h-[75vh] flex items-center bg-cover bg-center relative" style={{
     backgroundImage: `url(${heroImage})`
