@@ -12,7 +12,7 @@ const EmailCaptureSection = () => {
   };
 
   return (
-    <section className="py-10 md:py-16 bg-gradient-button">
+    <section className="py-8 md:py-12 bg-gradient-button">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-black text-lg md:text-xl font-heading font-bold mb-4 tracking-wide uppercase">

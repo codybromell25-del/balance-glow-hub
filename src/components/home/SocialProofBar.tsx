@@ -8,7 +8,7 @@ const SocialProofBar = () => {
   ];
 
   return (
-    <section className="py-6 md:py-8 bg-secondary/50">
+    <section className="py-4 md:py-5 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
           {stats.map((stat, index) => (

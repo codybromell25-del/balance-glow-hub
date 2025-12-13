@@ -23,10 +23,10 @@ const ClassRoutines = () => {
     title: "Power",
     description: "This class is aimed at building strength through dynamic and compound movements using the reformer."
   }];
-  return <section className="py-16 md:py-24 bg-secondary/30">
+  return <section className="py-10 md:py-14 bg-secondary/30">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+        <div className="text-center mb-8 md:mb-10 animate-fade-in">
           <div className="flex items-center justify-center gap-4 mb-4">
             <span className="w-8 h-[1px] bg-foreground/30"></span>
             <span className="text-foreground/60 text-sm uppercase tracking-[0.2em]">Our Classes</span>
