@@ -94,7 +94,7 @@ const Shop = () => {
       
       <main className="flex-1 pt-16">
         <PageHeader 
-          title="Shop balance studios" 
+          title="Shop" 
           subtitle="Elevate your practice with our curated selection of Pilates essentials, apparel, and gift vouchers"
         />
 

@@ -1,21 +1,13 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageHeader from "@/components/PageHeader";
 
 const Terms = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-20">
-        {/* Hero */}
-        <section className="pt-8 pb-4 md:pt-12 md:pb-8 bg-gradient-to-b from-secondary/30 to-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-4">
-                Terms & Conditions
-              </h1>
-            </div>
-          </div>
-        </section>
+      <main className="pt-16">
+        <PageHeader title="Terms & Conditions" />
 
         {/* Terms Content */}
         <section className="py-8 md:py-16">
