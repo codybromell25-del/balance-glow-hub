@@ -9,24 +9,20 @@ import LocationsSection from "@/components/home/LocationsSection";
 import ClassRoutines from "@/components/home/ClassRoutines";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import EmailCaptureSection from "@/components/home/EmailCaptureSection";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <main>
         <HeroSection />
-        <SocialProofBar />
+        <SocialProofBar className="bg-[#faf2eb]" />
         <BrandStatement />
-        <ClassRoutines />
+        <ClassRoutines className="bg-[#faf2eb]" />
         <InsideScoop className="bg-[#faf2eb]" />
         <LocationsSection />
         <TestimonialsSection />
         <EmailCaptureSection />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
