@@ -157,7 +157,17 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
               </div>
 
               {/* Momence Schedule Widget */}
-              <div id="ribbon-schedule" className="mt-10"></div>
+              {studioInfo.showScheduleWidget && (
+                <div className="mt-16">
+                  <div className="text-center mb-8">
+                    <p className="text-primary text-sm tracking-widest mb-4">— Book your class</p>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading italic text-foreground">
+                      Discover our range of classes and secure your spot today
+                    </h2>
+                  </div>
+                  <div id="ribbon-schedule"></div>
+                </div>
+              )}
             </div>
           </div>
         </section>
