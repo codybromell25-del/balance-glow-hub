@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, ShoppingCart } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import clientsStretching from "@/assets/clients-stretching.jpg";
+
 
 interface StudioInfo {
   name: string;
@@ -79,18 +79,6 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
         {/* Page Header */}
         <PageHeader title={`balance ${studioInfo.name}`} />
 
-        {/* Hero Section with Image */}
-        <section className="py-10 md:py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <img 
-                src={studioInfo.image} 
-                alt={`balance. ${studioInfo.name} Studio`} 
-                className="w-full h-[250px] md:h-[400px] object-cover rounded-2xl shadow-xl"
-              />
-            </div>
-          </div>
-        </section>
 
         {/* Studio Info Section */}
         <section className="py-10 md:py-16 bg-secondary/30">
@@ -165,18 +153,6 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
           </div>
         </section>
 
-        {/* Studio Image */}
-        <section className="pb-10 md:pb-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <img 
-                src={clientsStretching} 
-                alt="Pilates class in session" 
-                className="w-full h-[200px] md:h-[350px] object-cover rounded-2xl shadow-xl"
-              />
-            </div>
-          </div>
-        </section>
 
         {/* Before Your Class Section */}
         <section className="py-10 md:py-16 bg-secondary/30">
