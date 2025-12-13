@@ -168,7 +168,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                 >
                   {membership.classes === "Unlimited" && (
                     <div className="absolute -top-3 right-4">
-                      <span className="bg-gradient-button text-black px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
+                      <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
                         Best Choice
                       </span>
                     </div>
@@ -223,10 +223,10 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
               {/* Intro Offer Card */}
               <div className="relative p-6 rounded-2xl bg-gradient-to-br from-primary/15 via-background to-primary/5 border-2 border-primary/40 shadow-xl shadow-primary/10 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1 transition-all duration-300 animate-fade-in flex flex-col group md:col-span-2 lg:col-span-1">
                 <div className="absolute -top-3 left-4">
-                  <span className="bg-gradient-button text-black px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
+                  <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
                     <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-background opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-background"></span>
                     </span>
                     Best Choice
                   </span>
