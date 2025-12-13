@@ -15,7 +15,7 @@ const About = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
-        <PageHeader title="who are balance." />
+        <PageHeader title="who are balance" />
 
         {/* Meet Kelly */}
         <section className="py-10 md:py-16 bg-gradient-to-b from-background to-secondary/30">
