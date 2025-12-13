@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageHeader from "@/components/PageHeader";
 import { MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -62,20 +63,10 @@ const OurStudios = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
-        {/* Hero */}
-        <section className="py-8 md:py-10 bg-gradient-to-b from-secondary/30 to-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-4">
-                Take Your Pick
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Five stunning studios across Kildare, Wicklow & Meath—each one designed to help you move, sweat, and thrive. 
-                Pick your perfect spot and let's make magic happen!
-              </p>
-            </div>
-          </div>
-        </section>
+        <PageHeader 
+          title="Take Your Pick" 
+          subtitle="Five stunning studios across Kildare, Wicklow & Meath—each one designed to help you move, sweat, and thrive. Pick your perfect spot and let's make magic happen!"
+        />
 
         {/* Studios Grid */}
         <section className="py-8 md:py-12">

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Info } from "lucide-react";
 
@@ -8,19 +9,10 @@ const Pricing = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
-        {/* Hero */}
-        <section className="py-8 md:py-10 bg-gradient-to-b from-secondary/30 to-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-4">
-                Pick Your Plan
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Whether you're all-in or just dipping your toes, we've got you covered. One price, all 5 studios—zero confusion.
-              </p>
-            </div>
-          </div>
-        </section>
+        <PageHeader 
+          title="Pick Your Plan" 
+          subtitle="Whether you're all-in or just dipping your toes, we've got you covered. One price, all 5 studios—zero confusion."
+        />
 
         {/* Intro Offer */}
         <section className="py-8 md:py-12">

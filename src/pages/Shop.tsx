@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageHeader from "@/components/PageHeader";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -92,19 +93,10 @@ const Shop = () => {
       <Navigation />
       
       <main className="flex-1 pt-16">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-b from-secondary/30 to-background py-8 md:py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-                Shop balance studios
-              </h1>
-              <p className="text-lg text-muted-foreground">
-                Elevate your practice with our curated selection of Pilates essentials, apparel, and gift vouchers
-              </p>
-            </div>
-          </div>
-        </section>
+        <PageHeader 
+          title="Shop balance studios" 
+          subtitle="Elevate your practice with our curated selection of Pilates essentials, apparel, and gift vouchers"
+        />
 
         {/* Products Grid */}
         <section className="py-10 md:py-14">
