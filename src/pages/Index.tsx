@@ -12,7 +12,9 @@ const Index = () => {
   return <div className="min-h-screen">
       <Navigation />
       <main>
-        <HeroSection />
+        <HeroSection style={{
+        backgroundImage: "url(\"/lovable-uploads/3472054c-bc14-4e3f-9e3d-d521431443c2.jpg\")"
+      }} />
         
         
         <PricingPreview />
