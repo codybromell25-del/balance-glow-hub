@@ -18,6 +18,7 @@ const StudioBray = () => {
       { day: "Sunday", time: "08:30 - 11:45" },
     ],
     image: studioBray,
+    locationId: "117426",
   };
 
   return <StudioPage studioInfo={studioInfo} />;

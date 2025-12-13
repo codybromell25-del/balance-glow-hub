@@ -18,6 +18,7 @@ const StudioEnfield = () => {
       { day: "Sunday", time: "08:30 - 11:45" },
     ],
     image: studioEnfield,
+    locationId: "117425",
   };
 
   return <StudioPage studioInfo={studioInfo} />;
