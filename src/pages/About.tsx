@@ -1,17 +1,13 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
+import InsideScoop from "@/components/home/InsideScoop";
 import kellyOwner from "@/assets/kelly-owner-new.png";
 import studioClane from "@/assets/studio-clane.png";
 import studioKildare from "@/assets/studio-kildare.png";
 import studioBlessington from "@/assets/studio-blessington.png";
 import studioEnfield from "@/assets/studio-enfield.png";
 import studioBray from "@/assets/studio-bray.png";
-import clientsLaughing from "@/assets/clients-laughing.jpg";
-import clientsStretching from "@/assets/clients-stretching.jpg";
-import clientsMatWorkout from "@/assets/clients-mat-workout.jpg";
-import instructorLaughing from "@/assets/instructor-laughing.jpg";
-import studioNeonSign from "@/assets/studio-neon-sign.jpg";
 import studioReformersRow from "@/assets/studio-reformers-row.jpg";
 
 const About = () => {
@@ -84,38 +80,8 @@ const About = () => {
           </div>
         </section>
 
-        {/* The balance Vibe - Human moments */}
-        <section className="py-10 md:py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-heading font-medium text-foreground mb-4 text-center">
-                The balance Vibe
-              </h2>
-              <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-10 md:mb-12">
-                Real people. Real connections. Real results.
-              </p>
-              
-              {/* Human moments grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="col-span-2 row-span-2">
-                  <img src={clientsLaughing} alt="Clients laughing during pilates class" className="w-full h-full object-cover rounded-2xl shadow-lg" />
-                </div>
-                <div className="aspect-square">
-                  <img src={instructorLaughing} alt="Instructor helping a client" className="w-full h-full object-cover rounded-2xl shadow-lg" />
-                </div>
-                <div className="aspect-square">
-                  <img src={studioNeonSign} alt="Balance studio neon sign" className="w-full h-full object-cover rounded-2xl shadow-lg" />
-                </div>
-                <div className="aspect-square">
-                  <img src={clientsStretching} alt="Two women stretching together" className="w-full h-full object-cover rounded-2xl shadow-lg" />
-                </div>
-                <div className="aspect-square">
-                  <img src={clientsMatWorkout} alt="Mat pilates workout" className="w-full h-full object-cover rounded-2xl shadow-lg" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Take a Step Into balance */}
+        <InsideScoop />
 
         {/* Our Growth */}
         <section className="py-10 md:py-16 bg-secondary/20">
