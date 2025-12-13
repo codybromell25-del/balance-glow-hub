@@ -25,7 +25,7 @@ const PricingPreview = () => {
             </div>
 
             <div className="text-center mb-6 mt-4">
-              <h3 className="text-3xl font-heading font-extrabold text-foreground mb-3 tracking-tight">Intro Offer: 4 Classes for €60</h3>
+              <h3 className="text-3xl font-heading font-extrabold text-foreground mb-3 tracking-tight">Intro Offer: 3 Classes for €45</h3>
               <p className="text-muted-foreground">The perfect way to discover balance studios</p>
             </div>
 
@@ -34,7 +34,7 @@ const PricingPreview = () => {
                 "Try any class level to find your fit",
                 "Experience different instructors",
                 "Visit any of our 5 studio locations",
-                "Valid for 30 days from purchase",
+                "Valid for 14 days from purchase",
                 "First-time clients only",
               ].map((feature) => (
                 <li key={feature} className="flex items-center gap-3">

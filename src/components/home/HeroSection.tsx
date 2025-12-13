@@ -21,6 +21,11 @@ const HeroSection = () => {
             <span className="text-white/80 text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] font-light">Reformer Pilates</span>
           </div>
 
+          {/* Intro Offer Badge */}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#d8a4a8] via-[#e8b4b8] to-[#d8a4a8] text-black px-4 py-2 rounded-full mb-6 md:mb-8 shadow-lg">
+            <span className="font-bold text-sm md:text-base">New Clients: 3 Classes for €45</span>
+          </div>
+
           {/* Tagline - elegant and impactful */}
           <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl italic font-light tracking-wide">
             For Those Who Expect <span className="font-semibold not-italic text-white">More</span>.
