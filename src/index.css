@@ -172,8 +172,8 @@ All colors MUST be HSL.
   :root {
     /* Balance Studios - Refined Rose Gold #d8c9c2 */
     
-    /* Backgrounds - Clean White */
-    --background: 0 0% 100%;
+    /* Backgrounds - Warm Cream #FAF3ED */
+    --background: 28 45% 95%;
     --foreground: 0 0% 0%;
 
     /* Cards - Soft rose gold background */
