@@ -19,6 +19,7 @@ const StudioKildare = () => {
     ],
     image: studioKildare,
     locationId: "117423",
+    showScheduleWidget: true,
   };
 
   return <StudioPage studioInfo={studioInfo} />;
