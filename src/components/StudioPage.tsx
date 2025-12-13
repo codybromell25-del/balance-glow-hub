@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
-import { MapPin, Clock, Sparkles } from "lucide-react";
+import { MapPin, Clock, ShoppingCart } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import clientsStretching from "@/assets/clients-stretching.jpg";
 
@@ -29,17 +29,46 @@ const beforeClassItems = [
 ];
 
 const classPacks = [
-  { classes: 1, price: "€24", validity: "Valid 30 days" },
-  { classes: 3, price: "€65", validity: "Valid 30 days" },
-  { classes: 10, price: "€215", validity: "Valid 310 days" },
-  { classes: 20, price: "€400", validity: "Valid 610 days" },
+  { classes: 1, price: "€24", validity: "30-day expiry", description: "Book any balance. class with this flexible single session." },
+  { classes: 3, price: "€65", validity: "30-day expiry", description: "Get access to 3 classes, valid for 30 days." },
+  { classes: 10, price: "€215", validity: "310-day expiry", description: "Get access to 10 classes, valid over 10 months." },
+  { classes: 20, price: "€400", validity: "610-day expiry", description: "Get access to 20 classes, valid over 20 months." },
 ];
 
 const memberships = [
-  { classes: "4", price: "€80", perClass: "€20/class" },
-  { classes: "6", price: "€120", perClass: "€20/class" },
-  { classes: "8", price: "€180", perClass: "€22.50/class" },
-  { classes: "Unlimited", price: "€240", perClass: "Best Value" },
+  { 
+    classes: "4", 
+    price: "€80", 
+    subtitle: "Monthly Membership",
+    classCount: "4 classes per month",
+    description: "Enjoy access to 4 classes per month and explore our range of balance. classes at your own pace.",
+    terms: "Paid monthly. Auto-renews."
+  },
+  { 
+    classes: "6", 
+    price: "€120", 
+    subtitle: "Monthly Membership",
+    classCount: "6 classes per month",
+    description: "Perfect for those looking to stay active and motivated with regular sessions.",
+    terms: "Paid monthly. Auto-renews."
+  },
+  { 
+    classes: "8", 
+    price: "€180", 
+    subtitle: "Monthly Membership",
+    classCount: "8 classes per month",
+    description: "Ideal for dedicated practitioners who want consistent weekly sessions.",
+    terms: "Paid monthly. Auto-renews."
+  },
+  { 
+    classes: "Unlimited", 
+    price: "€240", 
+    subtitle: "Monthly Membership",
+    classCount: "Unlimited classes per month",
+    description: "For those who want to make balance. an essential part of their daily routine.",
+    terms: "Paid monthly. Auto-renews.",
+    features: ["Priority booking", "All locations", "Bring a friend once/month"]
+  },
 ];
 
 const StudioPage = ({ studioInfo }: StudioPageProps) => {
@@ -190,32 +219,47 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {memberships.map((membership, index) => (
                 <div
                   key={membership.classes}
-                  className="relative bg-background p-4 md:p-6 rounded-xl border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                  className="relative bg-background p-6 rounded-xl border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all duration-300 animate-fade-in flex flex-col"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {membership.classes === "Unlimited" && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-primary text-primary-foreground px-2 md:px-3 py-1 rounded-full text-[10px] md:text-xs font-semibold whitespace-nowrap">
+                    <div className="absolute -top-3 right-4">
+                      <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
                         Best Choice
                       </span>
                     </div>
                   )}
-                  <h3 className="text-sm md:text-lg font-heading italic text-foreground mb-1 md:mb-2">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-0">
                     balance. {membership.classes}
                   </h3>
-                  <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">
-                    {membership.classes === "Unlimited" ? "Unlimited" : membership.classes} classes/month
+                  <p className="text-sm font-semibold text-foreground mb-1">
+                    {membership.subtitle}
                   </p>
-                  <p className="text-xl md:text-3xl font-heading italic text-foreground mb-3 md:mb-4">
-                    {membership.price}
+                  <p className="text-xs text-muted-foreground mb-4">
+                    {membership.classCount}
                   </p>
-                  <Button className="w-full text-xs md:text-sm" size="sm">
-                    Buy Now
-                  </Button>
+                  
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                    {membership.description}
+                  </p>
+                  
+                  <p className="text-xs text-muted-foreground italic mb-6">
+                    {membership.terms}
+                  </p>
+                  
+                  <div className="flex items-end justify-between mt-auto">
+                    <p className="text-2xl md:text-3xl font-heading italic text-foreground">
+                      {membership.price}
+                    </p>
+                    <Button size="sm" className="flex items-center gap-2">
+                      Buy Now
+                      <ShoppingCart className="w-4 h-4" />
+                    </Button>
+                  </div>
                 </div>
               ))}
             </div>
@@ -232,44 +276,80 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
               </h2>
             </div>
 
-            {/* Intro Offer */}
-            <div className="max-w-sm mx-auto mb-10">
-              <div className="relative bg-background p-6 md:p-8 rounded-xl border-2 border-primary/40 animate-fade-in">
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <div className="relative bg-gradient-button text-black px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-2 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/5 rounded-full" />
-                    <Sparkles className="w-4 h-4 relative z-10" />
-                    <span className="relative z-10">New Client</span>
-                  </div>
+            {/* Cards Grid including Intro Offer */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {/* Intro Offer Card */}
+              <div className="relative bg-background p-6 rounded-xl border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all duration-300 animate-fade-in flex flex-col">
+                <div className="absolute -top-3 left-4">
+                  <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                    Best Choice
+                  </span>
                 </div>
-                <h3 className="text-xl font-heading italic text-foreground mt-2 mb-1 text-center">INTRO OFFER</h3>
-                <p className="text-2xl font-heading italic text-foreground mb-2 text-center">3 Classes for €45</p>
-                <p className="text-sm text-muted-foreground mb-6 text-center">Perfect way to start your balance. journey</p>
-                <Button asChild className="w-full">
-                  <a href="https://momence.com/sign-up/visitor" target="_blank" rel="noopener noreferrer">
-                    Get Started
-                  </a>
-                </Button>
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-0 mt-2">
+                  INTRO OFFER
+                </h3>
+                <p className="text-sm font-semibold text-foreground mb-1">
+                  3 Classes for €45
+                </p>
+                <p className="text-xs text-primary font-medium mb-4">
+                  Limited offer!
+                </p>
+                
+                <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                  Secure your spot with our limited Intro Offer: 3 classes for just €45.
+                </p>
+                
+                <p className="text-xs text-muted-foreground italic mb-6">
+                  Expires 14 days from purchase.
+                </p>
+                
+                <div className="flex items-end justify-between mt-auto">
+                  <p className="text-2xl md:text-3xl font-heading italic text-foreground">
+                    €45
+                  </p>
+                  <Button asChild size="sm" className="flex items-center gap-2">
+                    <a href="https://momence.com/sign-up/visitor" target="_blank" rel="noopener noreferrer">
+                      Buy Now
+                      <ShoppingCart className="w-4 h-4" />
+                    </a>
+                  </Button>
+                </div>
               </div>
-            </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
+              {/* Other Class Packs */}
               {classPacks.map((pack, index) => (
                 <div
                   key={pack.classes}
-                  className="bg-background p-4 md:p-6 rounded-xl border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all duration-300 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="relative bg-background p-6 rounded-xl border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all duration-300 animate-fade-in flex flex-col"
+                  style={{ animationDelay: `${(index + 1) * 0.1}s` }}
                 >
-                  <h3 className="text-sm md:text-lg font-heading italic text-foreground mb-1 md:mb-2">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-0">
                     {pack.classes} Class Pack
                   </h3>
-                  <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">{pack.validity}</p>
-                  <p className="text-xl md:text-3xl font-heading italic text-foreground mb-3 md:mb-4">
-                    {pack.price}
+                  <p className="text-sm font-semibold text-foreground mb-1">
+                    Class Pack
                   </p>
-                  <Button className="w-full text-xs md:text-sm" size="sm">
-                    Buy Now
-                  </Button>
+                  <p className="text-xs text-primary font-medium mb-4">
+                    Limited offer!
+                  </p>
+                  
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                    {pack.description}
+                  </p>
+                  
+                  <p className="text-xs text-muted-foreground italic mb-6">
+                    {pack.validity}
+                  </p>
+                  
+                  <div className="flex items-end justify-between mt-auto">
+                    <p className="text-2xl md:text-3xl font-heading italic text-foreground">
+                      {pack.price}
+                    </p>
+                    <Button size="sm" className="flex items-center gap-2">
+                      Buy Now
+                      <ShoppingCart className="w-4 h-4" />
+                    </Button>
+                  </div>
                 </div>
               ))}
             </div>
