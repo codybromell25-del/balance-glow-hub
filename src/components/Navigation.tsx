@@ -36,12 +36,6 @@ const Navigation = () => {
             <img src={balanceLogo} alt="balance reformer pilates" className="h-20 w-auto" />
           </Link>
 
-          {/* Intro Offer - Desktop */}
-          <div className="hidden md:flex flex-col items-start">
-            <span className="text-xs tracking-widest text-muted-foreground uppercase">New Clients</span>
-            <span className="text-sm">3 Classes for <span className="text-primary font-semibold italic">€45</span></span>
-          </div>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) =>

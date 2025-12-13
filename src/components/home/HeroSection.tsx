@@ -16,9 +16,16 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheading moved below headline */}
-          <div className="flex items-center gap-3 mb-6 md:mb-8">
+          <div className="flex items-center gap-3 mb-4 md:mb-6">
             <span className="w-8 md:w-12 h-[1px] bg-gradient-to-r from-white to-white/40"></span>
             <span className="text-white/80 text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] font-light">Reformer Pilates</span>
+          </div>
+
+          {/* Intro Offer */}
+          <div className="mb-6 md:mb-8">
+            <span className="text-white/90 text-sm md:text-base tracking-wide">
+              Intro Offer: <span className="text-primary font-semibold italic">3 Classes for €45</span>
+            </span>
           </div>
 
           {/* Tagline - elegant and impactful */}
