@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
@@ -12,6 +13,7 @@ interface StudioInfo {
   address: string;
   hours: { day: string; time: string }[];
   image: string;
+  locationId: string;
 }
 
 interface StudioPageProps {
@@ -62,6 +64,42 @@ const memberships = [
 ];
 
 const StudioPage = ({ studioInfo }: StudioPageProps) => {
+  useEffect(() => {
+    // Add Momence custom styles
+    const style = document.createElement('style');
+    style.innerHTML = `
+      :root {
+        --momenceColorBackground: #FAF3ED;
+        --momenceColorPrimary: 136, 134, 241;
+        --momenceColorBlack: 3, 1, 13;
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Create and load the Momence script
+    const script = document.createElement('script');
+    script.async = true;
+    script.type = 'module';
+    script.src = 'https://momence.com/plugin/host-schedule/host-schedule.js';
+    script.setAttribute('host_id', '62930');
+    script.setAttribute('teacher_ids', '[]');
+    script.setAttribute('location_ids', `[${studioInfo.locationId}]`);
+    script.setAttribute('tag_ids', '[]');
+    script.setAttribute('lite_mode', 'true');
+    script.setAttribute('default_filter', 'show-all');
+    script.setAttribute('locale', 'en');
+    
+    const container = document.getElementById('ribbon-schedule');
+    if (container) {
+      container.appendChild(script);
+    }
+
+    return () => {
+      style.remove();
+      script.remove();
+    };
+  }, [studioInfo.locationId]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -115,14 +153,8 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-                <Button asChild size="lg">
-                  <a href="/book-class">Book Now</a>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <a href="/pricing">View Pricing</a>
-                </Button>
-              </div>
+              {/* Momence Schedule Widget */}
+              <div id="ribbon-schedule" className="mt-10"></div>
             </div>
           </div>
         </section>
