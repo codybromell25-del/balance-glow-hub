@@ -13,7 +13,7 @@ const HeroSection = () => {
           {/* Subheading with dash */}
           <div className="flex items-center gap-4 mb-6">
             <span className="w-8 h-0.5 bg-white"></span>
-            <span className="text-white text-sm md:text-base tracking-wide">Dynamic Reformer Pilates</span>
+            <span className="text-white text-sm md:text-base tracking-wide"> Reformer Pilates</span>
           </div>
 
           {/* Main headline */}
