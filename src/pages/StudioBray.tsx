@@ -19,6 +19,7 @@ const StudioBray = () => {
     ],
     image: studioBray,
     locationId: "117426",
+    showScheduleWidget: true,
   };
 
   return <StudioPage studioInfo={studioInfo} />;
