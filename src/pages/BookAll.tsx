@@ -57,7 +57,7 @@ const BookAll = () => {
                 Pick your favorite studio and let's get moving together!
               </p>
               
-              <div className="bg-card rounded-xl border border-border p-4 shadow-lg min-h-[600px] py-0 px-0 mx-[5px] my-[5px]">
+              <div className="bg-card rounded-xl border border-border p-4 shadow-lg min-h-[600px] py-0 px-0 mx-[5px] my-[5px] font-thin text-xs font-sans text-justify">
                 <div id="ribbon-schedule"></div>
               </div>
             </div>
