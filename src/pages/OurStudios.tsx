@@ -108,7 +108,7 @@ const OurStudios = () => {
                       <div className="flex gap-3">
                         {studio.hasDetailPage ? (
                           <Button asChild className="flex-1">
-                            <Link to={`/studio/${studio.slug}`}>View Studio</Link>
+                            <a href={`/studio/${studio.slug}`}>View Studio</a>
                           </Button>
                         ) : (
                           <Button asChild className="flex-1">
