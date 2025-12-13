@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Cormorant Garamond', 'serif'],
-        heading: ['Cormorant Garamond', 'serif'],
-        subheading: ['Cormorant Garamond', 'serif'],
+        sans: ['Playfair Display', 'serif'],
+        heading: ['Playfair Display', 'serif'],
+        subheading: ['Playfair Display', 'serif'],
       },
       fontWeight: {
         thin: '100',
