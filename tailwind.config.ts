@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Caros Soft', 'Caros', 'sans-serif'],
-        heading: ['Caros', 'sans-serif'],
-        subheading: ['Caros Soft', 'Caros', 'sans-serif'],
+        sans: ['Cormorant Garamond', 'serif'],
+        heading: ['Cormorant Garamond', 'serif'],
+        subheading: ['Cormorant Garamond', 'serif'],
       },
       fontWeight: {
         thin: '100',

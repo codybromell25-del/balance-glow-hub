@@ -257,22 +257,25 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Caros Soft', 'Caros', sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.01em;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+    font-weight: 400;
   }
   
   /* Luxurious typography styles */
   h1 {
-    @apply tracking-tight;
+    @apply tracking-wide;
+    font-weight: 300;
   }
   
   h2, h3 {
-    @apply tracking-tight;
+    @apply tracking-normal;
+    font-weight: 400;
   }
 }
 
