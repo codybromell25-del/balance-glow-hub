@@ -5,7 +5,7 @@ import BrandStatement from "@/components/home/BrandStatement";
 import HumanMoments from "@/components/home/HumanMoments";
 import InsideScoop from "@/components/home/InsideScoop";
 import LocationsSection from "@/components/home/LocationsSection";
-import PricingPreview from "@/components/home/PricingPreview";
+import ClassRoutines from "@/components/home/ClassRoutines";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import EmailCaptureSection from "@/components/home/EmailCaptureSection";
 const Index = () => {
@@ -15,7 +15,7 @@ const Index = () => {
         <HeroSection />
         
         
-        <PricingPreview />
+        <ClassRoutines />
         <InsideScoop />
         <LocationsSection />
         <TestimonialsSection />
