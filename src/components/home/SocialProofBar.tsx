@@ -17,7 +17,7 @@ const SocialProofBar = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
           {stats.map((stat, index) => <div key={index} className="flex items-center gap-3">
-              <stat.icon className="w-5 h-5 border-[#f7c0c0] bg-primary-foreground text-black" />
+              <stat.icon className="w-5 h-5 border-[#f7c0c0] text-white bg-white/0" />
               <div className="flex items-baseline gap-2">
                 <span className="text-xl md:text-2xl font-heading font-bold text-foreground">
                   {stat.value}
