@@ -14,7 +14,7 @@ const Index = () => {
       <Navigation />
       <main>
         <HeroSection />
-        <SocialProofBar className="bg-[#faf2eb]" />
+        <SocialProofBar />
         
         
         
