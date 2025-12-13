@@ -22,7 +22,6 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "Class Types", path: "/classes" },
     { name: "Pricing", path: "/pricing" },
-    { name: "Book a Class", path: "/book-class" },
     { name: "Our Studios", path: "/our-studios" },
     { name: "Our Story", path: "/about" },
   ];
