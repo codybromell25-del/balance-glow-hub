@@ -14,8 +14,14 @@ interface StudioInfo {
   image: string;
 }
 
+interface ScheduleWidget {
+  hostId: string;
+  locationIds: string;
+}
+
 interface StudioPageProps {
   studioInfo: StudioInfo;
+  scheduleWidget?: ScheduleWidget;
 }
 
 const classPacks = [
@@ -61,7 +67,46 @@ const memberships = [
   },
 ];
 
-const StudioPage = ({ studioInfo }: StudioPageProps) => {
+import { useEffect, useRef } from "react";
+
+const StudioPage = ({ studioInfo, scheduleWidget }: StudioPageProps) => {
+  const scheduleRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (scheduleWidget && scheduleRef.current) {
+      // Add the Momence schedule widget script
+      const script = document.createElement('script');
+      script.async = true;
+      script.type = 'module';
+      script.src = 'https://momence.com/plugin/host-schedule/host-schedule.js';
+      script.setAttribute('host_id', scheduleWidget.hostId);
+      script.setAttribute('teacher_ids', '[]');
+      script.setAttribute('location_ids', scheduleWidget.locationIds);
+      script.setAttribute('tag_ids', '[]');
+      script.setAttribute('default_filter', 'show-all');
+      script.setAttribute('locale', 'en');
+      scheduleRef.current.appendChild(script);
+
+      // Add the custom styles
+      const style = document.createElement('style');
+      style.textContent = `
+        :root {
+          --momenceColorBackground: #ffffff;
+          --momenceColorPrimary: 136, 134, 241;
+          --momenceColorBlack: 3, 1, 13;
+        }
+      `;
+      document.head.appendChild(style);
+
+      return () => {
+        // Cleanup
+        if (scheduleRef.current) {
+          scheduleRef.current.innerHTML = '';
+        }
+        style.remove();
+      };
+    }
+  }, [scheduleWidget]);
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -124,6 +169,13 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   <a href="/pricing">View Pricing</a>
                 </Button>
               </div>
+
+              {/* Schedule Widget */}
+              {scheduleWidget && (
+                <div className="mt-12">
+                  <div id="ribbon-schedule" ref={scheduleRef}></div>
+                </div>
+              )}
             </div>
           </div>
         </section>

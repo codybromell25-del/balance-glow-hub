@@ -20,7 +20,12 @@ const StudioClane = () => {
     image: studioClane,
   };
 
-  return <StudioPage studioInfo={studioInfo} />;
+  const scheduleWidget = {
+    hostId: "62930",
+    locationIds: "[117422]",
+  };
+
+  return <StudioPage studioInfo={studioInfo} scheduleWidget={scheduleWidget} />;
 };
 
 export default StudioClane;
