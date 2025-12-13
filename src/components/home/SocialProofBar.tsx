@@ -14,7 +14,7 @@ const SocialProofBar = () => {
     label: "Google Rating"
   }];
   return <section className="py-4 md:py-5 bg-secondary/50">
-      <div className="container mx-auto px-4 bg-[#faf2eb]">
+      <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
           {stats.map((stat, index) => <div key={index} className="flex items-center gap-3">
               <stat.icon className="w-5 h-5 text-primary" />
