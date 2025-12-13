@@ -13,7 +13,8 @@ interface StudioInfo {
   address: string;
   hours: { day: string; time: string }[];
   image: string;
-  locationId: string;
+  locationId?: string;
+  showScheduleWidget?: boolean;
 }
 
 interface StudioPageProps {
@@ -65,8 +66,10 @@ const memberships = [
 
 const StudioPage = ({ studioInfo }: StudioPageProps) => {
   useEffect(() => {
+    if (!studioInfo.showScheduleWidget) return;
+
     // Add Momence custom styles
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.innerHTML = `
       :root {
         --momenceColorBackground: #FAF3ED;
@@ -77,19 +80,19 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
     document.head.appendChild(style);
 
     // Create and load the Momence script
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.async = true;
-    script.type = 'module';
-    script.src = 'https://momence.com/plugin/host-schedule/host-schedule.js';
-    script.setAttribute('host_id', '62930');
-    script.setAttribute('teacher_ids', '[]');
-    script.setAttribute('location_ids', `[${studioInfo.locationId}]`);
-    script.setAttribute('tag_ids', '[]');
-    script.setAttribute('lite_mode', 'true');
-    script.setAttribute('default_filter', 'show-all');
-    script.setAttribute('locale', 'en');
-    
-    const container = document.getElementById('ribbon-schedule');
+    script.type = "module";
+    script.src = "https://momence.com/plugin/host-schedule/host-schedule.js";
+    script.setAttribute("host_id", "62930");
+    script.setAttribute("teacher_ids", "[]");
+    script.setAttribute("location_ids", "[117422]");
+    script.setAttribute("tag_ids", "[]");
+    script.setAttribute("lite_mode", "true");
+    script.setAttribute("default_filter", "show-all");
+    script.setAttribute("locale", "en");
+
+    const container = document.getElementById("ribbon-schedule");
     if (container) {
       container.appendChild(script);
     }
@@ -98,7 +101,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
       style.remove();
       script.remove();
     };
-  }, [studioInfo.locationId]);
+  }, [studioInfo.showScheduleWidget]);
 
   return (
     <div className="min-h-screen bg-background">

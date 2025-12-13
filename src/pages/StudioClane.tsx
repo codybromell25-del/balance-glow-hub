@@ -19,6 +19,7 @@ const StudioClane = () => {
     ],
     image: studioClane,
     locationId: "117422",
+    showScheduleWidget: true,
   };
 
   return <StudioPage studioInfo={studioInfo} />;
