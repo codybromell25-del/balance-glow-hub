@@ -257,9 +257,9 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
   }
 
   h1, h2, h3, h4, h5, h6 {
