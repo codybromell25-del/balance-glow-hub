@@ -21,8 +21,8 @@ const HeroSection = () => {
           </h1>
 
           {/* Body text */}
-          <p className="text-white/90 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
-            balance is a Dynamic Reformer Pilates brand combining dynamic, full-body routines. Each class is designed to elevate your training experience – blending curated music, structured timed blocks, dynamic methodology and immersive studio technology to deliver a fresh, modern take on Reformer Pilates.
+          <p className="text-white/90 text-base md:text-lg leading-relaxed mb-8 max-w-xl italic">
+            For Those Who Expect <span className="font-bold">More</span>.
           </p>
 
           {/* Buttons */}
