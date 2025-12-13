@@ -23,7 +23,7 @@ const HeroSection = () => {
 
           {/* Intro Offer - Elegant styling */}
           <div className="mb-6 md:mb-8">
-            <p className="text-white/60 text-xs uppercase tracking-[0.25em] mb-1">New Clients</p>
+            <p className="text-white/60 text-xs uppercase tracking-[0.25em] mb-1">Intro Offer </p>
             <p className="text-white text-2xl md:text-4xl font-heading italic">
               3 Classes for <span className="text-primary font-semibold not-italic">€45</span>
             </p>
