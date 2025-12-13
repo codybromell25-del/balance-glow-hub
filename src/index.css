@@ -170,10 +170,10 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Balance Studios - Refined Rose Gold #d8c9c2 */
+    /* balance Studios - Refined Rose Gold #FAF3ED */
     
     /* Backgrounds - Warm Cream #FAF3ED */
-    --background: 27 47% 96%;
+    --background: 27 72% 95%;
     --foreground: 0 0% 0%;
 
     /* Cards - Soft rose gold background */

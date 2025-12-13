@@ -63,15 +63,14 @@ const memberships = [
 
 const StudioPage = ({ studioInfo }: StudioPageProps) => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20">
         {/* Page Header */}
         <PageHeader title={`balance ${studioInfo.name}`} />
 
-
         {/* Studio Info Section */}
-        <section className="py-10 md:py-16 bg-secondary/30">
+        <section className="py-10 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
@@ -146,7 +145,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
 
 
         {/* Memberships Section */}
-        <section className="py-10 md:py-16 bg-gradient-to-b from-background to-secondary/20">
+        <section className="py-10 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-primary text-sm tracking-widest mb-4">— Enjoy exclusive benefits</p>
@@ -209,7 +208,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
         </section>
 
         {/* Class Packs Section */}
-        <section className="py-10 md:py-16 bg-gradient-to-b from-secondary/40 to-secondary/20">
+        <section className="py-10 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-primary text-sm tracking-widest mb-4">— Ideal for occasional visits</p>
