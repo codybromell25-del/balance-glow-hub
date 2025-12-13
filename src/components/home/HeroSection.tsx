@@ -44,7 +44,7 @@ const HeroSection = () => {
             </Button>
             <Button asChild variant="ghost" size="lg" className="text-white hover:text-white hover:bg-white/10 rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-medium text-sm sm:text-base border border-white/30 hover:border-white/50 transition-all duration-300 justify-center">
               <a href="/book-class">
-                Book now
+                ​View Our Studios     
                 <CalendarDays className="w-4 h-4 ml-2" />
               </a>
             </Button>
