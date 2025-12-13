@@ -37,7 +37,7 @@ const InsideScoop = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-background overflow-hidden">
+    <section className="py-16 md:py-24 bg-foreground overflow-hidden">
       <div className="container mx-auto px-4">
         <div
           ref={ref}
@@ -45,7 +45,7 @@ const InsideScoop = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-medium text-background mb-4">
             Take a Step Into balance
           </h2>
         </div>
@@ -54,10 +54,10 @@ const InsideScoop = () => {
           {/* Left Arrow */}
           <button
             onClick={scrollPrev}
-            className="absolute left-0 md:left-4 z-20 p-2 rounded-full bg-background/80 backdrop-blur-sm shadow-lg hover:bg-background transition-colors"
+            className="absolute left-0 md:left-4 z-20 p-2 rounded-full bg-background/20 backdrop-blur-sm shadow-lg hover:bg-background/40 transition-colors"
             aria-label="Previous video"
           >
-            <ChevronLeft className="w-6 h-6 text-foreground" />
+            <ChevronLeft className="w-6 h-6 text-background" />
           </button>
 
           {/* Videos Container - All videos stay mounted */}
@@ -99,10 +99,10 @@ const InsideScoop = () => {
           {/* Right Arrow */}
           <button
             onClick={scrollNext}
-            className="absolute right-0 md:right-4 z-20 p-2 rounded-full bg-background/80 backdrop-blur-sm shadow-lg hover:bg-background transition-colors"
+            className="absolute right-0 md:right-4 z-20 p-2 rounded-full bg-background/20 backdrop-blur-sm shadow-lg hover:bg-background/40 transition-colors"
             aria-label="Next video"
           >
-            <ChevronRight className="w-6 h-6 text-foreground" />
+            <ChevronRight className="w-6 h-6 text-background" />
           </button>
         </div>
 
