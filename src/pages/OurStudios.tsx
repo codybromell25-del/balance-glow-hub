@@ -23,7 +23,7 @@ const OurStudios = () => {
       parking: "Street parking and public car park",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Claregate+St+Kildare+R51+E772+Ireland",
-      hasDetailPage: false,
+      hasDetailPage: true,
     },
     {
       name: "Blessington Studio",
@@ -32,7 +32,7 @@ const OurStudios = () => {
       parking: "Free parking on-site",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=1a+The+Green+Main+St+Blessington+Co.+Wicklow+W91+PNV2+Ireland",
-      hasDetailPage: false,
+      hasDetailPage: true,
     },
     {
       name: "Enfield Studio",
@@ -41,7 +41,7 @@ const OurStudios = () => {
       parking: "Free parking available",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Main+Street+Enfield+Co.+Meath+A83+RP84",
-      hasDetailPage: false,
+      hasDetailPage: true,
     },
     {
       name: "Bray Studio",
@@ -50,7 +50,7 @@ const OurStudios = () => {
       parking: "Free on-site parking",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Balance+Bray+Industrial+Development+Agency+Business+Park+Southern+Cross+Rd+Irishtown+Bray+Co.+Wicklow+A98+T276+Ireland",
-      hasDetailPage: false,
+      hasDetailPage: true,
     },
   ];
 
