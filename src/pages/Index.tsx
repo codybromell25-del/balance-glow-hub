@@ -15,7 +15,7 @@ const Index = () => {
         <HeroSection />
         
         
-        <ClassRoutines />
+        <ClassRoutines className="bg-[#faf2eb]" />
         <InsideScoop className="bg-[#faf2eb]" />
         <LocationsSection />
         <TestimonialsSection />
