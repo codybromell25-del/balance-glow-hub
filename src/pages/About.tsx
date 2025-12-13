@@ -13,10 +13,8 @@ import clientsMatWorkout from "@/assets/clients-mat-workout.jpg";
 import instructorLaughing from "@/assets/instructor-laughing.jpg";
 import studioNeonSign from "@/assets/studio-neon-sign.jpg";
 import studioReformersRow from "@/assets/studio-reformers-row.jpg";
-
 const About = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
         <PageHeader title="who are balance." />
@@ -33,23 +31,30 @@ const About = () => {
                 <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
                   {/* Image */}
                   <div className="order-2 md:order-1">
-                    <img 
-                      src={kellyOwner} 
-                      alt="Kelly, Owner of balance studios"
-                      className="w-full h-auto rounded-lg shadow-lg"
-                    />
+                    <img src={kellyOwner} alt="Kelly, Owner of balance studios" className="w-full h-auto rounded-lg shadow-lg" />
                   </div>
 
                   {/* Content */}
                   <div className="order-1 md:order-2 space-y-6">
-                    <p className="text-muted-foreground leading-relaxed text-lg">
-                      Kelly is the founder and business lead at balance. She creates gorgeous studios, 
-                      handpicks and develops incredible instructors, and protects the high balance standard.
-                    </p>
+                    <p className="text-muted-foreground leading-relaxed text-lg">Kelly is the visionary founder and driving force behind balance, quietly redefining Pilates in Ireland. In 2015, while raising four children, she opened a private studio in her home, offering one-to-one sessions on the Cadillac, Chair, Barrel and Reformer to help clients rebuild strength, confidence and ease in their bodies.
+
+
+Demand grew quickly. Five years later she opened the first balance studio in Clane, teaching 25 classes a week and soon building a small team of handpicked instructors known for their skill, warmth and integrity.
+
+
+Today, as balance’s strategic leader, Kelly oversees six luxurious studios across Kildare, Wicklow, Meath and Limerick, supported by more than 35 exceptional instructors. She has grown a loyal, high-performing team and partnered with a leading designer to create spaces of quiet luxury, timeless elegance and real comfort.
+
+
+balance is Kelly’s ethos in studio form: outstanding instructors in beautiful rooms, focused on genuine progress and empowerment for people who expect more from their workout.
+
+
+Growth focused. Always modern. Never stuck.
+
+
+balance. for those who expect more.</p>
                     
                     <p className="text-muted-foreground leading-relaxed text-lg font-medium">
-                      Growth focused, always modern, never stuck.
-                    </p>
+                  </p>
                   </div>
                 </div>
               </div>
@@ -71,39 +76,19 @@ const About = () => {
               {/* Human moments grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="col-span-2 row-span-2">
-                  <img 
-                    src={clientsLaughing} 
-                    alt="Clients laughing during pilates class"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg"
-                  />
+                  <img src={clientsLaughing} alt="Clients laughing during pilates class" className="w-full h-full object-cover rounded-2xl shadow-lg" />
                 </div>
                 <div className="aspect-square">
-                  <img 
-                    src={instructorLaughing} 
-                    alt="Instructor helping a client"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg"
-                  />
+                  <img src={instructorLaughing} alt="Instructor helping a client" className="w-full h-full object-cover rounded-2xl shadow-lg" />
                 </div>
                 <div className="aspect-square">
-                  <img 
-                    src={studioNeonSign} 
-                    alt="Balance studio neon sign"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg"
-                  />
+                  <img src={studioNeonSign} alt="Balance studio neon sign" className="w-full h-full object-cover rounded-2xl shadow-lg" />
                 </div>
                 <div className="aspect-square">
-                  <img 
-                    src={clientsStretching} 
-                    alt="Two women stretching together"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg"
-                  />
+                  <img src={clientsStretching} alt="Two women stretching together" className="w-full h-full object-cover rounded-2xl shadow-lg" />
                 </div>
                 <div className="aspect-square">
-                  <img 
-                    src={clientsMatWorkout} 
-                    alt="Mat pilates workout"
-                    className="w-full h-full object-cover rounded-2xl shadow-lg"
-                  />
+                  <img src={clientsMatWorkout} alt="Mat pilates workout" className="w-full h-full object-cover rounded-2xl shadow-lg" />
                 </div>
               </div>
             </div>
@@ -124,47 +109,35 @@ const About = () => {
               
               {/* Studios Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
-                  <img 
-                    src={studioReformersRow} 
-                    alt="Balance studio reformers"
-                    className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
-                  />
+                <div className="animate-fade-in" style={{
+                animationDelay: "0.1s"
+              }}>
+                  <img src={studioReformersRow} alt="Balance studio reformers" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
-                <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-                  <img 
-                    src={studioClane} 
-                    alt="Balance studio Clane location"
-                    className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
-                  />
+                <div className="animate-fade-in" style={{
+                animationDelay: "0.2s"
+              }}>
+                  <img src={studioClane} alt="Balance studio Clane location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
-                <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
-                  <img 
-                    src={studioKildare} 
-                    alt="Balance studio Kildare Town location"
-                    className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
-                  />
+                <div className="animate-fade-in" style={{
+                animationDelay: "0.3s"
+              }}>
+                  <img src={studioKildare} alt="Balance studio Kildare Town location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
-                <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
-                  <img 
-                    src={studioBlessington} 
-                    alt="Balance studio Blessington location"
-                    className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
-                  />
+                <div className="animate-fade-in" style={{
+                animationDelay: "0.4s"
+              }}>
+                  <img src={studioBlessington} alt="Balance studio Blessington location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
-                <div className="animate-fade-in" style={{ animationDelay: "0.5s" }}>
-                  <img 
-                    src={studioEnfield} 
-                    alt="Balance studio Enfield location"
-                    className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
-                  />
+                <div className="animate-fade-in" style={{
+                animationDelay: "0.5s"
+              }}>
+                  <img src={studioEnfield} alt="Balance studio Enfield location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
-                <div className="animate-fade-in" style={{ animationDelay: "0.6s" }}>
-                  <img 
-                    src={studioBray} 
-                    alt="Balance studio Bray location"
-                    className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
-                  />
+                <div className="animate-fade-in" style={{
+                animationDelay: "0.6s"
+              }}>
+                  <img src={studioBray} alt="Balance studio Bray location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
               </div>
             </div>
@@ -173,8 +146,6 @@ const About = () => {
 
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
