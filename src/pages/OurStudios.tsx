@@ -54,56 +54,65 @@ const OurStudios = () => {
         />
 
         {/* Studios Grid */}
-        <section className="py-8 md:py-12">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {studios.map((studio, index) => (
                 <div
                   key={studio.name}
-                  className="group bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/30 hover:border-primary/40 hover:bg-card/80 hover:shadow-xl transition-all duration-300 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.05}s` }}
+                  className="group relative bg-foreground text-background p-10 rounded-3xl shadow-2xl hover:shadow-[0_25px_60px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-2 transition-all duration-500 animate-fade-in overflow-hidden"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <h2 className="text-xl font-heading italic text-foreground mb-6 pb-4 border-b border-border/30">
-                    {studio.name}
-                  </h2>
+                  {/* Decorative accent */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-button opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                  
+                  <div className="relative z-10">
+                    <h2 className="text-2xl md:text-3xl font-heading italic text-background mb-8">
+                      {studio.name}
+                    </h2>
 
-                  <div className="space-y-5 mb-8">
-                    <div className="flex items-start gap-4">
-                      <MapPin className="w-4 h-4 text-primary mt-1.5 flex-shrink-0" />
-                      <div>
-                        <p className="text-foreground text-sm leading-relaxed">{studio.address}</p>
-                        <p className="text-xs text-muted-foreground mt-2 italic">{studio.parking}</p>
+                    <div className="space-y-6 mb-10">
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center flex-shrink-0">
+                          <MapPin className="w-5 h-5 text-background" />
+                        </div>
+                        <div>
+                          <p className="text-background/90 text-sm leading-relaxed">{studio.address}</p>
+                          <p className="text-background/60 text-xs mt-2 italic">{studio.parking}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center flex-shrink-0">
+                          <Clock className="w-5 h-5 text-background" />
+                        </div>
+                        <p className="text-background/90 text-sm pt-2.5">{studio.hours}</p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <Clock className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <p className="text-foreground text-sm">{studio.hours}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col gap-3">
-                    <Button 
-                      asChild
-                      size="default"
-                      className="w-full"
-                    >
-                      <a href="/book-class">Book Now</a>
-                    </Button>
-                    <Button 
-                      asChild
-                      size="default"
-                      variant="ghost"
-                      className="w-full text-muted-foreground hover:text-foreground"
-                    >
-                      <a 
-                        href={studio.directionsUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <div className="flex gap-4">
+                      <Button 
+                        asChild
+                        size="lg"
+                        className="flex-1"
                       >
-                        Get Directions
-                      </a>
-                    </Button>
+                        <a href="/book-class">Book Now</a>
+                      </Button>
+                      <Button 
+                        asChild
+                        size="lg"
+                        variant="outline"
+                        className="flex-1 border-background/30 text-background hover:bg-background/10 hover:text-background"
+                      >
+                        <a 
+                          href={studio.directionsUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Directions
+                        </a>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               ))}
