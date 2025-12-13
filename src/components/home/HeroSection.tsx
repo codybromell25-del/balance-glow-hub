@@ -22,11 +22,9 @@ const HeroSection = () => {
           </div>
 
           {/* Intro Offer */}
-          <div className="mb-6 md:mb-8">
-            <span className="text-white/90 text-sm md:text-base tracking-wide">
-              Intro Offer: <span className="text-primary font-semibold italic">3 Classes for €45</span>
-            </span>
-          </div>
+          <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-6 md:mb-8 max-w-xl italic font-light tracking-wide">
+            Intro Offer: <span className="text-primary font-semibold">3 Classes for €45</span>
+          </p>
 
           {/* Tagline - elegant and impactful */}
           <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl italic font-light tracking-wide">
