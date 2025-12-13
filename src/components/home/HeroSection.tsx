@@ -21,6 +21,11 @@ const HeroSection = () => {
             <span className="text-white/80 text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] font-light">Reformer Pilates</span>
           </div>
 
+          {/* Tagline - elegant and impactful */}
+          <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl italic font-light tracking-wide">
+            For Those Who Expect <span className="font-semibold not-italic text-white">More</span>.
+          </p>
+
           {/* Intro Offer - Elegant styling */}
           <div className="mb-6 md:mb-8">
             <p className="text-white/60 text-xs uppercase tracking-[0.25em] mb-1">Intro Offer </p>
@@ -28,11 +33,6 @@ const HeroSection = () => {
               3 Classes for <span className="text-primary font-semibold not-italic">€45</span>
             </p>
           </div>
-
-          {/* Tagline - elegant and impactful */}
-          <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl italic font-light tracking-wide">
-            For Those Who Expect <span className="font-semibold not-italic text-white">More</span>.
-          </p>
 
           {/* Buttons - refined and mobile optimized */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
