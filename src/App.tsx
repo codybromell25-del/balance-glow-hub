@@ -20,6 +20,10 @@ import BookingBlessington from "./pages/BookingBlessington";
 import BookAll from "./pages/BookAll";
 import OurStudios from "./pages/OurStudios";
 import StudioClane from "./pages/StudioClane";
+import StudioKildare from "./pages/StudioKildare";
+import StudioBlessington from "./pages/StudioBlessington";
+import StudioEnfield from "./pages/StudioEnfield";
+import StudioBray from "./pages/StudioBray";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
@@ -49,6 +53,10 @@ const App = () => (
           <Route path="/book-class" element={<BookAll />} />
           <Route path="/our-studios" element={<OurStudios />} />
           <Route path="/studio/clane" element={<StudioClane />} />
+          <Route path="/studio/kildare" element={<StudioKildare />} />
+          <Route path="/studio/blessington" element={<StudioBlessington />} />
+          <Route path="/studio/enfield" element={<StudioEnfield />} />
+          <Route path="/studio/bray" element={<StudioBray />} />
           <Route path="/terms" element={<Terms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
