@@ -1,13 +1,10 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-
 const BookAll = () => {
   useEffect(() => {
     // Remove any existing Momence script
-    const existingScript = document.querySelector(
-      'script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]'
-    );
+    const existingScript = document.querySelector('script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]');
     if (existingScript && existingScript.parentNode) {
       existingScript.parentNode.removeChild(existingScript);
     }
@@ -30,7 +27,6 @@ const BookAll = () => {
     script.setAttribute("lite_mode", "true");
     script.setAttribute("default_filter", "show-all");
     script.setAttribute("locale", "en");
-
     if (container && container.parentNode) {
       const parent = container.parentNode;
       if (container.nextSibling) {
@@ -42,16 +38,13 @@ const BookAll = () => {
       // Fallback: append to body
       document.body.appendChild(script);
     }
-
     return () => {
       if (script.parentNode) {
         script.parentNode.removeChild(script);
       }
     };
   }, []);
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <main className="pt-20">
         <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">
@@ -64,7 +57,7 @@ const BookAll = () => {
                 Pick your favorite studio and let's get moving together!
               </p>
               
-              <div className="bg-card rounded-xl border border-border p-4 shadow-lg min-h-[600px]">
+              <div className="bg-card rounded-xl border border-border p-4 shadow-lg min-h-[600px] py-0 px-0 mx-[5px] my-[5px]">
                 <div id="ribbon-schedule"></div>
               </div>
             </div>
@@ -72,8 +65,6 @@ const BookAll = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default BookAll;
