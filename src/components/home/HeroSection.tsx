@@ -1,13 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, CalendarDays } from "lucide-react";
 import heroImage from "@/assets/hero-studio-chandelier.png";
-
 const HeroSection = () => {
-  return (
-    <section
-      className="min-h-[75vh] flex items-center bg-cover bg-center relative"
-      style={{ backgroundImage: `url(${heroImage})` }}
-    >
+  return <section className="min-h-[75vh] flex items-center bg-cover bg-center relative" style={{
+    backgroundImage: `url(${heroImage})`
+  }}>
       {/* Subtle gradient overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
 
@@ -20,8 +17,8 @@ const HeroSection = () => {
           </div>
 
           {/* Main headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-light text-white mb-6 leading-tight">
-            Elevate your<br />lifestyle
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-light text-white mb-6 leading-tight">balance.
+For Those Who Expect More.<br />lifestyle
           </h1>
 
           {/* Body text */}
@@ -46,8 +43,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
