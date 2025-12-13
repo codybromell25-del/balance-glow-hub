@@ -30,7 +30,7 @@ const InsideScoop = ({ className }: InsideScoopProps) => {
     if (index === rightIndex) return "right";
     return "hidden";
   };
-  return <section className={`py-16 md:py-24 bg-foreground overflow-hidden ${className || ""}`}>
+  return <section className={`py-10 md:py-14 bg-foreground overflow-hidden ${className || ""}`}>
       <div className="container mx-auto px-4 border-accent bg-[#faf2eb]">
         <div ref={ref} className={`text-center mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-medium mb-4 text-primary-foreground">
