@@ -26,14 +26,6 @@ const HeroSection = () => {
             For Those Who Expect <span className="font-semibold not-italic text-white">More</span>.
           </p>
 
-          {/* Intro Offer - Elegant styling */}
-          <div className="mb-6 md:mb-8">
-            <p className="text-white/60 text-xs uppercase tracking-[0.25em] mb-1">Intro Offer </p>
-            <p className="text-white text-2xl md:text-4xl font-heading italic">
-              3 Classes for <span className="text-primary font-semibold not-italic">€45</span>
-            </p>
-          </div>
-
           {/* Buttons - refined and mobile optimized */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
             <Button asChild size="lg" className="rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center">
