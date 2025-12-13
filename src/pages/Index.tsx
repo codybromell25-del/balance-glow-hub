@@ -17,8 +17,8 @@ const Index = () => {
         
         <ClassRoutines />
         <InsideScoop />
-        <LocationsSection />
-        <TestimonialsSection />
+        <LocationsSection className="bg-accent" />
+        <TestimonialsSection className="bg-accent" />
         <EmailCaptureSection />
       </main>
       <Footer />
