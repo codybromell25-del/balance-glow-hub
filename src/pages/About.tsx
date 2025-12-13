@@ -13,8 +13,10 @@ import clientsMatWorkout from "@/assets/clients-mat-workout.jpg";
 import instructorLaughing from "@/assets/instructor-laughing.jpg";
 import studioNeonSign from "@/assets/studio-neon-sign.jpg";
 import studioReformersRow from "@/assets/studio-reformers-row.jpg";
+
 const About = () => {
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
         <PageHeader title="who are balance." />
@@ -28,33 +30,53 @@ const About = () => {
               </h2>
               
               <div className="bg-white p-4 md:p-8 lg:p-12 rounded-lg border-2 border-primary/40 animate-fade-in">
-                <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
+                <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-start">
                   {/* Image */}
                   <div className="order-2 md:order-1">
                     <img src={kellyOwner} alt="Kelly, Owner of balance studios" className="w-full h-auto rounded-lg shadow-lg" />
+                    <p className="text-center text-muted-foreground italic mt-4 text-lg">
+                      "Growth focused. Always modern. Never stuck."
+                    </p>
                   </div>
 
-                  {/* Content */}
+                  {/* Content - Timeline Style */}
                   <div className="order-1 md:order-2 space-y-6">
-                    <p className="text-muted-foreground leading-relaxed text-lg">Kelly is the visionary founder and driving force behind balance, quietly redefining Pilates in Ireland. In 2015, while raising four children, she opened a private studio in her home, offering one-to-one sessions on the Cadillac, Chair, Barrel and Reformer to help clients rebuild strength, confidence and ease in their bodies.
-
-
-Demand grew quickly. Five years later she opened the first balance studio in Clane, teaching 25 classes a week and soon building a small team of handpicked instructors known for their skill, warmth and integrity.
-
-
-Today, as balance’s strategic leader, Kelly oversees six luxurious studios across Kildare, Wicklow, Meath and Limerick, supported by more than 35 exceptional instructors. She has grown a loyal, high-performing team and partnered with a leading designer to create spaces of quiet luxury, timeless elegance and real comfort.
-
-
-balance is Kelly’s ethos in studio form: outstanding instructors in beautiful rooms, focused on genuine progress and empowerment for people who expect more from their workout.
-
-
-Growth focused. Always modern. Never stuck.
-
-
-balance. for those who expect more.</p>
+                    <p className="text-muted-foreground leading-relaxed text-lg">
+                      Kelly is the visionary founder and driving force behind balance, quietly redefining Pilates in Ireland.
+                    </p>
                     
-                    <p className="text-muted-foreground leading-relaxed text-lg font-medium">
-                  </p>
+                    {/* Timeline */}
+                    <div className="space-y-6 border-l-2 border-primary/30 pl-6">
+                      <div className="relative">
+                        <div className="absolute -left-[31px] top-1 w-4 h-4 bg-primary rounded-full"></div>
+                        <p className="text-sm font-semibold text-primary uppercase tracking-wide">2015</p>
+                        <p className="text-muted-foreground leading-relaxed">
+                          While raising four children, opened a private home studio offering one-to-one sessions on the Cadillac, Chair, Barrel and Reformer.
+                        </p>
+                      </div>
+                      
+                      <div className="relative">
+                        <div className="absolute -left-[31px] top-1 w-4 h-4 bg-primary rounded-full"></div>
+                        <p className="text-sm font-semibold text-primary uppercase tracking-wide">2020</p>
+                        <p className="text-muted-foreground leading-relaxed">
+                          Opened the first balance studio in Clane, teaching 25 classes a week and building a team of handpicked instructors.
+                        </p>
+                      </div>
+                      
+                      <div className="relative">
+                        <div className="absolute -left-[31px] top-1 w-4 h-4 bg-primary rounded-full"></div>
+                        <p className="text-sm font-semibold text-primary uppercase tracking-wide">Today</p>
+                        <p className="text-muted-foreground leading-relaxed">
+                          Six luxurious studios across Kildare, Wicklow, Meath and Limerick. Over 35 exceptional instructors. Spaces designed for quiet luxury and real comfort.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="pt-4 border-t border-primary/20">
+                      <p className="text-foreground font-medium text-lg italic">
+                        balance. for those who expect more.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -109,34 +131,22 @@ balance. for those who expect more.</p>
               
               {/* Studios Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="animate-fade-in" style={{
-                animationDelay: "0.1s"
-              }}>
+                <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
                   <img src={studioReformersRow} alt="Balance studio reformers" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
-                <div className="animate-fade-in" style={{
-                animationDelay: "0.2s"
-              }}>
+                <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
                   <img src={studioClane} alt="Balance studio Clane location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
-                <div className="animate-fade-in" style={{
-                animationDelay: "0.3s"
-              }}>
+                <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
                   <img src={studioKildare} alt="Balance studio Kildare Town location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
-                <div className="animate-fade-in" style={{
-                animationDelay: "0.4s"
-              }}>
+                <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
                   <img src={studioBlessington} alt="Balance studio Blessington location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
-                <div className="animate-fade-in" style={{
-                animationDelay: "0.5s"
-              }}>
+                <div className="animate-fade-in" style={{ animationDelay: "0.5s" }}>
                   <img src={studioEnfield} alt="Balance studio Enfield location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
-                <div className="animate-fade-in" style={{
-                animationDelay: "0.6s"
-              }}>
+                <div className="animate-fade-in" style={{ animationDelay: "0.6s" }}>
                   <img src={studioBray} alt="Balance studio Bray location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
               </div>
@@ -146,6 +156,8 @@ balance. for those who expect more.</p>
 
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default About;
