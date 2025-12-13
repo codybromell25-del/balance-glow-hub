@@ -19,6 +19,7 @@ const StudioBlessington = () => {
     ],
     image: studioBlessington,
     locationId: "117424",
+    showScheduleWidget: true,
   };
 
   return <StudioPage studioInfo={studioInfo} />;
