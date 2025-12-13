@@ -3,8 +3,6 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, ShoppingCart } from "lucide-react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
 
 interface StudioInfo {
   name: string;
@@ -19,14 +17,6 @@ interface StudioInfo {
 interface StudioPageProps {
   studioInfo: StudioInfo;
 }
-
-const beforeClassItems = [
-  { title: "Shoe-Free Studio", content: "We're a shoe-free studio to keep our space clean and peaceful. Please remove your shoes at the entrance." },
-  { title: "Grip Socks", content: "Grip socks are required for all classes. You can purchase a pair at the studio if needed." },
-  { title: "Clean your Reformer", content: "Please wipe down your reformer with the provided cleaning supplies after each class." },
-  { title: "Arrive Early for Your First Class", content: "We invite you to arrive 15 minutes before your first class. This allows us to give you a tour and ensure you're comfortable with the reformer." },
-  { title: "Mom to Be", content: "Pregnant clients are welcome! Please inform your instructor before class so they can offer modifications." },
-];
 
 const classPacks = [
   { classes: 1, price: "€24", validity: "30-day expiry", description: "Book any balance. class with this flexible single session." },
@@ -154,36 +144,6 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
         </section>
 
 
-        {/* Before Your Class Section */}
-        <section className="py-10 md:py-16 bg-secondary/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-8">
-                <p className="text-primary text-sm tracking-widest mb-4">— Before Your Class</p>
-                <h2 className="text-2xl md:text-3xl font-heading italic text-foreground">
-                  Welcome to balance.
-                </h2>
-              </div>
-              
-              <Accordion type="single" collapsible className="space-y-3">
-                {beforeClassItems.map((item, index) => (
-                  <AccordionItem 
-                    key={index} 
-                    value={`item-${index}`} 
-                    className="bg-background border border-border/50 rounded-lg px-6 data-[state=open]:border-primary/40"
-                  >
-                    <AccordionTrigger className="text-foreground hover:text-primary hover:no-underline py-4">
-                      {item.title}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground pb-4">
-                      {item.content}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-        </section>
 
         {/* Memberships Section */}
         <section className="py-10 md:py-16 bg-gradient-to-b from-background to-secondary/20">
