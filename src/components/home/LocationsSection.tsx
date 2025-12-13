@@ -50,9 +50,10 @@ const LocationsSection = () => {
 
         {/* Masonry Grid */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-4 md:gap-6 space-y-4 md:space-y-6">
-          {locations.map((location, index) => {
+        {locations.map((location, index) => {
           const heightClass = location.size === "tall" ? "h-96" : location.size === "wide" ? "h-64" : "h-80";
-          return <a key={location.name} href="/book-class" className={`group relative block ${heightClass} break-inside-avoid rounded-lg overflow-hidden animate-fade-in hover:scale-[1.02] transition-all duration-300`} style={{
+          const studioSlug = location.name.toLowerCase().replace(" ", "-");
+          return <a key={location.name} href={`/studio/${studioSlug === "kildare-town" ? "kildare" : studioSlug}`} className={`group relative block ${heightClass} break-inside-avoid rounded-lg overflow-hidden animate-fade-in hover:scale-[1.02] transition-all duration-300`} style={{
             animationDelay: `${index * 0.1}s`
           }}>
                 {/* Image */}

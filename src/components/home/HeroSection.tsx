@@ -22,8 +22,8 @@ const HeroSection = () => {
           </div>
 
           {/* Intro Offer */}
-          <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-6 md:mb-8 max-w-xl italic font-light tracking-wide">Intro Offer:
-  3 Classes for €45<span className="text-primary font-semibold">3 Classes for €45</span>
+          <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-6 md:mb-8 max-w-xl italic font-light tracking-wide">
+            Intro Offer: <span className="text-primary font-semibold">3 Classes for €45</span>
           </p>
 
           {/* Tagline - elegant and impactful */}
@@ -33,15 +33,15 @@ const HeroSection = () => {
 
           {/* Buttons - refined and mobile optimized */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
-            <Button asChild size="lg" className="rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center">
-              <a href="/pricing" className="text-primary-foreground bg-[#52220a]">
+            <Button asChild size="lg" className="rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center bg-gradient-button">
+              <a href="/pricing">
                 Buy now
                 <ShoppingCart className="w-4 h-4 ml-2" />
               </a>
             </Button>
             <Button asChild variant="ghost" size="lg" className="text-white hover:text-white hover:bg-white/10 rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-medium text-sm sm:text-base border border-white/30 hover:border-white/50 transition-all duration-300 justify-center">
-              <a href="/book-class">
-                ​View Our Studios     
+              <a href="/our-studios">
+                View Our Studios
                 <CalendarDays className="w-4 h-4 ml-2" />
               </a>
             </Button>
