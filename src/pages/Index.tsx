@@ -14,10 +14,10 @@ const Index = () => {
       <Navigation />
       <main>
         <HeroSection />
-        <SocialProofBar />
+        <SocialProofBar className="bg-[#faf2eb]" />
         <BrandStatement />
-        <ClassRoutines />
-        <InsideScoop />
+        <ClassRoutines className="bg-[#faf2eb]" />
+        <InsideScoop className="bg-[#faf2eb]" />
         <LocationsSection />
         <TestimonialsSection />
         <EmailCaptureSection />
