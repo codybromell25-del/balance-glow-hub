@@ -9,38 +9,48 @@ const OurStudios = () => {
   const studios = [
     {
       name: "Clane Studio",
+      slug: "clane",
       address: "Unit 4a, Yew Tree Square, Prosperous Rd, Abbeyland, Clane, Co. Kildare, W91 R642, Ireland",
       parking: "Free parking available nearby",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+4a+Yew+Tree+Square+Prosperous+Rd+Abbeyland+Clane+Co.+Kildare+W91+R642+Ireland",
+      hasDetailPage: true,
     },
     {
       name: "Kildare Town Studio",
+      slug: "kildare",
       address: "Unit 3 Claregate St, Kildare, R51 E772, Ireland",
       parking: "Street parking and public car park",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Claregate+St+Kildare+R51+E772+Ireland",
+      hasDetailPage: false,
     },
     {
       name: "Blessington Studio",
+      slug: "blessington",
       address: "1a The Green, Main St, Blessington, Co. Wicklow, W91 PNV2, Ireland",
       parking: "Free parking on-site",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=1a+The+Green+Main+St+Blessington+Co.+Wicklow+W91+PNV2+Ireland",
+      hasDetailPage: false,
     },
     {
       name: "Enfield Studio",
+      slug: "enfield",
       address: "Unit 3, Main Street, Enfield, Co. Meath, A83 RP84",
       parking: "Free parking available",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Main+Street+Enfield+Co.+Meath+A83+RP84",
+      hasDetailPage: false,
     },
     {
       name: "Bray Studio",
+      slug: "bray",
       address: "Industrial Development Agency Business Park, Southern Cross Rd, Irishtown, Bray, Co. Wicklow, A98 T276, Ireland",
       parking: "Free on-site parking",
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Balance+Bray+Industrial+Development+Agency+Business+Park+Southern+Cross+Rd+Irishtown+Bray+Co.+Wicklow+A98+T276+Ireland",
+      hasDetailPage: false,
     },
   ];
 
@@ -96,9 +106,15 @@ const OurStudios = () => {
 
                       {/* Buttons */}
                       <div className="flex gap-3">
-                        <Button asChild className="flex-1">
-                          <a href="/book-class">Book Now</a>
-                        </Button>
+                        {studio.hasDetailPage ? (
+                          <Button asChild className="flex-1">
+                            <Link to={`/studio/${studio.slug}`}>View Studio</Link>
+                          </Button>
+                        ) : (
+                          <Button asChild className="flex-1">
+                            <a href="/book-class">Book Now</a>
+                          </Button>
+                        )}
                         <Button 
                           asChild 
                           variant="outline"
