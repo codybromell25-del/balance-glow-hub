@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageHeader from "@/components/PageHeader";
 import kellyOwner from "@/assets/kelly-owner-new.png";
 import studioClane from "@/assets/studio-clane.png";
 import studioKildare from "@/assets/studio-kildare.png";
@@ -18,16 +19,7 @@ const About = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
-        {/* Hero */}
-        <section className="py-8 md:py-10 bg-gradient-to-b from-secondary/30 to-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-heading font-medium text-foreground mb-4">
-                who are balance.
-              </h1>
-            </div>
-          </div>
-        </section>
+        <PageHeader title="who are balance." />
 
         {/* Meet Kelly */}
         <section className="py-10 md:py-16 bg-gradient-to-b from-background to-secondary/30">

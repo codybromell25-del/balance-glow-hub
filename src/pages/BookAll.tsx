@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageHeader from "@/components/PageHeader";
+
 const BookAll = () => {
   useEffect(() => {
     // Remove any existing Momence script
@@ -44,19 +46,19 @@ const BookAll = () => {
       }
     };
   }, []);
-  return <div className="min-h-screen">
+
+  return (
+    <div className="min-h-screen">
       <Navigation />
-      <main className="pt-20">
-        <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">
+      <main className="pt-16">
+        <PageHeader 
+          title="Find Your Flow" 
+          subtitle="Pick your favorite studio and let's get moving together!"
+        />
+        
+        <section className="py-8 md:py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 text-center">
-                Find Your Flow
-              </h1>
-              <p className="text-lg text-foreground text-center mb-8">
-                Pick your favorite studio and let's get moving together!
-              </p>
-              
               <div className="bg-card rounded-xl border border-border p-4 shadow-lg min-h-[600px] py-0 px-0 mx-[5px] my-[5px] font-thin text-xs font-sans text-justify">
                 <div id="ribbon-schedule"></div>
               </div>
@@ -65,6 +67,8 @@ const BookAll = () => {
         </section>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default BookAll;
