@@ -57,11 +57,6 @@ const Navigation = () => {
                 </Link>
               )
             )}
-            {showBookButton && (
-              <Button asChild variant="default" className="transition-all animate-fade-in">
-                <a href="/book-class">Book a Class</a>
-              </Button>
-            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -98,13 +93,6 @@ const Navigation = () => {
                     {link.name}
                   </Link>
                 )
-              )}
-              {showBookButton && (
-                <Button asChild variant="default" className="w-full">
-                  <a href="/book-class" onClick={() => setIsOpen(false)}>
-                    Book a Class
-                  </a>
-                </Button>
               )}
             </div>
           </div>
