@@ -224,7 +224,16 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     <p className="text-muted-foreground leading-relaxed text-lg mb-8">
                       {studioInfo.detailDescription}
                     </p>
-                    <Button size="lg" className="shadow-lg">
+                    <Button 
+                      size="lg" 
+                      className="shadow-lg"
+                      onClick={() => {
+                        const scheduleSection = document.getElementById('ribbon-schedule');
+                        if (scheduleSection) {
+                          scheduleSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                      }}
+                    >
                       Book Your First Class <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </div>
