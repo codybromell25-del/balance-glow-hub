@@ -56,62 +56,63 @@ const OurStudios = () => {
         {/* Studios Grid */}
         <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {studios.map((studio, index) => (
                 <div
                   key={studio.name}
-                  className="group relative bg-foreground text-background p-10 rounded-3xl shadow-2xl hover:shadow-[0_25px_60px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-2 transition-all duration-500 animate-fade-in overflow-hidden"
+                  className="group relative animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {/* Decorative accent */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-button opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                  
-                  <div className="relative z-10">
-                    <h2 className="text-2xl md:text-3xl font-heading italic text-background mb-8">
-                      {studio.name}
-                    </h2>
+                  {/* Card with left accent border */}
+                  <div className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                    {/* Pink gradient top bar */}
+                    <div className="h-2 bg-gradient-button" />
+                    
+                    <div className="p-8">
+                      {/* Studio number + name */}
+                      <div className="flex items-baseline gap-4 mb-6">
+                        <span className="text-5xl font-heading italic text-primary/30">
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+                        <h2 className="text-xl md:text-2xl font-heading italic text-foreground">
+                          {studio.name.replace(' Studio', '')}
+                        </h2>
+                      </div>
 
-                    <div className="space-y-6 mb-10">
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center flex-shrink-0">
-                          <MapPin className="w-5 h-5 text-background" />
+                      {/* Divider */}
+                      <div className="w-12 h-px bg-primary/40 mb-6" />
+
+                      {/* Details */}
+                      <div className="space-y-4 mb-8 text-sm">
+                        <div className="flex gap-3">
+                          <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-muted-foreground leading-relaxed">{studio.address}</span>
                         </div>
-                        <div>
-                          <p className="text-background/90 text-sm leading-relaxed">{studio.address}</p>
-                          <p className="text-background/60 text-xs mt-2 italic">{studio.parking}</p>
+                        <div className="flex gap-3">
+                          <Clock className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-muted-foreground">{studio.hours}</span>
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center flex-shrink-0">
-                          <Clock className="w-5 h-5 text-background" />
-                        </div>
-                        <p className="text-background/90 text-sm pt-2.5">{studio.hours}</p>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4">
-                      <Button 
-                        asChild
-                        size="lg"
-                        className="flex-1"
-                      >
-                        <a href="/book-class">Book Now</a>
-                      </Button>
-                      <Button 
-                        asChild
-                        size="lg"
-                        variant="outline"
-                        className="flex-1 border-background/30 text-background hover:bg-background/10 hover:text-background"
-                      >
-                        <a 
-                          href={studio.directionsUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                      {/* Buttons */}
+                      <div className="flex gap-3">
+                        <Button asChild className="flex-1">
+                          <a href="/book-class">Book Now</a>
+                        </Button>
+                        <Button 
+                          asChild 
+                          variant="outline"
+                          className="px-4"
                         >
-                          Directions
-                        </a>
-                      </Button>
+                          <a 
+                            href={studio.directionsUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <MapPin className="w-4 h-4" />
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
