@@ -97,6 +97,7 @@ interface ClassPackCardProps {
     validity_days: number;
     pack_type: string;
     is_active: boolean | null;
+    purchase_link: string | null;
   };
   onSave: (updates: Record<string, unknown>) => void;
   saving: boolean;
@@ -105,6 +106,7 @@ interface ClassPackCardProps {
 const ClassPackCard = ({ pack, onSave, saving }: ClassPackCardProps) => {
   const [price, setPrice] = useState(pack.price);
   const [validityDays, setValidityDays] = useState(pack.validity_days);
+  const [purchaseLink, setPurchaseLink] = useState(pack.purchase_link || '');
 
   return (
     <div className="bg-card p-6 rounded-xl border border-border">
@@ -132,6 +134,16 @@ const ClassPackCard = ({ pack, onSave, saving }: ClassPackCardProps) => {
             />
           </div>
         </div>
+
+        <div>
+          <Label>Purchase Link</Label>
+          <Input
+            type="url"
+            value={purchaseLink}
+            onChange={(e) => setPurchaseLink(e.target.value)}
+            placeholder="https://momence.com/sign-up/visitor"
+          />
+        </div>
         
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -144,7 +156,7 @@ const ClassPackCard = ({ pack, onSave, saving }: ClassPackCardProps) => {
           
           <Button
             size="sm"
-            onClick={() => onSave({ price, validity_days: validityDays })}
+            onClick={() => onSave({ price, validity_days: validityDays, purchase_link: purchaseLink })}
             disabled={saving}
           >
             {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
@@ -164,6 +176,7 @@ interface MembershipCardProps {
     is_popular: boolean | null;
     is_unlimited: boolean | null;
     is_active: boolean | null;
+    purchase_link: string | null;
   };
   onSave: (updates: Record<string, unknown>) => void;
   saving: boolean;
@@ -171,6 +184,7 @@ interface MembershipCardProps {
 
 const MembershipCard = ({ membership, onSave, saving }: MembershipCardProps) => {
   const [price, setPrice] = useState(membership.price);
+  const [purchaseLink, setPurchaseLink] = useState(membership.purchase_link || '');
 
   return (
     <div className="bg-card p-6 rounded-xl border border-border">
@@ -190,6 +204,16 @@ const MembershipCard = ({ membership, onSave, saving }: MembershipCardProps) => 
             onChange={(e) => setPrice(parseFloat(e.target.value))}
           />
         </div>
+
+        <div>
+          <Label>Purchase Link</Label>
+          <Input
+            type="url"
+            value={purchaseLink}
+            onChange={(e) => setPurchaseLink(e.target.value)}
+            placeholder="https://momence.com/sign-up/visitor"
+          />
+        </div>
         
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -202,7 +226,7 @@ const MembershipCard = ({ membership, onSave, saving }: MembershipCardProps) => 
           
           <Button
             size="sm"
-            onClick={() => onSave({ price })}
+            onClick={() => onSave({ price, purchase_link: purchaseLink })}
             disabled={saving}
           >
             {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}

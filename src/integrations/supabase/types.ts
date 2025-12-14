@@ -61,6 +61,7 @@ export type Database = {
           name: string
           pack_type: string
           price: number
+          purchase_link: string | null
           studio_restriction: string | null
           updated_at: string
           validity_days: number
@@ -75,6 +76,7 @@ export type Database = {
           name: string
           pack_type?: string
           price: number
+          purchase_link?: string | null
           studio_restriction?: string | null
           updated_at?: string
           validity_days: number
@@ -89,6 +91,7 @@ export type Database = {
           name?: string
           pack_type?: string
           price?: number
+          purchase_link?: string | null
           studio_restriction?: string | null
           updated_at?: string
           validity_days?: number
@@ -243,6 +246,7 @@ export type Database = {
           is_unlimited: boolean | null
           name: string
           price: number
+          purchase_link: string | null
           updated_at: string
         }
         Insert: {
@@ -257,6 +261,7 @@ export type Database = {
           is_unlimited?: boolean | null
           name: string
           price: number
+          purchase_link?: string | null
           updated_at?: string
         }
         Update: {
@@ -271,6 +276,7 @@ export type Database = {
           is_unlimited?: boolean | null
           name?: string
           price?: number
+          purchase_link?: string | null
           updated_at?: string
         }
         Relationships: []
