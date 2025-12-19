@@ -10,7 +10,7 @@ interface StudioInfo {
   heroDescription: string;
   detailDescription: string;
   address: string;
-  hours: { day: string; time: string }[];
+  hours?: { day: string; time: string }[];
   image: string;
   locationId?: string;
   showScheduleWidget?: boolean;
@@ -21,10 +21,10 @@ interface StudioPageProps {
 }
 
 const classPacks = [
-  { classes: 1, price: "€24", validity: "30-day expiry", description: "Book any balance. class with this flexible single session." },
-  { classes: 3, price: "€65", validity: "30-day expiry", description: "Get access to 3 classes, valid for 30 days." },
-  { classes: 10, price: "€215", validity: "310-day expiry", description: "Get access to 10 classes, valid over 10 months." },
-  { classes: 20, price: "€400", validity: "610-day expiry", description: "Get access to 20 classes, valid over 20 months." },
+  { classes: 3, price: "€65", validity: "30-day expiry", description: "Get access to 3 classes, valid for 30 days.", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
+  { classes: 6, price: "€130", validity: "60-day expiry", description: "Get access to 6 classes, valid for 60 days.", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
+  { classes: 10, price: "€215", validity: "310-day expiry", description: "Get access to 10 classes, valid over 10 months.", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },
+  { classes: 20, price: "€400", validity: "610-day expiry", description: "Get access to 20 classes, valid over 20 months.", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
 ];
 
 const memberships = [
@@ -34,7 +34,8 @@ const memberships = [
     subtitle: "Monthly Membership",
     classCount: "4 classes per month",
     description: "Enjoy access to 4 classes per month and explore our range of balance. classes at your own pace.",
-    terms: "Paid monthly. Auto-renews."
+    terms: "Paid monthly. Auto-renews.",
+    link: "https://momence.com/Balance/membership/Monthly-Membership---4-classes/574026"
   },
   { 
     classes: "6", 
@@ -42,7 +43,8 @@ const memberships = [
     subtitle: "Monthly Membership",
     classCount: "6 classes per month",
     description: "Perfect for those looking to stay active and motivated with regular sessions.",
-    terms: "Paid monthly. Auto-renews."
+    terms: "Paid monthly. Auto-renews.",
+    link: "https://momence.com/Balance/membership/Monthly-Membership---6-classes/574023"
   },
   { 
     classes: "8", 
@@ -50,7 +52,8 @@ const memberships = [
     subtitle: "Monthly Membership",
     classCount: "8 classes per month",
     description: "Ideal for dedicated practitioners who want consistent weekly sessions.",
-    terms: "Paid monthly. Auto-renews."
+    terms: "Paid monthly. Auto-renews.",
+    link: "https://momence.com/Balance/membership/Monthly-membership---8-classes/574021"
   },
   { 
     classes: "Unlimited", 
@@ -59,7 +62,8 @@ const memberships = [
     classCount: "Unlimited classes per month",
     description: "For those who want to make balance. an essential part of their daily routine.",
     terms: "Paid monthly. Auto-renews.",
-    features: ["Priority booking", "All locations", "Bring a friend once/month"]
+    features: ["Priority booking", "All locations", "Bring a friend once/month"],
+    link: "https://momence.com/Balance/membership/Monthly-Membership---Unlimited-Reformer-classes/574005"
   },
 ];
 
@@ -187,26 +191,6 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     </div>
                   </div>
 
-                  {/* Hours Card */}
-                  <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-button opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="flex items-start gap-5">
-                      <div className="w-14 h-14 rounded-2xl bg-gradient-button flex items-center justify-center flex-shrink-0 shadow-md">
-                        <Clock className="w-6 h-6 text-black" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-bold text-foreground mb-4">Opening Hours</h3>
-                        <div className="space-y-2">
-                          {studioInfo.hours.map((item) => (
-                            <div key={item.day} className="flex justify-between text-sm py-1 border-b border-border/30 last:border-0">
-                              <span className="text-muted-foreground">{item.day}</span>
-                              <span className="text-foreground font-semibold">{item.time}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Right Column - About */}
@@ -326,9 +310,11 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     <p className="text-2xl md:text-3xl font-heading italic text-foreground">
                       {membership.price}
                     </p>
-                    <Button size="sm" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow">
-                      Buy Now
-                      <ShoppingCart className="w-4 h-4" />
+                    <Button asChild size="sm" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow">
+                      <a href={membership.link} target="_blank" rel="noopener noreferrer">
+                        Buy Now
+                        <ShoppingCart className="w-4 h-4" />
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -416,9 +402,11 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     <p className="text-2xl md:text-3xl font-heading italic text-foreground">
                       {pack.price}
                     </p>
-                    <Button size="sm" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow">
-                      Buy Now
-                      <ShoppingCart className="w-4 h-4" />
+                    <Button asChild size="sm" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow">
+                      <a href={pack.link} target="_blank" rel="noopener noreferrer">
+                        Buy Now
+                        <ShoppingCart className="w-4 h-4" />
+                      </a>
                     </Button>
                   </div>
                 </div>
