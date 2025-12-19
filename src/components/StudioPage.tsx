@@ -340,7 +340,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {/* Intro Offer Card */}
               <div className="relative p-8 rounded-3xl bg-gradient-to-br from-primary/20 via-white to-primary/10 border-2 border-primary/40 shadow-2xl shadow-primary/20 hover:shadow-3xl hover:-translate-y-2 transition-all duration-300 animate-fade-in flex flex-col group md:col-span-2 lg:col-span-1 lg:row-span-2">
-                <div className="absolute -top-3 left-4">
+                <div className="absolute -top-3 left-4 z-10">
                   <span className="bg-gradient-button text-black px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black/30 opacity-75"></span>
@@ -349,7 +349,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     New Client Special
                   </span>
                 </div>
-                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-button rounded-t-3xl" />
+                <div className="absolute top-0 right-0 w-[60%] h-1.5 bg-gradient-button rounded-tr-3xl" />
                 
                 <div className="text-center mt-4 mb-6">
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
