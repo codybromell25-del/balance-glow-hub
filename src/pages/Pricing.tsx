@@ -29,7 +29,7 @@ const Pricing = () => {
 
                 <div className="text-center mb-6 mt-4">
                   <h2 className="text-3xl font-heading font-bold text-foreground mb-3">
-                    Intro Offer: 4 Classes for €60
+                    Intro Offer: 3 Classes for €50
                   </h2>
                   <p className="text-muted-foreground">The perfect way to discover balance studios</p>
                 </div>
