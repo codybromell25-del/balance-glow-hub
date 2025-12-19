@@ -75,10 +75,10 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { classes: 1, price: "€24", validity: "Valid 30 days" },
-                  { classes: 3, price: "€65", validity: "Valid 30 days" },
-                  { classes: 10, price: "€215", validity: "Valid 310 days" },
-                  { classes: 20, price: "€400", validity: "Valid 610 days" },
+                  { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
+                  { classes: 6, price: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
+                  { classes: 10, price: "€215", validity: "Valid 310 days", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },
+                  { classes: 20, price: "€400", validity: "Valid 610 days", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
@@ -87,15 +87,17 @@ const Pricing = () => {
                   >
                     <div className="text-center mb-4">
                       <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
-                        {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
+                        {pack.classes} Classes
                       </h3>
                       <p className="text-3xl font-heading font-bold text-black mb-1">
                         {pack.price}
                       </p>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
-                    <Button className="w-full">
-                      Buy Now
+                    <Button asChild className="w-full">
+                      <a href={pack.link} target="_blank" rel="noopener noreferrer">
+                        Buy Now
+                      </a>
                     </Button>
                   </div>
                 ))}
@@ -119,8 +121,8 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
                 {[
-                  { classes: 1, price: "€15", validity: "Valid 30 days" },
-                  { classes: 4, price: "€50", validity: "Valid 120 days" },
+                  { classes: 1, price: "€15", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/Single-Mat-Class/573998" },
+                  { classes: 4, price: "€50", validity: "Valid 120 days", link: "https://momence.com/Balance/membership/4-Mat-Classes/573999" },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
@@ -136,8 +138,10 @@ const Pricing = () => {
                       </p>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
-                    <Button className="w-full">
-                      Buy Now
+                    <Button asChild className="w-full">
+                      <a href={pack.link} target="_blank" rel="noopener noreferrer">
+                        Buy Now
+                      </a>
                     </Button>
                   </div>
                 ))}
@@ -168,10 +172,10 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { classes: "4", price: "€80", perClass: "€20/class", popular: false },
-                  { classes: "6", price: "€120", perClass: "€20/class", popular: false },
-                  { classes: "8", price: "€180", perClass: "€22.50/class", popular: true },
-                  { classes: "Unlimited", price: "€240", perClass: "Best Value", popular: true },
+                  { classes: "4", price: "€80", perClass: "€20/class", popular: false, link: "https://momence.com/Balance/membership/Monthly-Membership---4-classes/574026" },
+                  { classes: "6", price: "€120", perClass: "€20/class", popular: false, link: "https://momence.com/Balance/membership/Monthly-Membership---6-classes/574023" },
+                  { classes: "8", price: "€180", perClass: "€22.50/class", popular: true, link: "https://momence.com/Balance/membership/Monthly-membership---8-classes/574021" },
+                  { classes: "Unlimited", price: "€240", perClass: "Best Value", popular: true, link: "https://momence.com/Balance/membership/Monthly-Membership---Unlimited-Reformer-classes/574005" },
                 ].map((membership, index) => (
                   <div
                     key={membership.classes}
@@ -210,8 +214,10 @@ const Pricing = () => {
                       ))}
                     </ul>
 
-                    <Button className="w-full">
-                      Join Now
+                    <Button asChild className="w-full">
+                      <a href={membership.link} target="_blank" rel="noopener noreferrer">
+                        Join Now
+                      </a>
                     </Button>
                   </div>
                 ))}
