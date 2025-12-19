@@ -276,7 +276,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {membership.classes === "Unlimited" && (
-                    <div className="absolute -top-3 right-4">
+                    <div className="absolute -top-3 right-4 z-10">
                       <span className="bg-gradient-button text-black px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
                         <span className="relative flex h-2 w-2">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black/30 opacity-75"></span>
@@ -286,7 +286,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                       </span>
                     </div>
                   )}
-                  <div className={`absolute top-0 left-0 w-full h-1 rounded-t-2xl transition-opacity ${membership.classes === "Unlimited" ? "bg-gradient-button opacity-100" : "bg-gradient-to-r from-primary/30 via-primary/60 to-primary/30 opacity-0 group-hover:opacity-100"}`} />
+                  <div className={`absolute top-0 left-0 h-1 rounded-t-2xl transition-opacity ${membership.classes === "Unlimited" ? "w-[60%] bg-gradient-button opacity-100" : "w-full bg-gradient-to-r from-primary/30 via-primary/60 to-primary/30 opacity-0 group-hover:opacity-100"}`} />
                   
                   <h3 className="text-lg md:text-xl font-bold text-foreground mb-0">
                     balance. {membership.classes}
