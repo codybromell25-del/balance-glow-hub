@@ -34,7 +34,7 @@ const HeroSection = () => {
           {/* Buttons - refined and mobile optimized */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
             <Button asChild size="lg" className="rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center bg-gradient-button">
-              <a href="/pricing">
+              <a href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031" target="_blank" rel="noopener noreferrer">
                 Buy now
                 <ShoppingCart className="w-4 h-4 ml-2" />
               </a>

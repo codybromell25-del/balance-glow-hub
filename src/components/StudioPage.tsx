@@ -372,7 +372,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                 </p>
                 
                 <Button asChild size="lg" className="w-full shadow-lg hover:shadow-xl transition-shadow">
-                  <a href="https://momence.com/sign-up/visitor" target="_blank" rel="noopener noreferrer">
+                  <a href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031" target="_blank" rel="noopener noreferrer">
                     Get Started <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </Button>
