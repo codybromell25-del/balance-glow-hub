@@ -359,7 +359,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                 </div>
                 
                 <div className="text-center mb-6">
-                  <p className="text-5xl md:text-6xl font-heading italic text-foreground mb-2">€45</p>
+                  <p className="text-5xl md:text-6xl font-heading italic text-foreground mb-2">€50</p>
                   <p className="text-lg font-semibold text-primary">3 Classes</p>
                 </div>
                 
