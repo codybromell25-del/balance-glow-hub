@@ -217,7 +217,7 @@ const Pricing = () => {
 
                     <Button asChild className="w-full">
                       <a href={membership.link} target="_blank" rel="noopener noreferrer">
-                        Join Now
+                        Buy Now
                       </a>
                     </Button>
                   </div>
