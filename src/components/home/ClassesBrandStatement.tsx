@@ -4,7 +4,7 @@ const ClassesBrandStatement = () => {
   return (
     <PageHeader 
       title="Class Types" 
-      subtitle="&quot;A Better Class&quot; isn't just a tagline—it's what we deliver. We're obsessed with reformer pilates, and we think you should be too. Expect workouts that actually work, a space where you'll want to show up, and a studio that genuinely wants you to feel amazing. We keep it real, keep it fun, and yeah—we keep it better."
+      subtitle="balance. isn't a tagline — it's a standard. Expert-led pilates, in beautifully designed studios, with workouts that actually work. Every balance. instructor is fully qualified through comprehensive training, not weekend courses. Only the best make it into our timetable. balance. for those who expect more."
     />
   );
 };
