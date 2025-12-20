@@ -14,6 +14,7 @@ interface StudioInfo {
   image: string;
   locationId?: string;
   showScheduleWidget?: boolean;
+  isLogoHero?: boolean;
 }
 
 interface StudioPageProps {
@@ -111,39 +112,67 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-16">
-        {/* Hero Section with Image */}
-        <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-end overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <img 
-              src={studioInfo.image} 
-              alt={`balance ${studioInfo.name} studio`}
-              className="w-full h-full object-cover"
-            />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
-          </div>
-          
-          {/* Hero Content */}
-          <div className="relative z-10 container mx-auto px-4 pb-16 md:pb-20">
-            <div className="max-w-3xl">
-              <div className="flex items-center gap-2 mb-4">
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-primary text-sm tracking-widest uppercase">{studioInfo.tagline}</span>
+        {/* Hero Section */}
+        {studioInfo.isLogoHero ? (
+          /* Clean Hero with studio name */
+          <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden" style={{ backgroundColor: '#FAF3ED' }}>
+            {/* Decorative Elements */}
+            <div className="absolute top-1/4 right-10 w-40 h-40 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(163, 193, 173, 0.2)' }} />
+            <div className="absolute bottom-1/4 left-10 w-32 h-32 rounded-full blur-2xl" style={{ backgroundColor: 'rgba(163, 193, 173, 0.15)' }} />
+            
+            <div className="relative z-10 container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                {/* Studio Name */}
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading italic mb-6" style={{ color: '#A3C1AD' }}>
+                  {studioInfo.name}
+                </h1>
+                
+                {/* Tagline */}
+                <p className="text-foreground text-xl md:text-2xl max-w-2xl leading-relaxed mb-4 font-medium italic">
+                  For those who expect more.
+                </p>
+                
+                <p className="text-muted-foreground text-base md:text-lg max-w-xl">
+                  {studioInfo.heroDescription}
+                </p>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading italic text-white mb-4">
-                balance. <span className="text-primary">{studioInfo.name}</span>
-              </h1>
-              <p className="text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed">
-                {studioInfo.heroDescription}
-              </p>
             </div>
-          </div>
-          
-          {/* Decorative Elements */}
-          <div className="absolute top-1/4 right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-secondary/30 rounded-full blur-2xl" />
-        </section>
+          </section>
+        ) : (
+          /* Standard Image Hero */
+          <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-end overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <img 
+                src={studioInfo.image} 
+                alt={`balance ${studioInfo.name} studio`}
+                className="w-full h-full object-cover object-center"
+              />
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+            </div>
+            
+            {/* Hero Content */}
+            <div className="relative z-10 container mx-auto px-4 pb-16 md:pb-20">
+              <div className="max-w-3xl">
+                <div className="flex items-center gap-2 mb-4">
+                  <Sparkles className="w-4 h-4 text-primary" />
+                  <span className="text-primary text-sm tracking-widest uppercase">{studioInfo.tagline}</span>
+                </div>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading italic text-white mb-4">
+                  balance. <span className="text-primary">{studioInfo.name}</span>
+                </h1>
+                <p className="text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed">
+                  {studioInfo.heroDescription}
+                </p>
+              </div>
+            </div>
+            
+            {/* Decorative Elements */}
+            <div className="absolute top-1/4 right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-secondary/30 rounded-full blur-2xl" />
+          </section>
+        )}
 
         {/* Quick Info Bar - Styled like homepage */}
         <section className="py-8 md:py-10 bg-gradient-to-b from-secondary/30 via-background to-secondary/20">
