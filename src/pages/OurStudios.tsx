@@ -9,7 +9,9 @@ import { Link } from "react-router-dom";
 import studioInterior1 from "@/assets/studio-interior-1.png";
 import studioReformersRow from "@/assets/studio-reformers-row.jpg";
 import studioNeonSign from "@/assets/studio-neon-sign.jpg";
-import studioInteriorPlants from "@/assets/studio-interior-plants.jpg";
+import studioChandelier from "@/assets/hero-studio-chandelier.png";
+import studioEntrance from "@/assets/studio-entrance.png";
+import studioHallway from "@/assets/studio-hallway.png";
 
 const OurStudios = () => {
   const studios = [
@@ -61,10 +63,12 @@ const OurStudios = () => {
   ];
 
   const galleryImages = [
-    { src: studioInterior1, alt: "balance studio interior" },
+    { src: studioChandelier, alt: "Elegant chandelier in balance studio" },
     { src: studioReformersRow, alt: "Reformer machines in a row" },
     { src: studioNeonSign, alt: "balance neon sign" },
-    { src: studioInteriorPlants, alt: "Studio interior with plants" },
+    { src: studioInterior1, alt: "balance studio interior" },
+    { src: studioEntrance, alt: "Studio entrance" },
+    { src: studioHallway, alt: "Studio hallway" },
   ];
 
   return (
@@ -159,19 +163,19 @@ const OurStudios = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
               {galleryImages.map((image, index) => (
                 <div 
                   key={index}
                   className={`relative overflow-hidden rounded-2xl shadow-lg group ${
-                    index === 0 ? 'col-span-2 row-span-2' : ''
+                    index === 0 ? 'col-span-2 row-span-2 md:col-span-2 md:row-span-2' : ''
                   }`}
                 >
                   <img 
                     src={image.src} 
                     alt={image.alt}
                     className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
-                      index === 0 ? 'h-full min-h-[300px] md:min-h-[400px]' : 'h-48 md:h-56'
+                      index === 0 ? 'h-full min-h-[300px] md:min-h-[450px]' : 'h-48 md:h-64'
                     }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
