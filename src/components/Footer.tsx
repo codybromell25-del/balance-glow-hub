@@ -76,8 +76,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start text-black">
                 <MapPin size={16} className="mr-2 mt-1 flex-shrink-0" />
-                <Link to="/locations" className="hover:text-primary transition-colors">
-                  View All Locations
+                <Link to="/book-class" className="hover:text-primary transition-colors">
+                  View our locations
                 </Link>
               </li>
             </ul>

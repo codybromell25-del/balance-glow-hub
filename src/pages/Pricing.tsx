@@ -73,7 +73,7 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 {[
-                  { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997", popular: false },
+                  { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997", popular: true },
                   { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988", popular: false },
                   { classes: 6, price: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false },
                   { classes: 10, price: "€215", validity: "Valid 310 days", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true },
