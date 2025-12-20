@@ -21,6 +21,7 @@ interface StudioPageProps {
 }
 
 const classPacks = [
+  { classes: 1, price: "€24", validity: "30-day expiry", description: "Book any balance. class with this flexible single session.", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
   { classes: 3, price: "€65", validity: "30-day expiry", description: "Get access to 3 classes, valid for 30 days.", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
   { classes: 6, price: "€130", validity: "60-day expiry", description: "Get access to 6 classes, valid for 60 days.", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
   { classes: 10, price: "€215", validity: "310-day expiry", description: "Get access to 10 classes, valid over 10 months.", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },

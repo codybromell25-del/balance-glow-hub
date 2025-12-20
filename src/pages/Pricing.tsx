@@ -73,8 +73,9 @@ const Pricing = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 {[
+                  { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
                   { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
                   { classes: 6, price: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
                   { classes: 10, price: "€215", validity: "Valid 310 days", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },
@@ -87,7 +88,7 @@ const Pricing = () => {
                   >
                     <div className="text-center mb-4">
                       <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
-                        {pack.classes} Classes
+                        {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
                       </h3>
                       <p className="text-3xl font-heading font-bold text-black mb-1">
                         {pack.price}
