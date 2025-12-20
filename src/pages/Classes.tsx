@@ -88,7 +88,8 @@ const ClassCard = ({
 
           <Button
             asChild
-            className="w-full sm:w-auto relative bg-gradient-button text-foreground border-0 shadow-lg hover:brightness-105"
+            className="w-full sm:w-auto relative text-black border-0 shadow-lg hover:brightness-105"
+            style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
           >
             <a href="/book-class">Book Class</a>
           </Button>
@@ -412,7 +413,8 @@ const Classes = () => {
                 <Button 
                   asChild 
                   size="lg"
-                  className="bg-gradient-button text-foreground border-0 shadow-lg hover:brightness-105"
+                  className="text-black border-0 shadow-lg hover:brightness-105"
+                  style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
                 >
                   <a href="/book-class">Book a Classic Class</a>
                 </Button>
