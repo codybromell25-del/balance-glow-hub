@@ -146,7 +146,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
         </section>
 
         {/* Quick Info Bar */}
-        <section className="bg-gradient-button py-6 relative overflow-hidden">
+        <section className="py-6 relative overflow-hidden" style={{ background: 'linear-gradient(90deg, #b8d4c3 0%, #A3C1AD 50%, #8fb39c 100%)' }}>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 to-transparent" />
           <div className="container mx-auto px-4 relative">
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-black">
@@ -177,9 +177,9 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                 <div className="space-y-6">
                   {/* Address Card */}
                   <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-button opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute top-0 left-0 w-full h-1.5 opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(90deg, #b8d4c3 0%, #A3C1AD 50%, #8fb39c 100%)' }} />
                     <div className="flex items-start gap-5">
-                      <div className="w-14 h-14 rounded-2xl bg-gradient-button flex items-center justify-center flex-shrink-0 shadow-md">
+                      <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                         <MapPin className="w-6 h-6 text-black" />
                       </div>
                       <div>
@@ -211,7 +211,8 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     </p>
                     <Button 
                       size="lg" 
-                      className="shadow-lg"
+                      className="shadow-lg border-0 text-black"
+                      style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
                       onClick={() => {
                         const scheduleSection = document.getElementById('ribbon-schedule');
                         if (scheduleSection) {
@@ -278,7 +279,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                 >
                   {membership.classes === "Unlimited" && (
                     <div className="absolute -top-3 right-4 z-10">
-                      <span className="bg-gradient-button text-black px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
+                      <span className="text-black px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                         <span className="relative flex h-2 w-2">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black/30 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-black/50"></span>
@@ -287,7 +288,11 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                       </span>
                     </div>
                   )}
-                  <div className={`absolute top-0 left-0 h-1 rounded-t-2xl transition-opacity ${membership.classes === "Unlimited" ? "w-[60%] bg-gradient-button opacity-100" : "w-full bg-gradient-to-r from-primary/30 via-primary/60 to-primary/30 opacity-0 group-hover:opacity-100"}`} />
+                  {membership.classes === "Unlimited" ? (
+                    <div className="absolute top-0 left-0 h-1 rounded-t-2xl w-[60%] opacity-100" style={{ background: 'linear-gradient(90deg, #b8d4c3 0%, #A3C1AD 50%, #8fb39c 100%)' }} />
+                  ) : (
+                    <div className="absolute top-0 left-0 h-1 rounded-t-2xl w-full opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(90deg, #b8d4c3 0%, #A3C1AD 50%, #8fb39c 100%)' }} />
+                  )}
                   
                   <h3 className="text-lg md:text-xl font-bold text-foreground mb-0">
                     balance. {membership.classes}
@@ -311,7 +316,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     <p className="text-2xl md:text-3xl font-heading italic text-foreground">
                       {membership.price}
                     </p>
-                    <Button asChild size="sm" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow">
+                    <Button asChild size="sm" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow border-0 text-black" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                       <a href={membership.link} target="_blank" rel="noopener noreferrer">
                         Buy Now
                         <ShoppingCart className="w-4 h-4" />
@@ -342,7 +347,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
               {/* Intro Offer Card */}
               <div className="relative p-8 rounded-3xl bg-gradient-to-br from-primary/20 via-white to-primary/10 border-2 border-primary/40 shadow-2xl shadow-primary/20 hover:shadow-3xl hover:-translate-y-2 transition-all duration-300 animate-fade-in flex flex-col group md:col-span-2 lg:col-span-1 lg:row-span-2">
                 <div className="absolute -top-3 left-4 z-10">
-                  <span className="bg-gradient-button text-black px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
+                  <span className="text-black px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black/30 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-black/50"></span>
@@ -350,7 +355,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     New Client Special
                   </span>
                 </div>
-                <div className="absolute top-0 right-0 w-[60%] h-1.5 bg-gradient-button rounded-tr-3xl" />
+                <div className="absolute top-0 right-0 w-[60%] h-1.5 rounded-tr-3xl" style={{ background: 'linear-gradient(90deg, #b8d4c3 0%, #A3C1AD 50%, #8fb39c 100%)' }} />
                 
                 <div className="text-center mt-4 mb-6">
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
@@ -372,7 +377,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   Expires 14 days from purchase
                 </p>
                 
-                <Button asChild size="lg" className="w-full shadow-lg hover:shadow-xl transition-shadow">
+                <Button asChild size="lg" className="w-full shadow-lg hover:shadow-xl transition-shadow border-0 text-black" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                   <a href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031" target="_blank" rel="noopener noreferrer">
                     Get Started <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
@@ -386,7 +391,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   className="relative p-6 rounded-2xl bg-background border border-border shadow-lg hover:shadow-xl hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 animate-fade-in flex flex-col group"
                   style={{ animationDelay: `${(index + 1) * 0.1}s` }}
                 >
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/30 via-primary/60 to-primary/30 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(90deg, #b8d4c3 0%, #A3C1AD 50%, #8fb39c 100%)' }} />
                   
                   <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">
                     {pack.classes} Class Pack
@@ -403,7 +408,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     <p className="text-2xl md:text-3xl font-heading italic text-foreground">
                       {pack.price}
                     </p>
-                    <Button asChild size="sm" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow">
+                    <Button asChild size="sm" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow border-0 text-black" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                       <a href={pack.link} target="_blank" rel="noopener noreferrer">
                         Buy Now
                         <ShoppingCart className="w-4 h-4" />

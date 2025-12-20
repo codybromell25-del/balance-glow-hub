@@ -75,8 +75,10 @@ const OurStudios = () => {
                 >
                   {/* Card with left accent border */}
                   <div className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-                    {/* Pink gradient top bar */}
-                    <div className="h-2 bg-gradient-button" />
+                    {/* Sage green gradient top bar */}
+                    <div className="h-2 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
+                      <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-black/10" />
+                    </div>
                     
                     <div className="p-8">
                       {/* Studio number + name */}
@@ -107,25 +109,25 @@ const OurStudios = () => {
                       {/* Buttons */}
                       <div className="flex gap-3">
                         {studio.hasDetailPage ? (
-                          <Button asChild className="flex-1">
+                          <Button asChild className="flex-1 border-0 text-black shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                             <a href={`/studio/${studio.slug}`}>View Studio</a>
                           </Button>
                         ) : (
-                          <Button asChild className="flex-1">
+                          <Button asChild className="flex-1 border-0 text-black shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                             <a href="/book-class">Book Now</a>
                           </Button>
                         )}
                         <Button 
                           asChild 
-                          variant="outline"
-                          className="px-4"
+                          className="px-4 border-0 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all"
+                          style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
                         >
                           <a 
                             href={studio.directionsUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <MapPin className="w-4 h-4" />
+                            <MapPin className="w-4 h-4 text-white" />
                           </a>
                         </Button>
                       </div>

@@ -23,6 +23,7 @@ const Navigation = () => {
     { name: "Class Types", path: "/classes" },
     { name: "Buy a Pack", path: "/pricing" },
     { name: "Book a Class", path: "/our-studios" },
+    { name: "Gift Cards", path: "/gift-cards" },
     { name: "Our Story", path: "/about" },
   ];
 
