@@ -20,7 +20,7 @@ const DifficultyDots = ({ level }: { level: number }) => {
       <span className="text-xs text-muted-foreground ml-2">
         {level === 1 && "Gentle"}
         {level === 2 && "Beginner"}
-        {level === 3 && "Moderate"}
+        {level === 3 && "Mixed Levels"}
         {level === 4 && "Advanced"}
         {level === 5 && "Intense"}
       </span>
@@ -151,7 +151,7 @@ const Classes = () => {
       icon: Users,
       level: "Mat Class",
       suitable: "Traditional Pilates on the mat — available at Kildare Town only",
-      difficulty: 2,
+      difficulty: 3,
       whatToExpect: [
         "Classic mat Pilates exercises focusing on core strength and flexibility",
         "No equipment needed — just you and the mat",
