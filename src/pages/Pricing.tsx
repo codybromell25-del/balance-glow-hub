@@ -10,7 +10,7 @@ const Pricing = () => {
       <Navigation />
       <main className="pt-16">
         <PageHeader 
-          title="Pick Your Plan" 
+          title="Pick Your Pack" 
           subtitle="Whether you're all-in or just dipping your toes, we've got you covered. One price, all 5 studios—zero confusion."
         />
 
