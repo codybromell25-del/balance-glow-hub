@@ -8,7 +8,6 @@ import InsideScoop from "@/components/home/InsideScoop";
 import LocationsSection from "@/components/home/LocationsSection";
 import ClassRoutines from "@/components/home/ClassRoutines";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
-import EmailCaptureSection from "@/components/home/EmailCaptureSection";
 const Index = () => {
   return <div className="min-h-screen">
       <Navigation />
@@ -20,7 +19,6 @@ const Index = () => {
         
         <LocationsSection />
         <TestimonialsSection />
-        <EmailCaptureSection />
       </main>
       <Footer />
     </div>;
