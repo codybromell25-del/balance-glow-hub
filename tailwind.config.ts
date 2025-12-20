@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Playfair Display', 'serif'],
-        heading: ['Playfair Display', 'serif'],
-        subheading: ['Playfair Display', 'serif'],
+        sans: ['Aileron', 'sans-serif'],
+        heading: ['Libre Baskerville', 'serif'],
+        subheading: ['Aileron', 'sans-serif'],
       },
       fontWeight: {
         thin: '100',

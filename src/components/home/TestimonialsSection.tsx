@@ -74,7 +74,7 @@ const TestimonialsSection = () => {
                   <div className="bg-background p-4 md:p-8 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                     <Quote className="w-10 h-10 text-primary/20 mb-4" />
 
-                    <p className="text-foreground leading-relaxed mb-6 italic flex-grow">"{testimonial.text}"</p>
+                    <p className="text-foreground leading-relaxed mb-6 italic flex-grow" style={{ fontFamily: "'Aileron', sans-serif" }}>"{testimonial.text}"</p>
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
