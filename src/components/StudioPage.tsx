@@ -145,24 +145,98 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
           <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-secondary/30 rounded-full blur-2xl" />
         </section>
 
-        {/* Quick Info Bar */}
-        <section className="py-6 relative overflow-hidden" style={{ background: 'linear-gradient(90deg, #b8d4c3 0%, #A3C1AD 50%, #8fb39c 100%)' }}>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 to-transparent" />
-          <div className="container mx-auto px-4 relative">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-black">
-              <div className="flex items-center gap-3">
-                <MapPin className="w-5 h-5" />
-                <span className="font-medium text-sm md:text-base">{studioInfo.name}, Ireland</span>
+        {/* Quick Info Bar - Styled like homepage */}
+        <section className="py-8 md:py-10 bg-gradient-to-b from-secondary/30 via-background to-secondary/20">
+          <div className="container mx-auto px-4">
+            {/* Mobile: Stack with cards */}
+            <div className="grid grid-cols-3 gap-3 md:hidden">
+              <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/80 shadow-sm border border-border/30">
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center mb-3 shadow-sm"
+                  style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 100%)' }}
+                >
+                  <MapPin className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-lg font-heading font-bold text-foreground">
+                  {studioInfo.name}
+                </span>
+                <span className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1 leading-tight">
+                  Ireland
+                </span>
               </div>
-              <div className="hidden md:block w-px h-6 bg-black/20" />
-              <div className="flex items-center gap-3">
-                <Clock className="w-5 h-5" />
-                <span className="font-medium text-sm md:text-base">Open 7 Days a Week</span>
+              <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/80 shadow-sm border border-border/30">
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center mb-3 shadow-sm"
+                  style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 100%)' }}
+                >
+                  <Clock className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-lg font-heading font-bold text-foreground">
+                  7 Days
+                </span>
+                <span className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1 leading-tight">
+                  A Week
+                </span>
               </div>
-              <div className="hidden md:block w-px h-6 bg-black/20" />
-              <div className="flex items-center gap-3">
-                <Star className="w-5 h-5" />
-                <span className="font-medium text-sm md:text-base">State-of-the-Art Reformers</span>
+              <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/80 shadow-sm border border-border/30">
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center mb-3 shadow-sm"
+                  style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 100%)' }}
+                >
+                  <Star className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-lg font-heading font-bold text-foreground">
+                  Premium
+                </span>
+                <span className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1 leading-tight">
+                  Reformers
+                </span>
+              </div>
+            </div>
+
+            {/* Desktop: Horizontal layout */}
+            <div className="hidden md:flex justify-center items-center gap-16">
+              <div className="flex items-center gap-4">
+                <div 
+                  className="w-14 h-14 rounded-full flex items-center justify-center shadow-md"
+                  style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 100%)' }}
+                >
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-heading font-bold text-foreground tracking-tight">
+                    {studioInfo.name}
+                  </span>
+                  <span className="text-xs uppercase tracking-widest text-muted-foreground">Ireland</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div 
+                  className="w-14 h-14 rounded-full flex items-center justify-center shadow-md"
+                  style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 100%)' }}
+                >
+                  <Clock className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-heading font-bold text-foreground tracking-tight">
+                    Open 7 Days
+                  </span>
+                  <span className="text-xs uppercase tracking-widest text-muted-foreground">A Week</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div 
+                  className="w-14 h-14 rounded-full flex items-center justify-center shadow-md"
+                  style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 100%)' }}
+                >
+                  <Star className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-heading font-bold text-foreground tracking-tight">
+                    Premium Reformers
+                  </span>
+                  <span className="text-xs uppercase tracking-widest text-muted-foreground">State-of-the-Art</span>
+                </div>
               </div>
             </div>
           </div>
