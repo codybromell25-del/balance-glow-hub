@@ -11,7 +11,7 @@ const Pricing = () => {
       <main className="pt-16">
         <PageHeader 
           title="Pick Your Pack" 
-          subtitle="Whether you're all-in or just dipping your toes, we've got you covered. One price, all 5 studios—zero confusion."
+          subtitle="First, purchase a class pack or membership below. Once you've bought your package, you'll be able to book classes from available time slots at any of our 5 studios."
         />
 
         {/* Intro Offer */}
