@@ -19,7 +19,7 @@ const DifficultyDots = ({ level }: { level: number }) => {
       ))}
       <span className="text-xs text-muted-foreground ml-2">
         {level === 1 && "Gentle"}
-        {level === 2 && "Beginner"}
+        {level === 2 && "Beginner/Mixed"}
         {level === 3 && "Mixed Levels"}
         {level === 4 && "Advanced"}
         {level === 5 && "Intense"}
