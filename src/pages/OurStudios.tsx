@@ -5,13 +5,6 @@ import { MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-// Import studio images
-import studioClane from "@/assets/studio-clane.png";
-import studioKildare from "@/assets/studio-kildare.png";
-import studioBlessington from "@/assets/studio-blessington.png";
-import studioEnfield from "@/assets/studio-enfield.png";
-import studioBray from "@/assets/studio-bray.png";
-
 // Import gallery images
 import studioInterior1 from "@/assets/studio-interior-1.png";
 import studioReformersRow from "@/assets/studio-reformers-row.jpg";
@@ -28,7 +21,6 @@ const OurStudios = () => {
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+4a+Yew+Tree+Square+Prosperous+Rd+Abbeyland+Clane+Co.+Kildare+W91+R642+Ireland",
       hasDetailPage: true,
-      image: studioClane,
     },
     {
       name: "Kildare Town Studio",
@@ -38,7 +30,6 @@ const OurStudios = () => {
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Claregate+St+Kildare+R51+E772+Ireland",
       hasDetailPage: true,
-      image: studioKildare,
     },
     {
       name: "Blessington Studio",
@@ -48,7 +39,6 @@ const OurStudios = () => {
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=1a+The+Green+Main+St+Blessington+Co.+Wicklow+W91+PNV2+Ireland",
       hasDetailPage: true,
-      image: studioBlessington,
     },
     {
       name: "Enfield Studio",
@@ -58,7 +48,6 @@ const OurStudios = () => {
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Main+Street+Enfield+Co.+Meath+A83+RP84",
       hasDetailPage: true,
-      image: studioEnfield,
     },
     {
       name: "Bray Studio",
@@ -68,7 +57,6 @@ const OurStudios = () => {
       hours: "Mon-Fri: 6am-8pm, Sat-Sun: 8am-2pm",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Balance+Bray+Industrial+Development+Agency+Business+Park+Southern+Cross+Rd+Irishtown+Bray+Co.+Wicklow+A98+T276+Ireland",
       hasDetailPage: true,
-      image: studioBray,
     },
   ];
 
@@ -98,20 +86,11 @@ const OurStudios = () => {
                   className="group relative animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {/* Card with image */}
+                  {/* Card without image */}
                   <div className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-                    {/* Studio Image */}
-                    <div className="relative h-48 overflow-hidden">
-                      <img 
-                        src={studio.image} 
-                        alt={studio.name}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                      {/* Studio number overlay */}
-                      <span className="absolute bottom-4 left-4 text-5xl font-heading italic text-white/80">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
+                    {/* Sage green gradient top bar */}
+                    <div className="h-2 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
+                      <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-black/10" />
                     </div>
                     
                     <div className="p-6">
