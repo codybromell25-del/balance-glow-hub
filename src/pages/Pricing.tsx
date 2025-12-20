@@ -49,9 +49,8 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <Button asChild className="w-full text-lg py-6 relative bg-gradient-to-r from-[#d8a4a8] via-[#e8b4b8] to-[#d8a4a8] text-black border-0 shadow-lg hover:brightness-105 overflow-hidden">
+                <Button asChild className="w-full text-lg py-6 relative text-black border-0 shadow-lg hover:brightness-105 overflow-hidden" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                   <a href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031" target="_blank" rel="noopener noreferrer">
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-black/5" />
                     <span className="relative z-10">Purchase Intro Offer</span>
                   </a>
                 </Button>
@@ -75,17 +74,24 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 {[
-                  { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
-                  { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
-                  { classes: 6, price: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
-                  { classes: 10, price: "€215", validity: "Valid 310 days", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },
-                  { classes: 20, price: "€400", validity: "Valid 610 days", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
+                  { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997", popular: false },
+                  { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988", popular: false },
+                  { classes: 6, price: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false },
+                  { classes: 10, price: "€215", validity: "Valid 310 days", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true },
+                  { classes: 20, price: "€400", validity: "Valid 610 days", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995", popular: false },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
-                    className="bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                    className={`relative bg-background p-6 rounded-lg border-2 hover:shadow-lg transition-all duration-300 animate-fade-in ${pack.popular ? 'border-[#A3C1AD] shadow-lg' : 'border-primary/40 hover:border-primary/60'}`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
+                    {pack.popular && (
+                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                        <span className="text-black px-3 py-1 rounded-full text-xs font-semibold shadow-md" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
+                          Popular
+                        </span>
+                      </div>
+                    )}
                     <div className="text-center mb-4">
                       <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
                         {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
@@ -95,7 +101,7 @@ const Pricing = () => {
                       </p>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
-                    <Button asChild className="w-full">
+                    <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                       <a href={pack.link} target="_blank" rel="noopener noreferrer">
                         Buy Now
                       </a>
@@ -139,7 +145,7 @@ const Pricing = () => {
                       </p>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
-                    <Button asChild className="w-full">
+                    <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                       <a href={pack.link} target="_blank" rel="noopener noreferrer">
                         Buy Now
                       </a>
@@ -215,7 +221,7 @@ const Pricing = () => {
                       ))}
                     </ul>
 
-                    <Button asChild className="w-full">
+                    <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                       <a href={membership.link} target="_blank" rel="noopener noreferrer">
                         Buy Now
                       </a>
