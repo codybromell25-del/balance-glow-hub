@@ -3,11 +3,7 @@ import Footer from "@/components/Footer";
 import ClassesBrandStatement from "@/components/home/ClassesBrandStatement";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Heart, BookOpen, Flame, Trophy, Dumbbell, Timer, Hourglass } from "lucide-react";
-import { useEffect, useState } from "react";
-
-import clientsStretching from "@/assets/clients-stretching.jpg";
-import clientsMatWorkout from "@/assets/clients-mat-workout.jpg";
+import { Heart, BookOpen, Flame, Trophy } from "lucide-react";
 
 // Difficulty indicator component
 const DifficultyDots = ({ level }: { level: number }) => {
@@ -39,14 +35,12 @@ const ClassCard = ({
   suitable, 
   whatToExpect, 
   difficulty,
-  accentColor 
 }: { 
   icon: React.ElementType;
   level: string;
   suitable: string;
   whatToExpect: string[];
   difficulty: number;
-  accentColor: string;
 }) => {
   const { ref, isVisible } = useScrollAnimation(0.2);
   
@@ -61,8 +55,8 @@ const ClassCard = ({
         {/* Level Header */}
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3 mb-4">
-            <div className={`w-14 h-14 rounded-full flex items-center justify-center ${accentColor}`}>
-              <Icon className="w-7 h-7 text-primary" />
+            <div className="w-14 h-14 rounded-full flex items-center justify-center" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
+              <Icon className="w-7 h-7 text-white" />
             </div>
           </div>
           <h2 className="text-3xl font-heading font-bold text-foreground mb-2">{level}</h2>
@@ -79,7 +73,7 @@ const ClassCard = ({
             <ul className="space-y-2">
               {whatToExpect.map((item) => (
                 <li key={item} className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
+                  <span className="mt-1" style={{ color: '#A3C1AD' }}>•</span>
                   <span className="text-muted-foreground">{item}</span>
                 </li>
               ))}
@@ -91,7 +85,7 @@ const ClassCard = ({
             className="w-full sm:w-auto relative text-black border-0 shadow-lg hover:brightness-105"
             style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
           >
-            <a href="/book-class">Book Class</a>
+            <a href="/our-studios">Book Class</a>
           </Button>
         </div>
       </div>
@@ -99,68 +93,8 @@ const ClassCard = ({
   );
 };
 
-// Visual break component
-const VisualBreak = ({ image, quote }: { image: string; quote: string }) => {
-  const { ref, isVisible } = useScrollAnimation(0.2);
-  
-  return (
-    <div 
-      ref={ref}
-      className={`relative h-64 md:h-80 rounded-2xl overflow-hidden my-8 transition-all duration-700 ${
-        isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
-      }`}
-    >
-      <img 
-        src={image} 
-        alt="balance studio moment" 
-        className="w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 bg-foreground/40 flex items-center justify-center">
-        <p className="text-background text-xl md:text-2xl font-heading italic text-center px-8 max-w-2xl">
-          "{quote}"
-        </p>
-      </div>
-    </div>
-  );
-};
-
 const Classes = () => {
-  const [activeSection, setActiveSection] = useState("foundations");
-
-  // Smooth scroll to section
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navHeight = 140;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: elementPosition - navHeight,
-        behavior: "smooth"
-      });
-    }
-  };
-
-  // Track active section on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["foundations", "build-sculpt", "circuit"];
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 200 && rect.bottom >= 200) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const foundationsClasses = [
+  const allClasses = [
     {
       icon: Heart,
       level: "Gentle Flow",
@@ -187,9 +121,6 @@ const Classes = () => {
         "Inform instructor of any injuries or health concerns",
       ],
     },
-  ];
-
-  const buildSculptClasses = [
     {
       icon: Flame,
       level: "Sculpt",
@@ -216,54 +147,6 @@ const Classes = () => {
         "Previous Reformer experience necessary",
       ],
     },
-    {
-      icon: Dumbbell,
-      level: "Strength",
-      suitable: "For those with Reformer experience seeking intensity",
-      difficulty: 4,
-      whatToExpect: [
-        "Less stretching, more power moves with faster pace",
-        "Weights, resistance bands, and props for extra challenge",
-        "Dynamic and energizing—designed to make you feel strong",
-        "All the burn, all the buzz, minus the scary stuff",
-        "Choose beginner class if agility/balance are significantly affected",
-      ],
-    },
-  ];
-
-  const circuitClasses = [
-    {
-      icon: Timer,
-      level: "Circuit: Fast Burn",
-      suitable: "Fast-paced circuits with Pilates precision",
-      difficulty: 5,
-      whatToExpect: [
-        "Perfect balance of strength, cardio & Reformer Pilates",
-        "Back-to-back combos with energizing music on and off Reformer",
-        "Heart-thumping, muscle-burning, seriously fun",
-        "balance focus on form and control maintained throughout",
-        "Available at Studio 2, Kildare Town only",
-      ],
-    },
-    {
-      icon: Hourglass,
-      level: "Circuit: Slow Burn",
-      suitable: "High-rep, controlled circuits for serious sculpting",
-      difficulty: 3,
-      whatToExpect: [
-        "Fewer moves, more reps—all about that delicious shake",
-        "Slow, steady circuits that fire up every muscle group",
-        "Full-body burner without jumping or chaos",
-        "Dials up intensity through controlled, purposeful movement",
-        "Pure fire, delivered the balance way: strong, smart, satisfying",
-      ],
-    },
-  ];
-
-  const navItems = [
-    { id: "foundations", label: "Foundations & Flow" },
-    { id: "build-sculpt", label: "Build & Sculpt" },
-    { id: "circuit", label: "Circuit Training" },
   ];
 
   return (
@@ -271,128 +154,16 @@ const Classes = () => {
       <Navigation />
       <main className="pt-16">
         <ClassesBrandStatement />
-
-        {/* Sticky Quick Navigation */}
-        <div className="sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border py-3">
-          <div className="container mx-auto px-4">
-            <div className="flex justify-center gap-2 md:gap-4 flex-wrap">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeSection === item.id
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-muted text-muted-foreground hover:bg-muted/80"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
         
-        {/* Foundations & Flow Section */}
-        <section id="foundations" className="py-10 md:py-16">
+        {/* All Classes - Clean Flow */}
+        <section className="py-10 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-8">
-                <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-3">
-                  Foundations & Flow
-                </span>
-                <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
-                  Start Your Journey
-                </h2>
-                <p className="text-muted-foreground mt-2 max-w-xl mx-auto">
-                  Perfect for beginners, those returning after a break, or anyone seeking mindful movement.
-                </p>
-              </div>
-              
               <div className="space-y-6">
-                {foundationsClasses.map((classData) => (
+                {allClasses.map((classData) => (
                   <ClassCard 
                     key={classData.level} 
                     {...classData} 
-                    accentColor="bg-primary/10"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Visual Break 1 */}
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <VisualBreak 
-              image={clientsStretching} 
-              quote="Movement is medicine. Every class is a step toward a stronger you."
-            />
-          </div>
-        </div>
-
-        {/* Build & Sculpt Section */}
-        <section id="build-sculpt" className="py-10 md:py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-8">
-                <span className="inline-block px-4 py-1 bg-accent/30 text-accent-foreground rounded-full text-sm font-medium mb-3">
-                  Build & Sculpt
-                </span>
-                <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
-                  Level Up Your Practice
-                </h2>
-                <p className="text-muted-foreground mt-2 max-w-xl mx-auto">
-                  For those ready to challenge themselves and build real strength.
-                </p>
-              </div>
-              
-              <div className="space-y-6">
-                {buildSculptClasses.map((classData) => (
-                  <ClassCard 
-                    key={classData.level} 
-                    {...classData} 
-                    accentColor="bg-accent/20"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Visual Break 2 */}
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <VisualBreak 
-              image={clientsMatWorkout} 
-              quote="Strong is beautiful. Every rep brings you closer to your best self."
-            />
-          </div>
-        </div>
-
-        {/* Circuit Training Section */}
-        <section id="circuit" className="py-10 md:py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-8">
-                <span className="inline-block px-4 py-1 bg-secondary/50 text-foreground rounded-full text-sm font-medium mb-3">
-                  Circuit Training
-                </span>
-                <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
-                  Maximum Intensity
-                </h2>
-                <p className="text-muted-foreground mt-2 max-w-xl mx-auto">
-                  High-energy circuits that combine the best of Pilates with heart-pumping cardio.
-                </p>
-              </div>
-              
-              <div className="space-y-6">
-                {circuitClasses.map((classData) => (
-                  <ClassCard 
-                    key={classData.level} 
-                    {...classData} 
-                    accentColor="bg-secondary/30"
                   />
                 ))}
               </div>
