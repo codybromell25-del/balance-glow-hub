@@ -23,7 +23,7 @@ const HeroSection = () => {
 
           {/* Intro Offer */}
           <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-6 md:mb-8 max-w-xl italic font-light tracking-wide">
-            Intro Offer: <span className="text-primary font-semibold" style={{ color: 'rgba(253, 155, 245, 1)', fontFamily: '"Cormorant Garamond"' }}>3 Classes for €50</span>
+            Intro Offer: <span className="font-semibold" style={{ color: '#A3C1AD', fontFamily: '"Cormorant Garamond"' }}>3 Classes for €50</span>
           </p>
 
           {/* Tagline - elegant and impactful */}
