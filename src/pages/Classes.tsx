@@ -410,18 +410,11 @@ const Classes = () => {
                 Classic class to learn the fundamentals and find your flow.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  asChild 
-                  size="lg"
-                  className="text-black border-0 shadow-lg hover:brightness-105"
-                  style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
-                >
-                  <a href="/book-class">Book a Classic Class</a>
-                </Button>
                 <Button
                   asChild
                   size="lg"
-                  variant="outline"
+                  className="text-black border-0 shadow-lg hover:brightness-105"
+                  style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
                 >
                   <a href="/our-studios">View Our Studios</a>
                 </Button>
