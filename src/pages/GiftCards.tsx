@@ -11,7 +11,7 @@ const GiftCards = () => {
       <main className="pt-16">
         <PageHeader 
           title="Give the Gift of balance." 
-          subtitle="Share the joy of movement with someone you love. Our gift cards are the perfect way to introduce friends and family to the transformative power of reformer pilates."
+          subtitle="Share the joy of movement with someone you love. Our gift cards are the perfect way to introduce friends and family to the transformative power of Reformer Pilates."
         />
 
         {/* Gift Card CTA Section */}
@@ -93,7 +93,7 @@ const GiftCards = () => {
                     <span className="text-2xl font-bold text-white">2</span>
                   </div>
                   <h3 className="text-xl font-heading font-bold text-foreground mb-2">Receive Instantly</h3>
-                  <p className="text-muted-foreground">Your digital gift card will be emailed directly to you or your recipient.</p>
+                  <p className="text-muted-foreground">Your digital gift card will be emailed directly to you or your recipient — whichever you prefer!</p>
                 </div>
 
                 <div className="text-center">
