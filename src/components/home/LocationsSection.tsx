@@ -4,7 +4,7 @@ import studioKildare from "@/assets/studio-kildare.png";
 import studioBlessington from "@/assets/studio-blessington.png";
 import studioEnfield from "@/assets/studio-enfield.png";
 import studioBray from "@/assets/studio-bray.png";
-import balanceLogo from "@/assets/balance-logo-transparent-final.png";
+import balanceLogo from "@/assets/balance-removebg-preview.png";
 const LocationsSection = () => {
   const locations = [{
     name: "Clane",

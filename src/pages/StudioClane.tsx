@@ -1,5 +1,5 @@
 import StudioPage from "@/components/StudioPage";
-import claneHero from "@/assets/balancestudioheader.png";
+import claneHero from "@/assets/balance-removebg-preview.png";
 
 const StudioClane = () => {
   const studioInfo = {

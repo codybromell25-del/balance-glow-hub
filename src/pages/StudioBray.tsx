@@ -1,5 +1,5 @@
 import StudioPage from "@/components/StudioPage";
-import balanceLogo from "@/assets/balancestudioheader.png";
+import balanceLogo from "@/assets/balance-removebg-preview.png";
 
 const StudioBray = () => {
   const studioInfo = {

@@ -1,4 +1,4 @@
-import balanceLogo from "@/assets/balance-logo-transparent-final.png";
+import balanceLogo from "@/assets/balance-removebg-preview.png";
 const BrandStatement = () => {
   return <section className="py-8 md:py-12 bg-background">
       <div className="container mx-auto px-4">
