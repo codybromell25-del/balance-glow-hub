@@ -185,8 +185,19 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                       <div>
                         <h3 className="text-lg font-bold text-foreground mb-2">Find Us</h3>
                         <p className="text-muted-foreground leading-relaxed">{studioInfo.address}</p>
-                        <Button variant="link" className="p-0 h-auto mt-3 text-primary font-medium">
-                          Get Directions <ArrowRight className="w-4 h-4 ml-1" />
+                        <Button 
+                          asChild 
+                          variant="link" 
+                          className="p-0 h-auto mt-3 font-medium hover:opacity-80"
+                          style={{ color: '#A3C1AD' }}
+                        >
+                          <a 
+                            href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(studioInfo.address)}`} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                          >
+                            Get Directions <ArrowRight className="w-4 h-4 ml-1" />
+                          </a>
                         </Button>
                       </div>
                     </div>
