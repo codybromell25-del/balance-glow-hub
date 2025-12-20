@@ -5,39 +5,67 @@ const SocialProofBar = () => {
     {
       icon: MapPin,
       value: "5",
-      label: "Studios"
+      label: "Studios",
+      color: "#A3C1AD"
     },
     {
       icon: Users,
       value: "10,000+",
-      label: "Classes Taught"
+      label: "Classes Taught",
+      color: "#A3C1AD"
     },
     {
       icon: Star,
       value: "4.9",
-      label: "Google Rating"
+      label: "Google Rating",
+      color: "#A3C1AD"
     }
   ];
 
   return (
-    <section className="py-6 md:py-8 border-y border-primary/20 bg-gradient-to-r from-transparent via-primary/5 to-transparent">
+    <section className="py-8 md:py-10 bg-gradient-to-b from-secondary/30 via-background to-secondary/20">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-0">
+        {/* Mobile: Stack vertically with cards */}
+        <div className="grid grid-cols-3 gap-3 md:hidden">
           {stats.map((stat, index) => (
             <div 
               key={index} 
-              className={`flex items-center gap-3 px-6 md:px-10 ${
-                index < stats.length - 1 ? 'md:border-r md:border-primary/30' : ''
-              }`}
+              className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/80 shadow-sm border border-border/30"
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <stat.icon className="w-5 h-5 text-foreground/70" />
+              <div 
+                className="w-12 h-12 rounded-full flex items-center justify-center mb-3 shadow-sm"
+                style={{ background: `linear-gradient(180deg, #b8d4c3 0%, ${stat.color} 100%)` }}
+              >
+                <stat.icon className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-2xl font-heading font-bold text-foreground">
+                {stat.value}
+              </span>
+              <span className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1 leading-tight">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: Horizontal layout */}
+        <div className="hidden md:flex justify-center items-center gap-16">
+          {stats.map((stat, index) => (
+            <div 
+              key={index} 
+              className="flex items-center gap-4"
+            >
+              <div 
+                className="w-14 h-14 rounded-full flex items-center justify-center shadow-md"
+                style={{ background: `linear-gradient(180deg, #b8d4c3 0%, ${stat.color} 100%)` }}
+              >
+                <stat.icon className="w-6 h-6 text-white" />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl md:text-3xl font-heading font-semibold text-foreground tracking-tight">
+                <span className="text-3xl font-heading font-bold text-foreground tracking-tight">
                   {stat.value}
                 </span>
-                <span className="text-xs uppercase tracking-widest text-muted-foreground/80">{stat.label}</span>
+                <span className="text-xs uppercase tracking-widest text-muted-foreground">{stat.label}</span>
               </div>
             </div>
           ))}
