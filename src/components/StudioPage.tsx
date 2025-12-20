@@ -485,7 +485,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                 </p>
                 
                 <p className="text-xs text-muted-foreground italic mb-6 text-center">
-                  Expires 14 days from purchase
+                  Expires 4 weeks from purchase
                 </p>
                 
                 <Button asChild size="lg" className="w-full shadow-lg hover:shadow-xl transition-shadow border-0 text-black" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
