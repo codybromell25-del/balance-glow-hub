@@ -218,7 +218,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   Premium
                 </span>
                 <span className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1 leading-tight">
-                  Reformers
+                  Studios
                 </span>
               </div>
             </div>
@@ -262,7 +262,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-2xl font-heading font-bold text-foreground tracking-tight">
-                    Premium Reformers
+                    Premium Studios
                   </span>
                   <span className="text-xs uppercase tracking-widest text-muted-foreground">State-of-the-Art</span>
                 </div>

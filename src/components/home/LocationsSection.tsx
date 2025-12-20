@@ -122,7 +122,7 @@ const LocationsSection = () => {
 
             {/* Coming Soon Badge */}
             <div className="absolute top-4 right-4 px-4 py-2 rounded-full shadow-md" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-              <p className="text-xs font-semibold text-black uppercase tracking-wide">2025</p>
+              <p className="text-xs font-semibold text-black uppercase tracking-wide">2026</p>
             </div>
           </div>
         </div>
