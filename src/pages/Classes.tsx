@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import ClassesBrandStatement from "@/components/home/ClassesBrandStatement";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Heart, BookOpen, Flame, Trophy } from "lucide-react";
+import { Heart, BookOpen, Flame, Trophy, Users } from "lucide-react";
 
 // Difficulty indicator component
 const DifficultyDots = ({ level }: { level: number }) => {
@@ -96,19 +96,6 @@ const ClassCard = ({
 const Classes = () => {
   const allClasses = [
     {
-      icon: Heart,
-      level: "Gentle Flow",
-      suitable: "Pregnancy, postnatal, injury recovery, or those seeking a slower pace",
-      difficulty: 1,
-      whatToExpect: [
-        "Soft, supportive movements focusing on mobility and breath",
-        "Low-impact sequences that build strength gently",
-        "Suitable for all trimesters of pregnancy",
-        "Perfect for older adults needing extra care and attention",
-        "No prior Pilates experience required",
-      ],
-    },
-    {
       icon: BookOpen,
       level: "Classic",
       suitable: "Perfect for beginners and foundation building",
@@ -145,6 +132,32 @@ const Classes = () => {
         "Tough but thoughtful—never chaotic, always curated",
         "Instructors keep things moving with personalized attention",
         "Previous Reformer experience necessary",
+      ],
+    },
+    {
+      icon: Heart,
+      level: "Gentle Flow",
+      suitable: "Pregnancy, postnatal, injury recovery, or those seeking a slower pace",
+      difficulty: 1,
+      whatToExpect: [
+        "Soft, supportive movements focusing on mobility and breath",
+        "Low-impact sequences that build strength gently",
+        "Suitable for all trimesters of pregnancy",
+        "Perfect for older adults needing extra care and attention",
+        "No prior Pilates experience required",
+      ],
+    },
+    {
+      icon: Users,
+      level: "Mat Class",
+      suitable: "Traditional Pilates on the mat — available at Kildare Town only",
+      difficulty: 2,
+      whatToExpect: [
+        "Classic mat Pilates exercises focusing on core strength and flexibility",
+        "No equipment needed — just you and the mat",
+        "Perfect complement to your Reformer practice",
+        "Builds body awareness and foundational strength",
+        "Suitable for all levels with modifications available",
       ],
     },
   ];
