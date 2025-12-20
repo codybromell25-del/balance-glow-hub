@@ -371,9 +371,9 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
           <div className="absolute bottom-20 right-10 w-60 h-60 bg-secondary/20 rounded-full blur-3xl" />
           <div className="container mx-auto px-4 relative">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
-                <Star className="w-4 h-4 text-primary" />
-                <span className="text-primary text-sm font-medium">Exclusive Benefits</span>
+              <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-4" style={{ backgroundColor: 'rgba(163, 193, 173, 0.15)' }}>
+                <Star className="w-4 h-4" style={{ color: '#A3C1AD' }} />
+                <span className="text-sm font-medium" style={{ color: '#A3C1AD' }}>Exclusive Benefits</span>
               </div>
               <h2 className="text-3xl md:text-5xl font-heading italic text-foreground">
                 Flexible Memberships
@@ -408,13 +408,10 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     <div className="absolute top-0 left-0 h-1 rounded-t-2xl w-full opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(90deg, #b8d4c3 0%, #A3C1AD 50%, #8fb39c 100%)' }} />
                   )}
                   
-                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-0">
-                    balance. {membership.classes}
-                  </h3>
-                  <p className="text-sm font-semibold text-primary mb-1">
+                  <h3 className="text-xl md:text-2xl font-bold mb-1" style={{ color: '#A3C1AD' }}>
                     {membership.subtitle}
-                  </p>
-                  <p className="text-xs text-muted-foreground mb-4">
+                  </h3>
+                  <p className="text-lg md:text-xl font-semibold text-foreground mb-4">
                     {membership.classCount}
                   </p>
                   
@@ -448,9 +445,9 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-secondary/50 rounded-full px-4 py-2 mb-4">
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-primary text-sm font-medium">Flexible Options</span>
+              <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-4" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
+                <Sparkles className="w-4 h-4 text-black" />
+                <span className="text-black text-sm font-medium">Flexible Options</span>
               </div>
               <h2 className="text-3xl md:text-5xl font-heading italic text-foreground">
                 Class Packs
@@ -480,7 +477,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                 
                 <div className="text-center mb-6">
                   <p className="text-5xl md:text-6xl font-heading italic text-foreground mb-2">€50</p>
-                  <p className="text-lg font-semibold text-primary">3 Classes</p>
+                  <p className="text-lg font-semibold" style={{ color: '#A3C1AD' }}>3 Classes</p>
                 </div>
                 
                 <p className="text-sm text-muted-foreground mb-6 flex-grow leading-relaxed text-center">
