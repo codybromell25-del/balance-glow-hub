@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Mail, Phone, MapPin, Facebook, Link2 } from "lucide-react";
 import balanceLogo from "@/assets/balance-logo-transparent-final.png";
 
 const Footer = () => {
@@ -29,6 +29,23 @@ const Footer = () => {
                 className="text-black hover:text-primary transition-colors"
               >
                 <Instagram size={20} />
+              </a>
+              <a 
+                href="https://www.facebook.com/BalanceReformer/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-black hover:text-primary transition-colors"
+              >
+                <Facebook size={20} />
+              </a>
+              <a 
+                href="https://my.linkpod.site/balancestudios" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-black hover:text-primary transition-colors"
+                title="Linktree"
+              >
+                <Link2 size={20} />
               </a>
             </div>
           </div>
