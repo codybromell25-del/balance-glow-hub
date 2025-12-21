@@ -8,7 +8,7 @@ const Pricing = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-16">
+      <main className="pt-24">
         <PageHeader 
           title="Pick Your Pack" 
           subtitle="First, purchase a class pack or membership below. Once you've bought your package, you'll be able to book classes from available time slots at any of our 5 studios."

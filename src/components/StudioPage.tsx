@@ -111,7 +111,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-16">
+      <main className="pt-24">
         {/* Hero Section */}
         {studioInfo.isLogoHero ? (
           /* Clean Hero with studio name */

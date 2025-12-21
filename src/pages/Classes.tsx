@@ -165,7 +165,7 @@ const Classes = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-16">
+      <main className="pt-24">
         <ClassesBrandStatement />
         
         {/* All Classes - Clean Flow */}

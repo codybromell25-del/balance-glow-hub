@@ -74,7 +74,7 @@ const OurStudios = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-16">
+      <main className="pt-24">
         <PageHeader 
           title="Take Your Pick" 
           subtitle="Five stunning studios across Kildare, Wicklow & Meath—each one designed to help you move, sweat, and thrive. Pick your perfect spot and let's make magic happen!"

@@ -92,7 +92,7 @@ const Shop = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-24">
         <PageHeader 
           title="Shop" 
           subtitle="Elevate your practice with our curated selection of Pilates essentials, apparel, and gift vouchers"

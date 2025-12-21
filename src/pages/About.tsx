@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-16">
+      <main className="pt-24">
         <PageHeader title="who are balance" />
 
         {/* Meet Kelly */}

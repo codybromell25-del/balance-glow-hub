@@ -50,7 +50,7 @@ const BookAll = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-16">
+      <main className="pt-24">
         <PageHeader 
           title="Find Your Flow" 
           subtitle="Pick your favorite studio and let's get moving together!"

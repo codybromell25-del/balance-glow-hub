@@ -6,7 +6,7 @@ const Terms = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-16">
+      <main className="pt-24">
         <PageHeader title="Terms & Conditions" />
 
         {/* Terms Content */}

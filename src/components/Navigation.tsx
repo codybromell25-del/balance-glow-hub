@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
+import AnnouncementBanner from "./AnnouncementBanner";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,11 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-sm border-b border-border">
+    <>
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <AnnouncementBanner />
+      </div>
+      <nav className="fixed top-[36px] left-0 right-0 z-50 bg-background backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -99,6 +104,7 @@ const Navigation = () => {
         )}
       </div>
     </nav>
+    </>
   );
 };
 

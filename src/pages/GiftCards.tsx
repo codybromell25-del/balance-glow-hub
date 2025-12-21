@@ -8,7 +8,7 @@ const GiftCards = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-16">
+      <main className="pt-24">
         <PageHeader 
           title="Give the Gift of balance." 
           subtitle="Share the joy of movement with someone you love. Our gift cards are the perfect way to introduce friends and family to the transformative power of Reformer Pilates."
