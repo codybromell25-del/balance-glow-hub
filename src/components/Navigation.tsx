@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import AnnouncementBanner from "./AnnouncementBanner";
@@ -62,6 +62,16 @@ const Navigation = () => {
                 </Link>
               )
             )}
+            <a
+              href="https://momence.com/sign-in"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="ml-4 gap-2">
+                <User size={18} />
+                My Account
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,6 +109,18 @@ const Navigation = () => {
                   </Link>
                 )
               )}
+              <a
+                href="https://momence.com/sign-in"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="mt-2"
+              >
+                <Button className="w-full gap-2">
+                  <User size={18} />
+                  My Account
+                </Button>
+              </a>
             </div>
           </div>
         )}
