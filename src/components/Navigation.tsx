@@ -68,7 +68,7 @@ const Navigation = () => {
               rel="noopener noreferrer"
               title="My Account"
             >
-              <Button size="icon" className="rounded-full bg-[#8B9A6D] hover:bg-[#7A8960] text-white">
+              <Button size="icon" className="rounded-full bg-[#A3C1AD] hover:bg-[#8FB09A] text-white">
                 <User size={18} />
               </Button>
             </a>
@@ -116,7 +116,7 @@ const Navigation = () => {
                 onClick={() => setIsOpen(false)}
                 className="mt-2"
               >
-                <Button className="w-full gap-2 bg-[#8B9A6D] hover:bg-[#7A8960] text-white">
+                <Button className="w-full gap-2 bg-[#A3C1AD] hover:bg-[#8FB09A] text-white">
                   <User size={18} />
                   My Account
                 </Button>
