@@ -68,7 +68,7 @@ const Navigation = () => {
               rel="noopener noreferrer"
               title="My Account"
             >
-              <Button variant="outline" size="icon" className="rounded-full">
+              <Button size="icon" className="rounded-full">
                 <User size={18} />
               </Button>
             </a>
