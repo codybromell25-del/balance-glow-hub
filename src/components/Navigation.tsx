@@ -66,10 +66,10 @@ const Navigation = () => {
               href="https://momence.com/sign-in"
               target="_blank"
               rel="noopener noreferrer"
+              title="My Account"
             >
-              <Button className="ml-4 gap-2">
+              <Button variant="outline" size="icon" className="rounded-full">
                 <User size={18} />
-                My Account
               </Button>
             </a>
           </div>
