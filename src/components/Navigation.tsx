@@ -63,12 +63,12 @@ const Navigation = () => {
               )
             )}
             <a
-              href="https://momence.com/sign-in"
+              href="https://momence.com/sign-in?hostId=62930"
               target="_blank"
               rel="noopener noreferrer"
               title="My Account"
             >
-              <Button size="icon" className="rounded-full">
+              <Button size="icon" className="rounded-full bg-[#8B9A6D] hover:bg-[#7A8960] text-white">
                 <User size={18} />
               </Button>
             </a>
@@ -110,13 +110,13 @@ const Navigation = () => {
                 )
               )}
               <a
-                href="https://momence.com/sign-in"
+                href="https://momence.com/sign-in?hostId=62930"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
                 className="mt-2"
               >
-                <Button className="w-full gap-2">
+                <Button className="w-full gap-2 bg-[#8B9A6D] hover:bg-[#7A8960] text-white">
                   <User size={18} />
                   My Account
                 </Button>
