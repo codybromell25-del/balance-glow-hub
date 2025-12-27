@@ -73,11 +73,11 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 {[
-                  { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997", popular: true },
-                  { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988", popular: false },
-                  { classes: 6, price: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false },
-                  { classes: 10, price: "€215", validity: "Valid 310 days", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true },
-                  { classes: 20, price: "€400", validity: "Valid 610 days", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995", popular: false },
+                  { classes: 1, price: "€24", wasPrice: null, validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997", popular: true },
+                  { classes: 3, price: "€65", wasPrice: null, validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988", popular: false },
+                  { classes: 6, price: "€115", wasPrice: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false },
+                  { classes: 10, price: "€190", wasPrice: "€215", validity: "Valid 310 days", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true },
+                  { classes: 20, price: "€400", wasPrice: null, validity: "Valid 610 days", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995", popular: false },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
@@ -95,9 +95,15 @@ const Pricing = () => {
                       <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
                         {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
                       </h3>
-                      <p className="text-3xl font-heading font-bold text-black mb-1">
-                        {pack.price}
-                      </p>
+                      <div className="mb-1">
+                        {pack.wasPrice && (
+                          <span className="text-lg text-muted-foreground line-through mr-2">{pack.wasPrice}</span>
+                        )}
+                        <span className="text-3xl font-heading font-bold text-black">{pack.price}</span>
+                        {pack.wasPrice && (
+                          <span className="ml-2 text-xs font-semibold text-green-600 bg-green-100 px-2 py-0.5 rounded-full">SALE</span>
+                        )}
+                      </div>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
                     <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
@@ -127,8 +133,8 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
                 {[
-                  { classes: 1, price: "€15", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/Single-Mat-Class/573998" },
-                  { classes: 4, price: "€50", validity: "Valid 120 days", link: "https://momence.com/Balance/membership/4-Mat-Classes/573999" },
+                  { classes: 1, price: "€15", wasPrice: null, validity: "Valid 30 days", link: "https://momence.com/Balance/membership/Single-Mat-Class/573998" },
+                  { classes: 4, price: "€40", wasPrice: "€50", validity: "Valid 120 days", link: "https://momence.com/Balance/membership/4-Mat-Classes/573999" },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
@@ -139,9 +145,15 @@ const Pricing = () => {
                       <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
                         {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
                       </h3>
-                      <p className="text-3xl font-heading font-bold text-black mb-1">
-                        {pack.price}
-                      </p>
+                      <div className="mb-1">
+                        {pack.wasPrice && (
+                          <span className="text-lg text-muted-foreground line-through mr-2">{pack.wasPrice}</span>
+                        )}
+                        <span className="text-3xl font-heading font-bold text-black">{pack.price}</span>
+                        {pack.wasPrice && (
+                          <span className="ml-2 text-xs font-semibold text-green-600 bg-green-100 px-2 py-0.5 rounded-full">SALE</span>
+                        )}
+                      </div>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
                     <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
