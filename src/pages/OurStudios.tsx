@@ -12,6 +12,14 @@ import studioNeonSign from "@/assets/studio-neon-sign.jpg";
 import studioChandelier from "@/assets/hero-studio-chandelier.png";
 import studioEntrance from "@/assets/studio-entrance.png";
 import studioHallway from "@/assets/studio-hallway.png";
+import studioReformersWide from "@/assets/studio-reformers-wide.jpg";
+import studioInstructorHelping from "@/assets/studio-instructor-helping.jpg";
+import studioBallWorkout from "@/assets/studio-ball-workout.jpg";
+import studioLungeWorkout from "@/assets/studio-lunge-workout.jpg";
+import studioLegRaise from "@/assets/studio-leg-raise.jpg";
+import studioWelcome from "@/assets/studio-welcome.jpg";
+import studioMirror from "@/assets/studio-mirror.jpg";
+import studioEquipment from "@/assets/studio-equipment.jpg";
 
 const OurStudios = () => {
   const studios = [
@@ -63,12 +71,18 @@ const OurStudios = () => {
   ];
 
   const galleryImages = [
+    { src: studioReformersWide, alt: "balance studio with reformer machines" },
+    { src: studioInstructorHelping, alt: "Instructor helping clients on reformers" },
+    { src: studioBallWorkout, alt: "Clients doing ball exercises on reformers" },
+    { src: studioLungeWorkout, alt: "Clients doing lunge exercises" },
+    { src: studioLegRaise, alt: "Clients doing leg raise exercises" },
+    { src: studioWelcome, alt: "Welcome to balance studio" },
+    { src: studioMirror, alt: "balance studio mirror with branding" },
+    { src: studioEquipment, alt: "Pilates equipment and dumbbells" },
     { src: studioChandelier, alt: "Elegant chandelier in balance studio" },
     { src: studioReformersRow, alt: "Reformer machines in a row" },
     { src: studioNeonSign, alt: "balance neon sign" },
     { src: studioInterior1, alt: "balance studio interior" },
-    { src: studioEntrance, alt: "Studio entrance" },
-    { src: studioHallway, alt: "Studio hallway" },
   ];
 
   return (
