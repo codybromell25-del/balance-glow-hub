@@ -9,6 +9,14 @@ import studioBlessington from "@/assets/studio-blessington.png";
 import studioEnfield from "@/assets/studio-enfield.png";
 import studioBray from "@/assets/studio-bray.png";
 import studioReformersRow from "@/assets/studio-reformers-row.jpg";
+import studioReformersWide from "@/assets/studio-reformers-wide.jpg";
+import studioInstructorHelping from "@/assets/studio-instructor-helping.jpg";
+import studioBallWorkout from "@/assets/studio-ball-workout.jpg";
+import studioLungeWorkout from "@/assets/studio-lunge-workout.jpg";
+import studioLegRaise from "@/assets/studio-leg-raise.jpg";
+import studioWelcome from "@/assets/studio-welcome.jpg";
+import studioMirror from "@/assets/studio-mirror.jpg";
+import studioEquipment from "@/assets/studio-equipment.jpg";
 
 const About = () => {
   return (
@@ -98,22 +106,31 @@ const About = () => {
               {/* Studios Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
-                  <img src={studioReformersRow} alt="Balance studio reformers" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
+                  <img src={studioReformersWide} alt="Balance studio with reformer machines" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
                 <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-                  <img src={studioClane} alt="Balance studio Clane location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
+                  <img src={studioInstructorHelping} alt="Instructor helping clients" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
                 <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
-                  <img src={studioKildare} alt="Balance studio Kildare Town location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
+                  <img src={studioBallWorkout} alt="Ball workout on reformers" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
                 <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
-                  <img src={studioBlessington} alt="Balance studio Blessington location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
+                  <img src={studioLungeWorkout} alt="Lunge exercises on reformers" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
                 <div className="animate-fade-in" style={{ animationDelay: "0.5s" }}>
-                  <img src={studioEnfield} alt="Balance studio Enfield location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
+                  <img src={studioLegRaise} alt="Leg raise exercises" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
                 <div className="animate-fade-in" style={{ animationDelay: "0.6s" }}>
-                  <img src={studioBray} alt="Balance studio Bray location" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
+                  <img src={studioWelcome} alt="Welcome to balance studio" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
+                </div>
+                <div className="animate-fade-in" style={{ animationDelay: "0.7s" }}>
+                  <img src={studioMirror} alt="Studio mirror with branding" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
+                </div>
+                <div className="animate-fade-in" style={{ animationDelay: "0.8s" }}>
+                  <img src={studioEquipment} alt="Pilates equipment" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
+                </div>
+                <div className="animate-fade-in" style={{ animationDelay: "0.9s" }}>
+                  <img src={studioReformersRow} alt="Balance studio reformers" className="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300" />
                 </div>
               </div>
             </div>
