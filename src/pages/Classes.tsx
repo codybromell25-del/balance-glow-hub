@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import ClassesBrandStatement from "@/components/home/ClassesBrandStatement";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Heart, BookOpen, Flame, Trophy, Users } from "lucide-react";
+import { Heart, BookOpen, Flame, Trophy, Users, Sparkles } from "lucide-react";
 
 // Difficulty indicator component
 const DifficultyDots = ({ level }: { level: number }) => {
@@ -158,6 +158,17 @@ const Classes = () => {
         "Perfect complement to your Reformer practice",
         "Builds body awareness and foundational strength",
         "Suitable for all levels with modifications available",
+      ],
+    },
+    {
+      icon: Sparkles,
+      level: "Taster Class",
+      suitable: "Your introduction to Reformer Pilates",
+      difficulty: 1,
+      whatToExpect: [
+        "Designed for new clients",
+        "Good to build confidence before a classic class",
+        "Supportive no pressure intro into reformer",
       ],
     },
   ];
