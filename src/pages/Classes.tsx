@@ -35,12 +35,14 @@ const ClassCard = ({
   suitable, 
   whatToExpect, 
   difficulty,
+  bookingLink = "/our-studios",
 }: { 
   icon: React.ElementType;
   level: string;
   suitable: string;
   whatToExpect: string[];
   difficulty: number;
+  bookingLink?: string;
 }) => {
   const { ref, isVisible } = useScrollAnimation(0.2);
   
@@ -85,7 +87,7 @@ const ClassCard = ({
             className="w-full sm:w-auto relative text-black border-0 shadow-lg hover:brightness-105"
             style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
           >
-            <a href="/our-studios">Book Class</a>
+            <a href={bookingLink} target={bookingLink.startsWith("http") ? "_blank" : undefined} rel={bookingLink.startsWith("http") ? "noopener noreferrer" : undefined}>Book Class</a>
           </Button>
         </div>
       </div>
@@ -170,6 +172,7 @@ const Classes = () => {
         "Good to build confidence before a classic class",
         "Supportive no pressure intro into reformer",
       ],
+      bookingLink: "https://momence.com/balance/membership/Taster-Class/602322",
     },
   ];
 
