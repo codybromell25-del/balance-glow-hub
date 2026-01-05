@@ -113,10 +113,10 @@ const Classes = () => {
     {
       icon: Flame,
       level: "Sculpt",
-      suitable: "Build on your progress or maintain your gains",
+      suitable: "Intermediate",
       difficulty: 3,
       whatToExpect: [
-        "A gentle step up from basics, accessible for all levels",
+        "A gentle step up from basics, accessible after 5 classic classes",
         "Thoughtful challenges with extra core work",
         "Sequences that make your muscles sing in the best way",
         "Strong, supportive, and full of feel-good fire",
