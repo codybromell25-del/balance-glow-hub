@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import ScrollToTop from "./components/ScrollToTop";
-import MomenceChat from "./components/MomenceChat";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Classes from "./pages/Classes";
@@ -37,7 +36,6 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <MomenceChat />
         
         <Routes>
           <Route path="/" element={<Index />} />
