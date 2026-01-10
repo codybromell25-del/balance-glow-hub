@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import { MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import studioClane from "@/assets/studio-clane.png";
 import studioKildare from "@/assets/studio-kildare.png";
 import studioBlessington from "@/assets/studio-blessington.png";
@@ -65,6 +67,12 @@ const Locations = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Studio Locations | balance studios - Reformer Pilates"
+        description="Find your nearest balance studio in Clane, Kildare Town, Blessington, Enfield, or Bray. Book your Reformer Pilates class today."
+        canonical="/locations"
+      />
+      <LocalBusinessSchema />
       <Navigation />
       <main className="pt-20">
         {/* Hero */}

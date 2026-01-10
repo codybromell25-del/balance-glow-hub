@@ -4,6 +4,7 @@ import ClassesBrandStatement from "@/components/home/ClassesBrandStatement";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Heart, BookOpen, Flame, Trophy, Users, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 // Difficulty indicator component
 const DifficultyDots = ({ level }: { level: number }) => {
@@ -178,6 +179,11 @@ const Classes = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Our Classes | balance studios - Reformer Pilates"
+        description="Discover our Reformer Pilates classes - Classic, Sculpt, Challenge, and Gentle Flow. Perfect for beginners to advanced. Book your class today."
+        canonical="/classes"
+      />
       <Navigation />
       <main className="pt-24">
         <ClassesBrandStatement />

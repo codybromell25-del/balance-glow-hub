@@ -3,10 +3,16 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Info } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Pricing = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Pricing & Memberships | balance studios"
+        description="Class packs from €24 and monthly memberships from €80. Intro offer: 3 classes for €50. Valid at all 5 balance studios locations in Kildare and Wicklow."
+        canonical="/pricing"
+      />
       <Navigation />
       <main className="pt-24">
         <PageHeader 

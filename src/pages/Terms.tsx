@@ -1,10 +1,16 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
+import SEO from "@/components/SEO";
 
 const Terms = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Terms & Conditions | balance studios"
+        description="Terms and conditions for balance studios Reformer Pilates classes. Cancellation policy, health and safety, memberships, and class pack agreements."
+        canonical="/terms"
+      />
       <Navigation />
       <main className="pt-24">
         <PageHeader title="Terms & Conditions" />

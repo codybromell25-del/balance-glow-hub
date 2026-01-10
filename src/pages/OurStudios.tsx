@@ -4,6 +4,8 @@ import PageHeader from "@/components/PageHeader";
 import { MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 // Import gallery images
 import studioInterior1 from "@/assets/studio-interior-1.png";
@@ -87,6 +89,12 @@ const OurStudios = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Our Studios | balance studios - Reformer Pilates Ireland"
+        description="Five stunning Reformer Pilates studios across Kildare, Wicklow & Meath. Modern reformers, serene spaces, and expert instructors."
+        canonical="/our-studios"
+      />
+      <LocalBusinessSchema />
       <Navigation />
       <main className="pt-24">
         <PageHeader 

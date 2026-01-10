@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BookOpen, Video, Users } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Blogs = () => {
   const blogPosts = [
@@ -26,6 +27,11 @@ const Blogs = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Blog | balance studios - Reformer Pilates Tips & Insights"
+        description="Tips, insights, and stories from our community to support your wellness journey. Expert guidance on Reformer Pilates, wellness, and mindful living."
+        canonical="/blog"
+      />
       <Navigation />
       <main className="pt-20">
         {/* Hero */}
