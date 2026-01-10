@@ -3,10 +3,16 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const GiftCards = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Gift Cards | balance studios - Reformer Pilates"
+        description="Give the gift of balance. Digital gift cards for Reformer Pilates classes. Valid at all 5 studios, never expires. Perfect for birthdays and special occasions."
+        canonical="/gift-cards"
+      />
       <Navigation />
       <main className="pt-24">
         <PageHeader 

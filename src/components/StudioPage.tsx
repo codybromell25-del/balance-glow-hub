@@ -3,6 +3,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, ShoppingCart, Sparkles, Star, ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 interface StudioInfo {
   name: string;
@@ -110,6 +112,12 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={`${studioInfo.name} Studio | balance studios - Reformer Pilates`}
+        description={`Reformer Pilates in ${studioInfo.name}. ${studioInfo.heroDescription} State-of-the-art reformers, expert instructors. Book your class today.`}
+        canonical={`/studio/${studioInfo.name.toLowerCase()}`}
+      />
+      <LocalBusinessSchema studioName={studioInfo.name} />
       <Navigation />
       <main className="pt-24">
         {/* Hero Section */}

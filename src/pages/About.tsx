@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import InsideScoop from "@/components/home/InsideScoop";
+import SEO from "@/components/SEO";
 import kellyOwner from "@/assets/kelly-owner-new.png";
 import studioClane from "@/assets/studio-clane.png";
 import studioKildare from "@/assets/studio-kildare.png";
@@ -21,6 +22,11 @@ import studioEquipment from "@/assets/studio-equipment.jpg";
 const About = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="About Us | balance studios - Reformer Pilates Ireland"
+        description="Meet Kelly, founder of balance studios. From a home studio in 2015 to 5 luxury Reformer Pilates studios across Kildare, Wicklow, and Meath."
+        canonical="/about"
+      />
       <Navigation />
       <main className="pt-24">
         <PageHeader title="who are balance" />
