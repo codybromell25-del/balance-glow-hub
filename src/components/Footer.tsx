@@ -58,6 +58,26 @@ const Footer = () => {
               <li><Link to="/classes" className="text-black hover:text-primary transition-colors">Classes</Link></li>
               <li><Link to="/pricing" className="text-black hover:text-primary transition-colors">Pricing</Link></li>
               <li><a href="/book-class" className="text-black hover:text-primary transition-colors">Book Now</a></li>
+              <li>
+                <a 
+                  href="https://apps.apple.com/ie/app/balance-reformer-pilates/id6756276683" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-primary transition-colors"
+                >
+                  Download App on iOS
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://play.google.com/store/apps/details?id=com.ribbon.balance&pcampaignid=web_share" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-primary transition-colors"
+                >
+                  Download App on Android
+                </a>
+              </li>
             </ul>
           </div>
 
