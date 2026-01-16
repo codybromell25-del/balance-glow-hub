@@ -52,7 +52,7 @@ const memberships = [
   },
   { 
     classes: "8", 
-    price: "€180", 
+    price: "€160", 
     subtitle: "Monthly Membership",
     classCount: "8 classes per month",
     description: "Ideal for dedicated practitioners who want consistent weekly sessions.",

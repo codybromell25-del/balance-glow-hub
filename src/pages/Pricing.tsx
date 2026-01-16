@@ -186,7 +186,7 @@ const Pricing = () => {
                 {[
                   { classes: "4", price: "€80", perClass: "€20/class", popular: false, link: "https://momence.com/Balance/membership/Monthly-Membership---4-classes/574026" },
                   { classes: "6", price: "€120", perClass: "€20/class", popular: false, link: "https://momence.com/Balance/membership/Monthly-Membership---6-classes/574023" },
-                  { classes: "8", price: "€180", perClass: "€22.50/class", popular: true, link: "https://momence.com/Balance/membership/Monthly-membership---8-classes/574021" },
+                  { classes: "8", price: "€160", perClass: "€20/class", popular: true, link: "https://momence.com/Balance/membership/Monthly-membership---8-classes/574021" },
                   { classes: "Unlimited", price: "€240", perClass: "Best Value", popular: true, link: "https://momence.com/Balance/membership/Monthly-Membership---Unlimited-Reformer-classes/574005" },
                 ].map((membership, index) => (
                   <div
