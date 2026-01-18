@@ -81,8 +81,8 @@ const Pricing = () => {
                 {[
                   { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997", popular: true },
                   { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988", popular: false },
-                  { classes: 6, price: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false },
-                  { classes: 10, price: "€215", validity: "Valid 310 days", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true },
+                  { classes: 6, price: "€115", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false },
+                  { classes: 10, price: "€190", validity: "Valid 310 days", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true },
                   { classes: 20, price: "€400", validity: "Valid 610 days", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995", popular: false },
                 ].map((pack, index) => (
                   <div
@@ -134,7 +134,7 @@ const Pricing = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
                 {[
                   { classes: 1, price: "€15", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/Single-Mat-Class/573998" },
-                  { classes: 4, price: "€50", validity: "Valid 120 days", link: "https://momence.com/Balance/membership/4-Mat-Classes/573999" },
+                  { classes: 4, price: "€40", validity: "Valid 120 days", link: "https://momence.com/Balance/membership/4-Mat-Classes/573999" },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
