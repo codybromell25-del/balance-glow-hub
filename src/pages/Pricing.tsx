@@ -79,17 +79,24 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 {[
-                  { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997", popular: true },
-                  { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988", popular: false },
-                  { classes: 6, price: "€115", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false },
-                  { classes: 10, price: "€190", validity: "Valid 310 days", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true },
-                  { classes: 20, price: "€400", validity: "Valid 610 days", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995", popular: false },
+                  { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997", popular: true, sale: false },
+                  { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988", popular: false, sale: false },
+                  { classes: 6, price: "€115", originalPrice: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false, sale: true },
+                  { classes: 10, price: "€190", originalPrice: "€215", validity: "Valid 310 days", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true, sale: true },
+                  { classes: 20, price: "€400", validity: "Valid 610 days", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995", popular: false, sale: false },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
                     className={`relative bg-background p-6 rounded-lg border-2 hover:shadow-lg transition-all duration-300 animate-fade-in ${pack.popular ? 'border-[#A3C1AD] shadow-lg' : 'border-primary/40 hover:border-primary/60'}`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
+                    {pack.sale && (
+                      <div className="absolute -top-3 -right-3 z-20">
+                        <span className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md animate-pulse">
+                          ⚡ Flash Sale
+                        </span>
+                      </div>
+                    )}
                     {pack.popular && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
                         <span className="text-black px-3 py-1 rounded-full text-xs font-semibold shadow-md" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
@@ -102,7 +109,10 @@ const Pricing = () => {
                         {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
                       </h3>
                     <div className="mb-1">
-                        <span className="text-3xl font-heading font-bold text-black">{pack.price}</span>
+                        {pack.sale && pack.originalPrice && (
+                          <span className="text-lg text-muted-foreground line-through mr-2">{pack.originalPrice}</span>
+                        )}
+                        <span className={`text-3xl font-heading font-bold ${pack.sale ? 'text-red-600' : 'text-black'}`}>{pack.price}</span>
                       </div>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
@@ -133,20 +143,30 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
                 {[
-                  { classes: 1, price: "€15", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/Single-Mat-Class/573998" },
-                  { classes: 4, price: "€40", validity: "Valid 120 days", link: "https://momence.com/Balance/membership/4-Mat-Classes/573999" },
+                  { classes: 1, price: "€15", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/Single-Mat-Class/573998", sale: false },
+                  { classes: 4, price: "€40", originalPrice: "€50", validity: "Valid 120 days", link: "https://momence.com/Balance/membership/4-Mat-Classes/573999", sale: true },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
-                    className="bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                    className="relative bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
+                    {pack.sale && (
+                      <div className="absolute -top-3 -right-3 z-20">
+                        <span className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md animate-pulse">
+                          ⚡ Flash Sale
+                        </span>
+                      </div>
+                    )}
                     <div className="text-center mb-4">
                       <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
                         {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
                       </h3>
                       <div className="mb-1">
-                        <span className="text-3xl font-heading font-bold text-black">{pack.price}</span>
+                        {pack.sale && pack.originalPrice && (
+                          <span className="text-lg text-muted-foreground line-through mr-2">{pack.originalPrice}</span>
+                        )}
+                        <span className={`text-3xl font-heading font-bold ${pack.sale ? 'text-red-600' : 'text-black'}`}>{pack.price}</span>
                       </div>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
