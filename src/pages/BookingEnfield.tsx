@@ -1,16 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
 
 const BookingEnfield = () => {
 
   return (
     <div className="min-h-screen">
-      <SEO 
-        title="Book Enfield Studio | balance studios - Reformer Pilates"
-        description="Book your Reformer Pilates class at balance Enfield. Located on Main Street, Enfield, Co. Meath. Morning, afternoon and evening classes available."
-        canonical="/booking/enfield"
-      />
       <Navigation />
       <main className="pt-20">
         <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">
