@@ -1,10 +1,16 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const BookingBray = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Book Bray Studio | balance studios - Reformer Pilates"
+        description="Book your Reformer Pilates class at balance Bray. Located in IDA Business Park, Southern Cross Rd, Bray, Co. Wicklow. Classes available 7 days a week."
+        canonical="/booking/bray"
+      />
       <Navigation />
       <main className="pt-20">
         <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">
