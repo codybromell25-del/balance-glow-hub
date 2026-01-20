@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import SEO from "@/components/SEO";
 
 const Shop = () => {
   const { toast } = useToast();
@@ -90,6 +91,11 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="Shop | balance studios - Pilates Essentials"
+        description="Shop balance studios essentials. Grip socks, water bottles, yoga mats, and gift vouchers. Elevate your Reformer Pilates practice with quality accessories."
+        canonical="/shop"
+      />
       <Navigation />
       
       <main className="flex-1 pt-24">
