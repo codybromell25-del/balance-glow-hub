@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import SEO from "@/components/SEO";
 
 const BookAll = () => {
   useEffect(() => {
@@ -50,11 +49,6 @@ const BookAll = () => {
 
   return (
     <div className="min-h-screen">
-      <SEO 
-        title="Book a Class | balance studios - Reformer Pilates"
-        description="Book your Reformer Pilates class at any of our 5 balance studios locations. Choose from Clane, Kildare Town, Blessington, Enfield or Bray. Classes 7 days a week."
-        canonical="/book-class"
-      />
       <Navigation />
       <main className="pt-24">
         <PageHeader 

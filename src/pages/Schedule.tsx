@@ -1,15 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
 
 const Schedule = () => {
   return (
     <div className="min-h-screen">
-      <SEO 
-        title="Class Schedule | balance studios - Reformer Pilates"
-        description="View and book Reformer Pilates classes across all 5 balance studios locations. Morning, afternoon and evening classes available 7 days a week."
-        canonical="/schedule"
-      />
       <Navigation />
       <main className="pt-20">
         <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">

@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
 
 const BookingBlessington = () => {
   useEffect(() => {
@@ -32,11 +30,6 @@ const BookingBlessington = () => {
 
   return (
     <div className="min-h-screen">
-      <SEO 
-        title="Book Blessington Studio | balance studios - Reformer Pilates"
-        description="Book your Reformer Pilates class at balance Blessington. Located on The Green, Main Street, Blessington, Co. Wicklow. Classes available 7 days a week."
-        canonical="/booking/blessington"
-      />
       <Navigation />
       <main className="pt-20">
         <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">
