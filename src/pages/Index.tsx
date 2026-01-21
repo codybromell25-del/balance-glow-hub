@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import BrandStatement from "@/components/home/BrandStatement";
 import SocialProofBar from "@/components/home/SocialProofBar";
+import TasterClassesSection from "@/components/home/TasterClassesSection";
 import HumanMoments from "@/components/home/HumanMoments";
 import InsideScoop from "@/components/home/InsideScoop";
 import LocationsSection from "@/components/home/LocationsSection";
@@ -23,9 +24,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <SocialProofBar />
-        
-        
-        
+        <TasterClassesSection />
         <LocationsSection />
         <TestimonialsSection />
       </main>
