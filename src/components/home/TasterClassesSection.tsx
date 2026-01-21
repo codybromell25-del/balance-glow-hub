@@ -47,7 +47,7 @@ const TasterClassesSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-10 animate-fade-in">
           <div className="inline-flex items-center gap-2 bg-[#A3C1AD]/20 px-4 py-2 rounded-full mb-4">
             <Sparkles className="w-4 h-4 text-[#A3C1AD]" />
-            <span className="text-sm font-medium uppercase tracking-wider text-[#A3C1AD]">New to balance?</span>
+            <span className="text-sm font-medium uppercase tracking-wider text-[#1e1a1a]">New to balance?</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-black mb-6 tracking-tight text-[#1e1a1a]">
             Taster Classes Are Here
@@ -95,15 +95,15 @@ const TasterClassesSection = () => {
                 <div className="text-foreground/80">{classItem.date}</div>
                 <div className="text-foreground/80">{classItem.time}</div>
                 <div className="text-right">
-                  <Button 
-                    asChild 
-                    size="sm"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-5"
+                  <a 
+                    href={classItem.bookingLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-black rounded-full transition-colors hover:opacity-90"
+                    style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
                   >
-                    <a href={classItem.bookingLink} target="_blank" rel="noopener noreferrer">
-                      Book Now
-                    </a>
-                  </Button>
+                    Book Now
+                  </a>
                 </div>
               </div>
             ))}
@@ -138,14 +138,15 @@ const TasterClassesSection = () => {
                 </div>
               </div>
               
-              <Button 
-                asChild 
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full"
+              <a 
+                href={classItem.bookingLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-black rounded-full transition-colors hover:opacity-90"
+                style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
               >
-                <a href={classItem.bookingLink} target="_blank" rel="noopener noreferrer">
-                  Book This Class
-                </a>
-              </Button>
+                Book This Class
+              </a>
             </div>
           ))}
         </div>
