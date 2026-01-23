@@ -4,6 +4,7 @@ import balanceLogo from "@/assets/balance-removebg-preview.png";
 const StudioBray = () => {
   const studioInfo = {
     name: "Bray",
+    slug: "bray",
     tagline: "Dynamic Reformer Pilates. Make the right move.",
     heroDescription:
       "Whether you're a beginner or an experienced practitioner, balance Bray has the perfect class for you.",

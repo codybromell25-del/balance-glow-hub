@@ -8,6 +8,7 @@ import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 interface StudioInfo {
   name: string;
+  slug?: string; // URL-friendly version of name for canonical URLs
   tagline: string;
   heroDescription: string;
   detailDescription: string;
@@ -115,7 +116,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
       <SEO 
         title={`${studioInfo.name} Studio | balance studios - Reformer Pilates`}
         description={`Reformer Pilates in ${studioInfo.name}. ${studioInfo.heroDescription} State-of-the-art reformers, expert instructors. Book your class today.`}
-        canonical={`/studio/${studioInfo.name.toLowerCase()}`}
+        canonical={`/studio/${studioInfo.slug || studioInfo.name.toLowerCase().replace(/\s+/g, '-')}`}
       />
       <LocalBusinessSchema studioName={studioInfo.name} />
       <Navigation />

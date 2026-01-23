@@ -4,6 +4,7 @@ import balanceLogo from "@/assets/balance-removebg-preview.png";
 const StudioEnfield = () => {
   const studioInfo = {
     name: "Enfield",
+    slug: "enfield",
     tagline: "Dynamic Reformer Pilates. Make the right move.",
     heroDescription: "Whether you're a beginner or an experienced practitioner, balance Enfield has the perfect class for you.",
     detailDescription: "Located on Main Street in the heart of Enfield, our purpose-built studio features state-of-the-art reformers offering the ultimate Pilates experience. Serving Meath and surrounding areas, we're ready to welcome you.",

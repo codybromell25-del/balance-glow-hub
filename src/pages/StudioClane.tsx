@@ -4,6 +4,7 @@ import claneHero from "@/assets/balance-removebg-preview.png";
 const StudioClane = () => {
   const studioInfo = {
     name: "Clane",
+    slug: "clane",
     tagline: "Dynamic Reformer Pilates. Make the right move.",
     heroDescription: "Whether you're a beginner or an experienced practitioner, balance Clane has the perfect class for you.",
     detailDescription: "Discover our purpose-built studio in the heart of Clane, featuring state-of-the-art reformers, offering the ultimate Pilates experience. Just a short drive from surrounding areas, our studio sits proudly in Yew Tree Square, ready to welcome you.",
