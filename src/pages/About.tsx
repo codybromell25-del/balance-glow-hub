@@ -24,7 +24,7 @@ const About = () => {
     <div className="min-h-screen">
       <SEO 
         title="About Us | balance studios - Reformer Pilates Ireland"
-        description="Meet Kelly, founder of balance studios. From a home studio in 2015 to 5 luxury Reformer Pilates studios across Kildare, Wicklow, and Meath."
+        description="Meet Kelly, founder of balance studios. From a home studio in 2015 to 5 luxury Reformer Pilates studios across Kildare, Wicklow & Meath. For those who expect more."
         canonical="/about"
       />
       <Navigation />

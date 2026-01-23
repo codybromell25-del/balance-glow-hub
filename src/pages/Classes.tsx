@@ -180,8 +180,8 @@ const Classes = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Our Classes | balance studios - Reformer Pilates"
-        description="Discover our Reformer Pilates classes - Classic, Sculpt, Challenge, and Gentle Flow. Perfect for beginners to advanced. Book your class today."
+        title="Class Types | balance studios - Reformer Pilates"
+        description="Expert-led Pilates in beautifully designed studios, with workouts that actually work. Every balance instructor is fully qualified through comprehensive training. Only the best make it into our timetable."
         canonical="/classes"
       />
       <Navigation />
