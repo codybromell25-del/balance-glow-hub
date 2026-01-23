@@ -9,8 +9,8 @@ const Pricing = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Pricing & Memberships | balance studios"
-        description="Class packs from €24 and monthly memberships from €80. Intro offer: 3 classes for €50. Valid at all 5 balance studios locations in Kildare and Wicklow."
+        title="Pricing & Memberships | balance studios - Reformer Pilates"
+        description="Flexible class packs from €24 and monthly memberships from €80. New clients: 3 classes for €50 intro offer. Valid at all 5 balance studios across Kildare, Wicklow & Meath."
         canonical="/pricing"
       />
       <Navigation />
