@@ -25,6 +25,7 @@ import StudioEnfield from "./pages/StudioEnfield";
 import StudioBray from "./pages/StudioBray";
 import Terms from "./pages/Terms";
 import GiftCards from "./pages/GiftCards";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -59,6 +60,7 @@ const App = () => (
           <Route path="/studio/bray" element={<StudioBray />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/gift-cards" element={<GiftCards />} />
+          <Route path="/faq" element={<FAQ />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
