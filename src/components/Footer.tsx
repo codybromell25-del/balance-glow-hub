@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
-import { Instagram, Mail, Phone, MapPin, Facebook, Link2 } from "lucide-react";
+import { Instagram, Facebook, Link2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 
 const Footer = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
     email: "",
     message: ""
   });
@@ -21,16 +21,33 @@ const Footer = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    console.log("Contact form submitted:", formData);
-    
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as we can.",
-    });
-    
-    setFormData({ name: "", phone: "", email: "", message: "" });
-    setIsSubmitting(false);
+    try {
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you as soon as we can.",
+      });
+      
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -51,11 +68,11 @@ const Footer = () => {
   return (
     <footer className="bg-secondary/20 border-t border-border">
       {/* FAQ Link Section */}
-      <div className="bg-secondary/30 py-4">
+      <div className="bg-primary/30 py-4">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-foreground">
             Have questions? We may have your answer in our{" "}
-            <Link to="/faq" className="underline hover:text-primary transition-colors">
+            <Link to="/faq" className="underline hover:text-primary transition-colors font-medium">
               FAQ section — Take a quick look here
             </Link>
             !
@@ -154,14 +171,6 @@ const Footer = () => {
               className="bg-transparent border-border placeholder:text-muted-foreground/60 placeholder:text-xs placeholder:tracking-wider"
             />
             <Input
-              type="tel"
-              name="phone"
-              placeholder="PHONE"
-              value={formData.phone}
-              onChange={handleChange}
-              className="bg-transparent border-border placeholder:text-muted-foreground/60 placeholder:text-xs placeholder:tracking-wider"
-            />
-            <Input
               type="email"
               name="email"
               placeholder="EMAIL"
@@ -182,7 +191,7 @@ const Footer = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full md:w-auto px-12 bg-primary/80 hover:bg-primary text-primary-foreground"
+              className="w-full md:w-auto px-12 bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               {isSubmitting ? "SENDING..." : "SUBMIT"}
             </Button>
