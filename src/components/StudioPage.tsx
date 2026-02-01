@@ -76,7 +76,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
   useEffect(() => {
     if (!studioInfo.showScheduleWidget) return;
 
-    // Add Momence custom styles
+    // Add Momence custom styles for schedule
     const style = document.createElement("style");
     style.innerHTML = `
       :root {
@@ -87,7 +87,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
     `;
     document.head.appendChild(style);
 
-    // Create and load the Momence script
+    // Create and load the Momence schedule script
     const script = document.createElement("script");
     script.async = true;
     script.type = "module";
@@ -110,6 +110,46 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
       script.remove();
     };
   }, [studioInfo.showScheduleWidget]);
+
+  // Load Momence reviews widget
+  useEffect(() => {
+    if (!studioInfo.showScheduleWidget || !studioInfo.locationId) return;
+
+    // Add Momence reviews custom styles
+    const reviewsStyle = document.createElement("style");
+    reviewsStyle.innerHTML = `
+      :root {
+        --momenceReviewColorBackground: #FBFBFB;
+        --momenceBorder: 1px solid rgba(0, 0, 0, 0.08);
+        --momenceBorderRadius: 12px;
+        --momenceBoxShadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.10);
+      }
+    `;
+    document.head.appendChild(reviewsStyle);
+
+    // Create and load the Momence reviews script
+    const reviewsScript = document.createElement("script");
+    reviewsScript.async = true;
+    reviewsScript.type = "module";
+    reviewsScript.src = "https://momence.com/plugin/reviews/reviews.js";
+    reviewsScript.setAttribute("host_id", "62930");
+    reviewsScript.setAttribute("is_profile_picture_enabled", "true");
+    reviewsScript.setAttribute("is_text_only_enabled", "true");
+    reviewsScript.setAttribute("is_session_and_teacher_info_enabled", "true");
+    reviewsScript.setAttribute("layout", "horizontal");
+    reviewsScript.setAttribute("location_id", studioInfo.locationId);
+    reviewsScript.setAttribute("signature", "eb2ebf02f3cadbbf0c4b4bbdaf443e5a293c152686f6c7e5e05dd5b0e49887fe");
+
+    const reviewsContainer = document.getElementById("momence-plugin-reviews");
+    if (reviewsContainer) {
+      reviewsContainer.appendChild(reviewsScript);
+    }
+
+    return () => {
+      reviewsStyle.remove();
+      reviewsScript.remove();
+    };
+  }, [studioInfo.showScheduleWidget, studioInfo.locationId]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -369,6 +409,28 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   </h2>
                 </div>
                 <div id="ribbon-schedule" className="bg-background rounded-2xl p-4 shadow-inner"></div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Momence Reviews Widget */}
+        {studioInfo.showScheduleWidget && (
+          <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+            <div className="absolute top-20 right-10 w-40 h-40 bg-[#A3C1AD]/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-20 left-10 w-60 h-60 bg-[#A3C1AD]/15 rounded-full blur-3xl" />
+            <div className="container mx-auto px-4 relative">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-12">
+                  <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-4" style={{ backgroundColor: 'rgba(163, 193, 173, 0.15)' }}>
+                    <Star className="w-4 h-4" style={{ color: '#A3C1AD' }} />
+                    <span className="text-sm font-medium" style={{ color: '#A3C1AD' }}>What Our Clients Say</span>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading italic text-foreground">
+                    Reviews from {studioInfo.name}
+                  </h2>
+                </div>
+                <div id="momence-plugin-reviews" className="bg-white rounded-2xl p-6 shadow-lg"></div>
               </div>
             </div>
           </section>

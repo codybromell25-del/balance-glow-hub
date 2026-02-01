@@ -5,8 +5,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import emailjs from "@emailjs/browser";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
+
+// EmailJS configuration
+const EMAILJS_SERVICE_ID = "service_ap09r2n";
+const EMAILJS_TEMPLATE_ID = "template_ixon7mo";
+const EMAILJS_PUBLIC_KEY = "zvyWn7c52ArJQNp49";
 
 const Footer = () => {
   const { toast } = useToast();
@@ -22,15 +27,21 @@ const Footer = () => {
     setIsSubmitting(true);
     
     try {
-      const { error } = await supabase.functions.invoke('send-contact-email', {
-        body: {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
           name: formData.name,
           email: formData.email,
-          message: formData.message
-        }
-      });
-
-      if (error) throw error;
+          title: "Website Contact",
+          message: formData.message,
+          time: new Date().toLocaleString('en-IE', { 
+            dateStyle: 'medium', 
+            timeStyle: 'short' 
+          }),
+        },
+        EMAILJS_PUBLIC_KEY
+      );
 
       toast({
         title: "Message sent!",
@@ -38,11 +49,21 @@ const Footer = () => {
       });
       
       setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("Error sending message:", error);
+    } catch (error: unknown) {
+      console.error("EmailJS Error:", error);
+      let errorMessage = "Unknown error";
+      if (error && typeof error === 'object') {
+        if ('text' in error) {
+          errorMessage = String((error as { text: string }).text);
+        } else if ('message' in error) {
+          errorMessage = String((error as { message: string }).message);
+        } else {
+          errorMessage = JSON.stringify(error);
+        }
+      }
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: errorMessage,
         variant: "destructive"
       });
     } finally {
@@ -68,7 +89,7 @@ const Footer = () => {
   return (
     <footer className="bg-secondary/20 border-t border-border">
       {/* FAQ Link Section */}
-      <div className="bg-primary/30 py-4">
+      <div className="bg-[#A3C1AD]/30 py-4">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm text-foreground">
             Have questions? We may have your answer in our{" "}
@@ -102,16 +123,6 @@ const Footer = () => {
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 info@balancestudios.ie
-              </a>
-            </div>
-
-            <div>
-              <p className="text-xs font-semibold tracking-wider text-foreground mb-1">PHONE</p>
-              <a 
-                href="tel:+353" 
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                Contact Us
               </a>
             </div>
 
@@ -191,7 +202,7 @@ const Footer = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full md:w-auto px-12 bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="w-full md:w-auto px-12 bg-[#A3C1AD] hover:bg-[#8FB09A] text-white"
             >
               {isSubmitting ? "SENDING..." : "SUBMIT"}
             </Button>
