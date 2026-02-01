@@ -52,6 +52,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://balancestudios.ie/faq</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://balancestudios.ie/terms</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>yearly</changefreq>
