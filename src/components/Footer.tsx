@@ -104,7 +104,7 @@ const Footer = () => {
       {/* Main Contact Section */}
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground uppercase tracking-wide">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground tracking-wide">
             Contact us via the form
             <br />
             below & we'll get back to
