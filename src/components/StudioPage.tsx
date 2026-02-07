@@ -76,13 +76,16 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
   useEffect(() => {
     if (!studioInfo.showScheduleWidget) return;
 
-    // Add Momence custom styles for schedule
+    // Add Momence custom styles for schedule - match site background
     const style = document.createElement("style");
     style.innerHTML = `
       :root {
         --momenceColorBackground: #FAF3ED;
-        --momenceColorPrimary: 136, 134, 241;
-        --momenceColorBlack: 3, 1, 13;
+        --momenceColorPrimary: 163, 193, 173;
+        --momenceColorBlack: 0, 0, 0;
+      }
+      [data-momence-schedule] {
+        background-color: #FAF3ED !important;
       }
     `;
     document.head.appendChild(style);
@@ -320,95 +323,17 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
           </div>
         </section>
 
-        {/* Studio Details Grid */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-                {/* Left Column - Info Cards */}
-                <div className="space-y-6">
-                  {/* Address Card */}
-                  <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-1.5 opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(90deg, #b8d4c3 0%, #A3C1AD 50%, #8fb39c 100%)' }} />
-                    <div className="flex items-start gap-5">
-                      <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-                        <MapPin className="w-6 h-6 text-black" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-bold text-foreground mb-2">Find Us</h3>
-                        <p className="text-muted-foreground leading-relaxed">{studioInfo.address}</p>
-                        <Button 
-                          asChild 
-                          variant="link" 
-                          className="p-0 h-auto mt-3 font-medium hover:opacity-80"
-                          style={{ color: '#A3C1AD' }}
-                        >
-                          <a 
-                            href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(studioInfo.address)}`} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                          >
-                            Get Directions <ArrowRight className="w-4 h-4 ml-1" />
-                          </a>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                {/* Right Column - About */}
-                <div className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 rounded-3xl p-8 md:p-10 border border-primary/20">
-                  <div className="absolute -top-3 -right-3 w-20 h-20 bg-primary/20 rounded-full blur-2xl" />
-                  <div className="absolute -bottom-5 -left-5 w-28 h-28 bg-secondary/30 rounded-full blur-3xl" />
-                  <div className="relative">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="w-8 h-px bg-primary" />
-                      <span className="text-primary text-xs tracking-widest uppercase font-medium">About Our Studio</span>
-                    </div>
-                    <h2 className="text-2xl md:text-3xl font-heading italic text-foreground mb-6">
-                      Discover the Art of Movement
-                    </h2>
-                    <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-                      {studioInfo.detailDescription}
-                    </p>
-                    <Button 
-                      size="lg" 
-                      className="shadow-lg border-0 text-black"
-                      style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
-                      onClick={() => {
-                        const scheduleSection = document.getElementById('ribbon-schedule');
-                        if (scheduleSection) {
-                          scheduleSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                      }}
-                    >
-                      Book Your First Class <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Momence Schedule Widget */}
         {studioInfo.showScheduleWidget && (
-          <section className="py-16 md:py-24 bg-white relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+          <section className="py-16 md:py-24 bg-background relative overflow-hidden">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-12">
-                  <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
-                    <Sparkles className="w-4 h-4 text-primary" />
-                    <span className="text-primary text-sm font-medium">Book Your Class</span>
-                  </div>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading italic text-foreground">
-                    Secure Your Spot Today
+                    Secure Your Spot Now
                   </h2>
                 </div>
-                <div id="ribbon-schedule" className="bg-background rounded-2xl p-4 shadow-inner"></div>
+                <div id="ribbon-schedule" className="rounded-2xl p-4"></div>
               </div>
             </div>
           </section>
