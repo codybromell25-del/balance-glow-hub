@@ -1,9 +1,21 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
 const BookingMatClasses = () => {
   useEffect(() => {
+    // Add Momence custom styles to match site background
+    const style = document.createElement("style");
+    style.innerHTML = `
+      :root {
+        --momenceColorBackground: #FAF3ED;
+        --momenceColorPrimary: 163, 193, 173;
+        --momenceColorBlack: 0, 0, 0;
+      }
+    `;
+    document.head.appendChild(style);
+
     // Create and inject the Momence script
     const script = document.createElement('script');
     script.async = true;
@@ -22,7 +34,8 @@ const BookingMatClasses = () => {
     }
 
     return () => {
-      // Cleanup script on unmount
+      // Cleanup on unmount
+      style.remove();
       if (script.parentNode) {
         script.parentNode.removeChild(script);
       }
@@ -39,23 +52,24 @@ const BookingMatClasses = () => {
       />
       <Navigation />
       <main className="pt-20">
-        <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-12 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 text-center">
+              <h1 className="text-4xl md:text-5xl font-heading italic text-foreground mb-4 text-center">
                 Book Mat Classes
               </h1>
-              <p className="text-lg text-foreground text-center mb-8">
+              <p className="text-lg text-muted-foreground text-center mb-8">
                 Pilates on the mat — available at Kildare Town only
               </p>
               
-              <div className="bg-card rounded-xl border border-border overflow-hidden shadow-lg p-4" style={{ minHeight: '600px' }}>
+              <div className="rounded-2xl p-4" style={{ minHeight: '600px' }}>
                 <div id="ribbon-schedule"></div>
               </div>
             </div>
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 };
