@@ -1,13 +1,11 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
 const BookingMatClasses = () => {
   useEffect(() => {
-    // Load the Momence script
+    // Create and inject the Momence script
     const script = document.createElement('script');
-    script.src = 'https://momence.com/plugin/host-schedule/host-schedule.js';
     script.async = true;
     script.type = 'module';
     script.setAttribute('host_id', '62930');
@@ -16,11 +14,18 @@ const BookingMatClasses = () => {
     script.setAttribute('tag_ids', '[240428]');
     script.setAttribute('default_filter', 'show-all');
     script.setAttribute('locale', 'en');
+    script.src = 'https://momence.com/plugin/host-schedule/host-schedule.js';
     
-    document.body.appendChild(script);
-    
+    const container = document.getElementById('ribbon-schedule');
+    if (container) {
+      container.appendChild(script);
+    }
+
     return () => {
-      document.body.removeChild(script);
+      // Cleanup script on unmount
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
     };
   }, []);
 
@@ -44,14 +49,13 @@ const BookingMatClasses = () => {
                 Traditional Pilates on the mat — available at Kildare Town only
               </p>
               
-              <div className="bg-card rounded-xl border border-border p-4 shadow-lg">
+              <div className="bg-card rounded-xl border border-border overflow-hidden shadow-lg p-4" style={{ minHeight: '600px' }}>
                 <div id="ribbon-schedule"></div>
               </div>
             </div>
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };
