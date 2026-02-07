@@ -153,7 +153,7 @@ const Classes = () => {
     {
       icon: Users,
       level: "Mat Class",
-      suitable: "Traditional Pilates on the mat — available at Kildare Town only",
+      suitable: "Pilates on the mat — available at Kildare Town only",
       difficulty: 3,
       whatToExpect: [
         "Classic mat Pilates exercises focusing on core strength and flexibility",

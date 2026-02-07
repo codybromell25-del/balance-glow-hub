@@ -46,7 +46,7 @@ const BookingMatClasses = () => {
                 Book Mat Classes
               </h1>
               <p className="text-lg text-foreground text-center mb-8">
-                Traditional Pilates on the mat — available at Kildare Town only
+                Pilates on the mat — available at Kildare Town only
               </p>
               
               <div className="bg-card rounded-xl border border-border overflow-hidden shadow-lg p-4" style={{ minHeight: '600px' }}>
