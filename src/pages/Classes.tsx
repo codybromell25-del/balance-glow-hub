@@ -162,7 +162,7 @@ const Classes = () => {
         "Builds body awareness and foundational strength",
         "Suitable for all levels with modifications available",
       ],
-      bookingLink: "https://momence.com/Balance/membership/Single-Mat-Class/573998",
+      bookingLink: "/booking/mat-classes",
     },
     {
       icon: Sparkles,
