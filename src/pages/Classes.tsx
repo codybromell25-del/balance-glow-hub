@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import ClassesBrandStatement from "@/components/home/ClassesBrandStatement";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Heart, BookOpen, Flame, Trophy, Users, Sparkles } from "lucide-react";
+import { Heart, BookOpen, Flame, Trophy, Users } from "lucide-react";
 import SEO from "@/components/SEO";
 
 // Difficulty indicator component
@@ -163,18 +163,6 @@ const Classes = () => {
         "Suitable for all levels with modifications available",
       ],
       bookingLink: "/booking/mat-classes",
-    },
-    {
-      icon: Sparkles,
-      level: "Taster Class",
-      suitable: "Your introduction to Reformer Pilates",
-      difficulty: 1,
-      whatToExpect: [
-        "Designed for new clients",
-        "Good to build confidence before a classic class",
-        "Supportive no pressure intro into reformer",
-      ],
-      bookingLink: "https://momence.com/balance/membership/Taster-Class/602322",
     },
   ];
 
