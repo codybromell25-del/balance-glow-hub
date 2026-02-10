@@ -149,6 +149,7 @@ const Classes = () => {
         "Perfect for older adults needing extra care and attention",
         "No prior Pilates experience required",
       ],
+      bookingLink: "/booking/gentle-flow",
     },
     {
       icon: Users,
