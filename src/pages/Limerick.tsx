@@ -30,7 +30,7 @@ const Limerick = () => {
       <SEO
         title="balance studios | Coming to Limerick May 2026"
         description="balance is opening in Limerick at The Coach House, Henry Street. Reformer Pilates, Mat Pilates, Yoga & Barre. Register for early access to timetables and launch offers."
-        canonical="/limerick"
+        canonical="/studio/limerick"
         noindex={true}
       />
       <Navigation />
@@ -66,7 +66,7 @@ const Limerick = () => {
               </p>
 
               <a href="#register" className="inline-block">
-                <Button size="lg" className="h-14 px-10 text-base rounded-full">
+                <Button size="lg" className="h-14 px-10 text-base rounded-full bg-[#A3C1AD] hover:bg-[#8FB09A] text-black shadow-lg">
                   Register Your Interest
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -262,7 +262,7 @@ const Limerick = () => {
         </section>
 
         {/* Register Interest CTA */}
-        <section id="register" className="py-16 md:py-24 bg-gradient-button">
+        <section id="register" className="py-16 md:py-24" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
               <Sparkles className="w-8 h-8 text-black/70 mx-auto mb-6" />
