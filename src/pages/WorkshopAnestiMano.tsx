@@ -38,15 +38,15 @@ const WorkshopAnestiMano = () => {
 
                 <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
                   <div className="flex items-center gap-2 bg-background/10 backdrop-blur-sm rounded-full px-4 py-2">
-                    <Calendar size={16} className="text-primary" />
+                    <Calendar size={16} className="text-[#A3C1AD]" />
                     <span className="text-background/90 text-sm font-heading">16 & 17 May 2026</span>
                   </div>
                   <div className="flex items-center gap-2 bg-background/10 backdrop-blur-sm rounded-full px-4 py-2">
-                    <Clock size={16} className="text-primary" />
+                    <Clock size={16} className="text-[#A3C1AD]" />
                     <span className="text-background/90 text-sm font-heading">10 Hours</span>
                   </div>
                   <div className="flex items-center gap-2 bg-background/10 backdrop-blur-sm rounded-full px-4 py-2">
-                    <MapPin size={16} className="text-primary" />
+                    <MapPin size={16} className="text-[#A3C1AD]" />
                     <span className="text-background/90 text-sm font-heading">balance Bray</span>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ const WorkshopAnestiMano = () => {
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <p className="text-primary font-heading font-bold tracking-[0.2em] uppercase text-xs mb-4">
+              <p className="text-[#A3C1AD] font-heading font-bold tracking-[0.2em] uppercase text-xs mb-4">
                 About the Workshop
               </p>
               <h2 className="text-3xl md:text-5xl font-heading font-black text-foreground mb-8 leading-tight">
@@ -130,7 +130,7 @@ const WorkshopAnestiMano = () => {
         <section className="py-16 md:py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <p className="text-primary font-heading font-bold tracking-[0.2em] uppercase text-xs mb-4">
+              <p className="text-[#A3C1AD] font-heading font-bold tracking-[0.2em] uppercase text-xs mb-4">
                 Your Educator
               </p>
               <h2 className="text-3xl md:text-5xl font-heading font-black text-foreground mb-8 leading-tight">
@@ -161,7 +161,7 @@ const WorkshopAnestiMano = () => {
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <p className="text-primary font-heading font-bold tracking-[0.2em] uppercase text-xs mb-4">
+              <p className="text-[#A3C1AD] font-heading font-bold tracking-[0.2em] uppercase text-xs mb-4">
                 Workshop Details
               </p>
               <h2 className="text-3xl md:text-5xl font-heading font-black text-foreground mb-12 leading-tight">
@@ -182,8 +182,8 @@ const WorkshopAnestiMano = () => {
                     className="bg-secondary/30 rounded-xl p-6 border border-border"
                   >
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                        <item.icon size={18} className="text-primary" />
+                      <div className="w-10 h-10 rounded-full bg-[#A3C1AD]/20 flex items-center justify-center">
+                        <item.icon size={18} className="text-[#A3C1AD]" />
                       </div>
                       <p className="font-heading font-bold text-foreground text-sm uppercase tracking-wider">
                         {item.label}
@@ -205,7 +205,7 @@ const WorkshopAnestiMano = () => {
                 </p>
                 <Button
                   size="lg"
-                  className="h-14 px-10 text-base"
+                  className="h-14 px-10 text-base bg-[#A3C1AD] hover:bg-[#8FB09A] text-white"
                   disabled
                 >
                   Booking Link Coming Soon
