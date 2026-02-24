@@ -1,28 +1,34 @@
 
-# Add SEO Meta Data to All Routes
+# Fix Dynamic Meta Data: Remove Hardcoded Tags from index.html
 
-## Summary
-Several pages are missing the `<SEO>` component and therefore have no custom page titles, descriptions, or canonical URLs. This plan adds unique, descriptive meta data to every route that currently lacks it.
+## Problem
+The `index.html` file contains hardcoded `<title>`, `<meta name="description">`, Open Graph, and Twitter Card tags. These are the homepage-specific values, but since this is a Single Page Application, every route loads the same `index.html` first. The `react-helmet-async` `<SEO>` component on each page is supposed to override these dynamically, but the static tags are interfering -- crawlers and link previews often pick up the hardcoded homepage values instead of the page-specific ones.
 
-## Pages Already Covered (no changes needed)
-- Home, About, Classes, Pricing, Locations, OurStudios, GiftCards, FAQ, Terms, Blogs, Shop, NotFound, Limerick, WorkshopAnestiMano, BookAll, BookingGentleFlow, BookingMatClasses
-- All 5 Studio pages (Clane, Kildare, Blessington, Enfield, Bray) -- handled via StudioPage component
+## Solution
+Remove all dynamic meta tags from `index.html` and let `react-helmet-async` manage them entirely on a per-page basis. Keep only the tags that are truly global and should never change (viewport, robots, favicons, fonts, tracking scripts, geo tags, Google verification).
 
-## Pages Missing SEO (8 files to update)
+## What Gets Removed from index.html
+- Line 49: `<title>balance studios | for those who expect more</title>`
+- Line 50: `<meta name="description" content="...">` 
+- Line 51: `<meta name="author" content="balance studios">`
+- Lines 75-83: All `<meta property="og:...">` tags
+- Lines 85-89: All `<meta name="twitter:...">` tags
 
-| Page | Title | Description | Canonical |
-|------|-------|-------------|-----------|
-| **Schedule** | Class Schedule \| balance studios | View live class schedules across all 5 balance studios. Book Reformer Pilates in Clane, Kildare, Blessington, Enfield & Bray. | /schedule |
-| **BookingBray** | Book Bray \| balance studios | Book your Reformer Pilates class at balance Bray. View available times and reserve your spot. | /booking/bray |
-| **BookingClane** | Book Clane \| balance studios | Book your Reformer Pilates class at balance Clane. View available times and reserve your spot. | /booking/clane |
-| **BookingEnfield** | Book Enfield \| balance studios | Book your Reformer Pilates class at balance Enfield. View available times and reserve your spot. | /booking/enfield |
-| **BookingKildare** | Book Kildare \| balance studios | Book your Reformer Pilates class at balance Kildare Town. View available times and reserve your spot. | /booking/kildare |
-| **BookingBlessington** | Book Blessington \| balance studios | Book your Reformer Pilates class at balance Blessington. View available times and reserve your spot. | /booking/blessington |
-| **TestBooking** | Test Booking \| balance studios | Test booking page. | noindex |
-| **Instructors** | Our Instructors \| balance studios | Meet the expert Reformer Pilates instructors at balance studios. Fully qualified, passionate, and dedicated to helping you move better. | /instructors |
+## What Stays in index.html (unchanged)
+- Google Site Verification
+- Tracking scripts (GA, GTM, Clarity, Meta Pixel)
+- Viewport, robots directive
+- Favicon and manifest links
+- Theme color
+- Geo tags for local SEO
+- Font preconnects and stylesheets
+- Noscript fallback content
+
+## Why This Works
+Each page already has a `<SEO>` component that sets title, description, canonical, OG, and Twitter tags dynamically. By removing the static duplicates from `index.html`, `react-helmet-async` becomes the single source of truth, and every route will display its own unique metadata.
 
 ## Technical Details
-- Import `SEO` from `@/components/SEO` in each file
-- Add `<SEO title="..." description="..." canonical="..." />` as the first child inside the outermost `<div>` or fragment
-- TestBooking gets `noindex={true}` since it's a test page
-- All meta data follows the existing lowercase "balance studios" brand convention
+
+**File changed:** `index.html` -- remove 11 lines of hardcoded meta tags (title, description, author, OG block, Twitter block).
+
+No other files need changes. All pages already have their `<SEO>` component with unique props configured from the previous update.
