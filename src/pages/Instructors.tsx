@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const instructors = [
   {
@@ -53,6 +54,7 @@ const instructors = [
 const Instructors = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEO title="Our Instructors | balance studios" description="Meet the expert Reformer Pilates instructors at balance studios. Fully qualified, passionate, and dedicated to helping you move better." canonical="/instructors" />
       <Navigation />
       
       {/* Hero Section */}

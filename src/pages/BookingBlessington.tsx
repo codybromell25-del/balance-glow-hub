@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
 
 const BookingBlessington = () => {
   useEffect(() => {
@@ -30,6 +31,7 @@ const BookingBlessington = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Book Blessington | balance studios" description="Book your Reformer Pilates class at balance Blessington. View available times and reserve your spot." canonical="/booking/blessington" />
       <Navigation />
       <main className="pt-20">
         <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">

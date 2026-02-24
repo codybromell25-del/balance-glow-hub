@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const TestBooking = () => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const TestBooking = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Test Booking | balance studios" description="Test booking page." noindex={true} />
       <Navigation />
       <main className="pt-20">
         <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">

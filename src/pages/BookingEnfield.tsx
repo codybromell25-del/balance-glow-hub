@@ -1,10 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const BookingEnfield = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Book Enfield | balance studios" description="Book your Reformer Pilates class at balance Enfield. View available times and reserve your spot." canonical="/booking/enfield" />
       <Navigation />
       <main className="pt-20">
         <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">
