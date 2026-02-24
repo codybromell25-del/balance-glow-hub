@@ -1,49 +1,28 @@
 
-# Plan: Create Hidden Mat Classes Booking Page
+# Add SEO Meta Data to All Routes
 
-## Overview
-Create a dedicated booking page for Mat Classes that is accessible via a direct link from the Class Types page but not visible in the site navigation. This page will embed the Momence booking widget filtered specifically for mat classes using the tag ID you provided.
+## Summary
+Several pages are missing the `<SEO>` component and therefore have no custom page titles, descriptions, or canonical URLs. This plan adds unique, descriptive meta data to every route that currently lacks it.
 
----
+## Pages Already Covered (no changes needed)
+- Home, About, Classes, Pricing, Locations, OurStudios, GiftCards, FAQ, Terms, Blogs, Shop, NotFound, Limerick, WorkshopAnestiMano, BookAll, BookingGentleFlow, BookingMatClasses
+- All 5 Studio pages (Clane, Kildare, Blessington, Enfield, Bray) -- handled via StudioPage component
 
-## What Will Change
+## Pages Missing SEO (8 files to update)
 
-### 1. New Page: Mat Classes Booking
-- **Location**: `/booking/mat-classes`
-- **Not in navigation**: The page won't appear in the menu - only accessible via direct link
-- **Design**: Matches existing booking pages with the Balance Studios styling
-- **Content includes**:
-  - Page title: "Book Mat Classes"
-  - Subtitle: "Traditional Pilates on the mat - available at Kildare Town only"
-  - Embedded Momence widget filtered by tag ID `240428`
-
-### 2. Update Mat Class Card Link
-- Change the "Book Class" button on the Mat Class card from the external Momence membership link to the new internal page (`/booking/mat-classes`)
-- Uses standard `<a href>` tag (not React Link) to ensure full page reload - this is the workaround for the known Momence widget loading limitation
-
----
-
-## Files to Create/Modify
-
-| File | Action |
-|------|--------|
-| `src/pages/BookingMatClasses.tsx` | Create new booking page with Momence widget |
-| `src/App.tsx` | Add route for `/booking/mat-classes` |
-| `src/pages/Classes.tsx` | Update Mat Class bookingLink to `/booking/mat-classes` |
-
----
+| Page | Title | Description | Canonical |
+|------|-------|-------------|-----------|
+| **Schedule** | Class Schedule \| balance studios | View live class schedules across all 5 balance studios. Book Reformer Pilates in Clane, Kildare, Blessington, Enfield & Bray. | /schedule |
+| **BookingBray** | Book Bray \| balance studios | Book your Reformer Pilates class at balance Bray. View available times and reserve your spot. | /booking/bray |
+| **BookingClane** | Book Clane \| balance studios | Book your Reformer Pilates class at balance Clane. View available times and reserve your spot. | /booking/clane |
+| **BookingEnfield** | Book Enfield \| balance studios | Book your Reformer Pilates class at balance Enfield. View available times and reserve your spot. | /booking/enfield |
+| **BookingKildare** | Book Kildare \| balance studios | Book your Reformer Pilates class at balance Kildare Town. View available times and reserve your spot. | /booking/kildare |
+| **BookingBlessington** | Book Blessington \| balance studios | Book your Reformer Pilates class at balance Blessington. View available times and reserve your spot. | /booking/blessington |
+| **TestBooking** | Test Booking \| balance studios | Test booking page. | noindex |
+| **Instructors** | Our Instructors \| balance studios | Meet the expert Reformer Pilates instructors at balance studios. Fully qualified, passionate, and dedicated to helping you move better. | /instructors |
 
 ## Technical Details
-
-### Momence Widget Configuration
-The widget will use your provided embed code with:
-- `host_id`: 62930
-- `tag_ids`: [240428] (filters to mat classes only)
-- `location_ids`: [] (shows all locations, though mat is Kildare only)
-- `default_filter`: show-all
-
-### Script Loading Pattern
-Following the established pattern from other booking pages:
-- Script injected via `useEffect` on component mount
-- Cleanup on unmount to prevent memory leaks
-- Container div with `id="ribbon-schedule"` for widget placement
+- Import `SEO` from `@/components/SEO` in each file
+- Add `<SEO title="..." description="..." canonical="..." />` as the first child inside the outermost `<div>` or fragment
+- TestBooking gets `noindex={true}` since it's a test page
+- All meta data follows the existing lowercase "balance studios" brand convention
