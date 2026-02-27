@@ -47,7 +47,7 @@ const WorkshopAnestiMano = () => {
                   </div>
                   <div className="flex items-center gap-2 bg-background/10 backdrop-blur-sm rounded-full px-4 py-2">
                     <MapPin size={16} className="text-[#A3C1AD]" />
-                    <span className="text-background/90 text-sm font-heading">balance Bray</span>
+                    <span className="text-background/90 text-sm font-heading">balance Bray -Ireland </span>
                   </div>
                 </div>
 
