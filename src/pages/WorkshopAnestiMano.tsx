@@ -203,16 +203,14 @@ const WorkshopAnestiMano = () => {
                 <p className="text-background/60 font-heading text-sm mb-8">
                   Limited spaces available
                 </p>
-                <Button
-                  size="lg"
-                  className="h-14 px-10 text-base bg-[#A3C1AD] hover:bg-[#8FB09A] text-white"
-                  disabled
-                >
-                  Booking Link Coming Soon
-                </Button>
-                <p className="text-background/40 text-xs font-heading mt-4">
-                  Registration link will be available shortly
-                </p>
+                <a href="https://momence.com/balance/Anesti-Mano-Workshop-/131993809" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    size="lg"
+                    className="h-14 px-10 text-base bg-[#A3C1AD] hover:bg-[#8FB09A] text-white"
+                  >
+                    Book Now
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
