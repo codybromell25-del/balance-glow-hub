@@ -173,7 +173,7 @@ const WorkshopAnestiMano = () => {
               <div className="grid sm:grid-cols-2 gap-6">
                 {[
                 { icon: Calendar, label: "Dates", value: "Saturday 16 & Sunday 17 May 2026" },
-                { icon: Clock, label: "Duration", value: "10 hours across 2 days" },
+                { icon: Clock, label: "Duration", value: "12 hours across 2 days" },
                 { icon: MapPin, label: "Location", value: "balance Bray Studio" },
                 { icon: Award, label: "Accreditation", value: "NPCP Accredited — 12 CEC Points" }].
                 map((item) =>
