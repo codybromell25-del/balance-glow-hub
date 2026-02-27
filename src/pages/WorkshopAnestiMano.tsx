@@ -12,8 +12,8 @@ const WorkshopAnestiMano = () => {
         title="Reformer Gym Vibes® Workshop with Anesti Mano | balance studios"
         description="2-day NPCP-accredited Reformer Gym Vibes® workshop with Anesti Mano at balance Bray. 10 hours, 12 CEC points. May 16-17, 2026."
         canonical="/workshop/anesti-mano"
-        noindex
-      />
+        noindex />
+
       <Navigation />
       <main className="pt-28 md:pt-32">
         {/* Hero Section */}
@@ -43,7 +43,7 @@ const WorkshopAnestiMano = () => {
                   </div>
                   <div className="flex items-center gap-2 bg-background/10 backdrop-blur-sm rounded-full px-4 py-2">
                     <Clock size={16} className="text-[#A3C1AD]" />
-                    <span className="text-background/90 text-sm font-heading">10 Hours</span>
+                    <span className="text-background/90 text-sm font-heading">12 Hours</span>
                   </div>
                   <div className="flex items-center gap-2 bg-background/10 backdrop-blur-sm rounded-full px-4 py-2">
                     <MapPin size={16} className="text-[#A3C1AD]" />
@@ -65,8 +65,8 @@ const WorkshopAnestiMano = () => {
                   <img
                     src={anestiImage}
                     alt="Anesti Mano - Pilates educator and creator of Reformer Gym Vibes"
-                    className="w-full h-full object-cover object-top"
-                  />
+                    className="w-full h-full object-cover object-top" />
+
                 </div>
                 <div className="absolute -bottom-4 -left-4 bg-primary text-foreground rounded-xl px-5 py-3 shadow-lg">
                   <p className="font-heading font-bold text-sm">NPCP Accredited</p>
@@ -172,15 +172,15 @@ const WorkshopAnestiMano = () => {
 
               <div className="grid sm:grid-cols-2 gap-6">
                 {[
-                  { icon: Calendar, label: "Dates", value: "Saturday 16 & Sunday 17 May 2026" },
-                  { icon: Clock, label: "Duration", value: "10 hours across 2 days" },
-                  { icon: MapPin, label: "Location", value: "balance Bray Studio" },
-                  { icon: Award, label: "Accreditation", value: "NPCP Accredited — 12 CEC Points" },
-                ].map((item) => (
-                  <div
-                    key={item.label}
-                    className="bg-secondary/30 rounded-xl p-6 border border-border"
-                  >
+                { icon: Calendar, label: "Dates", value: "Saturday 16 & Sunday 17 May 2026" },
+                { icon: Clock, label: "Duration", value: "10 hours across 2 days" },
+                { icon: MapPin, label: "Location", value: "balance Bray Studio" },
+                { icon: Award, label: "Accreditation", value: "NPCP Accredited — 12 CEC Points" }].
+                map((item) =>
+                <div
+                  key={item.label}
+                  className="bg-secondary/30 rounded-xl p-6 border border-border">
+
                     <div className="flex items-center gap-3 mb-3">
                       <div className="w-10 h-10 rounded-full bg-[#A3C1AD]/20 flex items-center justify-center">
                         <item.icon size={18} className="text-[#A3C1AD]" />
@@ -191,7 +191,7 @@ const WorkshopAnestiMano = () => {
                     </div>
                     <p className="text-muted-foreground font-heading text-lg">{item.value}</p>
                   </div>
-                ))}
+                )}
               </div>
 
               {/* CTA */}
@@ -206,8 +206,8 @@ const WorkshopAnestiMano = () => {
                 <a href="https://momence.com/balance/Anesti-Mano-Workshop-/131993809" target="_blank" rel="noopener noreferrer">
                   <Button
                     size="lg"
-                    className="h-14 px-10 text-base bg-[#A3C1AD] hover:bg-[#8FB09A] text-white"
-                  >
+                    className="h-14 px-10 text-base bg-[#A3C1AD] hover:bg-[#8FB09A] text-white">
+
                     Book Now
                   </Button>
                 </a>
@@ -217,8 +217,8 @@ const WorkshopAnestiMano = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default WorkshopAnestiMano;
