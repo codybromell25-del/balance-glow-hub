@@ -91,7 +91,7 @@ const WorkshopAnestiMano = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={20} className="text-foreground" />
-                <span className="font-heading font-bold text-foreground text-sm">10 Hours Training</span>
+                <span className="font-heading font-bold text-foreground text-sm">12 Hours Training</span>
               </div>
             </div>
           </div>
