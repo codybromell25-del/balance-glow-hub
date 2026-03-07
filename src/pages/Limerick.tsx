@@ -1,11 +1,7 @@
-import { useState } from "react";
 import { MapPin, Calendar, ArrowRight, Sparkles, Heart, Users, Star } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import studioReformersWide from "@/assets/studio-reformers-wide.jpg";
 import clientsLaughing from "@/assets/clients-laughing.jpg";
@@ -16,29 +12,6 @@ import studioInteriorPlants from "@/assets/studio-interior-plants.jpg";
 import studioWelcome from "@/assets/studio-welcome.jpg";
 
 const Limerick = () => {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError("");
-    try {
-      const { data, error: fnError } = await supabase.functions.invoke("send-limerick-interest", {
-        body: { name, email },
-      });
-      if (fnError) throw fnError;
-      setSubmitted(true);
-    } catch (err) {
-      console.error("Error submitting interest:", err);
-      setError("Something went wrong. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <>
@@ -80,12 +53,8 @@ const Limerick = () => {
                 A beautifully designed space for Reformer Pilates, Mat Pilates, Yoga & Barre — opening at The Coach House, Henry Street.
               </p>
 
-              <a href="#register" className="inline-block">
-                <Button size="lg" className="h-14 px-10 text-base rounded-full bg-[#A3C1AD] hover:bg-[#8FB09A] text-black shadow-lg">
-                  Register Your Interest
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </a>
+
+
             </div>
           </div>
         </section>
@@ -276,57 +245,14 @@ const Limerick = () => {
           </div>
         </section>
 
-        {/* Register Interest CTA */}
-        <section id="register" className="py-16 md:py-24" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
+        {/* Closing Section */}
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
-              <Sparkles className="w-8 h-8 text-black/70 mx-auto mb-6" />
-              <h2 className="text-3xl md:text-5xl font-heading font-medium text-black mb-4 tracking-tight">
-                Be the first to know.
+              <Sparkles className="w-8 h-8 text-[#A3C1AD] mx-auto mb-6" />
+              <h2 className="text-3xl md:text-5xl font-heading font-medium text-foreground mb-4 tracking-tight">
+                Excited to see you soon.
               </h2>
-              <p className="text-black/80 text-lg mb-10 leading-relaxed">
-                Register your interest for early access to our opening timetable, bookings, and limited launch offers.
-              </p>
-
-              {submitted ? (
-                <div className="bg-white/30 rounded-2xl p-8 backdrop-blur-sm">
-                  <Heart className="w-10 h-10 text-black/70 mx-auto mb-4" />
-                  <h3 className="text-2xl font-heading font-medium text-black mb-2">You're on the list!</h3>
-                  <p className="text-black/70">We'll be in touch with all the details as we get closer to opening day.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-                  <Input
-                    type="text"
-                    placeholder="Your name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                    className="h-14 bg-white/30 border-white/40 text-black placeholder:text-black/60 font-heading text-base rounded-xl"
-                  />
-                  <Input
-                    type="email"
-                    placeholder="Your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="h-14 bg-white/30 border-white/40 text-black placeholder:text-black/60 font-heading text-base rounded-xl"
-                  />
-                  <Button
-                    type="submit"
-                    size="lg"
-                    disabled={isSubmitting}
-                    className="w-full h-14 bg-black text-white font-heading font-semibold text-base rounded-xl hover:bg-black/90 shadow-lg disabled:opacity-50"
-                  >
-                    {isSubmitting ? "Submitting..." : "Register Your Interest"}
-                    {!isSubmitting && <ArrowRight className="w-5 h-5 ml-2" />}
-                  </Button>
-                  {error && <p className="text-red-800 text-sm mt-2">{error}</p>}
-                  <p className="text-black/60 text-xs mt-4">
-                    By registering, you consent to receive updates from balance about our Limerick studio launch.
-                  </p>
-                </form>
-              )}
             </div>
           </div>
         </section>
