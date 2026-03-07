@@ -1,11 +1,7 @@
-import { useState } from "react";
 import { MapPin, Calendar, ArrowRight, Sparkles, Heart, Users, Star } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import studioReformersWide from "@/assets/studio-reformers-wide.jpg";
 import clientsLaughing from "@/assets/clients-laughing.jpg";
@@ -16,29 +12,6 @@ import studioInteriorPlants from "@/assets/studio-interior-plants.jpg";
 import studioWelcome from "@/assets/studio-welcome.jpg";
 
 const Limerick = () => {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError("");
-    try {
-      const { data, error: fnError } = await supabase.functions.invoke("send-limerick-interest", {
-        body: { name, email },
-      });
-      if (fnError) throw fnError;
-      setSubmitted(true);
-    } catch (err) {
-      console.error("Error submitting interest:", err);
-      setError("Something went wrong. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <>
