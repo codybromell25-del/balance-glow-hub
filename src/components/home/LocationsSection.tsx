@@ -117,7 +117,7 @@ const LocationsSection = () => {
                 <Sparkles className="w-4 h-4 text-[#A3C1AD]" />
               </div>
               <h3 className="text-2xl font-heading font-bold text-foreground tracking-tight">Limerick</h3>
-              <p className="text-muted-foreground text-sm mt-2">Stay tuned for updates</p>
+              <a href="/studio/limerick" className="text-[#A3C1AD] text-sm mt-2 hover:text-[#8fb39c] transition-colors font-medium underline">Click Here To See More</a>
             </div>
 
             {/* Coming Soon Badge */}
