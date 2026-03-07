@@ -315,11 +315,13 @@ const Limerick = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full h-14 bg-black text-white font-heading font-semibold text-base rounded-xl hover:bg-black/90 shadow-lg"
+                    disabled={isSubmitting}
+                    className="w-full h-14 bg-black text-white font-heading font-semibold text-base rounded-xl hover:bg-black/90 shadow-lg disabled:opacity-50"
                   >
-                    Register Your Interest
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    {isSubmitting ? "Submitting..." : "Register Your Interest"}
+                    {!isSubmitting && <ArrowRight className="w-5 h-5 ml-2" />}
                   </Button>
+                  {error && <p className="text-red-800 text-sm mt-2">{error}</p>}
                   <p className="text-black/60 text-xs mt-4">
                     By registering, you consent to receive updates from balance about our Limerick studio launch.
                   </p>
