@@ -25,6 +25,7 @@ const Navigation = () => {
     { name: "Buy a Class", path: "/pricing" },
     { name: "Book a Class", path: "/our-studios" },
     { name: "Events", path: "/events" },
+    { name: "Workshop", path: "/workshop/anesti-mano" },
     { name: "Gift Cards", path: "/gift-cards" },
     { name: "Our Story", path: "/about" },
   ];
