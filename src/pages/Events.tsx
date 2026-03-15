@@ -2,8 +2,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { CalendarDays, MapPin, Clock, ExternalLink, Waves, Heart } from "lucide-react";
+import { CalendarDays, MapPin, Clock, ExternalLink } from "lucide-react";
 import eventHero from "@/assets/balance-seawater-event.png";
+import balanceLogo from "@/assets/balance-removebg-preview.png";
 
 const Events = () => {
   return (
