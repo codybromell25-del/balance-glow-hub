@@ -2,8 +2,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { CalendarDays, MapPin, Clock, ExternalLink, Waves, Heart } from "lucide-react";
+import { CalendarDays, MapPin, Clock, ExternalLink } from "lucide-react";
 import eventHero from "@/assets/balance-seawater-event.png";
+import balanceLogo from "@/assets/balance-removebg-preview.png";
 
 const Events = () => {
   return (
@@ -66,9 +67,8 @@ const Events = () => {
                 A perfect way to step away from the busy pace of life and give your mind and body the reset it deserves.
               </p>
 
-              <div className="flex items-center justify-center gap-3 pt-4">
-                <Waves size={24} className="text-primary" />
-                <Heart size={24} className="text-white" fill="white" />
+              <div className="flex items-center justify-center pt-4">
+                <img src={balanceLogo} alt="balance studios" className="h-16 w-auto opacity-70" />
               </div>
             </div>
 
