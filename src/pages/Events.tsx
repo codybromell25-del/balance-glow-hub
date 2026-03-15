@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { CalendarDays, MapPin, Clock, ExternalLink } from "lucide-react";
+import { CalendarDays, MapPin, Clock, ExternalLink, Waves, Heart } from "lucide-react";
 import eventHero from "@/assets/balance-seawater-event.png";
 
 const Events = () => {
@@ -46,9 +46,31 @@ const Events = () => {
             />
 
             {/* Body Copy */}
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12 text-center">
-              Start with Mat Pilates at Seawater Saunas, then relax with use of the rooftop saunas, hot tubs, plunge pools and ice baths, before heading to Catalyst for coffee, a treat and a chat. A gorgeous morning to reset by the sea.
-            </p>
+            <div className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12 space-y-6 text-center">
+              <p>
+                Join us for a beautiful morning by the sea designed to help you slow down, move your body, and completely reset.
+              </p>
+              <p>
+                We begin with a Mat Pilates class at the stunning Seawater Saunas, where you will move through a full-body session designed to gently energise and strengthen.
+              </p>
+              <p>
+                After class, enjoy access to Seawater Saunas' incredible rooftop wellness facilities overlooking the Irish Sea. Relax and unwind with hot tubs, plunge pools, ice baths and saunas, experiencing the powerful benefits of contrast therapy in a truly immersive coastal setting.
+              </p>
+              <p>
+                Once you are fully relaxed and refreshed, we will take a short stroll across the road to Catalyst Coffee for a well deserved coffee and treat, and a chance to chat and connect with the group.
+              </p>
+              <p>
+                Expect movement, sea air, warmth, great coffee, and great company.
+              </p>
+              <p>
+                A perfect way to step away from the busy pace of life and give your mind and body the reset it deserves.
+              </p>
+
+              <div className="flex items-center justify-center gap-3 pt-4">
+                <Waves size={24} className="text-primary" />
+                <Heart size={24} className="text-white" fill="white" />
+              </div>
+            </div>
 
             {/* CTA */}
             <div className="text-center">
