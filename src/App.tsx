@@ -30,7 +30,6 @@ import GiftCards from "./pages/GiftCards";
 import FAQ from "./pages/FAQ";
 import Limerick from "./pages/Limerick";
 import WorkshopAnestiMano from "./pages/WorkshopAnestiMano";
-import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
