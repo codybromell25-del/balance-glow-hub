@@ -80,7 +80,7 @@ const LimerickLeadPopup = () => {
               Be the first to find out!
             </DialogTitle>
             <DialogDescription className="text-base leading-relaxed text-muted-foreground">
-              Sign up to be the first to know when we launch and exclusive intro offers
+              Sign up to be the first to know when we launch and have access to exclusive intro offers
             </DialogDescription>
           </DialogHeader>
 
