@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 
 const MOMENCE_SCRIPT_ID = "momence-plugin-lead-form-src";
-const MOMENCE_CONTAINER_ID = "momence-plugin-lead-form";
+const MOMENCE_STYLE_ID = "momence-plugin-lead-form-style";
 
 const LimerickLeadPopup = () => {
   const [open, setOpen] = useState(false);
@@ -25,6 +25,21 @@ const LimerickLeadPopup = () => {
   useEffect(() => {
     if (!open || typeof document === "undefined") {
       return;
+    }
+
+    const existingStyle = document.getElementById(MOMENCE_STYLE_ID);
+
+    if (!existingStyle) {
+      const style = document.createElement("style");
+      style.id = MOMENCE_STYLE_ID;
+      style.textContent = `
+        :root {
+          --momenceColorBackground: #FBFBFB;
+          --momenceColorPrimary: 163, 193, 173;
+          --momenceColorBlack: 3, 1, 13;
+        }
+      `;
+      document.head.appendChild(style);
     }
 
     const existingScript = document.getElementById(MOMENCE_SCRIPT_ID);
@@ -50,6 +65,7 @@ const LimerickLeadPopup = () => {
         phoneNumber: { type: "phone-number", label: "Phone number", required: true },
       }),
     );
+    script.setAttribute("data-on-success-msg", "Excited to see you soon!");
     script.src = "https://momence.com/plugin/lead-form/lead-form.js";
 
     document.body.appendChild(script);
@@ -64,7 +80,7 @@ const LimerickLeadPopup = () => {
               Be the first to find out!
             </DialogTitle>
             <DialogDescription className="text-base leading-relaxed text-muted-foreground">
-              Join the Limerick waitlist for launch updates, early access, and first news from the new studio.
+              Sign up to be the first to know when we launch and exclusive intro offers
             </DialogDescription>
           </DialogHeader>
 
@@ -72,7 +88,7 @@ const LimerickLeadPopup = () => {
             className="min-h-[320px] rounded-2xl border border-border/60 bg-card p-4 sm:p-6"
             aria-live="polite"
           >
-            <div id={MOMENCE_CONTAINER_ID} />
+            <div id="momence-plugin-lead-form" />
           </div>
         </div>
       </DialogContent>
