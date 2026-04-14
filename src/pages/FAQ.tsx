@@ -46,11 +46,7 @@ const faqData = [
         a: "Pilates can support injury recovery, but always consult your healthcare provider first. Our instructors will modify exercises as needed."
       },
       {
-        q: "Can I do Pilates if I'm pregnant or postnatal?",
-        a: "Pregnancy and postnatal sessions may require adjustments. Please refer to balance policies or speak to a team member before booking."
-      },
-      {
-        q: "Can I attend regular classes at balance while pregnant?",
+        q: "Can I attend regular classes at balance while pregnant or postnatal?",
         a: "Our regular classes aren't suitable during pregnancy at any stage. We recommend joining our Gentle Flow classes instead, which are designed to support you safely throughout all trimesters."
       },
       {
