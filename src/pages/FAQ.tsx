@@ -30,7 +30,7 @@ const faqData = [
       },
       {
         q: "Do you offer intro offers or beginner packages?",
-        a: "Yes, we have introductory packages available. Please check our website or refer to Balance policies for details."
+        a: "Yes, we have introductory packages available. Please check our website or refer to balance policies for details."
       },
       {
         q: "How early should I arrive for my first class?",
@@ -47,7 +47,11 @@ const faqData = [
       },
       {
         q: "Can I do Pilates if I'm pregnant or postnatal?",
-        a: "Pregnancy and postnatal sessions may require adjustments. Please refer to Balance policies or speak to a team member before booking."
+        a: "Pregnancy and postnatal sessions may require adjustments. Please refer to balance policies or speak to a team member before booking."
+      },
+      {
+        q: "Can I attend regular classes at balance while pregnant?",
+        a: "Our regular classes aren't suitable during pregnancy at any stage. We recommend joining our Gentle Flow classes instead, which are designed to support you safely throughout all trimesters."
       },
       {
         q: "Can I attend if I'm injured?",
@@ -59,7 +63,7 @@ const faqData = [
       },
       {
         q: "Is Pilates suitable during pregnancy?",
-        a: "Certain classes are safe; please refer to Balance policies or speak with staff."
+        a: "Certain classes are safe; please refer to balance policies or speak with staff."
       },
       {
         q: "What if I feel pain during class?",
