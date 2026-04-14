@@ -68,6 +68,10 @@ const faqData = [
       {
         q: "What if I feel pain during class?",
         a: "Stop and notify the instructor immediately."
+      },
+      {
+        q: "Where can I find balance's health and safety information?",
+        a: "Our health and safety policies can be found on our Terms & Conditions page. If you have any specific concerns, please don't hesitate to contact us directly."
       }
     ]
   },
