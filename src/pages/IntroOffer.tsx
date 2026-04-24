@@ -13,7 +13,7 @@ const includes = [
   "3 reformer Pilates classes",
   "Use across any of our 5 studios",
   "Try any class level — beginner friendly",
-  "Valid for 14 days from purchase",
+  "Try different instructors & class styles",
   "First-time clients only",
 ];
 
@@ -97,7 +97,7 @@ const IntroOffer = () => {
             </Button>
 
             <p className="text-white/70 text-sm mt-6 font-light">
-              First-time clients only · Valid for 14 days
+              First-time clients only
             </p>
           </div>
         </div>
@@ -208,7 +208,7 @@ const IntroOffer = () => {
             Ready to feel the balance difference?
           </h2>
           <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-            3 classes. €50. 14 days. No commitment after.
+            3 classes. €50. No commitment after.
           </p>
           <Button
             asChild
