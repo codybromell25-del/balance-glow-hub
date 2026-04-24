@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import { useTestimonials } from "@/hooks/use-cms-data";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
-import heroImage from "@/assets/hero-studio-new.png";
+import heroImage from "@/assets/intro-offer-hero.jpeg";
 
 const MOMENCE_URL =
   "https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031";
