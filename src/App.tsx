@@ -30,6 +30,7 @@ import GiftCards from "./pages/GiftCards";
 import FAQ from "./pages/FAQ";
 import Limerick from "./pages/Limerick";
 import WorkshopAnestiMano from "./pages/WorkshopAnestiMano";
+import IntroOffer from "./pages/IntroOffer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -69,6 +70,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/studio/limerick" element={<Limerick />} />
           <Route path="/workshop/anesti-mano" element={<WorkshopAnestiMano />} />
+          <Route path="/intro-offer" element={<IntroOffer />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
