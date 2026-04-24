@@ -50,9 +50,9 @@ const IntroOffer = () => {
       />
 
       {/* Minimal header — logo only, no nav */}
-      <header className="w-full py-4 border-b border-border">
+      <header className="w-full py-6 md:py-8 border-b border-border">
         <div className="container mx-auto px-4 flex justify-center">
-          <img src={balanceLogo} alt="balance reformer pilates" className="h-14 w-auto" />
+          <img src={balanceLogo} alt="balance reformer pilates" className="h-24 md:h-32 w-auto" />
         </div>
       </header>
 
