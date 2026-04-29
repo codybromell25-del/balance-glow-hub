@@ -17,6 +17,7 @@ import BookingClane from "./pages/BookingClane";
 import BookingEnfield from "./pages/BookingEnfield";
 import BookingKildare from "./pages/BookingKildare";
 import BookingBlessington from "./pages/BookingBlessington";
+import BookingLimerick from "./pages/BookingLimerick";
 import BookingMatClasses from "./pages/BookingMatClasses";
 import BookingGentleFlow from "./pages/BookingGentleFlow";
 import OurStudios from "./pages/OurStudios";
@@ -56,6 +57,7 @@ const App = () => (
           <Route path="/booking/enfield" element={<BookingEnfield />} />
           <Route path="/booking/kildare" element={<BookingKildare />} />
           <Route path="/booking/blessington" element={<BookingBlessington />} />
+          <Route path="/booking/limerick" element={<BookingLimerick />} />
           <Route path="/booking/mat-classes" element={<BookingMatClasses />} />
           <Route path="/booking/gentle-flow" element={<BookingGentleFlow />} />
           <Route path="/book-class" element={<OurStudios />} />
