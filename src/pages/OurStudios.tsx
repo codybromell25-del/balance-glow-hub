@@ -70,6 +70,15 @@ const OurStudios = () => {
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Balance+Bray+Industrial+Development+Agency+Business+Park+Southern+Cross+Rd+Irishtown+Bray+Co.+Wicklow+A98+T276+Ireland",
       hasDetailPage: true,
     },
+    {
+      name: "Limerick Studio",
+      slug: "limerick",
+      address: "The Coach House, Henry Street, Limerick, Ireland",
+      parking: "City centre parking nearby",
+      hours: "Opening May 2026",
+      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=The+Coach+House+Henry+Street+Limerick+Ireland",
+      hasDetailPage: true,
+    },
   ];
 
   const galleryImages = [
