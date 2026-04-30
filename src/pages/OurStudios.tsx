@@ -151,11 +151,7 @@ const OurStudios = () => {
 
                       {/* Buttons */}
                       <div className="flex gap-3">
-                        {studio.slug === 'limerick' ? (
-                          <Button asChild className="flex-1 border-0 text-black shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-                            <a href={`/booking/${studio.slug}`}>Book Now</a>
-                          </Button>
-                        ) : studio.hasDetailPage ? (
+                        {studio.hasDetailPage ? (
                           <Button asChild className="flex-1 border-0 text-black shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                             <a href={`/studio/${studio.slug}`}>View Studio</a>
                           </Button>
