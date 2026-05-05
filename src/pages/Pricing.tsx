@@ -175,7 +175,7 @@ const Pricing = () => {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-10 md:mb-12">
                 <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
-                  Monthly Memberships
+                  Reformer Memberships
                 </h2>
                 <p className="text-lg text-muted-foreground">
                   Best value for regular practice. Auto-renews monthly, classes don't carry over.
