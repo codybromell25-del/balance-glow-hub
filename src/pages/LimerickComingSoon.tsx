@@ -61,7 +61,7 @@ const LimerickComingSoon = () => {
             </p>
             <Button
               size="lg"
-              onClick={scrollToForm}
+              onClick={openLeadForm}
               className="bg-[#A3C1AD] text-black hover:bg-[#8fb39c] shadow-xl"
             >
               Register Your Interest
@@ -227,7 +227,7 @@ const LimerickComingSoon = () => {
               </p>
               <Button
                 size="lg"
-                onClick={scrollToForm}
+                onClick={openLeadForm}
                 className="bg-black text-white hover:bg-black/85 shadow-xl"
               >
                 Sign Up For Early Access
