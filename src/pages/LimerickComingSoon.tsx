@@ -12,8 +12,8 @@ import clientsStretching from "@/assets/clients-stretching.jpg";
 import clientsMat from "@/assets/clients-mat-workout.jpg";
 import studioInstructor from "@/assets/studio-instructor-helping.jpg";
 
-const scrollToForm = () => {
-  document.getElementById("register-interest")?.scrollIntoView({ behavior: "smooth" });
+const openLeadForm = () => {
+  window.dispatchEvent(new Event("open-limerick-lead-popup"));
 };
 
 const LimerickComingSoon = () => {
