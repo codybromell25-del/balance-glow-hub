@@ -19,7 +19,13 @@ const LimerickLeadPopup = () => {
       setOpen(true);
     }, 3000);
 
-    return () => window.clearTimeout(timer);
+    const handleOpen = () => setOpen(true);
+    window.addEventListener("open-limerick-lead-popup", handleOpen);
+
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("open-limerick-lead-popup", handleOpen);
+    };
   }, []);
 
   useEffect(() => {
