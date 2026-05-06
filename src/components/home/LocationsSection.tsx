@@ -94,7 +94,7 @@ const LocationsSection = () => {
           
           {/* Limerick Coming Soon Tile */}
           <a 
-            href="/studio/limerick"
+            href="/limerick-coming-soon"
             className="group relative block h-64 rounded-2xl overflow-hidden shadow-lg animate-fade-in hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
             style={{ 
               animationDelay: '0.5s',

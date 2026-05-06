@@ -30,6 +30,7 @@ import Terms from "./pages/Terms";
 import GiftCards from "./pages/GiftCards";
 import FAQ from "./pages/FAQ";
 import Limerick from "./pages/Limerick";
+import LimerickComingSoon from "./pages/LimerickComingSoon";
 import WorkshopAnestiMano from "./pages/WorkshopAnestiMano";
 import IntroOffer from "./pages/IntroOffer";
 import NotFound from "./pages/NotFound";
@@ -71,6 +72,7 @@ const App = () => (
           <Route path="/gift-cards" element={<GiftCards />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/studio/limerick" element={<Limerick />} />
+          <Route path="/limerick-coming-soon" element={<LimerickComingSoon />} />
           <Route path="/workshop/anesti-mano" element={<WorkshopAnestiMano />} />
           <Route path="/intro-offer" element={<IntroOffer />} />
           
