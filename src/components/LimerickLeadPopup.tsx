@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import {
   Dialog,
@@ -13,20 +13,32 @@ const MOMENCE_STYLE_ID = "momence-plugin-lead-form-style";
 
 const LimerickLeadPopup = () => {
   const [open, setOpen] = useState(false);
+  const [formInstance, setFormInstance] = useState(0);
+
+  const openLeadForm = useCallback(() => {
+    setFormInstance((current) => current + 1);
+    setOpen(true);
+  }, []);
+
+  const handleOpenChange = (nextOpen: boolean) => {
+    if (nextOpen) {
+      openLeadForm();
+      return;
+    }
+
+    setOpen(false);
+  };
 
   useEffect(() => {
-    const timer = window.setTimeout(() => {
-      setOpen(true);
-    }, 3000);
+    const timer = window.setTimeout(openLeadForm, 3000);
 
-    const handleOpen = () => setOpen(true);
-    window.addEventListener("open-limerick-lead-popup", handleOpen);
+    window.addEventListener("open-limerick-lead-popup", openLeadForm);
 
     return () => {
       window.clearTimeout(timer);
-      window.removeEventListener("open-limerick-lead-popup", handleOpen);
+      window.removeEventListener("open-limerick-lead-popup", openLeadForm);
     };
-  }, []);
+  }, [openLeadForm]);
 
   useEffect(() => {
     if (!open || typeof document === "undefined") {
@@ -48,11 +60,7 @@ const LimerickLeadPopup = () => {
       document.head.appendChild(style);
     }
 
-    const existingScript = document.getElementById(MOMENCE_SCRIPT_ID);
-
-    if (existingScript) {
-      return;
-    }
+    document.getElementById(MOMENCE_SCRIPT_ID)?.remove();
 
     const script = document.createElement("script");
     script.async = true;
@@ -72,13 +80,16 @@ const LimerickLeadPopup = () => {
       }),
     );
     script.setAttribute("data-on-success-msg", "Excited to see you soon!");
-    script.src = "https://momence.com/plugin/lead-form/lead-form.js";
+    script.src = `https://momence.com/plugin/lead-form/lead-form.js?instance=${formInstance}`;
 
     document.body.appendChild(script);
-  }, [open]);
+    return () => {
+      document.getElementById(MOMENCE_SCRIPT_ID)?.remove();
+    };
+  }, [open, formInstance]);
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="max-w-xl border-border/60 bg-background/95 p-0 sm:rounded-3xl">
         <div className="space-y-6 p-6 sm:p-8">
           <DialogHeader className="space-y-3 text-left">
@@ -94,7 +105,7 @@ const LimerickLeadPopup = () => {
             className="min-h-[320px] rounded-2xl border border-border/60 bg-card p-4 sm:p-6"
             aria-live="polite"
           >
-            <div id="momence-plugin-lead-form" />
+            <div key={formInstance} id="momence-plugin-lead-form" />
           </div>
         </div>
       </DialogContent>
