@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import heroImage from "@/assets/intro-offer-hero.jpeg";
-import limerickStudio1 from "@/assets/limerick-studio-1.jpg";
+
 import limerickStudio2 from "@/assets/limerick-studio-2.jpg";
 import limerickStudio3 from "@/assets/limerick-studio-3.jpg";
 import limerickStudio4 from "@/assets/limerick-studio-4.jpg";
@@ -203,8 +203,8 @@ const IntroOfferLimerick = () => {
       </section>
 
       {/* Atmospheric studio image band — split */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-1">
-        <div className="relative h-[55vh] md:h-[80vh] overflow-hidden">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-1.5">
+        <div className="relative aspect-[4/5] md:aspect-auto md:h-[75vh] overflow-hidden">
           <img
             src={limerickStudio4}
             alt="The balance Limerick studio — natural light, plants and reformer pilates beds"
@@ -212,7 +212,7 @@ const IntroOfferLimerick = () => {
             loading="lazy"
           />
         </div>
-        <div className="relative h-[55vh] md:h-[80vh] overflow-hidden">
+        <div className="relative aspect-[4/5] md:aspect-auto md:h-[75vh] overflow-hidden">
           <img
             src={limerickStudio6}
             alt="A row of reformer pilates beds at balance Limerick"
@@ -238,7 +238,7 @@ const IntroOfferLimerick = () => {
             and meet your people. It's all about balance.
           </p>
 
-          <div className="my-10 rounded-3xl overflow-hidden">
+          <div className="my-10 rounded-2xl md:rounded-3xl overflow-hidden">
             <img
               src={limerickStudio3}
               alt="Inside the balance Limerick reformer pilates studio"
@@ -261,8 +261,8 @@ const IntroOfferLimerick = () => {
       </section>
 
       {/* Studio image band — split */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-1">
-        <div className="relative h-[50vh] md:h-[70vh] overflow-hidden">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-1.5">
+        <div className="relative aspect-[4/5] md:aspect-auto md:h-[70vh] overflow-hidden">
           <img
             src={limerickStudio5}
             alt="balance Limerick instructor guiding a reformer pilates client"
@@ -270,7 +270,7 @@ const IntroOfferLimerick = () => {
             loading="lazy"
           />
         </div>
-        <div className="relative h-[50vh] md:h-[70vh] overflow-hidden">
+        <div className="relative aspect-[4/5] md:aspect-auto md:h-[70vh] overflow-hidden">
           <img
             src={limerickStudio2}
             alt="balance Limerick reformer pilates studio"
