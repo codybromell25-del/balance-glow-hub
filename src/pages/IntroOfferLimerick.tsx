@@ -8,6 +8,7 @@ import limerickStudio1 from "@/assets/limerick-studio-1.jpg";
 import limerickStudio2 from "@/assets/limerick-studio-2.jpg";
 import limerickStudio3 from "@/assets/limerick-studio-3.jpg";
 import limerickStudio4 from "@/assets/limerick-studio-4.jpg";
+import limerickStudio5 from "@/assets/limerick-studio-5.jpg";
 
 const REFORMER_URL =
   "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017";
@@ -248,14 +249,24 @@ const IntroOfferLimerick = () => {
         </div>
       </section>
 
-      {/* Studio image band */}
-      <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-        <img
-          src={limerickStudio2}
-          alt="balance Limerick instructors guiding a reformer pilates client"
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
+      {/* Studio image band — split */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-1">
+        <div className="relative h-[50vh] md:h-[70vh] overflow-hidden">
+          <img
+            src={limerickStudio5}
+            alt="balance Limerick instructor guiding a reformer pilates client"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="relative h-[50vh] md:h-[70vh] overflow-hidden">
+          <img
+            src={limerickStudio2}
+            alt="balance Limerick reformer pilates studio"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
       </section>
 
       {/* What to expect */}
