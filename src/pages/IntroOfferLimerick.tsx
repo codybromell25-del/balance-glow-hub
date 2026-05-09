@@ -7,6 +7,7 @@ import heroImage from "@/assets/intro-offer-hero.jpeg";
 import limerickStudio1 from "@/assets/limerick-studio-1.jpg";
 import limerickStudio2 from "@/assets/limerick-studio-2.jpg";
 import limerickStudio3 from "@/assets/limerick-studio-3.jpg";
+import limerickStudio4 from "@/assets/limerick-studio-4.jpg";
 
 const REFORMER_URL =
   "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017";
@@ -197,6 +198,16 @@ const IntroOfferLimerick = () => {
             ⏳ Offer runs for one week only — from Monday to Monday. Once it's gone, it's gone.
           </p>
         </div>
+      </section>
+
+      {/* Atmospheric studio image band */}
+      <section className="relative h-[60vh] md:h-[80vh] overflow-hidden">
+        <img
+          src={limerickStudio4}
+          alt="The balance Limerick studio — natural light, plants and reformer pilates beds"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
       </section>
 
       {/* Wellness hub */}
