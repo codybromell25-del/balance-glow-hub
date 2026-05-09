@@ -249,14 +249,24 @@ const IntroOfferLimerick = () => {
         </div>
       </section>
 
-      {/* Studio image band */}
-      <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-        <img
-          src={limerickStudio2}
-          alt="balance Limerick instructors guiding a reformer pilates client"
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
+      {/* Studio image band — split */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-1">
+        <div className="relative h-[50vh] md:h-[70vh] overflow-hidden">
+          <img
+            src={limerickStudio5}
+            alt="balance Limerick instructor guiding a reformer pilates client"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="relative h-[50vh] md:h-[70vh] overflow-hidden">
+          <img
+            src={limerickStudio2}
+            alt="balance Limerick reformer pilates studio"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
       </section>
 
       {/* What to expect */}
