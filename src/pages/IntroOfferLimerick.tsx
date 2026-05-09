@@ -287,8 +287,11 @@ const IntroOfferLimerick = () => {
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="rounded-full px-8 py-7 font-heading font-semibold text-base"
+              className="rounded-full px-8 py-7 font-heading font-semibold text-base shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-0 text-black"
+              style={{
+                background:
+                  "linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)",
+              }}
             >
               <a href={MAT_URL} target="_blank" rel="noopener noreferrer">
                 Mat / Barre / Yoga · €35
