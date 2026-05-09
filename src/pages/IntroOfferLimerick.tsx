@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import heroImage from "@/assets/intro-offer-hero.jpeg";
+import limerickStudio1 from "@/assets/limerick-studio-1.jpg";
 
 const REFORMER_URL =
   "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017";
@@ -203,15 +204,25 @@ const IntroOfferLimerick = () => {
             More than a studio
           </p>
           <h2 className="text-3xl md:text-5xl font-heading font-black text-foreground mb-6 tracking-tight">
-            A complete wellness hub for Limerick
+            Limerick's first true wellness hub
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
-            Reformer pilates, mat, barre and yoga — all in one beautifully designed space.
-            Nothing else like it in the area. Whether you're chasing strength, flexibility,
-            stillness or community, you'll find your balance here.
+            One stunning space. Four ways to move. Reformer pilates, mat, barre and yoga —
+            led by expert instructors in a studio designed to feel like a breath of fresh air.
+            There's nothing else like it in Limerick. Come build strength, find calm, move better,
+            and meet your people. This is where your balance begins.
           </p>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="my-10 rounded-3xl overflow-hidden shadow-xl">
+            <img
+              src={limerickStudio1}
+              alt="Inside the balance Limerick reformer pilates studio"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mt-10">
             {["Reformer Pilates", "Mat Pilates", "Barre", "Yoga"].map((item) => (
               <div
                 key={item}
@@ -276,8 +287,11 @@ const IntroOfferLimerick = () => {
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="rounded-full px-8 py-7 font-heading font-semibold text-base"
+              className="rounded-full px-8 py-7 font-heading font-semibold text-base shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-0 text-black"
+              style={{
+                background:
+                  "linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)",
+              }}
             >
               <a href={MAT_URL} target="_blank" rel="noopener noreferrer">
                 Mat / Barre / Yoga · €35
