@@ -263,22 +263,24 @@ const IntroOfferLimerick = () => {
       </section>
 
       {/* Studio image band — split */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-1.5">
-        <div className="relative aspect-[4/5] md:aspect-auto md:h-[70vh] overflow-hidden">
-          <img
-            src={limerickStudio5}
-            alt="balance Limerick instructor guiding a reformer pilates client"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-        <div className="relative aspect-[4/5] md:aspect-auto md:h-[70vh] overflow-hidden">
-          <img
-            src={limerickStudio2}
-            alt="balance Limerick reformer pilates studio"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+      <section className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+          <div className="relative aspect-[4/5] md:aspect-auto md:h-[70vh] overflow-hidden rounded-2xl md:rounded-3xl">
+            <img
+              src={limerickStudio5}
+              alt="balance Limerick instructor guiding a reformer pilates client"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="relative aspect-[4/5] md:aspect-auto md:h-[70vh] overflow-hidden rounded-2xl md:rounded-3xl">
+            <img
+              src={limerickStudio2}
+              alt="balance Limerick reformer pilates studio"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 
