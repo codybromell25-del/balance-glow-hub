@@ -236,6 +236,16 @@ const IntroOfferLimerick = () => {
         </div>
       </section>
 
+      {/* Studio image band */}
+      <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+        <img
+          src={limerickStudio2}
+          alt="balance Limerick instructors guiding a reformer pilates client"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </section>
+
       {/* What to expect */}
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4 max-w-5xl">
