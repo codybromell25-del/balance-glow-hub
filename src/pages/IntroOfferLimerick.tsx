@@ -255,15 +255,69 @@ const IntroOfferLimerick = () => {
             />
           </div>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mt-10">
-            {["Reformer Pilates", "Mat Pilates", "Barre", "Yoga"].map((item) => (
-              <div
-                key={item}
-                className="p-5 rounded-2xl border border-border bg-card font-heading font-semibold text-foreground"
-              >
-                {item}
-              </div>
-            ))}
+          <div className="max-w-3xl mx-auto mt-10 text-left">
+            <Accordion type="single" collapsible className="w-full">
+              {[
+                {
+                  title: "Reformer Pilates",
+                  body: (
+                    <>
+                      <p>
+                        Our signature class using the Pilates reformer machine for a full body workout focused on strength, control, posture and core stability. Expect slow, controlled movements that challenge the body without high impact on the joints. Options and layers are offered throughout class, making it accessible whether you're brand new or more experienced.
+                      </p>
+                      <p>You'll leave feeling stronger, longer and more connected to your body.</p>
+                    </>
+                  ),
+                },
+                {
+                  title: "Mat Pilates",
+                  body: (
+                    <>
+                      <p>
+                        A full body Pilates class performed on the mat using your own bodyweight, sometimes with small equipment added in. Mat Pilates focuses on deep core strength, mobility, posture and alignment while improving balance, flexibility and overall body awareness.
+                      </p>
+                      <p>A great starting point for beginners and perfect for building strong foundations while still giving the body a proper workout.</p>
+                    </>
+                  ),
+                },
+                {
+                  title: "Barre",
+                  body: (
+                    <>
+                      <p>
+                        A fun, low impact workout inspired by Pilates, strength training and ballet style movement, but absolutely no dance experience is needed. Barre focuses on small controlled movements, posture, core strength and endurance in a way that feels energising rather than intimidating.
+                      </p>
+                      <p>Expect upbeat music, good energy, a full body burn and plenty of shaky legs along the way. A really welcoming class for all levels.</p>
+                    </>
+                  ),
+                },
+                {
+                  title: "Yoga",
+                  body: (
+                    <>
+                      <p>
+                        A calming, mindful class designed to improve flexibility, mobility, strength and nervous system regulation through movement and breathwork. Our yoga classes focus on helping you slow down, reset and reconnect while still building strength and control through the body.
+                      </p>
+                      <p>Perfect for reducing stress, improving mobility and creating balance both physically and mentally.</p>
+                    </>
+                  ),
+                },
+              ].map((item) => (
+                <AccordionItem
+                  key={item.title}
+                  value={item.title}
+                  className="border border-border rounded-2xl bg-card mb-3 px-5"
+                >
+                  <AccordionTrigger className="font-heading font-semibold text-foreground text-lg hover:no-underline">
+                    {item.title}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-foreground/80 leading-relaxed space-y-3 pb-5">
+                    {item.body}
+                    <p className="text-sm text-foreground/60 italic pt-2">Level: Mixed / Suitable for all</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
