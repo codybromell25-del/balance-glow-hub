@@ -9,6 +9,7 @@ import limerickStudio2 from "@/assets/limerick-studio-2.jpg";
 import limerickStudio3 from "@/assets/limerick-studio-3.jpg";
 import limerickStudio4 from "@/assets/limerick-studio-4.jpg";
 import limerickStudio5 from "@/assets/limerick-studio-5.jpg";
+import limerickStudio6 from "@/assets/limerick-studio-6.jpg";
 
 const REFORMER_URL =
   "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017";
@@ -201,14 +202,24 @@ const IntroOfferLimerick = () => {
         </div>
       </section>
 
-      {/* Atmospheric studio image band */}
-      <section className="relative h-[60vh] md:h-[80vh] overflow-hidden">
-        <img
-          src={limerickStudio4}
-          alt="The balance Limerick studio — natural light, plants and reformer pilates beds"
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
+      {/* Atmospheric studio image band — split */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-1">
+        <div className="relative h-[55vh] md:h-[80vh] overflow-hidden">
+          <img
+            src={limerickStudio4}
+            alt="The balance Limerick studio — natural light, plants and reformer pilates beds"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="relative h-[55vh] md:h-[80vh] overflow-hidden">
+          <img
+            src={limerickStudio6}
+            alt="A row of reformer pilates beds at balance Limerick"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
       </section>
 
       {/* Wellness hub */}
