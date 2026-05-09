@@ -6,6 +6,7 @@ import balanceLogo from "@/assets/balance-removebg-preview.png";
 import heroImage from "@/assets/intro-offer-hero.jpeg";
 import limerickStudio1 from "@/assets/limerick-studio-1.jpg";
 import limerickStudio2 from "@/assets/limerick-studio-2.jpg";
+import limerickStudio3 from "@/assets/limerick-studio-3.jpg";
 
 const REFORMER_URL =
   "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017";
@@ -211,14 +212,14 @@ const IntroOfferLimerick = () => {
             One stunning space. Four ways to move. Reformer pilates, mat, barre and yoga —
             led by expert instructors in a studio designed to feel like a breath of fresh air.
             There's nothing else like it in Limerick. Come build strength, find calm, move better,
-            and meet your people. This is where your balance begins.
+            and meet your people. It's all about balance.
           </p>
 
-          <div className="my-10 rounded-3xl overflow-hidden shadow-xl">
+          <div className="my-10 rounded-3xl overflow-hidden">
             <img
-              src={limerickStudio1}
+              src={limerickStudio3}
               alt="Inside the balance Limerick reformer pilates studio"
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover block"
               loading="lazy"
             />
           </div>
