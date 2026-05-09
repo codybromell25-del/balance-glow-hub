@@ -136,15 +136,15 @@ const IntroOfferLimerick = () => {
               <Button
                 asChild
                 size="lg"
-                className="w-full rounded-full py-7 font-heading font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 text-black"
+                className="w-full rounded-full py-7 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 text-black"
                 style={{
                   background:
                     "linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)",
                 }}
               >
-                <a href={REFORMER_URL} target="_blank" rel="noopener noreferrer">
-                  Claim Reformer Offer
-                  <ShoppingCart className="w-4 h-4 ml-2" />
+                <a href={REFORMER_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-center whitespace-normal leading-tight px-3">
+                  <span>Claim Reformer Offer</span>
+                  <ShoppingCart className="w-4 h-4 flex-shrink-0" />
                 </a>
               </Button>
             </div>
@@ -179,15 +179,15 @@ const IntroOfferLimerick = () => {
               <Button
                 asChild
                 size="lg"
-                className="w-full rounded-full py-7 font-heading font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 text-black"
+                className="w-full rounded-full py-7 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 text-black"
                 style={{
                   background:
                     "linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)",
                 }}
               >
-                <a href={MAT_URL} target="_blank" rel="noopener noreferrer">
-                  Claim Mat / Barre / Yoga Offer
-                  <ShoppingCart className="w-4 h-4 ml-2" />
+                <a href={MAT_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-center whitespace-normal leading-tight px-3">
+                  <span>Claim Mat / Barre / Yoga Offer</span>
+                  <ShoppingCart className="w-4 h-4 flex-shrink-0" />
                 </a>
               </Button>
             </div>
