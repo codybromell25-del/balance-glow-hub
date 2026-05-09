@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { Check, ShoppingCart, Clock, MapPin, Sparkles, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import SEO from "@/components/SEO";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import heroImage from "@/assets/intro-offer-hero.jpeg";
