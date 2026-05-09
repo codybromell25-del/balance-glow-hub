@@ -58,9 +58,9 @@ const IntroOfferLimerick = () => {
       />
 
       {/* Minimal header */}
-      <header className="w-full py-6 md:py-8 border-b border-border">
+      <header className="w-full py-3 md:py-4 border-b border-border">
         <div className="container mx-auto px-4 flex justify-center">
-          <img src={balanceLogo} alt="balance reformer pilates" className="h-24 md:h-32 w-auto" />
+          <img src={balanceLogo} alt="balance reformer pilates" className="h-14 md:h-20 w-auto" />
         </div>
       </header>
 
