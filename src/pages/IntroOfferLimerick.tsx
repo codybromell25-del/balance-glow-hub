@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import heroImage from "@/assets/intro-offer-hero.jpeg";
 import limerickStudio1 from "@/assets/limerick-studio-1.jpg";
+import limerickStudio2 from "@/assets/limerick-studio-2.jpg";
 
 const REFORMER_URL =
   "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017";
