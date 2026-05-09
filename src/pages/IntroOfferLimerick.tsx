@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import heroImage from "@/assets/intro-offer-hero.jpeg";
 import limerickStudio1 from "@/assets/limerick-studio-1.jpg";
+import limerickStudio2 from "@/assets/limerick-studio-2.jpg";
 
 const REFORMER_URL =
   "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017";
@@ -233,6 +234,16 @@ const IntroOfferLimerick = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Studio image band */}
+      <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+        <img
+          src={limerickStudio2}
+          alt="balance Limerick instructors guiding a reformer pilates client"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
       </section>
 
       {/* What to expect */}
