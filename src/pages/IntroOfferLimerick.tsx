@@ -139,14 +139,14 @@ const IntroOfferLimerick = () => {
               <Button
                 asChild
                 size="lg"
-                className="w-full rounded-full py-7 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 text-black"
+                className="w-full h-auto min-h-14 rounded-full py-4 px-4 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 text-black [&>a]:w-full [&>a]:flex [&>a]:items-center [&>a]:justify-center [&>a]:gap-2 [&>a]:text-center"
                 style={{
                   background:
                     "linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)",
                 }}
               >
-                <a href={REFORMER_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-center whitespace-normal leading-tight px-3">
-                  <span>Claim Reformer Offer</span>
+                <a href={REFORMER_URL} target="_blank" rel="noopener noreferrer">
+                  <span>Claim Reformer Pack</span>
                   <ShoppingCart className="w-4 h-4 flex-shrink-0" />
                 </a>
               </Button>
@@ -182,14 +182,14 @@ const IntroOfferLimerick = () => {
               <Button
                 asChild
                 size="lg"
-                className="w-full rounded-full py-7 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 text-black"
+                className="w-full h-auto min-h-14 rounded-full py-4 px-4 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 text-black [&>a]:w-full [&>a]:flex [&>a]:items-center [&>a]:justify-center [&>a]:gap-2 [&>a]:text-center"
                 style={{
                   background:
                     "linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)",
                 }}
               >
-                <a href={MAT_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-center whitespace-normal leading-tight px-3">
-                  <span>Claim Mat / Barre / Yoga Offer</span>
+                <a href={MAT_URL} target="_blank" rel="noopener noreferrer">
+                  <span>Claim Mat / Barre / Yoga</span>
                   <ShoppingCart className="w-4 h-4 flex-shrink-0" />
                 </a>
               </Button>
@@ -203,22 +203,24 @@ const IntroOfferLimerick = () => {
       </section>
 
       {/* Atmospheric studio image band — split */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-1.5">
-        <div className="relative aspect-[4/5] md:aspect-auto md:h-[75vh] overflow-hidden">
-          <img
-            src={limerickStudio4}
-            alt="The balance Limerick studio — natural light, plants and reformer pilates beds"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-        <div className="relative aspect-[4/5] md:aspect-auto md:h-[75vh] overflow-hidden">
-          <img
-            src={limerickStudio6}
-            alt="A row of reformer pilates beds at balance Limerick"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+      <section className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+          <div className="relative aspect-[4/5] md:aspect-auto md:h-[75vh] overflow-hidden rounded-2xl md:rounded-3xl">
+            <img
+              src={limerickStudio4}
+              alt="The balance Limerick studio — natural light, plants and reformer pilates beds"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="relative aspect-[4/5] md:aspect-auto md:h-[75vh] overflow-hidden rounded-2xl md:rounded-3xl">
+            <img
+              src={limerickStudio6}
+              alt="A row of reformer pilates beds at balance Limerick"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 
