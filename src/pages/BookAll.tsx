@@ -62,33 +62,7 @@ const BookAll = () => {
           subtitle="Pick your favorite studio and let's get moving together!"
         />
         
-        <section className="pt-8 pb-4">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <a
-                href="/booking/limerick"
-                className="group block rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]"
-                style={{ background: 'linear-gradient(135deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
-              >
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-6 sm:p-8">
-                  <div className="text-center sm:text-left">
-                    <p className="text-xs font-semibold uppercase tracking-widest text-black/70 mb-2">Now Open</p>
-                    <h2 className="text-2xl sm:text-3xl font-heading font-bold text-black tracking-tight">
-                      Book at balance Limerick
-                    </h2>
-                    <p className="text-black/80 mt-1 text-sm sm:text-base">
-                      Reformer Pilates, Mat Pilates, Barre & Yoga — view the Limerick schedule
-                    </p>
-                  </div>
-                  <span className="px-6 py-3 rounded-full bg-black text-white text-sm font-semibold uppercase tracking-wide whitespace-nowrap group-hover:bg-black/80 transition-colors">
-                    View Schedule →
-                  </span>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
-
+        
         <section className="py-8 md:py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
