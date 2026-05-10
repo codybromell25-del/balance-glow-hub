@@ -222,8 +222,8 @@ const IntroOfferLimerick = () => {
           </div>
           <div className="relative aspect-[4/5] md:aspect-auto md:h-[75vh] overflow-hidden rounded-2xl md:rounded-3xl">
             <img
-              src={limerickStudio6}
-              alt="A row of reformer pilates beds at balance Limerick"
+              src={limerickReformerClass}
+              alt="A client on the reformer pilates bed at balance Limerick"
               className="w-full h-full object-cover"
               loading="lazy"
             />
