@@ -16,6 +16,7 @@ import limerickStudio3 from "@/assets/limerick-studio-3.jpg";
 import limerickStudio4 from "@/assets/limerick-studio-4.jpg";
 import limerickStudio5 from "@/assets/limerick-studio-5.jpg";
 import limerickStudio6 from "@/assets/limerick-studio-6.jpg";
+import limerickReformerClass from "@/assets/limerick-reformer-class.jpg";
 
 const REFORMER_URL =
   "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017";
