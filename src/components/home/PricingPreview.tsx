@@ -33,7 +33,7 @@ const PricingPreview = () => {
               {[
                 "Try any class level to find your fit",
                 "Experience different instructors",
-                "Visit any of our 5 studio locations",
+                "Visit any of our 6 studio locations",
                 "Valid for 14 days from purchase",
                 "First-time clients only",
               ].map((feature) => (

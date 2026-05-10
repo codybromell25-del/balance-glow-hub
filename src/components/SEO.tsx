@@ -11,7 +11,7 @@ interface SEOProps {
 
 const SEO = ({
   title = "balance studios | for those who expect more",
-  description = "Reformer Pilates across 5 locations in Kildare and Wicklow. Expert instructors, small groups, and a welcoming community. Every body is beautiful.",
+  description = "Reformer Pilates across 6 locations in Limerick, Kildare, Wicklow and Meath. Expert instructors, small groups, and a welcoming community. Every body is beautiful.",
   canonical,
   type = "website",
   image = "https://balancestudios.ie/og-image.jpg",

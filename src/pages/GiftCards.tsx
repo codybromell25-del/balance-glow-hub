@@ -10,7 +10,7 @@ const GiftCards = () => {
     <div className="min-h-screen">
       <SEO 
         title="Gift Cards | balance studios - Reformer Pilates"
-        description="Give the gift of balance. Digital gift cards for Reformer Pilates classes. Valid at all 5 studios, never expires. Perfect for birthdays and special occasions."
+        description="Give the gift of balance. Digital gift cards for Reformer Pilates classes. Valid at all 6 studios, never expires. Perfect for birthdays and special occasions."
         canonical="/gift-cards"
       />
       <Navigation />
@@ -48,7 +48,7 @@ const GiftCards = () => {
                     
                     {/* Description */}
                     <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto leading-relaxed">
-                      Choose any amount and send it instantly. Valid at all 5 studios, never expires.
+                      Choose any amount and send it instantly. Valid at all 6 studios, never expires.
                     </p>
                     
                     {/* CTA Button */}
@@ -107,7 +107,7 @@ const GiftCards = () => {
                     <span className="text-2xl font-bold text-white">3</span>
                   </div>
                   <h3 className="text-xl font-heading font-bold text-foreground mb-2">Redeem & Enjoy</h3>
-                  <p className="text-muted-foreground">Use the gift card code to book classes at any of our 5 studios.</p>
+                  <p className="text-muted-foreground">Use the gift card code to book classes at any of our 6 studios.</p>
                 </div>
               </div>
             </div>

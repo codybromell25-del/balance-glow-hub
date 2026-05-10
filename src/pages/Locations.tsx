@@ -83,7 +83,7 @@ const Locations = () => {
                 Book a Class
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Five beautifully designed studios across Kildare, Wicklow, and Meath. 
+                Six beautifully designed studios across Limerick, Kildare, Wicklow, and Meath. 
                 Find the location that's most convenient for you.
               </p>
             </div>
