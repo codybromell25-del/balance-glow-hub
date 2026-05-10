@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import ClassesBrandStatement from "@/components/home/ClassesBrandStatement";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Heart, BookOpen, Flame, Trophy, Users } from "lucide-react";
+import { Heart, BookOpen, Flame, Trophy, Users, Sparkles, Leaf } from "lucide-react";
 import SEO from "@/components/SEO";
 
 // Difficulty indicator component
@@ -164,6 +164,32 @@ const Classes = () => {
         "Suitable for all levels with modifications available",
       ],
       bookingLink: "/booking/mat-classes",
+    },
+    {
+      icon: Sparkles,
+      level: "Pilates Barre",
+      suitable: "Mixed / Suitable for all",
+      difficulty: 3,
+      whatToExpect: [
+        "Fun, energising full body workout combining Pilates-inspired movement with barre-based strength and endurance exercises",
+        "Mix of standing and mat-based work to improve posture, strength, balance, coordination and overall fitness",
+        "Not a ballet class — no dance experience needed",
+        "Simple to follow, low impact movements designed to make you feel strong, challenged and uplifted",
+        "Options and modifications offered throughout the class",
+      ],
+    },
+    {
+      icon: Leaf,
+      level: "Yoga",
+      suitable: "Mixed / Suitable for all",
+      difficulty: 2,
+      whatToExpect: [
+        "Designed to help you move, breathe and switch off from the outside world for a while",
+        "Mix of strength, mobility, stretch and relaxation in a welcoming, non-intimidating environment",
+        "Focused on helping you feel better in both body and mind",
+        "Suitable whether you're completely new to yoga or already experienced",
+        "Leave feeling stronger, calmer and more connected",
+      ],
     },
   ];
 
