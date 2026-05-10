@@ -44,7 +44,7 @@ const LocationsSection = () => {
             Pick Your Pilates Playground
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Five beautifully designed studios across Kildare, Wicklow, and Meath. Each location offers the same
+            Six beautifully designed studios across Limerick, Kildare, Wicklow, and Meath. Each location offers the same
             exceptional experience with our signature warm welcome.
           </p>
         </div>

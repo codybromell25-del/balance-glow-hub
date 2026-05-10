@@ -26,6 +26,15 @@ import studioEquipment from "@/assets/studio-equipment.jpg";
 const OurStudios = () => {
   const studios = [
     {
+      name: "Limerick Studio",
+      slug: "limerick",
+      address: "The Coach House, Henry Street, Limerick, Ireland",
+      parking: "City centre parking nearby",
+      hours: "Opening May 2026",
+      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=The+Coach+House+Henry+Street+Limerick+Ireland",
+      hasDetailPage: true,
+    },
+    {
       name: "Clane Studio",
       slug: "clane",
       address: "Unit 4a, Yew Tree Square, Prosperous Rd, Abbeyland, Clane, Co. Kildare, W91 R642, Ireland",
@@ -70,15 +79,6 @@ const OurStudios = () => {
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Balance+Bray+Industrial+Development+Agency+Business+Park+Southern+Cross+Rd+Irishtown+Bray+Co.+Wicklow+A98+T276+Ireland",
       hasDetailPage: true,
     },
-    {
-      name: "Limerick Studio",
-      slug: "limerick",
-      address: "The Coach House, Henry Street, Limerick, Ireland",
-      parking: "City centre parking nearby",
-      hours: "Opening May 2026",
-      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=The+Coach+House+Henry+Street+Limerick+Ireland",
-      hasDetailPage: true,
-    },
   ];
 
   const galleryImages = [
@@ -99,8 +99,8 @@ const OurStudios = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Our Studios | balance studios - 5 Locations in Ireland"
-        description="Five stunning Reformer Pilates studios across Kildare, Wicklow & Meath. Clane, Kildare Town, Blessington, Enfield & Bray. Modern reformers, serene spaces, expert instructors."
+        title="Our Studios | balance studios - 6 Locations in Ireland"
+        description="Six stunning Reformer Pilates studios across Limerick, Kildare, Wicklow & Meath. Limerick, Clane, Kildare Town, Blessington, Enfield & Bray. Modern reformers, serene spaces, expert instructors."
         canonical="/our-studios"
       />
       <LocalBusinessSchema />
@@ -108,7 +108,7 @@ const OurStudios = () => {
       <main className="pt-24">
         <PageHeader 
           title="Take Your Pick" 
-          subtitle="Five stunning studios across Kildare, Wicklow & Meath—each one designed to help you move, sweat, and thrive. Pick your perfect spot and let's make magic happen!"
+          subtitle="Six stunning studios across Limerick, Kildare, Wicklow & Meath—each one designed to help you move, sweat, and thrive. Pick your perfect spot and let's make magic happen!"
         />
 
         {/* Studios Grid */}

@@ -10,14 +10,14 @@ const Pricing = () => {
     <div className="min-h-screen">
       <SEO 
         title="Pricing & Memberships | balance studios - Reformer Pilates"
-        description="Flexible class packs from €24 and monthly memberships from €80. New clients: 3 classes for €50 intro offer. Valid at all 5 balance studios across Kildare, Wicklow & Meath."
+        description="Flexible class packs from €24 and monthly memberships from €80. New clients: 3 classes for €50 intro offer. Valid at all 6 balance studios across Limerick, Kildare, Wicklow & Meath."
         canonical="/pricing"
       />
       <Navigation />
       <main className="pt-24">
         <PageHeader 
           title="Pick Your Pack" 
-          subtitle="First, purchase a class pack or membership below. Once you've bought your package, you'll be able to book classes from available time slots at any of our 5 studios."
+          subtitle="First, purchase a class pack or membership below. Once you've bought your package, you'll be able to book classes from available time slots at any of our 6 studios."
         />
 
         {/* Intro Offer */}
@@ -43,7 +43,7 @@ const Pricing = () => {
                   {[
                     "Try any class level to find your fit",
                     "Experience different instructors",
-                    "Visit any of our 5 studio locations",
+                    "Visit any of our 6 studio locations",
                     "Valid for 30 days from purchase",
                     "First-time clients only",
                   ].map((feature) => (
@@ -73,7 +73,7 @@ const Pricing = () => {
                   Reformer Class Packs
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Flexible options for reformer pilates. Valid at all 5 studio locations.
+                  Flexible options for reformer pilates. Valid at all 6 studio locations.
                 </p>
               </div>
 

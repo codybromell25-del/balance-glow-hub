@@ -11,13 +11,13 @@ const MOMENCE_URL =
 
 const includes = [
   "3 reformer Pilates classes",
-  "Use across any of our 5 studios",
+  "Use across any of our 6 studios",
   "Try any class level — beginner friendly",
   "Try different instructors & class styles",
   "First-time clients only",
 ];
 
-const locations = ["Clane", "Kildare", "Blessington", "Enfield", "Bray"];
+const locations = ["Limerick", "Clane", "Kildare", "Blessington", "Enfield", "Bray"];
 
 const expectations = [
   {
@@ -45,7 +45,7 @@ const IntroOffer = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
         title="3 Reformer Pilates Classes for €50 | balance studios"
-        description="New to balance? Try 3 reformer Pilates classes for just €50. Available at our 5 studios across Kildare and Wicklow. First-time clients only."
+        description="New to balance? Try 3 reformer Pilates classes for just €50. Available at our 6 studios across Limerick, Kildare, Wicklow and Meath. First-time clients only."
         noindex
       />
 
@@ -78,7 +78,7 @@ const IntroOffer = () => {
 
             <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-10 max-w-xl mx-auto italic font-light">
               For those who expect <span className="not-italic font-semibold">more</span>.
-              Discover balance studios across Kildare & Wicklow.
+              Discover balance studios across Limerick, Kildare, Wicklow & Meath.
             </p>
 
             <Button
@@ -160,7 +160,7 @@ const IntroOffer = () => {
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-4 font-light">
-            Use it at any of our 5 studios
+            Use it at any of our 6 studios
           </p>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
             {locations.map((loc) => (

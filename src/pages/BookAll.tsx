@@ -52,7 +52,7 @@ const BookAll = () => {
     <div className="min-h-screen">
       <SEO 
         title="Book a Class | balance studios - Reformer Pilates"
-        description="Book your Reformer Pilates class at any of our 5 studios. Choose from Classic, Sculpt, Challenge & Gentle Flow. View live schedules and secure your spot."
+        description="Book your Reformer Pilates class at any of our 6 studios. Choose from Classic, Sculpt, Challenge & Gentle Flow. View live schedules and secure your spot."
         canonical="/book-class"
       />
       <Navigation />
