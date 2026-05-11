@@ -403,7 +403,7 @@ const IntroOfferLimerick = () => {
               }}
             >
               <a href={MAT_URL} target="_blank" rel="noopener noreferrer">
-                Mat / Barre / Yoga · €35
+                Mat / Barre / Yoga · €35 (6 Classes)
               </a>
             </Button>
           </div>
