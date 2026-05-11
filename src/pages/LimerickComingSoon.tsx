@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Sparkles, MapPin, Calendar, Users, Award } from "lucide-react";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import studioReformersWide from "@/assets/studio-reformers-wide.jpg";
-import clientsLaughing from "@/assets/clients-laughing.jpg";
+import limerickReformer from "@/assets/limerick-studio-6.jpg";
 import instructorLaughing from "@/assets/instructor-laughing.jpg";
 import clientsStretching from "@/assets/clients-stretching.jpg";
 import clientsMat from "@/assets/clients-mat-workout.jpg";
@@ -140,7 +140,7 @@ const LimerickComingSoon = () => {
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-              {[clientsLaughing, instructorLaughing, clientsStretching, clientsMat].map((src, i) => (
+              {[limerickReformer, instructorLaughing, clientsStretching, clientsMat].map((src, i) => (
                 <div
                   key={i}
                   className="aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all"
