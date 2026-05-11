@@ -125,7 +125,7 @@ const IntroOfferLimerick = () => {
 
               <div className="text-center mb-6 mt-2">
                 <h3 className="text-2xl md:text-3xl font-heading font-black text-foreground mb-3 tracking-tight">
-                  6 Reformer Classes
+                  Reformer Classes
                 </h3>
                 <div className="text-5xl md:text-6xl font-heading font-black text-foreground">
                   €45
