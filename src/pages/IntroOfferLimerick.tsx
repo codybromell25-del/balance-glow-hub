@@ -30,7 +30,7 @@ const reformerIncludes = [
 ];
 
 const matIncludes = [
-  "6 classes — mix & match",
+  "3 classes — mix & match",
   "Choose mat Pilates, barre or yoga",
   "Suitable for all levels",
   "A full-body wellness reset",

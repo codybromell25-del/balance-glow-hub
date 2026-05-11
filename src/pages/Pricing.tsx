@@ -57,7 +57,7 @@ const Pricing = () => {
                     price: "€35",
                     link: "https://momence.com/balance/membership/Launch-offer---3-Mat%2FBarre%2FYoga-classes-for-%E2%82%AC35/766025",
                     features: [
-                      "6 classes — mix & match",
+                      "3 classes — mix & match",
                       "Mat, Barre or Yoga",
                       "Limerick studio only",
                       "Launch week only",
