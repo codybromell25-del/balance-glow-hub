@@ -10,8 +10,8 @@ import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 const Index = () => {
   return <div className="min-h-screen">
       <SEO 
-        title="balance studios | Reformer Pilates in Kildare, Wicklow & Meath"
-        description="Premium Reformer Pilates across 5 stunning studios. Expert instructors, small groups, real results. Intro offer: 3 classes for €50. For those who expect more."
+        title="balance studios | Reformer Pilates in Kildare, Wicklow, Meath & Limerick"
+        description="Premium Reformer Pilates across 6 stunning studios. Expert instructors, small groups, real results. Limerick Intro Offer Now Live! For those who expect more."
         canonical="/"
       />
       <LocalBusinessSchema />

@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 const Schedule = () => {
   return (
     <div className="min-h-screen">
-      <SEO title="Class Schedule | balance studios" description="View live class schedules across all 5 balance studios. Book Reformer Pilates in Clane, Kildare, Blessington, Enfield & Bray." canonical="/schedule" />
+      <SEO title="Class Schedule | balance studios" description="View live class schedules across all 6 balance studios. Book Reformer Pilates in Clane, Kildare, Blessington, Enfield, Bray & Limerick." canonical="/schedule" />
       <Navigation />
       <main className="pt-20">
         <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">

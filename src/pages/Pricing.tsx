@@ -10,7 +10,7 @@ const Pricing = () => {
     <div className="min-h-screen">
       <SEO 
         title="Pricing & Memberships | balance studios - Reformer Pilates"
-        description="Flexible class packs from €24 and monthly memberships from €80. New clients: 3 classes for €50 intro offer. Valid at all 6 balance studios across Limerick, Kildare, Wicklow & Meath."
+        description="Flexible class packs from €24 and monthly memberships from €80. New clients: Limerick Intro Offer Now Live! Valid at all 6 balance studios across Limerick, Kildare, Wicklow & Meath."
         canonical="/pricing"
       />
       <Navigation />
@@ -42,22 +42,22 @@ const Pricing = () => {
               <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                 {[
                   {
-                    title: "3 Reformer Classes",
+                    title: "6 Reformer Classes",
                     price: "€45",
                     link: "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017",
                     features: [
-                      "3 reformer Pilates classes",
+                      "6 reformer Pilates classes",
                       "Try different instructors & class times",
                       "Limerick studio only",
                       "Launch week only",
                     ],
                   },
                   {
-                    title: "3 Mat / Barre / Yoga Classes",
+                    title: "6 Mat / Barre / Yoga Classes",
                     price: "€35",
                     link: "https://momence.com/balance/membership/Launch-offer---3-Mat%2FBarre%2FYoga-classes-for-%E2%82%AC35/766025",
                     features: [
-                      "3 classes — mix & match",
+                      "6 classes — mix & match",
                       "Mat, Barre or Yoga",
                       "Limerick studio only",
                       "Launch week only",
@@ -117,7 +117,7 @@ const Pricing = () => {
 
                 <div className="text-center mb-6 mt-4">
                   <h2 className="text-3xl font-heading font-bold text-foreground mb-3">
-                    Intro Offer: 3 Classes for €50
+                    Limerick Intro Offer Now Live!
                   </h2>
                   <p className="text-muted-foreground">The perfect way to discover balance studios</p>
                 </div>

@@ -117,7 +117,7 @@ const Classes = () => {
       suitable: "Intermediate",
       difficulty: 3,
       whatToExpect: [
-        "A gentle step up from basics, accessible after 5 classic classes",
+        "A gentle step up from basics, accessible after 6 classic classes",
         "Thoughtful challenges with extra core work",
         "Sequences that make your muscles sing in the best way",
         "Strong, supportive, and full of feel-good fire",
