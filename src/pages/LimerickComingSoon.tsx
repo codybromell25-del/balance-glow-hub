@@ -7,7 +7,7 @@ import { Sparkles, MapPin, Calendar, Users, Award } from "lucide-react";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import studioReformersWide from "@/assets/studio-reformers-wide.jpg";
 import limerickReformer from "@/assets/limerick-reformer-instructor.jpg";
-import instructorLaughing from "@/assets/instructor-laughing.jpg";
+import instructorLaughing from "@/assets/limerick-reformer-laughing.jpg";
 import clientsStretching from "@/assets/clients-stretching.jpg";
 import clientsMat from "@/assets/clients-mat-workout.jpg";
 import studioInstructor from "@/assets/studio-instructor-helping.jpg";
