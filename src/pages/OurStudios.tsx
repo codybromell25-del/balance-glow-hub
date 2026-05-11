@@ -108,7 +108,7 @@ const OurStudios = () => {
       <main className="pt-24">
         <PageHeader 
           title="Take Your Pick" 
-          subtitle="Six stunning studios across Limerick, Kildare, Wicklow & Meath—each one designed to help you move, sweat, and thrive. Pick your perfect spot and let's make magic happen!"
+          subtitle="6 stunning studios across Limerick, Kildare, Wicklow & Meath—each one designed to help you move, sweat, and thrive. Pick your perfect spot and let's make magic happen!"
         />
 
         {/* Studios Grid */}

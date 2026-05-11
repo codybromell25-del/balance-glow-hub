@@ -34,7 +34,7 @@ const PhilosophySection = () => {
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed font-light">
             At balance studios, we believe that strength, flexibility and confidence are for every body. 
-            With small-group reformer classes, expert instructors and six beautifully designed 
+            With small-group reformer classes, expert instructors and 6 beautifully designed 
             studios across Limerick, Kildare, Wicklow and Meath, we tailor your Pilates journey so you feel great in body and mind.
           </p>
         </div>

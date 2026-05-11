@@ -241,7 +241,7 @@ const Pricing = () => {
                   <li>• Memberships auto-renew on the same date each month</li>
                   <li>• Classes do not carry over to the next month</li>
                   <li>• Cancel anytime with 7 days notice before next billing date</li>
-                  <li>• Valid across all 5 balance studios locations</li>
+                  <li>• Valid across all 6 balance studios locations</li>
                 </ul>
               </div>
             </div>
