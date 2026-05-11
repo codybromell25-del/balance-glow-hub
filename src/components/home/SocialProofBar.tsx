@@ -4,7 +4,7 @@ const SocialProofBar = () => {
   const stats = [
     {
       icon: MapPin,
-      value: "5",
+      value: "6",
       label: "Studios",
       color: "#A3C1AD"
     },
