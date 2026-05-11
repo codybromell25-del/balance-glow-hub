@@ -77,7 +77,7 @@ const About = () => {
                         <div className="absolute -left-[31px] top-1 w-4 h-4 bg-primary rounded-full"></div>
                         <p className="text-sm font-semibold text-primary uppercase tracking-wide">Today</p>
                         <p className="text-muted-foreground leading-relaxed">
-                          Six luxurious studios across Kildare, Wicklow, Meath and Limerick. Over 35 exceptional instructors. Spaces designed for quiet luxury and real comfort.
+                          6 luxurious studios across Kildare, Wicklow, Meath and Limerick. Over 35 exceptional instructors. Spaces designed for quiet luxury and real comfort.
                         </p>
                       </div>
                     </div>
