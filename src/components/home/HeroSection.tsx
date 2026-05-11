@@ -28,7 +28,7 @@ const HeroSection = () => {
 
           {/* Tagline - elegant and impactful */}
           <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl italic font-light tracking-wide">
-            For Those Who Expect <span className="font-semibold not-italic text-white">More</span>.
+            It's all about <span className="font-semibold not-italic text-white">balance</span>.
           </p>
 
           {/* Buttons - refined and mobile optimized */}
