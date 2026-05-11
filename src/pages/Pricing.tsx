@@ -10,7 +10,7 @@ const Pricing = () => {
     <div className="min-h-screen">
       <SEO 
         title="Pricing & Memberships | balance studios - Reformer Pilates"
-        description="Flexible class packs from €24 and monthly memberships from €80. New clients: Limerick Launch Offer Now Live. Valid at all 6 balance studios across Limerick, Kildare, Wicklow & Meath."
+        description="Flexible class packs from €24 and monthly memberships from €80. New clients: 3 classes for €50 intro offer. Valid at all 6 balance studios across Limerick, Kildare, Wicklow & Meath."
         canonical="/pricing"
       />
       <Navigation />
@@ -117,7 +117,7 @@ const Pricing = () => {
 
                 <div className="text-center mb-6 mt-4">
                   <h2 className="text-3xl font-heading font-bold text-foreground mb-3">
-                    Limerick Launch Offer Now Live
+                    Intro Offer: 3 Classes for €50
                   </h2>
                   <p className="text-muted-foreground">The perfect way to discover balance studios</p>
                 </div>
