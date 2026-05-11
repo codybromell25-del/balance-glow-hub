@@ -23,7 +23,7 @@ const MAT_URL =
   "https://momence.com/balance/membership/Launch-offer---3-Mat%2FBarre%2FYoga-classes-for-%E2%82%AC35/766025";
 
 const reformerIncludes = [
-  "3 classes — mix & match",
+  "3 reformer Pilates classes",
   "Beginner friendly — no experience needed",
   "Try different instructors & class times",
   "Expert-led, small group sessions",
@@ -59,7 +59,7 @@ const IntroOfferLimerick = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
         title="Limerick Launch Offer | balance studios"
-        description="balance studios Limerick is opening. One week only — 6 reformer classes for €45 or 6 mat/barre/yoga classes for €35."
+        description="balance studios Limerick is opening. One week only — 3 reformer classes for €45 or 3 mat/barre/yoga classes for €35."
         noindex
       />
 
@@ -125,7 +125,7 @@ const IntroOfferLimerick = () => {
 
               <div className="text-center mb-6 mt-2">
                 <h3 className="text-2xl md:text-3xl font-heading font-black text-foreground mb-3 tracking-tight">
-                  Reformer Classes
+                  3 Reformer Classes
                 </h3>
                 <div className="text-5xl md:text-6xl font-heading font-black text-foreground">
                   €45
@@ -168,7 +168,7 @@ const IntroOfferLimerick = () => {
 
               <div className="text-center mb-6 mt-2">
                 <h3 className="text-2xl md:text-3xl font-heading font-black text-foreground mb-3 tracking-tight">
-                  Mat / Barre / Yoga
+                  3 Mat / Barre / Yoga
                 </h3>
                 <div className="text-5xl md:text-6xl font-heading font-black text-foreground">
                   €35
@@ -390,7 +390,7 @@ const IntroOfferLimerick = () => {
               }}
             >
               <a href={REFORMER_URL} target="_blank" rel="noopener noreferrer">
-                Reformer · €45 (6 Classes)
+                Reformer · €45 (3 Classes)
               </a>
             </Button>
             <Button
@@ -403,7 +403,7 @@ const IntroOfferLimerick = () => {
               }}
             >
               <a href={MAT_URL} target="_blank" rel="noopener noreferrer">
-                Mat / Barre / Yoga · €35 (6 Classes)
+                Mat / Barre / Yoga · €35 (3 Classes)
               </a>
             </Button>
           </div>

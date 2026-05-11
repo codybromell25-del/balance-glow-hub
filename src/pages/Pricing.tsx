@@ -42,18 +42,18 @@ const Pricing = () => {
               <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                 {[
                   {
-                    title: "Reformer Classes",
+                    title: "3 Reformer Classes",
                     price: "€45",
                     link: "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017",
                     features: [
-                      "3 classes — mix & match",
+                      "3 reformer Pilates classes",
                       "Try different instructors & class times",
                       "Limerick studio only",
                       "Launch week only",
                     ],
                   },
                   {
-                    title: "Mat / Barre / Yoga Classes",
+                    title: "3 Mat / Barre / Yoga Classes",
                     price: "€35",
                     link: "https://momence.com/balance/membership/Launch-offer---3-Mat%2FBarre%2FYoga-classes-for-%E2%82%AC35/766025",
                     features: [
