@@ -53,7 +53,7 @@ const Pricing = () => {
                     ],
                   },
                   {
-                    title: "6 Mat / Barre / Yoga Classes",
+                    title: "Mat / Barre / Yoga Classes",
                     price: "€35",
                     link: "https://momence.com/balance/membership/Launch-offer---3-Mat%2FBarre%2FYoga-classes-for-%E2%82%AC35/766025",
                     features: [
