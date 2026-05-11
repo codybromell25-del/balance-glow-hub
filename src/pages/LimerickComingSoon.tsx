@@ -183,7 +183,7 @@ const LimerickComingSoon = () => {
                 </div>
                 <div className="p-6">
                   <Users className="w-8 h-8 mx-auto mb-3 text-[#A3C1AD]" />
-                  <p className="text-3xl font-heading font-bold text-foreground">5+</p>
+                  <p className="text-3xl font-heading font-bold text-foreground">6</p>
                   <p className="text-sm text-foreground/70 uppercase tracking-wider mt-1">
                     Studio locations
                   </p>
