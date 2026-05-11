@@ -125,7 +125,7 @@ const IntroOfferLimerick = () => {
 
               <div className="text-center mb-6 mt-2">
                 <h3 className="text-2xl md:text-3xl font-heading font-black text-foreground mb-3 tracking-tight">
-                  Reformer Classes
+                  3 Reformer Classes
                 </h3>
                 <div className="text-5xl md:text-6xl font-heading font-black text-foreground">
                   €45
@@ -168,7 +168,7 @@ const IntroOfferLimerick = () => {
 
               <div className="text-center mb-6 mt-2">
                 <h3 className="text-2xl md:text-3xl font-heading font-black text-foreground mb-3 tracking-tight">
-                  Mat / Barre / Yoga
+                  3 Mat / Barre / Yoga
                 </h3>
                 <div className="text-5xl md:text-6xl font-heading font-black text-foreground">
                   €35
@@ -403,7 +403,7 @@ const IntroOfferLimerick = () => {
               }}
             >
               <a href={MAT_URL} target="_blank" rel="noopener noreferrer">
-                Mat / Barre / Yoga · €35 (6 Classes)
+                Mat / Barre / Yoga · €35 (3 Classes)
               </a>
             </Button>
           </div>
