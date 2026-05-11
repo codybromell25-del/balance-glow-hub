@@ -23,7 +23,7 @@ const HeroSection = () => {
 
           {/* Intro Offer */}
           <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-6 md:mb-8 max-w-xl italic font-light tracking-wide">
-            Limerick Intro Offer Now Live!
+            Intro Offer 3 for €50
           </p>
 
           {/* Tagline - elegant and impactful */}
