@@ -24,7 +24,12 @@ const MAT_URL =
 
 const reformerIncludes = [
   "3 reformer Pilates classes",
-...
+  "Beginner friendly — no experience needed",
+  "Try different instructors & class times",
+  "Expert-led, small group sessions",
+];
+
+const matIncludes = [
   "3 classes — mix & match",
   "Choose mat Pilates, barre or yoga",
   "Suitable for all levels",
