@@ -46,7 +46,7 @@ const Pricing = () => {
                     price: "€45",
                     link: "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017",
                     features: [
-                      "3 reformer Pilates classes",
+                      "6 reformer Pilates classes",
                       "Try different instructors & class times",
                       "Limerick studio only",
                       "Launch week only",
