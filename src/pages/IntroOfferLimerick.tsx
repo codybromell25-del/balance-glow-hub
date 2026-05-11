@@ -23,7 +23,7 @@ const MAT_URL =
   "https://momence.com/balance/membership/Launch-offer---3-Mat%2FBarre%2FYoga-classes-for-%E2%82%AC35/766025";
 
 const reformerIncludes = [
-  "3 reformer Pilates classes",
+  "6 reformer Pilates classes",
   "Beginner friendly — no experience needed",
   "Try different instructors & class times",
   "Expert-led, small group sessions",
