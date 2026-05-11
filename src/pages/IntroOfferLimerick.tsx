@@ -390,7 +390,7 @@ const IntroOfferLimerick = () => {
               }}
             >
               <a href={REFORMER_URL} target="_blank" rel="noopener noreferrer">
-                Reformer · €45
+                Reformer · €45 (6 Classes)
               </a>
             </Button>
             <Button
