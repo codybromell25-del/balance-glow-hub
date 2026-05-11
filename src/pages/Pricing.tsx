@@ -42,7 +42,7 @@ const Pricing = () => {
               <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                 {[
                   {
-                    title: "6 Reformer Classes",
+                    title: "Reformer Classes",
                     price: "€45",
                     link: "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017",
                     features: [
