@@ -59,7 +59,7 @@ const IntroOfferLimerick = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
         title="Limerick Launch Offer | balance studios"
-        description="balance studios Limerick is opening. One week only — 6 reformer classes for €45 or 6 mat/barre/yoga classes for €35."
+        description="balance studios Limerick is opening. One week only — 3 reformer classes for €45 or 3 mat/barre/yoga classes for €35."
         noindex
       />
 
@@ -390,7 +390,7 @@ const IntroOfferLimerick = () => {
               }}
             >
               <a href={REFORMER_URL} target="_blank" rel="noopener noreferrer">
-                Reformer · €45 (6 Classes)
+                Reformer · €45 (3 Classes)
               </a>
             </Button>
             <Button
