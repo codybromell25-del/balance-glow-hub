@@ -33,7 +33,7 @@ import Limerick from "./pages/Limerick";
 import LimerickComingSoon from "./pages/LimerickComingSoon";
 import WorkshopAnestiMano from "./pages/WorkshopAnestiMano";
 import IntroOffer from "./pages/IntroOffer";
-import IntroOfferLimerick from "./pages/IntroOfferLimerick";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -76,7 +76,7 @@ const App = () => (
           <Route path="/limerick-coming-soon" element={<LimerickComingSoon />} />
           <Route path="/workshop/anesti-mano" element={<WorkshopAnestiMano />} />
           <Route path="/intro-offer" element={<IntroOffer />} />
-          <Route path="/limerick-launch-offer" element={<IntroOfferLimerick />} />
+          
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
