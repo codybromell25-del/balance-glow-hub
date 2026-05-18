@@ -33,7 +33,7 @@ import Limerick from "./pages/Limerick";
 import LimerickComingSoon from "./pages/LimerickComingSoon";
 import WorkshopAnestiMano from "./pages/WorkshopAnestiMano";
 import IntroOffer from "./pages/IntroOffer";
-import IntroOfferLimerick from "./pages/IntroOfferLimerick";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
