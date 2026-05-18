@@ -292,9 +292,9 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 {[
-                  { classes: 1, price: "€15", validity: "Valid 30 days", popular: false },
-                  { classes: 3, price: "€42", validity: "Valid 30 days", popular: true },
-                  { classes: 6, price: "€84", validity: "Valid 60 days", popular: false },
+                  { classes: 1, price: "€15", validity: "Valid 30 days", popular: false, link: "https://momence.com/m/573998" },
+                  { classes: 3, price: "€42", validity: "Valid 30 days", popular: true, link: "https://momence.com/m/771509" },
+                  { classes: 6, price: "€84", validity: "Valid 60 days", popular: false, link: "https://momence.com/m/771510" },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
