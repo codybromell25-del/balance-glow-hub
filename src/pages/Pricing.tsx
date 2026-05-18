@@ -151,57 +151,6 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* Mat Class Packs - Kildare Only */}
-        <section className="py-10 md:py-14">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-10 md:mb-12">
-                <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
-                  Mat Class Packs
-                </h2>
-                <p className="text-lg text-muted-foreground">
-                  Available at our Kildare studio only
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-                {[
-                  { classes: 1, price: "€15", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/Single-Mat-Class/573998" },
-                  { classes: 4, price: "€50", validity: "Valid 120 days", link: "https://momence.com/Balance/membership/4-Mat-Classes/573999" },
-                ].map((pack, index) => (
-                  <div
-                    key={pack.classes}
-                    className="relative bg-background p-6 rounded-lg border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="text-center mb-4">
-                      <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
-                        {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
-                      </h3>
-                      <div className="mb-1">
-                        <span className="text-3xl font-heading font-bold text-black">{pack.price}</span>
-                      </div>
-                      <p className="text-sm text-muted-foreground">{pack.validity}</p>
-                    </div>
-                    <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-                      <a href={pack.link} target="_blank" rel="noopener noreferrer">
-                        Buy Now
-                      </a>
-                    </Button>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 p-4 bg-primary/5 rounded-lg border border-primary/20 text-center">
-                <Info className="w-6 h-6 text-primary mx-auto mb-2" />
-                <p className="text-sm text-foreground">
-                  Mat classes are exclusively available at our Kildare Town studio
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Memberships */}
         <section className="py-10 md:py-14 bg-secondary/30">
           <div className="container mx-auto px-4">
