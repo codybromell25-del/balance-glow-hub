@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { ShoppingCart, CalendarDays } from "lucide-react";
 import heroImage from "@/assets/hero-studio-new.png";
 const HeroSection = () => {
@@ -23,7 +24,7 @@ const HeroSection = () => {
 
           {/* Intro Offer */}
           <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-6 md:mb-8 max-w-xl italic font-light tracking-wide">
-            Limerick Launch Offer Now Live
+            Our Intro Offer: 3 Classes for €50
           </p>
 
           {/* Tagline - elegant and impactful */}
@@ -34,16 +35,16 @@ const HeroSection = () => {
           {/* Buttons - refined and mobile optimized */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
             <Button asChild size="lg" className="rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center border-0 text-black" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-              <a href="https://balancestudios.ie/limerick-launch-offer" target="_blank" rel="noopener noreferrer">
+              <a href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031" target="_blank" rel="noopener noreferrer">
                 Buy now
                 <ShoppingCart className="w-4 h-4 ml-2" />
               </a>
             </Button>
             <Button asChild variant="ghost" size="lg" className="text-white hover:text-white hover:bg-white/10 rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-medium text-sm sm:text-base border border-white/30 hover:border-white/50 transition-all duration-300 justify-center">
-              <a href="https://balancestudios.ie/limerick-launch-offer" target="_blank" rel="noopener noreferrer">
+              <Link to="/pricing">
                 View More
                 <CalendarDays className="w-4 h-4 ml-2" />
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
