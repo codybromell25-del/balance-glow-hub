@@ -386,7 +386,7 @@ const Pricing = () => {
                     </ul>
 
                     <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={sage}>
-                      <a href="https://momence.com/balance" target="_blank" rel="noopener noreferrer">
+                      <a href={membership.link} target="_blank" rel="noopener noreferrer">
                         Buy Now
                       </a>
                     </Button>
