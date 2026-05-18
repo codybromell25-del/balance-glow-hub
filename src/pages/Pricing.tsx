@@ -292,9 +292,9 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 {[
-                  { classes: 1, price: "€15", validity: "Valid 30 days", popular: false },
-                  { classes: 3, price: "€42", validity: "Valid 30 days", popular: true },
-                  { classes: 6, price: "€84", validity: "Valid 60 days", popular: false },
+                  { classes: 1, price: "€15", validity: "Valid 30 days", popular: false, link: "https://momence.com/m/573998" },
+                  { classes: 3, price: "€42", validity: "Valid 30 days", popular: true, link: "https://momence.com/m/771509" },
+                  { classes: 6, price: "€84", validity: "Valid 60 days", popular: false, link: "https://momence.com/m/771510" },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
@@ -318,7 +318,8 @@ const Pricing = () => {
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
                     <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={sage}>
-                      <a href="https://momence.com/balance" target="_blank" rel="noopener noreferrer">
+                      <a href={pack.link} target="_blank" rel="noopener noreferrer">
+
                         Buy Now
                       </a>
                     </Button>
