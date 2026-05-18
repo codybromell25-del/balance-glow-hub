@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { ShoppingCart, CalendarDays } from "lucide-react";
 import heroImage from "@/assets/hero-studio-new.png";
 const HeroSection = () => {
