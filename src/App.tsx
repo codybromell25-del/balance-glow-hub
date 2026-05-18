@@ -76,7 +76,8 @@ const App = () => (
           <Route path="/limerick-coming-soon" element={<LimerickComingSoon />} />
           <Route path="/workshop/anesti-mano" element={<WorkshopAnestiMano />} />
           <Route path="/intro-offer" element={<IntroOffer />} />
-          <Route path="/limerick-launch-offer" element={<Navigate to="/" replace />} />
+          <Route path="/limerick-launch-offer" element={<Navigate to="/pricing" replace />} />
+          <Route path="/workshop/anesti-mano" element={<Navigate to="/" replace />} />
           
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
