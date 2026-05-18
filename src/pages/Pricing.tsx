@@ -345,8 +345,8 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
                 {[
-                  { classes: "4", price: "€50", perClass: "€12.50/class", popular: false },
-                  { classes: "6", price: "€75", perClass: "€12.50/class", popular: true },
+                  { classes: "4", price: "€50", perClass: "€12.50/class", popular: false, link: "https://momence.com/m/771514" },
+                  { classes: "6", price: "€75", perClass: "€12.50/class", popular: true, link: "https://momence.com/m/771691" },
                 ].map((membership, index) => (
                   <div
                     key={membership.classes}
@@ -386,7 +386,7 @@ const Pricing = () => {
                     </ul>
 
                     <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={sage}>
-                      <a href="https://momence.com/balance" target="_blank" rel="noopener noreferrer">
+                      <a href={membership.link} target="_blank" rel="noopener noreferrer">
                         Buy Now
                       </a>
                     </Button>
