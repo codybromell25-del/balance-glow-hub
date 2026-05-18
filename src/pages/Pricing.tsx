@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
@@ -5,7 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Info } from "lucide-react";
 import SEO from "@/components/SEO";
 
+type ClassType = "reformer" | "mat";
+
 const Pricing = () => {
+  const [classType, setClassType] = useState<ClassType>("reformer");
+  const sage = { background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' };
+
   return (
     <div className="min-h-screen">
       <SEO 
@@ -20,10 +26,36 @@ const Pricing = () => {
           subtitle="First, purchase a class pack or membership below. Once you've bought your package, you'll be able to book classes from available time slots at any of our 6 studios."
         />
 
-        {/* Intro Offer */}
-        <section className="py-8 md:py-12">
+        {/* Class type toggle */}
+        <section className="pt-2 pb-4">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+            <div className="flex justify-center">
+              <div className="inline-flex p-1 rounded-full border-2 border-primary/40 bg-background shadow-sm">
+                <button
+                  onClick={() => setClassType("reformer")}
+                  className={`px-5 md:px-8 py-2.5 rounded-full text-sm md:text-base font-heading font-semibold transition-all ${classType === "reformer" ? "text-black shadow-md" : "text-foreground/70 hover:text-foreground"}`}
+                  style={classType === "reformer" ? sage : undefined}
+                >
+                  Reformer
+                </button>
+                <button
+                  onClick={() => setClassType("mat")}
+                  className={`px-5 md:px-8 py-2.5 rounded-full text-sm md:text-base font-heading font-semibold transition-all ${classType === "mat" ? "text-black shadow-md" : "text-foreground/70 hover:text-foreground"}`}
+                  style={classType === "mat" ? sage : undefined}
+                >
+                  Mat, Barre & Yoga
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {classType === "reformer" && (
+        <>
+        {/* Intro Offer */}
+        <section className="py-8 md:py-12 animate-fade-in">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto">
               <div className="relative bg-background p-8 md:p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in flex flex-col">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="relative text-black px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg overflow-hidden whitespace-nowrap" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
