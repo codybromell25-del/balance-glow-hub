@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { MapPin, Clock } from "lucide-react";
+import { MapPin, Clock, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
@@ -31,6 +31,7 @@ const OurStudios = () => {
       address: "The Coach House, Henry Street, Limerick, Ireland",
       parking: "City centre parking nearby",
       hours: "Opening May 2026",
+      offerings: "Reformer, Mat, Barre & Yoga",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=The+Coach+House+Henry+Street+Limerick+Ireland",
       hasDetailPage: true,
     },
@@ -40,6 +41,7 @@ const OurStudios = () => {
       address: "Unit 4a, Yew Tree Square, Prosperous Rd, Abbeyland, Clane, Co. Kildare, W91 R642, Ireland",
       parking: "Free parking available nearby",
       hours: "Open 7 Days a Week",
+      offerings: "Reformer only",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+4a+Yew+Tree+Square+Prosperous+Rd+Abbeyland+Clane+Co.+Kildare+W91+R642+Ireland",
       hasDetailPage: true,
     },
@@ -49,6 +51,7 @@ const OurStudios = () => {
       address: "Unit 3 Claregate St, Kildare, R51 E772, Ireland",
       parking: "Street parking and public car park",
       hours: "Open 7 Days a Week",
+      offerings: "Reformer only",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Claregate+St+Kildare+R51+E772+Ireland",
       hasDetailPage: true,
     },
@@ -58,6 +61,7 @@ const OurStudios = () => {
       address: "1a The Green, Main St, Blessington, Co. Wicklow, W91 PNV2, Ireland",
       parking: "Free parking on-site",
       hours: "Open 7 Days a Week",
+      offerings: "Reformer only",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=1a+The+Green+Main+St+Blessington+Co.+Wicklow+W91+PNV2+Ireland",
       hasDetailPage: true,
     },
@@ -67,6 +71,7 @@ const OurStudios = () => {
       address: "Unit 3, Main Street, Enfield, Co. Meath, A83 RP84",
       parking: "Free parking available",
       hours: "Open 7 Days a Week",
+      offerings: "Reformer only",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Main+Street+Enfield+Co.+Meath+A83+RP84",
       hasDetailPage: true,
     },
@@ -76,6 +81,7 @@ const OurStudios = () => {
       address: "Industrial Development Agency Business Park, Southern Cross Rd, Irishtown, Bray, Co. Wicklow, A98 T276, Ireland",
       parking: "Free on-site parking",
       hours: "Open 7 Days a Week",
+      offerings: "Reformer only",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Balance+Bray+Industrial+Development+Agency+Business+Park+Southern+Cross+Rd+Irishtown+Bray+Co.+Wicklow+A98+T276+Ireland",
       hasDetailPage: true,
     },
@@ -146,6 +152,10 @@ const OurStudios = () => {
                         <div className="flex gap-3">
                           <Clock className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                           <span className="text-muted-foreground">{studio.hours}</span>
+                        </div>
+                        <div className="flex gap-3">
+                          <Sparkles className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-foreground font-medium">{studio.offerings}</span>
                         </div>
                       </div>
 
