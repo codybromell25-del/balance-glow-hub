@@ -1,5 +1,5 @@
 import StudioPage from "@/components/StudioPage";
-import claneHero from "@/assets/balance-removebg-preview.png";
+import claneHero from "@/assets/studio-clane.jpg";
 
 const StudioClane = () => {
   const studioInfo = {
@@ -12,7 +12,7 @@ const StudioClane = () => {
     image: claneHero,
     locationId: "117422",
     showScheduleWidget: true,
-    isLogoHero: true,
+    isLogoHero: false,
   };
 
   return <StudioPage studioInfo={studioInfo} />;
