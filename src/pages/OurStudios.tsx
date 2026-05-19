@@ -51,7 +51,7 @@ const OurStudios = () => {
       address: "Unit 3 Claregate St, Kildare, R51 E772, Ireland",
       parking: "Street parking and public car park",
       hours: "Open 7 Days a Week",
-      offerings: "Reformer only",
+      offerings: "Reformer & Mat",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Claregate+St+Kildare+R51+E772+Ireland",
       hasDetailPage: true,
     },
