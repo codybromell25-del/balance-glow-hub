@@ -197,7 +197,6 @@ const Pricing = () => {
                     <ul className="space-y-2 mb-6 text-sm">
                       {[
                         "Auto-renews monthly",
-                        "Priority booking",
                         "Valid all locations",
                         "Cancel anytime",
                       ].map((feature) => (
@@ -409,7 +408,6 @@ const Pricing = () => {
                       {[
                         "Pick & mix across Mat, Barre & Yoga",
                         "Auto-renews monthly",
-                        "Priority booking",
                         "Cancel anytime",
                       ].map((feature) => (
                         <li key={feature} className="flex items-center gap-2">
