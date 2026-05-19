@@ -71,7 +71,7 @@ const OurStudios = () => {
       address: "Unit 3, Main Street, Enfield, Co. Meath, A83 RP84",
       parking: "Free parking available",
       hours: "Open 7 Days a Week",
-      offerings: "Reformer only",
+      offerings: "Reformer & Mat",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Main+Street+Enfield+Co.+Meath+A83+RP84",
       hasDetailPage: true,
     },
