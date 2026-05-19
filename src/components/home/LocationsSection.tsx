@@ -3,7 +3,7 @@ import studioClane from "@/assets/studio-clane.jpg";
 import studioKildare from "@/assets/studio-kildare.jpg";
 import studioBlessington from "@/assets/studio-blessington.jpg";
 import studioEnfield from "@/assets/studio-enfield.png";
-import studioBray from "@/assets/studio-bray.png";
+import studioBray from "@/assets/studio-bray.jpg";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 const LocationsSection = () => {
   const locations = [{
