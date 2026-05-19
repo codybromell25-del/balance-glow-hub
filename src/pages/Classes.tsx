@@ -181,7 +181,7 @@ const Classes = () => {
     {
       icon: Leaf,
       level: "Yoga",
-      suitable: "Mixed / Suitable for all",
+      suitable: "Mixed / Suitable for all — available at Limerick",
       difficulty: 2,
       whatToExpect: [
         "Designed to help you move, breathe and switch off from the outside world for a while",
