@@ -67,7 +67,7 @@ const memberships = [
     classCount: "Unlimited classes per month",
     description: "For those who want to make balance. an essential part of their daily routine.",
     terms: "Paid monthly. Auto-renews.",
-    features: ["Priority booking", "All locations", "Bring a friend once/month"],
+    features: ["All locations", "Bring a friend once/month"],
     link: "https://momence.com/Balance/membership/Monthly-Membership---Unlimited-Reformer-classes/574005"
   },
 ];
