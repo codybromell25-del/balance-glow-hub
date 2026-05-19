@@ -207,14 +207,13 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
             {/* Hero Content */}
             <div className="relative z-10 container mx-auto px-4 pb-16 md:pb-20">
               <div className="max-w-3xl">
-                <div className="flex items-center gap-2 mb-4">
-                  <Sparkles className="w-4 h-4 text-primary" />
-                  <span className="text-primary text-sm tracking-widest uppercase">{studioInfo.tagline}</span>
-                </div>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading italic text-white mb-4">
-                  balance. <span className="text-primary">{studioInfo.name}</span>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading italic mb-6" style={{ color: '#A3C1AD' }}>
+                  {studioInfo.name}
                 </h1>
-                <p className="text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed">
+                <p className="text-white text-xl md:text-2xl max-w-2xl leading-relaxed mb-4 font-medium italic">
+                  For those who expect more.
+                </p>
+                <p className="text-white/80 text-base md:text-lg max-w-xl">
                   {studioInfo.heroDescription}
                 </p>
               </div>
