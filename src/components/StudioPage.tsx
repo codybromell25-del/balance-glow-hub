@@ -211,7 +211,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   {studioInfo.name}
                 </h1>
                 <p className="text-white text-xl md:text-2xl max-w-2xl leading-relaxed mb-4 font-medium italic">
-                  For those who expect more.
+                  It's all about balance.
                 </p>
                 <p className="text-white/80 text-base md:text-lg max-w-xl">
                   {studioInfo.heroDescription}
