@@ -1,34 +1,70 @@
+# Two hidden ad landing pages — Limerick
 
-# Fix Dynamic Meta Data: Remove Hardcoded Tags from index.html
+Build two standalone, conversion-focused landing pages designed for paid ads. Both are hidden from the main site (not linked in nav/footer, excluded from sitemap, `noindex`), include the phrase **"It's all about balance"**, and use the existing brand system (sage primary, Libre Baskerville headings, cream background).
 
-## Problem
-The `index.html` file contains hardcoded `<title>`, `<meta name="description">`, Open Graph, and Twitter Card tags. These are the homepage-specific values, but since this is a Single Page Application, every route loads the same `index.html` first. The `react-helmet-async` `<SEO>` component on each page is supposed to override these dynamically, but the static tags are interfering -- crawlers and link previews often pick up the hardcoded homepage values instead of the page-specific ones.
+Both follow the same structural pattern as `src/pages/IntroOfferLimerick.tsx` (minimal logo-only header, hero, single offer card, social proof, what-to-expect, final CTA, tiny footer) — but each is single-offer (not two) and ad-optimised.
 
-## Solution
-Remove all dynamic meta tags from `index.html` and let `react-helmet-async` manage them entirely on a per-page basis. Keep only the tags that are truly global and should never change (viewport, robots, favicons, fonts, tracking scripts, geo tags, Google verification).
+---
 
-## What Gets Removed from index.html
-- Line 49: `<title>balance studios | for those who expect more</title>`
-- Line 50: `<meta name="description" content="...">` 
-- Line 51: `<meta name="author" content="balance studios">`
-- Lines 75-83: All `<meta property="og:...">` tags
-- Lines 85-89: All `<meta name="twitter:...">` tags
+## Page 1 — Limerick Reformer ad page
 
-## What Stays in index.html (unchanged)
-- Google Site Verification
-- Tracking scripts (GA, GTM, Clarity, Meta Pixel)
-- Viewport, robots directive
-- Favicon and manifest links
-- Theme color
-- Geo tags for local SEO
-- Font preconnects and stylesheets
-- Noscript fallback content
+- **Route:** `/limerick-reformer-opening`
+- **File:** `src/pages/AdsLimerickReformer.tsx`
+- **Offer:** 3 Reformer Pilates classes for **€50**
+- **CTA link:** `https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017` (existing intro Momence link — user confirmed "send to the normal 3 for 50 intro offer")
+- **Imagery:** real studio photography. User will upload images one-by-one — page will start with the existing Limerick studio photos already in `src/assets/` (limerick-studio-2..6, intro-offer-hero) as placeholders, then swap as new uploads arrive.
 
-## Why This Works
-Each page already has a `<SEO>` component that sets title, description, canonical, OG, and Twitter tags dynamically. By removing the static duplicates from `index.html`, `react-helmet-async` becomes the single source of truth, and every route will display its own unique metadata.
+## Page 2 — Limerick Mat / Barre / Yoga ad page
 
-## Technical Details
+- **Route:** `/limerick-mat-opening`
+- **File:** `src/pages/AdsLimerickMatBarreYoga.tsx`
+- **Offer:** 3 Mat / Barre / Yoga classes for **€40** (mix & match, 30-day expiry from first class)
+- **CTA link:** `https://momence.com/balance/membership/Intro-Offer---3-Mat-%2F-Barre-%2F-Yoga-classes-for-%E2%82%AC40/771466`
+- **Imagery:** approved stock photography of mat pilates, barre and yoga movements (3 high-quality stock images sourced and saved into `src/assets/stock/`). Hero image will be a strong mat/barre/yoga stock shot.
+- **Location messaging:** Limerick-only ("the only balance studio offering all three").
 
-**File changed:** `index.html` -- remove 11 lines of hardcoded meta tags (title, description, author, OG block, Twitter block).
+---
 
-No other files need changes. All pages already have their `<SEO>` component with unique props configured from the previous update.
+## Shared structure (both pages)
+
+1. **Logo-only header** (no nav, removes exit paths — standard ad-LP pattern)
+2. **Hero** — full-bleed image, headline, sub, offer chip, single primary CTA button
+3. **Offer card** — price, what's included (4 bullets), big CTA
+4. **"It's all about balance" brand band** — short copy section featuring the tagline prominently
+5. **What to expect** — 3-icon grid (arrive early / wear comfy / we guide you)
+6. **Social proof / studio imagery band**
+7. **Final CTA** — repeat offer + button
+8. **Tiny footer** — copyright + Terms link only (no nav)
+
+## Hiding from main site
+
+- **Not** added to `Navigation.tsx` or `Footer.tsx`
+- **Not** added to `public/sitemap.xml`
+- `<SEO noindex />` on both pages
+- Routes added to `src/App.tsx` only
+
+## Ad / conversion optimisations
+
+- Single CTA repeated 3× per page (hero, offer card, final CTA) — same Momence URL, all `target="_blank"`
+- Above-the-fold price + CTA visible without scroll on mobile
+- No external links except the Momence checkout
+- Fast LCP: hero image preloaded, all other imagery `loading="lazy"`
+- Sticky mobile CTA bar (bottom of viewport on small screens) for instant tap-to-buy
+- Urgency microcopy ("Limited time", "Limerick launch offer")
+- Trust signals: small-group, expert-led, beginner-friendly bullets
+
+## Files to add/change
+
+**New:**
+- `src/pages/AdsLimerickReformer.tsx`
+- `src/pages/AdsLimerickMatBarreYoga.tsx`
+- `src/assets/stock/` — 3 stock images (mat, barre, yoga) for page 2
+
+**Edited:**
+- `src/App.tsx` — register two new routes
+
+**Not edited:** `Navigation.tsx`, `Footer.tsx`, `sitemap.xml` (keeps them hidden).
+
+## After approval
+
+I'll build both pages immediately using existing Limerick studio assets for page 1. As you upload new reformer images one-by-one, I'll slot them into page 1. For page 2 I'll source stock images for mat / barre / yoga.
