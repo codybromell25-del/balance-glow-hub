@@ -95,7 +95,7 @@ const AdsLimerickMatBarreYoga = () => {
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading font-normal text-white mb-6 leading-[0.95] tracking-tight">
               3 Mat · Barre · Yoga Classes for{" "}
-              <span style={{ color: "#A3C1AD" }}>€40</span>
+              <span style={{ color: "#ffffff" }}>€40</span>
             </h1>
 
             <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-8 max-w-2xl mx-auto italic font-light">
