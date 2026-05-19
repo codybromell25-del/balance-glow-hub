@@ -168,7 +168,7 @@ const Classes = () => {
     {
       icon: Sparkles,
       level: "Pilates Barre",
-      suitable: "Mixed / Suitable for all",
+      suitable: "Mixed / Suitable for all — available at Limerick",
       difficulty: 3,
       whatToExpect: [
         "Fun, energising full body workout combining Pilates-inspired movement with barre-based strength and endurance exercises",
