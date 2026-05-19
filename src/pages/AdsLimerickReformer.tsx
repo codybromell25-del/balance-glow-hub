@@ -246,7 +246,7 @@ const AdsLimerickReformer = () => {
             Start strong with balance Limerick.
           </h2>
           <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-            3 reformer classes. €50. Limited launch offer.
+            3 reformer classes. €50. No Commitment
           </p>
 
           <Button
