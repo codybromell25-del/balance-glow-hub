@@ -277,6 +277,40 @@ const Pricing = () => {
           </div>
         </section>
 
+        {/* Studio Availability Notice */}
+        <section className="py-6 md:py-8 bg-secondary/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto bg-background rounded-xl border-2 border-primary/40 p-6 md:p-8">
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                <h3 className="text-xl font-heading font-bold text-foreground">
+                  Where to find these classes
+                </h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
+                  <h4 className="font-semibold text-foreground mb-1">Mat Pilates</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Enfield, Limerick & Kildare Town
+                  </p>
+                </div>
+                <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
+                  <h4 className="font-semibold text-foreground mb-1">Barre</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Limerick & Kildare Town
+                  </p>
+                </div>
+                <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
+                  <h4 className="font-semibold text-foreground mb-1">Yoga</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Limerick only
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Mat/Barre/Yoga Class Packs */}
         <section className="py-10 md:py-14 bg-secondary/30">
           <div className="container mx-auto px-4">
