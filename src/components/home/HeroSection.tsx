@@ -29,11 +29,8 @@ const HeroSection = () => {
 
           {/* Tagline - bold italic serif, matching brand mark */}
           <p
-            className="font-heading text-white text-2xl md:text-3xl lg:text-4xl leading-tight mb-8 md:mb-10 max-w-2xl italic font-semibold tracking-tight"
-            style={{
-              WebkitTextStroke: '1px #000',
-              textShadow: '0 2px 12px rgba(0,0,0,0.45)',
-            }}
+            className="font-heading text-white text-2xl md:text-3xl lg:text-4xl leading-tight mb-8 md:mb-10 max-w-2xl italic font-normal tracking-wide"
+            style={{ textShadow: '0 2px 20px rgba(0,0,0,0.55)' }}
           >
             It's all about balance.
           </p>
