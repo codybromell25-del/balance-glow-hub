@@ -11,7 +11,7 @@ import studio5 from "@/assets/limerick-studio-5.jpg";
 import studio6 from "@/assets/limerick-studio-6.jpg";
 
 const CHECKOUT_URL =
-  "https://momence.com/balance/membership/Launch-offer---3-Reformer-classes-for-%E2%82%AC45/766017";
+  "https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031";
 
 const includes = [
   "3 reformer Pilates classes",
