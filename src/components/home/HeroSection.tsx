@@ -27,9 +27,9 @@ const HeroSection = () => {
             Our Intro Offer: 3 Classes for €50
           </p>
 
-          {/* Tagline - elegant and impactful */}
-          <p className="text-white/90 text-lg md:text-2xl leading-relaxed mb-8 md:mb-10 max-w-xl italic font-light tracking-wide">
-            It's all about <span className="font-semibold not-italic text-white">balance</span>.
+          {/* Tagline - bold italic serif, matching brand mark */}
+          <p className="font-heading text-white text-3xl md:text-5xl lg:text-6xl leading-tight mb-8 md:mb-10 max-w-2xl italic font-bold tracking-tight">
+            It's all about balance.
           </p>
 
           {/* Buttons - refined and mobile optimized */}
