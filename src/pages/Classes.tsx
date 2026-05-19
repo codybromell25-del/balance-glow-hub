@@ -154,7 +154,7 @@ const Classes = () => {
     {
       icon: Users,
       level: "Mat Class",
-      suitable: "Pilates on the mat — available at Kildare Town only",
+      suitable: "Pilates on the mat — available at Limerick, Enfield & Kildare",
       difficulty: 3,
       whatToExpect: [
         "Classic mat Pilates exercises focusing on core strength and flexibility",
@@ -168,7 +168,7 @@ const Classes = () => {
     {
       icon: Sparkles,
       level: "Pilates Barre",
-      suitable: "Mixed / Suitable for all",
+      suitable: "Mixed / Suitable for all — available at Limerick",
       difficulty: 3,
       whatToExpect: [
         "Fun, energising full body workout combining Pilates-inspired movement with barre-based strength and endurance exercises",
@@ -181,7 +181,7 @@ const Classes = () => {
     {
       icon: Leaf,
       level: "Yoga",
-      suitable: "Mixed / Suitable for all",
+      suitable: "Mixed / Suitable for all — available at Limerick",
       difficulty: 2,
       whatToExpect: [
         "Designed to help you move, breathe and switch off from the outside world for a while",
