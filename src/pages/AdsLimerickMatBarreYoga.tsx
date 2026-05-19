@@ -3,7 +3,7 @@ import { Check, ShoppingCart, Clock, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
-import heroImage from "@/assets/stock/stock-mby-hero.jpg";
+import heroImage from "@/assets/balance-studio-interior-hero.jpg";
 import matImg from "@/assets/stock/stock-mat-pilates.jpg";
 import barreImg from "@/assets/stock/stock-barre.jpg";
 import yogaImg from "@/assets/stock/stock-yoga.jpg";
