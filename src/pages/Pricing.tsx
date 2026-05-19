@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
-import { Check, Sparkles, Info } from "lucide-react";
+import { Check, Sparkles, Info, MapPin } from "lucide-react";
 import SEO from "@/components/SEO";
 
 type ClassType = "reformer" | "mat";
