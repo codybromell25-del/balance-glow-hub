@@ -1,7 +1,7 @@
 import { MapPin, Sparkles } from "lucide-react";
 import studioClane from "@/assets/studio-clane.jpg";
 import studioKildare from "@/assets/studio-kildare.jpg";
-import studioBlessington from "@/assets/studio-blessington.png";
+import studioBlessington from "@/assets/studio-blessington.jpg";
 import studioEnfield from "@/assets/studio-enfield.png";
 import studioBray from "@/assets/studio-bray.png";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
