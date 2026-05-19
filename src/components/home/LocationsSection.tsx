@@ -1,5 +1,5 @@
 import { MapPin, Sparkles } from "lucide-react";
-import studioClane from "@/assets/studio-clane.png";
+import studioClane from "@/assets/studio-clane.jpg";
 import studioKildare from "@/assets/studio-kildare.png";
 import studioBlessington from "@/assets/studio-blessington.png";
 import studioEnfield from "@/assets/studio-enfield.png";
