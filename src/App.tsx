@@ -33,6 +33,8 @@ import Limerick from "./pages/Limerick";
 import LimerickComingSoon from "./pages/LimerickComingSoon";
 import WorkshopAnestiMano from "./pages/WorkshopAnestiMano";
 import IntroOffer from "./pages/IntroOffer";
+import AdsLimerickReformer from "./pages/AdsLimerickReformer";
+import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
 
 import NotFound from "./pages/NotFound";
 
@@ -78,6 +80,10 @@ const App = () => (
           <Route path="/intro-offer" element={<IntroOffer />} />
           <Route path="/limerick-launch-offer" element={<Navigate to="/pricing" replace />} />
           <Route path="/workshop/anesti-mano" element={<Navigate to="/" replace />} />
+
+          {/* Hidden ad landing pages (noindex, not in nav/sitemap) */}
+          <Route path="/limerick-reformer-opening" element={<AdsLimerickReformer />} />
+          <Route path="/limerick-mat-opening" element={<AdsLimerickMatBarreYoga />} />
           
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
