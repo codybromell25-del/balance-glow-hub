@@ -1,5 +1,5 @@
 import StudioPage from "@/components/StudioPage";
-import balanceLogo from "@/assets/balance-removebg-preview.png";
+import enfieldHero from "@/assets/studio-enfield.jpg";
 
 const StudioEnfield = () => {
   const studioInfo = {
@@ -9,10 +9,10 @@ const StudioEnfield = () => {
     heroDescription: "Whether you're a beginner or an experienced practitioner, balance Enfield has the perfect class for you.",
     detailDescription: "Located on Main Street in the heart of Enfield, our purpose-built studio features state-of-the-art reformers offering the ultimate Pilates experience. Serving Meath and surrounding areas, we're ready to welcome you.",
     address: "Unit 3, Main Street, Enfield, Co. Meath, A83 RP84",
-    image: balanceLogo,
+    image: enfieldHero,
     locationId: "117425",
     showScheduleWidget: true,
-    isLogoHero: true,
+    isLogoHero: false,
   };
 
   return <StudioPage studioInfo={studioInfo} />;
