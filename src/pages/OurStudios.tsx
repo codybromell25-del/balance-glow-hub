@@ -153,6 +153,10 @@ const OurStudios = () => {
                           <Clock className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                           <span className="text-muted-foreground">{studio.hours}</span>
                         </div>
+                        <div className="flex gap-3">
+                          <Sparkles className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-foreground font-medium">{studio.offerings}</span>
+                        </div>
                       </div>
 
                       {/* Buttons */}
