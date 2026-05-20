@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 
 const tasterLinks = [
-  { label: "Book Taster Class — Option 1", url: "https://momence.com/balance/Reformer---Taster-Class/136774490" },
+  { label: "Sun, May 31, 2026 · 11:00 AM", url: "https://momence.com/balance/Reformer---Taster-Class/136774490" },
   { label: "Book Taster Class — Option 2", url: "https://momence.com/balance/Reformer---Taster-Class/136249137" },
   { label: "Book Taster Class — Option 3", url: "https://momence.com/balance/Reformer---Taster-Class/136248981" },
   { label: "Book Taster Class — Option 4", url: "https://momence.com/balance/Reformer---Taster-Class/136774467" },
