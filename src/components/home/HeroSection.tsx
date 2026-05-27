@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import { ShoppingCart, CalendarDays } from "lucide-react";
 import heroImage from "@/assets/hero-studio-new.png";
 const HeroSection = () => {
-  return <section className="min-h-[85vh] flex items-end bg-cover bg-center relative" style={{
+  return <section className="min-h-[85vh] flex items-center md:items-end bg-cover bg-center relative pt-28 md:pt-32" style={{
     backgroundImage: `url(${heroImage})`
   }}>
       {/* Dramatic gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
 
-      <div className="container mx-auto px-6 md:px-4 pb-16 md:pb-28 relative z-10">
+      <div className="container mx-auto px-6 md:px-4 pb-12 md:pb-28 relative z-10">
         <div className="max-w-3xl animate-fade-in">
           {/* Main headline - BOLD and dramatic */}
-          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-heading font-normal text-white mb-2 md:mb-4 leading-[0.9] tracking-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-heading font-normal text-white mb-2 md:mb-4 leading-[0.9] tracking-tight">
             balance<span className="text-primary">.</span>
           </h1>
 
