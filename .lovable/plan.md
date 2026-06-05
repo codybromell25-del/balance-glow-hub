@@ -1,16 +1,21 @@
-# Swap hero image on Mat/Barre/Yoga ad page
+## Update Taster Classes page with June 2026 schedule
 
-Replace the stock studio hero on `/limerick-mat-opening` with the uploaded balance studio interior photo (reformer studio shot with sage walls, mirrors, and the "balance" signage).
+I fetched all 9 Momence booking links. Here's what I'll put on `/taster-classes` (sorted chronologically):
+
+| # | Date | Time | Instructor |
+|---|------|------|------------|
+| 1 | Sat, Jun 6, 2026 | 11:00 AM | Lara |
+| 2 | Mon, Jun 8, 2026 | 12:30 PM | Val |
+| 3 | Wed, Jun 10, 2026 | 8:00 PM | Val |
+| 4 | Sat, Jun 13, 2026 | 10:00 AM | Angela |
+| 5 | Mon, Jun 15, 2026 | 7:00 PM | Lisa |
+| 6 | Thu, Jun 18, 2026 | 10:30 AM | Lisa |
+| 7 | Fri, Jun 19, 2026 | 9:30 AM | Val |
+| 8 | Tue, Jun 23, 2026 | 12:30 PM | Lisa |
+| 9 | Sun, Jun 28, 2026 | 9:00 AM | Val |
 
 ## Changes
 
-1. **Copy** the uploaded image into the project:
-   - `user-uploads://Kildare_3.jpg` → `src/assets/balance-studio-interior-hero.jpg`
-
-2. **Edit** `src/pages/AdsLimerickMatBarreYoga.tsx`:
-   - Swap the hero import from `@/assets/stock/stock-mby-hero.jpg` to the new asset.
-   - Keep everything else identical (the three class-type cards still use the mat / barre / yoga stock images, as previously approved).
-
-## Note
-
-The image is a reformer pilates interior (not a mat/barre/yoga shot), but it's a real balance studio photo which fits the brand "no stock photos for hero" preference. The class-type cards below still visually represent mat, barre and yoga via the stock images.
+- Edit `src/pages/TasterClasses.tsx`: replace the 4-entry `tasterLinks` array with the 9 entries above, each pointing to its correct Momence URL.
+- Button labels will use the existing format: `"Sat, Jun 6, 2026 · 11:00 AM"` (no instructor name, to match current style). Let me know if you'd like instructor names included.
+- No other layout/styling changes — the existing grid stacks all 9 buttons cleanly on mobile and desktop.

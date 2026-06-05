@@ -5,10 +5,15 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 
 const tasterLinks = [
-  { label: "Sun, May 31, 2026 · 11:00 AM", url: "https://momence.com/balance/Reformer---Taster-Class/136774490" },
-  { label: "Thu, May 28, 2026 · 12:30 PM", url: "https://momence.com/balance/Reformer---Taster-Class/136249137" },
-  { label: "Wed, May 27, 2026 · 9:30 AM", url: "https://momence.com/balance/Reformer---Taster-Class/136248981" },
-  { label: "Tue, May 26, 2026 · 8:00 PM", url: "https://momence.com/balance/Reformer---Taster-Class/136774467" },
+  { label: "Sat, Jun 6, 2026 · 11:00 AM", url: "https://momence.com/balance/Reformer---Taster-Class/137625346" },
+  { label: "Mon, Jun 8, 2026 · 12:30 PM", url: "https://momence.com/balance/Reformer---Taster-Class/136247830" },
+  { label: "Wed, Jun 10, 2026 · 8:00 PM", url: "https://momence.com/balance/Reformer---Taster-Class/136252815" },
+  { label: "Sat, Jun 13, 2026 · 10:00 AM", url: "https://momence.com/balance/Reformer---Taster-Class/136865098" },
+  { label: "Mon, Jun 15, 2026 · 7:00 PM", url: "https://momence.com/balance/Reformer---Taster-Class/136247092" },
+  { label: "Thu, Jun 18, 2026 · 10:30 AM", url: "https://momence.com/balance/Reformer---Taster-Class/136249113" },
+  { label: "Fri, Jun 19, 2026 · 9:30 AM", url: "https://momence.com/balance/Reformer---Taster-Class/136252895" },
+  { label: "Tue, Jun 23, 2026 · 12:30 PM", url: "https://momence.com/balance/Reformer---Taster-Class/136248220" },
+  { label: "Sun, Jun 28, 2026 · 9:00 AM", url: "https://momence.com/balance/Reformer---Taster-Class/136253025" },
 ];
 
 const TasterClasses = () => {
