@@ -78,7 +78,7 @@ const MembershipOffers = () => {
       <section className="relative min-h-[80vh] flex items-end overflow-hidden">
         <img
           src={classType === "reformer" ? heroImgReformer : heroImgMat}
-          alt={classType === "reformer" ? "balance reformer pilates studio" : "balance mat, barre and yoga class"}
+          alt={classType === "reformer" ? "balance reformer pilates studio" : "balance studios interior"}
           className="absolute inset-0 w-full h-full object-cover"
           width={1600}
           height={1200}
