@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
 import SEO from "@/components/SEO";
@@ -11,7 +12,12 @@ const sage = {
     "linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)",
 };
 
-const classPacks = [
+type ClassType = "reformer" | "mat";
+
+type Pack = { classes: number; price: string; validity: string; link: string; featured?: boolean };
+type Membership = { classes: string; price: string; perClass: string; link: string; featured?: boolean };
+
+const reformerPacks: Pack[] = [
   { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
   { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
   { classes: 6, price: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
@@ -19,14 +25,37 @@ const classPacks = [
   { classes: 20, price: "€400", validity: "Valid ~20 mo", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
 ];
 
-const memberships = [
+const reformerMemberships: Membership[] = [
   { classes: "4", price: "€80", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-Membership---4-classes/574026" },
   { classes: "6", price: "€120", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-Membership---6-classes/574023" },
   { classes: "8", price: "€160", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-membership---8-classes/574021", featured: true },
   { classes: "Unlimited", price: "€240", perClass: "Best value", link: "https://momence.com/Balance/membership/Monthly-Membership---Unlimited-Reformer-classes/574005", featured: true },
 ];
 
+const matPacks: Pack[] = [
+  { classes: 1, price: "€15", validity: "Valid 30 days", link: "https://momence.com/m/573998" },
+  { classes: 3, price: "€42", validity: "Valid 30 days", link: "https://momence.com/m/771509", featured: true },
+  { classes: 6, price: "€84", validity: "Valid 60 days", link: "https://momence.com/m/771510" },
+];
+
+const matMemberships: Membership[] = [
+  { classes: "4", price: "€50", perClass: "€12.50 / class", link: "https://momence.com/m/771514" },
+  { classes: "6", price: "€75", perClass: "€12.50 / class", link: "https://momence.com/m/771691", featured: true },
+];
+
 const MembershipOffers = () => {
+  const [classType, setClassType] = useState<ClassType>("reformer");
+  const classPacks = classType === "reformer" ? reformerPacks : matPacks;
+  const memberships = classType === "reformer" ? reformerMemberships : matMemberships;
+  const packsKicker = classType === "reformer" ? "01 — Reformer Class Packs" : "01 — Mat · Barre · Yoga Class Packs";
+  const membershipsKicker = classType === "reformer" ? "02 — Reformer Memberships" : "02 — Mat · Barre · Yoga Memberships";
+  const packsCopy = classType === "reformer"
+    ? "No commitment, no auto-renewal. Buy a pack, book classes when it suits you, use them across any of our six studios."
+    : "Pick & mix across Mat, Barre and Yoga classes. No commitment, no auto-renewal — practice on your own schedule.";
+  const membershipsCopy = classType === "reformer"
+    ? "For those who want to make movement a habit. Lower per-class rates, priority feel, full access across all six studios."
+    : "Best value for a regular Mat, Barre or Yoga practice. Auto-renews monthly, cancel anytime.";
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
@@ -69,8 +98,34 @@ const MembershipOffers = () => {
         </div>
       </section>
 
+      {/* Class type toggle */}
+      <section className="pt-16 md:pt-20">
+        <div className="container mx-auto px-6 md:px-10 flex justify-center">
+          <div className="inline-flex p-1 rounded-full border border-foreground/15 bg-background">
+            <button
+              onClick={() => setClassType("reformer")}
+              className={`px-5 md:px-7 py-2.5 rounded-full text-xs md:text-sm tracking-[0.2em] uppercase font-heading transition-all ${
+                classType === "reformer" ? "text-black" : "text-foreground/60 hover:text-foreground"
+              }`}
+              style={classType === "reformer" ? sage : undefined}
+            >
+              Reformer
+            </button>
+            <button
+              onClick={() => setClassType("mat")}
+              className={`px-5 md:px-7 py-2.5 rounded-full text-xs md:text-sm tracking-[0.2em] uppercase font-heading transition-all ${
+                classType === "mat" ? "text-black" : "text-foreground/60 hover:text-foreground"
+              }`}
+              style={classType === "mat" ? sage : undefined}
+            >
+              Mat · Barre · Yoga
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Class Packs */}
-      <section className="py-20 md:py-28">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 md:px-10">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-5 lg:sticky lg:top-10">
@@ -84,12 +139,12 @@ const MembershipOffers = () => {
                   className="w-full h-[420px] md:h-[560px] object-cover"
                 />
               </div>
-              <p className="mt-6 text-xs tracking-[0.25em] uppercase text-foreground/60">01 — Class Packs</p>
+              <p className="mt-6 text-xs tracking-[0.25em] uppercase text-foreground/60">{packsKicker}</p>
               <h2 className="mt-3 font-heading text-4xl md:text-5xl tracking-tight">
                 Practice at your own pace.
               </h2>
               <p className="mt-4 text-foreground/70 leading-relaxed max-w-md">
-                No commitment, no auto-renewal. Buy a pack, book classes when it suits you, use them across any of our six studios.
+                {packsCopy}
               </p>
             </div>
 
@@ -143,12 +198,12 @@ const MembershipOffers = () => {
       <section className="py-20 md:py-28 bg-foreground/[0.03]">
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl mb-12 md:mb-16">
-            <p className="text-xs tracking-[0.25em] uppercase text-foreground/60">02 — Memberships</p>
+            <p className="text-xs tracking-[0.25em] uppercase text-foreground/60">{membershipsKicker}</p>
             <h2 className="mt-3 font-heading text-4xl md:text-5xl tracking-tight">
               A monthly rhythm.
             </h2>
             <p className="mt-4 text-foreground/70 leading-relaxed max-w-xl">
-              For those who want to make movement a habit. Lower per-class rates, priority feel, full access across all six studios.
+              {membershipsCopy}
             </p>
           </div>
 
