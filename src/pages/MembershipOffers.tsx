@@ -142,6 +142,16 @@ const MembershipOffers = () => {
       {/* Memberships */}
       <section className="py-20 md:py-28 bg-foreground/[0.03]">
         <div className="container mx-auto px-6 md:px-10">
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <p className="text-xs tracking-[0.25em] uppercase text-foreground/60">02 — Memberships</p>
+            <h2 className="mt-3 font-heading text-4xl md:text-5xl tracking-tight">
+              A monthly rhythm.
+            </h2>
+            <p className="mt-4 text-foreground/70 leading-relaxed max-w-xl">
+              For those who want to make movement a habit. Lower per-class rates, priority feel, full access across all six studios.
+            </p>
+          </div>
+
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-7">
               <div className="grid sm:grid-cols-2 gap-5">
@@ -204,13 +214,6 @@ const MembershipOffers = () => {
                   className="w-full h-[420px] md:h-[560px] object-cover"
                 />
               </div>
-              <p className="mt-6 text-xs tracking-[0.25em] uppercase text-foreground/60">02 — Memberships</p>
-              <h2 className="mt-3 font-heading text-4xl md:text-5xl tracking-tight">
-                A monthly rhythm.
-              </h2>
-              <p className="mt-4 text-foreground/70 leading-relaxed max-w-md">
-                For those who want to make movement a habit. Lower per-class rates, priority feel, full access across all six studios.
-              </p>
             </div>
           </div>
         </div>
