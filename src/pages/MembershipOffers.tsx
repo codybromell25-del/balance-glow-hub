@@ -83,6 +83,7 @@ const MembershipOffers = () => {
           width={1600}
           height={1200}
         />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
         <div className="relative container mx-auto px-6 md:px-10 pb-16 md:pb-24">
           <div className="max-w-3xl">
