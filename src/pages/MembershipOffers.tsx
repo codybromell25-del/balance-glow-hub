@@ -198,12 +198,12 @@ const MembershipOffers = () => {
       <section className="py-20 md:py-28 bg-foreground/[0.03]">
         <div className="container mx-auto px-6 md:px-10">
           <div className="max-w-3xl mb-12 md:mb-16">
-            <p className="text-xs tracking-[0.25em] uppercase text-foreground/60">02 — Memberships</p>
+            <p className="text-xs tracking-[0.25em] uppercase text-foreground/60">{membershipsKicker}</p>
             <h2 className="mt-3 font-heading text-4xl md:text-5xl tracking-tight">
               A monthly rhythm.
             </h2>
             <p className="mt-4 text-foreground/70 leading-relaxed max-w-xl">
-              For those who want to make movement a habit. Lower per-class rates, priority feel, full access across all six studios.
+              {membershipsCopy}
             </p>
           </div>
 
