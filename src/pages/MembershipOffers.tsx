@@ -83,18 +83,17 @@ const MembershipOffers = () => {
           width={1600}
           height={1200}
         />
-        <div className="absolute inset-0 bg-black/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative container mx-auto px-6 md:px-10 pb-16 md:pb-24">
           <div className="max-w-3xl">
-            <p className="text-sm md:text-base tracking-[0.25em] uppercase text-[#A3C1AD] mb-5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+            <p className="text-sm md:text-base tracking-[0.25em] uppercase text-[#C8E0CC] mb-5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
               Memberships &amp; Class Packs
             </p>
-            <h1 className="font-heading text-5xl md:text-7xl leading-[1.05] tracking-tight text-[#A3C1AD] drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
+            <h1 className="font-heading text-5xl md:text-7xl leading-[1.05] tracking-tight text-[#C8E0CC] drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
               Move with intention.<br />
-              <span className="italic text-[#A3C1AD]">Stay for the feeling.</span>
+              <span className="italic text-[#C8E0CC]">Stay for the feeling.</span>
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-[#A3C1AD] max-w-xl leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
+            <p className="mt-6 text-lg md:text-xl text-white max-w-xl leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
               A quiet, considered way to practice — across six studios in Ireland.
               Choose the rhythm that fits your life.
             </p>
