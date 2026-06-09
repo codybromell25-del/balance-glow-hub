@@ -217,9 +217,6 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Brand */}
             <div>
-              <p className="font-heading text-4xl text-foreground mb-4">
-                balance
-              </p>
               <p className="text-sm text-muted-foreground">
                 Reformer Pilates across Kildare, Wicklow & Meath.
               </p>
@@ -285,7 +282,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="border-t border-border mt-8 pt-8 text-center">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} balance studios. All rights reserved.
+              &copy; {new Date().getFullYear()} All rights reserved.
             </p>
           </div>
         </div>
