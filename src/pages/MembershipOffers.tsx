@@ -98,8 +98,34 @@ const MembershipOffers = () => {
         </div>
       </section>
 
+      {/* Class type toggle */}
+      <section className="pt-16 md:pt-20">
+        <div className="container mx-auto px-6 md:px-10 flex justify-center">
+          <div className="inline-flex p-1 rounded-full border border-foreground/15 bg-background">
+            <button
+              onClick={() => setClassType("reformer")}
+              className={`px-5 md:px-7 py-2.5 rounded-full text-xs md:text-sm tracking-[0.2em] uppercase font-heading transition-all ${
+                classType === "reformer" ? "text-black" : "text-foreground/60 hover:text-foreground"
+              }`}
+              style={classType === "reformer" ? sage : undefined}
+            >
+              Reformer
+            </button>
+            <button
+              onClick={() => setClassType("mat")}
+              className={`px-5 md:px-7 py-2.5 rounded-full text-xs md:text-sm tracking-[0.2em] uppercase font-heading transition-all ${
+                classType === "mat" ? "text-black" : "text-foreground/60 hover:text-foreground"
+              }`}
+              style={classType === "mat" ? sage : undefined}
+            >
+              Mat · Barre · Yoga
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Class Packs */}
-      <section className="py-20 md:py-28">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 md:px-10">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-5 lg:sticky lg:top-10">
@@ -113,12 +139,12 @@ const MembershipOffers = () => {
                   className="w-full h-[420px] md:h-[560px] object-cover"
                 />
               </div>
-              <p className="mt-6 text-xs tracking-[0.25em] uppercase text-foreground/60">01 — Class Packs</p>
+              <p className="mt-6 text-xs tracking-[0.25em] uppercase text-foreground/60">{packsKicker}</p>
               <h2 className="mt-3 font-heading text-4xl md:text-5xl tracking-tight">
                 Practice at your own pace.
               </h2>
               <p className="mt-4 text-foreground/70 leading-relaxed max-w-md">
-                No commitment, no auto-renewal. Buy a pack, book classes when it suits you, use them across any of our six studios.
+                {packsCopy}
               </p>
             </div>
 
