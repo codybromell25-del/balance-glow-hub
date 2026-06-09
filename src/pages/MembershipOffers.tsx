@@ -75,7 +75,7 @@ const MembershipOffers = () => {
       </header>
 
       {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-end overflow-hidden">
+      <section className="relative min-h-[55vh] md:min-h-[60vh] flex items-end overflow-hidden">
         <img
           src={classType === "reformer" ? heroImgReformer : heroImgMat}
           alt={classType === "reformer" ? "balance reformer pilates studio" : "balance studios interior"}
