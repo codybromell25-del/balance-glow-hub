@@ -124,6 +124,37 @@ const MembershipOffers = () => {
         </div>
       </section>
 
+      {/* Studio availability — Mat / Barre / Yoga only */}
+      {classType === "mat" && (
+        <section className="pt-10 md:pt-14">
+          <div className="container mx-auto px-6 md:px-10">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-center text-xs tracking-[0.25em] uppercase text-foreground/55 mb-6">
+                Where to find these classes
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {[
+                  { label: "Mat Pilates", studios: "Enfield · Limerick · Kildare Town" },
+                  { label: "Barre", studios: "Limerick · Kildare Town" },
+                  { label: "Yoga", studios: "Limerick only" },
+                ].map((row) => (
+                  <div
+                    key={row.label}
+                    className="bg-background border border-foreground/10 rounded-sm p-5 text-center"
+                  >
+                    <p className="font-heading text-lg text-foreground">{row.label}</p>
+                    <p className="mt-2 text-sm text-foreground/65 leading-relaxed">{row.studios}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-5 text-center text-xs text-foreground/55">
+                Reformer classes are available at all six studios.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Class Packs */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 md:px-10">
