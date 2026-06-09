@@ -86,14 +86,14 @@ const MembershipOffers = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
         <div className="relative container mx-auto px-6 md:px-10 pb-16 md:pb-24">
           <div className="max-w-3xl">
-            <p className="text-sm md:text-base tracking-[0.25em] uppercase text-foreground/70 mb-5">
+            <p className="text-sm md:text-base tracking-[0.25em] uppercase text-[#A3C1AD] mb-5">
               Memberships &amp; Class Packs
             </p>
-            <h1 className="font-heading text-5xl md:text-7xl leading-[1.05] tracking-tight text-foreground">
+            <h1 className="font-heading text-5xl md:text-7xl leading-[1.05] tracking-tight text-[#A3C1AD]">
               Move with intention.<br />
-              <span className="italic text-foreground/80">Stay for the feeling.</span>
+              <span className="italic text-[#A3C1AD]/80">Stay for the feeling.</span>
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-foreground/75 max-w-xl leading-relaxed">
+            <p className="mt-6 text-lg md:text-xl text-[#A3C1AD]/80 max-w-xl leading-relaxed">
               A quiet, considered way to practice — across six studios in Ireland.
               Choose the rhythm that fits your life.
             </p>
