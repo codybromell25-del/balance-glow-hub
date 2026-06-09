@@ -217,7 +217,9 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Brand */}
             <div>
-              <img src={balanceLogo} alt="balance reformer pilates" className="h-24 w-auto mb-4" />
+              <p className="font-heading text-4xl text-foreground mb-4">
+                balance
+              </p>
               <p className="text-sm text-muted-foreground">
                 Reformer Pilates across Kildare, Wicklow & Meath.
               </p>
