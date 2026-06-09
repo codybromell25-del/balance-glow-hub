@@ -1,0 +1,242 @@
+import { Link } from "react-router-dom";
+import { Check } from "lucide-react";
+import SEO from "@/components/SEO";
+import balanceLogo from "@/assets/balance-removebg-preview.png";
+import heroImg from "@/assets/membership-hero.jpg";
+import packsImg from "@/assets/membership-packs.jpg";
+import membershipsImg from "@/assets/membership-memberships.jpg";
+
+const sage = {
+  background:
+    "linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)",
+};
+
+const classPacks = [
+  { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
+  { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
+  { classes: 6, price: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
+  { classes: 10, price: "€215", validity: "Valid ~10 mo", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", featured: true },
+  { classes: 20, price: "€400", validity: "Valid ~20 mo", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
+];
+
+const memberships = [
+  { classes: "4", price: "€80", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-Membership---4-classes/574026" },
+  { classes: "6", price: "€120", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-Membership---6-classes/574023" },
+  { classes: "8", price: "€160", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-membership---8-classes/574021", featured: true },
+  { classes: "Unlimited", price: "€240", perClass: "Best value", link: "https://momence.com/Balance/membership/Monthly-Membership---Unlimited-Reformer-classes/574005", featured: true },
+];
+
+const MembershipOffers = () => {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Memberships & Class Packs | balance studios"
+        description="Reformer pilates memberships and class packs at balance studios."
+        noindex
+      />
+
+      {/* Minimal top bar — logo links home */}
+      <header className="absolute top-0 left-0 right-0 z-20 px-6 md:px-10 py-5">
+        <Link to="/" className="inline-flex items-center" aria-label="balance studios — home">
+          <img src={balanceLogo} alt="balance studios" className="h-14 md:h-16 w-auto" />
+        </Link>
+      </header>
+
+      {/* Hero */}
+      <section className="relative min-h-[80vh] flex items-end overflow-hidden">
+        <img
+          src={heroImg}
+          alt="balance reformer pilates studio"
+          className="absolute inset-0 w-full h-full object-cover"
+          width={1600}
+          height={1200}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
+        <div className="relative container mx-auto px-6 md:px-10 pb-16 md:pb-24">
+          <div className="max-w-3xl">
+            <p className="text-sm md:text-base tracking-[0.25em] uppercase text-foreground/70 mb-5">
+              Memberships &amp; Class Packs
+            </p>
+            <h1 className="font-heading text-5xl md:text-7xl leading-[1.05] tracking-tight text-foreground">
+              Move with intention.<br />
+              <span className="italic text-foreground/80">Stay for the feeling.</span>
+            </h1>
+            <p className="mt-6 text-lg md:text-xl text-foreground/75 max-w-xl leading-relaxed">
+              A quiet, considered way to practice — across six studios in Ireland.
+              Choose the rhythm that fits your life.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Class Packs */}
+      <section className="py-20 md:py-28">
+        <div className="container mx-auto px-6 md:px-10">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            <div className="lg:col-span-5 lg:sticky lg:top-10">
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src={packsImg}
+                  alt="Reformer pilates straps"
+                  loading="lazy"
+                  width={1200}
+                  height={1400}
+                  className="w-full h-[420px] md:h-[560px] object-cover"
+                />
+              </div>
+              <p className="mt-6 text-xs tracking-[0.25em] uppercase text-foreground/60">01 — Class Packs</p>
+              <h2 className="mt-3 font-heading text-4xl md:text-5xl tracking-tight">
+                Practice at your own pace.
+              </h2>
+              <p className="mt-4 text-foreground/70 leading-relaxed max-w-md">
+                No commitment, no auto-renewal. Buy a pack, book classes when it suits you, use them across any of our six studios.
+              </p>
+            </div>
+
+            <div className="lg:col-span-7">
+              <div className="divide-y divide-foreground/10 border-y border-foreground/10">
+                {classPacks.map((pack) => (
+                  <a
+                    key={pack.classes}
+                    href={pack.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center justify-between gap-6 py-7 transition-colors hover:bg-foreground/[0.02] px-2 -mx-2"
+                  >
+                    <div className="flex items-baseline gap-5 min-w-0">
+                      <span className="font-heading text-4xl md:text-5xl tracking-tight text-foreground tabular-nums">
+                        {pack.classes}
+                      </span>
+                      <div className="min-w-0">
+                        <p className="font-heading text-lg text-foreground">
+                          {pack.classes === 1 ? "Drop-in Class" : "Class Pack"}
+                          {pack.featured && (
+                            <span className="ml-3 inline-block text-[10px] tracking-[0.2em] uppercase text-foreground/60 align-middle">
+                              · Most loved
+                            </span>
+                          )}
+                        </p>
+                        <p className="text-sm text-foreground/60 mt-1">{pack.validity}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-5 shrink-0">
+                      <span className="font-heading text-2xl md:text-3xl text-foreground tabular-nums">
+                        {pack.price}
+                      </span>
+                      <span
+                        className="hidden md:inline-flex items-center justify-center w-11 h-11 rounded-full text-black transition-transform group-hover:translate-x-1"
+                        style={sage}
+                        aria-hidden
+                      >
+                        →
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Memberships */}
+      <section className="py-20 md:py-28 bg-foreground/[0.03]">
+        <div className="container mx-auto px-6 md:px-10">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            <div className="lg:col-span-5 lg:order-2 lg:sticky lg:top-10">
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src={membershipsImg}
+                  alt="Practitioner on a reformer in soft daylight"
+                  loading="lazy"
+                  width={1200}
+                  height={1400}
+                  className="w-full h-[420px] md:h-[560px] object-cover"
+                />
+              </div>
+              <p className="mt-6 text-xs tracking-[0.25em] uppercase text-foreground/60">02 — Memberships</p>
+              <h2 className="mt-3 font-heading text-4xl md:text-5xl tracking-tight">
+                A monthly rhythm.
+              </h2>
+              <p className="mt-4 text-foreground/70 leading-relaxed max-w-md">
+                For those who want to make movement a habit. Lower per-class rates, priority feel, full access across all six studios.
+              </p>
+            </div>
+
+            <div className="lg:col-span-7 lg:order-1">
+              <div className="grid sm:grid-cols-2 gap-5">
+                {memberships.map((m) => (
+                  <a
+                    key={m.classes}
+                    href={m.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`group relative flex flex-col justify-between bg-background border rounded-sm p-8 transition-all hover:shadow-lg hover:-translate-y-0.5 ${
+                      m.featured ? "border-[#A3C1AD]" : "border-foreground/10 hover:border-foreground/30"
+                    }`}
+                  >
+                    {m.featured && (
+                      <span
+                        className="absolute -top-2 left-8 text-[10px] tracking-[0.2em] uppercase px-3 py-1 text-black rounded-full"
+                        style={sage}
+                      >
+                        Favourite
+                      </span>
+                    )}
+                    <div>
+                      <p className="text-xs tracking-[0.25em] uppercase text-foreground/55">Monthly</p>
+                      <h3 className="mt-3 font-heading text-3xl tracking-tight">
+                        {m.classes} {m.classes === "Unlimited" ? "" : "Classes"}
+                      </h3>
+                      <p className="mt-5 font-heading text-5xl tracking-tight text-foreground tabular-nums">
+                        {m.price}
+                      </p>
+                      <p className="text-sm text-foreground/60 mt-1">{m.perClass}</p>
+                    </div>
+                    <ul className="mt-8 space-y-2 text-sm text-foreground/70">
+                      {["Auto-renews monthly", "Valid at all six studios", "Cancel anytime"].map((f) => (
+                        <li key={f} className="flex items-center gap-2">
+                          <Check className="w-3.5 h-3.5 text-foreground/50" />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-8 pt-5 border-t border-foreground/10 flex items-center justify-between">
+                      <span className="text-sm font-heading tracking-wide text-foreground">Choose plan</span>
+                      <span className="text-foreground/50 transition-transform group-hover:translate-x-1">→</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+              <p className="mt-6 text-xs text-foreground/55 leading-relaxed">
+                Memberships auto-renew monthly. Unused classes don't roll over. Cancel anytime with 7 days notice before your next billing date.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing */}
+      <section className="py-24 md:py-32">
+        <div className="container mx-auto px-6 md:px-10 text-center max-w-2xl">
+          <p className="text-xs tracking-[0.3em] uppercase text-foreground/55 mb-5">
+            balance studios
+          </p>
+          <p className="font-heading text-2xl md:text-3xl italic text-foreground/85 leading-relaxed">
+            "For those who expect more."
+          </p>
+          <div className="mt-10">
+            <Link
+              to="/"
+              className="inline-block text-sm tracking-[0.2em] uppercase text-foreground/70 hover:text-foreground border-b border-foreground/30 hover:border-foreground pb-1 transition-colors"
+            >
+              Return home
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default MembershipOffers;
