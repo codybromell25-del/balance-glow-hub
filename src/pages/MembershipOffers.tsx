@@ -192,8 +192,8 @@ const MembershipOffers = () => {
                     rel="noopener noreferrer"
                     className="group flex items-center justify-between gap-6 py-7 transition-colors hover:bg-foreground/[0.02] px-2 -mx-2"
                   >
-                    <div className="flex items-baseline gap-5 min-w-0">
-                      <span className="font-heading text-4xl md:text-5xl tracking-tight text-foreground tabular-nums">
+                    <div className="flex items-center gap-5 min-w-0">
+                      <span className="font-heading text-4xl md:text-5xl tracking-tight text-foreground tabular-nums leading-none">
                         {pack.classes}
                       </span>
                       <div className="min-w-0">
