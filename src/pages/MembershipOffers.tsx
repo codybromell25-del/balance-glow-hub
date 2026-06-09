@@ -296,7 +296,7 @@ const MembershipOffers = () => {
               <div className="overflow-hidden rounded-sm">
                 <img
                   src={classType === "reformer" ? membershipsImgReformer : membershipsImgMat}
-                  alt={classType === "reformer" ? "Practitioner on a reformer in soft daylight" : "Barre and mat workout at balance"}
+                  alt={classType === "reformer" ? "Practitioner on a reformer in soft daylight" : "Yoga and stretching at balance studios"}
                   loading="lazy"
                   width={1200}
                   height={1400}
