@@ -44,6 +44,18 @@ const matMemberships: Membership[] = [
 ];
 
 const MembershipOffers = () => {
+  const [classType, setClassType] = useState<ClassType>("reformer");
+  const classPacks = classType === "reformer" ? reformerPacks : matPacks;
+  const memberships = classType === "reformer" ? reformerMemberships : matMemberships;
+  const packsKicker = classType === "reformer" ? "01 — Reformer Class Packs" : "01 — Mat · Barre · Yoga Class Packs";
+  const membershipsKicker = classType === "reformer" ? "02 — Reformer Memberships" : "02 — Mat · Barre · Yoga Memberships";
+  const packsCopy = classType === "reformer"
+    ? "No commitment, no auto-renewal. Buy a pack, book classes when it suits you, use them across any of our six studios."
+    : "Pick & mix across Mat, Barre and Yoga classes. No commitment, no auto-renewal — practice on your own schedule.";
+  const membershipsCopy = classType === "reformer"
+    ? "For those who want to make movement a habit. Lower per-class rates, priority feel, full access across all six studios."
+    : "Best value for a regular Mat, Barre or Yoga practice. Auto-renews monthly, cancel anytime.";
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
