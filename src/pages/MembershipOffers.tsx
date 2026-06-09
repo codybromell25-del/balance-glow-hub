@@ -4,11 +4,11 @@ import { Check } from "lucide-react";
 import SEO from "@/components/SEO";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import heroImgReformer from "@/assets/studio-blessington.jpg";
-import heroImgMat from "@/assets/clients-stretching.jpg";
+import heroImgMat from "@/assets/balance-studio-interior-hero.jpg";
 import packsImgReformer from "@/assets/studio-instructor-helping.jpg";
 import packsImgMat from "@/assets/clients-mat-workout.jpg";
 import membershipsImgReformer from "@/assets/studio-leg-raise.jpg";
-import membershipsImgMat from "@/assets/studio-ball-workout.jpg";
+import membershipsImgMat from "@/assets/clients-stretching.jpg";
 
 const sage = {
   background:
@@ -78,7 +78,7 @@ const MembershipOffers = () => {
       <section className="relative min-h-[80vh] flex items-end overflow-hidden">
         <img
           src={classType === "reformer" ? heroImgReformer : heroImgMat}
-          alt={classType === "reformer" ? "balance reformer pilates studio" : "balance mat, barre and yoga class"}
+          alt={classType === "reformer" ? "balance reformer pilates studio" : "balance studios interior"}
           className="absolute inset-0 w-full h-full object-cover"
           width={1600}
           height={1200}
@@ -296,7 +296,7 @@ const MembershipOffers = () => {
               <div className="overflow-hidden rounded-sm">
                 <img
                   src={classType === "reformer" ? membershipsImgReformer : membershipsImgMat}
-                  alt={classType === "reformer" ? "Practitioner on a reformer in soft daylight" : "Barre and mat workout at balance"}
+                  alt={classType === "reformer" ? "Practitioner on a reformer in soft daylight" : "Yoga and stretching at balance studios"}
                   loading="lazy"
                   width={1200}
                   height={1400}
