@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
 import SEO from "@/components/SEO";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
-import heroImg from "@/assets/studio-blessington.jpg";
-import packsImg from "@/assets/studio-instructor-helping.jpg";
-import membershipsImg from "@/assets/studio-leg-raise.jpg";
+import heroImgReformer from "@/assets/studio-blessington.jpg";
+import heroImgMat from "@/assets/clients-stretching.jpg";
+import packsImgReformer from "@/assets/studio-instructor-helping.jpg";
+import packsImgMat from "@/assets/clients-mat-workout.jpg";
+import membershipsImgReformer from "@/assets/studio-leg-raise.jpg";
+import membershipsImgMat from "@/assets/studio-ball-workout.jpg";
 
 const sage = {
   background:
