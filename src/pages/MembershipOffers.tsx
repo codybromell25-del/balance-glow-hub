@@ -75,7 +75,7 @@ const MembershipOffers = () => {
       </header>
 
       {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-end overflow-hidden">
+      <section className="relative min-h-[55vh] md:min-h-[60vh] flex items-end overflow-hidden">
         <img
           src={classType === "reformer" ? heroImgReformer : heroImgMat}
           alt={classType === "reformer" ? "balance reformer pilates studio" : "balance studios interior"}
@@ -161,6 +161,16 @@ const MembershipOffers = () => {
       {/* Class Packs */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 md:px-10">
+          <div className="max-w-3xl mb-10 md:mb-14">
+            <p className="text-xs tracking-[0.25em] uppercase text-foreground/60">{packsKicker}</p>
+            <h2 className="mt-3 font-heading text-4xl md:text-5xl tracking-tight">
+              Practice at your own pace.
+            </h2>
+            <p className="mt-4 text-foreground/70 leading-relaxed max-w-2xl">
+              {packsCopy}
+            </p>
+          </div>
+
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-5 lg:sticky lg:top-10">
               <div className="overflow-hidden rounded-sm">
@@ -173,13 +183,6 @@ const MembershipOffers = () => {
                   className="w-full h-[420px] md:h-[560px] object-cover"
                 />
               </div>
-              <p className="mt-6 text-xs tracking-[0.25em] uppercase text-foreground/60">{packsKicker}</p>
-              <h2 className="mt-3 font-heading text-4xl md:text-5xl tracking-tight">
-                Practice at your own pace.
-              </h2>
-              <p className="mt-4 text-foreground/70 leading-relaxed max-w-md">
-                {packsCopy}
-              </p>
             </div>
 
             <div className="lg:col-span-7">
