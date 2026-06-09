@@ -77,8 +77,8 @@ const MembershipOffers = () => {
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-end overflow-hidden">
         <img
-          src={heroImg}
-          alt="balance reformer pilates studio"
+          src={classType === "reformer" ? heroImgReformer : heroImgMat}
+          alt={classType === "reformer" ? "balance reformer pilates studio" : "balance mat, barre and yoga class"}
           className="absolute inset-0 w-full h-full object-cover"
           width={1600}
           height={1200}
@@ -165,8 +165,8 @@ const MembershipOffers = () => {
             <div className="lg:col-span-5 lg:sticky lg:top-10">
               <div className="overflow-hidden rounded-sm">
                 <img
-                  src={packsImg}
-                  alt="Reformer pilates straps"
+                  src={classType === "reformer" ? packsImgReformer : packsImgMat}
+                  alt={classType === "reformer" ? "Reformer pilates straps" : "Mat pilates class at balance"}
                   loading="lazy"
                   width={1200}
                   height={1400}
@@ -295,8 +295,8 @@ const MembershipOffers = () => {
             <div className="lg:col-span-5 lg:sticky lg:top-10">
               <div className="overflow-hidden rounded-sm">
                 <img
-                  src={membershipsImg}
-                  alt="Practitioner on a reformer in soft daylight"
+                  src={classType === "reformer" ? membershipsImgReformer : membershipsImgMat}
+                  alt={classType === "reformer" ? "Practitioner on a reformer in soft daylight" : "Barre and mat workout at balance"}
                   loading="lazy"
                   width={1200}
                   height={1400}
