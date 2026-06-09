@@ -68,9 +68,9 @@ const MembershipOffers = () => {
       />
 
       {/* Minimal top bar — logo links home */}
-      <header className="absolute top-0 left-0 right-0 z-20 px-6 md:px-10 py-5">
+      <header className="absolute top-0 left-0 right-0 z-20 px-6 md:px-10 py-5 flex justify-center md:justify-start items-center">
         <Link to="/" className="inline-flex items-center" aria-label="balance studios — home">
-          <img src={balanceLogo} alt="balance studios" className="h-14 md:h-16 w-auto" />
+          <img src={balanceLogo} alt="balance studios" className="h-16 w-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]" />
         </Link>
       </header>
 
