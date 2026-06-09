@@ -4,11 +4,11 @@ import { Check } from "lucide-react";
 import SEO from "@/components/SEO";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import heroImgReformer from "@/assets/studio-blessington.jpg";
-import heroImgMat from "@/assets/clients-stretching.jpg";
+import heroImgMat from "@/assets/balance-studio-interior-hero.jpg";
 import packsImgReformer from "@/assets/studio-instructor-helping.jpg";
 import packsImgMat from "@/assets/clients-mat-workout.jpg";
 import membershipsImgReformer from "@/assets/studio-leg-raise.jpg";
-import membershipsImgMat from "@/assets/studio-ball-workout.jpg";
+import membershipsImgMat from "@/assets/clients-stretching.jpg";
 
 const sage = {
   background:
