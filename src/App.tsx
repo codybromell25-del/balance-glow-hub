@@ -36,6 +36,7 @@ import IntroOffer from "./pages/IntroOffer";
 import AdsLimerickReformer from "./pages/AdsLimerickReformer";
 import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
 import TasterClasses from "./pages/TasterClasses";
+import MembershipOffers from "./pages/MembershipOffers";
 
 import NotFound from "./pages/NotFound";
 
@@ -86,6 +87,7 @@ const App = () => (
           {/* Hidden ad landing pages (noindex, not in nav/sitemap) */}
           <Route path="/limerick-reformer-opening" element={<AdsLimerickReformer />} />
           <Route path="/limerick-mat-opening" element={<AdsLimerickMatBarreYoga />} />
+          <Route path="/membership-offers" element={<MembershipOffers />} />
           
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
