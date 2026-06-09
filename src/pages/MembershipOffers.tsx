@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
 import SEO from "@/components/SEO";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
-import heroImg from "@/assets/membership-hero.jpg";
-import packsImg from "@/assets/membership-packs.jpg";
-import membershipsImg from "@/assets/membership-memberships.jpg";
+import heroImg from "@/assets/hero-studio-branded.jpg";
+import packsImg from "@/assets/clients-laughing.jpg";
+import membershipsImg from "@/assets/studio-reformers-wide.jpg";
 
 const sage = {
   background:
