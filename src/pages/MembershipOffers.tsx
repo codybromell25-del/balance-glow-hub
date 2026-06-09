@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
 import SEO from "@/components/SEO";
@@ -11,7 +12,12 @@ const sage = {
     "linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)",
 };
 
-const classPacks = [
+type ClassType = "reformer" | "mat";
+
+type Pack = { classes: number; price: string; validity: string; link: string; featured?: boolean };
+type Membership = { classes: string; price: string; perClass: string; link: string; featured?: boolean };
+
+const reformerPacks: Pack[] = [
   { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
   { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
   { classes: 6, price: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
@@ -19,11 +25,22 @@ const classPacks = [
   { classes: 20, price: "€400", validity: "Valid ~20 mo", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
 ];
 
-const memberships = [
+const reformerMemberships: Membership[] = [
   { classes: "4", price: "€80", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-Membership---4-classes/574026" },
   { classes: "6", price: "€120", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-Membership---6-classes/574023" },
   { classes: "8", price: "€160", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-membership---8-classes/574021", featured: true },
   { classes: "Unlimited", price: "€240", perClass: "Best value", link: "https://momence.com/Balance/membership/Monthly-Membership---Unlimited-Reformer-classes/574005", featured: true },
+];
+
+const matPacks: Pack[] = [
+  { classes: 1, price: "€15", validity: "Valid 30 days", link: "https://momence.com/m/573998" },
+  { classes: 3, price: "€42", validity: "Valid 30 days", link: "https://momence.com/m/771509", featured: true },
+  { classes: 6, price: "€84", validity: "Valid 60 days", link: "https://momence.com/m/771510" },
+];
+
+const matMemberships: Membership[] = [
+  { classes: "4", price: "€50", perClass: "€12.50 / class", link: "https://momence.com/m/771514" },
+  { classes: "6", price: "€75", perClass: "€12.50 / class", link: "https://momence.com/m/771691", featured: true },
 ];
 
 const MembershipOffers = () => {
