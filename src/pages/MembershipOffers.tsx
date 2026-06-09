@@ -318,7 +318,7 @@ const MembershipOffers = () => {
             balance studios
           </p>
           <p className="font-heading text-2xl md:text-3xl italic text-foreground/85 leading-relaxed">
-            "For those who expect more."
+            "It's all about balance."
           </p>
           <div className="mt-10">
             <Link
