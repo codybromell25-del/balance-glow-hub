@@ -314,9 +314,6 @@ const MembershipOffers = () => {
       {/* Closing */}
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-6 md:px-10 text-center max-w-2xl">
-          <p className="text-xs tracking-[0.3em] uppercase text-foreground/55 mb-5">
-            balance studios
-          </p>
           <p className="font-heading text-2xl md:text-3xl italic text-foreground/85 leading-relaxed">
             "It's all about balance."
           </p>
