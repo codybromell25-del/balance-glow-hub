@@ -1,10 +1,13 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 
-const tasterLinks = [
+type TasterType = "reformer" | "barre";
+
+const reformerLinks = [
   { label: "Sat, Jun 6, 2026 · 11:00 AM", url: "https://momence.com/balance/Reformer---Taster-Class/137625346" },
   { label: "Mon, Jun 8, 2026 · 12:30 PM", url: "https://momence.com/balance/Reformer---Taster-Class/136247830" },
   { label: "Wed, Jun 10, 2026 · 8:00 PM", url: "https://momence.com/balance/Reformer---Taster-Class/136252815" },
@@ -16,12 +19,25 @@ const tasterLinks = [
   { label: "Sun, Jun 28, 2026 · 9:00 AM", url: "https://momence.com/balance/Reformer---Taster-Class/136253025" },
 ];
 
+const barreLinks = [
+  { label: "Sat, Jun 13, 2026 · 9:00 AM", url: "https://momence.com/balance/Barre---Taster-Class/138071150" },
+  { label: "Tue, Jun 16, 2026 · 10:30 AM", url: "https://momence.com/balance/Barre---Taster-Class/138072404" },
+  { label: "Sat, Jun 20, 2026 · 9:00 AM", url: "https://momence.com/balance/Barre---Taster-Class/138072033" },
+  { label: "Tue, Jun 23, 2026 · 10:30 AM", url: "https://momence.com/balance/Barre---Taster-Class/138072430" },
+  { label: "Fri, Jun 26, 2026 · 7:00 PM", url: "https://momence.com/balance/Barre---Taster-Class/138072579" },
+  { label: "Sat, Jun 27, 2026 · 9:00 AM", url: "https://momence.com/balance/Barre---Taster-Class/138072047" },
+  { label: "Tue, Jun 30, 2026 · 10:30 AM", url: "https://momence.com/balance/Barre---Taster-Class/138072547" },
+];
+
 const TasterClasses = () => {
+  const [type, setType] = useState<TasterType>("reformer");
+  const links = type === "reformer" ? reformerLinks : barreLinks;
+
   return (
     <div className="min-h-screen">
       <SEO
         title="Taster Classes | balance studios"
-        description="New to Reformer Pilates? Our Taster Classes gently guide first-time and nervous clients through their first Reformer experience in a calm, supportive environment."
+        description="New to Reformer Pilates or Barre? Our Taster Classes gently guide first-time and nervous clients through their first class in a calm, supportive environment."
         canonical="/taster-classes"
       />
       <Navigation />
@@ -34,15 +50,47 @@ const TasterClasses = () => {
               </h1>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 Designed especially for nervous or first-time clients, our Taster Classes gently
-                guide you through your first Reformer experience in a calm and supportive
-                environment. You'll learn how the reformer works, what to expect in class, and
-                build confidence at your own pace, with plenty of opportunity to ask questions
-                along the way.
+                guide you through your first {type === "reformer" ? "Reformer" : "Barre"} experience
+                in a calm and supportive environment. You'll learn how the class works, what to
+                expect, and build confidence at your own pace, with plenty of opportunity to ask
+                questions along the way.
               </p>
             </div>
 
-            <div className="max-w-2xl mx-auto mt-12 grid gap-4">
-              {tasterLinks.map((link) => (
+            {/* Sliding toggle */}
+            <div className="max-w-md mx-auto mt-10">
+              <div className="relative grid grid-cols-2 p-1 rounded-full bg-secondary/50 border border-border/50">
+                <span
+                  aria-hidden
+                  className="absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)] rounded-full shadow-md transition-transform duration-300 ease-out"
+                  style={{
+                    background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)',
+                    transform: type === "barre" ? "translateX(100%)" : "translateX(0%)",
+                  }}
+                />
+                <button
+                  type="button"
+                  onClick={() => setType("reformer")}
+                  className={`relative z-10 py-2.5 text-sm md:text-base font-semibold rounded-full transition-colors ${
+                    type === "reformer" ? "text-black" : "text-foreground/70"
+                  }`}
+                >
+                  Reformer
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setType("barre")}
+                  className={`relative z-10 py-2.5 text-sm md:text-base font-semibold rounded-full transition-colors ${
+                    type === "barre" ? "text-black" : "text-foreground/70"
+                  }`}
+                >
+                  Barre
+                </button>
+              </div>
+            </div>
+
+            <div className="max-w-2xl mx-auto mt-8 grid gap-4">
+              {links.map((link) => (
                 <Button
                   key={link.url}
                   asChild
