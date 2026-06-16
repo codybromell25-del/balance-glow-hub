@@ -21,12 +21,9 @@ const reformerLinks = [
 
 const barreLinks = [
   { label: "Sat, Jun 13, 2026 · 9:00 AM", url: "https://momence.com/balance/Barre---Taster-Class/138071150" },
-  { label: "Tue, Jun 16, 2026 · 10:30 AM", url: "https://momence.com/balance/Barre---Taster-Class/138072404" },
   { label: "Sat, Jun 20, 2026 · 9:00 AM", url: "https://momence.com/balance/Barre---Taster-Class/138072033" },
-  { label: "Tue, Jun 23, 2026 · 10:30 AM", url: "https://momence.com/balance/Barre---Taster-Class/138072430" },
   { label: "Fri, Jun 26, 2026 · 7:00 PM", url: "https://momence.com/balance/Barre---Taster-Class/138072579" },
   { label: "Sat, Jun 27, 2026 · 9:00 AM", url: "https://momence.com/balance/Barre---Taster-Class/138072047" },
-  { label: "Tue, Jun 30, 2026 · 10:30 AM", url: "https://momence.com/balance/Barre---Taster-Class/138072547" },
 ];
 
 const TasterClasses = () => {
