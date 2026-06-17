@@ -46,11 +46,13 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) =>
-              link.path === "/book-class" ? (
+              link.path.startsWith("http") ? (
                 <a
                   key={link.path}
                   href={link.path}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary transition-colors font-heading font-medium"
                 >
                   {link.name}
                 </a>
