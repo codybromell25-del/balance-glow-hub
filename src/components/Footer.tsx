@@ -84,7 +84,7 @@ const Footer = () => {
     { name: "Blessington", path: "/our-studios" },
     { name: "Enfield", path: "/our-studios" },
     { name: "Bray", path: "/our-studios" },
-    { name: "Limerick", path: "/limerick-coming-soon" },
+    { name: "Limerick", path: "/studio/limerick" },
   ];
 
   return (
