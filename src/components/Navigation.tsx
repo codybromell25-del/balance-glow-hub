@@ -25,8 +25,7 @@ const Navigation = () => {
     { name: "Buy a Class", path: "/pricing" },
     { name: "Book a Class", path: "/our-studios" },
     { name: "Taster Classes", path: "/taster-classes" },
-    
-    
+    { name: "Education", path: "https://educationbalance.vercel.app/#apply" },
     { name: "Gift Cards", path: "/gift-cards" },
     { name: "Our Story", path: "/about" },
   ];
