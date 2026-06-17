@@ -93,10 +93,12 @@ const Navigation = () => {
           <div className="md:hidden pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) =>
-                link.path === "/book-class" ? (
+                link.path.startsWith("http") ? (
                   <a
                     key={link.path}
                     href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-foreground hover:text-primary transition-colors font-medium py-2"
                     onClick={() => setIsOpen(false)}
                   >
