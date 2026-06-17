@@ -25,8 +25,7 @@ const Navigation = () => {
     { name: "Buy a Class", path: "/pricing" },
     { name: "Book a Class", path: "/our-studios" },
     { name: "Taster Classes", path: "/taster-classes" },
-    
-    
+    { name: "Education", path: "https://educationbalance.vercel.app/#apply" },
     { name: "Gift Cards", path: "/gift-cards" },
     { name: "Our Story", path: "/about" },
   ];
@@ -47,11 +46,13 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) =>
-              link.path === "/book-class" ? (
+              link.path.startsWith("http") ? (
                 <a
                   key={link.path}
                   href={link.path}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary transition-colors font-heading font-medium"
                 >
                   {link.name}
                 </a>
@@ -92,10 +93,12 @@ const Navigation = () => {
           <div className="md:hidden pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) =>
-                link.path === "/book-class" ? (
+                link.path.startsWith("http") ? (
                   <a
                     key={link.path}
                     href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-foreground hover:text-primary transition-colors font-medium py-2"
                     onClick={() => setIsOpen(false)}
                   >
