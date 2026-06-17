@@ -5,7 +5,7 @@ import studioBlessington from "@/assets/studio-blessington.jpg";
 import studioEnfield from "@/assets/studio-enfield.jpg";
 import studioBray from "@/assets/studio-bray.jpg";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
-import studioLimerick from "@/assets/studio-limerick.jpeg.asset.json";
+import studioLimerick from "@/assets/studio-limerick-new.jpg.asset.json";
 const LocationsSection = () => {
   const locations = [{
     name: "Clane",
