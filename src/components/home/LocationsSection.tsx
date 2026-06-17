@@ -37,6 +37,12 @@ const LocationsSection = () => {
     description: "Coastal studio with natural light",
     image: studioBray,
     size: "tall"
+  }, {
+    name: "Limerick",
+    county: "Co Limerick, City Centre",
+    description: "City centre studio",
+    image: studioLimerick.url,
+    size: "normal"
   }];
   return <section className="py-10 md:py-14 bg-background">
       <div className="container mx-auto px-4">
