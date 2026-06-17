@@ -97,29 +97,27 @@ const LocationsSection = () => {
           <a 
             href="/limerick-coming-soon"
             className="group relative block h-64 rounded-2xl overflow-hidden shadow-lg animate-fade-in hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
-            style={{ 
-              animationDelay: '0.5s',
-              background: 'linear-gradient(135deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)'
-            }}
+            style={{ animationDelay: '0.5s' }}
           >
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/30 rounded-full blur-2xl group-hover:bg-white/40 transition-all duration-300" />
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/20 rounded-full blur-3xl group-hover:bg-white/30 transition-all duration-300" />
-            
+            {/* Image */}
+            <img
+              src={studioLimerick.url}
+              alt="Balance studio Limerick entrance"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10" />
+
             {/* Content */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center transform group-hover:scale-105 transition-transform duration-300">
-              <img 
-                src={balanceLogo} 
-                alt="balance logo"
-                className="h-20 w-auto mb-4 opacity-90"
-              />
+            <div className="absolute inset-0 flex flex-col items-center justify-end p-6 text-center">
               <div className="flex items-center gap-2 mb-2">
-                <Sparkles className="w-4 h-4 text-black/70" />
-                <p className="text-xs text-black/70 font-semibold uppercase tracking-widest">Coming Soon</p>
-                <Sparkles className="w-4 h-4 text-black/70" />
+                <Sparkles className="w-4 h-4 text-white/90" />
+                <p className="text-xs text-white/90 font-semibold uppercase tracking-widest">Coming Soon</p>
+                <Sparkles className="w-4 h-4 text-white/90" />
               </div>
-              <h3 className="text-2xl font-heading font-bold text-black tracking-tight">Limerick</h3>
-              <p className="text-black/80 text-sm mt-2 font-semibold group-hover:text-black transition-colors">Click Here To See More</p>
+              <h3 className="text-2xl font-heading font-bold text-white tracking-tight">Limerick</h3>
+              <p className="text-white/85 text-sm mt-2 font-semibold">Click Here To See More</p>
             </div>
 
             {/* Coming Soon Badge */}
