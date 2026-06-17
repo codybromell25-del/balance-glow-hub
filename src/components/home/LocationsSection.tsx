@@ -116,6 +116,7 @@ const LocationsSection = () => {
                 <p className="text-xs text-white/90 font-semibold uppercase tracking-widest">Coming Soon</p>
                 <Sparkles className="w-4 h-4 text-white/90" />
               </div>
+              <p className="text-xs text-white/80 font-medium uppercase tracking-wider mb-1">Co Limerick, City Centre</p>
               <h3 className="text-2xl font-heading font-bold text-white tracking-tight">Limerick</h3>
               <p className="text-white/85 text-sm mt-2 font-semibold">Click Here To See More</p>
             </div>
