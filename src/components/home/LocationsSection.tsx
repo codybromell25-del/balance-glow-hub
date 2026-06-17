@@ -1,4 +1,4 @@
-import { MapPin, Sparkles } from "lucide-react";
+import { MapPin } from "lucide-react";
 import studioClane from "@/assets/studio-clane.jpg";
 import studioKildare from "@/assets/studio-kildare.jpg";
 import studioBlessington from "@/assets/studio-blessington.jpg";
@@ -51,7 +51,7 @@ const LocationsSection = () => {
             Pick Your Pilates Playground
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            6 beautifully designed studios across Limerick, Kildare, Wicklow, and Meath. Each location offers the same
+            7 beautifully designed studios across Limerick, Kildare, Wicklow, and Meath. Each location offers the same
             exceptional experience with our signature warm welcome.
           </p>
         </div>
@@ -98,40 +98,6 @@ const LocationsSection = () => {
               </a>
             );
           })}
-          
-          {/* Limerick Coming Soon Tile */}
-          <a 
-            href="/limerick-coming-soon"
-            className="group relative block h-64 rounded-2xl overflow-hidden shadow-lg animate-fade-in hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
-            style={{ animationDelay: '0.5s' }}
-          >
-            {/* Image */}
-            <img
-              src={studioLimerick.url}
-              alt="Balance studio Limerick entrance"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10" />
-
-            {/* Content */}
-            <div className="absolute inset-0 flex flex-col items-center justify-end p-6 text-center">
-              <div className="flex items-center gap-2 mb-2">
-                <Sparkles className="w-4 h-4 text-white/90" />
-                <p className="text-xs text-white/90 font-semibold uppercase tracking-widest">Coming Soon</p>
-                <Sparkles className="w-4 h-4 text-white/90" />
-              </div>
-              <p className="text-xs text-white/80 font-medium uppercase tracking-wider mb-1">Co Limerick, City Centre</p>
-              <h3 className="text-2xl font-heading font-bold text-white tracking-tight">Limerick</h3>
-              <p className="text-white/85 text-sm mt-2 font-semibold">Click Here To See More</p>
-            </div>
-
-            {/* Coming Soon Badge */}
-            <div className="absolute top-4 right-4 px-4 py-2 rounded-full shadow-md bg-white/40 backdrop-blur-sm group-hover:bg-white/60 transition-all duration-300">
-              <p className="text-xs font-semibold text-black uppercase tracking-wide">2026</p>
-            </div>
-          </a>
         </div>
       </div>
     </section>;
