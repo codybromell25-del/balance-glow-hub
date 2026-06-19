@@ -5,6 +5,16 @@ import { Button } from "@/components/ui/button";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import AnnouncementBanner from "./AnnouncementBanner";
 
+const trackOutboundClick = (url: string, label: string) => {
+  if (typeof window !== "undefined" && (window as any).gtag) {
+    (window as any).gtag("event", "click", {
+      event_category: "outbound",
+      event_label: label,
+      link_url: url,
+    });
+  }
+};
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showBookButton, setShowBookButton] = useState(false);
