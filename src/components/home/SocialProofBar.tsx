@@ -17,12 +17,16 @@ const SocialProofBar = () => {
                   index !== stats.length - 1 ? "border-r border-foreground/8" : ""
                 }`}
               >
-                <div className="flex items-baseline gap-0.5">
+                <div className="flex items-baseline">
                   <span className="font-heading font-normal text-2xl md:text-3xl text-foreground tracking-tight leading-none">
                     {stat.value}
                   </span>
                   {stat.suffix && (
-                    <span className="font-heading text-sm text-foreground/30 leading-none">
+                    <span
+                      className={`font-heading text-sm text-foreground/30 leading-none ${
+                        stat.suffix === "+" ? "ml-1.5 translate-y-[-1px]" : "ml-1"
+                      }`}
+                    >
                       {stat.suffix}
                     </span>
                   )}
