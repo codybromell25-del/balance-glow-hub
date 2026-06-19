@@ -6,38 +6,34 @@ const SocialProofBar = () => {
   ];
 
   return (
-    <section className="py-14 md:py-20 bg-background">
+    <section className="py-8 md:py-10 bg-background">
       <div className="container mx-auto px-6">
-        {/* Top hairline accent */}
-        <div className="w-16 h-px bg-foreground/20 mx-auto mb-12 md:mb-16" />
-
-        <div className="grid grid-cols-3 gap-4 md:gap-0 max-w-4xl mx-auto">
-          {stats.map((stat, index) => (
-            <div
-              key={stat.label}
-              className={`flex flex-col items-center text-center px-2 md:px-8 ${
-                index !== stats.length - 1 ? "md:border-r border-foreground/10" : ""
-              }`}
-            >
-              <div className="flex items-baseline justify-center gap-1">
-                <span className="font-heading font-normal text-4xl md:text-6xl lg:text-7xl text-foreground tracking-tight leading-none">
-                  {stat.value}
-                </span>
-                {stat.suffix && (
-                  <span className="font-heading text-xl md:text-2xl text-foreground/40 leading-none">
-                    {stat.suffix}
+        <div className="border-t border-b border-foreground/8 py-6 md:py-8">
+          <div className="grid grid-cols-3 gap-6 md:gap-0 max-w-2xl mx-auto">
+            {stats.map((stat, index) => (
+              <div
+                key={stat.label}
+                className={`flex flex-col items-center text-center px-4 md:px-10 ${
+                  index !== stats.length - 1 ? "border-r border-foreground/8" : ""
+                }`}
+              >
+                <div className="flex items-baseline gap-0.5">
+                  <span className="font-heading font-normal text-2xl md:text-3xl text-foreground tracking-tight leading-none">
+                    {stat.value}
                   </span>
-                )}
+                  {stat.suffix && (
+                    <span className="font-heading text-sm text-foreground/30 leading-none">
+                      {stat.suffix}
+                    </span>
+                  )}
+                </div>
+                <span className="mt-1.5 text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-foreground/40 font-body">
+                  {stat.label}
+                </span>
               </div>
-              <span className="mt-4 md:mt-5 text-[9px] md:text-[11px] uppercase tracking-[0.25em] md:tracking-[0.3em] text-foreground/60 font-body">
-                {stat.label}
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
-        {/* Bottom hairline accent */}
-        <div className="w-16 h-px bg-foreground/20 mx-auto mt-12 md:mt-16" />
       </div>
     </section>
   );
