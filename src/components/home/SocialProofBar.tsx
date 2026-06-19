@@ -1,6 +1,6 @@
 const SocialProofBar = () => {
   const stats = [
-    { value: "6", label: "Boutique Studios" },
+    { value: "6", label: "Studios" },
     { value: "10,000", suffix: "+", label: "Classes Taught" },
     { value: "4.9", label: "Google Rating", suffix: "★" },
   ];
