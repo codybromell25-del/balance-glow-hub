@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ShoppingCart, CalendarDays } from "lucide-react";
 import heroImage from "@/assets/studio-blessington.jpg";
 const HeroSection = () => {
-  return <section className="min-h-[85vh] flex items-center md:items-end bg-cover bg-center relative pt-28 md:pt-32" style={{
+  return <section className="min-h-[85vh] flex items-end bg-cover bg-center relative pt-32 md:pt-36" style={{
     backgroundImage: `url(${heroImage})`
   }}>
       {/* Dramatic gradient overlay */}
