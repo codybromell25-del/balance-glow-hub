@@ -63,6 +63,10 @@ const Navigation = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-foreground hover:text-primary transition-colors font-heading font-medium"
+                  onClick={() =>
+                    link.name === "Education" &&
+                    trackOutboundClick(link.path, "education_nav")
+                  }
                 >
                   {link.name}
                 </a>
