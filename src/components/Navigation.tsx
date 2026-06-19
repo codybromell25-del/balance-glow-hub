@@ -5,6 +5,16 @@ import { Button } from "@/components/ui/button";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import AnnouncementBanner from "./AnnouncementBanner";
 
+const trackOutboundClick = (url: string, label: string) => {
+  if (typeof window !== "undefined" && (window as any).gtag) {
+    (window as any).gtag("event", "click", {
+      event_category: "outbound",
+      event_label: label,
+      link_url: url,
+    });
+  }
+};
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showBookButton, setShowBookButton] = useState(false);
@@ -53,6 +63,10 @@ const Navigation = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-foreground hover:text-primary transition-colors font-heading font-medium"
+                  onClick={() =>
+                    link.name === "Education" &&
+                    trackOutboundClick(link.path, "education_nav")
+                  }
                 >
                   {link.name}
                 </a>
@@ -94,14 +108,19 @@ const Navigation = () => {
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) =>
                 link.path.startsWith("http") ? (
-                  <a
-                    key={link.path}
-                    href={link.path}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors font-medium py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
+                <a
+                  key={link.path}
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                  onClick={() => {
+                    setIsOpen(false);
+                    if (link.name === "Education") {
+                      trackOutboundClick(link.path, "education_nav");
+                    }
+                  }}
+                >
                     {link.name}
                   </a>
                 ) : (
