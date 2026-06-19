@@ -1,75 +1,43 @@
-import { Star, Users, MapPin } from "lucide-react";
-
 const SocialProofBar = () => {
   const stats = [
-    {
-      icon: MapPin,
-      value: "6",
-      label: "Studios",
-      color: "#A3C1AD"
-    },
-    {
-      icon: Users,
-      value: "10,000+",
-      label: "Classes Taught",
-      color: "#A3C1AD"
-    },
-    {
-      icon: Star,
-      value: "4.9",
-      label: "Google Rating",
-      color: "#A3C1AD"
-    }
+    { value: "6", label: "Boutique Studios" },
+    { value: "10,000+", label: "Classes Taught" },
+    { value: "4.9", label: "Google Rating", suffix: "★" },
   ];
 
   return (
-    <section className="py-8 md:py-10 bg-gradient-to-b from-secondary/30 via-background to-secondary/20">
-      <div className="container mx-auto px-4">
-        {/* Mobile: Stack vertically with cards */}
-        <div className="grid grid-cols-3 gap-3 md:hidden">
+    <section className="py-14 md:py-20 bg-background">
+      <div className="container mx-auto px-6">
+        {/* Top hairline accent */}
+        <div className="w-16 h-px bg-foreground/20 mx-auto mb-12 md:mb-16" />
+
+        <div className="grid grid-cols-3 gap-4 md:gap-0 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
-            <div 
-              key={index} 
-              className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/80 shadow-sm border border-border/30"
+            <div
+              key={stat.label}
+              className={`flex flex-col items-center text-center px-2 md:px-8 ${
+                index !== stats.length - 1 ? "md:border-r border-foreground/10" : ""
+              }`}
             >
-              <div 
-                className="w-12 h-12 rounded-full flex items-center justify-center mb-3 shadow-sm"
-                style={{ background: `linear-gradient(180deg, #b8d4c3 0%, ${stat.color} 100%)` }}
-              >
-                <stat.icon className="w-5 h-5 text-white" />
+              <div className="flex items-baseline justify-center gap-1">
+                <span className="font-heading font-normal text-4xl md:text-6xl lg:text-7xl text-foreground tracking-tight leading-none">
+                  {stat.value}
+                </span>
+                {stat.suffix && (
+                  <span className="font-heading text-xl md:text-2xl text-foreground/40 leading-none">
+                    {stat.suffix}
+                  </span>
+                )}
               </div>
-              <span className="text-2xl font-heading font-bold text-foreground">
-                {stat.value}
-              </span>
-              <span className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1 leading-tight">
+              <span className="mt-4 md:mt-5 text-[9px] md:text-[11px] uppercase tracking-[0.25em] md:tracking-[0.3em] text-foreground/60 font-body">
                 {stat.label}
               </span>
             </div>
           ))}
         </div>
 
-        {/* Desktop: Horizontal layout */}
-        <div className="hidden md:flex justify-center items-center gap-16">
-          {stats.map((stat, index) => (
-            <div 
-              key={index} 
-              className="flex items-center gap-4"
-            >
-              <div 
-                className="w-14 h-14 rounded-full flex items-center justify-center shadow-md"
-                style={{ background: `linear-gradient(180deg, #b8d4c3 0%, ${stat.color} 100%)` }}
-              >
-                <stat.icon className="w-6 h-6 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-3xl font-heading font-bold text-foreground tracking-tight">
-                  {stat.value}
-                </span>
-                <span className="text-xs uppercase tracking-widest text-muted-foreground">{stat.label}</span>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Bottom hairline accent */}
+        <div className="w-16 h-px bg-foreground/20 mx-auto mt-12 md:mt-16" />
       </div>
     </section>
   );
