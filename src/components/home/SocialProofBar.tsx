@@ -23,8 +23,8 @@ const SocialProofBar = () => {
                   </span>
                   {stat.suffix && (
                     <span
-                      className={`font-heading text-sm text-foreground/30 leading-none ${
-                        stat.suffix === "+" ? "ml-1.5 translate-y-[-1px]" : "ml-1"
+                      className={`font-heading text-xs md:text-sm text-foreground/30 leading-none ${
+                        stat.suffix === "+" ? "ml-2.5 md:ml-2 -translate-y-0.5" : "ml-1"
                       }`}
                     >
                       {stat.suffix}
