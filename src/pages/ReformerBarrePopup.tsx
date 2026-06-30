@@ -84,9 +84,6 @@ const ReformerBarrePopup = () => {
                 <h3 className="font-heading italic text-3xl md:text-4xl text-foreground mb-6">
                   {studio.name}
                 </h3>
-                <h3 className="font-heading italic text-3xl md:text-4xl text-foreground mb-6">
-                  {studio.name}
-                </h3>
                 <div className="flex items-center gap-2 text-foreground/70 mb-8 font-body">
                   <Calendar size={16} />
                   <span>Fri, 25 July · {studio.time}</span>
