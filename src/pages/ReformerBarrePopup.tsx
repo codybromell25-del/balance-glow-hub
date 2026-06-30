@@ -2,39 +2,15 @@ import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import heroImage from "@/assets/studio-blessington.jpg";
+import heroImage from "@/assets/studio-kildare.jpg";
 
 const studios = [
-  {
-    name: "Limerick",
-    time: "12:00 PM",
-    url: "https://momence.com/u/balance-pilates-limerick/event/Reformer-x-Barre-Pop-Up/0OhMV3lo",
-  },
-  {
-    name: "Blessington",
-    time: "1:00 PM",
-    url: "https://momence.com/u/balance-pilates-blessington/event/Reformer-x-Barre-Pop-Up/R5hwEqkW",
-  },
-  {
-    name: "Enfield",
-    time: "1:00 PM",
-    url: "https://momence.com/u/balance-pilates-enfield/event/Reformer-x-Barre-Pop-Up/OehBK0WO",
-  },
-  {
-    name: "Bray",
-    time: "1:00 PM",
-    url: "https://momence.com/u/balance-pilates-bray/event/Reformer-x-Barre-Pop-Up/GBhB9OA9",
-  },
-  {
-    name: "Clane",
-    time: "2:00 PM",
-    url: "https://momence.com/u/balance-pilates-clane/event/Reformer-x-Barre-Pop-Up/4ZhQJjJ4",
-  },
-  {
-    name: "Kildare Town",
-    time: "2:00 PM",
-    url: "https://momence.com/u/balance-pilates-kildare/event/Reformer-x-Barre-Pop-Up/DAh6lgMA",
-  },
+  { name: "Limerick", time: "12:00 PM", url: "https://momence.com/l/0OhMV3lo" },
+  { name: "Blessington", time: "1:00 PM", url: "https://momence.com/l/R5hwEqkW" },
+  { name: "Enfield", time: "1:00 PM", url: "https://momence.com/l/OehBK0WO" },
+  { name: "Bray", time: "1:00 PM", url: "https://momence.com/l/GBhB9OA9" },
+  { name: "Clane", time: "2:00 PM", url: "https://momence.com/l/4ZhQJjJ4" },
+  { name: "Kildare Town", time: "2:00 PM", url: "https://momence.com/l/DAh6lgMA" },
 ];
 
 const ReformerBarrePopup = () => {
