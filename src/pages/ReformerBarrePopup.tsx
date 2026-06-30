@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, MapPin } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -81,12 +81,6 @@ const ReformerBarrePopup = () => {
                 rel="noopener noreferrer"
                 className="group block bg-white border border-foreground/10 p-8 hover:border-[#A3C1AD] transition-all duration-300 hover:shadow-lg"
               >
-                <div className="flex items-center gap-2 text-foreground/60 mb-4">
-                  <MapPin size={14} />
-                  <span className="text-xs uppercase tracking-[0.2em] font-heading">
-                    balance {studio.name}
-                  </span>
-                </div>
                 <h3 className="font-heading italic text-3xl md:text-4xl text-foreground mb-6">
                   {studio.name}
                 </h3>
