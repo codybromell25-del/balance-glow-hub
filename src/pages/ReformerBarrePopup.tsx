@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import heroImage from "@/assets/studio-kildare.jpg";
 
 const studios = [
-  { name: "Limerick", time: "12:00 PM", url: "https://momence.com/l/0OhMV3lo" },
+  { name: "Limerick", time: "12:30 PM", url: "https://momence.com/l/Oehj4DVL" },
   { name: "Blessington", time: "1:00 PM", url: "https://momence.com/l/R5hwEqkW" },
   { name: "Enfield", time: "1:00 PM", url: "https://momence.com/l/OehBK0WO" },
   { name: "Bray", time: "1:00 PM", url: "https://momence.com/l/GBhB9OA9" },
