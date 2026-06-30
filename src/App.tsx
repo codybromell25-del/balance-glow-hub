@@ -37,6 +37,7 @@ import AdsLimerickReformer from "./pages/AdsLimerickReformer";
 import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
 
 import MembershipOffers from "./pages/MembershipOffers";
+import ReformerBarrePopup from "./pages/ReformerBarrePopup";
 
 import NotFound from "./pages/NotFound";
 
@@ -88,6 +89,7 @@ const App = () => (
           <Route path="/limerick-reformer-opening" element={<AdsLimerickReformer />} />
           <Route path="/limerick-mat-opening" element={<AdsLimerickMatBarreYoga />} />
           <Route path="/membership-offers" element={<MembershipOffers />} />
+          <Route path="/reformer-barre-popup" element={<ReformerBarrePopup />} />
           
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
