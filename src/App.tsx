@@ -35,7 +35,7 @@ import WorkshopAnestiMano from "./pages/WorkshopAnestiMano";
 import IntroOffer from "./pages/IntroOffer";
 import AdsLimerickReformer from "./pages/AdsLimerickReformer";
 import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
-import TasterClasses from "./pages/TasterClasses";
+
 import MembershipOffers from "./pages/MembershipOffers";
 
 import NotFound from "./pages/NotFound";
@@ -76,7 +76,7 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           <Route path="/gift-cards" element={<GiftCards />} />
           <Route path="/faq" element={<FAQ />} />
-          <Route path="/taster-classes" element={<TasterClasses />} />
+          
           <Route path="/studio/limerick" element={<Limerick />} />
           <Route path="/limerick-coming-soon" element={<LimerickComingSoon />} />
           
