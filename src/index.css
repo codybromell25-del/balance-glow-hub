@@ -257,22 +257,23 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
     font-weight: 400;
+    font-style: italic;
   }
-  
+
   /* Luxurious typography styles */
   h1 {
     @apply tracking-wide;
-    font-weight: 300;
+    font-weight: 400;
   }
-  
+
   h2, h3 {
     @apply tracking-normal;
     font-weight: 400;
