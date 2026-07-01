@@ -39,6 +39,7 @@ import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
 import MembershipOffers from "./pages/MembershipOffers";
 import ReformerBarrePopup from "./pages/ReformerBarrePopup";
 
+import FontPreview from "./pages/FontPreview";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
