@@ -86,7 +86,7 @@ const ReformerBarrePopup = () => {
                 </h3>
                 <div className="flex items-center gap-2 text-foreground/70 mb-8 font-body">
                   <Calendar size={16} />
-                  <span>Fri, 25 July · {studio.time}</span>
+                  <span>Sat, 25 July · {studio.time}</span>
                 </div>
                 <div className="flex items-center justify-between pt-6 border-t border-foreground/10">
                   <span className="text-sm font-heading uppercase tracking-[0.15em] text-foreground group-hover:text-[#A3C1AD] transition-colors">
