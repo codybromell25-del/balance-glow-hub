@@ -39,6 +39,7 @@ import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
 import MembershipOffers from "./pages/MembershipOffers";
 import ReformerBarrePopup from "./pages/ReformerBarrePopup";
 
+import FontPreview from "./pages/FontPreview";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -90,7 +91,7 @@ const App = () => (
           <Route path="/limerick-mat-opening" element={<AdsLimerickMatBarreYoga />} />
           <Route path="/membership-offers" element={<MembershipOffers />} />
           <Route path="/reformer-barre-popup" element={<ReformerBarrePopup />} />
-          
+          <Route path="/font-preview" element={<FontPreview />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
