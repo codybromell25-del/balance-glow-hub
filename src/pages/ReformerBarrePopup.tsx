@@ -18,7 +18,7 @@ const ReformerBarrePopup = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Reformer x Barre Pop-Up | balance studios"
-        description="A one-day pop-up across all 6 balance studios. Friday 25th July — Reformer x Barre, a fusion class for every body."
+        description="A one-day pop-up across all 6 balance studios. Saturday 25th July — Reformer x Barre, a fusion class for every body."
         canonical="/reformer-barre-popup"
       />
       <Navigation />
@@ -31,7 +31,7 @@ const ReformerBarrePopup = () => {
         </div>
         <div className="relative container mx-auto px-6 text-center">
           <p className="text-xs md:text-sm uppercase tracking-[0.3em] text-white/80 mb-6 font-heading drop-shadow">
-            Pop-Up Event · Friday 25th July
+            Pop-Up Event · Saturday 25th July
           </p>
           <h1
             className="font-heading italic text-5xl md:text-7xl lg:text-8xl text-white mb-6 drop-shadow-lg"
