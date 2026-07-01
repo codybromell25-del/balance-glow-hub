@@ -14,9 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Aileron', 'sans-serif'],
+        sans: ['Raleway', 'sans-serif'],
+        body: ['Raleway', 'sans-serif'],
         heading: ['Libre Baskerville', 'serif'],
-        subheading: ['Aileron', 'sans-serif'],
+        subheading: ['Raleway', 'sans-serif'],
       },
       fontWeight: {
         thin: '100',
