@@ -18,7 +18,7 @@ const ReformerBarrePopup = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Reformer x Barre Pop-Up | balance studios"
-        description="A one-day pop-up across all 6 balance studios. Friday 25th July — Reformer x Barre, a fusion class for every body."
+        description="A one-day pop-up across all 6 balance studios. Saturday 25th July — Reformer x Barre, a fusion class for every body."
         canonical="/reformer-barre-popup"
       />
       <Navigation />
