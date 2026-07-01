@@ -1,24 +1,33 @@
-Build a standalone preview page at `/font-preview` so the user can see how the homepage looks with Raleway body text and Libre Baskerville italic headings before committing site-wide.
+## Site-wide font update: Libre Baskerville (italic) headings + Raleway body
 
-## Plan
+### What changes
+- **Headings**: Libre Baskerville, italic — the "cursive" script look from the preview.
+- **Body**: Raleway — replaces Aileron everywhere.
 
-1. **Load Raleway font**
-   - Add Google Fonts link for Raleway (400, 500, 600) to `index.html`.
+### Implementation
 
-2. **Create preview page**
-   - New file: `src/pages/FontPreview.tsx`
-   - Reconstruct key homepage sections (hero, stats bar, locations grid snippet) using copied/reused components.
-   - Apply scoped font overrides:
-     - Body text → `font-family: 'Raleway', sans-serif`
-     - All headings → `font-family: 'Libre Baskerville', serif; font-style: italic` for the cursive/script effect
-   - Add a floating pill label so the user knows they are on a preview page.
+1. **`index.html`**
+   - Keep the Raleway Google Font link (already added for the preview).
+   - Remove the Aileron font link/reference once no longer used.
 
-3. **Wire up route**
-   - Add `/font-preview` route in `src/App.tsx`.
-   - No nav link — user navigates directly via URL.
-   - Page is `noindex` so it does not appear in search.
+2. **`tailwind.config.ts`**
+   - Update the `fontFamily` tokens:
+     - `body` / `sans` → `['Raleway', 'sans-serif']`
+     - `heading` → `['Libre Baskerville', 'serif']` (already set)
+   - This flips every `font-body`, `font-sans`, and default text to Raleway automatically.
 
-4. **Cleanup**
-   - The font link in `index.html` stays even if the preview is removed later; the site only uses Raleway when explicitly told to, so the live site is unaffected until the user approves.
+3. **`src/index.css`**
+   - Update the base `body` font-family to Raleway.
+   - Add a global rule so all headings (`h1`–`h6` using `font-heading`) render in italic by default, matching the preview.
+   - Remove any lingering Aileron `@font-face` or references.
 
-This gives the user a side-by-side-style preview without touching the production homepage.
+4. **Spot-check overrides**
+   - Search for hardcoded `font-family` inline styles (e.g. `HeroSection`, `FontPreview`, `SocialProofBar`) and either remove them (so they inherit the new tokens) or update them to Raleway / Libre Baskerville italic to stay consistent.
+   - Confirm headings that should NOT be italic (e.g. nav logo "balance", small labels) get an explicit `not-italic` class so we don't over-italicize UI chrome.
+
+5. **Cleanup**
+   - Delete `src/pages/FontPreview.tsx` and its route from `src/App.tsx` once you're happy with the site-wide rollout (optional — I can keep it if you want a reference page).
+
+### Quick questions before I build
+1. Should **every heading** be italic (matching the preview exactly), or only the large display headings (hero, section titles) with smaller headings/subheads staying upright?
+2. Keep the `/font-preview` page live afterwards, or remove it?
