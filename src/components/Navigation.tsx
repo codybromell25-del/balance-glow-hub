@@ -31,10 +31,11 @@ const Navigation = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Class Types", path: "/classes" },
-    { name: "Buy a Class", path: "/pricing" },
-    { name: "Book a Class", path: "/our-studios" },
+    { name: "Classes", path: "/classes" },
+    { name: "Buy", path: "/pricing" },
+    { name: "Book", path: "/our-studios" },
     { name: "Reformer x Barre", path: "/reformer-barre-popup" },
+    { name: "Express", path: "/express-class" },
     { name: "Education", path: "https://educationbalance.vercel.app/" },
     { name: "Gift Cards", path: "/gift-cards" },
     { name: "Our Story", path: "/about" },
@@ -54,7 +55,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-5 xl:space-x-6">
             {navLinks.map((link) =>
               link.path.startsWith("http") ? (
                 <a
@@ -94,7 +95,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="lg:hidden text-foreground"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -104,7 +105,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 animate-fade-in">
+          <div className="lg:hidden pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) =>
                 link.path.startsWith("http") ? (
