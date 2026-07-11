@@ -98,10 +98,11 @@ const ExpressClass = () => {
             </h2>
 
             {/* Day filter */}
-            <div className="inline-flex items-center border border-foreground/15 rounded-full p-1 bg-white">
+            <div className="inline-flex flex-wrap justify-center items-center border border-foreground/15 rounded-full p-1 bg-white">
               {([
-                { value: "monday" as const, label: "Mondays · 1:00 PM" },
-                { value: "wednesday" as const, label: "Wednesdays · 9:30 AM" },
+                { value: "monday" as const, label: "Mon · 1:00 PM" },
+                { value: "wednesday" as const, label: "Wed · 9:30 AM" },
+                { value: "friday" as const, label: "Fri · 1:00 PM" },
               ]).map((opt) => {
                 const active = filter === opt.value;
                 return (
