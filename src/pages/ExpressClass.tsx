@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import heroImage from "@/assets/studio-kildare.jpg";
 
-type Day = "wednesday" | "monday";
+type Day = "wednesday" | "monday" | "friday";
 
 interface ExpressSession {
   day: Day;
@@ -28,6 +28,12 @@ const sessions: ExpressSession[] = [
   { day: "monday", dateLabel: "Mon, 10 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805254" },
   { day: "monday", dateLabel: "Mon, 17 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805256" },
   { day: "monday", dateLabel: "Mon, 24 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805255" },
+  // Friday 1:00 PM
+  { day: "friday", dateLabel: "Fri, 24 July", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805281" },
+  { day: "friday", dateLabel: "Fri, 31 July", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805279" },
+  { day: "friday", dateLabel: "Fri, 7 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805280" },
+  { day: "friday", dateLabel: "Fri, 14 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805283" },
+  { day: "friday", dateLabel: "Fri, 21 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805282" },
 ];
 
 const ExpressClass = () => {
