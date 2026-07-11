@@ -21,6 +21,7 @@ const sessions: ExpressSession[] = [
   { day: "wednesday", dateLabel: "Wed, 29 July", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805248" },
   { day: "wednesday", dateLabel: "Wed, 5 August", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805250" },
   { day: "wednesday", dateLabel: "Wed, 12 August", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805247" },
+  { day: "wednesday", dateLabel: "Wed, 19 August", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805249" },
   // Monday 1:00 PM
   { day: "monday", dateLabel: "Mon, 20 July", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805253" },
   { day: "monday", dateLabel: "Mon, 27 July", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805252" },
