@@ -105,7 +105,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 animate-fade-in">
+          <div className="lg:hidden pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) =>
                 link.path.startsWith("http") ? (
