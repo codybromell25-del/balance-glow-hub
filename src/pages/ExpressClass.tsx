@@ -1,11 +1,14 @@
-import { ArrowRight, Calendar, Clock, MapPin } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, Clock, MapPin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import heroImage from "@/assets/studio-kildare.jpg";
 
+type Day = "wednesday" | "monday";
+
 interface ExpressSession {
-  date: string;
+  day: Day;
   dateLabel: string;
   time: string;
   location: string;
@@ -13,18 +16,29 @@ interface ExpressSession {
 }
 
 const sessions: ExpressSession[] = [
-  { date: "2026-07-22", dateLabel: "Wed, 22 July", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805246" },
-  { date: "2026-07-29", dateLabel: "Wed, 29 July", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805248" },
-  { date: "2026-08-05", dateLabel: "Wed, 5 August", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805250" },
-  { date: "2026-08-12", dateLabel: "Wed, 12 August", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805247" },
+  // Wednesday 9:30 AM
+  { day: "wednesday", dateLabel: "Wed, 22 July", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805246" },
+  { day: "wednesday", dateLabel: "Wed, 29 July", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805248" },
+  { day: "wednesday", dateLabel: "Wed, 5 August", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805250" },
+  { day: "wednesday", dateLabel: "Wed, 12 August", time: "9:30 AM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805247" },
+  // Monday 1:00 PM
+  { day: "monday", dateLabel: "Mon, 20 July", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805253" },
+  { day: "monday", dateLabel: "Mon, 27 July", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805252" },
+  { day: "monday", dateLabel: "Mon, 3 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805257" },
+  { day: "monday", dateLabel: "Mon, 10 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805254" },
+  { day: "monday", dateLabel: "Mon, 17 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805256" },
+  { day: "monday", dateLabel: "Mon, 24 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805255" },
 ];
 
 const ExpressClass = () => {
+  const [filter, setFilter] = useState<Day>("monday");
+  const filtered = sessions.filter((s) => s.day === filter);
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
         title="Express Class | balance studios"
-        description="30-minute Reformer Express classes at balance studios. Strength, flow and feel-good energy — perfect when you're short on time."
+        description="30-minute Reformer Express classes at balance studios Bray. Strength, flow and feel-good energy — perfect when you're short on time."
         canonical="/express-class"
       />
       <Navigation />
@@ -61,7 +75,7 @@ const ExpressClass = () => {
             Short on time. Big on results.
           </h2>
           <p className="text-foreground/75 leading-relaxed text-base md:text-lg font-body">
-            Reformer Express packs strength, flow and feel-good energy into a focused 30-minute session. Suitable for mixed levels — a smart way to move when your day is full.
+            Reformer Express packs strength, flow and feel-good energy into a focused 30-minute session. Suitable for mixed levels — a smart way to move when your day is full. Available in our Bray studio only.
           </p>
         </div>
       </section>
@@ -69,17 +83,40 @@ const ExpressClass = () => {
       {/* Sessions */}
       <section className="pb-20 md:pb-28">
         <div className="container mx-auto px-6">
-          <div className="max-w-2xl mx-auto text-center mb-16">
+          <div className="max-w-2xl mx-auto text-center mb-12">
             <p className="text-xs uppercase tracking-[0.3em] text-foreground/60 mb-4 font-heading">
               02 — Book Your Session
             </p>
-            <h2 className="font-heading italic text-3xl md:text-4xl text-foreground">
+            <h2 className="font-heading italic text-3xl md:text-4xl text-foreground mb-8">
               Choose your date.
             </h2>
+
+            {/* Day filter */}
+            <div className="inline-flex items-center border border-foreground/15 rounded-full p-1 bg-white">
+              {([
+                { value: "monday" as const, label: "Mondays · 1:00 PM" },
+                { value: "wednesday" as const, label: "Wednesdays · 9:30 AM" },
+              ]).map((opt) => {
+                const active = filter === opt.value;
+                return (
+                  <button
+                    key={opt.value}
+                    onClick={() => setFilter(opt.value)}
+                    className={`px-5 md:px-6 py-2.5 rounded-full text-xs md:text-sm font-heading uppercase tracking-[0.15em] transition-all ${
+                      active
+                        ? "bg-[#A3C1AD] text-black"
+                        : "text-foreground/70 hover:text-foreground"
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {sessions.map((s) => (
+            {filtered.map((s) => (
               <a
                 key={s.url}
                 href={s.url}
