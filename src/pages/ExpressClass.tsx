@@ -30,7 +30,7 @@ const sessions: ExpressSession[] = [
   { day: "monday", dateLabel: "Mon, 17 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805256" },
   { day: "monday", dateLabel: "Mon, 24 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805255" },
   // Friday 1:00 PM
-  { day: "friday", dateLabel: "Fri, 24 July", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805281" },
+  { day: "friday", dateLabel: "Fri, 17 July", time: "1:00 PM", location: "Bray", url: "https://momence.com/l/2BhaAeME" },
   { day: "friday", dateLabel: "Fri, 31 July", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805279" },
   { day: "friday", dateLabel: "Fri, 7 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805280" },
   { day: "friday", dateLabel: "Fri, 14 August", time: "1:00 PM", location: "Bray", url: "https://momence.com/balance/Reformer-Express/139805283" },
