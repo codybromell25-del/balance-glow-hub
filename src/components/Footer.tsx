@@ -218,7 +218,7 @@ const Footer = () => {
             {/* Brand */}
             <div>
               <p className="text-sm text-muted-foreground">
-                Reformer Pilates across Kildare, Wicklow & Meath.
+                Reformer Pilates across Kildare, Wicklow, Meath & Limerick.
               </p>
             </div>
 
