@@ -37,7 +37,6 @@ import AdsLimerickReformer from "./pages/AdsLimerickReformer";
 import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
 
 import MembershipOffers from "./pages/MembershipOffers";
-import ReformerBarrePopup from "./pages/ReformerBarrePopup";
 import ExpressClass from "./pages/ExpressClass";
 
 import FontPreview from "./pages/FontPreview";
@@ -91,7 +90,6 @@ const App = () => (
           <Route path="/limerick-reformer-opening" element={<AdsLimerickReformer />} />
           <Route path="/limerick-mat-opening" element={<AdsLimerickMatBarreYoga />} />
           <Route path="/membership-offers" element={<MembershipOffers />} />
-          <Route path="/reformer-barre-popup" element={<ReformerBarrePopup />} />
           <Route path="/express-class" element={<ExpressClass />} />
           <Route path="/font-preview" element={<FontPreview />} />
           
