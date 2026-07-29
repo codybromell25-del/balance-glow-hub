@@ -12,7 +12,6 @@ const MOMENCE_URL =
 const includes = [
   "3 reformer Pilates classes",
   "Use across any of our 6 studios",
-  "Try any class level — beginner friendly",
   "Try different instructors & class styles",
   "First-time clients only",
 ];
