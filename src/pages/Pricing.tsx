@@ -73,7 +73,6 @@ const Pricing = () => {
 
                 <ul className="space-y-3 mb-8 flex-grow">
                   {[
-                    "Try any class level to find your fit",
                     "Experience different instructors",
                     "Visit any of our 6 studio locations",
                     "Valid for 30 days from purchase",
