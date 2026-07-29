@@ -114,9 +114,9 @@ const Pricing = () => {
                 {[
                   { classes: 1, price: "€24", validity: "Valid 30 days from first class", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997", popular: true },
                   { classes: 3, price: "€65", validity: "Valid 30 days from first class", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988", popular: false },
-                  { classes: 6, price: "€115", validity: "Valid 60 days from first class", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false, sale: true },
-                  { classes: 10, price: "€190", validity: "Valid 310 days from first class", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true, sale: true },
-                  { classes: 20, price: "€370", validity: "Valid 610 days from first class", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995", popular: false, sale: true },
+                  { classes: 6, price: "€115", oldPrice: "€130", validity: "Valid 60 days from first class", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false, sale: true },
+                  { classes: 10, price: "€190", oldPrice: "€215", validity: "Valid 310 days from first class", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true, sale: true },
+                  { classes: 20, price: "€370", oldPrice: "€400", validity: "Valid 610 days from first class", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995", popular: false, sale: true },
                 ].map((pack, index) => (
                   <div
                     key={pack.classes}
