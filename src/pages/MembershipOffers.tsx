@@ -17,15 +17,15 @@ const sage = {
 
 type ClassType = "reformer" | "mat";
 
-type Pack = { classes: number; price: string; validity: string; link: string; featured?: boolean };
+type Pack = { classes: number; price: string; oldPrice?: string; validity: string; link: string; featured?: boolean };
 type Membership = { classes: string; price: string; perClass: string; link: string; featured?: boolean };
 
 const reformerPacks: Pack[] = [
   { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
   { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
-  { classes: 6, price: "€115", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
-  { classes: 10, price: "€190", validity: "Valid ~10 mo", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", featured: true },
-  { classes: 20, price: "€370", validity: "Valid ~20 mo", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
+  { classes: 6, price: "€115", oldPrice: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
+  { classes: 10, price: "€190", oldPrice: "€215", validity: "Valid ~10 mo", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", featured: true },
+  { classes: 20, price: "€370", oldPrice: "€400", validity: "Valid ~20 mo", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
 ];
 
 const reformerMemberships: Membership[] = [
@@ -37,8 +37,8 @@ const reformerMemberships: Membership[] = [
 
 const matPacks: Pack[] = [
   { classes: 1, price: "€15", validity: "Valid 30 days", link: "https://momence.com/m/573998" },
-  { classes: 3, price: "€32", validity: "Valid 30 days", link: "https://momence.com/m/771509", featured: true },
-  { classes: 6, price: "€70", validity: "Valid 60 days", link: "https://momence.com/m/771510" },
+  { classes: 3, price: "€32", oldPrice: "€42", validity: "Valid 30 days", link: "https://momence.com/m/771509", featured: true },
+  { classes: 6, price: "€70", oldPrice: "€84", validity: "Valid 60 days", link: "https://momence.com/m/771510" },
 ];
 
 const matMemberships: Membership[] = [
@@ -208,12 +208,26 @@ const MembershipOffers = () => {
                             </span>
                           )}
                         </p>
-                        <p className="text-sm text-foreground/60 mt-1">{pack.validity}</p>
+                        <p className="text-sm text-foreground/60 mt-1">
+                          {pack.validity}
+                          {pack.oldPrice && (
+                            <span className="ml-2 inline-block px-2 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">
+                              Summer Sale
+                            </span>
+                          )}
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-center gap-5 shrink-0">
-                      <span className="font-heading text-2xl md:text-3xl text-foreground tabular-nums">
-                        {pack.price}
+                      <span className="flex items-baseline gap-2">
+                        {pack.oldPrice && (
+                          <span className="font-heading text-base md:text-lg text-foreground/40 line-through tabular-nums">
+                            {pack.oldPrice}
+                          </span>
+                        )}
+                        <span className="font-heading text-2xl md:text-3xl text-foreground tabular-nums">
+                          {pack.price}
+                        </span>
                       </span>
                       <span
                         className="hidden md:inline-flex items-center justify-center w-11 h-11 rounded-full text-black transition-transform group-hover:translate-x-1"
