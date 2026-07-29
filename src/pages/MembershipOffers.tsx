@@ -37,8 +37,8 @@ const reformerMemberships: Membership[] = [
 
 const matPacks: Pack[] = [
   { classes: 1, price: "€15", validity: "Valid 30 days", link: "https://momence.com/m/573998" },
-  { classes: 3, price: "€42", validity: "Valid 30 days", link: "https://momence.com/m/771509", featured: true },
-  { classes: 6, price: "€84", validity: "Valid 60 days", link: "https://momence.com/m/771510" },
+  { classes: 3, price: "€32", validity: "Valid 30 days", link: "https://momence.com/m/771509", featured: true },
+  { classes: 6, price: "€70", validity: "Valid 60 days", link: "https://momence.com/m/771510" },
 ];
 
 const matMemberships: Membership[] = [
