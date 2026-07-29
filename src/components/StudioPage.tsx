@@ -24,12 +24,12 @@ interface StudioPageProps {
   studioInfo: StudioInfo;
 }
 
-const classPacks = [
+const classPacks: { classes: number; price: string; oldPrice?: string; validity: string; description: string; link: string }[] = [
   { classes: 1, price: "€24", validity: "30-day expiry", description: "Book any balance. class with this flexible single session.", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
   { classes: 3, price: "€65", validity: "30-day expiry", description: "Get access to 3 classes, valid for 30 days.", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
-  { classes: 6, price: "€115", validity: "60-day expiry", description: "Get access to 6 classes, valid for 60 days.", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
-  { classes: 10, price: "€190", validity: "310-day expiry", description: "Get access to 10 classes, valid over 10 months.", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },
-  { classes: 20, price: "€370", validity: "610-day expiry", description: "Get access to 20 classes, valid over 20 months.", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
+  { classes: 6, price: "€115", oldPrice: "€130", validity: "60-day expiry", description: "Get access to 6 classes, valid for 60 days.", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
+  { classes: 10, price: "€190", oldPrice: "€215", validity: "310-day expiry", description: "Get access to 10 classes, valid over 10 months.", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },
+  { classes: 20, price: "€370", oldPrice: "€400", validity: "610-day expiry", description: "Get access to 20 classes, valid over 20 months.", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
 ];
 
 const memberships = [
@@ -504,6 +504,11 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   </h3>
                   <p className="text-xs text-muted-foreground mb-4">
                     {pack.validity}
+                    {pack.oldPrice && (
+                      <span className="ml-2 inline-block px-2 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">
+                        Summer Sale
+                      </span>
+                    )}
                   </p>
                   
                   <p className="text-sm text-muted-foreground mb-4 flex-grow leading-relaxed">
@@ -511,7 +516,12 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   </p>
                   
                   <div className="flex items-end justify-between mt-auto pt-4 border-t border-border/50">
-                    <p className="text-2xl md:text-3xl font-heading italic text-foreground">
+                    <p className="text-2xl md:text-3xl font-heading italic text-foreground flex items-baseline gap-2">
+                      {pack.oldPrice && (
+                        <span className="text-base md:text-lg not-italic text-muted-foreground line-through">
+                          {pack.oldPrice}
+                        </span>
+                      )}
                       {pack.price}
                     </p>
                     <Button asChild size="sm" className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow border-0 text-black" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
