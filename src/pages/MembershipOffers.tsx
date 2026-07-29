@@ -23,9 +23,9 @@ type Membership = { classes: string; price: string; perClass: string; link: stri
 const reformerPacks: Pack[] = [
   { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
   { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
-  { classes: 6, price: "€130", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
-  { classes: 10, price: "€215", validity: "Valid ~10 mo", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", featured: true },
-  { classes: 20, price: "€400", validity: "Valid ~20 mo", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
+  { classes: 6, price: "€115", validity: "Valid 60 days", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
+  { classes: 10, price: "€190", validity: "Valid ~10 mo", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", featured: true },
+  { classes: 20, price: "€370", validity: "Valid ~20 mo", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
 ];
 
 const reformerMemberships: Membership[] = [
