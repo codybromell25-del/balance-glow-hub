@@ -334,9 +334,9 @@ const Pricing = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 {[
                   { classes: 1, price: "€15", validity: "Valid 30 days from first class", popular: false, link: "https://momence.com/m/573998" },
-                  { classes: 3, price: "€32", validity: "Valid 30 days from first class", popular: true, link: "https://momence.com/m/771509" },
-                  { classes: 6, price: "€70", validity: "Valid 60 days from first class", popular: false, link: "https://momence.com/m/771510" },
-                ].map((pack, index) => (
+                  { classes: 3, price: "€32", oldPrice: "€42", validity: "Valid 30 days from first class", popular: true, link: "https://momence.com/m/771509" },
+                  { classes: 6, price: "€70", oldPrice: "€84", validity: "Valid 60 days from first class", popular: false, link: "https://momence.com/m/771510" },
+                ].map((pack: { classes: number; price: string; oldPrice?: string; validity: string; popular: boolean; link: string }, index) => (
                   <div
                     key={pack.classes}
                     className={`relative bg-background p-6 rounded-lg border-2 hover:shadow-lg transition-all duration-300 animate-fade-in ${pack.popular ? 'border-[#A3C1AD] shadow-lg' : 'border-primary/40 hover:border-primary/60'}`}
@@ -350,10 +350,18 @@ const Pricing = () => {
                       </div>
                     )}
                     <div className="text-center mb-4">
+                      {pack.oldPrice && (
+                        <span className="inline-block mb-2 px-2.5 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">
+                          Summer Sale
+                        </span>
+                      )}
                       <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
                         {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
                       </h3>
-                      <div className="mb-1">
+                      <div className="mb-1 flex items-baseline justify-center gap-2">
+                        {pack.oldPrice && (
+                          <span className="text-lg font-heading text-muted-foreground line-through">{pack.oldPrice}</span>
+                        )}
                         <span className="text-3xl font-heading font-bold text-black">{pack.price}</span>
                       </div>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
