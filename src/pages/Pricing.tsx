@@ -117,7 +117,7 @@ const Pricing = () => {
                   { classes: 6, price: "€115", oldPrice: "€130", validity: "Valid 60 days from first class", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false, sale: true },
                   { classes: 10, price: "€190", oldPrice: "€215", validity: "Valid 310 days from first class", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true, sale: true },
                   { classes: 20, price: "€370", oldPrice: "€400", validity: "Valid 610 days from first class", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995", popular: false, sale: true },
-                ].map((pack, index) => (
+                ].map((pack: { classes: number; price: string; oldPrice?: string; validity: string; link: string; popular: boolean; sale?: boolean }, index) => (
                   <div
                     key={pack.classes}
                     className={`relative bg-background p-6 rounded-lg border-2 hover:shadow-lg transition-all duration-300 animate-fade-in ${pack.popular ? 'border-[#A3C1AD] shadow-lg' : 'border-primary/40 hover:border-primary/60'}`}
@@ -131,10 +131,18 @@ const Pricing = () => {
                       </div>
                     )}
                     <div className="text-center mb-4">
+                      {pack.oldPrice && (
+                        <span className="inline-block mb-2 px-2.5 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">
+                          Summer Sale
+                        </span>
+                      )}
                       <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
                         {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
                       </h3>
-                      <div className="mb-1">
+                      <div className="mb-1 flex items-baseline justify-center gap-2">
+                        {pack.oldPrice && (
+                          <span className="text-lg font-heading text-muted-foreground line-through">{pack.oldPrice}</span>
+                        )}
                         <span className="text-3xl font-heading font-bold text-black">{pack.price}</span>
                       </div>
                       <p className="text-sm text-muted-foreground">{pack.validity}</p>
