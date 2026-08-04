@@ -154,7 +154,7 @@ const Classes = () => {
     {
       icon: Users,
       level: "Mat Class",
-      suitable: "Pilates on the mat — available at Limerick, Enfield & Kildare",
+      suitable: "Pilates on the mat — available at Limerick & Kildare",
       difficulty: 3,
       whatToExpect: [
         "Classic mat Pilates exercises focusing on core strength and flexibility",
