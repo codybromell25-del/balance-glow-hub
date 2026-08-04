@@ -137,7 +137,7 @@ const MembershipOffers = () => {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {[
-                  { label: "Mat Pilates", studios: "Enfield · Limerick · Kildare Town" },
+                  { label: "Mat Pilates", studios: "Limerick · Kildare Town" },
                   { label: "Barre", studios: "Limerick · Kildare Town" },
                   { label: "Yoga", studios: "Limerick only" },
                 ].map((row) => (

@@ -297,7 +297,7 @@ const Pricing = () => {
                 <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
                   <h4 className="font-semibold text-foreground mb-1">Mat Pilates</h4>
                   <p className="text-sm text-muted-foreground">
-                    Enfield, Limerick & Kildare Town
+                    Limerick & Kildare Town
                   </p>
                 </div>
                 <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
