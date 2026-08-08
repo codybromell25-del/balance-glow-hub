@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ShoppingCart, CalendarDays, Sun } from "lucide-react";
+import { ShoppingCart, CalendarDays } from "lucide-react";
 import heroImage from "@/assets/studio-blessington.jpg";
 const HeroSection = () => {
   return <section className="min-h-[85vh] flex items-end bg-cover bg-center relative pt-32 md:pt-36" style={{
@@ -11,14 +11,6 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 md:px-4 pb-12 md:pb-28 relative z-10">
         <div className="max-w-3xl animate-fade-in">
-          {/* Summer offers tag */}
-          <Link
-            to="/pricing"
-            className="inline-flex items-center gap-2 mb-5 md:mb-6 px-4 py-2 rounded-full bg-white/90 text-foreground text-xs md:text-sm font-medium tracking-wide hover:bg-primary hover:text-white transition-colors duration-300 shadow-lg"
-          >
-            <Sun className="w-3.5 h-3.5 md:w-4 md:h-4" />
-            View summer offers now
-          </Link>
 
           {/* Main headline - BOLD and dramatic */}
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-heading font-normal text-white mb-2 md:mb-4 leading-[0.9] tracking-tight">
