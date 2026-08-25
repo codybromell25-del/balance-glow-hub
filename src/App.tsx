@@ -37,7 +37,7 @@ import AdsLimerickReformer from "./pages/AdsLimerickReformer";
 import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
 
 import MembershipOffers from "./pages/MembershipOffers";
-import ExpressClass from "./pages/ExpressClass";
+
 
 import FontPreview from "./pages/FontPreview";
 import NotFound from "./pages/NotFound";
@@ -90,7 +90,7 @@ const App = () => (
           <Route path="/limerick-reformer-opening" element={<AdsLimerickReformer />} />
           <Route path="/limerick-mat-opening" element={<AdsLimerickMatBarreYoga />} />
           <Route path="/membership-offers" element={<MembershipOffers />} />
-          <Route path="/express-class" element={<ExpressClass />} />
+          
           <Route path="/font-preview" element={<FontPreview />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
