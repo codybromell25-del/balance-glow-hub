@@ -127,7 +127,7 @@ const CartDrawer = () => {
                 </div>
                 <Button
                   onClick={handleCheckout}
-                  className="w-full"
+                  className="w-full bg-sage text-black hover:bg-sage/80"
                   size="lg"
                   disabled={items.length === 0 || isLoading || isSyncing}
                 >

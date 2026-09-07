@@ -108,11 +108,11 @@ export async function fetchProductByHandle(handle: string): Promise<ShopifyProdu
   return product ? { node: product } : null;
 }
 
-export function formatPrice(amount: string | number, currencyCode: string) {
+export function formatPrice(amount: string | number, _currencyCode?: string) {
   const value = typeof amount === "string" ? parseFloat(amount) : amount;
   try {
-    return new Intl.NumberFormat("en-IE", { style: "currency", currency: currencyCode }).format(value);
+    return new Intl.NumberFormat("en-IE", { style: "currency", currency: "EUR" }).format(value);
   } catch {
-    return `${currencyCode} ${value.toFixed(2)}`;
+    return `€${value.toFixed(2)}`;
   }
 }

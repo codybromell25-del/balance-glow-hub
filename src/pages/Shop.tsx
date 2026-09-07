@@ -54,7 +54,7 @@ const ProductCard = ({ product }: { product: ShopifyProduct }) => {
           {formatPrice(node.priceRange.minVariantPrice.amount, node.priceRange.minVariantPrice.currencyCode)}
         </p>
       </div>
-      <Button className="mt-4 rounded-full" onClick={handleAddToCart} disabled={isLoading || !variant?.availableForSale}>
+      <Button className="mt-4 rounded-full bg-sage text-black hover:bg-sage/80" onClick={handleAddToCart} disabled={isLoading || !variant?.availableForSale}>
         {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : variant?.availableForSale ? "Add to bag" : "Sold out"}
       </Button>
     </div>
