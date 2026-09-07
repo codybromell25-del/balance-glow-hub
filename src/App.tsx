@@ -42,20 +42,33 @@ import MembershipOffers from "./pages/MembershipOffers";
 
 
 import FontPreview from "./pages/FontPreview";
+import Shop from "./pages/Shop";
+import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
+import { useCartSync } from "./hooks/useCartSync";
 
 const queryClient = new QueryClient();
 
+const CartSync = () => {
+  useCartSync();
+  return null;
+};
+
 const App = () => (
+
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <CartSync />
         
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/product/:handle" element={<ProductDetail />} />
+
           <Route path="/classes" element={<Classes />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/locations" element={<Locations />} />
