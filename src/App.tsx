@@ -27,6 +27,8 @@ import StudioBlessington from "./pages/StudioBlessington";
 import StudioEnfield from "./pages/StudioEnfield";
 import StudioBray from "./pages/StudioBray";
 import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Cookies from "./pages/Cookies";
 import GiftCards from "./pages/GiftCards";
 import FAQ from "./pages/FAQ";
 import Limerick from "./pages/Limerick";
@@ -76,6 +78,8 @@ const App = () => (
           <Route path="/studio/enfield" element={<StudioEnfield />} />
           <Route path="/studio/bray" element={<StudioBray />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/cookies" element={<Cookies />} />
           <Route path="/gift-cards" element={<GiftCards />} />
           <Route path="/faq" element={<FAQ />} />
           
