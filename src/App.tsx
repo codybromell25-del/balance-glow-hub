@@ -62,9 +62,13 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <CartSync />
         
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/product/:handle" element={<ProductDetail />} />
+
           <Route path="/classes" element={<Classes />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/locations" element={<Locations />} />
