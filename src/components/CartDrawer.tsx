@@ -37,7 +37,7 @@ const CartDrawer = () => {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon" className="relative rounded-full" aria-label="Open cart">
+        <Button variant="outline" size="icon" className="relative rounded-full bg-sage text-black border-sage hover:bg-sage/80 hover:text-black" aria-label="Open cart">
           <ShoppingBag className="h-5 w-5" />
           {totalItems > 0 && (
             <Badge className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs">
