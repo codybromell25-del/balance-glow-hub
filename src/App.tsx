@@ -78,6 +78,8 @@ const App = () => (
           <Route path="/studio/enfield" element={<StudioEnfield />} />
           <Route path="/studio/bray" element={<StudioBray />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/cookies" element={<Cookies />} />
           <Route path="/gift-cards" element={<GiftCards />} />
           <Route path="/faq" element={<FAQ />} />
           
