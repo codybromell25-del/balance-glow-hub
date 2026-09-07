@@ -42,11 +42,20 @@ import MembershipOffers from "./pages/MembershipOffers";
 
 
 import FontPreview from "./pages/FontPreview";
+import Shop from "./pages/Shop";
+import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
+import { useCartSync } from "./hooks/useCartSync";
 
 const queryClient = new QueryClient();
 
+const CartSync = () => {
+  useCartSync();
+  return null;
+};
+
 const App = () => (
+
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
