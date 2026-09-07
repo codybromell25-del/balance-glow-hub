@@ -191,6 +191,10 @@ All colors MUST be HSL.
     --secondary: 19 22% 80%;
     --secondary-foreground: 0 0% 0%;
 
+    /* Sage Green - Brand #A3C1AD */
+    --sage: 140 20% 70%;
+    --sage-foreground: 0 0% 0%;
+
     /* Muted - Soft neutral tones */
     --muted: 19 10% 95%;
     --muted-foreground: 0 0% 0%;

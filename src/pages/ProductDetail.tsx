@@ -77,7 +77,7 @@ const ProductDetail = () => {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
-              <div className="aspect-square overflow-hidden rounded-3xl bg-secondary/20">
+              <div className="aspect-square overflow-hidden rounded-3xl bg-sage/30">
                 {image && (
                   <img src={image.url} alt={image.altText || node.title} className="w-full h-full object-cover" />
                 )}

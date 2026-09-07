@@ -32,18 +32,14 @@ const ProductCard = ({ product }: { product: ShopifyProduct }) => {
   return (
     <div className="group flex flex-col">
       <Link to={`/product/${node.handle}`} className="block">
-        <div className="aspect-square overflow-hidden rounded-2xl bg-secondary/20">
-          {image ? (
+        <div className="aspect-square overflow-hidden rounded-2xl bg-sage/30">
+          {image && (
             <img
               src={image.url}
               alt={image.altText || node.title}
               loading="lazy"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-              <ShoppingBag className="h-8 w-8" />
-            </div>
           )}
         </div>
       </Link>
