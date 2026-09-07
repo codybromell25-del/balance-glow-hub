@@ -120,7 +120,7 @@ const ProductDetail = () => {
 
                 <Button
                   size="lg"
-                  className="rounded-full w-full sm:w-auto"
+                  className="rounded-full w-full sm:w-auto bg-sage text-black hover:bg-sage/80"
                   onClick={handleAddToCart}
                   disabled={isLoading || !variant?.availableForSale}
                 >
