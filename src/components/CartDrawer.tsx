@@ -100,7 +100,7 @@ const CartDrawer = () => {
                           <Button
                             variant="outline"
                             size="icon"
-                            className="h-6 w-6"
+                            className="h-6 w-6 bg-sage text-black border-sage hover:bg-sage/80 hover:text-black"
                             onClick={() => updateQuantity(item.variantId, item.quantity - 1)}
                           >
                             <Minus className="h-3 w-3" />
@@ -109,7 +109,7 @@ const CartDrawer = () => {
                           <Button
                             variant="outline"
                             size="icon"
-                            className="h-6 w-6"
+                            className="h-6 w-6 bg-sage text-black border-sage hover:bg-sage/80 hover:text-black"
                             onClick={() => updateQuantity(item.variantId, item.quantity + 1)}
                           >
                             <Plus className="h-3 w-3" />
@@ -127,7 +127,7 @@ const CartDrawer = () => {
                 </div>
                 <Button
                   onClick={handleCheckout}
-                  className="w-full bg-sage text-black hover:bg-sage/80"
+                  className="w-full bg-sage text-black hover:bg-sage/80 font-heading"
                   size="lg"
                   disabled={items.length === 0 || isLoading || isSyncing}
                 >
