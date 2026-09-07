@@ -1,167 +1,118 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ShoppingCart } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 import SEO from "@/components/SEO";
+import CartDrawer from "@/components/CartDrawer";
+import { Button } from "@/components/ui/button";
+import { Loader2, ShoppingBag } from "lucide-react";
+import { fetchProducts, formatPrice, ShopifyProduct } from "@/lib/shopify";
+import { useCartStore } from "@/stores/cartStore";
 
-const Shop = () => {
-  const { toast } = useToast();
+const ProductCard = ({ product }: { product: ShopifyProduct }) => {
+  const addItem = useCartStore((s) => s.addItem);
+  const isLoading = useCartStore((s) => s.isLoading);
+  const node = product.node;
+  const image = node.images.edges[0]?.node;
+  const variant = node.variants.edges.find((v) => v.node.availableForSale)?.node ?? node.variants.edges[0]?.node;
 
-  const products = [
-    {
-      id: 1,
-      name: "balance studios Grip Socks",
-      category: "Apparel",
-      price: 15,
-      description: "Non-slip grip socks perfect for reformer Pilates. Available in multiple colors.",
-      image: "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=500&q=80",
-      badge: "Popular"
-    },
-    {
-      id: 2,
-      name: "Stainless Steel Water Bottle",
-      category: "Accessories",
-      price: 25,
-      description: "Keep hydrated in style with our branded 750ml insulated water bottle.",
-      image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&q=80",
-    },
-    {
-      id: 3,
-      name: "Beginner Starter Pack",
-      category: "Bundles",
-      price: 45,
-      description: "Everything you need to start: grip socks, water bottle, and resistance band.",
-      image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500&q=80",
-      badge: "Best Value"
-    },
-    {
-      id: 4,
-      name: "Premium Yoga Mat",
-      category: "Equipment",
-      price: 65,
-      description: "Extra thick 6mm mat with balance studios branding. Perfect for mat Pilates.",
-      image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500&q=80",
-    },
-    {
-      id: 5,
-      name: "Resistance Band Set",
-      category: "Equipment",
-      price: 20,
-      description: "Set of 3 resistance bands (light, medium, heavy) for at-home workouts.",
-      image: "https://images.unsplash.com/photo-1598289431512-b97b0917affc?w=500&q=80",
-    },
-    {
-      id: 6,
-      name: "balance studios Tote Bag",
-      category: "Accessories",
-      price: 18,
-      description: "Stylish canvas tote bag for carrying your Pilates essentials.",
-      image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&q=80",
-    },
-    {
-      id: 7,
-      name: "Gift Voucher - 4 Classes",
-      category: "Gift Vouchers",
-      price: 60,
-      description: "Perfect gift for someone new to Pilates. 4 class intro pack voucher.",
-      image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&q=80",
-      badge: "Gift"
-    },
-    {
-      id: 8,
-      name: "Gift Voucher - 10 Classes",
-      category: "Gift Vouchers",
-      price: 140,
-      description: "Give the gift of wellness with our 10 class pack voucher.",
-      image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&q=80",
-      badge: "Gift"
-    }
-  ];
-
-  const handleAddToCart = (productName: string) => {
-    toast({
-      title: "Added to cart",
-      description: `${productName} has been added to your cart.`,
+  const handleAddToCart = async () => {
+    if (!variant) return;
+    await addItem({
+      product,
+      variantId: variant.id,
+      variantTitle: variant.title,
+      price: variant.price,
+      quantity: 1,
+      selectedOptions: variant.selectedOptions || [],
     });
   };
 
   return (
+    <div className="group flex flex-col">
+      <Link to={`/product/${node.handle}`} className="block">
+        <div className="aspect-square overflow-hidden rounded-2xl bg-secondary/20">
+          {image ? (
+            <img
+              src={image.url}
+              alt={image.altText || node.title}
+              loading="lazy"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+              <ShoppingBag className="h-8 w-8" />
+            </div>
+          )}
+        </div>
+      </Link>
+      <div className="flex-1 pt-4">
+        <Link to={`/product/${node.handle}`}>
+          <h3 className="font-heading text-xl">{node.title}</h3>
+        </Link>
+        {node.description && (
+          <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{node.description}</p>
+        )}
+        <p className="mt-2 font-medium">
+          {formatPrice(node.priceRange.minVariantPrice.amount, node.priceRange.minVariantPrice.currencyCode)}
+        </p>
+      </div>
+      <Button className="mt-4 rounded-full" onClick={handleAddToCart} disabled={isLoading || !variant?.availableForSale}>
+        {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : variant?.availableForSale ? "Add to bag" : "Sold out"}
+      </Button>
+    </div>
+  );
+};
+
+const Shop = () => {
+  const [products, setProducts] = useState<ShopifyProduct[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProducts(50)
+      .then(setProducts)
+      .catch((e) => console.error(e))
+      .finally(() => setLoading(false));
+  }, []);
+
+  return (
     <div className="min-h-screen flex flex-col">
-      <SEO 
+      <SEO
         title="Shop | balance studios - Pilates Essentials"
-        description="Elevate your practice with our curated selection of Pilates essentials. Grip socks, water bottles, resistance bands, yoga mats & gift vouchers."
+        description="Shop balance studios essentials — grip socks, bottles, mats and more for your Pilates practice."
         canonical="/shop"
       />
       <Navigation />
-      
+
       <main className="flex-1 pt-24">
-        <PageHeader 
-          title="Shop" 
-          subtitle="Elevate your practice with our curated selection of Pilates essentials, apparel, and gift vouchers"
+        <PageHeader
+          title="Shop"
+          subtitle="A small, considered collection of essentials for your practice."
         />
 
-        {/* Products Grid */}
         <section className="py-10 md:py-14">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-              {products.map((product, index) => (
-                <Card key={product.id} className="flex flex-col hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: `${index * 0.05}s` }}>
-                  <CardHeader className="p-0">
-                    <div className="relative aspect-square overflow-hidden rounded-t-lg">
-                      <img 
-                        src={product.image} 
-                        alt={product.name}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                      {product.badge && (
-                        <Badge className="absolute top-3 right-3">
-                          {product.badge}
-                        </Badge>
-                      )}
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex-1 p-4">
-                    <div className="text-sm text-primary font-medium mb-2">
-                      {product.category}
-                    </div>
-                    <CardTitle className="text-xl mb-2">{product.name}</CardTitle>
-                    <CardDescription className="mb-3">{product.description}</CardDescription>
-                    <div className="text-2xl font-heading font-bold text-foreground">
-                      €{product.price}
-                    </div>
-                  </CardContent>
-                  <CardFooter className="p-4 pt-0">
-                    <Button 
-                      className="w-full"
-                      onClick={() => handleAddToCart(product.name)}
-                    >
-                      <ShoppingCart className="mr-2 h-4 w-4" />
-                      Add to Cart
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
+            <div className="flex justify-end mb-6">
+              <CartDrawer />
             </div>
-          </div>
-        </section>
 
-        {/* Info Section */}
-        <section className="bg-secondary/20 py-10 md:py-14">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="font-heading text-3xl font-bold mb-6">Need Help Choosing?</h2>
-              <p className="text-muted-foreground mb-6">
-                Our team is here to help you find the perfect products for your Pilates journey. 
-                Contact us at any of our studios or reach out via email.
-              </p>
-              <Button variant="outline" size="lg">
-                Contact Us
-              </Button>
-            </div>
+            {loading ? (
+              <div className="flex justify-center py-20">
+                <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+              </div>
+            ) : products.length === 0 ? (
+              <div className="text-center py-20">
+                <ShoppingBag className="h-10 w-10 mx-auto mb-4 text-muted-foreground" />
+                <p className="text-lg text-muted-foreground">No products found</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                {products.map((product) => (
+                  <ProductCard key={product.node.id} product={product} />
+                ))}
+              </div>
+            )}
           </div>
         </section>
       </main>
