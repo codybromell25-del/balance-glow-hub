@@ -27,6 +27,8 @@ import StudioBlessington from "./pages/StudioBlessington";
 import StudioEnfield from "./pages/StudioEnfield";
 import StudioBray from "./pages/StudioBray";
 import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Cookies from "./pages/Cookies";
 import GiftCards from "./pages/GiftCards";
 import FAQ from "./pages/FAQ";
 import Limerick from "./pages/Limerick";
