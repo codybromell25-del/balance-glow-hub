@@ -81,7 +81,7 @@ const Shop = () => {
       />
       <Navigation />
 
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-20 lg:pt-12">
         <PageHeader
           title="Shop"
           subtitle="A small, considered collection of essentials for your practice."
