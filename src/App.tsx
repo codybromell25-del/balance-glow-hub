@@ -39,6 +39,8 @@ import AdsLimerickReformer from "./pages/AdsLimerickReformer";
 import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
 
 import MembershipOffers from "./pages/MembershipOffers";
+import Shop from "./pages/Shop";
+import ProductDetail from "./pages/ProductDetail";
 
 
 import FontPreview from "./pages/FontPreview";
