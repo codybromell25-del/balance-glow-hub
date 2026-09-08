@@ -98,7 +98,9 @@ const App = () => (
           <Route path="/limerick-reformer-opening" element={<AdsLimerickReformer />} />
           <Route path="/limerick-mat-opening" element={<AdsLimerickMatBarreYoga />} />
           <Route path="/membership-offers" element={<MembershipOffers />} />
-          
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/product/:handle" element={<ProductDetail />} />
+
           <Route path="/font-preview" element={<FontPreview />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
