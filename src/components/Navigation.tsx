@@ -63,7 +63,7 @@ const Navigation = () => {
                   href={link.path}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors font-heading font-medium"
+                  className="text-foreground hover:text-primary transition-colors font-heading italic"
                   onClick={() =>
                     link.name === "Education" &&
                     trackOutboundClick(link.path, "education_nav")
@@ -75,7 +75,7 @@ const Navigation = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="text-foreground hover:text-primary transition-colors font-heading font-medium"
+                  className="text-foreground hover:text-primary transition-colors font-heading italic"
                 >
                   {link.name}
                 </Link>
@@ -114,7 +114,7 @@ const Navigation = () => {
                   href={link.path}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                  className="text-foreground hover:text-primary transition-colors font-heading italic py-2"
                   onClick={() => {
                     setIsOpen(false);
                     if (link.name === "Education") {
@@ -128,7 +128,7 @@ const Navigation = () => {
                   <Link
                     key={link.path}
                     to={link.path}
-                    className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                    className="text-foreground hover:text-primary transition-colors font-heading italic py-2"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
