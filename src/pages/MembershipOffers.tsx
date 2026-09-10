@@ -305,7 +305,7 @@ const MembershipOffers = () => {
                 ))}
               </div>
               <p className="mt-6 text-xs text-foreground/55 leading-relaxed">
-                Memberships auto-renew monthly. Unused classes don't roll over. Cancel anytime with 7 days notice before your next billing date.
+                Memberships auto-renew monthly. Unused classes don't roll over. Cancel anytime with 7 days notice before your next billing date. Reformer classes valid across all 6 balance studios locations; Mat, Barre & Yoga classes available in Kildare Town & Limerick.
               </p>
             </div>
 
