@@ -17,6 +17,7 @@ const Index = () => {
       />
       <LocalBusinessSchema />
       <Navigation />
+      <EventPopup />
       <main>
         <HeroSection />
         <SocialProofBar />
