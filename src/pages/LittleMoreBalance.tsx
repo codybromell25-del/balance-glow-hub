@@ -105,7 +105,9 @@ const LittleMoreBalance = () => {
             {/* CTA */}
             <div className="text-center mb-12">
               <a
-                href="/booking/limerick"
+                href="https://momence.com/l/2Bh0AVGm"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button size="lg" className="text-base px-10 py-6 gap-2 bg-sage hover:bg-sage/90 text-sage-foreground">
                   Book Your Spot
