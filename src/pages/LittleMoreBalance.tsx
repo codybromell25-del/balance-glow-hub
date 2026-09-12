@@ -94,7 +94,7 @@ const LittleMoreBalance = () => {
 
               <div className="mt-8 pt-8 border-t border-border/30 text-center">
                 <p className="text-2xl font-heading italic text-foreground mb-2">
-                  €XX per person
+                  €55 per person
                 </p>
                 <p className="text-sm text-muted-foreground uppercase tracking-wider">
                   Limited spaces available. Advance booking required.
