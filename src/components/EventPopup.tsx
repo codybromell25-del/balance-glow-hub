@@ -6,7 +6,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import studioLimerick from "@/assets/studio-limerick-new.jpg.asset.json";
+import studioLimerick from "@/assets/limerick-studio-4.jpg";
 
 const EVENT_POPUP_KEY = "balance-little-more-balance-popup-dismissed";
 
