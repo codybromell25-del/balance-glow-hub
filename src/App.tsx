@@ -92,6 +92,7 @@ const App = () => (
           <Route path="/intro-offer" element={<IntroOffer />} />
           <Route path="/limerick-launch-offer" element={<Navigate to="/pricing" replace />} />
           <Route path="/workshop/anesti-mano" element={<Navigate to="/" replace />} />
+          <Route path="/a-little-more-balance" element={<LittleMoreBalance />} />
 
           {/* Hidden ad landing pages (noindex, not in nav/sitemap) */}
           <Route path="/limerick-reformer-opening" element={<AdsLimerickReformer />} />
