@@ -26,7 +26,7 @@ const EventPopup = () => {
 
   const handleClose = () => {
     setOpen(false);
-    localStorage.setItem(EVENT_POPUP_KEY, "true");
+    sessionStorage.setItem(EVENT_POPUP_KEY, "true");
   };
 
   return (
