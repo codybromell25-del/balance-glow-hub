@@ -6,6 +6,7 @@ import LocationsSection from "@/components/home/LocationsSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import SEO from "@/components/SEO";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import EventPopup from "@/components/EventPopup";
 
 const Index = () => {
   return <div className="min-h-screen">
@@ -16,6 +17,7 @@ const Index = () => {
       />
       <LocalBusinessSchema />
       <Navigation />
+      <EventPopup />
       <main>
         <HeroSection />
         <SocialProofBar />
