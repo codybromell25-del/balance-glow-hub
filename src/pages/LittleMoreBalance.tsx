@@ -107,7 +107,7 @@ const LittleMoreBalance = () => {
               <a
                 href="/booking/limerick"
               >
-                <Button size="lg" className="text-base px-10 py-6 gap-2 bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button size="lg" className="text-base px-10 py-6 gap-2 bg-sage hover:bg-sage/90 text-sage-foreground">
                   Book Your Spot
                   <ExternalLink size={16} />
                 </Button>
