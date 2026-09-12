@@ -32,7 +32,7 @@ const EventPopup = () => {
   return (
     <Dialog open={open} onOpenChange={(isOpen) => !isOpen && handleClose()}>
       <DialogContent
-        className="max-w-3xl w-[calc(100%-2rem)] p-0 overflow-hidden rounded-[2rem] md:rounded-[2.5rem] border border-border/50 bg-background shadow-2xl data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95"
+        className="max-w-3xl w-[calc(100%-2rem)] max-h-[90dvh] overflow-y-auto p-0 rounded-[2rem] md:rounded-[2.5rem] border border-border/50 bg-background shadow-2xl data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95"
         aria-describedby="event-popup-description"
       >
         <DialogTitle className="sr-only">
