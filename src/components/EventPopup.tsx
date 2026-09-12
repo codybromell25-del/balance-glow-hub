@@ -55,7 +55,7 @@ const EventPopup = () => {
           {/* Image Section */}
           <div className="w-full md:w-5/12 relative min-h-[280px] md:min-h-[420px] overflow-hidden">
             <img
-              src={studioLimerick.url}
+              src={studioLimerick}
               alt="balance Limerick studio entrance"
               className="absolute inset-0 w-full h-full object-cover"
             />
