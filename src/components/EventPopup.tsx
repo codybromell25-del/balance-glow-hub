@@ -14,7 +14,7 @@ const EventPopup = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const dismissed = localStorage.getItem(EVENT_POPUP_KEY);
+    const dismissed = sessionStorage.getItem(EVENT_POPUP_KEY);
     if (dismissed) return;
 
     const timer = setTimeout(() => {
