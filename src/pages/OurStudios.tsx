@@ -51,7 +51,7 @@ const OurStudios = () => {
       address: "Unit 3 Claregate St, Kildare, R51 E772, Ireland",
       parking: "Street parking and public car park",
       hours: "Open 7 Days a Week",
-      offerings: "Reformer & Mat",
+      offerings: "Reformer, Mat & Barre",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Claregate+St+Kildare+R51+E772+Ireland",
       hasDetailPage: true,
     },
@@ -163,11 +163,11 @@ const OurStudios = () => {
                       <div className="flex gap-3">
                         {studio.hasDetailPage ? (
                           <Button asChild className="flex-1 border-0 text-black shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-                            <a href={`/studio/${studio.slug}`}>View Studio</a>
+                            <a href={`/studio/${studio.slug}`}>Book Your Class</a>
                           </Button>
                         ) : (
                           <Button asChild className="flex-1 border-0 text-black shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-                            <a href="/book-class">Book Now</a>
+                            <a href="/book-class">Book Your Class</a>
                           </Button>
                         )}
                         <Button 
