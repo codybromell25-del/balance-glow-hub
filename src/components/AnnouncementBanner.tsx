@@ -24,13 +24,6 @@ const AnnouncementBanner = () => {
             Android
           </a>
         </span>
-        <span className="hidden md:inline text-black/40">|</span>
-        <Link
-          to="/a-little-more-balance"
-          className="underline hover:opacity-80 font-semibold"
-        >
-          A Little More balance — Limerick, 27 Sept
-        </Link>
       </div>
     </div>
   );
