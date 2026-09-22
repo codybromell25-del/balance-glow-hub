@@ -1,6 +1,5 @@
 import gripSocks from "@/assets/grip-socks.jpg";
 import toteBag from "@/assets/balance-tote-bag.jpg";
-import bundle from "@/assets/bag-socks-bundle.jpg";
 
 export const STUDIOS = [
   { slug: "blessington", name: "Blessington" },
