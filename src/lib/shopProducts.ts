@@ -43,6 +43,7 @@ export const SHOP_ITEMS: ShopItem[] = [
       bray: "https://buy.stripe.com/3cI00k3Hd9mDgohfegb7y09",
       kildare: "https://buy.stripe.com/6oUcN64LhgP58VPfegb7y0a",
       enfield: "https://buy.stripe.com/28E3cw91xdCT8VP4zCb7y0b",
+      clane: "https://buy.stripe.com/28EbJ21z57ev5JDaY0b7y0c",
     },
   },
   {
