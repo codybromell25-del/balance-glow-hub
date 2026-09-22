@@ -41,6 +41,7 @@ import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
 import MembershipOffers from "./pages/MembershipOffers";
 
 
+import Shop from "./pages/Shop";
 import FontPreview from "./pages/FontPreview";
 import NotFound from "./pages/NotFound";
 
@@ -97,6 +98,7 @@ const App = () => (
           <Route path="/limerick-mat-opening" element={<AdsLimerickMatBarreYoga />} />
           <Route path="/membership-offers" element={<MembershipOffers />} />
 
+          <Route path="/shop" element={<Shop />} />
           <Route path="/font-preview" element={<FontPreview />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
