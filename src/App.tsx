@@ -34,7 +34,6 @@ import FAQ from "./pages/FAQ";
 import Limerick from "./pages/Limerick";
 import LimerickComingSoon from "./pages/LimerickComingSoon";
 import WorkshopAnestiMano from "./pages/WorkshopAnestiMano";
-import LittleMoreBalance from "./pages/LittleMoreBalance";
 import IntroOffer from "./pages/IntroOffer";
 import AdsLimerickReformer from "./pages/AdsLimerickReformer";
 import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
