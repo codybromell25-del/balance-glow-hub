@@ -8,7 +8,6 @@ export const STUDIOS = [
   { slug: "kildare", name: "Kildare Town" },
   { slug: "enfield", name: "Enfield" },
   { slug: "bray", name: "Bray" },
-  { slug: "limerick", name: "Limerick" },
 ] as const;
 
 export type StudioSlug = (typeof STUDIOS)[number]["slug"];
@@ -50,13 +49,5 @@ export const SHOP_ITEMS: ShopItem[] = [
       enfield: "https://buy.stripe.com/28E3cw91xdCT8VP4zCb7y0b",
       clane: "https://buy.stripe.com/28EbJ21z57ev5JDaY0b7y0c",
     },
-  },
-  {
-    id: "bag-socks-bundle",
-    title: "Tote Bag + Grip Socks Bundle",
-    description: "Our tote bag paired with a pair of grip socks — better together.",
-    price: 30,
-    image: bundle,
-    links: {},
   },
 ];
