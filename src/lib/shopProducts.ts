@@ -30,9 +30,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     description: "Our signature grip socks — secure, breathable and made for the reformer.",
     price: 15,
     image: gripSocks,
-    links: {
-      blessington: "https://buy.stripe.com/eVqaEYa5B56n8VP5DGb7y08",
-    },
+    links: {},
   },
   {
     id: "tote-bag",
@@ -43,6 +41,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     links: {
       blessington: "https://buy.stripe.com/eVqaEYa5B56n8VP5DGb7y08",
       bray: "https://buy.stripe.com/3cI00k3Hd9mDgohfegb7y09",
+      kildare: "https://buy.stripe.com/6oUcN64LhgP58VPfegb7y0a",
     },
   },
   {
