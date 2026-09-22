@@ -1,76 +1,55 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import SEO from "@/components/SEO";
-import CartDrawer from "@/components/CartDrawer";
 import { Button } from "@/components/ui/button";
-import { Loader2, ShoppingBag } from "lucide-react";
-import { fetchProducts, formatPrice, ShopifyProduct } from "@/lib/shopify";
-import { useCartStore } from "@/stores/cartStore";
+import { ShoppingBag } from "lucide-react";
+import { SHOP_ITEMS, STUDIOS, StudioSlug, ShopItem } from "@/lib/shopProducts";
 
-const ProductCard = ({ product }: { product: ShopifyProduct }) => {
-  const addItem = useCartStore((s) => s.addItem);
-  const isLoading = useCartStore((s) => s.isLoading);
-  const node = product.node;
-  const image = node.images.edges[0]?.node;
-  const variant = node.variants.edges.find((v) => v.node.availableForSale)?.node ?? node.variants.edges[0]?.node;
+const formatPrice = (value: number) =>
+  new Intl.NumberFormat("en-IE", { style: "currency", currency: "EUR" }).format(value);
 
-  const handleAddToCart = async () => {
-    if (!variant) return;
-    await addItem({
-      product,
-      variantId: variant.id,
-      variantTitle: variant.title,
-      price: variant.price,
-      quantity: 1,
-      selectedOptions: variant.selectedOptions || [],
-    });
-  };
+const ProductCard = ({ item, studio }: { item: ShopItem; studio: StudioSlug | null }) => {
+  const link = studio ? item.links[studio] : undefined;
 
   return (
     <div className="group flex flex-col">
-      <Link to={`/product/${node.handle}`} className="block">
-        <div className="aspect-square overflow-hidden rounded-2xl bg-sage/30">
-          {image && (
-            <img
-              src={image.url}
-              alt={image.altText || node.title}
-              loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          )}
-        </div>
-      </Link>
-      <div className="flex-1 pt-4">
-        <Link to={`/product/${node.handle}`}>
-          <h3 className="font-heading text-xl">{node.title}</h3>
-        </Link>
-        {node.description && (
-          <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{node.description}</p>
-        )}
-        <p className="mt-2 font-medium">
-          {formatPrice(node.priceRange.minVariantPrice.amount, node.priceRange.minVariantPrice.currencyCode)}
-        </p>
+      <div className="aspect-square overflow-hidden rounded-2xl bg-sage/30">
+        <img
+          src={item.image}
+          alt={item.title}
+          loading="lazy"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
       </div>
-      <Button className="mt-4 rounded-full bg-sage text-black hover:bg-sage/80" onClick={handleAddToCart} disabled={isLoading || !variant?.availableForSale}>
-        {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : variant?.availableForSale ? "Add to bag" : "Sold out"}
-      </Button>
+      <div className="flex-1 pt-4">
+        <h3 className="font-heading text-xl">{item.title}</h3>
+        <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+        <p className="mt-2 font-medium">{formatPrice(item.price)}</p>
+      </div>
+      {!studio ? (
+        <Button className="mt-4 rounded-full bg-sage text-black hover:bg-sage/80" disabled>
+          Choose a studio first
+        </Button>
+      ) : link ? (
+        <Button asChild className="mt-4 rounded-full bg-sage text-black hover:bg-sage/80 font-heading">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            Buy now
+          </a>
+        </Button>
+      ) : (
+        <Button className="mt-4 rounded-full bg-sage text-black hover:bg-sage/80" disabled>
+          Not available at this studio
+        </Button>
+      )}
     </div>
   );
 };
 
 const Shop = () => {
-  const [products, setProducts] = useState<ShopifyProduct[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetchProducts(50)
-      .then(setProducts)
-      .catch((e) => console.error(e))
-      .finally(() => setLoading(false));
-  }, []);
+  const [studio, setStudio] = useState<StudioSlug | null>(null);
+  const items = studio ? SHOP_ITEMS.filter((i) => i.links[studio]) : SHOP_ITEMS;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -89,23 +68,38 @@ const Shop = () => {
 
         <section className="py-10 md:py-14">
           <div className="container mx-auto px-4">
-            <div className="flex justify-end mb-6">
-              <CartDrawer />
+            <div className="mb-10 text-center">
+              <p className="font-heading italic text-lg mb-4">
+                Which studio would you like to collect from?
+              </p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {STUDIOS.map((s) => (
+                  <button
+                    key={s.slug}
+                    onClick={() => setStudio(s.slug)}
+                    className={`rounded-full px-5 py-2 text-sm border transition-colors ${
+                      studio === s.slug
+                        ? "bg-sage text-black border-sage"
+                        : "border-border text-foreground hover:border-sage"
+                    }`}
+                  >
+                    {s.name}
+                  </button>
+                ))}
+              </div>
             </div>
 
-            {loading ? (
-              <div className="flex justify-center py-20">
-                <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-              </div>
-            ) : products.length === 0 ? (
+            {items.length === 0 ? (
               <div className="text-center py-20">
                 <ShoppingBag className="h-10 w-10 mx-auto mb-4 text-muted-foreground" />
-                <p className="text-lg text-muted-foreground">No products found</p>
+                <p className="text-lg text-muted-foreground">
+                  Nothing available at this studio just yet.
+                </p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                {products.map((product) => (
-                  <ProductCard key={product.node.id} product={product} />
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {items.map((item) => (
+                  <ProductCard key={item.id} item={item} studio={studio} />
                 ))}
               </div>
             )}
