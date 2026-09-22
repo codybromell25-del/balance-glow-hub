@@ -30,7 +30,9 @@ export const SHOP_ITEMS: ShopItem[] = [
     description: "Our signature grip socks — secure, breathable and made for the reformer.",
     price: 15,
     image: gripSocks,
-    links: {},
+    links: {
+      enfield: "https://buy.stripe.com/4gMcN6fpV0Q70pj2rub7y0d",
+    },
   },
   {
     id: "tote-bag",
