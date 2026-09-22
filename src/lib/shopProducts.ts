@@ -33,6 +33,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     links: {
       enfield: "https://buy.stripe.com/4gMcN6fpV0Q70pj2rub7y0d",
       bray: "https://buy.stripe.com/3cI8wQcdJ56nfkd3vyb7y0e",
+      kildare: "https://buy.stripe.com/6oU5kEb9F9mDc81eacb7y0f",
     },
   },
   {
