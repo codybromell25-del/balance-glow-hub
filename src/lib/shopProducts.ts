@@ -40,7 +40,10 @@ export const SHOP_ITEMS: ShopItem[] = [
     description: "A soft, roomy tote for studio days and everything after.",
     price: 20,
     image: toteBag,
-    links: {},
+    links: {
+      blessington: "https://buy.stripe.com/eVqaEYa5B56n8VP5DGb7y08",
+      bray: "https://buy.stripe.com/3cI00k3Hd9mDgohfegb7y09",
+    },
   },
   {
     id: "bag-socks-bundle",
