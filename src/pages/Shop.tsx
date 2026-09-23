@@ -14,7 +14,7 @@ const ProductCard = ({ item, studio }: { item: ShopItem; studio: StudioSlug | nu
   const link = studio ? item.links[studio] : undefined;
 
   return (
-    <div className="group flex flex-col">
+    <div className="group flex flex-col w-full max-w-xs sm:max-w-sm">
       <div className="aspect-square overflow-hidden rounded-2xl bg-sage/30">
         <img
           src={item.image}
@@ -97,7 +97,7 @@ const Shop = () => {
                 </p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="flex flex-wrap justify-center gap-x-16 gap-y-10">
                 {items.map((item) => (
                   <ProductCard key={item.id} item={item} studio={studio} />
                 ))}
