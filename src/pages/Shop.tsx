@@ -14,7 +14,7 @@ const ProductCard = ({ item, studio }: { item: ShopItem; studio: StudioSlug | nu
   const link = studio ? item.links[studio] : undefined;
 
   return (
-    <div className="group flex flex-col">
+    <div className="group flex flex-col w-full max-w-xs sm:max-w-sm">
       <div className="aspect-square overflow-hidden rounded-2xl bg-sage/30">
         <img
           src={item.image}
