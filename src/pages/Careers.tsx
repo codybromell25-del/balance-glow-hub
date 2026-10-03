@@ -8,7 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import studioInstructorHelping from "@/assets/studio-instructor-helping.jpg";
-import studioReformersRow from "@/assets/studio-reformers-row.jpg";
+import instructorLaughing from "@/assets/instructor-laughing.jpg";
 
 // EmailJS configuration (same as Footer contact form)
 const EMAILJS_SERVICE_ID = "service_ap09r2n";
