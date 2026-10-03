@@ -175,8 +175,8 @@ const Careers = () => {
             <section className="mb-32 md:mb-48">
               <div className="relative flex flex-col items-center">
                 <img
-                  src={studioReformersRow}
-                  alt="A row of reformers in a balance studio"
+                  src={instructorLaughing}
+                  alt="An instructor laughing with clients at balance studios"
                   className="w-full aspect-[2/1] object-cover"
                 />
                 <div className="w-full max-w-2xl -mt-16 md:-mt-24 relative z-10 bg-background p-8 md:p-16 border border-sage/20 shadow-sm">
