@@ -38,6 +38,7 @@ import IntroOffer from "./pages/IntroOffer";
 import AdsLimerickReformer from "./pages/AdsLimerickReformer";
 import AdsLimerickMatBarreYoga from "./pages/AdsLimerickMatBarreYoga";
 
+import Careers from "./pages/Careers";
 import MembershipOffers from "./pages/MembershipOffers";
 
 
@@ -85,6 +86,7 @@ const App = () => (
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/gift-cards" element={<GiftCards />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/careers" element={<Careers />} />
           
           <Route path="/studio/limerick" element={<Limerick />} />
           <Route path="/limerick-coming-soon" element={<LimerickComingSoon />} />

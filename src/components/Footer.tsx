@@ -231,6 +231,7 @@ const Footer = () => {
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link></li>
                 <li><Link to="/book-class" className="text-muted-foreground hover:text-primary transition-colors">Book Now</Link></li>
                 <li><Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link></li>
+                <li><Link to="/careers" className="text-muted-foreground hover:text-primary transition-colors">Careers</Link></li>
                 <li>
                   <a 
                     href="https://apps.apple.com/ie/app/balance-reformer-pilates/id6756276683" 
