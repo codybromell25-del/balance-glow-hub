@@ -8,7 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import studioInstructorHelping from "@/assets/studio-instructor-helping.jpg";
-import studioReformersRow from "@/assets/studio-reformers-row.jpg";
+import instructorLaughing from "@/assets/instructor-laughing.jpg";
 
 // EmailJS configuration (same as Footer contact form)
 const EMAILJS_SERVICE_ID = "service_ap09r2n";
@@ -175,9 +175,9 @@ const Careers = () => {
             <section className="mb-32 md:mb-48">
               <div className="relative flex flex-col items-center">
                 <img
-                  src={studioReformersRow}
-                  alt="A row of reformers in a balance studio"
-                  className="w-full aspect-[2/1] object-cover"
+                  src={instructorLaughing}
+                  alt="An instructor laughing with clients at balance studios"
+                  className="w-full aspect-[3/2] object-cover object-top"
                 />
                 <div className="w-full max-w-2xl -mt-16 md:-mt-24 relative z-10 bg-background p-8 md:p-16 border border-sage/20 shadow-sm">
                   <h3 className="font-heading italic text-2xl md:text-3xl text-foreground mb-8 text-center">
