@@ -8,7 +8,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import studioInstructorHelping from "@/assets/studio-instructor-helping.jpg";
-import instructorLaughing from "@/assets/instructor-laughing.jpg";
+import studioInteriorHero from "@/assets/balance-studio-interior-hero.jpg";
+import limerickReformerLaughing from "@/assets/limerick-reformer-laughing.jpg";
 
 // EmailJS configuration (same as Footer contact form)
 const EMAILJS_SERVICE_ID = "service_ap09r2n";
@@ -116,30 +117,43 @@ const Careers = () => {
 
             {/* Header */}
             <header className="mb-24 md:mb-40">
-              <h1 className="text-7xl sm:text-8xl md:text-[10rem] font-heading italic tracking-tight text-foreground leading-none">
-                careers<span className="text-sage">.</span>
-              </h1>
-              <div className="mt-12 md:mt-16 flex flex-col md:flex-row gap-10 md:gap-16 items-start">
-                <div className="w-full md:w-3/5 animate-fade-in">
+              <div className="relative h-[55vh] md:h-[70vh] overflow-hidden">
+                <img
+                  src={studioInteriorHero}
+                  alt="Inside a balance studios studio"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-foreground/25"></div>
+                <h1 className="absolute inset-0 flex items-center justify-center text-7xl sm:text-8xl md:text-[10rem] font-heading italic tracking-tight text-background leading-none">
+                  careers<span className="text-sage">.</span>
+                </h1>
+              </div>
+              <div className="mt-16 md:mt-24 flex flex-col md:flex-row gap-10 md:gap-16 items-start">
+                <div className="w-full md:w-2/5 animate-fade-in">
                   <img
                     src={studioInstructorHelping}
                     alt="Instructor guiding a client at balance studios"
                     className="w-full aspect-[4/5] object-cover"
                   />
                 </div>
-                <div className="w-full md:w-2/5 md:pt-24 animate-fade-in">
-                  <p className="text-xl md:text-2xl leading-relaxed font-light text-foreground">
+                <div className="w-full md:w-3/5 animate-fade-in">
+                  <p className="font-heading italic text-2xl md:text-3xl leading-snug text-foreground">
+                    Join an established and growing studio brand where high
+                    standards are matched by real support.
+                  </p>
+                  <p className="text-lg md:text-xl leading-relaxed font-light text-foreground/80 mt-8">
                     At balance, our instructors are part of a strong team. You'll have access
                     to ongoing training, development and opportunities to grow within the
-                    business — with the support to build confidence, develop your teaching and
+                    business, with the support to build confidence, develop your teaching and
                     progress over time.
                   </p>
                   <p className="text-lg md:text-xl leading-relaxed font-light text-foreground/80 mt-8">
-                    We're proud of the standard we've created, and selective about the people
+                    We're proud of the standard we've created and selective about the people
                     who become part of it.
                   </p>
-                  <p className="font-heading italic text-lg text-foreground mt-10">
-                    We're always interested in exceptional instructors who want to grow with us.
+                  <p className="font-heading italic text-lg md:text-xl text-foreground mt-10">
+                    We're always interested in exceptional Reformer, Mat Pilates, Barre and
+                    Yoga instructors who want to grow with us.
                   </p>
                   <div className="mt-12 w-24 h-px bg-sage"></div>
                 </div>
@@ -173,13 +187,13 @@ const Careers = () => {
 
             {/* Who we're looking for */}
             <section className="mb-32 md:mb-48">
-              <div className="relative flex flex-col items-center">
+              <div className="flex flex-col items-center">
                 <img
-                  src={instructorLaughing}
-                  alt="An instructor laughing with clients at balance studios"
+                  src={limerickReformerLaughing}
+                  alt="An instructor laughing with a client during a reformer class at balance studios"
                   className="w-full aspect-[3/2] object-cover object-top"
                 />
-                <div className="w-full max-w-2xl -mt-16 md:-mt-24 relative z-10 bg-background p-8 md:p-16 border border-sage/20 shadow-sm">
+                <div className="w-full max-w-2xl mt-10 bg-background p-8 md:p-16 border border-sage/20 shadow-sm">
                   <h3 className="font-heading italic text-2xl md:text-3xl text-foreground mb-8 text-center">
                     who we're looking for<span className="text-sage">.</span>
                   </h3>
