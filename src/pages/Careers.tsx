@@ -12,7 +12,7 @@ import studioInteriorHero from "@/assets/balance-studio-interior-hero.jpg";
 import limerickReformerInstructor from "@/assets/limerick-reformer-instructor.jpg";
 
 // EmailJS configuration (same as Footer contact form)
-const EMAILJS_SERVICE_ID = "service_ap09r2n";
+const EMAILJS_SERVICE_ID = "service_fpm2937";
 const EMAILJS_TEMPLATE_ID = "template_ixon7mo";
 const EMAILJS_PUBLIC_KEY = "zvyWn7c52ArJQNp49";
 
