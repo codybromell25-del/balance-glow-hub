@@ -112,28 +112,27 @@ const Careers = () => {
       />
       <Navigation />
       <main className="pt-32 pb-24 md:pt-40">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-
-            {/* Header */}
-            <header className="mb-24 md:mb-40">
-              <div className="relative h-[55vh] md:h-[70vh] overflow-hidden">
-                <img
-                  src={studioInteriorHero}
-                  alt="Inside a balance studios studio"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-foreground/25"></div>
-                <h1 className="absolute inset-0 flex items-center justify-center text-7xl sm:text-8xl md:text-[10rem] font-heading italic tracking-tight text-background leading-none">
-                  careers<span className="text-sage">.</span>
-                </h1>
-              </div>
+        {/* Header */}
+        <header className="mb-24 md:mb-40">
+          <div className="relative h-[55vh] md:h-[70vh] overflow-hidden">
+            <img
+              src={studioInteriorHero}
+              alt="Inside a balance studios studio"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-foreground/25"></div>
+            <h1 className="absolute inset-0 flex items-center justify-center text-7xl sm:text-8xl md:text-[10rem] font-heading italic tracking-tight text-background leading-none">
+              careers<span className="text-sage">.</span>
+            </h1>
+          </div>
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
               <div className="mt-16 md:mt-24 flex flex-col md:flex-row gap-10 md:gap-16 items-start">
                 <div className="w-full md:w-2/5 animate-fade-in">
                   <img
                     src={studioInstructorHelping}
                     alt="Instructor guiding a client at balance studios"
-                    className="w-full aspect-[4/5] object-cover"
+                    className="w-full aspect-[4/5] object-cover rounded-3xl"
                   />
                 </div>
                 <div className="w-full md:w-3/5 animate-fade-in">
@@ -186,12 +185,12 @@ const Careers = () => {
             </section>
 
             {/* Who we're looking for */}
-            <section className="mb-32 md:mb-48">
+            <section className="mb-16 md:mb-20">
               <div className="flex flex-col items-center">
                 <img
                   src={limerickReformerInstructor}
                   alt="An instructor guiding a client through an exercise on the reformer at balance Limerick"
-                  className="w-full aspect-[3/2] object-cover"
+                  className="w-full aspect-[3/2] object-cover rounded-3xl"
                 />
                 <div className="w-full max-w-5xl mt-12 md:mt-16 bg-background p-10 md:p-20 lg:p-24 border border-sage/20 shadow-sm">
                   <h3 className="font-heading italic text-4xl md:text-5xl text-foreground mb-10 text-center">
@@ -215,8 +214,8 @@ const Careers = () => {
             </section>
 
             {/* Apply */}
-            <section className="max-w-xl mx-auto py-8 md:py-16">
-              <div className="text-center mb-14 md:mb-20">
+            <section className="max-w-xl mx-auto pt-2 md:pt-6">
+              <div className="text-center mb-10 md:mb-14">
                 <h2 className="font-heading italic text-4xl md:text-5xl text-foreground mb-6">
                   apply<span className="text-sage">.</span>
                 </h2>
