@@ -193,18 +193,18 @@ const Careers = () => {
                   alt="An instructor guiding a client through an exercise on the reformer at balance Limerick"
                   className="w-full aspect-[3/2] object-cover"
                 />
-                <div className="w-full max-w-2xl mt-10 bg-background p-8 md:p-16 border border-sage/20 shadow-sm">
-                  <h3 className="font-heading italic text-2xl md:text-3xl text-foreground mb-8 text-center">
+                <div className="w-full max-w-5xl mt-12 md:mt-16 bg-background p-10 md:p-20 lg:p-24 border border-sage/20 shadow-sm">
+                  <h3 className="font-heading italic text-4xl md:text-5xl text-foreground mb-10 text-center">
                     who we're looking for<span className="text-sage">.</span>
                   </h3>
-                  <p className="text-sm text-foreground/70 text-center mb-8 max-w-md mx-auto">
+                  <p className="text-base md:text-lg text-foreground/70 text-center mb-12 max-w-lg mx-auto">
                     We're always interested in exceptional instructors across:
                   </p>
-                  <div className="flex flex-wrap justify-center gap-4">
+                  <div className="flex flex-wrap justify-center gap-5 md:gap-6">
                     {disciplines.map((discipline) => (
                       <span
                         key={discipline}
-                        className="px-6 py-2.5 rounded-full border border-foreground/10 text-[10px] uppercase tracking-[0.2em] text-foreground hover:bg-sage hover:border-sage transition-all cursor-default"
+                        className="px-10 py-4 md:px-12 md:py-5 rounded-full border border-foreground/10 text-xs md:text-sm uppercase tracking-[0.25em] text-foreground hover:bg-sage hover:border-sage transition-all cursor-default"
                       >
                         {discipline}
                       </span>
