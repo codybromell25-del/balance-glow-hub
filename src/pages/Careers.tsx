@@ -189,9 +189,9 @@ const Careers = () => {
             <section className="mb-32 md:mb-48">
               <div className="flex flex-col items-center">
                 <img
-                  src={limerickReformerLaughing}
-                  alt="An instructor laughing with a client during a reformer class at balance studios"
-                  className="w-full aspect-[3/2] object-cover object-top"
+                  src={limerickReformerInstructor}
+                  alt="An instructor guiding a client through an exercise on the reformer at balance Limerick"
+                  className="w-full aspect-[3/2] object-cover"
                 />
                 <div className="w-full max-w-2xl mt-10 bg-background p-8 md:p-16 border border-sage/20 shadow-sm">
                   <h3 className="font-heading italic text-2xl md:text-3xl text-foreground mb-8 text-center">
