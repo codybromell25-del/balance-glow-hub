@@ -157,8 +157,12 @@ const Careers = () => {
                   <div className="mt-12 w-24 h-px bg-sage"></div>
                 </div>
               </div>
-            </header>
+            </div>
+          </div>
+        </header>
 
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
             {/* What you can expect */}
             <section className="mb-32 md:mb-48">
               <div className="flex items-center gap-6 mb-16 md:mb-24">
