@@ -9,7 +9,7 @@ import emailjs from "@emailjs/browser";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 
 // EmailJS configuration
-const EMAILJS_SERVICE_ID = "service_fpm2937";
+const EMAILJS_SERVICE_ID = "service_f6phwmd";
 const EMAILJS_TEMPLATE_ID = "template_ixon7mo";
 const EMAILJS_PUBLIC_KEY = "zvyWn7c52ArJQNp49";
 
