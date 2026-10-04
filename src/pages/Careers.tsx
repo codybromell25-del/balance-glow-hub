@@ -187,13 +187,13 @@ const Careers = () => {
 
             {/* Who we're looking for */}
             <section className="mb-32 md:mb-48">
-              <div className="relative flex flex-col items-center">
+              <div className="flex flex-col items-center">
                 <img
-                  src={instructorLaughing}
-                  alt="An instructor laughing with clients at balance studios"
+                  src={limerickReformerLaughing}
+                  alt="An instructor laughing with a client during a reformer class at balance studios"
                   className="w-full aspect-[3/2] object-cover object-top"
                 />
-                <div className="w-full max-w-2xl -mt-16 md:-mt-24 relative z-10 bg-background p-8 md:p-16 border border-sage/20 shadow-sm">
+                <div className="w-full max-w-2xl mt-10 bg-background p-8 md:p-16 border border-sage/20 shadow-sm">
                   <h3 className="font-heading italic text-2xl md:text-3xl text-foreground mb-8 text-center">
                     who we're looking for<span className="text-sage">.</span>
                   </h3>
