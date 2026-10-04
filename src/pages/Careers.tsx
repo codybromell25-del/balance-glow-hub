@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import studioInstructorHelping from "@/assets/studio-instructor-helping.jpg";
 import studioInteriorHero from "@/assets/balance-studio-interior-hero.jpg";
-import limerickReformerLaughing from "@/assets/limerick-reformer-laughing.jpg";
+import limerickReformerInstructor from "@/assets/limerick-reformer-instructor.jpg";
 
 // EmailJS configuration (same as Footer contact form)
 const EMAILJS_SERVICE_ID = "service_ap09r2n";
