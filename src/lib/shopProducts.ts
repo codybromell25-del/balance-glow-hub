@@ -1,5 +1,6 @@
 import gripSocks from "@/assets/grip-socks.jpg";
 import toteBag from "@/assets/balance-tote-bag.jpg";
+import bagSocksBundle from "@/assets/bag-socks-bundle.jpg";
 
 export const STUDIOS = [
   { slug: "blessington", name: "Blessington" },
@@ -48,6 +49,20 @@ export const SHOP_ITEMS: ShopItem[] = [
       kildare: "https://buy.stripe.com/6oUcN64LhgP58VPfegb7y0a",
       enfield: "https://buy.stripe.com/28E3cw91xdCT8VP4zCb7y0b",
       clane: "https://buy.stripe.com/28EbJ21z57ev5JDaY0b7y0c",
+    },
+  },
+  {
+    id: "bag-socks-bundle",
+    title: "balance Bag & Socks Bundle",
+    description: "Our signature grip socks together with a soft, roomy tote — the studio starter set.",
+    price: 30,
+    image: bagSocksBundle,
+    links: {
+      blessington: "https://buy.stripe.com/eVqeVea5B56n5JD1nqb7y0l",
+      clane: "https://buy.stripe.com/00w14o1z542j2xraY0b7y0j",
+      kildare: "https://buy.stripe.com/6oUfZi91x56ndc5c24b7y0i",
+      enfield: "https://buy.stripe.com/00w4gA91x0Q75JD3vyb7y0m",
+      bray: "https://buy.stripe.com/cNidRa5Pl1Ubeg94zCb7y0k",
     },
   },
 ];
