@@ -44,11 +44,11 @@ export const SHOP_ITEMS: ShopItem[] = [
     price: 20,
     image: toteBag,
     links: {
-      blessington: "https://buy.stripe.com/eVqaEYa5B56n8VP5DGb7y08",
-      bray: "https://buy.stripe.com/3cI00k3Hd9mDgohfegb7y09",
-      kildare: "https://buy.stripe.com/6oUcN64LhgP58VPfegb7y0a",
-      enfield: "https://buy.stripe.com/28E3cw91xdCT8VP4zCb7y0b",
-      clane: "https://buy.stripe.com/28EbJ21z57ev5JDaY0b7y0c",
+      blessington: "https://buy.stripe.com/4gM8wQ3HdeGX8VPaY0b7y0p",
+      bray: "https://buy.stripe.com/aFaaEY7XtfL17RL0jmb7y0o",
+      kildare: "https://buy.stripe.com/00w28selRbuLfkd5DGb7y0q",
+      enfield: "https://buy.stripe.com/aFa00k91x7evfkd4zCb7y0r",
+      clane: "https://buy.stripe.com/aFa9AU6Tp1Ub3Bv9TWb7y0n",
     },
   },
   {
