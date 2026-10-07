@@ -13,7 +13,7 @@ const EMAILJS_SERVICE_ID = "service_f6phwmd";
 const EMAILJS_TEMPLATE_ID = "template_ixon7mo";
 const EMAILJS_PUBLIC_KEY = "zvyWn7c52ArJQNp49";
 
-const Footer = () => {
+const Footer = ({ showContact = true }: { showContact?: boolean }) => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -102,8 +102,9 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Main Contact Section */}
-      <div className="container mx-auto px-4 py-12 md:py-16">
+        {/* Main Contact Section */}
+        {showContact && (
+        <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground tracking-wide">
             Contact us via the form
@@ -210,6 +211,7 @@ const Footer = () => {
           </form>
         </div>
       </div>
+        )}
 
       {/* Bottom Links Section */}
       <div className="border-t border-border">
