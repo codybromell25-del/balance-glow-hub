@@ -210,6 +210,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
             </Button>
           </form>
         </div>
+        )}
       </div>
 
       {/* Bottom Links Section */}

@@ -327,7 +327,7 @@ const Careers = () => {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer showContact={false} />
     </div>
   );
 };
