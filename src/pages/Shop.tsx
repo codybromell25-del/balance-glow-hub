@@ -72,6 +72,9 @@ const Shop = () => {
               <p className="font-heading italic text-lg mb-4">
                 Which studio would you like to collect from?
               </p>
+              <p className="text-sm text-muted-foreground mb-5">
+                All items are click &amp; collect — order online, then pick up at your chosen studio.
+              </p>
               <div className="flex flex-wrap justify-center gap-2">
                 {STUDIOS.map((s) => (
                   <button
