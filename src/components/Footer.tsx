@@ -210,8 +210,8 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
             </Button>
           </form>
         </div>
-        )}
       </div>
+        )}
 
       {/* Bottom Links Section */}
       <div className="border-t border-border">
