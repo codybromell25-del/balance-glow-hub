@@ -164,7 +164,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden h-[calc(100svh-136px)] overflow-y-auto border-t border-border animate-fade-in">
+          <div className="lg:hidden h-[calc(100svh-108px)] overflow-y-auto border-t border-border animate-fade-in">
             <div className="flex flex-col">
               {/* Quick studio dropdown */}
               <div className="border-b border-border">
