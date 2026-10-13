@@ -1,33 +1,30 @@
-## Site-wide font update: Libre Baskerville (italic) headings + Raleway body
+# Returning-visitor nudge + cookie consent
 
-### What changes
-- **Headings**: Libre Baskerville, italic — the "cursive" script look from the preview.
-- **Body**: Raleway — replaces Aileron everywhere.
+## On your Meta question
+No. Missing a cookie banner is **not** why Meta numbers look off. Right now Meta is counting *more* than a compliant setup would, because it runs for everyone without asking. The usual reasons Meta numbers look off are:
+- iPhone privacy settings and ad blockers stop the pixel from loading.
+- The booking and payment happen inside Momence, so Meta never sees the purchase.
 
-### Implementation
+A banner makes the site legally compliant in Ireland/EU, but Meta will count a bit *less*, because it only sees visitors who click Accept. Ad clicks and views are still counted either way.
 
-1. **`index.html`**
-   - Keep the Raleway Google Font link (already added for the preview).
-   - Remove the Aileron font link/reference once no longer used.
+## What visitors will see
+1. **Cookie banner** (first visit, bottom of the screen, balance styling): "Accept" and "Reject" given equal weight, plus a short link to the cookie policy. A small "Cookie settings" link in the footer lets people change their mind later.
+2. **"Still thinking?" intro offer popup**: shown once on a visitor's 2nd (or later) visit if they haven't clicked through to buy or book yet. It shows a short message, a photo and a button to the intro offer page. It appears after a few seconds and won't show again for 7 days if they close it.
+3. The popup won't show on booking, checkout or careers pages, or to anyone who has already clicked a Buy/Book/intro offer button.
 
-2. **`tailwind.config.ts`**
-   - Update the `fontFamily` tokens:
-     - `body` / `sans` → `['Raleway', 'sans-serif']`
-     - `heading` → `['Libre Baskerville', 'serif']` (already set)
-   - This flips every `font-body`, `font-sans`, and default text to Raleway automatically.
+## How it decides who is "slow to buy"
+- The visitor's own browser keeps a small note: number of visits, date of last visit, whether they clicked a buy/book link, and when they last closed the popup.
+- A visit counts as new after 30 minutes away.
+- None of this is sent anywhere. It only runs if they accepted cookies.
 
-3. **`src/index.css`**
-   - Update the base `body` font-family to Raleway.
-   - Add a global rule so all headings (`h1`–`h6` using `font-heading`) render in italic by default, matching the preview.
-   - Remove any lingering Aileron `@font-face` or references.
+## Tracking changes
+- Meta Pixel, Google Analytics and Clarity stop loading until the visitor accepts (EU law). Visitors outside the EU/UK aren't asked, and tracking runs as normal for them.
+- Each acceptance or rejection is saved with the date and the version of the banner wording, so you have a record of consent.
+- The cookie and privacy pages are updated to describe the popup and the consent choice.
 
-4. **Spot-check overrides**
-   - Search for hardcoded `font-family` inline styles (e.g. `HeroSection`, `FontPreview`, `SocialProofBar`) and either remove them (so they inherit the new tokens) or update them to Raleway / Libre Baskerville italic to stay consistent.
-   - Confirm headings that should NOT be italic (e.g. nav logo "balance", small labels) get an explicit `not-italic` class so we don't over-italicize UI chrome.
-
-5. **Cleanup**
-   - Delete `src/pages/FontPreview.tsx` and its route from `src/App.tsx` once you're happy with the site-wide rollout (optional — I can keep it if you want a reference page).
-
-### Quick questions before I build
-1. Should **every heading** be italic (matching the preview exactly), or only the large display headings (hero, section titles) with smaller headings/subheads staying upright?
-2. Keep the `/font-preview` page live afterwards, or remove it?
+## Technical details
+- New `CookieConsent` component and `consent` helper using localStorage (`balance_consent` = {choice, version, timestamp}). Region check via `/cdn-cgi/trace`; show the banner on failure.
+- Move the GA, Clarity and fbq loaders out of `index.html` into a `loadTrackers()` that runs after consent (or right away outside consent regions). Withdrawing consent stops future loads.
+- New `ReturningVisitorPopup` (shadcn Dialog) mounted in App, excluded on `/booking/*`, `/careers` and `/intro-offer`. A delegated click listener on links to momence/stripe/`/intro-offer`/`/pricing` sets `converted=true`.
+- Fire `fbq('trackCustom','ReturningVisitorNudge')` when the popup shows, so you can build a Meta audience from it.
+- Footer gets a "Cookie settings" link. Update the Cookies and Privacy pages.
