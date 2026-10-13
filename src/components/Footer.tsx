@@ -108,10 +108,10 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
         <div className="relative overflow-hidden">
           <div
             aria-hidden
-            className="absolute -inset-6 bg-cover bg-center blur-[3px] opacity-90"
+            className="absolute -inset-6 bg-cover bg-center blur-[2px]"
             style={{ backgroundImage: `url(${studioInterior.url})` }}
           />
-          <div aria-hidden className="absolute inset-0 bg-background/[0.78]" />
+          <div aria-hidden className="absolute inset-0 bg-background/[0.55]" />
         <div className="relative container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground tracking-wide">
