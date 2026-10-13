@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, User } from "lucide-react";
+import { Menu, X, User, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import AnnouncementBanner from "./AnnouncementBanner";
@@ -17,6 +17,16 @@ const trackOutboundClick = (url: string, label: string) => {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [studiosOpen, setStudiosOpen] = useState(false);
+
+  const studioLinks = [
+    { name: "Blessington", path: "/studio/blessington" },
+    { name: "Bray", path: "/studio/bray" },
+    { name: "Clane", path: "/studio/clane" },
+    { name: "Enfield", path: "/studio/enfield" },
+    { name: "Kildare Town", path: "/studio/kildare" },
+    { name: "Limerick", path: "/studio/limerick" },
+  ];
   const [showBookButton, setShowBookButton] = useState(false);
 
   useEffect(() => {
