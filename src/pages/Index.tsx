@@ -4,6 +4,7 @@ import HeroSection from "@/components/home/HeroSection";
 import SocialProofBar from "@/components/home/SocialProofBar";
 import LocationsSection from "@/components/home/LocationsSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
+import InstagramStrip from "@/components/home/InstagramStrip";
 import SEO from "@/components/SEO";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
@@ -21,6 +22,7 @@ const Index = () => {
         <SocialProofBar />
         <LocationsSection />
         <TestimonialsSection />
+        <InstagramStrip />
       </main>
       <Footer />
     </div>;
