@@ -5,42 +5,40 @@ const HeroSection = () => {
   return <section className="min-h-[calc(100svh-108px)] md:min-h-[85vh] flex bg-cover bg-center relative" style={{
     backgroundImage: `url(${heroImage})`
   }}>
-      {/* Dramatic gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/15" />
-      {/* Soft spotlight behind the copy so the words never fight the photo */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_78%_44%_at_50%_45%,rgba(0,0,0,0.4)_0%,rgba(0,0,0,0.15)_45%,rgba(0,0,0,0)_75%)] md:bg-[radial-gradient(ellipse_58%_56%_at_30%_42%,rgba(0,0,0,0.4)_0%,rgba(0,0,0,0.15)_45%,rgba(0,0,0,0)_75%)]" />
+      {/* Light wash so the photo stays bright and airy */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/15 to-black/5" />
 
       <div className="container mx-auto px-4 md:px-12 lg:px-16 pt-8 pb-28 md:py-20 relative z-10 flex w-full flex-col justify-center">
         {/* Copy: vertically centred on phones, sits with the buttons on larger screens */}
         <div className="w-[80vw] mx-auto text-center md:text-left md:mx-0 md:w-auto md:max-w-3xl flex flex-1 flex-col justify-center md:flex-none md:justify-start animate-fade-in">
-          {/* Frosted panel: the words sit on soft glass instead of fighting the photo */}
-          <div className="rounded-[2rem] bg-black/25 backdrop-blur-2xl ring-1 ring-white/20 px-5 py-8 sm:px-6 sm:py-9 md:px-10 md:py-12 shadow-[0_24px_70px_-24px_rgba(0,0,0,0.6)]">
+          {/* Frosted glass panel: soft, light, lets the studio show through */}
+          <div className="rounded-[2.25rem] bg-white/55 backdrop-blur-2xl ring-1 ring-white/60 px-6 py-9 sm:px-8 sm:py-10 md:px-10 md:py-12 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.45)]">
 
-          {/* Intro offer badge */}
-          <a
-            href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 self-center md:self-start rounded-full bg-sage text-black px-4 py-1.5 text-xs md:text-sm font-medium tracking-wide mb-5 md:mb-6 shadow-lg backdrop-blur-sm hover:bg-sage/80 transition-colors"
-          >
-            New here? 3 classes for €50
-          </a>
+            {/* Intro offer badge */}
+            <a
+              href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 self-center md:self-start rounded-full bg-sage text-black px-4 py-1.5 text-xs md:text-sm font-medium tracking-wide mb-5 md:mb-6 shadow-md hover:bg-sage/80 transition-colors"
+            >
+              New here? 3 classes for €50
+            </a>
 
-          <h1 className="text-7xl sm:text-8xl md:text-7xl lg:text-8xl xl:text-9xl font-heading font-normal text-white mb-3 md:mb-4 leading-[0.9] tracking-tight [text-shadow:0_2px_20px_rgba(0,0,0,0.5)]">
-            balance<span className="text-sage">.</span>
-          </h1>
+            <h1 className="text-7xl sm:text-8xl md:text-7xl lg:text-8xl xl:text-9xl font-heading font-normal text-foreground mb-3 md:mb-4 leading-[0.9] tracking-tight">
+              balance<span className="text-sage-deep">.</span>
+            </h1>
 
-          <div className="flex items-center justify-center md:justify-start gap-3 mb-5 md:mb-7">
-            <span className="w-6 md:w-12 h-[1px] bg-gradient-to-r from-sage to-sage/10"></span>
-            <span className="text-sage text-[11px] md:text-sm uppercase tracking-[0.28em] md:tracking-[0.35em] font-semibold [text-shadow:0_1px_14px_rgba(0,0,0,0.85)]">Reformer Pilates</span>
-            <span className="w-6 md:w-12 h-[1px] bg-gradient-to-l from-sage to-sage/10"></span>
-          </div>
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-5 md:mb-7">
+              <span className="w-6 md:w-12 h-[1px] bg-gradient-to-r from-sage-deep to-sage-deep/10"></span>
+              <span className="text-sage-deep text-[11px] md:text-sm uppercase tracking-[0.28em] md:tracking-[0.35em] font-semibold">Reformer Pilates</span>
+              <span className="w-6 md:w-12 h-[1px] bg-gradient-to-l from-sage-deep to-sage-deep/10"></span>
+            </div>
 
-          <p
-            className="font-heading text-white text-[2rem] sm:text-4xl md:text-2xl lg:text-3xl leading-tight md:leading-relaxed italic font-normal tracking-wide [text-shadow:0_2px_18px_rgba(0,0,0,0.6)]"
-          >
-            It's all about <span className="text-sage">balance</span>.
-          </p>
+            <p
+              className="font-heading text-foreground text-[2rem] sm:text-4xl md:text-2xl lg:text-3xl leading-tight md:leading-relaxed italic font-normal tracking-wide"
+            >
+              It's all about <span className="text-sage-deep">balance</span>.
+            </p>
           </div>
         </div>
 

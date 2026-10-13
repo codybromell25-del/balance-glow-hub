@@ -194,6 +194,8 @@ All colors MUST be HSL.
     /* Sage Green - Brand #A3C1AD */
     --sage: 140 20% 70%;
     --sage-foreground: 0 0% 0%;
+    /* Deeper sage for accents that sit on light surfaces */
+    --sage-deep: 140 22% 32%;
 
     /* Muted - Soft neutral tones */
     --muted: 19 10% 95%;

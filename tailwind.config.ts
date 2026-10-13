@@ -46,6 +46,7 @@ export default {
         sage: {
           DEFAULT: "hsl(var(--sage))",
           foreground: "hsl(var(--sage-foreground))",
+          deep: "hsl(var(--sage-deep))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
