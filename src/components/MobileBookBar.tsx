@@ -19,7 +19,7 @@ const MobileBookBar = () => {
           </a>
           <a
             href="/our-studios"
-            className="flex-[2] rounded-full bg-primary py-3 text-center font-heading text-sm font-semibold text-black shadow-md"
+            className="flex-[2] rounded-full bg-sage py-3 text-center font-heading text-sm font-semibold text-black shadow-md"
           >
             Book a class
           </a>

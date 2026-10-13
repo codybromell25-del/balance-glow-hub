@@ -16,7 +16,7 @@ const HeroSection = () => {
             href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-primary/90 text-black px-4 py-1.5 text-xs md:text-sm font-medium tracking-wide mb-5 md:mb-6 shadow-lg backdrop-blur-sm hover:bg-primary transition-colors"
+            className="inline-flex items-center gap-2 rounded-full bg-sage text-black px-4 py-1.5 text-xs md:text-sm font-medium tracking-wide mb-5 md:mb-6 shadow-lg backdrop-blur-sm hover:bg-sage/80 transition-colors"
           >
             New here? 3 classes for €50
           </a>
