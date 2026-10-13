@@ -164,28 +164,29 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-4 animate-fade-in">
-            <div className="flex flex-col space-y-4">
+          <div className="lg:hidden h-[calc(100svh-108px)] overflow-y-auto border-t border-border animate-fade-in">
+            <div className="flex flex-col">
               {/* Quick studio dropdown */}
-              <div className="border-b border-border pb-3">
+              <div className="border-b border-border">
                 <button
-                  className="flex w-full items-center justify-between text-foreground font-heading italic py-2"
+                  className="flex w-full items-center justify-between py-3 text-3xl font-heading italic text-foreground"
                   onClick={() => setStudiosOpen(!studiosOpen)}
                   aria-expanded={studiosOpen}
                 >
                   Studios
                   <ChevronDown
-                    size={18}
+                    size={22}
+                    strokeWidth={1.4}
                     className={`transition-transform ${studiosOpen ? "rotate-180" : ""}`}
                   />
                 </button>
                 {studiosOpen && (
-                  <div className="flex flex-col pl-4 mt-1 space-y-1 animate-fade-in">
+                  <div className="flex flex-col animate-fade-in">
                     {studioLinks.map((studio) => (
                       <a
                         key={studio.path}
                         href={studio.path}
-                        className="text-foreground/80 hover:text-primary transition-colors font-heading italic py-2"
+                        className="border-t border-border py-3.5 pl-6 text-2xl font-heading italic text-foreground/80 transition-colors hover:text-sage-deep"
                       >
                         {studio.name}
                       </a>
@@ -200,7 +201,7 @@ const Navigation = () => {
                   href={link.path}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors font-heading italic py-2"
+                  className="border-b border-border py-3 text-3xl font-heading italic text-foreground transition-colors hover:text-sage-deep"
                   onClick={() => {
                     setIsOpen(false);
                     if (link.name === "Education") {
@@ -214,7 +215,7 @@ const Navigation = () => {
                   <Link
                     key={link.path}
                     to={link.path}
-                    className="text-foreground hover:text-primary transition-colors font-heading italic py-2"
+                    className="border-b border-border py-3 text-3xl font-heading italic text-foreground transition-colors hover:text-sage-deep"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
@@ -226,10 +227,10 @@ const Navigation = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
-                className="mt-2"
+                className="py-4"
               >
-                <Button className="w-full gap-2 bg-[#A3C1AD] hover:bg-[#8FB09A] text-white">
-                  <User size={18} />
+                <Button className="h-14 w-full gap-2 text-lg bg-[#A3C1AD] hover:bg-[#8FB09A] text-white">
+                  <User size={20} />
                   My Account
                 </Button>
               </a>
