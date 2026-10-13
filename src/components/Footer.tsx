@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
+import studioInterior from "@/assets/interior-5.jpg.asset.json";
 
 // EmailJS configuration
 const EMAILJS_SERVICE_ID = "service_f6phwmd";
@@ -104,7 +105,14 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
 
         {/* Main Contact Section */}
         {showContact && (
-        <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="relative overflow-hidden">
+          <div
+            aria-hidden
+            className="absolute -inset-6 bg-cover bg-center blur-[3px] opacity-90"
+            style={{ backgroundImage: `url(${studioInterior.url})` }}
+          />
+          <div aria-hidden className="absolute inset-0 bg-background/78" />
+        <div className="relative container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground tracking-wide">
             Contact us via the form
@@ -211,6 +219,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
           </form>
         </div>
       </div>
+        </div>
         )}
 
       {/* Bottom Links Section */}
