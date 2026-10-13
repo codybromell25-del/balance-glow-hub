@@ -30,7 +30,7 @@ const OurStudios = () => {
       slug: "limerick",
       address: "The Coach House, Henry Street, Limerick, Ireland",
       parking: "City centre parking nearby",
-      hours: "Opening May 2026",
+      hours: "Now open",
       offerings: "Reformer, Mat, Barre & Yoga",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=The+Coach+House+Henry+Street+Limerick+Ireland",
       hasDetailPage: true,
@@ -114,7 +114,7 @@ const OurStudios = () => {
       <main className="pt-24">
         <PageHeader 
           title="Take Your Pick" 
-          subtitle="6 stunning studios across Limerick, Kildare, Wicklow & Meath—each one designed to help you move, sweat, and thrive. Pick your perfect spot and let's make magic happen!"
+          subtitle="Six considered studios across Limerick, Kildare, Wicklow & Meath — small groups, expert instructors, and a space that feels like yours. Choose your studio."
         />
 
         {/* Studios Grid */}

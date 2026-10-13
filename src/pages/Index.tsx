@@ -11,7 +11,7 @@ const Index = () => {
   return <div className="min-h-screen">
       <SEO 
         title="balance studios | Reformer Pilates in Kildare, Wicklow, Meath & Limerick"
-        description="Premium Reformer Pilates across 6 stunning studios. Expert instructors, small groups, real results. Limerick Launch Offer Now Live. For those who expect more."
+        description="Premium Reformer Pilates across 6 studios in Kildare, Wicklow, Meath & Limerick. Small groups, expert instructors. New here? 3 classes for €50."
         canonical="/"
       />
       <LocalBusinessSchema />
