@@ -112,7 +112,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
             style={{ backgroundImage: `url(${studioInterior.url})` }}
           />
           <div aria-hidden className="absolute inset-0 bg-background/[0.55]" />
-        <div className="relative container mx-auto px-4 py-12 md:py-16">
+        <div className="relative container mx-auto px-4 pt-12 pb-16 md:pt-16 md:pb-20">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground tracking-wide">
             Contact us via the form
@@ -189,7 +189,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="bg-transparent border-border placeholder:text-muted-foreground/60 placeholder:text-xs placeholder:tracking-wider"
+              className="bg-background/70 border-border placeholder:text-muted-foreground placeholder:text-xs placeholder:tracking-wider"
             />
             <Input
               type="email"
@@ -198,7 +198,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="bg-transparent border-border placeholder:text-muted-foreground/60 placeholder:text-xs placeholder:tracking-wider"
+              className="bg-background/70 border-border placeholder:text-muted-foreground placeholder:text-xs placeholder:tracking-wider"
             />
             <Textarea
               name="message"
@@ -207,12 +207,12 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
               onChange={handleChange}
               required
               rows={5}
-              className="bg-transparent border-border placeholder:text-muted-foreground/60 placeholder:text-xs placeholder:tracking-wider resize-none"
+              className="bg-background/70 border-border placeholder:text-muted-foreground placeholder:text-xs placeholder:tracking-wider resize-none"
             />
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full md:w-auto px-12 bg-[#A3C1AD] hover:bg-[#8FB09A] text-white"
+              className="w-full md:w-auto px-12 bg-[#A3C1AD] hover:bg-[#8FB09A] text-foreground"
             >
               {isSubmitting ? "SENDING..." : "SUBMIT"}
             </Button>
