@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, User } from "lucide-react";
+import { Menu, X, User, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import AnnouncementBanner from "./AnnouncementBanner";
@@ -17,6 +17,16 @@ const trackOutboundClick = (url: string, label: string) => {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [studiosOpen, setStudiosOpen] = useState(false);
+
+  const studioLinks = [
+    { name: "Blessington", path: "/studio/blessington" },
+    { name: "Bray", path: "/studio/bray" },
+    { name: "Clane", path: "/studio/clane" },
+    { name: "Enfield", path: "/studio/enfield" },
+    { name: "Kildare Town", path: "/studio/kildare" },
+    { name: "Limerick", path: "/studio/limerick" },
+  ];
   const [showBookButton, setShowBookButton] = useState(false);
 
   useEffect(() => {
@@ -108,6 +118,33 @@ const Navigation = () => {
         {isOpen && (
           <div className="lg:hidden pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
+              {/* Quick studio dropdown */}
+              <div className="border-b border-border pb-3">
+                <button
+                  className="flex w-full items-center justify-between text-foreground font-heading italic py-2"
+                  onClick={() => setStudiosOpen(!studiosOpen)}
+                  aria-expanded={studiosOpen}
+                >
+                  Studios
+                  <ChevronDown
+                    size={18}
+                    className={`transition-transform ${studiosOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                {studiosOpen && (
+                  <div className="flex flex-col pl-4 mt-1 space-y-1 animate-fade-in">
+                    {studioLinks.map((studio) => (
+                      <a
+                        key={studio.path}
+                        href={studio.path}
+                        className="text-foreground/80 hover:text-primary transition-colors font-heading italic py-2"
+                      >
+                        {studio.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
               {navLinks.map((link) =>
                 link.path.startsWith("http") ? (
                 <a
