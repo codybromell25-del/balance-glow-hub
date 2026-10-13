@@ -6,7 +6,9 @@ const HeroSection = () => {
     backgroundImage: `url(${heroImage})`
   }}>
       {/* Dramatic gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/35" />
+      {/* Soft spotlight behind the copy so the words never fight the photo */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_78%_44%_at_50%_45%,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0.4)_45%,rgba(0,0,0,0)_75%)] md:bg-[radial-gradient(ellipse_58%_56%_at_30%_42%,rgba(0,0,0,0.82)_0%,rgba(0,0,0,0.4)_45%,rgba(0,0,0,0)_75%)]" />
 
       <div className="container mx-auto px-4 md:px-12 lg:px-16 pt-8 pb-28 md:py-20 relative z-10 flex w-full flex-col justify-center">
         {/* Copy: vertically centred on phones, sits with the buttons on larger screens */}
@@ -22,20 +24,20 @@ const HeroSection = () => {
             New here? 3 classes for €50
           </a>
 
-          <h1 className="text-7xl sm:text-8xl md:text-7xl lg:text-8xl xl:text-9xl font-heading font-normal text-white mb-2 md:mb-4 leading-[0.9] tracking-tight">
-            balance<span className="text-primary">.</span>
+          <h1 className="text-7xl sm:text-8xl md:text-7xl lg:text-8xl xl:text-9xl font-heading font-normal text-white mb-3 md:mb-4 leading-[0.9] tracking-tight [text-shadow:0_2px_30px_rgba(0,0,0,0.7)]">
+            balance<span className="text-sage">.</span>
           </h1>
 
-          <div className="flex items-center justify-center md:justify-start gap-3 mb-4 md:mb-6">
-            <span className="w-8 md:w-12 h-[1px] bg-gradient-to-r from-white to-white/40"></span>
-            <span className="text-white/80 text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] font-light">Reformer Pilates</span>
+          <div className="flex items-center justify-center md:justify-start gap-3 mb-5 md:mb-7">
+            <span className="w-6 md:w-12 h-[1px] bg-gradient-to-r from-sage to-sage/10"></span>
+            <span className="text-sage text-[11px] md:text-sm uppercase tracking-[0.28em] md:tracking-[0.35em] font-semibold [text-shadow:0_1px_14px_rgba(0,0,0,0.85)]">Reformer Pilates</span>
+            <span className="w-6 md:w-12 h-[1px] bg-gradient-to-l from-sage to-sage/10"></span>
           </div>
 
           <p
-            className="font-heading text-white/90 text-2xl md:text-xl lg:text-2xl leading-snug md:leading-relaxed mb-8 md:mb-10 italic font-normal tracking-wide"
-            style={{ textShadow: '0 2px 20px rgba(0,0,0,0.55)' }}
+            className="font-heading text-white text-[2rem] sm:text-4xl md:text-2xl lg:text-3xl leading-tight md:leading-relaxed mb-8 md:mb-10 italic font-normal tracking-wide [text-shadow:0_2px_26px_rgba(0,0,0,0.85)]"
           >
-            It's all about balance.
+            It's all about <span className="text-sage">balance</span>.
           </p>
         </div>
 
