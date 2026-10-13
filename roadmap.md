@@ -5,5 +5,6 @@
 - [x] R1: Hero buttons, offer badge, desktop padding
 - [x] R1: Sticky mobile "Book a class" bar
 - [x] Our Studios copy made calmer
+- [x] Contact section uses studio interior photo behind a soft cream wash
 - [ ] R2: studio cards info, how-it-works strip, nav grouping, slim mobile nav, pricing per-class + FAQs
 - [ ] R3: headings, animations, image speed, stats spacing, app bar
