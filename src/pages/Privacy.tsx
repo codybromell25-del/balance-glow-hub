@@ -12,7 +12,7 @@ const Privacy = () => {
         canonical="/privacy"
       />
       <Navigation />
-      <main className="pt-24">
+      <main className="">
         <PageHeader title="Privacy Policy" />
 
         <section className="py-8 md:py-16">

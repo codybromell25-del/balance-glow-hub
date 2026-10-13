@@ -51,7 +51,7 @@ const BookingMatClasses = () => {
         noindex={true}
       />
       <Navigation />
-      <main className="pt-28">
+      <main className="">
         <section className="py-12 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">

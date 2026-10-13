@@ -102,7 +102,7 @@ const MembershipOffers = () => {
       </section>
 
       {/* Class type toggle */}
-      <section className="pt-16 md:pt-20">
+      <section className="">
         <div className="container mx-auto px-6 md:px-10 flex justify-center">
           <div className="inline-flex p-1 rounded-full border border-foreground/15 bg-background">
             <button

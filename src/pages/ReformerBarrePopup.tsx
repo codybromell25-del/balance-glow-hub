@@ -24,7 +24,7 @@ const ReformerBarrePopup = () => {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-end pt-32 pb-16 md:pb-24">
+      <section className="relative min-h-[80vh] flex items-end pb-16 md:pb-24">
         <div className="absolute inset-0">
           <img src={heroImage} alt="balance studio" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/55" />

@@ -28,7 +28,7 @@ const TestBooking = () => {
     <div className="min-h-screen">
       <SEO title="Test Booking | balance studios" description="Test booking page." noindex={true} />
       <Navigation />
-      <main className="pt-20">
+      <main className="">
         <section className="py-12 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">

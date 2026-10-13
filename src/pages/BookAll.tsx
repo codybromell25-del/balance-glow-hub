@@ -56,7 +56,7 @@ const BookAll = () => {
         canonical="/book-class"
       />
       <Navigation />
-      <main className="pt-24">
+      <main className="">
         <PageHeader 
           title="Find Your Flow" 
           subtitle="Pick your favorite studio and let's get moving together!"

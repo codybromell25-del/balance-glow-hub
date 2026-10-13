@@ -111,7 +111,7 @@ const Careers = () => {
         canonical="/careers"
       />
       <Navigation />
-      <main className="pt-32 pb-24 md:pt-40">
+      <main className="pb-24">
         {/* Header */}
         <header className="mb-24 md:mb-40">
           <div className="relative h-[55vh] md:h-[70vh] overflow-hidden">

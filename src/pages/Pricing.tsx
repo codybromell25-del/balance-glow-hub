@@ -20,7 +20,7 @@ const Pricing = () => {
         canonical="/pricing"
       />
       <Navigation />
-      <main className="pt-24">
+      <main className="">
         <PageHeader 
           title="Pick Your Pack" 
           subtitle="First, purchase a class pack or membership below. Once you've bought your package, you'll be able to book classes from available time slots at any of our 6 studios."

@@ -28,7 +28,7 @@ const About = () => {
         canonical="/about"
       />
       <Navigation />
-      <main className="pt-24">
+      <main className="">
         <PageHeader title="who are balance" />
 
         {/* Meet Kelly */}

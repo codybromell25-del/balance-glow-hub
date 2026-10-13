@@ -37,7 +37,7 @@ const LimerickComingSoon = () => {
       <main>
         {/* HERO */}
         <section
-          className="relative min-h-[80vh] flex items-center justify-center pt-20"
+          className="relative min-h-[80vh] flex items-center justify-center"
           style={{
             backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${studioReformersWide})`,
             backgroundSize: "cover",

@@ -15,7 +15,7 @@ const WorkshopAnestiMano = () => {
         noindex />
 
       <Navigation />
-      <main className="pt-28 md:pt-32">
+      <main className="">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-foreground via-foreground/95 to-foreground/90" />
