@@ -9,6 +9,7 @@ export const useScrollAnimation = (threshold = 0.1) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          observer.disconnect();
         }
       },
       { threshold }
