@@ -10,7 +10,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 md:px-12 lg:px-16 pt-8 pb-28 md:py-20 relative z-10 flex w-full flex-col justify-center">
         {/* Copy: vertically centred on phones, sits with the buttons on larger screens */}
-        <div className="w-[80vw] mx-auto text-center md:text-left md:w-auto md:max-w-3xl flex flex-1 flex-col justify-center md:flex-none md:justify-start animate-fade-in">
+        <div className="w-[80vw] mx-auto text-center md:text-left md:mx-0 md:w-auto md:max-w-3xl flex flex-1 flex-col justify-center md:flex-none md:justify-start animate-fade-in">
 
           {/* Intro offer badge */}
           <a
@@ -40,7 +40,7 @@ const HeroSection = () => {
         </div>
 
         {/* Buttons: pinned to the bottom of the photo on phones */}
-        <div className="mt-auto w-[80vw] mx-auto md:w-auto md:max-w-3xl pt-6 md:pt-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
+        <div className="mt-auto w-[80vw] mx-auto md:mx-0 md:w-auto md:max-w-3xl pt-6 md:pt-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
           <Button asChild size="lg" className="rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center border-0 text-black" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
             <a href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031" target="_blank" rel="noopener noreferrer">
               Claim intro offer
