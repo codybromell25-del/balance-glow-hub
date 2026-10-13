@@ -93,7 +93,7 @@ const Navigation = () => {
                     />
                   </Link>
                   {bookOpen && (
-                    <div className="absolute left-1/2 top-full -translate-x-1/2 pt-4 animate-fade-in">
+                    <div className="absolute left-0 top-full pt-4 animate-fade-in">
                       <div className="min-w-[190px] rounded-2xl border border-border bg-background p-2 shadow-xl">
                         <a
                           href="/our-studios"
