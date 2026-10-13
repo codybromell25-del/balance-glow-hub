@@ -111,7 +111,7 @@ const OurStudios = () => {
       />
       <LocalBusinessSchema />
       <Navigation />
-      <main className="pt-24">
+      <main className="">
         <PageHeader 
           title="Take Your Pick" 
           subtitle="Six considered studios across Limerick, Kildare, Wicklow & Meath — small groups, expert instructors, and a space that feels like yours. Choose your studio."

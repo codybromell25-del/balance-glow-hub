@@ -12,7 +12,7 @@ const Terms = () => {
         canonical="/terms"
       />
       <Navigation />
-      <main className="pt-24">
+      <main className="">
         <PageHeader title="Terms & Conditions" />
 
         {/* Terms Content */}

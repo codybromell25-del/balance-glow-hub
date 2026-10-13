@@ -16,7 +16,7 @@ const Events = () => {
       />
       <Navigation />
 
-      <main className="pt-32 md:pt-40">
+      <main className="">
         <section className="container mx-auto px-4 pb-20">
           <div className="max-w-3xl mx-auto">
             {/* Title & Meta */}

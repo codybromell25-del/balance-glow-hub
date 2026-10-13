@@ -60,10 +60,11 @@ const Navigation = () => {
 
   return (
     <>
+      <div aria-hidden className="h-[108px] md:h-[116px]" />
       <div className="fixed top-0 left-0 right-0 z-50">
         <AnnouncementBanner />
       </div>
-      <nav className="fixed top-[28px] md:top-[36px] left-0 right-0 z-50 bg-background backdrop-blur-sm border-b border-border">
+      <nav className="fixed top-7 md:top-9 left-0 right-0 z-50 bg-background backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}

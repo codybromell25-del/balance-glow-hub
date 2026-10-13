@@ -33,7 +33,7 @@ const Blogs = () => {
         canonical="/blog"
       />
       <Navigation />
-      <main className="pt-20">
+      <main className="">
         {/* Hero */}
         <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">

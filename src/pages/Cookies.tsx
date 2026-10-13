@@ -12,7 +12,7 @@ const Cookies = () => {
         canonical="/cookies"
       />
       <Navigation />
-      <main className="pt-24">
+      <main className="">
         <PageHeader title="Cookie Policy" />
 
         <section className="py-8 md:py-16">

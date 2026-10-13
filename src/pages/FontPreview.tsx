@@ -14,7 +14,7 @@ const FontPreview = () => {
       <main>
         {/* Hero Section — Libre Baskerville Italic headings */}
         <section
-          className="min-h-[85vh] flex items-end bg-cover bg-center relative pt-32 md:pt-36"
+          className="min-h-[85vh] flex items-end bg-cover bg-center relative"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />

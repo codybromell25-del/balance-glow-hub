@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, MapPin } from "lucide-react";
 import heroImage from "@/assets/studio-blessington.jpg";
 const HeroSection = () => {
-  return <section className="min-h-[85vh] flex items-end bg-cover bg-center relative pt-32 md:pt-36" style={{
+  return <section className="min-h-[85vh] flex items-end bg-cover bg-center relative" style={{
     backgroundImage: `url(${heroImage})`
   }}>
       {/* Dramatic gradient overlay */}

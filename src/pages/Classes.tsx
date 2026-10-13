@@ -201,7 +201,7 @@ const Classes = () => {
         canonical="/classes"
       />
       <Navigation />
-      <main className="pt-24">
+      <main className="">
         <ClassesBrandStatement />
         
         {/* All Classes - Clean Flow */}

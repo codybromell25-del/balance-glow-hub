@@ -38,7 +38,7 @@ const TasterClasses = () => {
         canonical="/taster-classes"
       />
       <Navigation />
-      <main className="pt-28">
+      <main className="">
         <section className="py-12 md:py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
