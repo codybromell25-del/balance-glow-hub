@@ -2,13 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, MapPin } from "lucide-react";
 import heroImage from "@/assets/studio-blessington.jpg";
 const HeroSection = () => {
-  return <section className="min-h-[85vh] flex items-end bg-cover bg-center relative" style={{
+  return <section className="min-h-[calc(100svh-108px)] md:min-h-[85vh] flex items-center bg-cover bg-center relative" style={{
     backgroundImage: `url(${heroImage})`
   }}>
       {/* Dramatic gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
 
-      <div className="container mx-auto px-6 md:px-12 lg:px-16 pb-12 md:pb-28 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-20 relative z-10">
         <div className="max-w-3xl animate-fade-in">
 
           {/* Intro offer badge */}

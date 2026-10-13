@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-const HIDDEN_PREFIXES = ["/booking", "/careers", "/limerick-reformer-opening", "/limerick-mat-opening"];
+const HIDDEN_PREFIXES = ["/booking", "/careers", "/limerick-reformer-opening", "/limerick-mat-opening", "/studio/", "/pricing"];
 
 const MobileBookBar = () => {
   const { pathname } = useLocation();
@@ -13,13 +13,13 @@ const MobileBookBar = () => {
         <div className="flex gap-3">
           <a
             href="/pricing"
-            className="flex-1 rounded-full border border-foreground/20 py-3 text-center font-heading text-sm text-foreground"
+            className="flex-1 rounded-full border border-foreground/20 py-3 text-center font-heading not-italic text-sm text-foreground"
           >
             Prices
           </a>
           <a
             href="/our-studios"
-            className="flex-[2] rounded-full bg-sage py-3 text-center font-heading text-sm font-semibold text-black shadow-md"
+            className="flex-[2] rounded-full bg-sage py-3 text-center font-heading not-italic text-sm font-semibold text-black shadow-md"
           >
             Book a class
           </a>
