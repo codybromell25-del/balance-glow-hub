@@ -111,7 +111,11 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
             className="absolute -inset-6 bg-cover bg-center blur-[2px]"
             style={{ backgroundImage: `url(${studioInterior.url})` }}
           />
-          <div aria-hidden className="absolute inset-0 bg-background/[0.55]" />
+          <div aria-hidden className="absolute inset-0 bg-background/[0.78]" />
+          <div
+            aria-hidden
+            className="absolute inset-0 hidden lg:block bg-gradient-to-r from-background via-background/45 to-transparent"
+          />
         <div className="relative container mx-auto px-4 pt-12 pb-16 md:pt-16 md:pb-20">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground tracking-wide">
@@ -130,7 +134,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
               <p className="text-xs font-semibold tracking-wider text-foreground mb-1">EMAIL</p>
               <a 
                 href="mailto:info@balancestudios.ie" 
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-foreground font-medium hover:text-sage-deep transition-colors"
               >
                 info@balancestudios.ie
               </a>
@@ -140,7 +144,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
               <p className="text-xs font-semibold tracking-wider text-foreground mb-1">ADDRESS</p>
               <Link 
                 to="/our-studios" 
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-foreground font-medium hover:text-sage-deep transition-colors"
               >
                 View our studio locations
               </Link>
