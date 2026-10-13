@@ -111,7 +111,8 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
             className="absolute -inset-6 bg-cover bg-center blur-[2px]"
             style={{ backgroundImage: `url(${studioInterior.url})` }}
           />
-          <div aria-hidden className="absolute inset-0 bg-background/[0.55]" />
+          <div aria-hidden className="absolute inset-0 bg-background/[0.78]" />
+          <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-background/60 via-background/25 to-transparent md:bg-gradient-to-r" style={{ display: undefined }} />
         <div className="relative container mx-auto px-4 pt-12 pb-16 md:pt-16 md:pb-20">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground tracking-wide">
