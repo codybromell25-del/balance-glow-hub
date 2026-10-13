@@ -7,7 +7,10 @@ const HeroSection = () => {
   }}>
       {/* Gentle wash, then a feathered pool of shadow behind the words — no edges, no box */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/15" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_42%_at_50%_45%,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.2)_48%,rgba(0,0,0,0)_75%)] md:bg-[radial-gradient(ellipse_55%_55%_at_30%_42%,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.2)_48%,rgba(0,0,0,0)_75%)]" />
+      {/* Phone: a soft, centred pool of shadow behind the words */}
+      <div className="absolute inset-0 md:hidden bg-[radial-gradient(ellipse_78%_44%_at_50%_45%,rgba(0,0,0,0.45)_0%,rgba(0,0,0,0.18)_48%,rgba(0,0,0,0)_75%)]" />
+      {/* Computer: a gentle scrim on the copy side, no visible edge */}
+      <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-black/50 via-black/22 to-transparent" />
 
       <div className="container mx-auto px-4 md:px-12 lg:px-16 pt-8 pb-28 md:py-20 relative z-10 flex w-full flex-col justify-center">
         {/* Copy: vertically centred on phones, sits with the buttons on larger screens */}
@@ -48,7 +51,7 @@ const HeroSection = () => {
               <ShoppingCart className="w-4 h-4 ml-2" />
             </a>
           </Button>
-          <Button asChild variant="ghost" size="lg" className="text-white hover:text-white hover:bg-white/10 rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-medium text-sm sm:text-base border border-white/30 hover:border-white/50 transition-all duration-300 justify-center">
+          <Button asChild variant="ghost" size="lg" className="text-foreground hover:text-foreground bg-white/95 hover:bg-white rounded-full px-6 py-5 sm:px-8 sm:py-7 font-heading font-medium text-sm sm:text-base border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center">
             <a href="/our-studios">
               Find a studio
               <MapPin className="w-4 h-4 ml-2" />
