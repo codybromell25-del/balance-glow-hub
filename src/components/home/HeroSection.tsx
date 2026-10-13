@@ -35,7 +35,7 @@ const HeroSection = () => {
           </div>
 
           <p
-            className="font-heading text-white text-[1.75rem] sm:text-3xl md:text-2xl lg:text-3xl leading-snug md:leading-relaxed mb-8 md:mb-10 italic font-normal tracking-wide [text-shadow:0_2px_26px_rgba(0,0,0,0.85)]"
+            className="font-heading text-white text-[2rem] sm:text-4xl md:text-2xl lg:text-3xl leading-tight md:leading-relaxed mb-8 md:mb-10 italic font-normal tracking-wide [text-shadow:0_2px_26px_rgba(0,0,0,0.85)]"
           >
             It's all about <span className="text-sage">balance</span>.
           </p>
