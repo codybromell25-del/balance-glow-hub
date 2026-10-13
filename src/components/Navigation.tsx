@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, User, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
@@ -27,7 +27,13 @@ const Navigation = () => {
     { name: "Kildare Town", path: "/studio/kildare" },
     { name: "Limerick", path: "/studio/limerick" },
   ];
+  const [bookOpen, setBookOpen] = useState(false);
   const [showBookButton, setShowBookButton] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setBookOpen(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
