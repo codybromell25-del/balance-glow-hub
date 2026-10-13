@@ -2,9 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, MapPin } from "lucide-react";
 import heroImage from "@/assets/studio-blessington.jpg";
 const HeroSection = () => {
-  return <section className="min-h-[calc(100svh-108px)] md:min-h-[85vh] flex bg-cover bg-center relative" style={{
-    backgroundImage: `url(${heroImage})`
-  }}>
+  return <section className="min-h-[calc(100svh-108px)] md:min-h-[85vh] flex relative overflow-hidden">
+      <img src={heroImage} alt="" aria-hidden="true" fetchPriority="high" decoding="async" className="absolute inset-0 h-full w-full object-cover transform-gpu" />
       {/* Gentle wash, then a feathered pool of shadow behind the words — no edges, no box */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/15" />
       {/* Phone: a soft, centred pool of shadow behind the words */}
