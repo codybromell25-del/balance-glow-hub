@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, User, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
@@ -27,7 +27,13 @@ const Navigation = () => {
     { name: "Kildare Town", path: "/studio/kildare" },
     { name: "Limerick", path: "/studio/limerick" },
   ];
+  const [bookOpen, setBookOpen] = useState(false);
   const [showBookButton, setShowBookButton] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setBookOpen(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,7 +74,48 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-5 xl:space-x-6">
             {navLinks.map((link) =>
-              link.path.startsWith("http") ? (
+              link.name === "Book" ? (
+                <div
+                  key={link.path}
+                  className="relative"
+                  onMouseEnter={() => setBookOpen(true)}
+                  onMouseLeave={() => setBookOpen(false)}
+                >
+                  <Link
+                    to={link.path}
+                    className="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-heading italic"
+                    aria-expanded={bookOpen}
+                  >
+                    {link.name}
+                    <ChevronDown
+                      size={14}
+                      className={`transition-transform ${bookOpen ? "rotate-180" : ""}`}
+                    />
+                  </Link>
+                  {bookOpen && (
+                    <div className="absolute left-1/2 top-full -translate-x-1/2 pt-4 animate-fade-in">
+                      <div className="min-w-[190px] rounded-2xl border border-border bg-background p-2 shadow-xl">
+                        <a
+                          href="/our-studios"
+                          className="block rounded-xl px-3 py-2 font-heading italic text-foreground/70 hover:bg-[#A3C1AD]/15 hover:text-foreground"
+                        >
+                          All studios
+                        </a>
+                        <div className="my-1 h-px bg-border" />
+                        {studioLinks.map((studio) => (
+                          <a
+                            key={studio.path}
+                            href={studio.path}
+                            className="block rounded-xl px-3 py-2 font-heading italic text-foreground hover:bg-[#A3C1AD]/15"
+                          >
+                            {studio.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : link.path.startsWith("http") ? (
                 <a
                   key={link.path}
                   href={link.path}
