@@ -154,11 +154,11 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-foreground"
+            className="lg:hidden grid h-11 w-11 shrink-0 place-items-center rounded-full border border-foreground/20 bg-background text-foreground transition-all hover:border-[#A3C1AD] hover:bg-[#A3C1AD]/15 active:scale-95"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={20} strokeWidth={1.6} /> : <Menu size={20} strokeWidth={1.6} />}
           </button>
         </div>
 
