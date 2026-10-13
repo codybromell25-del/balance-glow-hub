@@ -163,7 +163,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
       />
       <LocalBusinessSchema studioName={studioInfo.name} />
       <Navigation />
-      <main className="pt-24">
+      <main className="pt-7">
         {/* Hero Section */}
         {studioInfo.isLogoHero ? (
           /* Clean Hero with studio name */
