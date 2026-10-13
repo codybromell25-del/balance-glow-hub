@@ -22,6 +22,7 @@ const Index = () => {
         <SocialProofBar />
         <LocationsSection />
         <TestimonialsSection />
+        <InstagramStrip />
       </main>
       <Footer />
     </div>;
