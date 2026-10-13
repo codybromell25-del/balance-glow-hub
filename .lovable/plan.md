@@ -13,8 +13,10 @@ A banner makes the site legally compliant in Ireland/EU, but Meta will count a b
 3. The popup won't show on booking, checkout or careers pages, or to anyone who has already clicked a Buy/Book/intro offer button.
 
 ## How it decides who is "slow to buy"
-- The visitor's own browser keeps a small note: number of visits, date of last visit, whether they clicked a buy/book link, and when they last closed the popup.
-- A visit counts as new after 30 minutes away.
+- The visitor's own browser keeps a small note: number of visits, whether they've ever clicked a Buy/Book/intro offer button, and when they last closed the popup.
+- "Visits" just means separate trips to the site. Someone who comes today and again tomorrow has made 2 visits.
+- Anyone who has **ever** clicked Buy or Book on that phone or computer is marked as a customer and never sees the popup again.
+- Limits: a customer who bought on a different phone, booked only through the Momence app, or cleared their browser history may see the popup once. Closing it hides it for 7 days, and the popup sends them to the intro offer page, where Momence checks who is eligible.
 - None of this is sent anywhere. It only runs if they accepted cookies.
 
 ## Tracking changes
