@@ -201,7 +201,7 @@ const Navigation = () => {
                   href={link.path}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors font-heading italic py-2"
+                  className="border-b border-border py-4 text-3xl font-heading italic text-foreground transition-colors hover:text-sage-deep"
                   onClick={() => {
                     setIsOpen(false);
                     if (link.name === "Education") {
@@ -215,7 +215,7 @@ const Navigation = () => {
                   <Link
                     key={link.path}
                     to={link.path}
-                    className="text-foreground hover:text-primary transition-colors font-heading italic py-2"
+                    className="border-b border-border py-4 text-3xl font-heading italic text-foreground transition-colors hover:text-sage-deep"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
@@ -227,10 +227,10 @@ const Navigation = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
-                className="mt-2"
+                className="py-5"
               >
-                <Button className="w-full gap-2 bg-[#A3C1AD] hover:bg-[#8FB09A] text-white">
-                  <User size={18} />
+                <Button className="h-14 w-full gap-2 text-lg bg-[#A3C1AD] hover:bg-[#8FB09A] text-white">
+                  <User size={20} />
                   My Account
                 </Button>
               </a>
