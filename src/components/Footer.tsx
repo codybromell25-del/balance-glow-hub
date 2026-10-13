@@ -134,7 +134,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
               <p className="text-xs font-semibold tracking-wider text-foreground mb-1">EMAIL</p>
               <a 
                 href="mailto:info@balancestudios.ie" 
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-foreground font-medium hover:text-sage-deep transition-colors"
               >
                 info@balancestudios.ie
               </a>
@@ -144,7 +144,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
               <p className="text-xs font-semibold tracking-wider text-foreground mb-1">ADDRESS</p>
               <Link 
                 to="/our-studios" 
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-foreground font-medium hover:text-sage-deep transition-colors"
               >
                 View our studio locations
               </Link>
