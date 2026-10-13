@@ -108,7 +108,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
         <div className="relative overflow-hidden">
           <div
             aria-hidden
-            className="absolute -inset-6 bg-cover bg-center blur-[2px]"
+            className="absolute -inset-6 bg-cover bg-center blur-[2px] transform-gpu will-change-transform"
             style={{ backgroundImage: `url(${studioInterior.url})` }}
           />
           <div aria-hidden className="absolute inset-0 bg-background/[0.78]" />

@@ -9,7 +9,7 @@ const MobileBookBar = () => {
   return (
     <>
       <div className="h-20 md:hidden" aria-hidden="true" />
-      <div className="fixed inset-x-0 bottom-0 z-40 md:hidden border-t border-border/60 bg-background/95 backdrop-blur-md px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+      <div className="fixed inset-x-0 bottom-0 z-40 md:hidden border-t border-border/60 bg-background px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <div className="flex gap-3">
           <a
             href="/pricing"
