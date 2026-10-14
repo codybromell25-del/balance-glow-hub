@@ -13,7 +13,8 @@ const Limerick = () => {
     locationId: "127771",
     showScheduleWidget: true,
     isLogoHero: false,
-    heroOverlay: "absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/25",
+    heroOverlay: "absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/15",
+    heroPosition: "object-[80%_center] md:object-center",
   };
 
   return <StudioPage studioInfo={studioInfo} />;
