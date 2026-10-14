@@ -18,6 +18,7 @@ interface StudioInfo {
   locationId?: string;
   showScheduleWidget?: boolean;
   isLogoHero?: boolean;
+  heroOverlay?: string;
 }
 
 interface StudioPageProps {
@@ -201,7 +202,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                 className="w-full h-full object-cover object-center"
               />
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              <div className={studioInfo.heroOverlay || "absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"} />
             </div>
             
             {/* Hero Content */}
