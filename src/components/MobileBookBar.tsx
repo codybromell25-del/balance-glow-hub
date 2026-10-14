@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-const HIDDEN_PREFIXES = ["/booking", "/careers", "/limerick-reformer-opening", "/limerick-mat-opening", "/studio/", "/pricing"];
+const HIDDEN_PREFIXES = ["/booking", "/careers", "/limerick-reformer-opening", "/limerick-mat-opening", "/studio/", "/pricing", "/thank-you"];
 
 const MobileBookBar = () => {
   const { pathname } = useLocation();
