@@ -3,7 +3,7 @@ import { CalendarCheck, Smartphone, Instagram, Check } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import heroImage from "@/assets/clients-laughing.jpg";
+import heroImage from "@/assets/studio-welcome.jpg";
 
 declare global {
   interface Window {
@@ -77,8 +77,8 @@ const ThankYou = () => {
               ))}
             </div>
             <div className="mt-12 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-5">
-              <a href="/our-studios" className="rounded-full bg-sage px-8 py-4 text-center font-heading text-foreground hover:bg-sage/80 transition-colors">
-                Book your first class
+              <a href="/schedule" className="rounded-full bg-sage px-8 py-4 text-center font-heading text-foreground hover:bg-sage/80 transition-colors">
+                View the timetable
               </a>
               <a href="https://www.instagram.com/balancereformer/" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-foreground/20 px-8 py-4 font-heading hover:border-sage transition-colors">
