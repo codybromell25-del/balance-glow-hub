@@ -46,6 +46,7 @@ import MembershipOffers from "./pages/MembershipOffers";
 import Shop from "./pages/Shop";
 import FontPreview from "./pages/FontPreview";
 import NotFound from "./pages/NotFound";
+import ThankYou from "./pages/ThankYou";
 
 const queryClient = new QueryClient();
 
@@ -100,6 +101,7 @@ const App = () => (
           <Route path="/limerick-mat-opening" element={<AdsLimerickMatBarreYoga />} />
           <Route path="/membership-offers" element={<MembershipOffers />} />
 
+          <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/font-preview" element={<FontPreview />} />
           
