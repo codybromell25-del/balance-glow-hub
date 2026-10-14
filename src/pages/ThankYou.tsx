@@ -46,7 +46,7 @@ const ThankYou = () => {
       <Navigation />
       <main className="flex-1">
         <section className="relative overflow-hidden">
-          <img src={heroAsset.url} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
+          <img src={heroAsset.url} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-[80%_center] md:object-center" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/70" />
           <div className="relative container mx-auto px-4 py-24 md:py-36 text-center animate-fade-in">
             <div className="mx-auto mb-6 grid h-16 w-16 place-items-center rounded-full bg-sage text-foreground shadow-lg">
