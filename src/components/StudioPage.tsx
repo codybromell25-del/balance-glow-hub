@@ -18,6 +18,8 @@ interface StudioInfo {
   locationId?: string;
   showScheduleWidget?: boolean;
   isLogoHero?: boolean;
+  heroOverlay?: string;
+  heroPosition?: string;
 }
 
 interface StudioPageProps {
@@ -163,7 +165,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
       />
       <LocalBusinessSchema studioName={studioInfo.name} />
       <Navigation />
-      <main className=" md:pt-[117px]">
+      <main>
         {/* Hero Section */}
         {studioInfo.isLogoHero ? (
           /* Clean Hero with studio name */
@@ -198,16 +200,16 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
               <img 
                 src={studioInfo.image} 
                 alt={`balance ${studioInfo.name} studio`}
-                className="w-full h-full object-cover object-center"
+                className={`w-full h-full object-cover ${studioInfo.heroPosition || "object-center"}`}
               />
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              <div className={studioInfo.heroOverlay || "absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"} />
             </div>
             
             {/* Hero Content */}
             <div className="relative z-10 container mx-auto px-4 pb-16 md:pb-20">
               <div className="max-w-3xl">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading italic mb-6" style={{ color: '#A3C1AD' }}>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading italic mb-6 [text-shadow:0_2px_22px_rgba(0,0,0,0.5)]" style={{ color: '#A3C1AD' }}>
                   {studioInfo.name}
                 </h1>
                 <p className="text-white text-xl md:text-2xl max-w-2xl leading-relaxed mb-4 font-medium italic">
