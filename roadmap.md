@@ -8,5 +8,6 @@
 - [x] Contact section uses studio interior photo behind a soft cream wash
 - [x] Mobile menu: big rows with divider lines, full-screen panel, bigger burger
 - [x] Hero desktop: copy scaled up and grouped with the buttons (mobile untouched)
+- [x] Thank-you page: Limerick studio photo as hero background (full-bleed crop, card frame removed)
 - [ ] R2: studio cards info, how-it-works strip, nav grouping, slim mobile nav, pricing per-class + FAQs
 - [ ] R3: headings, animations, image speed, stats spacing, app bar

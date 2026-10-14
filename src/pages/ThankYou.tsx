@@ -3,7 +3,7 @@ import { CalendarCheck, Smartphone, Instagram, Check } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import heroImage from "@/assets/studio-welcome.jpg";
+import heroImage from "@/assets/limerick-studio-3-hero.jpg";
 
 declare global {
   interface Window {
