@@ -1,251 +1,221 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ClassesBrandStatement from "@/components/home/ClassesBrandStatement";
-import { Button } from "@/components/ui/button";
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Heart, BookOpen, Flame, Trophy, Users, Sparkles, Leaf } from "lucide-react";
 import SEO from "@/components/SEO";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { MapPin } from "lucide-react";
+import imgClassic from "@/assets/limerick-reformer-instructor.jpg";
+import imgSculpt from "@/assets/studio-leg-raise.jpg";
+import imgChallenge from "@/assets/studio-lunge-workout.jpg";
+import imgGentle from "@/assets/studio-instructor-helping.jpg";
+import imgMat from "@/assets/clients-mat-workout.jpg";
+import imgBarre from "@/assets/studio-ball-workout.jpg";
+import imgYoga from "@/assets/clients-stretching.jpg";
 
-// Difficulty indicator component
-const DifficultyDots = ({ level }: { level: number }) => {
-  return (
-    <div className="flex gap-1 items-center">
-      {[1, 2, 3, 4, 5].map((dot) => (
-        <span
-          key={dot}
-          className={`w-2 h-2 rounded-full ${
-            dot <= level ? "bg-primary" : "bg-muted"
-          }`}
-        />
-      ))}
-      <span className="text-xs text-muted-foreground ml-2">
-        {level === 1 && "Gentle"}
-        {level === 2 && "Beginner/Mixed"}
-        {level === 3 && "Intermediate"}
-        {level === 4 && "Advanced"}
-        {level === 5 && "Intense"}
-      </span>
-    </div>
-  );
+const LEVELS = ["", "Gentle", "Beginner / Mixed", "Intermediate", "Advanced", "Intense"];
+
+type ClassInfo = {
+  id: string;
+  name: string;
+  short: string;
+  forWho: string;
+  difficulty: number;
+  points: string[];
+  where: string;
+  image: string;
+  bookingLink: string;
 };
 
-// Class card component
-const ClassCard = ({ 
-  icon: Icon, 
-  level, 
-  suitable, 
-  whatToExpect, 
-  difficulty,
-  bookingLink = "/our-studios",
-}: { 
-  icon: React.ElementType;
-  level: string;
-  suitable: string;
-  whatToExpect: string[];
-  difficulty: number;
-  bookingLink?: string;
-}) => {
-  const { ref, isVisible } = useScrollAnimation(0.2);
-  
+const CLASSES: ClassInfo[] = [
+  {
+    id: "classic", name: "classic", short: "Classic", image: imgClassic, difficulty: 2,
+    forWho: "Perfect for beginners and foundation building",
+    points: [
+      "Core Pilates principles in a full-body workout",
+      "Thoughtful, powerful and effective — not easy, just smart",
+      "Great for new Reformer users and loyal regulars",
+    ],
+    where: "All studios", bookingLink: "/our-studios",
+  },
+  {
+    id: "sculpt", name: "sculpt", short: "Sculpt", image: imgSculpt, difficulty: 3,
+    forWho: "Intermediate — a step up after 6 classic classes",
+    points: [
+      "Thoughtful challenges with extra core work",
+      "Sequences that make your muscles sing",
+      "Strong, supportive and full of feel-good fire",
+    ],
+    where: "All studios", bookingLink: "/our-studios",
+  },
+  {
+    id: "challenge", name: "challenge", short: "Challenge", image: imgChallenge, difficulty: 4,
+    forWho: "For confident clients ready to push further",
+    points: [
+      "Creative combos with quicker transitions",
+      "Tests strength, precision and stamina",
+      "Previous Reformer experience necessary",
+    ],
+    where: "All studios", bookingLink: "/our-studios",
+  },
+  {
+    id: "gentle-flow", name: "gentle flow", short: "Gentle Flow", image: imgGentle, difficulty: 1,
+    forWho: "Pregnancy, postnatal, injury recovery or a slower pace",
+    points: [
+      "Soft, supportive movement focused on mobility and breath",
+      "Suitable for all trimesters of pregnancy",
+      "No prior Pilates experience required",
+    ],
+    where: "All studios", bookingLink: "/booking/gentle-flow",
+  },
+  {
+    id: "mat", name: "mat", short: "Mat", image: imgMat, difficulty: 3,
+    forWho: "Pilates on the mat — suitable for all levels",
+    points: [
+      "Classic mat work for core strength and flexibility",
+      "No equipment needed — just you and the mat",
+      "The perfect complement to your Reformer practice",
+    ],
+    where: "Limerick · Kildare", bookingLink: "/booking/mat-classes",
+  },
+  {
+    id: "barre", name: "pilates barre", short: "Barre", image: imgBarre, difficulty: 3,
+    forWho: "Mixed — suitable for all",
+    points: [
+      "Pilates-inspired movement meets barre strength work",
+      "Not a ballet class — no dance experience needed",
+      "Low impact, uplifting, with options throughout",
+    ],
+    where: "Limerick · Kildare", bookingLink: "/our-studios",
+  },
+  {
+    id: "yoga", name: "yoga", short: "Yoga", image: imgYoga, difficulty: 2,
+    forWho: "Mixed — new to yoga or experienced",
+    points: [
+      "Move, breathe and switch off for a while",
+      "Strength, mobility, stretch and relaxation",
+      "Leave feeling stronger, calmer and more connected",
+    ],
+    where: "Limerick", bookingLink: "/our-studios",
+  },
+];
+
+const Intensity = ({ level }: { level: number }) => (
+  <div className="flex items-center gap-3">
+    <div className="flex gap-1" aria-hidden="true">
+      {[1, 2, 3, 4, 5].map((i) => (
+        <span key={i} className={`h-1.5 w-6 rounded-full ${i <= level ? "bg-sage" : "bg-foreground/10"}`} />
+      ))}
+    </div>
+    <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{LEVELS[level]}</span>
+  </div>
+);
+
+const ClassSection = ({ c, index }: { c: ClassInfo; index: number }) => {
+  const { ref, isVisible } = useScrollAnimation(0.15);
+  const flip = index % 2 === 1;
+  const external = c.bookingLink.startsWith("http");
   return (
-    <div
+    <article
+      id={c.id}
       ref={ref}
-      className={`bg-background p-4 md:p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-500 ${
+      className={`scroll-mt-40 py-12 md:py-20 border-t border-foreground/10 first:border-t-0 transition-all duration-700 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8">
-        {/* Level Header */}
-        <div className="lg:col-span-1">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-14 h-14 rounded-full flex items-center justify-center" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-              <Icon className="w-7 h-7 text-white" />
-            </div>
-          </div>
-          <h2 className="text-3xl font-heading font-bold text-foreground mb-2">{level}</h2>
-          <p className="text-sm text-foreground font-semibold uppercase tracking-wide mb-3">
-            {suitable}
-          </p>
-          <DifficultyDots level={difficulty} />
+      <div className="grid items-center gap-8 md:grid-cols-2 md:gap-16">
+        <div className={`overflow-hidden rounded-3xl aspect-[4/5] md:aspect-[4/5] ${flip ? "md:order-2" : ""}`}>
+          <img src={c.image} alt={`${c.short} class at balance studios`} loading="lazy" className="h-full w-full object-cover" />
         </div>
-
-        {/* Content */}
-        <div className="lg:col-span-2 space-y-6">
-          <div>
-            <h3 className="text-lg font-semibold text-foreground mb-3">What to Expect:</h3>
-            <ul className="space-y-2">
-              {whatToExpect.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="mt-1" style={{ color: '#A3C1AD' }}>•</span>
-                  <span className="text-muted-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
+        <div>
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">
+            {String(index + 1).padStart(2, "0")} / {String(CLASSES.length).padStart(2, "0")}
+          </p>
+          <h2 className="font-heading italic text-5xl md:text-6xl leading-none mb-4">
+            {c.name}<span className="text-sage">.</span>
+          </h2>
+          <p className="text-lg text-foreground/80 mb-5">{c.forWho}</p>
+          <Intensity level={c.difficulty} />
+          <ul className="mt-6 space-y-3">
+            {c.points.map((p) => (
+              <li key={p} className="flex gap-3 text-foreground/80">
+                <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sage" />
+                {p}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-foreground/15 px-4 py-1.5 text-sm">
+            <MapPin size={14} /> {c.where}
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-5">
+            <a
+              href={c.bookingLink}
+              target={external ? "_blank" : undefined}
+              rel={external ? "noopener noreferrer" : undefined}
+              className="rounded-full bg-sage px-8 py-3.5 font-heading text-sage-foreground hover:bg-sage/80 transition-colors"
+            >
+              Book {c.short}
+            </a>
+            <a href="/schedule" className="text-sm underline underline-offset-4 decoration-sage hover:text-foreground/70">
+              View timetable
+            </a>
           </div>
-
-          <Button
-            asChild
-            className="w-full sm:w-auto relative text-black border-0 shadow-lg hover:brightness-105"
-            style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
-          >
-            <a href={bookingLink} target={bookingLink.startsWith("http") ? "_blank" : undefined} rel={bookingLink.startsWith("http") ? "noopener noreferrer" : undefined}>Book Class</a>
-          </Button>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
-const Classes = () => {
-  const allClasses = [
-    {
-      icon: BookOpen,
-      level: "Classic",
-      suitable: "Perfect for beginners and foundation building",
-      difficulty: 2,
-      whatToExpect: [
-        "Learn core Pilates principles with a full-body workout",
-        "Thoughtful, powerful, and effective—not easy, just smart",
-        "Great for new Reformer users or loyal regulars",
-        "Instructors can modify to increase challenge if needed",
-        "Inform instructor of any injuries or health concerns",
-      ],
-    },
-    {
-      icon: Flame,
-      level: "Sculpt",
-      suitable: "Intermediate",
-      difficulty: 3,
-      whatToExpect: [
-        "A gentle step up from basics, accessible after 6 classic classes",
-        "Thoughtful challenges with extra core work",
-        "Sequences that make your muscles sing in the best way",
-        "Strong, supportive, and full of feel-good fire",
-        "Inform instructor of any injuries or concerns",
-      ],
-    },
-    {
-      icon: Trophy,
-      level: "Challenge",
-      suitable: "For confident clients ready to push further",
-      difficulty: 4,
-      whatToExpect: [
-        "Creative combos with quicker transitions",
-        "Tests strength, precision, and stamina with extra spice",
-        "Tough but thoughtful—never chaotic, always curated",
-        "Instructors keep things moving with personalized attention",
-        "Previous Reformer experience necessary",
-      ],
-    },
-    {
-      icon: Heart,
-      level: "Gentle Flow",
-      suitable: "Pregnancy, postnatal, injury recovery, or those seeking a slower pace",
-      difficulty: 1,
-      whatToExpect: [
-        "Soft, supportive movements focusing on mobility and breath",
-        "Low-impact sequences that build strength gently",
-        "Suitable for all trimesters of pregnancy",
-        "Perfect for older adults needing extra care and attention",
-        "No prior Pilates experience required",
-      ],
-      bookingLink: "/booking/gentle-flow",
-    },
-    {
-      icon: Users,
-      level: "Mat Class",
-      suitable: "Pilates on the mat — available at Limerick & Kildare",
-      difficulty: 3,
-      whatToExpect: [
-        "Classic mat Pilates exercises focusing on core strength and flexibility",
-        "No equipment needed — just you and the mat",
-        "Perfect complement to your Reformer practice",
-        "Builds body awareness and foundational strength",
-        "Suitable for all levels with modifications available",
-      ],
-      bookingLink: "/booking/mat-classes",
-    },
-    {
-      icon: Sparkles,
-      level: "Pilates Barre",
-      suitable: "Mixed / Suitable for all — available at Limerick & Kildare",
-      difficulty: 3,
-      whatToExpect: [
-        "Fun, energising full body workout combining Pilates-inspired movement with barre-based strength and endurance exercises",
-        "Mix of standing and mat-based work to improve posture, strength, balance, coordination and overall fitness",
-        "Not a ballet class — no dance experience needed",
-        "Simple to follow, low impact movements designed to make you feel strong, challenged and uplifted",
-        "Options and modifications offered throughout the class",
-      ],
-    },
-    {
-      icon: Leaf,
-      level: "Yoga",
-      suitable: "Mixed / Suitable for all — available at Limerick",
-      difficulty: 2,
-      whatToExpect: [
-        "Designed to help you move, breathe and switch off from the outside world for a while",
-        "Mix of strength, mobility, stretch and relaxation in a welcoming, non-intimidating environment",
-        "Focused on helping you feel better in both body and mind",
-        "Suitable whether you're completely new to yoga or already experienced",
-        "Leave feeling stronger, calmer and more connected",
-      ],
-    },
-  ];
+const Classes = () => (
+  <div className="min-h-screen">
+    <SEO
+      title="Class Types | balance studios - Reformer Pilates"
+      description="Classic, Sculpt, Challenge, Gentle Flow, Mat, Pilates Barre and Yoga at balance studios. Find the class that suits you."
+      canonical="/classes"
+    />
+    <Navigation />
+    <main>
+      <ClassesBrandStatement />
 
-  return (
-    <div className="min-h-screen">
-      <SEO 
-        title="Class Types | balance studios - Reformer Pilates"
-        description="Expert-led Pilates in beautifully designed studios, with workouts that actually work. Every balance instructor is fully qualified through comprehensive training. Only the best make it into our timetable."
-        canonical="/classes"
-      />
-      <Navigation />
-      <main className="">
-        <ClassesBrandStatement />
-        
-        {/* All Classes - Clean Flow */}
-        <section className="py-10 md:py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="space-y-6">
-                {allClasses.map((classData) => (
-                  <ClassCard 
-                    key={classData.level} 
-                    {...classData} 
-                  />
-                ))}
-              </div>
-            </div>
+      <nav aria-label="Class types" className="border-y border-foreground/10">
+        <div className="container mx-auto px-4">
+          <div className="flex gap-2 overflow-x-auto scrollbar-hide py-4 md:justify-center">
+            {CLASSES.map((c) => (
+              <a
+                key={c.id}
+                href={`#${c.id}`}
+                className="whitespace-nowrap rounded-full border border-foreground/15 px-4 py-2 text-sm hover:bg-sage hover:border-sage transition-colors"
+              >
+                {c.short}
+              </a>
+            ))}
           </div>
-        </section>
+        </div>
+      </nav>
 
-        {/* CTA */}
-        <section className="py-10 md:py-16 bg-secondary/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Still Not Sure Which Class?</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Our instructors are happy to help you find the right starting point. We recommend starting with a
-                Classic class to learn the fundamentals and find your flow.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  asChild
-                  size="lg"
-                  className="text-black border-0 shadow-lg hover:brightness-105"
-                  style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
-                >
-                  <a href="/our-studios">View Our Studios</a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
+      <section className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          {CLASSES.map((c, i) => (
+            <ClassSection key={c.id} c={c} index={i} />
+          ))}
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 border-t border-foreground/10">
+        <div className="container mx-auto px-4 max-w-2xl text-center">
+          <h2 className="font-heading italic text-4xl md:text-5xl mb-5">
+            not sure where to start<span className="text-sage">?</span>
+          </h2>
+          <p className="text-lg text-foreground/80 mb-8">
+            Our instructors are happy to help. We recommend starting with a Classic class to learn the fundamentals and find your flow.
+          </p>
+          <a href="/our-studios" className="inline-block rounded-full bg-sage px-8 py-4 font-heading text-sage-foreground hover:bg-sage/80 transition-colors">
+            View our studios
+          </a>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </div>
+);
 
 export default Classes;
