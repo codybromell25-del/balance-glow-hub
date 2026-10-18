@@ -123,7 +123,7 @@ const ClassSection = ({ c, index }: { c: ClassInfo; index: number }) => {
       }`}
     >
       <div className="grid items-center gap-8 md:grid-cols-2 md:gap-16">
-        <div className={`overflow-hidden rounded-3xl aspect-[4/5] md:aspect-[4/5] ${flip ? "md:order-2" : ""}`}>
+        <div className={`overflow-hidden rounded-3xl aspect-[4/3] md:aspect-[4/5] ${flip ? "md:order-2" : ""}`}>
           <img src={c.image} alt={`${c.short} class at balance studios`} loading="lazy" className="h-full w-full object-cover" />
         </div>
         <div>
