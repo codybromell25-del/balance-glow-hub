@@ -10,9 +10,10 @@ import imgChallenge from "@/assets/studio-lunge-workout.jpg";
 import imgGentle from "@/assets/studio-instructor-helping.jpg";
 import imgMat from "@/assets/clients-mat-workout.jpg";
 import barreAsset from "@/assets/barre-limerick.jpg.asset.json";
-import imgYoga from "@/assets/clients-stretching.jpg";
+import yogaAsset from "@/assets/yoga-limerick.jpg.asset.json";
 
 const imgBarre = barreAsset.url;
+const imgYoga = yogaAsset.url;
 
 const LEVELS = ["", "Gentle", "Beginner / Mixed", "Intermediate", "Advanced", "Intense"];
 
@@ -25,6 +26,8 @@ type ClassInfo = {
   points: string[];
   where: string;
   image: string;
+  imagePosition?: string;
+  mobileAspect?: string;
   bookingLink: string;
 };
 
@@ -91,6 +94,7 @@ const CLASSES: ClassInfo[] = [
   },
   {
     id: "yoga", name: "yoga", short: "Yoga", image: imgYoga, difficulty: 2,
+    imagePosition: "50% 70%", mobileAspect: "aspect-[4/5]",
     forWho: "Mixed — new to yoga or experienced",
     points: [
       "Move, breathe and switch off for a while",
@@ -125,8 +129,8 @@ const ClassSection = ({ c, index }: { c: ClassInfo; index: number }) => {
       }`}
     >
       <div className="grid items-center gap-8 md:grid-cols-2 md:gap-16">
-        <div className={`overflow-hidden rounded-3xl aspect-[4/3] md:aspect-[4/5] ${flip ? "md:order-2" : ""}`}>
-          <img src={c.image} alt={`${c.short} class at balance studios`} loading="lazy" className="h-full w-full object-cover" />
+        <div className={`overflow-hidden rounded-3xl ${c.mobileAspect || "aspect-[4/3]"} md:aspect-[4/5] ${flip ? "md:order-2" : ""}`}>
+          <img src={c.image} alt={`${c.short} class at balance studios`} loading="lazy" className="h-full w-full object-cover" style={c.imagePosition ? { objectPosition: c.imagePosition } : undefined} />
         </div>
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">
