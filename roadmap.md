@@ -11,5 +11,6 @@
 - [x] Thank-you page: Limerick studio photo as hero background (full-bleed crop, card frame removed)
 - [x] New Limerick interior photo used on the Limerick studio header and the thank-you page; studio pages now start flush under the menu
 - [x] /schedule: Mindbody embed removed, replaced with the Momence timetable showing all six studios
+- [x] Classes page: barre section now uses the new Limerick barre studio photo (barre rail, mats, balance wall logo)
 - [ ] R2: studio cards info, how-it-works strip, nav grouping, slim mobile nav, pricing per-class + FAQs
 - [ ] R3: headings, animations, image speed, stats spacing, app bar
