@@ -8,21 +8,6 @@ import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
-// Import gallery images
-import studioInterior1 from "@/assets/studio-interior-1.png";
-import studioReformersRow from "@/assets/studio-reformers-row.jpg";
-import studioNeonSign from "@/assets/studio-neon-sign.jpg";
-import studioChandelier from "@/assets/hero-studio-chandelier.png";
-import studioEntrance from "@/assets/studio-entrance.png";
-import studioHallway from "@/assets/studio-hallway.png";
-import studioReformersWide from "@/assets/studio-reformers-wide.jpg";
-import studioInstructorHelping from "@/assets/studio-instructor-helping.jpg";
-import studioBallWorkout from "@/assets/studio-ball-workout.jpg";
-import studioLungeWorkout from "@/assets/studio-lunge-workout.jpg";
-import studioLegRaise from "@/assets/studio-leg-raise.jpg";
-import studioWelcome from "@/assets/studio-welcome.jpg";
-import studioMirror from "@/assets/studio-mirror.jpg";
-import studioEquipment from "@/assets/studio-equipment.jpg";
 import limerickHero from "@/assets/limerick-interior-hero.jpg.asset.json";
 import imgClane from "@/assets/studio-clane.jpg";
 import imgKildare from "@/assets/studio-kildare.jpg";
@@ -104,20 +89,6 @@ const OurStudios = () => {
   const studios = rawStudios.map((st) => ({ ...st, name: st.name.replace(" Studio", "").replace(" Town", " town"), image: IMAGES[st.slug], classes: CLASSES[st.slug], county: COUNTY[st.slug], isNew: st.slug === "limerick" }));
   const visible = filter === "All" ? studios : studios.filter((st) => st.classes.includes(filter));
 
-  const galleryImages = [
-    { src: studioReformersWide, alt: "balance studio with reformer machines" },
-    { src: studioInstructorHelping, alt: "Instructor helping clients on reformers" },
-    { src: studioBallWorkout, alt: "Clients doing ball exercises on reformers" },
-    { src: studioLungeWorkout, alt: "Clients doing lunge exercises" },
-    { src: studioLegRaise, alt: "Clients doing leg raise exercises" },
-    { src: studioWelcome, alt: "Welcome to balance studio" },
-    { src: studioMirror, alt: "balance studio mirror with branding" },
-    { src: studioEquipment, alt: "Pilates equipment and dumbbells" },
-    { src: studioChandelier, alt: "Elegant chandelier in balance studio" },
-    { src: studioReformersRow, alt: "Reformer machines in a row" },
-    { src: studioNeonSign, alt: "balance neon sign" },
-    { src: studioInterior1, alt: "balance studio interior" },
-  ];
 
   return (
     <div className="min-h-screen">
@@ -197,41 +168,6 @@ const OurStudios = () => {
           </div>
         </section>
 
-        {/* Studio Gallery */}
-        <section className="py-12 md:py-20 bg-secondary/20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-heading italic text-foreground mb-4">
-                Inside Our Studios
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Step inside and discover the balance. experience — modern reformers, serene spaces, and an atmosphere designed to inspire.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-              {galleryImages.map((image, index) => (
-                <div 
-                  key={index}
-                  className={`relative overflow-hidden rounded-2xl shadow-lg group ${
-                    index === 0 ? 'col-span-2 row-span-2 md:col-span-2 md:row-span-2' : ''
-                  }`}
-                >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
-                      index === 0 ? 'h-full min-h-[300px] md:min-h-[450px]' : 'h-48 md:h-64'
-                    }`}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-      </main>
       <Footer />
     </div>
   );
