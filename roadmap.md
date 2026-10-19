@@ -17,3 +17,4 @@
 - [ ] R2: studio cards info, how-it-works strip, nav grouping, slim mobile nav, pricing per-class + FAQs
 - [ ] R3: headings, animations, image speed, stats spacing, app bar
 - [x] Our Studios page: boxed card grid replaced with editorial alternating photo/text rows (filter pills kept)
+- [x] Class availability corrected: Enfield is Reformer only (no Mat); Kildare now lists Yoga alongside Limerick (cards, chips, filters, class-type "where" lines)
