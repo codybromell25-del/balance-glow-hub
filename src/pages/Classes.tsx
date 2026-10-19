@@ -27,6 +27,7 @@ type ClassInfo = {
   where: string;
   image: string;
   imagePosition?: string;
+  mobileAspect?: string;
   bookingLink: string;
 };
 
@@ -93,7 +94,7 @@ const CLASSES: ClassInfo[] = [
   },
   {
     id: "yoga", name: "yoga", short: "Yoga", image: imgYoga, difficulty: 2,
-    imagePosition: "50% 70%",
+    imagePosition: "50% 70%", mobileAspect: "aspect-[4/5]",
     forWho: "Mixed — new to yoga or experienced",
     points: [
       "Move, breathe and switch off for a while",
@@ -128,7 +129,7 @@ const ClassSection = ({ c, index }: { c: ClassInfo; index: number }) => {
       }`}
     >
       <div className="grid items-center gap-8 md:grid-cols-2 md:gap-16">
-        <div className={`overflow-hidden rounded-3xl aspect-[4/3] md:aspect-[4/5] ${flip ? "md:order-2" : ""}`}>
+        <div className={`overflow-hidden rounded-3xl ${c.mobileAspect || "aspect-[4/3]"} md:aspect-[4/5] ${flip ? "md:order-2" : ""}`}>
           <img src={c.image} alt={`${c.short} class at balance studios`} loading="lazy" className="h-full w-full object-cover" style={c.imagePosition ? { objectPosition: c.imagePosition } : undefined} />
         </div>
         <div>
