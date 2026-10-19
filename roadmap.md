@@ -13,5 +13,6 @@
 - [x] /schedule: Mindbody embed removed, replaced with the Momence timetable showing all six studios
 - [x] Classes page: barre section now uses the new Limerick barre studio photo (barre rail, mats, balance wall logo)
 - [x] Classes page: yoga section now uses the new Limerick yoga studio photo (logo wall, mats, blocks, straps), shown uncropped on phones
+- [x] Our Studios page: "Inside Our Studios" photo gallery removed — page now ends after the six studio cards
 - [ ] R2: studio cards info, how-it-works strip, nav grouping, slim mobile nav, pricing per-class + FAQs
 - [ ] R3: headings, animations, image speed, stats spacing, app bar
