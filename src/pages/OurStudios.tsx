@@ -168,6 +168,7 @@ const OurStudios = () => {
           </div>
         </section>
 
+      </main>
       <Footer />
     </div>
   );
