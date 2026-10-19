@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { MapPin, Clock, Sparkles } from "lucide-react";
+import { useState } from "react";
+import { MapPin, Clock, Car, ArrowRight, Navigation2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
@@ -22,9 +23,22 @@ import studioLegRaise from "@/assets/studio-leg-raise.jpg";
 import studioWelcome from "@/assets/studio-welcome.jpg";
 import studioMirror from "@/assets/studio-mirror.jpg";
 import studioEquipment from "@/assets/studio-equipment.jpg";
+import limerickHero from "@/assets/limerick-interior-hero.jpg.asset.json";
+import imgClane from "@/assets/studio-clane.jpg";
+import imgKildare from "@/assets/studio-kildare.jpg";
+import imgBlessington from "@/assets/studio-blessington.jpg";
+import imgEnfield from "@/assets/studio-enfield.jpg";
+import imgBray from "@/assets/studio-bray.jpg";
+
+const FILTERS = ["All", "Reformer", "Mat", "Barre", "Yoga"] as const;
+type Filter = (typeof FILTERS)[number];
+const IMAGES: Record<string, string> = { limerick: limerickHero.url, clane: imgClane, kildare: imgKildare, blessington: imgBlessington, enfield: imgEnfield, bray: imgBray };
+const CLASSES: Record<string, string[]> = { limerick: ["Reformer","Mat","Barre","Yoga"], clane: ["Reformer"], kildare: ["Reformer","Mat","Barre"], blessington: ["Reformer"], enfield: ["Reformer","Mat"], bray: ["Reformer"] };
+const COUNTY: Record<string, string> = { limerick: "Co. Limerick", clane: "Co. Kildare", kildare: "Co. Kildare", blessington: "Co. Wicklow", enfield: "Co. Meath", bray: "Co. Wicklow" };
 
 const OurStudios = () => {
-  const studios = [
+  const [filter, setFilter] = useState<Filter>("All");
+  const rawStudios = [
     {
       name: "Limerick Studio",
       slug: "limerick",
@@ -87,6 +101,9 @@ const OurStudios = () => {
     },
   ];
 
+  const studios = rawStudios.map((st) => ({ ...st, name: st.name.replace(" Studio", "").replace(" Town", " town"), image: IMAGES[st.slug], classes: CLASSES[st.slug], county: COUNTY[st.slug], isNew: st.slug === "limerick" }));
+  const visible = filter === "All" ? studios : studios.filter((st) => st.classes.includes(filter));
+
   const galleryImages = [
     { src: studioReformersWide, alt: "balance studio with reformer machines" },
     { src: studioInstructorHelping, alt: "Instructor helping clients on reformers" },
@@ -117,76 +134,64 @@ const OurStudios = () => {
           subtitle="Six considered studios across Limerick, Kildare, Wicklow & Meath — small groups, expert instructors, and a space that feels like yours. Choose your studio."
         />
 
-        {/* Studios Grid */}
-        <section className="py-12 md:py-20">
+        {/* Filter pills */}
+        <section className="pt-8 md:pt-12">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              {studios.map((studio, index) => (
-                <div
-                  key={studio.name}
-                  className="group relative animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+            <div className="flex gap-2 overflow-x-auto scrollbar-hide justify-start md:justify-center pb-1">
+              {FILTERS.map((f) => (
+                <button
+                  key={f}
+                  onClick={() => setFilter(f)}
+                  className={`shrink-0 rounded-full border px-5 py-2 text-sm transition-colors ${
+                    filter === f ? "bg-sage border-sage text-foreground" : "border-foreground/20 text-foreground hover:border-sage"
+                  }`}
                 >
-                  {/* Card without image */}
-                  <div className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-                    {/* Sage green gradient top bar */}
-                    <div className="h-2 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-                      <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-black/10" />
+                  {f === "All" ? "All studios" : f}
+                </button>
+              ))}
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-3">
+              {visible.length} {visible.length === 1 ? "studio" : "studios"}{filter !== "All" ? ` offering ${filter}` : ""}
+            </p>
+          </div>
+        </section>
+
+        {/* Studios Grid */}
+        <section className="py-8 md:py-14">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+              {visible.map((studio) => (
+                <article key={studio.slug} className="group flex flex-col rounded-2xl overflow-hidden bg-background border border-foreground/10 hover:border-sage transition-colors">
+                  <a href={`/studio/${studio.slug}`} className="relative block aspect-[4/3] overflow-hidden">
+                    <img src={studio.image} alt={`Inside balance ${studio.name}`} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                    <span className="absolute top-3 left-3 rounded-full bg-background/90 px-3 py-1 text-xs text-foreground">{studio.county}</span>
+                    {studio.isNew && <span className="absolute top-3 right-3 rounded-full bg-sage px-3 py-1 text-xs text-foreground">New</span>}
+                    <h2 className="absolute bottom-3 left-4 font-heading italic text-3xl text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">
+                      {studio.name.toLowerCase()}<span className="text-sage">.</span>
+                    </h2>
+                  </a>
+                  <div className="flex flex-1 flex-col p-5">
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {studio.classes.map((c) => (
+                        <span key={c} className="rounded-full border border-sage/60 px-2.5 py-0.5 text-xs text-foreground">{c}</span>
+                      ))}
                     </div>
-                    
-                    <div className="p-6">
-                      {/* Studio name */}
-                      <h2 className="text-xl md:text-2xl font-heading italic text-foreground mb-4">
-                        {studio.name.replace(' Studio', '')}
-                      </h2>
-
-                      {/* Divider */}
-                      <div className="w-12 h-px mb-4" style={{ background: '#A3C1AD' }} />
-
-                      {/* Details */}
-                      <div className="space-y-3 mb-6 text-sm">
-                        <div className="flex gap-3">
-                          <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span className="text-muted-foreground leading-relaxed">{studio.address}</span>
-                        </div>
-                        <div className="flex gap-3">
-                          <Clock className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span className="text-muted-foreground">{studio.hours}</span>
-                        </div>
-                        <div className="flex gap-3">
-                          <Sparkles className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span className="text-foreground font-medium">{studio.offerings}</span>
-                        </div>
-                      </div>
-
-                      {/* Buttons */}
-                      <div className="flex gap-3">
-                        {studio.hasDetailPage ? (
-                          <Button asChild className="flex-1 border-0 text-black shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-                            <a href={`/studio/${studio.slug}`}>Book Your Class</a>
-                          </Button>
-                        ) : (
-                          <Button asChild className="flex-1 border-0 text-black shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-                            <a href="/book-class">Book Your Class</a>
-                          </Button>
-                        )}
-                        <Button 
-                          asChild 
-                          className="px-4 border-0 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all"
-                          style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
-                        >
-                          <a 
-                            href={studio.directionsUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <MapPin className="w-4 h-4 text-white" />
-                          </a>
-                        </Button>
-                      </div>
+                    <div className="space-y-2 text-sm mb-5">
+                      <div className="flex gap-2.5"><MapPin className="w-4 h-4 text-sage mt-0.5 shrink-0" /><span className="text-muted-foreground leading-snug">{studio.address}</span></div>
+                      <div className="flex gap-2.5"><Car className="w-4 h-4 text-sage mt-0.5 shrink-0" /><span className="text-muted-foreground">{studio.parking}</span></div>
+                      <div className="flex gap-2.5"><Clock className="w-4 h-4 text-sage mt-0.5 shrink-0" /><span className="text-muted-foreground">{studio.hours}</span></div>
+                    </div>
+                    <div className="mt-auto grid grid-cols-2 gap-2">
+                      <a href={`/studio/${studio.slug}`} className="flex items-center justify-center gap-1.5 rounded-full bg-sage px-4 py-3 text-sm text-foreground hover:opacity-90 transition-opacity">
+                        Book here <ArrowRight className="w-4 h-4" />
+                      </a>
+                      <a href={studio.directionsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1.5 rounded-full border border-foreground/20 px-4 py-3 text-sm text-foreground hover:border-sage transition-colors">
+                        <Navigation2 className="w-4 h-4" /> Directions
+                      </a>
                     </div>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
