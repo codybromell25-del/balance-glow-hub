@@ -18,7 +18,7 @@ import imgBray from "@/assets/studio-bray.jpg";
 const FILTERS = ["All", "Reformer", "Mat", "Barre", "Yoga"] as const;
 type Filter = (typeof FILTERS)[number];
 const IMAGES: Record<string, string> = { limerick: limerickHero.url, clane: imgClane, kildare: imgKildare, blessington: imgBlessington, enfield: imgEnfield, bray: imgBray };
-const CLASSES: Record<string, string[]> = { limerick: ["Reformer","Mat","Barre","Yoga"], clane: ["Reformer"], kildare: ["Reformer","Mat","Barre"], blessington: ["Reformer"], enfield: ["Reformer","Mat"], bray: ["Reformer"] };
+const CLASSES: Record<string, string[]> = { limerick: ["Reformer","Mat","Barre","Yoga"], clane: ["Reformer"], kildare: ["Reformer","Mat","Barre","Yoga"], blessington: ["Reformer"], enfield: ["Reformer"], bray: ["Reformer"] };
 const COUNTY: Record<string, string> = { limerick: "Co. Limerick", clane: "Co. Kildare", kildare: "Co. Kildare", blessington: "Co. Wicklow", enfield: "Co. Meath", bray: "Co. Wicklow" };
 
 const OurStudios = () => {
@@ -50,7 +50,7 @@ const OurStudios = () => {
       address: "Unit 3 Claregate St, Kildare, R51 E772, Ireland",
       parking: "Street parking and public car park",
       hours: "Open 7 Days a Week",
-      offerings: "Reformer, Mat & Barre",
+      offerings: "Reformer, Mat, Barre & Yoga",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Claregate+St+Kildare+R51+E772+Ireland",
       hasDetailPage: true,
     },
@@ -70,7 +70,7 @@ const OurStudios = () => {
       address: "Unit 3, Main Street, Enfield, Co. Meath, A83 RP84",
       parking: "Free parking available",
       hours: "Open 7 Days a Week",
-      offerings: "Reformer & Mat",
+      offerings: "Reformer only",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Unit+3+Main+Street+Enfield+Co.+Meath+A83+RP84",
       hasDetailPage: true,
     },
