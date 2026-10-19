@@ -101,7 +101,7 @@ const CLASSES: ClassInfo[] = [
       "Strength, mobility, stretch and relaxation",
       "Leave feeling stronger, calmer and more connected",
     ],
-    where: "Limerick", bookingLink: "/our-studios",
+    where: "Limerick · Kildare", bookingLink: "/our-studios",
   },
 ];
 
