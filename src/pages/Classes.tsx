@@ -9,8 +9,10 @@ import imgSculpt from "@/assets/studio-leg-raise.jpg";
 import imgChallenge from "@/assets/studio-lunge-workout.jpg";
 import imgGentle from "@/assets/studio-instructor-helping.jpg";
 import imgMat from "@/assets/clients-mat-workout.jpg";
-import imgBarre from "@/assets/studio-ball-workout.jpg";
+import barreAsset from "@/assets/barre-limerick.jpg.asset.json";
 import imgYoga from "@/assets/clients-stretching.jpg";
+
+const imgBarre = barreAsset.url;
 
 const LEVELS = ["", "Gentle", "Beginner / Mixed", "Intermediate", "Advanced", "Intense"];
 
