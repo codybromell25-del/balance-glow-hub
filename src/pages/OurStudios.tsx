@@ -127,38 +127,47 @@ const OurStudios = () => {
           </div>
         </section>
 
-        {/* Studios Grid */}
+        {/* Editorial studio rows */}
         <section className="py-8 md:py-14">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-              {visible.map((studio) => (
-                <article key={studio.slug} className="group flex flex-col rounded-2xl overflow-hidden bg-background border border-foreground/10 hover:border-sage transition-colors">
-                  <a href={`/studio/${studio.slug}`} className="relative block aspect-[4/3] overflow-hidden">
-                    <img src={studio.image} alt={`Inside balance ${studio.name}`} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                    <span className="absolute top-3 left-3 rounded-full bg-background/90 px-3 py-1 text-xs text-foreground">{studio.county}</span>
-                    {studio.isNew && <span className="absolute top-3 right-3 rounded-full bg-sage px-3 py-1 text-xs text-foreground">New</span>}
-                    <h2 className="absolute bottom-3 left-4 font-heading italic text-3xl text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="space-y-10 md:space-y-20">
+              {visible.map((studio, i) => (
+                <article key={studio.slug} className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 items-center">
+                  <a
+                    href={`/studio/${studio.slug}`}
+                    className={`group relative block overflow-hidden rounded-2xl aspect-[4/3] md:aspect-[4/5] ${i % 2 === 1 ? "md:order-2" : ""}`}
+                  >
+                    <img
+                      src={studio.image}
+                      alt={`Inside balance ${studio.name}`}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <span className="absolute top-4 left-4 rounded-full bg-background/90 px-3 py-1 text-xs text-foreground">{studio.county}</span>
+                    {studio.isNew && <span className="absolute top-4 right-4 rounded-full bg-sage px-3 py-1 text-xs text-foreground">New</span>}
+                  </a>
+                  <div className={i % 2 === 1 ? "md:order-1" : ""}>
+                    <h2 className="font-heading italic text-4xl md:text-5xl text-foreground">
                       {studio.name.toLowerCase()}<span className="text-sage">.</span>
                     </h2>
-                  </a>
-                  <div className="flex flex-1 flex-col p-5">
-                    <div className="flex flex-wrap gap-1.5 mb-4">
+                    <p className="mt-1 text-sm uppercase tracking-wide text-muted-foreground">{studio.offerings}</p>
+                    <div className="mt-4 flex flex-wrap gap-1.5">
                       {studio.classes.map((c) => (
                         <span key={c} className="rounded-full border border-sage/60 px-2.5 py-0.5 text-xs text-foreground">{c}</span>
                       ))}
                     </div>
-                    <div className="space-y-2 text-sm mb-5">
+                    <div className="mt-5 space-y-2 text-sm">
                       <div className="flex gap-2.5"><MapPin className="w-4 h-4 text-sage mt-0.5 shrink-0" /><span className="text-muted-foreground leading-snug">{studio.address}</span></div>
                       <div className="flex gap-2.5"><Car className="w-4 h-4 text-sage mt-0.5 shrink-0" /><span className="text-muted-foreground">{studio.parking}</span></div>
                       <div className="flex gap-2.5"><Clock className="w-4 h-4 text-sage mt-0.5 shrink-0" /><span className="text-muted-foreground">{studio.hours}</span></div>
                     </div>
-                    <div className="mt-auto grid grid-cols-2 gap-2">
-                      <a href={`/studio/${studio.slug}`} className="flex items-center justify-center gap-1.5 rounded-full bg-sage px-4 py-3 text-sm text-foreground hover:opacity-90 transition-opacity">
+                    <div className="mt-6 flex flex-wrap items-center gap-3">
+                      <a href={`/studio/${studio.slug}`} className="flex items-center gap-1.5 rounded-full bg-sage px-6 py-3 text-sm text-foreground hover:opacity-90 transition-opacity">
                         Book here <ArrowRight className="w-4 h-4" />
                       </a>
-                      <a href={studio.directionsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1.5 rounded-full border border-foreground/20 px-4 py-3 text-sm text-foreground hover:border-sage transition-colors">
-                        <Navigation2 className="w-4 h-4" /> Directions
+                      <a href={studio.directionsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-foreground underline underline-offset-4 decoration-sage/60 hover:decoration-sage transition-colors">
+                        <Navigation2 className="w-4 h-4 text-sage" /> Get directions
                       </a>
                     </div>
                   </div>
@@ -167,6 +176,7 @@ const OurStudios = () => {
             </div>
           </div>
         </section>
+
 
       </main>
       <Footer />
