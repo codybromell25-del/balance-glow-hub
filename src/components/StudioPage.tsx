@@ -325,6 +325,23 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
           </div>
         </section>
 
+
+        {/* Momence Schedule Widget */}
+        {studioInfo.showScheduleWidget && (
+          <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+            <div className="container mx-auto px-4">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading italic text-foreground">
+                    Secure Your Spot Now
+                  </h2>
+                </div>
+                <div id="ribbon-schedule" className="rounded-2xl p-4"></div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Local intro — helps Google match this page to "pilates {town}" searches */}
         {local && (
           <section className="py-14 md:py-20 bg-background">
@@ -352,22 +369,6 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     <p className="mt-3 text-foreground/75 leading-relaxed">{f.a}</p>
                   </details>
                 ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Momence Schedule Widget */}
-        {studioInfo.showScheduleWidget && (
-          <section className="py-16 md:py-24 bg-background relative overflow-hidden">
-            <div className="container mx-auto px-4">
-              <div className="max-w-5xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading italic text-foreground">
-                    Secure Your Spot Now
-                  </h2>
-                </div>
-                <div id="ribbon-schedule" className="rounded-2xl p-4"></div>
               </div>
             </div>
           </section>
