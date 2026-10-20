@@ -146,7 +146,7 @@ const Navigation = () => {
               rel="noopener noreferrer"
               title="My Account"
             >
-              <Button size="icon" className="rounded-full bg-[#A3C1AD] hover:bg-[#8FB09A] text-white">
+              <Button size="icon" aria-label="My account" className="rounded-full bg-[#A3C1AD] hover:bg-[#8FB09A] text-white">
                 <User size={18} />
               </Button>
             </a>

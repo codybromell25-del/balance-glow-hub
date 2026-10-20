@@ -190,6 +190,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
               type="text"
               name="name"
               placeholder="NAME"
+              aria-label="Your name"
               value={formData.name}
               onChange={handleChange}
               required
@@ -199,12 +200,14 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
               type="email"
               name="email"
               placeholder="EMAIL"
+              aria-label="Your email"
               value={formData.email}
               onChange={handleChange}
               required
               className="bg-background/70 border-border placeholder:text-muted-foreground placeholder:text-xs placeholder:tracking-wider"
             />
             <Textarea
+              aria-label="Your message"
               name="message"
               placeholder="MESSAGE"
               value={formData.message}

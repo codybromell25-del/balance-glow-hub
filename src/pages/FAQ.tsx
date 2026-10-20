@@ -144,7 +144,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="FAQ | balance studios"
+        title="Reformer Pilates FAQ | balance studios"
         description="Frequently asked questions about Reformer Pilates at balance studios. Find answers about classes, pricing, what to wear, and more."
         canonical="/faq"
       />
