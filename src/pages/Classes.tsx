@@ -175,7 +175,7 @@ const Classes = () => (
   <div className="min-h-screen">
     <SEO
       title="Reformer, Mat, Barre & Yoga Classes | balance studios"
-      description="Reformer Pilates (Classic, Sculpt, Challenge, Gentle Flow), Mat, Barre and Yoga classes in Limerick, Kildare, Wicklow & Meath. Find your class."
+      description="Reformer Pilates at all six balance studios, plus Mat, Barre and Yoga in Limerick and Kildare Town. Find the class that suits you."
       canonical="/classes"
     />
     <Navigation />
