@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, ShoppingCart, Sparkles, Star, ArrowRight } from "lucide-react";
 import SEO from "@/components/SEO";
-import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import LocalBusinessSchema, { findStudioSchema } from "@/components/LocalBusinessSchema";
 
 interface StudioInfo {
   name: string;
@@ -75,6 +75,7 @@ const memberships = [
 ];
 
 const StudioPage = ({ studioInfo }: StudioPageProps) => {
+  const local = findStudioSchema(studioInfo.name);
   useEffect(() => {
     if (!studioInfo.showScheduleWidget) return;
 
@@ -159,8 +160,8 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title={`${studioInfo.name} Studio | balance studios - Reformer Pilates`}
-        description={`Reformer Pilates in ${studioInfo.name}. ${studioInfo.heroDescription} State-of-the-art reformers, expert instructors. Book your class today.`}
+        title={`Reformer Pilates ${studioInfo.name} | balance studios`}
+        description={`Reformer Pilates in ${studioInfo.name}${local ? `, ${local.region}` : ""}. Small groups, expert instructors. New here? 3 classes for €50.`}
         canonical={`/studio/${studioInfo.slug || studioInfo.name.toLowerCase().replace(/\s+/g, '-')}`}
       />
       <LocalBusinessSchema studioName={studioInfo.name} />
@@ -178,7 +179,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
               <div className="max-w-4xl mx-auto">
                 {/* Studio Name */}
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading italic mb-6" style={{ color: '#A3C1AD' }}>
-                  {studioInfo.name}
+                  <span className="sr-only">Reformer Pilates in </span>{studioInfo.name}
                 </h1>
                 
                 {/* Tagline */}
@@ -210,7 +211,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
             <div className="relative z-10 container mx-auto px-4 pb-16 md:pb-20">
               <div className="max-w-3xl">
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading italic mb-6 [text-shadow:0_2px_22px_rgba(0,0,0,0.5)]" style={{ color: '#A3C1AD' }}>
-                  {studioInfo.name}
+                  <span className="sr-only">Reformer Pilates in </span>{studioInfo.name}
                 </h1>
                 <p className="text-white text-xl md:text-2xl max-w-2xl leading-relaxed mb-4 font-medium italic">
                   It's all about balance.
@@ -323,6 +324,38 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
             </div>
           </div>
         </section>
+
+        {/* Local intro — helps Google match this page to "pilates {town}" searches */}
+        {local && (
+          <section className="py-14 md:py-20 bg-background">
+            <div className="container mx-auto px-4 max-w-3xl">
+              <h2 className="font-heading italic text-3xl md:text-5xl text-foreground mb-6">
+                Reformer Pilates in {studioInfo.name}<span className="text-sage">.</span>
+              </h2>
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-4">
+                balance {studioInfo.name} is our {local.region} home for {local.classes.length > 1 ? local.classes.slice(0, -1).join(", ") + " and " + local.classes[local.classes.length - 1] : `${local.classes[0]} only`}. You'll find us at {local.street}, {local.locality}{local.postalCode ? `, ${local.postalCode}` : ""}.
+              </p>
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-8">
+                Classes are small, so your instructor knows your name and can guide every movement. Beginners are always welcome. Most people start with a Classic class, then move on to Sculpt or Challenge as they get stronger. New to balance? Try 3 Reformer classes for €50.
+              </p>
+              <div className="divide-y divide-border border-y border-border">
+                {[
+                  { q: `Is Reformer Pilates in ${studioInfo.name} good for beginners?`, a: "Yes. Classic classes are built for first-timers, and your instructor will set up the reformer with you." },
+                  { q: `What classes run at balance ${studioInfo.name}?`, a: `${local.classes.join(", ")}. Check the timetable above for times.` },
+                  { q: "How do I book my first class?", a: "Grab the intro offer (3 classes for €50), then book through the timetable on this page or the balance app." },
+                ].map((f) => (
+                  <details key={f.q} className="group py-4">
+                    <summary className="cursor-pointer list-none flex justify-between items-center font-heading text-lg text-foreground">
+                      {f.q}
+                      <span className="text-sage text-2xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="mt-3 text-foreground/75 leading-relaxed">{f.a}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Momence Schedule Widget */}
         {studioInfo.showScheduleWidget && (
