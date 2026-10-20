@@ -30,17 +30,17 @@ const Pricing = () => {
         <section className="pt-2 pb-4">
           <div className="container mx-auto px-4">
             <div className="flex justify-center">
-              <div className="inline-flex p-1 rounded-full border-2 border-sage/40 bg-background shadow-sm">
+              <div className="inline-flex p-1 rounded-full border-2 border-primary/40 bg-background shadow-sm">
                 <button
                   onClick={() => setClassType("reformer")}
-                  className={`px-5 md:px-8 py-2.5 rounded-full text-sm md:text-base font-heading transition-all ${classType === "reformer" ? "text-black shadow-md" : "text-foreground/70 hover:text-foreground"}`}
+                  className={`px-5 md:px-8 py-2.5 rounded-full text-sm md:text-base font-heading font-semibold transition-all ${classType === "reformer" ? "text-black shadow-md" : "text-foreground/70 hover:text-foreground"}`}
                   style={classType === "reformer" ? sage : undefined}
                 >
                   Reformer
                 </button>
                 <button
                   onClick={() => setClassType("mat")}
-                  className={`px-5 md:px-8 py-2.5 rounded-full text-sm md:text-base font-heading transition-all ${classType === "mat" ? "text-black shadow-md" : "text-foreground/70 hover:text-foreground"}`}
+                  className={`px-5 md:px-8 py-2.5 rounded-full text-sm md:text-base font-heading font-semibold transition-all ${classType === "mat" ? "text-black shadow-md" : "text-foreground/70 hover:text-foreground"}`}
                   style={classType === "mat" ? sage : undefined}
                 >
                   Mat, Barre & Yoga
@@ -56,7 +56,7 @@ const Pricing = () => {
         <section className="py-8 md:py-12 animate-fade-in">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
-              <div className="relative bg-background p-8 md:p-10 rounded-2xl border border-sage/40 hover:border-sage hover:shadow-lg transition-all duration-300 animate-fade-in flex flex-col">
+              <div className="relative bg-background p-8 md:p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in flex flex-col">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="relative text-black px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg overflow-hidden whitespace-nowrap" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                     <Sparkles className="w-5 h-5 relative z-10" />
@@ -65,7 +65,7 @@ const Pricing = () => {
                 </div>
 
                 <div className="text-center mb-6 mt-4">
-                  <h2 className="text-2xl md:text-3xl font-heading italic font-normal text-foreground mb-3">
+                  <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-3">
                     Intro Offer: 3 Reformer Classes for €50
                   </h2>
                   <p className="text-muted-foreground">The perfect way to discover balance studios</p>
@@ -79,7 +79,7 @@ const Pricing = () => {
                     "First-time clients only",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-sage-deep flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
                       <span className="text-foreground">{feature}</span>
                     </li>
                   ))}
@@ -97,11 +97,11 @@ const Pricing = () => {
 
 
         {/* Reformer Class Packs */}
-        <section className="py-10 md:py-14 bg-sage/10">
+        <section className="py-10 md:py-14 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10 md:mb-12">
-                <h2 className="text-4xl font-heading italic font-normal text-foreground mb-4">
+                <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
                   Reformer Class Packs
                 </h2>
                 <p className="text-lg text-muted-foreground">
@@ -111,7 +111,7 @@ const Pricing = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 {[
-                  { classes: 1, price: "€24", validity: "Valid 30 days from first class", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997", popular: false },
+                  { classes: 1, price: "€24", validity: "Valid 30 days from first class", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997", popular: true },
                   { classes: 3, price: "€65", validity: "Valid 30 days from first class", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988", popular: false },
                   { classes: 6, price: "€130", validity: "Valid 60 days from first class", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990", popular: false },
                   { classes: 10, price: "€215", validity: "Valid 310 days from first class", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", popular: true },
@@ -119,7 +119,7 @@ const Pricing = () => {
                 ].map((pack: { classes: number; price: string; oldPrice?: string; validity: string; link: string; popular: boolean; sale?: boolean }, index) => (
                   <div
                     key={pack.classes}
-                    className={`relative bg-background p-6 rounded-2xl border hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in ${pack.popular ? 'border-[#A3C1AD] shadow-lg' : 'border-sage/40 hover:border-sage'}`}
+                    className={`relative bg-background p-6 rounded-lg border-2 hover:shadow-lg transition-all duration-300 animate-fade-in ${pack.popular ? 'border-[#A3C1AD] shadow-lg' : 'border-primary/40 hover:border-primary/60'}`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {pack.popular && (
@@ -135,16 +135,16 @@ const Pricing = () => {
                           Summer Sale
                         </span>
                       )}
-                      <h3 className="text-2xl font-heading italic font-normal text-foreground mb-2">
+                      <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
                         {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
                       </h3>
                       <div className="mb-1 flex items-baseline justify-center gap-2">
                         {pack.oldPrice && (
                           <span className="text-lg font-heading text-muted-foreground line-through">{pack.oldPrice}</span>
                         )}
-                        <span className="text-3xl font-heading italic font-normal text-black">{pack.price}</span>
+                        <span className="text-3xl font-heading font-bold text-black">{pack.price}</span>
                       </div>
-                      <p className="text-sm font-medium text-foreground">€{(Number(pack.price.slice(1)) / pack.classes).toFixed(2).replace(".00","")} per class</p><p className="text-xs text-muted-foreground mt-1">{pack.validity}</p>
+                      <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
                     <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
                       <a href={pack.link} target="_blank" rel="noopener noreferrer">
@@ -159,11 +159,11 @@ const Pricing = () => {
         </section>
 
         {/* Memberships */}
-        <section className="py-10 md:py-14 bg-sage/10">
+        <section className="py-10 md:py-14 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-10 md:mb-12">
-                <h2 className="text-4xl font-heading italic font-normal text-foreground mb-4">
+                <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
                   Reformer Memberships
                 </h2>
                 <p className="text-lg text-muted-foreground">
@@ -176,26 +176,26 @@ const Pricing = () => {
                   { classes: "4", price: "€80", perClass: "€20/class", popular: false, link: "https://momence.com/Balance/membership/Monthly-Membership---4-classes/574026" },
                   { classes: "6", price: "€120", perClass: "€20/class", popular: false, link: "https://momence.com/Balance/membership/Monthly-Membership---6-classes/574023" },
                   { classes: "8", price: "€160", perClass: "€20/class", popular: true, link: "https://momence.com/Balance/membership/Monthly-membership---8-classes/574021" },
-                  { classes: "Unlimited", price: "€240", perClass: "Best Value", popular: false, link: "https://momence.com/Balance/membership/Monthly-Membership---Unlimited-Reformer-classes/574005" },
+                  { classes: "Unlimited", price: "€240", perClass: "Best Value", popular: true, link: "https://momence.com/Balance/membership/Monthly-Membership---Unlimited-Reformer-classes/574005" },
                 ].map((membership, index) => (
                   <div
                     key={membership.classes}
-                    className="relative bg-background p-8 rounded-xl border-2 border-sage/40 hover:border-sage hover:shadow-lg transition-all duration-300 animate-fade-in"
+                    className="relative bg-background p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {membership.popular && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-sage text-sage-deep-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
                           Popular
                         </span>
                       </div>
                     )}
 
                     <div className="text-center">
-                      <h3 className="text-xl font-heading italic font-normal text-foreground mb-2">
+                      <h3 className="text-xl font-heading font-bold text-foreground mb-2">
                         {membership.classes} Classes
                       </h3>
-                      <p className="text-4xl font-heading italic font-normal text-black mb-1">
+                      <p className="text-4xl font-heading font-bold text-black mb-1">
                         {membership.price}
                       </p>
                       <p className="text-sm text-muted-foreground mb-6">{membership.perClass}</p>
@@ -208,7 +208,7 @@ const Pricing = () => {
                         "Cancel anytime",
                       ].map((feature) => (
                         <li key={feature} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-sage-deep flex-shrink-0" />
+                          <Check className="w-4 h-4 text-primary flex-shrink-0" />
                           <span className="text-muted-foreground">{feature}</span>
                         </li>
                       ))}
@@ -245,7 +245,7 @@ const Pricing = () => {
         <section className="py-8 md:py-12 animate-fade-in">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
-              <div className="relative bg-background p-8 md:p-10 rounded-2xl border border-sage/40 hover:border-sage hover:shadow-lg transition-all duration-300 flex flex-col">
+              <div className="relative bg-background p-8 md:p-10 rounded-2xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 flex flex-col">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="relative text-black px-6 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg overflow-hidden whitespace-nowrap" style={sage}>
                     <Sparkles className="w-5 h-5 relative z-10" />
@@ -254,7 +254,7 @@ const Pricing = () => {
                 </div>
 
                 <div className="text-center mb-6 mt-4">
-                  <h2 className="text-2xl md:text-3xl font-heading italic font-normal text-foreground mb-3">
+                  <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-3">
                     Intro Offer: 3 Mat / Barre / Yoga for €40
                   </h2>
                   <p className="text-muted-foreground">Pick & mix across all Mat, Barre & Yoga classes</p>
@@ -268,7 +268,7 @@ const Pricing = () => {
                     "First-time clients only",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-sage-deep flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
                       <span className="text-foreground">{feature}</span>
                     </li>
                   ))}
@@ -285,32 +285,32 @@ const Pricing = () => {
         </section>
 
         {/* Studio Availability Notice */}
-        <section className="py-6 md:py-8 bg-sage/10">
+        <section className="py-6 md:py-8 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto bg-background rounded-xl border-2 border-sage/40 p-6 md:p-8">
+            <div className="max-w-3xl mx-auto bg-background rounded-xl border-2 border-primary/40 p-6 md:p-8">
               <div className="flex items-start gap-3 mb-4">
-                <MapPin className="w-6 h-6 text-sage-deep flex-shrink-0 mt-0.5" />
-                <h3 className="text-xl font-heading italic font-normal text-foreground">
+                <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                <h3 className="text-xl font-heading font-bold text-foreground">
                   Where to find these classes
                 </h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="p-4 rounded-lg bg-sage/5 border border-sage/20">
+                <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
                   <h4 className="font-semibold text-foreground mb-1">Mat Pilates</h4>
                   <p className="text-sm text-muted-foreground">
                     Limerick & Kildare Town
                   </p>
                 </div>
-                <div className="p-4 rounded-lg bg-sage/5 border border-sage/20">
+                <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
                   <h4 className="font-semibold text-foreground mb-1">Barre</h4>
                   <p className="text-sm text-muted-foreground">
                     Limerick & Kildare Town
                   </p>
                 </div>
-                <div className="p-4 rounded-lg bg-sage/5 border border-sage/20">
+                <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
                   <h4 className="font-semibold text-foreground mb-1">Yoga</h4>
                   <p className="text-sm text-muted-foreground">
-                    Limerick &amp; Kildare Town
+                    Limerick only
                   </p>
                 </div>
               </div>
@@ -319,11 +319,11 @@ const Pricing = () => {
         </section>
 
         {/* Mat/Barre/Yoga Class Packs */}
-        <section className="py-10 md:py-14 bg-sage/10">
+        <section className="py-10 md:py-14 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10 md:mb-12">
-                <h2 className="text-4xl font-heading italic font-normal text-foreground mb-4">
+                <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
                   Mat, Barre & Yoga Class Packs
                 </h2>
                 <p className="text-lg text-muted-foreground">
@@ -339,7 +339,7 @@ const Pricing = () => {
                 ].map((pack: { classes: number; price: string; oldPrice?: string; validity: string; popular: boolean; link: string }, index) => (
                   <div
                     key={pack.classes}
-                    className={`relative bg-background p-6 rounded-2xl border hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in ${pack.popular ? 'border-[#A3C1AD] shadow-lg' : 'border-sage/40 hover:border-sage'}`}
+                    className={`relative bg-background p-6 rounded-lg border-2 hover:shadow-lg transition-all duration-300 animate-fade-in ${pack.popular ? 'border-[#A3C1AD] shadow-lg' : 'border-primary/40 hover:border-primary/60'}`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {pack.popular && (
@@ -355,16 +355,16 @@ const Pricing = () => {
                           Summer Sale
                         </span>
                       )}
-                      <h3 className="text-2xl font-heading italic font-normal text-foreground mb-2">
+                      <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
                         {pack.classes} {pack.classes === 1 ? "Class" : "Classes"}
                       </h3>
                       <div className="mb-1 flex items-baseline justify-center gap-2">
                         {pack.oldPrice && (
                           <span className="text-lg font-heading text-muted-foreground line-through">{pack.oldPrice}</span>
                         )}
-                        <span className="text-3xl font-heading italic font-normal text-black">{pack.price}</span>
+                        <span className="text-3xl font-heading font-bold text-black">{pack.price}</span>
                       </div>
-                      <p className="text-sm font-medium text-foreground">€{(Number(pack.price.slice(1)) / pack.classes).toFixed(2).replace(".00","")} per class</p><p className="text-xs text-muted-foreground mt-1">{pack.validity}</p>
+                      <p className="text-sm text-muted-foreground">{pack.validity}</p>
                     </div>
                     <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={sage}>
                       <a href={pack.link} target="_blank" rel="noopener noreferrer">
@@ -384,7 +384,7 @@ const Pricing = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10 md:mb-12">
-                <h2 className="text-4xl font-heading italic font-normal text-foreground mb-4">
+                <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
                   Mat, Barre & Yoga Memberships
                 </h2>
                 <p className="text-lg text-muted-foreground">
@@ -399,22 +399,22 @@ const Pricing = () => {
                 ].map((membership, index) => (
                   <div
                     key={membership.classes}
-                    className="relative bg-background p-8 rounded-xl border-2 border-sage/40 hover:border-sage hover:shadow-lg transition-all duration-300 animate-fade-in"
+                    className="relative bg-background p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {membership.popular && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-sage text-sage-deep-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
                           Popular
                         </span>
                       </div>
                     )}
 
                     <div className="text-center">
-                      <h3 className="text-xl font-heading italic font-normal text-foreground mb-2">
+                      <h3 className="text-xl font-heading font-bold text-foreground mb-2">
                         {membership.classes} Classes / Month
                       </h3>
-                      <p className="text-4xl font-heading italic font-normal text-black mb-1">
+                      <p className="text-4xl font-heading font-bold text-black mb-1">
                         {membership.price}
                       </p>
                       <p className="text-sm text-muted-foreground mb-6">{membership.perClass}</p>
@@ -427,7 +427,7 @@ const Pricing = () => {
                         "Cancel anytime",
                       ].map((feature) => (
                         <li key={feature} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-sage-deep flex-shrink-0" />
+                          <Check className="w-4 h-4 text-primary flex-shrink-0" />
                           <span className="text-muted-foreground">{feature}</span>
                         </li>
                       ))}
@@ -442,8 +442,8 @@ const Pricing = () => {
                 ))}
               </div>
 
-              <div className="mt-8 p-4 bg-sage/5 rounded-lg border border-sage/20 text-center">
-                <Info className="w-6 h-6 text-sage-deep mx-auto mb-2" />
+              <div className="mt-8 p-4 bg-primary/5 rounded-lg border border-primary/20 text-center">
+                <Info className="w-6 h-6 text-primary mx-auto mb-2" />
                 <p className="text-sm text-foreground">
                   Memberships auto-renew on the same date each month. Classes don't carry over. Cancel anytime with 7 days notice.
                 </p>
