@@ -140,7 +140,7 @@ const OurStudios = () => {
                   >
                     <img
                       src={studio.image}
-                      alt={`Inside balance ${studio.name}`}
+                      alt={`Reformer Pilates studio in ${studio.name} – balance studios`}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />

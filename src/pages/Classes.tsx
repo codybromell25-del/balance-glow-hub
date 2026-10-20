@@ -130,7 +130,7 @@ const ClassSection = ({ c, index }: { c: ClassInfo; index: number }) => {
     >
       <div className="grid items-center gap-8 md:grid-cols-2 md:gap-16">
         <div className={`overflow-hidden rounded-3xl ${c.mobileAspect || "aspect-[4/3]"} md:aspect-[4/5] ${flip ? "md:order-2" : ""}`}>
-          <img src={c.image} alt={`${c.short} class at balance studios`} loading="lazy" className="h-full w-full object-cover" style={c.imagePosition ? { objectPosition: c.imagePosition } : undefined} />
+          <img src={c.image} alt={`${c.short} Pilates class at balance studios, Ireland`} loading="lazy" className="h-full w-full object-cover" style={c.imagePosition ? { objectPosition: c.imagePosition } : undefined} />
         </div>
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">
@@ -150,7 +150,7 @@ const ClassSection = ({ c, index }: { c: ClassInfo; index: number }) => {
             ))}
           </ul>
           <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-foreground/15 px-4 py-1.5 text-sm">
-            <MapPin size={14} /> {c.where}
+            <MapPin size={14} /> <a href="/our-studios" className="underline-offset-4 hover:underline">{c.where}</a>
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-5">
             <a
@@ -174,8 +174,8 @@ const ClassSection = ({ c, index }: { c: ClassInfo; index: number }) => {
 const Classes = () => (
   <div className="min-h-screen">
     <SEO
-      title="Class Types | balance studios - Reformer Pilates"
-      description="Classic, Sculpt, Challenge, Gentle Flow, Mat, Pilates Barre and Yoga at balance studios. Find the class that suits you."
+      title="Reformer, Mat, Barre & Yoga Classes | balance studios"
+      description="Reformer Pilates (Classic, Sculpt, Challenge, Gentle Flow), Mat, Barre and Yoga classes in Limerick, Kildare, Wicklow & Meath. Find your class."
       canonical="/classes"
     />
     <Navigation />

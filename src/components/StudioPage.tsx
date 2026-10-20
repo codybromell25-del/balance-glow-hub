@@ -200,7 +200,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
             <div className="absolute inset-0">
               <img 
                 src={studioInfo.image} 
-                alt={`balance ${studioInfo.name} studio`}
+                alt={`Reformer Pilates studio interior at balance ${studioInfo.name}`}
                 className={`w-full h-full object-cover ${studioInfo.heroPosition || "object-center"}`}
               />
               {/* Gradient Overlay */}
