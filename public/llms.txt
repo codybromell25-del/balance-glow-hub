@@ -1,0 +1,24 @@
+# balance studios
+
+> Reformer Pilates studios in Ireland, with six locations: Limerick, Clane, Kildare, Blessington, Enfield and Bray. For those who expect more.
+
+balance runs small-group Reformer Pilates classes. Mat and Barre run at Limerick and Kildare, and Yoga at Limerick and Kildare. New clients can try 3 Reformer classes for €50.
+
+## Pages
+
+- [Home](/): Overview, intro offer and studios.
+- [Our studios](/our-studios): All six studios with addresses, parking and classes.
+- [Class types](/classes): Classic, Sculpt, Challenge, Gentle Flow, Mat, Barre and Yoga.
+- [Pricing](/pricing): Class packs and monthly memberships.
+- [Schedule](/schedule): Live timetable for all studios.
+- [About](/about): The story of balance and founder Kelly.
+- [FAQ](/faq): Common questions about classes and booking.
+
+## Studios
+
+- [Limerick](/studio/limerick)
+- [Clane](/studio/clane)
+- [Kildare](/studio/kildare)
+- [Blessington](/studio/blessington)
+- [Enfield](/studio/enfield)
+- [Bray](/studio/bray)
