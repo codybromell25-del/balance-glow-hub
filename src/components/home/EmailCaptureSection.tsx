@@ -30,6 +30,7 @@ const EmailCaptureSection = () => {
               <Input
                 type="email"
                 placeholder="E-mail"
+                aria-label="Your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required

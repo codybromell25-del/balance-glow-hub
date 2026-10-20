@@ -27,6 +27,7 @@ const HeroSection = () => {
 
           <h1 className="text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[11rem] font-heading font-normal text-white mb-3 md:mb-5 leading-[0.9] tracking-tight [text-shadow:0_2px_24px_rgba(0,0,0,0.6)]">
             balance<span className="text-sage">.</span>
+            <span className="sr-only"> Reformer Pilates studios in Limerick, Kildare, Wicklow &amp; Meath</span>
           </h1>
 
           <div className="flex items-center justify-center md:justify-start gap-3 md:gap-4 mb-5 md:mb-8">

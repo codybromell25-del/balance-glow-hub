@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { Helmet } from "react-helmet-async";
 import {
   Accordion,
   AccordionContent,
@@ -144,10 +145,25 @@ const FAQ = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="FAQ | balance studios"
+        title="Reformer Pilates FAQ | balance studios"
         description="Frequently asked questions about Reformer Pilates at balance studios. Find answers about classes, pricing, what to wear, and more."
         canonical="/faq"
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqData.flatMap((c) =>
+              c.questions.map((item) => ({
+                "@type": "Question",
+                name: item.q,
+                acceptedAnswer: { "@type": "Answer", text: item.a },
+              })),
+            ),
+          })}
+        </script>
+      </Helmet>
       <Navigation />
       <main className="">
         <section className="py-16 md:py-24 bg-gradient-to-b from-secondary/30 to-background">
