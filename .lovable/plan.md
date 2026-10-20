@@ -39,8 +39,10 @@ For each of Limerick, Clane, Kildare, Blessington, Enfield and Bray:
 - Update the sitemap: add the missing real pages (Limerick booking, mat classes, gentle flow) and leave out test and hidden pages.
 - Add a short AI summary file so ChatGPT and similar tools describe balance correctly.
 
-### 4. Connect Google Search Console (needs you)
-- Connect it in chat with one tap, verify the site, then submit the sitemap. This needs one publish.
+### 4. Google Search Console (done first, connected already)
+- Your Google account is now connected, but it doesn't own balancestudios.ie in Search Console yet.
+- I'll add Google's ownership code to the site, keeping the older code that's already there.
+- Then I'll ask you to publish once, confirm ownership with Google, add the site to your Search Console and submit the sitemap.
 - After that, I can show real Google clicks and confirm each studio page is indexed.
 
 ### 5. Things only you can do (biggest outside win)
