@@ -341,7 +341,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
               <div className="divide-y divide-border border-y border-border">
                 {[
                   { q: `Is Reformer Pilates in ${studioInfo.name} good for beginners?`, a: "Yes. Classic classes are built for first-timers, and your instructor will set up the reformer with you." },
-                  { q: `What classes run at balance ${studioInfo.name}?`, a: `${local.classes.join(", ")}. Check the timetable above for times.` },
+                  { q: `What classes run at balance ${studioInfo.name}?`, a: `${local.classes.join(", ")}. See the timetable on this page for times.` },
                   { q: "How do I book my first class?", a: "Grab the intro offer (3 classes for €50), then book through the timetable on this page or the balance app." },
                 ].map((f) => (
                   <details key={f.q} className="group py-4">
