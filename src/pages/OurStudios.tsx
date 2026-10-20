@@ -94,7 +94,7 @@ const OurStudios = () => {
     <div className="min-h-screen">
       <SEO 
         title="Our Studios | balance studios - 6 Locations in Ireland"
-        description="Six stunning Reformer Pilates studios across Limerick, Kildare, Wicklow & Meath. Limerick, Clane, Kildare Town, Blessington, Enfield & Bray. Modern reformers, serene spaces, expert instructors."
+        description="Find your nearest balance Reformer Pilates studio: Limerick, Clane, Kildare Town, Blessington, Enfield and Bray. Addresses, parking and classes."
         canonical="/our-studios"
       />
       <LocalBusinessSchema />
