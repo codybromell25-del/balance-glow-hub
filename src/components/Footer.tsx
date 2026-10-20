@@ -80,11 +80,11 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
   };
 
   const locations = [
-    { name: "Clane", path: "/our-studios" },
-    { name: "Kildare Town", path: "/our-studios" },
-    { name: "Blessington", path: "/our-studios" },
-    { name: "Enfield", path: "/our-studios" },
-    { name: "Bray", path: "/our-studios" },
+    { name: "Clane", path: "/studio/clane" },
+    { name: "Kildare Town", path: "/studio/kildare" },
+    { name: "Blessington", path: "/studio/blessington" },
+    { name: "Enfield", path: "/studio/enfield" },
+    { name: "Bray", path: "/studio/bray" },
     { name: "Limerick", path: "/studio/limerick" },
   ];
 
@@ -279,9 +279,9 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
               <ul className="space-y-2 text-sm">
                 {locations.map((location) => (
                   <li key={location.name}>
-                    <Link to={location.path} className="text-muted-foreground hover:text-primary transition-colors">
-                      {location.name}
-                    </Link>
+                    <a href={location.path} className="text-muted-foreground hover:text-primary transition-colors">
+                      <span className="sr-only">Reformer Pilates </span>{location.name}
+                    </a>
                   </li>
                 ))}
               </ul>
