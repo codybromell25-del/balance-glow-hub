@@ -97,7 +97,7 @@ const Pricing = () => {
 
 
         {/* Reformer Class Packs */}
-        <section className="py-10 md:py-14 bg-secondary/30">
+        <section className="py-10 md:py-14 bg-sage/10">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10 md:mb-12">
@@ -159,7 +159,7 @@ const Pricing = () => {
         </section>
 
         {/* Memberships */}
-        <section className="py-10 md:py-14 bg-secondary/30">
+        <section className="py-10 md:py-14 bg-sage/10">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-10 md:mb-12">
@@ -285,7 +285,7 @@ const Pricing = () => {
         </section>
 
         {/* Studio Availability Notice */}
-        <section className="py-6 md:py-8 bg-secondary/30">
+        <section className="py-6 md:py-8 bg-sage/10">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto bg-background rounded-xl border-2 border-sage/40 p-6 md:p-8">
               <div className="flex items-start gap-3 mb-4">
@@ -310,7 +310,7 @@ const Pricing = () => {
                 <div className="p-4 rounded-lg bg-sage/5 border border-sage/20">
                   <h4 className="font-semibold text-foreground mb-1">Yoga</h4>
                   <p className="text-sm text-muted-foreground">
-                    Limerick only
+                    Limerick &amp; Kildare Town
                   </p>
                 </div>
               </div>
@@ -319,7 +319,7 @@ const Pricing = () => {
         </section>
 
         {/* Mat/Barre/Yoga Class Packs */}
-        <section className="py-10 md:py-14 bg-secondary/30">
+        <section className="py-10 md:py-14 bg-sage/10">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10 md:mb-12">
