@@ -18,3 +18,6 @@
 - [ ] R3: headings, animations, image speed, stats spacing, app bar
 - [x] Our Studios page: boxed card grid replaced with editorial alternating photo/text rows (filter pills kept)
 - [x] Class availability corrected: Enfield is Reformer only (no Mat); Kildare now lists Yoga alongside Limerick (cards, chips, filters, class-type "where" lines)
+- [x] Google Search Console connected, site verified, sitemap submitted
+- [x] SEO: studio pages titled "Reformer Pilates {town}", local intro + FAQ section, cleaned business details (no fake phone/ratings), FAQ rich data, sitemap + llms.txt, footer links to each studio
+- [ ] SEO: Google Business Profile per studio + local mentions (owner task)
