@@ -370,6 +370,9 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   </details>
                 ))}
               </div>
+              <p className="mt-8 text-sm text-foreground/70">
+                Explore our <a href="/classes" className="underline underline-offset-4 decoration-sage">class types</a>, see <a href="/pricing" className="underline underline-offset-4 decoration-sage">prices & packs</a>, or visit <a href="/our-studios" className="underline underline-offset-4 decoration-sage">all six balance studios</a>.
+              </p>
             </div>
           </section>
         )}
