@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import MobileBookBar from "./components/MobileBookBar";
 import Index from "./pages/Index";
+import Events from "./pages/Events";
 import About from "./pages/About";
 import Classes from "./pages/Classes";
 import Pricing from "./pages/Pricing";
@@ -61,6 +62,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
 
+          <Route path="/events" element={<Events />} />
           <Route path="/classes" element={<Classes />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/locations" element={<Locations />} />

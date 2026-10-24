@@ -9,6 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        sage: "bg-sage text-sage-foreground hover:bg-sage/80 shadow-none",
+        quiet: "border border-foreground/20 bg-background text-foreground hover:bg-sage/15 shadow-none",
         default: "bg-gradient-button text-black shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border-2 border-primary/40 bg-gradient-button text-black hover:border-primary/60 hover:shadow-lg",

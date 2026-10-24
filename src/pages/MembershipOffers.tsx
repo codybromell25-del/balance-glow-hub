@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Check } from "lucide-react";
+import MembershipSection from "@/components/membership/MembershipSection";
 import SEO from "@/components/SEO";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import heroImgReformer from "@/assets/studio-blessington.jpg";
@@ -18,8 +18,6 @@ const sage = {
 type ClassType = "reformer" | "mat";
 
 type Pack = { classes: number; price: string; oldPrice?: string; validity: string; link: string; featured?: boolean };
-type Membership = { classes: string; price: string; perClass: string; link: string; featured?: boolean };
-
 const reformerPacks: Pack[] = [
   { classes: 1, price: "€24", validity: "Valid 30 days", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
   { classes: 3, price: "€65", validity: "Valid 30 days", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
@@ -28,28 +26,15 @@ const reformerPacks: Pack[] = [
   { classes: 20, price: "€400", validity: "Valid ~20 mo", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
 ];
 
-const reformerMemberships: Membership[] = [
-  { classes: "4", price: "€80", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-Membership---4-classes/574026" },
-  { classes: "6", price: "€120", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-Membership---6-classes/574023" },
-  { classes: "8", price: "€160", perClass: "€20 / class", link: "https://momence.com/Balance/membership/Monthly-membership---8-classes/574021", featured: true },
-  { classes: "Unlimited", price: "€240", perClass: "Best value", link: "https://momence.com/Balance/membership/Monthly-Membership---Unlimited-Reformer-classes/574005", featured: true },
-];
-
 const matPacks: Pack[] = [
   { classes: 1, price: "€15", validity: "Valid 30 days", link: "https://momence.com/m/573998" },
   { classes: 3, price: "€42", validity: "Valid 30 days", link: "https://momence.com/m/771509", featured: true },
   { classes: 6, price: "€84", validity: "Valid 60 days", link: "https://momence.com/m/771510" },
 ];
 
-const matMemberships: Membership[] = [
-  { classes: "4", price: "€50", perClass: "€12.50 / class", link: "https://momence.com/m/771514" },
-  { classes: "6", price: "€75", perClass: "€12.50 / class", link: "https://momence.com/m/771691", featured: true },
-];
-
 const MembershipOffers = () => {
   const [classType, setClassType] = useState<ClassType>("reformer");
   const classPacks = classType === "reformer" ? reformerPacks : matPacks;
-  const memberships = classType === "reformer" ? reformerMemberships : matMemberships;
   const packsKicker = classType === "reformer" ? "01 — Reformer Class Packs" : "01 — Mat · Barre · Yoga Class Packs";
   const membershipsKicker = classType === "reformer" ? "02 — Reformer Memberships" : "02 — Mat · Barre · Yoga Memberships";
   const packsCopy = classType === "reformer"
@@ -139,7 +124,7 @@ const MembershipOffers = () => {
                 {[
                   { label: "Mat Pilates", studios: "Limerick · Kildare Town" },
                   { label: "Barre", studios: "Limerick · Kildare Town" },
-                  { label: "Yoga", studios: "Limerick only" },
+                  { label: "Yoga", studios: "Limerick · Kildare Town" },
                 ].map((row) => (
                   <div
                     key={row.label}
@@ -157,6 +142,8 @@ const MembershipOffers = () => {
           </div>
         </section>
       )}
+
+      <MembershipSection classType={classType} />
 
       {/* Class Packs */}
       <section className="py-16 md:py-24">
@@ -239,86 +226,6 @@ const MembershipOffers = () => {
                     </div>
                   </a>
                 ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Memberships */}
-      <section className="py-20 md:py-28 bg-foreground/[0.03]">
-        <div className="container mx-auto px-6 md:px-10">
-          <div className="max-w-3xl mb-12 md:mb-16">
-            <p className="text-xs tracking-[0.25em] uppercase text-foreground/60">{membershipsKicker}</p>
-            <h2 className="mt-3 font-heading text-4xl md:text-5xl tracking-tight">
-              A monthly rhythm.
-            </h2>
-            <p className="mt-4 text-foreground/70 leading-relaxed max-w-xl">
-              {membershipsCopy}
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-            <div className="lg:col-span-7">
-              <div className="grid sm:grid-cols-2 gap-5">
-                {memberships.map((m) => (
-                  <a
-                    key={m.classes}
-                    href={m.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`group relative flex flex-col justify-between bg-background border rounded-sm p-8 transition-all hover:shadow-lg hover:-translate-y-0.5 ${
-                      m.featured ? "border-[#A3C1AD]" : "border-foreground/10 hover:border-foreground/30"
-                    }`}
-                  >
-                    {m.featured && (
-                      <span
-                        className="absolute -top-2 left-8 text-[10px] tracking-[0.2em] uppercase px-3 py-1 text-black rounded-full"
-                        style={sage}
-                      >
-                        Favourite
-                      </span>
-                    )}
-                    <div>
-                      <p className="text-xs tracking-[0.25em] uppercase text-foreground/55">Monthly</p>
-                      <h3 className="mt-3 font-heading text-3xl tracking-tight">
-                        {m.classes} {m.classes === "Unlimited" ? "" : "Classes"}
-                      </h3>
-                      <p className="mt-5 font-heading text-5xl tracking-tight text-foreground tabular-nums">
-                        {m.price}
-                      </p>
-                      <p className="text-sm text-foreground/60 mt-1">{m.perClass}</p>
-                    </div>
-                    <ul className="mt-8 space-y-2 text-sm text-foreground/70">
-                      {["Auto-renews monthly", "Valid at all six studios", "Cancel anytime"].map((f) => (
-                        <li key={f} className="flex items-center gap-2">
-                          <Check className="w-3.5 h-3.5 text-foreground/50" />
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-8 pt-5 border-t border-foreground/10 flex items-center justify-between">
-                      <span className="text-sm font-heading tracking-wide text-foreground">Choose plan</span>
-                      <span className="text-foreground/50 transition-transform group-hover:translate-x-1">→</span>
-                    </div>
-                  </a>
-                ))}
-              </div>
-              <p className="mt-6 text-xs text-foreground/55 leading-relaxed">
-                Memberships auto-renew monthly. Unused classes don't roll over. Cancel anytime with 7 days notice before your next billing date. Reformer classes valid across all 6 balance studios locations; Mat, Barre & Yoga classes available in Kildare Town & Limerick.
-              </p>
-            </div>
-
-            <div className="lg:col-span-5 lg:sticky lg:top-10">
-              <div className="overflow-hidden rounded-sm">
-                <img
-                  src={classType === "reformer" ? membershipsImgReformer : membershipsImgMat}
-                  alt={classType === "reformer" ? "Practitioner on a reformer in soft daylight" : "Yoga and stretching at balance studios"}
-                  loading="lazy"
-                  width={1200}
-                  height={1400}
-                  className="w-full h-[420px] md:h-[560px] object-cover"
-                />
               </div>
             </div>
           </div>

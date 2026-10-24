@@ -1,97 +1,18 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { CalendarDays, MapPin, Clock, ExternalLink } from "lucide-react";
-import eventHero from "@/assets/balance-seawater-event.png";
-import balanceLogo from "@/assets/balance-removebg-preview.png";
-
-const Events = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <SEO
-        title="Events | balance studios"
-        description="Join balance studios for special wellness events. Mat Pilates, Sauna & Coffee Morning in Bray with Seawater Saunas & Catalyst."
-        canonical="/events"
-      />
-      <Navigation />
-
-      <main className="">
-        <section className="container mx-auto px-4 pb-20">
-          <div className="max-w-3xl mx-auto">
-            {/* Title & Meta */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading text-foreground leading-tight mb-6 text-center">
-              Mat Pilates, Sauna & Coffee Morning<span className="text-primary">.</span>
-            </h1>
-
-            <div className="flex flex-wrap items-center justify-center gap-6 text-muted-foreground mb-10">
-              <span className="flex items-center gap-2">
-                <CalendarDays size={18} className="text-primary" />
-                Saturday March 21st
-              </span>
-              <span className="flex items-center gap-2">
-                <Clock size={18} className="text-primary" />
-                9:00 AM
-              </span>
-              <span className="flex items-center gap-2">
-                <MapPin size={18} className="text-primary" />
-                Bray
-              </span>
-            </div>
-
-            {/* Hero Image */}
-            <img
-              src={eventHero}
-              alt="Balance Studios x Seawater Saunas & Catalyst event – Mat Pilates, Sauna & Coffee Morning in Bray"
-              className="w-full rounded-2xl shadow-xl mb-12"
-            />
-
-            {/* Body Copy */}
-            <div className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12 space-y-6 text-center">
-              <p>
-                Join us for a beautiful morning by the sea designed to help you slow down, move your body, and completely reset.
-              </p>
-              <p>
-                We begin with a Mat Pilates class at the stunning Seawater Saunas, where you will move through a full-body session designed to gently energise and strengthen.
-              </p>
-              <p>
-                After class, enjoy access to Seawater Saunas' incredible rooftop wellness facilities overlooking the Irish Sea. Relax and unwind with hot tubs, plunge pools, ice baths and saunas, experiencing the powerful benefits of contrast therapy in a truly immersive coastal setting.
-              </p>
-              <p>
-                Once you are fully relaxed and refreshed, we will take a short stroll across the road to Catalyst Coffee for a well deserved coffee and treat, and a chance to chat and connect with the group.
-              </p>
-              <p>
-                Expect movement, sea air, warmth, great coffee, and great company.
-              </p>
-              <p>
-                A perfect way to step away from the busy pace of life and give your mind and body the reset it deserves.
-              </p>
-
-              <div className="flex items-center justify-center pt-4">
-                <img src={balanceLogo} alt="balance studios" className="h-16 w-auto opacity-70" />
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="text-center">
-              <a
-                href="https://momence.com/balance/balance-by-the-sea-%F0%9F%A4%8D%F0%9F%8C%8A-/132959814?skipPreview=true"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button size="lg" className="text-base px-10 py-6 gap-2 bg-[#A3C1AD] hover:bg-[#8FB09A] text-white">
-                  Book Your Spot
-                  <ExternalLink size={16} />
-                </Button>
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default Events;
+import photo from "@/assets/clients-laughing.jpg";
+import { communityEvents, eventDate } from "@/lib/communityEvents";
+export default function Events() {
+  const [filter, setFilter] = useState("all");
+  const filters = [["all", "All events"], ["pop-up", "Pop-ups"], ["holiday", "Bring someone"], ["treat", "Studio treats"]];
+  return <div className="bg-background text-foreground"><SEO title="Events & Pop-ups | balance studios" description="Good company, feel-good Reformer and a few extras. Explore balance pop-ups and holiday bring-a-guest classes." canonical="/events" /><Navigation /><main className="container px-4 md:px-8 py-10 md:py-16">
+    <p className="uppercase text-xs mb-4">balance studios · In good company</p><h1 className="text-4xl md:text-6xl leading-tight">Good things, together<span className="text-sage">.</span></h1><p className="max-w-2xl mt-6 text-lg">Something a little different at balance. Join us for good company, a great class and a few extras.</p><img src={photo} alt="Clients sharing a laugh at balance studios" className="w-full h-56 md:h-80 object-cover object-[50%_40%] rounded-md my-8" />
+    <div className="grid md:grid-cols-2 gap-8 border-y border-border py-7 mb-8"><div><h2 className="text-2xl mb-3">Pop-up classes</h2><p>€24 per person. Members save 15% — €20.40.</p></div><div><h2 className="text-2xl mb-3">Your class. Their first taste of balance.</h2><p>Holiday classes: €24 with one person free. Mixed-level Reformer at all six studios. The pop-up member discount does not apply.</p></div></div>
+    <div role="group" aria-label="Filter events" className="flex flex-wrap gap-2 mb-8">{filters.map(([key,label]) => <Button key={key} variant={filter === key ? "sage" : "quiet"} aria-pressed={filter === key} onClick={() => setFilter(key)}>{label}</Button>)}</div>
+    {communityEvents.filter(e => filter === "all" || e.category === filter).map(e => <article key={e.name} className="grid md:grid-cols-[160px_1fr_190px] gap-6 py-8 border-t border-border"><div><time dateTime={e.date} className="font-semibold">{eventDate(e.date)}</time><p className="text-xs mt-2">Time to be confirmed</p></div><div><h2 className="text-2xl md:text-3xl mb-3">{e.name}</h2><p className="text-sm mb-4">{e.locations.length === 6 ? "All six studios" : e.locations.join(" · ")}</p><p className="leading-relaxed max-w-2xl">{e.description}</p></div><div><p className="font-semibold">{e.category === "treat" ? "Usual pass or membership" : e.category === "holiday" ? "€24 · one guest free" : "€24 per person"}</p>{e.category === "pop-up" && <p className="text-sm mt-2">Members: €20.40</p>}<p className="text-sm mt-4">Booking details coming soon</p></div></article>)}
+    <p className="border-t border-border pt-8 mt-4 text-lg max-w-3xl">A little thank-you to our community, and a warm welcome to someone you care about. It's all about balance.</p>
+  </main><Footer /></div>;
+}

@@ -1,4 +1,8 @@
 # Roadmap (site audit)
+- [x] October brief: prominent memberships, updated prices and rollover benefits across membership pages
+- [x] October brief: upcoming community events page and homepage visibility
+- [x] October brief: verify phone/desktop presentation and business-rule tests
+- [ ] October brief: event times, booking links, 12-class purchase link and Momence price/rollover setup — awaiting owner details
 - [x] R1: Limerick shows "Now open"
 - [ ] R1: Confirm 10-class validity ("310 days") — waiting on user
 - [x] R1: Home Google description updated
