@@ -1,3 +1,4 @@
+/// <reference types="bun" />
 import { describe, expect, test } from "bun:test";
 import { reformerMembershipPlans, matMembershipPlans, rolloverPolicy, popUpPrice, popUpMemberDiscount, popUpMemberPrice } from "./membershipPlans";
 import { communityEvents, eventPrice } from "./communityEvents";
