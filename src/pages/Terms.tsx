@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import { rolloverCopy } from "@/lib/membershipPlans";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import SEO from "@/components/SEO";
@@ -141,7 +142,7 @@ const Terms = () => {
                     You may cancel your membership at any time by emailing info@balancestudios.ie.
                   </p>
                   <p>
-                    Unused classes do not carry over to the next month. Any remaining classes at month-end are forfeited.
+                    {rolloverCopy} Other unused classes expire; rollover does not apply to Unlimited memberships.
                   </p>
                   <p>
                     Failure to adhere to our membership policies may result in suspension or termination of your membership.

@@ -5,6 +5,7 @@ import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Info, MapPin } from "lucide-react";
 import SEO from "@/components/SEO";
+import MembershipSection from "@/components/membership/MembershipSection";
 
 type ClassType = "reformer" | "mat";
 
@@ -16,14 +17,14 @@ const Pricing = () => {
     <div className="min-h-screen">
       <SEO 
         title="Pricing & Memberships | balance studios - Reformer Pilates"
-        description="Reformer Pilates class packs from €24 and memberships from €80. New here? 3 classes for €50, valid at all 6 balance studios."
+        description="Reformer Pilates class packs from €24 and memberships from €85. New here? 3 classes for €50, valid at all 6 balance studios."
         canonical="/pricing"
       />
       <Navigation />
       <main className="">
         <PageHeader 
-          title="Pick Your Pack" 
-          subtitle="First, purchase a class pack or membership below. Once you've bought your package, you'll be able to book classes from available time slots at any of our 6 studios."
+          title="More from your membership" 
+          subtitle="Find your monthly rhythm, enjoy a little more from balance, or choose a flexible class pack."
         />
 
         {/* Class type toggle */}
@@ -49,6 +50,8 @@ const Pricing = () => {
             </div>
           </div>
         </section>
+
+        <MembershipSection classType={classType} />
 
         {classType === "reformer" && (
         <>
@@ -158,84 +161,6 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* Memberships */}
-        <section className="py-10 md:py-14 bg-secondary/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-10 md:mb-12">
-                <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
-                  Reformer Memberships
-                </h2>
-                <p className="text-lg text-muted-foreground">
-                  Best value for regular practice. Auto-renews monthly, classes don't carry over.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  { classes: "4", price: "€80", perClass: "€20/class", popular: false, link: "https://momence.com/Balance/membership/Monthly-Membership---4-classes/574026" },
-                  { classes: "6", price: "€120", perClass: "€20/class", popular: false, link: "https://momence.com/Balance/membership/Monthly-Membership---6-classes/574023" },
-                  { classes: "8", price: "€160", perClass: "€20/class", popular: true, link: "https://momence.com/Balance/membership/Monthly-membership---8-classes/574021" },
-                  { classes: "Unlimited", price: "€240", perClass: "Best Value", popular: true, link: "https://momence.com/Balance/membership/Monthly-Membership---Unlimited-Reformer-classes/574005" },
-                ].map((membership, index) => (
-                  <div
-                    key={membership.classes}
-                    className="relative bg-background p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    {membership.popular && (
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-                          Popular
-                        </span>
-                      </div>
-                    )}
-
-                    <div className="text-center">
-                      <h3 className="text-xl font-heading font-bold text-foreground mb-2">
-                        {membership.classes} Classes
-                      </h3>
-                      <p className="text-4xl font-heading font-bold text-black mb-1">
-                        {membership.price}
-                      </p>
-                      <p className="text-sm text-muted-foreground mb-6">{membership.perClass}</p>
-                    </div>
-
-                    <ul className="space-y-2 mb-6 text-sm">
-                      {[
-                        "Auto-renews monthly",
-                        "Valid all locations",
-                        "Cancel anytime",
-                      ].map((feature) => (
-                        <li key={feature} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-                      <a href={membership.link} target="_blank" rel="noopener noreferrer">
-                        Buy Now
-                      </a>
-                    </Button>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 p-6 bg-background rounded-lg border border-border">
-                <h4 className="font-semibold text-foreground mb-2">Membership Terms:</h4>
-                <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Memberships auto-renew on the same date each month</li>
-                  <li>• Classes do not carry over to the next month</li>
-                  <li>• Cancel anytime with 7 days notice before next billing date</li>
-                  <li>• Reformer classes valid across all 6 balance studios locations</li>
-                  <li>• Mat, Barre & Yoga classes available in Kildare Town & Limerick</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
         </>
         )}
 
@@ -310,7 +235,7 @@ const Pricing = () => {
                 <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
                   <h4 className="font-semibold text-foreground mb-1">Yoga</h4>
                   <p className="text-sm text-muted-foreground">
-                    Limerick only
+                    Limerick & Kildare Town
                   </p>
                 </div>
               </div>
@@ -379,78 +304,6 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* Mat/Barre/Yoga Memberships */}
-        <section className="py-10 md:py-14">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-10 md:mb-12">
-                <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
-                  Mat, Barre & Yoga Memberships
-                </h2>
-                <p className="text-lg text-muted-foreground">
-                  Best value for regular practice. Auto-renews monthly, classes don't carry over.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-                {[
-                  { classes: "4", price: "€50", perClass: "€12.50/class", popular: false, link: "https://momence.com/m/771514" },
-                  { classes: "6", price: "€75", perClass: "€12.50/class", popular: true, link: "https://momence.com/m/771691" },
-                ].map((membership, index) => (
-                  <div
-                    key={membership.classes}
-                    className="relative bg-background p-8 rounded-xl border-2 border-primary/40 hover:border-primary/60 hover:shadow-lg transition-all duration-300 animate-fade-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    {membership.popular && (
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-                          Popular
-                        </span>
-                      </div>
-                    )}
-
-                    <div className="text-center">
-                      <h3 className="text-xl font-heading font-bold text-foreground mb-2">
-                        {membership.classes} Classes / Month
-                      </h3>
-                      <p className="text-4xl font-heading font-bold text-black mb-1">
-                        {membership.price}
-                      </p>
-                      <p className="text-sm text-muted-foreground mb-6">{membership.perClass}</p>
-                    </div>
-
-                    <ul className="space-y-2 mb-6 text-sm">
-                      {[
-                        "Pick & mix across Mat, Barre & Yoga",
-                        "Auto-renews monthly",
-                        "Cancel anytime",
-                      ].map((feature) => (
-                        <li key={feature} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <Button asChild className="w-full text-black border-0 shadow-lg hover:brightness-105" style={sage}>
-                      <a href={membership.link} target="_blank" rel="noopener noreferrer">
-                        Buy Now
-                      </a>
-                    </Button>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 p-4 bg-primary/5 rounded-lg border border-primary/20 text-center">
-                <Info className="w-6 h-6 text-primary mx-auto mb-2" />
-                <p className="text-sm text-foreground">
-                  Memberships auto-renew on the same date each month. Classes don't carry over. Cancel anytime with 7 days notice.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
         </>
         )}
       </main>

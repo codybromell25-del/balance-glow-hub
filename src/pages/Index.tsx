@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import MembershipAndEvents from "@/components/home/MembershipAndEvents";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import SocialProofBar from "@/components/home/SocialProofBar";
@@ -20,6 +21,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <SocialProofBar />
+        <MembershipAndEvents />
         <LocationsSection />
         <TestimonialsSection />
         <InstagramStrip />
