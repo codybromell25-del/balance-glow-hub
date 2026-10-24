@@ -1,4 +1,5 @@
 # Roadmap (site audit)
+- [ ] Pricing: chic classical presentation, preserve prices/links/benefits, verify both class choices
 - [x] October brief: prominent memberships, updated prices and rollover benefits across membership pages
 - [x] October brief: upcoming community events page and homepage visibility
 - [x] October brief: verify phone/desktop presentation and business-rule tests
