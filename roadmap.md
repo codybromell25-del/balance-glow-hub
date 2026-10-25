@@ -1,4 +1,7 @@
 # Roadmap (site audit)
+- [ ] Tracking: verify Momence payment reporting support — research in progress
+- [ ] Tracking: apply chosen advertising consent route and update privacy disclosure — awaiting consent choice
+- [ ] Tracking: replace thank-you page-load Purchase with verified payment measurement — awaiting Momence capability evidence
 - [x] Pricing: restore the previous layout, retaining updated membership prices and benefits
 - [x] Provide step-by-step Facebook and Instagram campaign tracking guidance
 - [x] October brief: prominent memberships, updated prices and rollover benefits across membership pages
