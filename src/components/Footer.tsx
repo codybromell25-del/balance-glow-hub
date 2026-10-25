@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { openCookieSettings } from "@/lib/trackingConsent";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
@@ -294,6 +295,7 @@ const Footer = ({ showContact = true }: { showContact?: boolean }) => {
                 <li><Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
                 <li><Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">Terms & Conditions</Link></li>
                 <li><Link to="/cookies" className="text-muted-foreground hover:text-primary transition-colors">Cookie Policy</Link></li>
+                <li><Button variant="quiet" size="sm" onClick={openCookieSettings} className="font-body tracking-normal">Cookie settings</Button></li>
               </ul>
             </div>
           </div>

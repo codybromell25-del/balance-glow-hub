@@ -2,6 +2,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { openCookieSettings } from "@/lib/trackingConsent";
 
 const Cookies = () => {
   return (
@@ -20,7 +22,7 @@ const Cookies = () => {
             <div className="max-w-4xl mx-auto space-y-12">
               <div className="animate-fade-in">
                 <p className="text-muted-foreground leading-relaxed">
-                  This Cookie Policy explains how balance studios uses cookies and similar technologies on our website. By continuing to use our site, you consent to the use of cookies as described below.
+                  This Cookie Policy explains how balance studios uses cookies and similar technologies on our website. Continuing to browse does not mean you accept optional cookies. In regions requiring consent, optional tracking waits until you choose. If your region cannot be determined, it also waits.
                 </p>
               </div>
 
@@ -57,7 +59,7 @@ const Cookies = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    We may use third-party services such as Google Analytics and Meta Pixel. These services may set their own cookies to track usage and provide insights. We do not control these cookies, and you should review the privacy policies of the relevant third parties for more information.
+                    Google Analytics and Microsoft Clarity measure website browsing and interactions under the analytics choice. Meta Pixel measures page visits and advertising interactions under the advertising choice. Meta Pixel is not loaded on the thank-you page, and this website does not report purchases or share customer matching information. Google Tag Manager is currently disabled pending a review of its tags. Momence checkout is a separate service; its tracking and consent handling have not been verified.
                   </p>
                 </div>
               </div>
@@ -68,8 +70,9 @@ const Cookies = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Most web browsers allow you to manage or disable cookies through your browser settings. Please note that blocking essential cookies may affect how our website functions.
+                    Use Cookie settings to accept or reject analytics and advertising separately, or withdraw an earlier acceptance. Your current choice stays in place while settings are open. We store a random browser reference, the notice version and text, your choices, region where available, and timestamps on this device, preserving earlier choices when you withdraw. Applicable advertising opt-outs are honoured. Clearing browser storage removes this record. Browser settings can also manage cookies.
                   </p>
+                  <Button variant="sage" onClick={openCookieSettings}>Cookie settings</Button>
                 </div>
               </div>
 

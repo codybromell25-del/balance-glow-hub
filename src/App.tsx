@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import ScrollToTop from "./components/ScrollToTop";
+import TrackingConsent from "./components/TrackingConsent";
 import MobileBookBar from "./components/MobileBookBar";
 import Index from "./pages/Index";
 import Events from "./pages/Events";
@@ -59,6 +60,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <TrackingConsent />
         <Routes>
           <Route path="/" element={<Index />} />
 

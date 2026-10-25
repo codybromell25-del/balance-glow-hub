@@ -1,7 +1,10 @@
 # Roadmap (site audit)
-- [ ] Tracking: verify Momence payment reporting support — research in progress
-- [ ] Tracking: apply chosen advertising consent route and update privacy disclosure — awaiting consent choice
-- [ ] Tracking: replace thank-you page-load Purchase with verified payment measurement — awaiting Momence capability evidence
+- [x] Tracking: researched documented Momence pixel integration; paid-only semantics, event values, consent and duplicates remain unverified
+- [x] Tracking: regional consent banner and privacy disclosure in preview only; owner review required before publication
+- [x] Tracking: removed unverified page-load Purchase reporting
+- [ ] Tracking: verify paid-order reporting, amount/currency, duplicates and consent in Momence — requires checkout settings/evidence from owner
+- [ ] Tracking: audit hosted GTM tags for duplicates and consent before re-enabling — requires GTM tag inventory
+- [ ] Tracking: verify published consent and Meta receipt — waiting for owner approval to publish and account connection
 - [x] Pricing: restore the previous layout, retaining updated membership prices and benefits
 - [x] Provide step-by-step Facebook and Instagram campaign tracking guidance
 - [x] October brief: prominent memberships, updated prices and rollover benefits across membership pages
