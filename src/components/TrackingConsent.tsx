@@ -31,12 +31,14 @@ export default function TrackingConsent() {
   useEffect(() => { if (ready) syncTracking(region); }, [ready, region, location.pathname]);
   const save = (a: boolean, b: boolean) => { if (!recordChoice(a, b, region)) { setError(true); return; } setSettings(false); setBanner(false); setError(false); };
   return <>
-    {banner && <section aria-label="Cookie choices" className="fixed bottom-0 inset-x-0 z-[60] border-t border-foreground/20 bg-background shadow-lg p-5 md:p-6 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row lg:items-center gap-5">
-        <div className="flex-1"><h2 className="font-heading text-2xl mb-2">a little choice<span className="text-sage">.</span></h2><p className="text-sm leading-relaxed max-w-2xl">We use optional cookies from Google and Microsoft to understand visits, and Meta to measure and improve our ads. Your choice. <a href="/privacy" className="underline">Privacy policy</a></p></div>
-        <div className="grid grid-cols-2 gap-2 shrink-0"><Button variant="quiet" className="font-body tracking-normal" onClick={() => save(false, false)}>Reject optional</Button><Button variant="sage" className="font-body tracking-normal" onClick={() => save(true, true)}>Accept optional</Button><Button variant="quiet" className="col-span-2 font-body tracking-normal" onClick={() => { setAnalytics(false); setAdvertising(false); setSettings(true); }}>Choose cookies</Button></div>
-      </div>{error && <p role="alert" className="text-sm mt-3">Your browser couldn’t save your choice. Optional tracking remains off.</p>}
-    </section>}
+    <Dialog open={banner && !settings} onOpenChange={setBanner}>
+      <DialogContent className="w-[calc(100%-2rem)] max-w-md max-h-[85dvh] overflow-y-auto rounded-md">
+        <DialogTitle className="font-heading text-2xl pr-6">a little choice<span className="text-sage">.</span></DialogTitle>
+        <DialogDescription className="text-foreground text-sm leading-relaxed">We use optional cookies from Google and Microsoft to understand visits, and Meta to measure and improve our ads. Your choice. <a href="/privacy" className="underline">Privacy policy</a></DialogDescription>
+        <div className="grid grid-cols-2 gap-2"><Button variant="quiet" className="font-body tracking-normal" onClick={() => save(false, false)}>Reject optional</Button><Button variant="sage" className="font-body tracking-normal" onClick={() => save(true, true)}>Accept optional</Button><Button variant="quiet" className="col-span-2 font-body tracking-normal" onClick={() => { setAnalytics(false); setAdvertising(false); setSettings(true); }}>Choose cookies</Button></div>
+        {error && <p role="alert" className="text-sm">Your browser couldn’t save your choice. Optional tracking remains off.</p>}
+      </DialogContent>
+    </Dialog>
     <Dialog open={settings} onOpenChange={setSettings}><DialogContent className="w-[calc(100%-2rem)] max-h-[85dvh] overflow-y-auto z-[70] rounded-md"><DialogTitle className="font-heading text-2xl">cookie settings<span className="text-sage">.</span></DialogTitle><DialogDescription>Essential storage remembers these choices. Optional tracking is your decision, and you can change it at any time.</DialogDescription>
       <label className="flex items-start gap-3 border-t border-border pt-4"><input type="checkbox" checked={analytics} onChange={e => setAnalytics(e.target.checked)} className="mt-1 h-5 w-5 shrink-0 accent-sage" /><span><strong>Analytics</strong><span className="block text-sm mt-1">Google Analytics and Microsoft Clarity measure browsing, device information and website interactions.</span></span></label>
       <label className="flex items-start gap-3 border-t border-border pt-4"><input type="checkbox" checked={advertising} onChange={e => setAdvertising(e.target.checked)} className="mt-1 h-5 w-5 shrink-0 accent-sage" /><span><strong>Advertising</strong><span className="block text-sm mt-1">Meta uses page visits, cookie identifiers and device information for advertising measurement and optimisation. No customer matching or purchase reporting is enabled here.</span></span></label>
