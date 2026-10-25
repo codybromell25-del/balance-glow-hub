@@ -8,8 +8,9 @@ type Pixel = {
   loaded?: boolean;
   version?: string;
 };
+type Clarity = { (...args: unknown[]): void; q?: unknown[][] };
 declare global {
-  interface Window { fbq?: Pixel; _fbq?: Pixel; dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void; clarity?: { (...args: unknown[]): void; q?: unknown[][] }; }
+  interface Window { fbq?: Pixel; _fbq?: Pixel; dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void; clarity?: Clarity; }
 }
 let regionPromise: Promise<string | null> | undefined;
 export function getTrackingRegion() {
@@ -27,7 +28,6 @@ function script(id: string, src: string) {
   const element = document.createElement("script"); element.id = id; element.async = true; element.src = src; document.head.appendChild(element);
 }
 let analyticsLoaded = false;
-let tagManagerLoaded = false;
 let lastPixelPage = "";
 export function syncTracking(region: string | null) {
   const optOut = (navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl === true;
@@ -37,16 +37,15 @@ export function syncTracking(region: string | null) {
   window.gtag("consent", "update", { analytics_storage: permission.analytics ? "granted" : "denied", ad_storage: permission.advertising ? "granted" : "denied", ad_user_data: "denied", ad_personalization: permission.advertising ? "granted" : "denied" });
   window.fbq?.("consent", permission.advertising ? "grant" : "revoke");
   // Already-loaded vendor tags cannot be unloaded; restart after withdrawal to block all new sends.
-  if ((!permission.analytics && analyticsLoaded) || (tagManagerLoaded && (!permission.analytics || !permission.advertising))) { window.location.reload(); return; }
+  if ((!permission.analytics && analyticsLoaded) || (!permission.advertising && window.fbq)) { window.location.reload(); return; }
   if (permission.analytics && !analyticsLoaded) {
     analyticsLoaded = true;
     script("balance-ga", "https://www.googletagmanager.com/gtag/js?id=G-L3P9C2SBXW");
     window.gtag("js", new Date()); window.gtag("config", "G-L3P9C2SBXW");
-    const clarity = window.clarity || function (...args: unknown[]) { clarity.q = clarity.q || []; clarity.q.push(args); };
+    const clarity: Clarity = window.clarity || function (...args: unknown[]) { clarity.q = clarity.q || []; clarity.q.push(args); };
     window.clarity = clarity;
     script("balance-clarity", "https://www.clarity.ms/tag/upky6ovmbb");
   }
-  // GTM's hosted tag inventory is unverified: load only with both optional choices allowed.
   // Keep GTM disabled until its tags have been audited for duplicate pixels and purchase rules.
   if (!permission.advertising || window.location.pathname === "/thank-you") return;
   if (!window.fbq) {
