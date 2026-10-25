@@ -1,39 +1,11 @@
-import { useEffect } from "react";
 import { CalendarCheck, Smartphone, Instagram, Check } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import heroAsset from "@/assets/limerick-interior-hero.jpg.asset.json";
 
-declare global {
-  interface Window {
-    fbq?: (...args: unknown[]) => void;
-  }
-}
-
 const ThankYou = () => {
-  useEffect(() => {
-    // Fire Meta Purchase once per visit (refreshes won't double count)
-    const key = "balance_purchase_tracked";
-    if (sessionStorage.getItem(key)) return;
-    const params = new URLSearchParams(window.location.search);
-    const value = parseFloat(params.get("value") || "");
-    const payload: Record<string, unknown> = { currency: params.get("currency") || "EUR" };
-    if (!isNaN(value)) payload.value = value;
-    const fire = () => {
-      if (window.fbq) {
-        window.fbq("track", "Purchase", payload);
-        sessionStorage.setItem(key, "1");
-        return true;
-      }
-      return false;
-    };
-    if (!fire()) {
-      const t = setTimeout(fire, 1500);
-      return () => clearTimeout(t);
-    }
-  }, []);
-
+  // Momence's redirect is not verified payment evidence. Do not emit Purchase here.
   const steps = [
     { icon: CalendarCheck, title: "Check your inbox", text: "Your confirmation and receipt are on their way by email." },
     { icon: Smartphone, title: "Book in the app", text: "Grab the balance app to book and manage your classes on the go." },

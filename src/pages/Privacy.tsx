@@ -92,6 +92,17 @@ const Privacy = () => {
                 </div>
               </div>
 
+              <div>
+                <h2 className="text-3xl font-heading mb-4">Website analytics and advertising choices</h2>
+                <div className="space-y-4 leading-relaxed">
+                  <p>With the required permission, Google Analytics and Microsoft Clarity receive browsing, device and interaction information for website measurement. Meta receives page visits, cookie identifiers, ad interaction information and device information to measure and optimise Facebook and Instagram advertising. We do not send health or injury information, customer matching identifiers or payment reports through this website's Meta Pixel. Meta Pixel is excluded from the thank-you page.</p>
+                  <p>Visitors in regions requiring consent are asked before optional tracking runs. An unresolved region is treated as requiring consent. Outside those regions, ordinary tracking may run subject to recorded refusals and applicable opt-outs. Analytics and advertising choices are separate. Google Tag Manager remains disabled until its tags are reviewed.</p>
+                  <p>Cookie settings in the footer lets you withdraw or change your choices. We retain the notice text and version, a random browser reference, timestamps, choices and available region locally on your device; withdrawal preserves earlier evidence. Clearing storage removes these records. Blocked events are not replayed after later acceptance.</p>
+                  <p>Payments and bookings take place through Momence. Its tracking configuration and consent handling require separate verification; this website's choice does not automatically control Momence checkout. A thank-you visit is not treated as proof of a paid purchase.</p>
+                  <p>See our <a href="/cookies" className="underline">Cookie Policy</a> or contact info@balancestudios.ie for privacy questions.</p>
+                </div>
+              </div>
+
               <div className="animate-fade-in" style={{ animationDelay: "0.6s" }}>
                 <h2 className="text-3xl font-heading font-bold text-foreground mb-4">
                   Your Rights
