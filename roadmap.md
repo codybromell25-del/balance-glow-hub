@@ -1,4 +1,5 @@
 # Roadmap (site audit)
+- [x] Restore homepage before membership/event additions; replace fixed cookie strip with a dismissible pop-up, retaining consent protection
 - [x] Tracking: researched documented Momence pixel integration; paid-only semantics, event values, consent and duplicates remain unverified
 - [x] Tracking: regional consent banner and privacy disclosure in preview only; owner review required before publication
 - [x] Tracking: removed unverified page-load Purchase reporting
