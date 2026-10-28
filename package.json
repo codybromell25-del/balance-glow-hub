@@ -58,7 +58,8 @@
     "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.61.1",
     "react-resizable-panels": "^2.1.9",
-    "react-router-dom": "^6",
+    "react-router": "6.30.4",
+    "react-router-dom": "6.30.4",
     "recharts": "^2",
     "sonner": "^1.7.4",
     "tailwind-merge": "^2.6.0",
@@ -89,6 +90,8 @@
   },
   "overrides": {
     "lodash": "^4.17.23",
-    "ws": "^8.21.0"
+    "ws": "^8.21.0",
+    "react-router": "6.30.4",
+    "@remix-run/router": "^1.23.3"
   }
 }
