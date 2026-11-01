@@ -15,7 +15,7 @@ describe("October membership and event rules", () => {
   test("holiday classes exclude the member discount", () => expect(eventPrice("holiday",true)).toBe(24));
   test("Halloween uses a pass rather than holiday pricing", () => expect(eventPrice("treat",true)).toBeNull());
   test.each(communityEvents.filter(e => e.category === "holiday").map(e => [e.name]))("%s holiday runs at all six studios", name => expect(communityEvents.find(e => e.name === name)?.locations).toEqual(["Limerick","Clane","Kildare Town","Blessington","Enfield","Bray"]));
-  test.each([["Boo at balance","2026-10-30"],["Barre X Reformer","2026-11-14"],["Movember","2026-11-15"],["Sunday Reset","2027-01-17"],["Valentine’s Day","2027-02-14"],["Throwback Class","2027-02-19"],["Mother’s Day","2027-03-07"],["Strong & Socials","2027-04-23"],["Pilates Day","2027-05-01"],["Father’s Day","2027-06-20"],["International Day of Friendship","2027-07-30"]])("%s has the confirmed date", (name,date) => expect(communityEvents.find(e => e.name === name)?.date).toBe(date));
+  test.each([["Boo at balance","2026-10-30"],["Reformer X Barre","2026-12-13"],["Movember","2026-11-15"],["Sunday Reset","2027-01-17"],["Valentine’s Day","2027-02-14"],["Throwback Class","2027-02-19"],["Mother’s Day","2027-03-07"],["Strong & Socials","2027-04-23"],["Pilates Day","2027-05-01"],["Father’s Day","2027-06-20"],["International Day of Friendship","2027-07-30"]])("%s has the confirmed date", (name,date) => expect(communityEvents.find(e => e.name === name)?.date).toBe(date));
 });
 
 describe("November membership joining links", () => {

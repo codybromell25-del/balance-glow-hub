@@ -29,6 +29,7 @@
 - [x] Our Studios page: "Inside Our Studios" photo gallery removed — page now ends after the six studio cards
 - [ ] R2: studio cards info, how-it-works strip, nav grouping, slim mobile nav, pricing per-class + FAQs
 - [ ] R3: headings, animations, image speed, stats spacing, app bar
+- [x] Events: Sunday Reset and Throwback Class widened to all studios except Enfield; Reformer X Barre confirmed 13 December, Kildare 2pm / Clane 2.30pm
 - [x] Our Studios page: boxed card grid replaced with editorial alternating photo/text rows (filter pills kept)
 - [x] Class availability corrected: Enfield is Reformer only (no Mat); Kildare now lists Yoga alongside Limerick (cards, chips, filters, class-type "where" lines)
 - [x] Google Search Console connected, site verified, sitemap submitted
