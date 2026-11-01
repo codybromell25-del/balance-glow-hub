@@ -23,7 +23,7 @@ const WorkshopAnestiMano = () => {
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
               {/* Text */}
               <div className="text-center md:text-left space-y-6">
-                <p className="text-primary font-heading font-bold tracking-[0.3em] uppercase text-sm">
+                <p className="text-primary font-heading font-bold tracking-[0.3em] text-sm">
                   balance studios x Algo Pilates
                 </p>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black text-background leading-[0.95] tracking-tight">
