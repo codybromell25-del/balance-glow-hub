@@ -1,16 +1,15 @@
 /// <reference types="bun" />
 import { describe, expect, test } from "bun:test";
-import { reformerMembershipPlans, matMembershipPlans, rolloverPolicy, popUpPrice, popUpMemberDiscount, popUpMemberPrice } from "./membershipPlans";
+import { reformerMembershipPlans, matMembershipPlans, rolloverPolicy, rolloverCopy, popUpPrice, popUpMemberDiscount, popUpMemberPrice } from "./membershipPlans";
 import { communityEvents, eventPrice } from "./communityEvents";
 
 describe("October membership and event rules", () => {
   test.each([[4,85],[6,120],[8,155],[12,210],["Unlimited",240]])("%s monthly classes cost €%s", (classes, price) => expect(reformerMembershipPlans.find(p => p.classes === classes)?.price).toBe(price));
   test("Mat rates", () => expect(matMembershipPlans.map(p => p.price)).toEqual([50,75,90]));
-  test("rollover allows one class", () => expect(rolloverPolicy.maximumClasses).toBe(1));
-  test("rollover expires after next billing cycle", () => expect(rolloverPolicy.expiresAfterBillingCycles).toBe(1));
-  test("rollover is used first", () => expect(rolloverPolicy.usedFirst).toBe(true));
-  test("rollover cannot accumulate", () => expect(rolloverPolicy.accumulates).toBe(false));
+  test("all unused credits roll over, automatically", () => { expect(rolloverPolicy.allUnusedCredits).toBe(true); expect(rolloverPolicy.automatic).toBe(true); });
+  test("rolled-over credits expire at the end of the next billing cycle", () => expect(rolloverPolicy.expiresAfterBillingCycles).toBe(1));
   test("rollover is only for limited monthly plans", () => expect(rolloverPolicy.limitedMonthlyOnly).toBe(true));
+  test("the stated rule matches the November policy", () => expect(rolloverCopy).toBe("Unused credits automatically roll over into your next monthly billing cycle and expire at the end of that cycle."));
   test("pop-ups cost €24", () => expect(popUpPrice).toBe(24));
   test("pop-up members save 15% and pay €20.40", () => { expect(popUpMemberDiscount).toBe(0.15); expect(popUpMemberPrice).toBe(20.4); expect(eventPrice("pop-up",true)).toBe(20.4); });
   test("holiday classes exclude the member discount", () => expect(eventPrice("holiday",true)).toBe(24));
