@@ -287,7 +287,7 @@ const Careers = () => {
                 </div>
 
                 <div className="relative">
-                  <label htmlFor="careers-message" className="text-[9px] uppercase tracking-[0.3em] text-foreground/40 mb-2 block">
+                  <label htmlFor="careers-message" className="text-[9px] tracking-[0.3em] text-foreground/40 mb-2 block">
                     Your experience & why balance
                   </label>
                   <Textarea

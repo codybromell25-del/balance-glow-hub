@@ -47,7 +47,7 @@ const TasterClassesSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-10 animate-fade-in">
           <div className="inline-flex items-center gap-2 bg-[#A3C1AD]/20 px-4 py-2 rounded-full mb-4">
             <Sparkles className="w-4 h-4 text-[#A3C1AD]" />
-            <span className="text-sm font-medium uppercase tracking-wider text-[#1e1a1a]">New to balance?</span>
+            <span className="text-sm font-medium tracking-wider text-[#1e1a1a]">New to balance?</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-black mb-6 tracking-tight text-[#1e1a1a]">
             Taster Classes Are Here
