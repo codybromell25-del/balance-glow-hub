@@ -23,7 +23,7 @@ export default function MembershipSection({ classType = "reformer" }: { classTyp
           <h3 className="text-xl">{plan.classes === "Unlimited" ? "Unlimited" : `${plan.classes} classes`}</h3>
           <p className="mt-4 font-heading text-4xl">€{plan.price}</p><p className="text-sm mt-1">per month</p>
           <p className="text-sm mt-4 mb-4">{typeof plan.classes === "number" ? `€${(plan.price / plan.classes).toFixed(2)} per class` : "Make movement your rhythm"}</p>
-          <p className="flex gap-2 items-center text-sm mb-5"><Check className="w-4 h-4 shrink-0 text-sage-deep" />{plan.classes === "Unlimited" ? "Daily Reformer classes" : "Unused classes roll over"}</p>
+          <p className="flex gap-2 items-center text-sm mb-5"><Check className="w-4 h-4 shrink-0 text-sage-deep" />{plan.classes === "Unlimited" ? "Daily Reformer classes" : "Unused credits roll over"}</p>
           {plan.link ? <Button asChild variant="sage" className="w-full mt-auto"><a href={plan.link} target="_blank" rel="noopener noreferrer" aria-label={`Join ${plan.classes} ${classType} monthly membership`}>Join now <ArrowRight /></a></Button> : <div className="mt-auto text-sm py-2">Joining link coming soon</div>}
         </div>)}
       </div>
