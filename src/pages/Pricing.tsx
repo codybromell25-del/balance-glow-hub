@@ -117,7 +117,7 @@ const Pricing = () => {
                     <span className="absolute -top-3 left-6 rounded-full bg-sage-deep text-background text-xs px-3 py-1">Most chosen</span>
                   )}
                   <h3 className="font-heading italic text-xl">{planName(p)}</h3>
-                  <p className="mt-2 font-heading text-5xl">
+                  <p className="mt-2 font-heading text-4xl xl:text-[2.6rem] whitespace-nowrap">
                     {eur(p.price)} <span className="font-body text-sm text-foreground/60">/month</span>
                   </p>
                   {isNum(p) ? (
