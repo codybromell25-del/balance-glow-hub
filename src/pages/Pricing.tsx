@@ -42,7 +42,7 @@ const isNum = (p: MembershipPlan): p is MembershipPlan & { classes: number } => 
 const planName = (p: MembershipPlan) => (isNum(p) ? `${p.classes} classes` : "Unlimited");
 
 const perks = [
-  { icon: "↺", title: "Life happens", text: "Unused classes roll over into next month.", tone: "bg-sage/25" },
+  { icon: "↺", title: "Life happens", text: "Unused credits roll over into next month.", tone: "bg-sage/25" },
   { icon: "⌂", title: "balance at home", text: "An online library of short Mat Pilates classes.", tone: "bg-accent" },
   { icon: "15%", title: "First in, a little less", text: `Early pop-up booking and ${eur(popUpMemberPrice)} instead of ${eur(popUpPrice)}.`, tone: "bg-primary/50" },
   { icon: "✿", title: "Little surprises", text: "Loyalty rewards and thank-you treats as you keep coming.", tone: "bg-sage/25" },
@@ -135,7 +135,7 @@ const Pricing = () => {
                   <div className="my-5 border-t border-border" />
                   <p className="text-sm flex gap-2 flex-1">
                     <span className="text-sage-deep">✓</span>
-                    {isNum(p) ? "Unused classes roll over" : d.unlimitedNote}
+                    {isNum(p) ? "Unused credits roll over" : d.unlimitedNote}
                   </p>
                   {p.link ? (
                     <a

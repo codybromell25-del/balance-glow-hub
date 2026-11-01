@@ -9,7 +9,7 @@ export default function MembershipAndEvents() {
       <div className="container px-4 md:px-8 grid md:grid-cols-2 gap-8 md:gap-14 items-center">
         <img src={membersPhoto} alt="Clients sharing a laugh at balance studios" loading="lazy" width={1200} height={900} className="w-full aspect-[4/3] object-cover rounded-md" />
         <div><p className="text-xs uppercase mb-4">Good things come with membership</p><h2 className="text-3xl md:text-5xl leading-tight">A little more balance.<br />A lot more benefits<span className="text-sage">.</span></h2>
-          <p className="mt-6 flex items-center gap-3 font-semibold"><RotateCcw className="text-sage-deep shrink-0" />Unused classes roll over into next month.</p>
+          <p className="mt-6 flex items-center gap-3 font-semibold"><RotateCcw className="text-sage-deep shrink-0" />Unused credits roll over into next month.</p>
           <p className="mt-3 leading-relaxed">For limited monthly members. Plus short Mat classes at home, early pop-up booking, 15% off pop-ups and little thank-you surprises.</p>
           <Button asChild variant="sage" className="mt-6"><a href="/pricing#memberships">Find your membership <ArrowRight /></a></Button>
         </div>
