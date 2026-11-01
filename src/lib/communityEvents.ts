@@ -26,11 +26,11 @@ export function eventDate(date: string) {
   return new Intl.DateTimeFormat("en-IE", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T12:00:00Z`));
 }
 export function eventTime(event: CommunityEvent) {
-  if (event.locationTimes) return event.locations.map(location => `${location} @ ${event.locationTimes?.[location]}`).join(" · ");
+  if (event.locationTimes) return event.locations.map(location => `${location} @ ${event.locationTimes?.[location]}`.replace(/ /g, "\u00A0")).join(" · ");
   return [event.time, event.duration].filter(Boolean).join(" · ") || "Time to be confirmed";
 }
 export function eventLocations(event: CommunityEvent) {
   if (event.locations.length === allStudios.length) return "All six studios";
   if (event.locations.length === allStudiosExceptEnfield.length && allStudiosExceptEnfield.every(studio => event.locations.includes(studio))) return "All studios except Enfield";
-  return event.locations.join(" · ");
+  return event.locations.map(location => location.replace(/ /g, "\u00A0")).join(" · ");
 }

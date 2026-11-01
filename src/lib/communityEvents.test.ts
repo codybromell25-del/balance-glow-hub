@@ -41,6 +41,6 @@ describe("event release list", () => {
     const movember = publishedEvents.find(e => e.name === "Movember");
     expect(movember && eventLocations(movember)).toBe("All six studios");
     const barre = publishedEvents.find(e => e.name === "Reformer X Barre");
-    expect(barre && eventLocations(barre)).toBe("Clane · Kildare Town");
+    expect(barre && eventLocations(barre)).toBe("Clane · Kildare\u00A0Town");
   });
 });
