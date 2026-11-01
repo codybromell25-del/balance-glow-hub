@@ -107,7 +107,7 @@ const Pricing = () => {
             </p>
           </div>
 
-          <div className={`grid gap-4 grid-cols-1 sm:grid-cols-2 ${d.plans.length > 2 ? "lg:grid-cols-5" : "lg:grid-cols-2 max-w-2xl"}`}>
+          <div className={`grid gap-4 grid-cols-1 sm:grid-cols-2 ${gridCols[d.plans.length] ?? "lg:grid-cols-5"}`}>
             {d.plans.map((p, i) => {
               const popular = i === popularIdx;
               const save = isNum(p) ? p.classes * d.dropIn - p.price : 0;
