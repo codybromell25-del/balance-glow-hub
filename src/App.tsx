@@ -49,6 +49,7 @@ import Shop from "./pages/Shop";
 import FontPreview from "./pages/FontPreview";
 import NotFound from "./pages/NotFound";
 import ThankYou from "./pages/ThankYou";
+import OnDemand from "./pages/OnDemand";
 
 const queryClient = new QueryClient();
 
@@ -107,6 +108,7 @@ const App = () => (
 
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/on-demand" element={<OnDemand />} />
           <Route path="/font-preview" element={<FontPreview />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -50,6 +50,7 @@ const Navigation = () => {
     { name: "Classes", path: "/classes" },
     { name: "Memberships", path: "/pricing" },
     { name: "Events", path: "/events" },
+    { name: "On Demand", path: "/on-demand" },
     { name: "Book", path: "/our-studios" },
     { name: "Shop", path: "/shop" },
     { name: "Education", path: "https://educationbalance.vercel.app/" },
