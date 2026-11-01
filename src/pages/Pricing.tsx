@@ -20,7 +20,7 @@ const data: Record<ClassType, { dropIn: number; plans: MembershipPlan[]; packs: 
     ],
     intro: { label: "3 Reformer classes for €50", link: "https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031" },
     where: "Reformer classes are available at all six studios.",
-    unlimitedNote: "Unlimited Reformer classes",
+    unlimitedNote: "Daily Reformer classes",
   },
   mat: {
     dropIn: 15,
