@@ -11,7 +11,7 @@ export default function MembershipSection({ classType = "reformer" }: { classTyp
       <div className="grid md:grid-cols-[1.1fr_1fr] gap-8 md:gap-14 mt-8 pb-10 border-b border-border">
         <div className="border-l-4 border-sage pl-5 md:pl-7">
           <RotateCcw className="w-7 h-7 mb-4 text-sage-deep" />
-          <h3 className="text-2xl md:text-3xl mb-4">Life happens. Keep one class.</h3>
+          <h3 className="text-2xl md:text-3xl mb-4">Life happens. Keep your classes.</h3>
           <p className="leading-relaxed">{rolloverCopy}</p>
         </div>
         <div className="space-y-5">
@@ -23,7 +23,7 @@ export default function MembershipSection({ classType = "reformer" }: { classTyp
           <h3 className="text-xl">{plan.classes === "Unlimited" ? "Unlimited" : `${plan.classes} classes`}</h3>
           <p className="mt-4 font-heading text-4xl">€{plan.price}</p><p className="text-sm mt-1">per month</p>
           <p className="text-sm mt-4 mb-4">{typeof plan.classes === "number" ? `€${(plan.price / plan.classes).toFixed(2)} per class` : "Make movement your rhythm"}</p>
-          <p className="flex gap-2 items-center text-sm mb-5"><Check className="w-4 h-4 shrink-0 text-sage-deep" />{plan.classes === "Unlimited" ? "Daily Reformer classes" : "One-class rollover"}</p>
+          <p className="flex gap-2 items-center text-sm mb-5"><Check className="w-4 h-4 shrink-0 text-sage-deep" />{plan.classes === "Unlimited" ? "Daily Reformer classes" : "Unused classes roll over"}</p>
           {plan.link ? <Button asChild variant="sage" className="w-full mt-auto"><a href={plan.link} target="_blank" rel="noopener noreferrer" aria-label={`Join ${plan.classes} ${classType} monthly membership`}>Join now <ArrowRight /></a></Button> : <div className="mt-auto text-sm py-2">Joining link coming soon</div>}
         </div>)}
       </div>

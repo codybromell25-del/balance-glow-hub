@@ -12,8 +12,8 @@ export const matMembershipPlans: MembershipPlan[] = [
   { classes: 6, price: 75, link: "https://momence.com/m/771691" },
   { classes: 8, price: 90, link: "https://momence.com/m/971008" },
 ];
-export const rolloverPolicy = { maximumClasses: 1, expiresAfterBillingCycles: 1, usedFirst: true, accumulates: false, limitedMonthlyOnly: true };
-export const rolloverCopy = "Limited monthly members can carry one unused class into their next billing cycle. It is used first, expires at the end of that cycle and cannot accumulate.";
+export const rolloverPolicy = { automatic: true, allUnusedCredits: true, expiresAfterBillingCycles: 1, limitedMonthlyOnly: true };
+export const rolloverCopy = "Unused credits automatically roll over into your next monthly billing cycle and expire at the end of that cycle.";
 export const popUpPrice = 24;
 export const popUpMemberDiscount = 0.15;
 export const popUpMemberPrice = Math.round(popUpPrice * (1 - popUpMemberDiscount) * 100) / 100;

@@ -142,7 +142,7 @@ const Terms = () => {
                     You may cancel your membership at any time by emailing info@balancestudios.ie.
                   </p>
                   <p>
-                    {rolloverCopy} Other unused classes expire; rollover does not apply to Unlimited memberships.
+                    {rolloverCopy} Rollover does not apply to Unlimited memberships.
                   </p>
                   <p>
                     Failure to adhere to our membership policies may result in suspension or termination of your membership.
