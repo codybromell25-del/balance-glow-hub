@@ -41,9 +41,8 @@ export default function OnDemand() {
           on demand<span className="text-sage">.</span>
         </h1>
         <p className="max-w-2xl mt-6 text-lg">
-          Our classes, filmed in the studio so you can practise wherever you are. A small,
-          growing library of mat pilates sessions — clear cues, options throughout, and
-          nothing to set up beyond a mat.
+          A small, growing library of mat pilates sessions you can do wherever you are —
+          clear cues, options throughout, and nothing to set up beyond a mat.
         </p>
 
         <div className="flex flex-wrap items-center gap-3 mt-8">
@@ -65,7 +64,7 @@ export default function OnDemand() {
 
         <img
           src={studioPhoto}
-          alt="The reformer room at balance Limerick, where our on demand classes are filmed"
+          alt="The reformer room at balance Limerick, with rows of reformers and the balance logos on the wall"
           className="w-full h-56 md:h-80 object-cover object-center rounded-md my-10"
         />
 
