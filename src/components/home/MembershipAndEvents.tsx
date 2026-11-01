@@ -1,7 +1,7 @@
 import { ArrowRight, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import membersPhoto from "@/assets/clients-laughing.jpg";
-import { communityEvents, eventDate } from "@/lib/communityEvents";
+import { publishedEvents, eventDate } from "@/lib/communityEvents";
 
 export default function MembershipAndEvents() {
   return <>
