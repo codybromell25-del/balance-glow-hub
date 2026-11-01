@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import photo from "@/assets/limerick-studio-3-hero.jpg";
+import photo from "@/assets/limerick-studio-6.jpg";
 import { publishedEvents, eventDate, eventTime } from "@/lib/communityEvents";
 export default function Events() {
   const [filter, setFilter] = useState("all");
