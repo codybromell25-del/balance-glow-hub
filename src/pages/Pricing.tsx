@@ -37,7 +37,7 @@ const data: Record<ClassType, { dropIn: number; plans: MembershipPlan[]; packs: 
 };
 
 const eur = (n: number) => `€${Number.isInteger(n) ? n : n.toFixed(2)}`;
-const gridCols: Record<number, string> = { 2: "lg:grid-cols-2 max-w-2xl", 3: "lg:grid-cols-3", 4: "lg:grid-cols-4", 5: "lg:grid-cols-5" };
+const gridCols: Record<number, string> = { 2: "lg:grid-cols-2 max-w-2xl mx-auto", 3: "lg:grid-cols-3 max-w-2xl mx-auto", 4: "lg:grid-cols-4", 5: "lg:grid-cols-5" };
 const isNum = (p: MembershipPlan): p is MembershipPlan & { classes: number } => typeof p.classes === "number";
 const planName = (p: MembershipPlan) => (isNum(p) ? `${p.classes} classes` : "Unlimited");
 
