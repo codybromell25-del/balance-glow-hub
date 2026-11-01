@@ -115,7 +115,7 @@ export default function OnDemand() {
               </a>
             </Button>
             <Button asChild variant="quiet">
-              <a href="/contact" >Talk to us</a>
+              <a href="mailto:info@balancestudios.ie">Email us</a>
             </Button>
           </div>
         </div>
