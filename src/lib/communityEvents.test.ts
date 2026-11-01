@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { communityEvents, publishedEvents, eventTime } from "./communityEvents";
+import { communityEvents, publishedEvents, eventTime, eventLocations } from "./communityEvents";
 
 describe("event release list", () => {
   test("all upcoming planned events are restored in date order", () => {
@@ -25,5 +25,22 @@ describe("event release list", () => {
     expect(event?.locations).toEqual(["Clane", "Kildare Town"]);
     expect(event?.locationTimes).toEqual({ Clane: "2.30pm", "Kildare Town": "2pm" });
     expect(event?.bookingLink).toBeUndefined();
+  });
+
+  test("Sunday Reset and Throwback Class run at every studio except Enfield", () => {
+    for (const name of ["Sunday Reset", "Throwback Class"]) {
+      const event = publishedEvents.find(e => e.name === name);
+      expect(event?.locations).toEqual(["Limerick", "Clane", "Kildare Town", "Blessington", "Bray"]);
+      expect(event?.locations).not.toContain("Enfield");
+    }
+  });
+
+  test("event location labels name the right studios", () => {
+    const sunday = publishedEvents.find(e => e.name === "Sunday Reset");
+    expect(sunday && eventLocations(sunday)).toBe("All studios except Enfield");
+    const movember = publishedEvents.find(e => e.name === "Movember");
+    expect(movember && eventLocations(movember)).toBe("All six studios");
+    const barre = publishedEvents.find(e => e.name === "Reformer X Barre");
+    expect(barre && eventLocations(barre)).toBe("Clane · Kildare Town");
   });
 });
