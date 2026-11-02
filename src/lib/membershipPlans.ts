@@ -2,14 +2,12 @@ export type MembershipPlan = { classes: number | "Unlimited"; price: number; lin
 
 export const reformerMembershipPlans: MembershipPlan[] = [
   { classes: 4, price: 85, link: "https://momence.com/m/971003" },
-  { classes: 6, price: 120, link: "https://momence.com/m/574023" },
   { classes: 8, price: 155, link: "https://momence.com/m/971006" },
   { classes: 12, price: 210, link: "https://momence.com/m/971005" },
   { classes: "Unlimited", price: 240, link: "https://momence.com/m/574005" },
 ];
 export const matMembershipPlans: MembershipPlan[] = [
   { classes: 4, price: 50, link: "https://momence.com/m/771514" },
-  { classes: 6, price: 75, link: "https://momence.com/m/771691" },
   { classes: 8, price: 90, link: "https://momence.com/m/971008" },
 ];
 export const rolloverPolicy = { automatic: true, allUnusedCredits: true, expiresAfterBillingCycles: 1, limitedMonthlyOnly: true };
