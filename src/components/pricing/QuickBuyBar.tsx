@@ -16,7 +16,7 @@ const QuickBuyBar = ({ memberships, classes, intro }: { memberships: QuickGroup;
   const items = source[type];
   const [picked, setPicked] = useState<Record<string, number>>({});
   const key = `${tab}-${type}`;
-  const idx = Math.min(picked[key] ?? (tab === "memberships" ? 2 : 0), items.length - 1);
+  const idx = Math.min(picked[key] ?? (tab === "memberships" ? 1 : 0), items.length - 1);
   const item = items[idx];
 
   const choose = (t: Tab) => { setTab(t); setOpen(true); };
