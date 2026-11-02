@@ -9,3 +9,4 @@
 
 - Optional analytics and Meta tags are loaded only by the shared TrackingConsent controller; keep advertising and analytics choices separate, retain notice/choice history, and fail closed on unresolved region. GTM stays disabled until its hosted tags are audited to prevent consent bypass and duplicate reporting.
 - The Momence thank-you redirect is not verified paid-order evidence: never emit Purchase from page loads or query parameters, and keep Meta excluded from that page until payment reporting and dataset eligibility are verified.
+- On-site interaction is measured with Clarity custom events (`window.clarity("event", name)`), but the Data Export API cannot return them; any automated report must therefore draw on export metrics (Traffic, ScrollDepth, DeadClicks, ScriptErrors) or a first-party counter, and say so rather than implying tap counts were pulled automatically.
