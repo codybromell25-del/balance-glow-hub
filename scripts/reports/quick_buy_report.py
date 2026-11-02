@@ -283,7 +283,7 @@ def build(data, out):
         c.setFont(SANS, 7.4)
         c.setFillColor(HexColor(GREY))
         c.drawString(52 * mm, bot + 1.9 * mm, step["note"])
-    y = top - len(data["funnel"]) * row_h - 2 * mm
+    y = top - len(data["funnel"]) * row_h - 6.5 * mm
 
     y = section(c, w, y, "What we can and can't yet prove")
     cols = [78 * mm, 62 * mm, 42 * mm]
