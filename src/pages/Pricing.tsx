@@ -45,7 +45,7 @@ const planName = (p: MembershipPlan) => (isNum(p) ? `${p.classes} classes` : "Un
 
 const perks = [
   { icon: "↺", title: "Life happens", text: "Unused credits roll over into next month.", tone: "bg-sage/25", tilt: "-rotate-2" },
-  { icon: "⌂", title: "balance at home", text: "An online library of short Mat Pilates classes.", tone: "bg-accent", tilt: "rotate-[1.5deg] sm:mt-6" },
+  { icon: "⌂", title: "balance at home", text: "Our online library of short Mat Pilates classes, free with your membership.", tone: "bg-accent", tilt: "rotate-[1.5deg] sm:mt-6" },
   { icon: "15%", title: "First in, a little less", text: `Early pop-up booking and ${eur(popUpMemberPrice)} instead of ${eur(popUpPrice)}.`, tone: "bg-primary/50", tilt: "-rotate-[1.2deg] sm:mt-2" },
   { icon: "✿", title: "Little surprises", text: "Loyalty rewards and thank-you treats as you keep coming.", tone: "bg-sage/25", tilt: "rotate-2 sm:mt-8" },
 ];
