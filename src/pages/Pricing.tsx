@@ -163,9 +163,9 @@ const Pricing = () => {
         {/* Perks */}
         <section className="container mx-auto px-5 py-12 md:py-20 max-w-6xl">
           <h2 className="font-heading italic text-4xl md:text-6xl text-center mb-10">Little things members love<Dot /></h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {perks.map((k, i) => (
-              <div key={k.title} className={`${k.tone} rounded-[2rem] p-7 ${i % 2 ? "md:rotate-1" : "md:-rotate-1"}`}>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {perks.map((k) => (
+              <div key={k.title} className={`${k.tone} rounded-[2rem] p-7 shadow-sm transition-transform duration-300 hover:rotate-0 ${k.tilt}`}>
                 <p className="font-heading italic text-2xl text-sage-deep">{k.icon}</p>
                 <h3 className="mt-4 font-semibold text-lg">{k.title}</h3>
                 <p className="mt-2 text-sm text-foreground/75">{k.text}</p>
