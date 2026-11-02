@@ -49,7 +49,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "Classes", path: "/classes" },
     { name: "Memberships", path: "/pricing" },
-    { name: "Events", path: "/events" },
+    { name: "Pop-ups", path: "/events" },
     { name: "On Demand", path: "/on-demand" },
     { name: "Book", path: "/our-studios" },
     { name: "Shop", path: "/shop" },
