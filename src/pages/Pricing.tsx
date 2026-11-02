@@ -44,10 +44,10 @@ const isNum = (p: MembershipPlan): p is MembershipPlan & { classes: number } => 
 const planName = (p: MembershipPlan) => (isNum(p) ? `${p.classes} classes` : "Unlimited");
 
 const perks = [
-  { icon: "↺", title: "Life happens", text: "Unused credits roll over into next month.", tone: "bg-sage/25" },
-  { icon: "⌂", title: "balance at home", text: "An online library of short Mat Pilates classes.", tone: "bg-accent" },
-  { icon: "15%", title: "First in, a little less", text: `Early pop-up booking and ${eur(popUpMemberPrice)} instead of ${eur(popUpPrice)}.`, tone: "bg-primary/50" },
-  { icon: "✿", title: "Little surprises", text: "Loyalty rewards and thank-you treats as you keep coming.", tone: "bg-sage/25" },
+  { icon: "↺", title: "Life happens", text: "Unused credits roll over into next month.", tone: "bg-sage/25", tilt: "-rotate-2" },
+  { icon: "⌂", title: "balance at home", text: "An online library of short Mat Pilates classes.", tone: "bg-accent", tilt: "rotate-[1.5deg] sm:mt-6" },
+  { icon: "15%", title: "First in, a little less", text: `Early pop-up booking and ${eur(popUpMemberPrice)} instead of ${eur(popUpPrice)}.`, tone: "bg-primary/50", tilt: "-rotate-[1.2deg] sm:mt-2" },
+  { icon: "✿", title: "Little surprises", text: "Loyalty rewards and thank-you treats as you keep coming.", tone: "bg-sage/25", tilt: "rotate-2 sm:mt-8" },
 ];
 
 const Dot = ({ q }: { q?: boolean }) => <span className="text-sage">{q ? "?" : "."}</span>;
@@ -163,9 +163,9 @@ const Pricing = () => {
         {/* Perks */}
         <section className="container mx-auto px-5 py-12 md:py-20 max-w-6xl">
           <h2 className="font-heading italic text-4xl md:text-6xl text-center mb-10">Little things members love<Dot /></h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {perks.map((k, i) => (
-              <div key={k.title} className={`${k.tone} rounded-[2rem] p-7 ${i % 2 ? "md:rotate-1" : "md:-rotate-1"}`}>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {perks.map((k) => (
+              <div key={k.title} className={`${k.tone} rounded-[2rem] p-7 shadow-sm transition-transform duration-300 hover:rotate-0 ${k.tilt}`}>
                 <p className="font-heading italic text-2xl text-sage-deep">{k.icon}</p>
                 <h3 className="mt-4 font-semibold text-lg">{k.title}</h3>
                 <p className="mt-2 text-sm text-foreground/75">{k.text}</p>
