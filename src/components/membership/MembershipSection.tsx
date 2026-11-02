@@ -15,7 +15,7 @@ export default function MembershipSection({ classType = "reformer" }: { classTyp
           <p className="leading-relaxed">{rolloverCopy}</p>
         </div>
         <div className="space-y-5">
-          {[{ icon: BookOpen, title: "A little balance at home", copy: "Access our online library of short Mat Pilates classes." }, { icon: CalendarHeart, title: "First in, a little less", copy: "Early booking for pop-up classes, plus 15% off — €20.40 instead of €24." }, { icon: Gift, title: "More reasons to belong", copy: "Loyalty rewards and little thank-you surprises as you keep attending. Gifts and milestones to be confirmed." }].map(({ icon: Icon, title, copy }) => <div key={title} className="flex gap-4"><Icon className="w-5 h-5 shrink-0 text-sage-deep mt-1" /><div><p className="font-semibold mb-1">{title}</p><p className="text-sm leading-relaxed">{copy}</p></div></div>)}
+          {[{ icon: BookOpen, title: "A little balance at home", copy: "Our online library of short Mat Pilates classes, free with your membership." }, { icon: CalendarHeart, title: "First in, a little less", copy: "Early booking for pop-up classes, plus 15% off — €20.40 instead of €24." }, { icon: Gift, title: "More reasons to belong", copy: "Loyalty rewards and little thank-you surprises as you keep attending. Gifts and milestones to be confirmed." }].map(({ icon: Icon, title, copy }) => <div key={title} className="flex gap-4"><Icon className="w-5 h-5 shrink-0 text-sage-deep mt-1" /><div><p className="font-semibold mb-1">{title}</p><p className="text-sm leading-relaxed">{copy}</p></div></div>)}
         </div>
       </div>
       <div className={`grid gap-x-6 ${classType === "reformer" ? "sm:grid-cols-2 lg:grid-cols-5" : "sm:grid-cols-2 lg:grid-cols-3"} mt-6`}>
