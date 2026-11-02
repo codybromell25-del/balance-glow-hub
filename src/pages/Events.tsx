@@ -7,7 +7,7 @@ import photo from "@/assets/limerick-studio-6.jpg";
 import { publishedEvents, eventDate, eventTime, eventLocations } from "@/lib/communityEvents";
 export default function Events() {
   const [filter, setFilter] = useState("all");
-  const filters = [["all", "All events"], ["pop-up", "Pop-ups"], ["holiday", "Bring someone"], ["treat", "Studio treats"]];
+  const filters = [["all", "All events"], ["pop-up", "Pop-ups"], ["holiday", "Bring someone"]];
   const showFilters = new Set(publishedEvents.map(e => e.category)).size > 1;
   const visible = publishedEvents.filter(e => filter === "all" || e.category === filter);
   return <div className="bg-background text-foreground"><SEO title="Events & Pop-ups | balance studios" description="Good company, feel-good Reformer and a few extras. Explore balance pop-ups and holiday bring-a-guest classes." canonical="/events" /><Navigation /><main className="container px-4 md:px-8 py-10 md:py-16 pb-28 md:pb-16">
