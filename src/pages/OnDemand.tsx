@@ -81,22 +81,13 @@ export default function OnDemand() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div>
-            <h2 className="text-2xl mb-3">What's in the library</h2>
-            <p className="leading-relaxed max-w-xl">
-              Full-body mat pilates — core work, stretch and reset sessions, and everything in
-              between. Each session is listed with its length so you can pick one that fits the
-              time you've got.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-2xl mb-3">Adding all the time</h2>
-            <p className="leading-relaxed max-w-xl">
-              We're filming as we go, so the library grows rather than arrives all at once. The
-              library page always shows exactly what's there today.
-            </p>
-          </div>
+        <div className="mb-12">
+          <h2 className="text-2xl mb-3">What's in the library</h2>
+          <p className="leading-relaxed max-w-xl">
+            Full-body mat pilates — core work, stretch and reset sessions, and everything in
+            between. Each session is listed with its length so you can pick one that fits the
+            time you've got.
+          </p>
         </div>
 
         <div className="border-t border-border pt-8">
