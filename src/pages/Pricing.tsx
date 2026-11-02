@@ -2,13 +2,12 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import QuickBuyBar from "@/components/pricing/QuickBuyBar";
 import { reformerMembershipPlans, matMembershipPlans, popUpMemberPrice, popUpPrice, type MembershipPlan } from "@/lib/membershipPlans";
 
 type ClassType = "reformer" | "mat";
 type Pack = { classes: number; price: number; days: number; link: string };
 
-const data: Record<ClassType, { dropIn: number; plans: MembershipPlan[]; packs: Pack[]; intro: { label: string; link: string }; where: string; unlimitedNote: string }> = {
+export const data: Record<ClassType, { dropIn: number; plans: MembershipPlan[]; packs: Pack[]; intro: { label: string; link: string }; where: string; unlimitedNote: string }> = {
   reformer: {
     dropIn: 24,
     plans: reformerMembershipPlans,
@@ -37,8 +36,8 @@ const data: Record<ClassType, { dropIn: number; plans: MembershipPlan[]; packs: 
   },
 };
 
-const planItem = (p: MembershipPlan) => ({ label: p.classes === "Unlimited" ? "Unlimited monthly" : `${p.classes} classes / month`, price: p.price, link: p.link });
-const packItem = (p: Pack) => ({ label: p.classes === 1 ? "1 class" : `${p.classes}-class pack`, price: p.price, link: p.link });
+export const planItem = (p: MembershipPlan) => ({ label: p.classes === "Unlimited" ? "Unlimited monthly" : `${p.classes} classes / month`, price: p.price, link: p.link });
+export const packItem = (p: Pack) => ({ label: p.classes === 1 ? "1 class" : `${p.classes}-class pack`, price: p.price, link: p.link });
 const eur = (n: number) => `€${Number.isInteger(n) ? n : n.toFixed(2)}`;
 const gridCols: Record<number, string> = { 2: "lg:grid-cols-2 max-w-2xl mx-auto", 3: "lg:grid-cols-3 max-w-2xl mx-auto", 4: "lg:grid-cols-4", 5: "lg:grid-cols-5" };
 const isNum = (p: MembershipPlan): p is MembershipPlan & { classes: number } => typeof p.classes === "number";
@@ -278,11 +277,6 @@ const Pricing = () => {
           </div>
         </section>
       </main>
-      <QuickBuyBar
-        memberships={{ reformer: data.reformer.plans.map(planItem), mat: data.mat.plans.map(planItem) }}
-        classes={{ reformer: data.reformer.packs.map(packItem), mat: data.mat.packs.map(packItem) }}
-        intro={{ reformer: [{ label: "3 Reformer intro classes", price: 50, link: data.reformer.intro.link }], mat: [{ label: "3 intro classes", price: 40, link: data.mat.intro.link }] }}
-      />
       <Footer />
     </div>
   );

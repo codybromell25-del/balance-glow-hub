@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import ScrollToTop from "./components/ScrollToTop";
 import TrackingConsent from "./components/TrackingConsent";
-import MobileBookBar from "./components/MobileBookBar";
+import SiteQuickBuyBar from "./components/SiteQuickBuyBar";
 import Index from "./pages/Index";
 import Events from "./pages/Events";
 import About from "./pages/About";
@@ -116,7 +116,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <MobileBookBar />
+        <SiteQuickBuyBar />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
