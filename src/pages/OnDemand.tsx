@@ -83,7 +83,7 @@ export default function OnDemand() {
 
         <div className="mb-12">
           <h2 className="text-2xl mb-3">What's in the library</h2>
-          <p className="leading-relaxed max-w-xl">
+          <p className="leading-relaxed max-w-2xl">
             Full-body mat pilates — core work, stretch and reset sessions, and everything in
             between. Each session is listed with its length so you can pick one that fits the
             time you've got.
