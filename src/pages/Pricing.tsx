@@ -59,7 +59,7 @@ const Pricing = () => {
   const [type, setType] = useState<ClassType>("reformer");
   const [freq, setFreq] = useState(1);
   const d = data[type];
-  const popularIdx = type === "reformer" ? 1 : 1;
+  const popularIdx = 1;
 
   const suggestion = (() => {
     const wanted = [4, 8, 12, Infinity][freq];

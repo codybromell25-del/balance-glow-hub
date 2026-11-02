@@ -4,8 +4,11 @@ import { reformerMembershipPlans, matMembershipPlans, rolloverPolicy, rolloverCo
 import { communityEvents, eventPrice } from "./communityEvents";
 
 describe("October membership and event rules", () => {
-  test.each([[4,85],[6,120],[8,155],[12,210],["Unlimited",240]])("%s monthly classes cost €%s", (classes, price) => expect(reformerMembershipPlans.find(p => p.classes === classes)?.price).toBe(price));
-  test("Mat rates", () => expect(matMembershipPlans.map(p => p.price)).toEqual([50,75,90]));
+  test.each([[4,85],[8,155],[12,210],["Unlimited",240]])("%s monthly classes cost €%s", (classes, price) => expect(reformerMembershipPlans.find(p => p.classes === classes)?.price).toBe(price));
+  test("Mat rates", () => expect(matMembershipPlans.map(p => p.price)).toEqual([50,90]));
+  test("the 6-class monthly memberships are discontinued", () => {
+    for (const plan of [...reformerMembershipPlans, ...matMembershipPlans]) expect(plan.classes).not.toBe(6);
+  });
   test("all unused credits roll over, automatically", () => { expect(rolloverPolicy.allUnusedCredits).toBe(true); expect(rolloverPolicy.automatic).toBe(true); });
   test("rolled-over credits expire at the end of the next billing cycle", () => expect(rolloverPolicy.expiresAfterBillingCycles).toBe(1));
   test("rollover is only for limited monthly plans", () => expect(rolloverPolicy.limitedMonthlyOnly).toBe(true));
@@ -32,7 +35,6 @@ describe("November membership joining links", () => {
   ])("Reformer %s joins at the current Momence link", (classes, link) => expect(reformerMembershipPlans.find(p => p.classes === classes)?.link).toBe(link));
   test.each([
     [4, "https://momence.com/m/771514"],
-    [6, "https://momence.com/m/771691"],
     [8, "https://momence.com/m/971008"],
   ])("Mat, Barre & Yoga %s joins at the current Momence link", (classes, link) => expect(matMembershipPlans.find(p => p.classes === classes)?.link).toBe(link));
   test("no plan still points at a retired joining link", () => {
