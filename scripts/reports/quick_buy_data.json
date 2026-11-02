@@ -1,0 +1,76 @@
+{
+  "report": "quick-buy bar",
+  "site": "balancestudios.ie",
+  "windowLabel": "26 October - 2 November 2026",
+  "generated": "2 November 2026",
+  "kpis": [
+    { "value": "5,057", "label": "visits" },
+    { "value": "5,963", "label": "page views" },
+    { "value": "503", "label": "thank-you visits" },
+    { "value": "500", "label": "back from Momence" },
+    { "value": "89%", "label": "on phones" }
+  ],
+  "daily": [
+    { "date": "2026-10-26", "visits": 708, "pageviews": 809 },
+    { "date": "2026-10-27", "visits": 851, "pageviews": 995 },
+    { "date": "2026-10-28", "visits": 659, "pageviews": 756 },
+    { "date": "2026-10-29", "visits": 571, "pageviews": 653 },
+    { "date": "2026-10-30", "visits": 640, "pageviews": 753 },
+    { "date": "2026-10-31", "visits": 524, "pageviews": 599 },
+    { "date": "2026-11-01", "visits": 689, "pageviews": 851 },
+    { "date": "2026-11-02", "visits": 415, "pageviews": 547 }
+  ],
+  "sources": [
+    { "label": "Typed in / no link", "value": 3284 },
+    { "label": "Google & search", "value": 803 },
+    { "label": "Back from Momence", "value": 500 },
+    { "label": "Instagram", "value": 391 },
+    { "label": "Everything else", "value": 79 }
+  ],
+  "pages": [
+    { "label": "Home", "value": 1673 },
+    { "label": "Our Studios", "value": 838 },
+    { "label": "Limerick", "value": 705 },
+    { "label": "Thank you", "value": 503 },
+    { "label": "Pricing", "value": 376 },
+    { "label": "Kildare", "value": 313 }
+  ],
+  "funnel": [
+    { "label": "Visited the site", "value": "5,057", "note": "the bar is on every page" },
+    { "label": "Arrived back from Momence checkout", "value": "500", "note": "source: momence.com" },
+    { "label": "Opened the thank-you page", "value": "503", "note": "not proof of payment" }
+  ],
+  "measures": [
+    {
+      "question": "How many people open the bar",
+      "where": "Clarity custom event quickbuy_open",
+      "status": "Labels added in preview - not live yet"
+    },
+    {
+      "question": "Which tab and which option they pick",
+      "where": "Clarity custom events quickbuy_tab_*, quickbuy_pick_*",
+      "status": "Labels added in preview - not live yet"
+    },
+    {
+      "question": "How many taps turn into a real order",
+      "where": "Momence order counts, read by you",
+      "status": "Needed each month"
+    },
+    {
+      "question": "How many checkouts reach the thank-you page",
+      "where": "Website stats, thank-you visits",
+      "status": "Available now"
+    },
+    {
+      "question": "Whether the bar sits on top of something",
+      "where": "Clarity dead clicks and scroll depth",
+      "status": "Available now"
+    }
+  ],
+  "watch": [
+    "Clarity is only collecting while the current preview stays unpublished: once the published version loads, visitor stats are switched off and the bar data stops with them.",
+    "Timetable pages still throw script errors on 87-97% of studio-page sessions, and dead clicks are highest on Limerick (15%) and Clane (23%). Fix these before restarting paid ads.",
+    "Paid ads were almost completely off in this window - 1 recorded ad visit - so nothing here reflects the bar under campaign traffic."
+  ],
+  "footer": "balance studios - quick-buy bar report"
+}

@@ -37,3 +37,6 @@
 - [ ] SEO: Google Business Profile per studio + local mentions (owner task)
 - [x] Membership FAQs: own page at /membership-faqs (12 approved questions), linked from the memberships page
 - [ ] Publish: membership FAQs page, pop-up updates, consent changes still preview only — waiting for owner's go
+- [x] Quick-buy bar: taps recorded as Clarity custom events (verified one event per tap in preview)
+- [x] Report type added: "quick-buy bar" PDF (scripts/reports/quick_buy_report.py + quick_buy_data.json)
+- [ ] Quick-buy bar: tap counts still read by hand from the Clarity dashboard — a first-party counter needs owner approval
