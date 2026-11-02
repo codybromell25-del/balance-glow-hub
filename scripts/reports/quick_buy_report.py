@@ -323,23 +323,34 @@ def build(data, out):
         "PDF - that is a new collection of visitor data and needs your go-ahead."
     ), small)
 
-    y = section(c, w, y - 6 * mm, "Watch list")
+    y = section(c, w, y - 6 * mm, "Pages with the most visits")
+    p3 = os.path.join(tmp, "pages.png")
+    chart_bars(data["pages"], p3, [MOSS, SAGE, SAND, SLATE, PALE, "#B9A88F"], figsize=(7.1, 1.75))
+    img_h = 42 * mm
+    c.drawImage(p3, 16 * mm, y - img_h, width=w - 32 * mm, height=img_h,
+                preserveAspectRatio=False, mask=None)
+    y = y - img_h
+
+    y = section(c, w, y - 5 * mm, "Watch list")
     for item in data["watch"]:
         c.setFont(SANS, 4.6)
         c.setFillColor(HexColor(MOSS))
-        c.drawString(20 * mm, y - 2.1 * mm, "●")
-        y = prose(c, w, y, item, body)
+        c.drawString(19 * mm, y - 2.6 * mm, "●")
+        y = prose(c, w, y, item, bullet)
         y -= 1.6 * mm
 
-    y = section(c, w, y - 5 * mm, "How to re-run this report")
+    y = section(c, w, y - 4 * mm, "How to re-run this report")
     y = prose(c, w, y, (
-        "Ask for the <b>quick-buy bar report</b> with a date window. It pulls website stats for "
-        "that window, the last three days of Clarity, and the current Momence order counts, "
-        "refreshes <font face='" + SANS_B + "'>scripts/reports/quick_buy_data.json</font>, "
+        "Ask for the <font face='" + SANS_B + "'>quick-buy bar report</font> with a date window. "
+        "It pulls website stats for that window, the last three days of Clarity, and the current "
+        "Momence order counts, refreshes "
+        "<font face='" + SANS_B + "'>scripts/reports/quick_buy_data.json</font>, "
         "then renders this file again with "
         "<font face='" + SANS_B + "'>quick_buy_report.py</font>."
     ), body)
 
+    if y < 18 * mm:
+        raise SystemExit(f"page 2 overflows: only {(y / mm):.1f} mm left above the footer")
     footer(c, w, h, 2)
     c.showPage()
     c.save()
