@@ -238,7 +238,13 @@ const MembershipOffers = () => {
           <p className="font-heading text-2xl md:text-3xl italic text-foreground/85 leading-relaxed">
             "It's all about balance."
           </p>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col items-center gap-6">
+            <Link
+              to="/membership-faqs"
+              className="inline-block text-sm tracking-[0.2em] uppercase text-foreground/70 hover:text-foreground border-b border-foreground/30 hover:border-foreground pb-1 transition-colors"
+            >
+              Membership FAQs
+            </Link>
             <Link
               to="/"
               className="inline-block text-sm tracking-[0.2em] uppercase text-foreground/70 hover:text-foreground border-b border-foreground/30 hover:border-foreground pb-1 transition-colors"

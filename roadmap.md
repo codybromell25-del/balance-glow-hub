@@ -35,3 +35,5 @@
 - [x] Google Search Console connected, site verified, sitemap submitted
 - [x] SEO: studio pages titled "Reformer Pilates {town}", local intro + FAQ section, cleaned business details (no fake phone/ratings), FAQ rich data, sitemap + llms.txt, footer links to each studio
 - [ ] SEO: Google Business Profile per studio + local mentions (owner task)
+- [x] Membership FAQs: own page at /membership-faqs (12 approved questions), linked from the memberships page
+- [ ] Publish: membership FAQs page, pop-up updates, consent changes still preview only — waiting for owner's go

@@ -210,8 +210,17 @@ const Pricing = () => {
           <p className="mt-6 text-xs text-foreground/60 text-center">
             Memberships auto-renew monthly; cancel with 7 days' notice. Packs valid from first class. New here?{" "}
             <a href={d.intro.link} target="_blank" rel="noopener noreferrer" className="underline">{d.intro.label}</a> ·{" "}
+            <a href="/membership-faqs" className="underline">Membership FAQs</a> ·{" "}
             <a href="/faq" className="underline">FAQ</a>
           </p>
+          <div className="mt-8 text-center">
+            <a
+              href="/membership-faqs"
+              className="inline-block rounded-full border border-border bg-card px-6 py-3 font-heading text-sm md:text-base transition hover:border-sage"
+            >
+              Membership FAQs — rollover, renewals, on demand →
+            </a>
+          </div>
         </section>
 
         {/* Planner */}
