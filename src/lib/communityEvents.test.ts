@@ -3,7 +3,7 @@ import { communityEvents, publishedEvents, eventTime, eventLocations } from "./c
 
 describe("event release list", () => {
   test("all upcoming planned events are restored in date order", () => {
-    expect(publishedEvents.map(e => e.name)).toEqual(["Movember", "Reformer X Barre", "Sunday Reset", "Valentine’s Day", "Throwback Class", "Mother’s Day", "Strong & Socials", "Pilates Day", "Father’s Day", "International Day of Friendship"]);
+    expect(publishedEvents.map(e => e.name)).toEqual(["Movember", "Reformer X Barre", "Sunday Reset", "Valentine’s Day", "Throwback Class", "Mother’s Day", "Strong & Social", "Pilates Day", "Father’s Day", "International Day of Friendship"]);
   });
 
   test("Movember points at the real Momence booking page", () => {
