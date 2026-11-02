@@ -218,6 +218,8 @@ def build(data, out):
     small = ParagraphStyle("small", fontName=SANS, fontSize=7.8, leading=11.2, textColor=HexColor(GREY))
     cell = ParagraphStyle("cell", fontName=SANS, fontSize=7.8, leading=10.6, textColor=HexColor(INK))
     cell_head = ParagraphStyle("cellh", fontName=SANS_B, fontSize=7.8, leading=10.6, textColor=HexColor(INK))
+    bullet = ParagraphStyle("bullet", fontName=SANS, fontSize=8.6, leading=12.4,
+                            textColor=HexColor(INK), leftIndent=5.6 * mm)
 
     # ------------------------------------------------------------- page 1
     page_bg(c, w, h)
@@ -265,23 +267,23 @@ def build(data, out):
     y = h - 38 * mm
     y = section(c, w, y, "The loop the site can already show")
     top = y
-    row_h = 11 * mm
+    row_h = 10 * mm
     for i, step in enumerate(data["funnel"]):
-        yy = top - (i + 1) * row_h
+        bot = top - (i + 1) * row_h + 1.6 * mm
         c.setFillColor(HexColor(WHITE))
         c.setStrokeColor(HexColor("#E4DCD2"))
         c.setLineWidth(0.7)
-        c.rect(18 * mm, yy - row_h + 3 * mm, w - 36 * mm, row_h - 3 * mm, stroke=1, fill=1)
+        c.rect(18 * mm, bot, w - 36 * mm, row_h - 1.6 * mm, stroke=1, fill=1)
         c.setFont(SERIF_B, 15)
         c.setFillColor(HexColor(MOSS))
-        c.drawString(23 * mm, yy - row_h + 6.4 * mm, step["value"])
+        c.drawString(23 * mm, bot + 3.4 * mm, step["value"])
         c.setFont(SANS_B, 8.4)
         c.setFillColor(HexColor(INK))
-        c.drawString(52 * mm, yy - row_h + 7.6 * mm, step["label"])
+        c.drawString(52 * mm, bot + 4.9 * mm, step["label"])
         c.setFont(SANS, 7.4)
         c.setFillColor(HexColor(GREY))
-        c.drawString(52 * mm, yy - row_h + 4.4 * mm, step["note"])
-    y = top - len(data["funnel"]) * row_h - 4 * mm
+        c.drawString(52 * mm, bot + 1.9 * mm, step["note"])
+    y = top - len(data["funnel"]) * row_h - 2 * mm
 
     y = section(c, w, y, "What we can and can't yet prove")
     cols = [78 * mm, 62 * mm, 42 * mm]
