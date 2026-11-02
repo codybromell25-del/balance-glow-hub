@@ -10,7 +10,7 @@ describe("event release list", () => {
     const movember = publishedEvents[0];
     expect(movember.date).toBe("2026-11-15");
     expect(movember.bookingLink).toBe("https://momence.com/l/2Bhk27Br");
-    expect(eventTime(movember)).toBe("11:00 AM · 45 minutes");
+    expect(eventTime(movember)).toBe("See your local studio for times");
   });
 
   test("the past Halloween event stays hidden", () => {

@@ -16,7 +16,7 @@ export default function MembershipAndEvents() {
       </div>
     </section>
     <section className="py-10 md:py-16 border-t border-border bg-background">
-      <div className="container px-4 md:px-8"><div className="flex flex-wrap justify-between gap-5 items-end"><div><p className="text-xs uppercase mb-3">In good company</p><h2 className="text-3xl md:text-4xl">Something a little different<span className="text-sage">.</span></h2></div><Button asChild variant="quiet"><a href="/events">All upcoming events <ArrowRight /></a></Button></div>
+      <div className="container px-4 md:px-8"><div className="flex flex-wrap justify-between gap-5 items-end"><div><p className="text-xs uppercase mb-3">In good company</p><h2 className="text-3xl md:text-4xl">Something a little different<span className="text-sage">.</span></h2></div><Button asChild variant="quiet"><a href="/events">All pop-ups <ArrowRight /></a></Button></div>
         <div className="grid md:grid-cols-3 gap-6 mt-8">{publishedEvents.slice(0,3).map(event => <a key={event.name} href="/events" className="block py-5 border-t border-border"><p className="text-sm mb-3">{eventDate(event.date)}</p><h3 className="text-2xl mb-3">{event.name}</h3><p className="text-sm">{eventLocations(event)}</p></a>)}</div>
       </div>
     </section>

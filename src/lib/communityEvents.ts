@@ -6,7 +6,7 @@ export const allStudiosExceptEnfield = allStudios.filter(studio => studio !== "E
 export const communityEvents: CommunityEvent[] = [
   { name: "Boo at balance", date: "2026-10-30", locations: ["Clane", "Kildare Town"], category: "treat", description: "Your regular Reformer class, with a spooky little twist. Halloween tunes, a fun atmosphere and a pair of cute Halloween socks for everyone, on us. Book with your usual class pass or membership.", released: false },
   { name: "Reformer X Barre", date: "2026-12-13", locations: ["Clane", "Kildare Town"], category: "pop-up", description: "Two favourites, one class. Half Barre, half Reformer, with plenty of pulses, a little leg shake and little treats for everyone. Grab a friend and join us for a class that brings the best of both.", locationTimes: { Clane: "2.30pm", "Kildare Town": "2pm" }, released: true },
-  { name: "Movember", date: "2026-11-15", locations: allStudios, category: "holiday", description: "Bring a man in your life along for free and show him what Reformer is all about. A feel-good class with good company, a fun atmosphere and plenty to get you both working.", time: "11:00 AM", duration: "45 minutes", bookingLink: "https://momence.com/l/2Bhk27Br", released: true },
+  { name: "Movember", date: "2026-11-15", locations: allStudios, category: "holiday", description: "Bring a man in your life along for free and show him what Reformer is all about. A feel-good class with good company, a fun atmosphere and plenty to get you both working.", bookingLink: "https://momence.com/l/2Bhk27Br", released: true },
   { name: "Sunday Reset", date: "2027-01-17", locations: allStudiosExceptEnfield, category: "pop-up", description: "Christmas is done. Your turn. Enjoy a feel-good Reformer class followed by essential oils, eye masks and a guided meditation. A little time to switch off and leave feeling like you’ve finally had a minute to yourself.", released: true },
   { name: "Valentine’s Day", date: "2027-02-14", locations: allStudios, category: "holiday", description: "Your favourite class with your favourite person. Bring your partner, best friend or someone you love for free. A little Reformer, plenty of fun and time together that beats another box of chocolates.", released: true },
   { name: "Throwback Class", date: "2027-02-19", locations: allStudiosExceptEnfield, category: "pop-up", description: "Which decade has the best tunes? You decide. Vote in our poll on social media and the winning decade will become our class playlist. We’ll bring the Reformers, disco balls and funky vibes.", released: true },
@@ -27,7 +27,7 @@ export function eventDate(date: string) {
 }
 export function eventTime(event: CommunityEvent) {
   if (event.locationTimes) return event.locations.map(location => `${location} @ ${event.locationTimes?.[location]}`.replace(/ /g, "\u00A0")).join(" · ");
-  return [event.time, event.duration].filter(Boolean).join(" · ") || "Time to be confirmed";
+  return [event.time, event.duration].filter(Boolean).join(" · ") || "See your local studio for times";
 }
 export function eventLocations(event: CommunityEvent) {
   if (event.locations.length === allStudios.length) return "All six studios";
