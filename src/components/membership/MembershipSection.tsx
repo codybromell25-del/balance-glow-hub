@@ -27,7 +27,7 @@ export default function MembershipSection({ classType = "reformer" }: { classTyp
           {plan.link ? <Button asChild variant="sage" className="w-full mt-auto"><a href={plan.link} target="_blank" rel="noopener noreferrer" aria-label={`Join ${plan.classes} ${classType} monthly membership`}>Join now <ArrowRight /></a></Button> : <div className="mt-auto text-sm py-2">Joining link coming soon</div>}
         </div>)}
       </div>
-      <p className="text-xs leading-relaxed mt-6">Auto-renews monthly. Cancel with 7 days’ notice before your next billing date. Rollover applies to limited monthly memberships, not Unlimited. The pop-up discount does not apply to holiday bring-a-guest classes. {classType === "reformer" ? "Reformer classes are available at all six studios." : "Mat, Barre & Yoga are available in Limerick and Kildare Town."}</p>
+      <p className="text-xs leading-relaxed mt-6">Auto-renews monthly. Cancel with 7 days’ notice before your next billing date. Rollover applies to limited monthly memberships, not Unlimited. The pop-up discount does not apply to holiday bring-a-guest classes. {classType === "reformer" ? "Reformer classes are available at all six studios." : "Mat, Barre & Yoga are available in Limerick and Kildare Town."} <a href="/membership-faqs" className="underline">Read the membership FAQs</a>.</p>
     </div>
   </section>;
 }
