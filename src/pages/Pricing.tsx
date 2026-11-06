@@ -5,18 +5,18 @@ import SEO from "@/components/SEO";
 import { reformerMembershipPlans, matMembershipPlans, popUpMemberPrice, popUpPrice, type MembershipPlan } from "@/lib/membershipPlans";
 
 type ClassType = "reformer" | "mat";
-type Pack = { classes: number; price: number; days: number; link: string };
+type Pack = { classes: number; price: number; link: string };
 
 export const data: Record<ClassType, { dropIn: number; plans: MembershipPlan[]; packs: Pack[]; intro: { label: string; link: string }; where: string; unlimitedNote: string }> = {
   reformer: {
     dropIn: 24,
     plans: reformerMembershipPlans,
     packs: [
-      { classes: 1, price: 24, days: 30, link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
-      { classes: 3, price: 65, days: 30, link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
-      { classes: 6, price: 130, days: 60, link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
-      { classes: 10, price: 215, days: 310, link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },
-      { classes: 20, price: 400, days: 610, link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
+      { classes: 1, price: 24, link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
+      { classes: 3, price: 65, link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
+      { classes: 6, price: 130, link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
+      { classes: 10, price: 215, link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },
+      { classes: 20, price: 400, link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
     ],
     intro: { label: "3 Reformer classes for €50", link: "https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031" },
     where: "Reformer classes are available at all six studios.",
@@ -26,9 +26,9 @@ export const data: Record<ClassType, { dropIn: number; plans: MembershipPlan[]; 
     dropIn: 15,
     plans: matMembershipPlans,
     packs: [
-      { classes: 1, price: 15, days: 30, link: "https://momence.com/m/573998" },
-      { classes: 3, price: 42, days: 30, link: "https://momence.com/m/771509" },
-      { classes: 6, price: 84, days: 60, link: "https://momence.com/m/771510" },
+      { classes: 1, price: 15, link: "https://momence.com/m/573998" },
+      { classes: 3, price: 42, link: "https://momence.com/m/771509" },
+      { classes: 6, price: 84, link: "https://momence.com/m/771510" },
     ],
     intro: { label: "3 Mat, Barre or Yoga classes for €40", link: "https://momence.com/balance/membership/Intro-Offer---3-Mat-%2F-Barre-%2F-Yoga-classes-for-%E2%82%AC40/771466" },
     where: "Mat, Barre & Yoga run at Limerick and Kildare Town.",
@@ -71,7 +71,7 @@ const Pricing = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Pricing & Memberships | balance studios - Reformer Pilates"
-        description="Reformer Pilates class packs from €24 and memberships from €85. New here? 3 classes for €50, valid at all 6 balance studios."
+        description="Reformer Pilates class packs from €24 and memberships from €85. New here? 3 classes for €50, usable at all 6 balance studios."
         canonical="/pricing"
       />
       <Navigation />
@@ -201,7 +201,6 @@ const Pricing = () => {
                 <div key={k.classes} className="flex items-center gap-3 py-4 border-b border-border last:border-0 text-sm">
                   <p className="flex-1">
                     <span className="font-semibold">{k.classes} {k.classes === 1 ? "class" : "classes"}</span>
-                    <span className="text-foreground/60"> · valid {k.days} days</span>
                   </p>
                   <span className="font-heading text-2xl">{eur(k.price)}</span>
                   <a href={k.link} target="_blank" rel="noopener noreferrer" className="w-14 text-right font-semibold text-sage-deep">Buy →</a>
@@ -210,7 +209,7 @@ const Pricing = () => {
             </div>
           </div>
           <p className="mt-6 text-xs text-foreground/60 text-center">
-            Memberships auto-renew monthly; cancel with 7 days' notice. Packs valid from first class. New here?{" "}
+            Memberships auto-renew monthly; cancel with 7 days' notice. New here?{" "}
             <a href={d.intro.link} target="_blank" rel="noopener noreferrer" className="underline">{d.intro.label}</a> ·{" "}
             <a href="/membership-faqs" className="underline">Membership FAQs</a> ·{" "}
             <a href="/faq" className="underline">FAQ</a>
