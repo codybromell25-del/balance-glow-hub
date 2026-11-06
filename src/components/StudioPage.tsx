@@ -27,12 +27,12 @@ interface StudioPageProps {
   studioInfo: StudioInfo;
 }
 
-const classPacks: { classes: number; price: string; oldPrice?: string; validity: string; description: string; link: string }[] = [
-  { classes: 1, price: "€24", validity: "30-day expiry", description: "Book any balance. class with this flexible single session.", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
-  { classes: 3, price: "€65", validity: "30-day expiry", description: "Get access to 3 classes, valid for 30 days.", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
-  { classes: 6, price: "€130", validity: "60-day expiry", description: "Get access to 6 classes, valid for 60 days.", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
-  { classes: 10, price: "€215", validity: "310-day expiry", description: "Get access to 10 classes, valid over 10 months.", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },
-  { classes: 20, price: "€400", validity: "610-day expiry", description: "Get access to 20 classes, valid over 20 months.", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
+const classPacks: { classes: number; price: string; oldPrice?: string; description: string; link: string }[] = [
+  { classes: 1, price: "€24", description: "Book any balance. class with this flexible single session.", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
+  { classes: 3, price: "€65", description: "Get access to 3 classes to use whenever you like.", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
+  { classes: 6, price: "€130", description: "Get access to 6 classes to use whenever you like.", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
+  { classes: 10, price: "€215", description: "Get access to 10 classes to use whenever you like.", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },
+  { classes: 20, price: "€400", description: "Get access to 20 classes to use whenever you like.", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
 ];
 
 const StudioPage = ({ studioInfo }: StudioPageProps) => {
@@ -429,14 +429,13 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">
                     {pack.classes} Class Pack
                   </h3>
-                  <p className="text-xs text-muted-foreground mb-4">
-                    {pack.validity}
-                    {pack.oldPrice && (
-                      <span className="ml-2 inline-block px-2 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">
+                  {pack.oldPrice && (
+                    <p className="text-xs text-muted-foreground mb-4">
+                      <span className="inline-block px-2 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">
                         Summer Sale
                       </span>
-                    )}
-                  </p>
+                    </p>
+                  )}
                   
                   <p className="text-sm text-muted-foreground mb-4 flex-grow leading-relaxed">
                     {pack.description}
