@@ -1,4 +1,5 @@
 # Roadmap (site audit)
+- [x] Remove clipped wording and partly hidden options from the mobile quick-buy guide at phone sizes
 - [x] Redesign mobile quick-buy guide: compact collapsed bar, clearer full-width choices, preserved checkout links and tap tracking
 - [ ] Connect ad account — awaiting choice of Facebook/Instagram or Google Ads
 - [x] Check recorded usage of the bottom quick-buy bar for 2–9 November — two homepage Buy now taps from two visits; completed purchases unknown

@@ -40,14 +40,14 @@ const QuickBuyBar = ({ memberships, classes, intro }: { memberships: QuickGroup;
         <button
           aria-label="Close quick buy guide"
           onClick={close}
-          className="fixed inset-0 z-30 cursor-default bg-foreground/30 backdrop-blur-[2px] md:hidden"
+          className="fixed inset-0 z-[60] cursor-default bg-foreground/30 backdrop-blur-[2px] md:hidden"
         />
       )}
-      <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:px-4 md:pb-5">
+      <div className="pointer-events-none fixed inset-x-0 bottom-0 z-[70] px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:px-4 md:pb-5">
         <div className="pointer-events-auto mx-auto max-w-3xl overflow-hidden rounded-[1.75rem] bg-foreground text-background shadow-2xl">
           <div className="md:hidden">
             {open ? (
-              <div id="quick-buy-mobile" className="flex max-h-[78dvh] flex-col">
+              <div id="quick-buy-mobile" className="flex max-h-[92dvh] flex-col">
                 <div className="flex items-center justify-between gap-4 border-b border-background/15 px-5 py-4">
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.2em] text-background/60">Quick buy</p>
