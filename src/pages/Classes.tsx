@@ -184,7 +184,7 @@ const Classes = () => (
 
       <nav aria-label="Class types" className="border-y border-foreground/10">
         <div className="container mx-auto px-4">
-          <div className="flex gap-2 overflow-x-auto scrollbar-hide py-4 md:justify-center">
+          <div className="flex flex-wrap gap-2 justify-center py-4">
             {CLASSES.map((c) => (
               <a
                 key={c.id}
