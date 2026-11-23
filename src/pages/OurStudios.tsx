@@ -108,13 +108,13 @@ const OurStudios = () => {
         {/* Filter pills */}
         <section className="pt-8 md:pt-12">
           <div className="container mx-auto px-4">
-            <div className="flex gap-2 overflow-x-auto scrollbar-hide justify-start md:justify-center pb-1">
+            <div className="flex flex-wrap gap-2 justify-center pb-1">
               {FILTERS.map((f) => (
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
                   aria-pressed={filter === f}
-                  className={`shrink-0 rounded-full border px-5 py-2 text-sm transition-colors ${
+                  className={`rounded-full border px-5 py-2 text-sm transition-colors ${
                     filter === f ? "bg-sage border-sage text-foreground" : "border-foreground/20 text-foreground hover:border-sage"
                   }`}
                 >
