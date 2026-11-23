@@ -142,7 +142,7 @@ const QuickBuyBar = ({ memberships, classes, intro }: { memberships: QuickGroup;
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block text-[10px] uppercase tracking-[0.2em] text-background/60">Quick buy</span>
-                  <span className="mt-0.5 block font-heading text-base italic">Memberships & classes</span>
+                  <span className="mt-0.5 block font-heading text-base italic">Class Packs & Memberships</span>
                 </span>
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-background/10 text-background/90">
                   <ChevronUp className="h-4 w-4" />

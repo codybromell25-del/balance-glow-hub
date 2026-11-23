@@ -46,18 +46,18 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Classes", path: "/classes" },
-    { name: "Memberships", path: "/pricing" },
+    { name: "Book a Class", path: "/our-studios" },
+    { name: "Pricing", path: "/pricing" },
+    { name: "Class Guide", path: "/classes" },
+    { name: "Studios", path: "/our-studios" },
     { name: "Pop-ups", path: "/events" },
     { name: "On Demand", path: "/on-demand" },
-    { name: "Book", path: "/our-studios" },
+    { name: "Gift Cards", path: "/gift-cards" },
     { name: "Shop", path: "/shop" },
     { name: "Education", path: "https://educationbalance.vercel.app/" },
-    { name: "Gift Cards", path: "/gift-cards" },
-    { name: "Careers", path: "/careers" },
-
     { name: "Our Story", path: "/about" },
+    { name: "Careers", path: "/careers" },
+    { name: "Home", path: "/" },
   ];
 
   return (
@@ -77,7 +77,7 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
             {navLinks.map((link) =>
-              link.name === "Book" ? (
+              link.name === "Book a Class" ? (
                 <div
                   key={link.path}
                   className="relative"
@@ -168,36 +168,36 @@ const Navigation = () => {
         {isOpen && (
           <div className="lg:hidden h-[calc(100svh-108px)] overflow-y-auto border-t border-border animate-fade-in">
             <div className="flex flex-col">
-              {/* Quick studio dropdown */}
-              <div className="border-b border-border">
-                <button
-                  className="flex w-full items-center justify-between py-3 text-3xl font-heading italic text-foreground"
-                  onClick={() => setStudiosOpen(!studiosOpen)}
-                  aria-expanded={studiosOpen}
-                >
-                  Studios
-                  <ChevronDown
-                    size={22}
-                    strokeWidth={1.4}
-                    className={`transition-transform ${studiosOpen ? "rotate-180" : ""}`}
-                  />
-                </button>
-                {studiosOpen && (
-                  <div className="flex flex-col animate-fade-in">
-                    {studioLinks.map((studio) => (
-                      <a
-                        key={studio.path}
-                        href={studio.path}
-                        className="border-t border-border py-3.5 pl-6 text-2xl font-heading italic text-foreground/80 transition-colors hover:text-sage-deep"
-                      >
-                        {studio.name}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
               {navLinks.map((link) =>
-                link.path.startsWith("http") ? (
+                link.name === "Studios" ? (
+                  <div key={link.path} className="border-b border-border">
+                    <button
+                      className="flex w-full items-center justify-between py-3 text-3xl font-heading italic text-foreground"
+                      onClick={() => setStudiosOpen(!studiosOpen)}
+                      aria-expanded={studiosOpen}
+                    >
+                      Studios
+                      <ChevronDown
+                        size={22}
+                        strokeWidth={1.4}
+                        className={`transition-transform ${studiosOpen ? "rotate-180" : ""}`}
+                      />
+                    </button>
+                    {studiosOpen && (
+                      <div className="flex flex-col animate-fade-in">
+                        {studioLinks.map((studio) => (
+                          <a
+                            key={studio.path}
+                            href={studio.path}
+                            className="border-t border-border py-3.5 pl-6 text-2xl font-heading italic text-foreground/80 transition-colors hover:text-sage-deep"
+                          >
+                            {studio.name}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : link.path.startsWith("http") ? (
                 <a
                   key={link.path}
                   href={link.path}
