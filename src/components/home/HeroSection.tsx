@@ -44,19 +44,28 @@ const HeroSection = () => {
         </div>
 
         {/* Buttons: pinned to the bottom of the photo on phones */}
-        <div className="mt-auto w-[80vw] mx-auto md:mx-0 md:w-auto md:max-w-4xl lg:max-w-5xl pt-6 md:mt-0 md:pt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
-          <Button asChild size="lg" className="rounded-full px-6 py-5 sm:px-8 sm:py-7 md:px-10 md:py-8 font-heading font-semibold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center border-0 text-black" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-            <a href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031" target="_blank" rel="noopener noreferrer">
-              Claim intro offer
-              <ShoppingCart className="w-4 h-4 ml-2" />
-            </a>
-          </Button>
-          <Button asChild variant="ghost" size="lg" className="text-foreground hover:text-foreground bg-white/95 hover:bg-white rounded-full px-6 py-5 sm:px-8 sm:py-7 md:px-10 md:py-8 font-heading font-medium text-sm sm:text-base md:text-lg border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center">
-            <a href="/our-studios">
-              Find a studio
-              <MapPin className="w-4 h-4 ml-2" />
-            </a>
-          </Button>
+        <div className="mt-auto w-[80vw] mx-auto md:mx-0 md:w-auto md:max-w-4xl lg:max-w-5xl pt-6 md:mt-0 md:pt-10 flex flex-col items-stretch gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
+            <Button asChild size="lg" className="rounded-full px-6 py-5 sm:px-7 sm:py-6 md:px-8 md:py-7 font-heading font-semibold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center border-0 text-black" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
+              <a href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031" target="_blank" rel="noopener noreferrer">
+                Claim intro · Reformer
+                <ShoppingCart className="w-4 h-4 ml-2" />
+              </a>
+            </Button>
+            <Button asChild variant="ghost" size="lg" className="text-foreground hover:text-foreground bg-white/95 hover:bg-white rounded-full px-6 py-5 sm:px-7 sm:py-6 md:px-8 md:py-7 font-heading font-medium text-sm sm:text-base md:text-lg border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center">
+              <a href="https://momence.com/balance/membership/Intro-Offer---3-Mat-%2F-Barre-%2F-Yoga-classes-for-%E2%82%AC40/771466" target="_blank" rel="noopener noreferrer">
+                Claim intro · Mat, Barre, Yoga
+                <ShoppingCart className="w-4 h-4 ml-2" />
+              </a>
+            </Button>
+          </div>
+          <a
+            href="/our-studios"
+            className="self-center sm:self-start inline-flex items-center gap-2 px-2 py-1 font-heading text-sm sm:text-base italic text-white/90 underline-offset-4 hover:underline [text-shadow:0_1px_12px_rgba(0,0,0,0.8)]"
+          >
+            <MapPin className="w-4 h-4" />
+            Find a studio
+          </a>
         </div>
       </div>
     </section>;

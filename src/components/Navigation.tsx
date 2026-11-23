@@ -142,24 +142,6 @@ const Navigation = () => {
                 </Link>
               )
             )}
-            <div className="hidden xl:flex items-center gap-2">
-              <a
-                href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-[#A3C1AD] px-4 py-2 text-sm font-heading italic text-white transition-colors hover:bg-[#8FB09A]"
-              >
-                Claim intro · Reformer
-              </a>
-              <a
-                href="https://momence.com/balance/membership/Intro-Offer---3-Mat-%2F-Barre-%2F-Yoga-classes-for-%E2%82%AC40/771466"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-[#A3C1AD] px-4 py-2 text-sm font-heading italic text-foreground transition-colors hover:bg-[#A3C1AD]/15"
-              >
-                Claim intro · Mat, Barre, Yoga
-              </a>
-            </div>
             <a
               href="https://momence.com/sign-in?hostId=62930"
               target="_blank"
