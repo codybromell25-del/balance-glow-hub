@@ -14,7 +14,12 @@ export const blackFridayPacks: Record<string, [number, number]> = {
 };
 
 export const isBlackFriday = (now: Date = new Date()): boolean => {
-  if (typeof window !== "undefined" && new URLSearchParams(window.location.search).get("bf") === "preview") return true;
+  if (typeof window !== "undefined") {
+    const { search, hostname } = window.location;
+    // Always show the sale in the Lovable editor preview so it can be reviewed before it starts.
+    const isEditorPreview = hostname.includes("id-preview--") || hostname.includes("lovableproject.com");
+    if (isEditorPreview || new URLSearchParams(search).get("bf") === "preview") return true;
+  }
   return now >= BLACK_FRIDAY_START && now < BLACK_FRIDAY_END;
 };
 
