@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { blackFridayPrice, isBlackFriday, GIFT_VOUCHER_DISCOUNT } from "@/lib/blackFriday";
+import BlackFridayBadge from "@/components/BlackFridayBadge";
 import { reformerMembershipPlans, matMembershipPlans, popUpMemberPrice, popUpPrice, type MembershipPlan } from "@/lib/membershipPlans";
 
 type ClassType = "reformer" | "mat";
@@ -199,10 +200,12 @@ const Pricing = () => {
             <div className="rounded-3xl border border-border bg-card p-6 md:p-9">
               <h3 className="font-heading italic text-2xl pb-4 border-b border-border">Class packs</h3>
               {isBlackFriday() && (
-                <p className="mt-4 text-xs text-foreground/70">
-                  <span className="inline-block mr-2 px-2 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">Black Friday</span>
-                  Three days only. Memberships excluded. <a href="/gift-cards" className="underline">{GIFT_VOUCHER_DISCOUNT}% off gift vouchers</a>
-                </p>
+                <div className="mt-4">
+                  <BlackFridayBadge />
+                  <p className="mt-2 text-xs text-foreground/70">
+                    Three days only. Memberships excluded. <a href="/gift-cards" className="underline">{GIFT_VOUCHER_DISCOUNT}% off gift vouchers</a>
+                  </p>
+                </div>
               )}
               {d.packs.map((k) => (
                 <div key={k.classes} className="flex items-center gap-3 py-4 border-b border-border last:border-0 text-sm">

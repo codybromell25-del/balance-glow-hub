@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import MembershipSection from "@/components/membership/MembershipSection";
 import SEO from "@/components/SEO";
 import { withBlackFriday } from "@/lib/blackFriday";
+import BlackFridayBadge from "@/components/BlackFridayBadge";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import heroImgReformer from "@/assets/studio-blessington.jpg";
 import heroImgMat from "@/assets/balance-studio-interior-hero.jpg";
@@ -197,11 +198,9 @@ const MembershipOffers = () => {
                           )}
                         </p>
                         {pack.oldPrice && (
-                          <p className="text-sm text-foreground/60 mt-1">
-                            <span className="inline-block px-2 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">
-                              Black Friday
-                            </span>
-                          </p>
+                          <div className="mt-2">
+                            <BlackFridayBadge />
+                          </div>
                         )}
                       </div>
                     </div>

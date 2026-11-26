@@ -24,6 +24,7 @@ interface StudioInfo {
 }
 
 import { withBlackFriday } from "@/lib/blackFriday";
+import BlackFridayBadge from "@/components/BlackFridayBadge";
 interface StudioPageProps {
   studioInfo: StudioInfo;
 }
@@ -431,11 +432,9 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                     {pack.classes} Class Pack
                   </h3>
                   {pack.oldPrice && (
-                    <p className="text-xs text-muted-foreground mb-4">
-                      <span className="inline-block px-2 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">
-                        Black Friday
-                      </span>
-                    </p>
+                    <div className="mb-4">
+                      <BlackFridayBadge />
+                    </div>
                   )}
                   
                   <p className="text-sm text-muted-foreground mb-4 flex-grow leading-relaxed">
