@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { blackFridayPrice, isBlackFriday, GIFT_VOUCHER_DISCOUNT } from "@/lib/blackFriday";
+import { blackFridayPrice, blackFridayLink, isBlackFriday, GIFT_VOUCHER_DISCOUNT } from "@/lib/blackFriday";
 import BlackFridayBadge from "@/components/BlackFridayBadge";
 import { reformerMembershipPlans, matMembershipPlans, popUpMemberPrice, popUpPrice, type MembershipPlan } from "@/lib/membershipPlans";
 
@@ -39,7 +39,7 @@ export const data: Record<ClassType, { dropIn: number; plans: MembershipPlan[]; 
 };
 
 export const planItem = (p: MembershipPlan) => ({ label: p.classes === "Unlimited" ? "Unlimited monthly" : `${p.classes} classes / month`, price: p.price, link: p.link });
-export const packItem = (p: Pack) => ({ label: p.classes === 1 ? "1 class" : `${p.classes}-class pack`, price: blackFridayPrice(p.link) ?? p.price, link: p.link });
+export const packItem = (p: Pack) => ({ label: p.classes === 1 ? "1 class" : `${p.classes}-class pack`, price: blackFridayPrice(p.link) ?? p.price, link: blackFridayLink(p.link) });
 const eur = (n: number) => `€${Number.isInteger(n) ? n : n.toFixed(2)}`;
 const gridCols: Record<number, string> = { 2: "lg:grid-cols-2 max-w-2xl mx-auto", 3: "lg:grid-cols-3 max-w-2xl mx-auto", 4: "lg:grid-cols-4", 5: "lg:grid-cols-5" };
 const isNum = (p: MembershipPlan): p is MembershipPlan & { classes: number } => typeof p.classes === "number";
@@ -220,7 +220,7 @@ const Pricing = () => {
                   ) : (
                     <span className="font-heading text-2xl">{eur(k.price)}</span>
                   )}
-                  <a href={k.link} target="_blank" rel="noopener noreferrer" className="w-14 text-right font-semibold text-sage-deep">Buy →</a>
+                  <a href={blackFridayLink(k.link)} target="_blank" rel="noopener noreferrer" className="w-14 text-right font-semibold text-sage-deep">Buy →</a>
                 </div>
               ))}
             </div>

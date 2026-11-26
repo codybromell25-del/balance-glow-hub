@@ -13,6 +13,15 @@ export const blackFridayPacks: Record<string, [number, number]> = {
   "https://momence.com/m/771510": [84, 70],
 };
 
+/** Usual Momence pack link -> dedicated Black Friday checkout link. */
+export const blackFridayLinks: Record<string, string> = {
+  "https://momence.com/Balance/membership/6-Reformer-Classes/573990": "https://momence.com/m/986693",
+  "https://momence.com/Balance/membership/10-Reformer-Classes/573992": "https://momence.com/m/988575",
+  "https://momence.com/Balance/membership/20-Reformer-Classes/573995": "https://momence.com/m/988593",
+  "https://momence.com/m/771509": "https://momence.com/m/986689",
+  "https://momence.com/m/771510": "https://momence.com/m/986691",
+};
+
 export const isBlackFriday = (now: Date = new Date()): boolean => {
   if (typeof window !== "undefined") {
     const { search, hostname } = window.location;
@@ -27,9 +36,13 @@ export const isBlackFriday = (now: Date = new Date()): boolean => {
 export const blackFridayPrice = (link: string, now?: Date): number | undefined =>
   isBlackFriday(now) ? blackFridayPacks[link]?.[1] : undefined;
 
+/** Checkout link to use: the Black Friday link while the sale runs, otherwise the usual one. */
+export const blackFridayLink = (link: string, now?: Date): string =>
+  (isBlackFriday(now) && blackFridayLinks[link]) || link;
+
 /** Adds sale price + oldPrice (formatted strings) to string-priced packs. */
 export const withBlackFriday = <T extends { price: string; link: string; oldPrice?: string }>(packs: T[]): T[] =>
   packs.map((p) => {
     const sale = blackFridayPrice(p.link);
-    return sale === undefined ? p : { ...p, oldPrice: p.price, price: `€${sale}` };
+    return sale === undefined ? p : { ...p, oldPrice: p.price, price: `€${sale}`, link: blackFridayLink(p.link) };
   });

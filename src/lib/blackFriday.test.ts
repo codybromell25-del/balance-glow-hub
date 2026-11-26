@@ -1,5 +1,5 @@
 import { describe, test as it, expect } from "bun:test";
-import { blackFridayPrice, isBlackFriday, blackFridayPacks } from "./blackFriday";
+import { blackFridayLink, blackFridayPrice, isBlackFriday, blackFridayPacks } from "./blackFriday";
 
 const during = new Date("2026-11-28T12:00:00Z");
 describe("Black Friday sale", () => {
@@ -25,5 +25,14 @@ describe("Black Friday sale", () => {
   });
   it("no sale price outside the window", () => {
     expect(blackFridayPrice("https://momence.com/m/771509", new Date("2026-12-01T00:00:00Z"))).toBeUndefined();
+  });
+  it("sends sale packs to the Black Friday checkout links only during the sale", () => {
+    const during = new Date("2026-11-28T12:00:00Z");
+    expect(blackFridayLink("https://momence.com/Balance/membership/6-Reformer-Classes/573990", during)).toBe("https://momence.com/m/986693");
+    expect(blackFridayLink("https://momence.com/Balance/membership/10-Reformer-Classes/573992", during)).toBe("https://momence.com/m/988575");
+    expect(blackFridayLink("https://momence.com/Balance/membership/20-Reformer-Classes/573995", during)).toBe("https://momence.com/m/988593");
+    expect(blackFridayLink("https://momence.com/m/771509", during)).toBe("https://momence.com/m/986689");
+    expect(blackFridayLink("https://momence.com/m/771510", during)).toBe("https://momence.com/m/986691");
+    expect(blackFridayLink("https://momence.com/m/771509", new Date("2026-12-01T00:00:00Z"))).toBe("https://momence.com/m/771509");
   });
 });

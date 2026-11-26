@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import BlackFridayBadge from "@/components/BlackFridayBadge";
-import { blackFridayPacks, GIFT_VOUCHER_DISCOUNT } from "@/lib/blackFriday";
+import { blackFridayPacks, blackFridayLinks, GIFT_VOUCHER_DISCOUNT } from "@/lib/blackFriday";
 import { data } from "@/pages/Pricing";
 
 type ClassType = "reformer" | "mat";
@@ -12,7 +12,7 @@ const eur = (value: number) => `€${value}`;
 const salePacks = (type: ClassType) =>
   data[type].packs.flatMap((pack) => {
     const prices = blackFridayPacks[pack.link];
-    return prices ? [{ ...pack, usual: prices[0], sale: prices[1] }] : [];
+    return prices ? [{ ...pack, link: blackFridayLinks[pack.link] ?? pack.link, usual: prices[0], sale: prices[1] }] : [];
   });
 
 const reformerPacks = salePacks("reformer");
