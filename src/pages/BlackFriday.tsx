@@ -21,7 +21,7 @@ const matPacks = salePacks("mat");
 const PackOption = ({ pack }: { pack: (typeof reformerPacks)[number] }) => (
   <div className="flex h-full flex-col rounded-2xl border border-border bg-background p-5">
     <p className="font-heading italic text-2xl">{pack.classes} classes</p>
-    <div className="mt-4 flex items-baseline gap-2">
+    <div className="mt-4 flex flex-wrap items-baseline gap-2">
       <span className="font-heading text-3xl">{eur(pack.sale)}</span>
       <span className="text-sm text-foreground/45 line-through">{eur(pack.usual)}</span>
     </div>
@@ -30,9 +30,9 @@ const PackOption = ({ pack }: { pack: (typeof reformerPacks)[number] }) => (
       href={pack.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="mt-5 flex min-h-12 items-center justify-center gap-2 rounded-full bg-foreground px-4 py-3 text-sm font-semibold text-background transition hover:bg-sage-deep"
+      className="mt-5 flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-foreground px-4 py-3 text-sm font-semibold text-background transition hover:bg-sage-deep"
     >
-      Buy {pack.classes}-class pack <ArrowRight className="h-4 w-4" />
+      Buy {pack.classes} classes <ArrowRight className="h-4 w-4" />
     </a>
   </div>
 );
@@ -73,7 +73,7 @@ const BlackFriday = () => (
       <section id="offers" className="container mx-auto scroll-mt-32 px-4 md:px-8">
         <div className="mx-auto max-w-6xl space-y-8 md:space-y-12">
           <article className="rounded-[2rem] border border-border bg-card p-5 md:p-10">
-            <div className="grid gap-6 md:grid-cols-[0.8fr_1.2fr] md:gap-10">
+            <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] md:gap-10">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sage-deep">Offer 01 · All six studios</p>
                 <h2 className="mt-3 font-heading text-3xl italic md:text-5xl">Reformer class packs</h2>
@@ -88,7 +88,7 @@ const BlackFriday = () => (
           </article>
 
           <article className="rounded-[2rem] border border-sage/50 bg-sage/15 p-5 md:p-10">
-            <div className="grid gap-6 md:grid-cols-[0.8fr_1.2fr] md:gap-10">
+            <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] md:gap-10">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sage-deep">Offer 02 · Limerick & Kildare Town</p>
                 <h2 className="mt-3 font-heading text-3xl italic md:text-5xl">Mat, Barre & Yoga class packs</h2>
