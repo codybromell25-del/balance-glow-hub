@@ -305,6 +305,37 @@ All colors MUST be HSL.
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Black Friday hero strip: rolling offers + light sweeping across */
+  @keyframes bf-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-bf-marquee {
+    animation: bf-marquee 28s linear infinite;
+  }
+
+  @keyframes bf-sweep {
+    0% {
+      transform: translateX(-160%) skewX(-12deg);
+    }
+    55%,
+    100% {
+      transform: translateX(360%) skewX(-12deg);
+    }
+  }
+  .animate-bf-sweep {
+    animation: bf-sweep 6s ease-in-out infinite;
+  }
+
+  .bf-fade-edges {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent);
+  }
 }
 
 @layer utilities {

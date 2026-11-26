@@ -47,3 +47,5 @@
 - [x] Quick-buy bar: taps recorded as Clarity custom events (verified one event per tap in preview)
 - [x] Report type added: "quick-buy bar" PDF (scripts/reports/quick_buy_report.py + quick_buy_data.json)
 - [ ] Quick-buy bar: tap counts still read by hand from the Clarity dashboard — a first-party counter needs owner approval
+- [x] Home banner: dark animated Black Friday strip across the top of the hero, linking to /black-friday
+- [x] Home hero: slim down both "Claim intro" pills (smaller padding and type on phone and desktop)

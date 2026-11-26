@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, MapPin } from "lucide-react";
+import HeroBlackFridayBanner from "@/components/home/HeroBlackFridayBanner";
+import { isBlackFriday } from "@/lib/blackFriday";
 import heroImage from "@/assets/studio-blessington.jpg";
 const HeroSection = () => {
-  return <section className="min-h-[calc(100svh-108px)] md:min-h-[85vh] flex relative overflow-hidden">
+  // During the Black Friday sale the hero carries an extra strip, so phones get a
+  // tighter vertical rhythm to keep every button clear of the bottom quick-buy bar.
+  const bf = isBlackFriday();
+  const tight = (a: string, b: string) => (bf ? a : b);
+  return <section className="min-h-[calc(100svh-108px)] md:min-h-[85vh] flex flex-col relative overflow-hidden">
       <img src={heroImage} alt="" aria-hidden="true" decoding="async" className="absolute inset-0 h-full w-full object-cover transform-gpu" />
       {/* Gentle wash, then a feathered pool of shadow behind the words — no edges, no box */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/15" />
@@ -11,7 +17,9 @@ const HeroSection = () => {
       {/* Computer: a gentle scrim on the copy side, no visible edge */}
       <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-black/55 via-black/28 to-transparent" />
 
-      <div className="container mx-auto px-4 md:px-12 lg:px-16 pt-8 pb-28 md:pt-10 md:pb-24 lg:pb-28 relative z-10 flex w-full flex-col justify-center md:justify-end">
+      <HeroBlackFridayBanner />
+
+      <div className={`container mx-auto px-4 md:px-12 lg:px-16 ${tight("pt-4", "pt-8")} pb-28 md:pt-10 md:pb-24 lg:pb-28 relative z-10 flex w-full flex-1 flex-col justify-center md:justify-end`}>
         {/* Copy: vertically centred on phones, sits with the buttons on larger screens */}
         <div className="w-[80vw] mx-auto text-center md:text-left md:mx-0 md:w-auto md:max-w-4xl lg:max-w-5xl flex flex-1 flex-col justify-center md:flex-none md:justify-start animate-fade-in">
 
@@ -20,17 +28,17 @@ const HeroSection = () => {
             href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 self-center md:self-start rounded-full bg-sage text-black px-4 py-1.5 md:px-5 md:py-2 text-xs md:text-base font-medium tracking-wide mb-5 md:mb-7 shadow-lg hover:bg-sage/80 transition-colors"
+            className={`inline-flex items-center gap-2 self-center md:self-start rounded-full bg-sage text-black px-4 py-1.5 md:px-5 md:py-2 text-xs md:text-base font-medium tracking-wide ${tight("mb-3", "mb-5")} md:mb-7 shadow-lg hover:bg-sage/80 transition-colors`}
           >
             New here? 3 classes for €50
           </a>
 
-          <h1 className="text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[11rem] font-heading font-normal text-white mb-3 md:mb-5 leading-[0.9] tracking-tight [text-shadow:0_2px_24px_rgba(0,0,0,0.6)]">
+          <h1 className={`text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[11rem] font-heading font-normal text-white ${tight("mb-2", "mb-3")} md:mb-5 leading-[0.9] tracking-tight [text-shadow:0_2px_24px_rgba(0,0,0,0.6)]`}>
             balance<span className="text-sage">.</span>
             <span className="sr-only"> Reformer Pilates studios in Limerick, Kildare, Wicklow &amp; Meath</span>
           </h1>
 
-          <div className="flex items-center justify-center md:justify-start gap-3 md:gap-4 mb-5 md:mb-8">
+          <div className={`flex items-center justify-center md:justify-start gap-3 md:gap-4 ${tight("mb-3", "mb-5")} md:mb-8`}>
             <span className="w-6 md:w-20 h-[1px] bg-gradient-to-r from-sage to-sage/10"></span>
             <span className="text-sage text-[11px] md:text-lg uppercase tracking-[0.28em] md:tracking-[0.35em] font-semibold [text-shadow:0_1px_12px_rgba(0,0,0,0.8)]">Reformer Pilates</span>
             <span className="w-6 md:w-20 h-[1px] bg-gradient-to-l from-sage to-sage/10"></span>
@@ -44,15 +52,15 @@ const HeroSection = () => {
         </div>
 
         {/* Buttons: pinned to the bottom of the photo on phones */}
-        <div className="mt-auto w-[80vw] mx-auto md:mx-0 md:w-auto md:max-w-4xl lg:max-w-5xl pt-6 md:mt-0 md:pt-10 flex flex-col items-stretch gap-3 sm:gap-4">
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
-            <Button asChild size="lg" className="rounded-full px-6 py-5 sm:px-7 sm:py-6 md:px-8 md:py-7 font-heading font-semibold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center border-0 text-black" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
+        <div className={`mt-auto w-[80vw] mx-auto md:mx-0 md:w-auto md:max-w-4xl lg:max-w-5xl ${tight("pt-3", "pt-6")} md:mt-0 md:pt-10 flex flex-col items-center md:items-start gap-2 sm:gap-4`}>
+          <div className="flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-5">
+            <Button asChild size="lg" className="h-auto w-auto rounded-full px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-2.5 font-heading font-semibold text-xs sm:text-sm md:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center border-0 text-black" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
               <a href="https://momence.com/balance/membership/Intro-Offer---3-Reformer-Classes/574031" target="_blank" rel="noopener noreferrer">
                 Claim intro · Reformer
                 <ShoppingCart className="w-4 h-4 ml-2" />
               </a>
             </Button>
-            <Button asChild variant="ghost" size="lg" className="text-foreground hover:text-foreground bg-white/95 hover:bg-white rounded-full px-6 py-5 sm:px-7 sm:py-6 md:px-8 md:py-7 font-heading font-medium text-sm sm:text-base md:text-lg border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center">
+            <Button asChild variant="ghost" size="lg" className="h-auto w-auto text-foreground hover:text-foreground bg-white/95 hover:bg-white rounded-full px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-2.5 font-heading font-medium text-xs sm:text-sm md:text-base border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 justify-center">
               <a href="https://momence.com/balance/membership/Intro-Offer---3-Mat-%2F-Barre-%2F-Yoga-classes-for-%E2%82%AC40/771466" target="_blank" rel="noopener noreferrer">
                 Claim intro · Mat, Barre, Yoga
                 <ShoppingCart className="w-4 h-4 ml-2" />
