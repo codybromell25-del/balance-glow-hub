@@ -1,4 +1,7 @@
 # Roadmap (site audit)
+- [x] Black Friday: dedicated page with all three offers and direct purchase links
+- [x] Black Friday: pop-up and quick-buy guide lead to the dedicated page
+- [x] Black Friday: animated black mobile-menu highlight, visible only during the sale
 - [x] Remove clipped wording and partly hidden options from the mobile quick-buy guide at phone sizes
 - [x] Redesign mobile quick-buy guide: compact collapsed bar, clearer full-width choices, preserved checkout links and tap tracking
 - [ ] Connect ad account — awaiting choice of Facebook/Instagram or Google Ads

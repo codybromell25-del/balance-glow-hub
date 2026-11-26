@@ -52,6 +52,7 @@ import NotFound from "./pages/NotFound";
 import ThankYou from "./pages/ThankYou";
 import OnDemand from "./pages/OnDemand";
 import MembershipFaqs from "./pages/MembershipFaqs";
+import BlackFriday from "./pages/BlackFriday";
 
 const queryClient = new QueryClient();
 
@@ -113,6 +114,7 @@ const App = () => (
           <Route path="/shop" element={<Shop />} />
           <Route path="/on-demand" element={<OnDemand />} />
           <Route path="/membership-faqs" element={<MembershipFaqs />} />
+          <Route path="/black-friday" element={<BlackFriday />} />
           <Route path="/font-preview" element={<FontPreview />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

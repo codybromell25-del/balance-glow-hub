@@ -1,20 +1,15 @@
 import { useEffect, useState } from "react";
+import { ArrowRight } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import BlackFridayBadge from "@/components/BlackFridayBadge";
 import { isBlackFriday, GIFT_VOUCHER_DISCOUNT } from "@/lib/blackFriday";
 
 const KEY = "bf2026-popup-seen";
 
-const offers = [
-  { title: "Reformer class packs", detail: "6 for €115 · 10 for €190 · 20 for €370", href: "/pricing", cta: "Shop Reformer packs" },
-  { title: "Mat, Barre & Yoga class packs", detail: "3 for €36 · 6 for €70", href: "/pricing", cta: "Shop Mat, Barre & Yoga" },
-  { title: `${GIFT_VOUCHER_DISCOUNT}% off gift vouchers`, detail: "Any amount, buy as many as you like", href: "/gift-cards", cta: "Shop vouchers" },
-];
-
 const BlackFridayPopup = () => {
   const [open, setOpen] = useState(false);
   useEffect(() => {
-    if (!isBlackFriday() || window.location.pathname === "/thank-you") return;
+    if (!isBlackFriday() || ["/thank-you", "/black-friday"].includes(window.location.pathname)) return;
     if (sessionStorage.getItem(KEY)) return;
     const t = setTimeout(() => { setOpen(true); sessionStorage.setItem(KEY, "1"); }, 1200);
     return () => clearTimeout(t);
@@ -24,23 +19,29 @@ const BlackFridayPopup = () => {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent
         overlayClassName="z-[80]"
-        className="z-[80] max-w-md w-[calc(100%-2rem)] max-h-[calc(100dvh-9rem)] overflow-y-auto rounded-2xl border-sage/30 bg-foreground p-4 text-background gap-2 sm:p-6 [&>button]:text-background"
+        className="z-[80] max-w-md w-[calc(100%-2rem)] overflow-hidden rounded-[2rem] border-sage/30 bg-foreground p-6 text-background sm:p-8 [&>button]:text-background"
       >
-        <div className="text-center">
-          <span className="sm:hidden"><BlackFridayBadge size="sm" className="!text-sage" /></span>
-          <span className="hidden sm:inline"><BlackFridayBadge size="md" className="!text-sage" /></span>
-          <DialogTitle className="mt-2 font-heading italic text-2xl md:text-3xl font-normal">Three days only</DialogTitle>
-          <DialogDescription className="mt-1 text-[13px] text-background/70">Fri 27 – Sun 29 November. Memberships excluded.</DialogDescription>
+        <div aria-hidden className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-sage/20 blur-3xl motion-safe:animate-pulse" />
+        <div className="relative text-center">
+          <BlackFridayBadge size="md" className="!text-sage" />
+          <DialogTitle className="mt-4 font-heading italic text-3xl font-normal leading-tight">A little more balance, for less.</DialogTitle>
+          <DialogDescription className="mx-auto mt-3 max-w-xs text-sm leading-relaxed text-background/70">
+            Friday 27 to Sunday 29 November. Three offers, all in one place.
+          </DialogDescription>
         </div>
-        <ul className="mt-1 space-y-2">
-          {offers.map((o, i) => (
-            <li key={o.title} className={`rounded-xl border border-sage/40 bg-background/5 p-3 sm:p-4 ${i % 2 ? "rotate-[0.6deg]" : "-rotate-[0.6deg]"}`}>
-              <p className="font-heading italic text-[15px] sm:text-lg leading-snug">{o.title}</p>
-              <p className="mt-0 text-[13px] leading-tight text-background/70">{o.detail}</p>
-              <a href={o.href} className="mt-1 inline-block text-[13px] font-medium text-sage underline underline-offset-4">{o.cta} →</a>
-            </li>
-          ))}
+        <ul className="relative my-5 space-y-3 rounded-2xl border border-sage/30 bg-background/5 p-4 text-sm">
+          <li className="flex items-center gap-3"><span className="h-1.5 w-1.5 shrink-0 rounded-full bg-sage" />Reformer class packs</li>
+          <li className="flex items-center gap-3"><span className="h-1.5 w-1.5 shrink-0 rounded-full bg-sage" />Mat, Barre & Yoga class packs</li>
+          <li className="flex items-center gap-3"><span className="h-1.5 w-1.5 shrink-0 rounded-full bg-sage" />{GIFT_VOUCHER_DISCOUNT}% off all gift vouchers</li>
         </ul>
+        <a
+          href="/black-friday"
+          onClick={() => setOpen(false)}
+          className="relative flex min-h-12 items-center justify-center gap-2 rounded-full bg-sage px-6 py-3.5 text-sm font-semibold text-foreground transition hover:brightness-105"
+        >
+          See all Black Friday offers <ArrowRight className="h-4 w-4" />
+        </a>
+        <p className="relative mt-3 text-center text-xs text-background/55">Memberships excluded.</p>
       </DialogContent>
     </Dialog>
   );

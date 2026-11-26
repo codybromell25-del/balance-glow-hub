@@ -4,6 +4,7 @@ import { Menu, X, User, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import AnnouncementBanner from "./AnnouncementBanner";
+import { isBlackFriday } from "@/lib/blackFriday";
 
 const trackOutboundClick = (url: string, label: string) => {
   if (typeof window !== "undefined" && (window as any).gtag) {
@@ -168,6 +169,17 @@ const Navigation = () => {
         {isOpen && (
           <div className="lg:hidden h-[calc(100svh-108px)] overflow-y-auto border-t border-border animate-fade-in">
             <div className="flex flex-col">
+              {isBlackFriday() && (
+                <Link
+                  to="/black-friday"
+                  onClick={() => setIsOpen(false)}
+                  className="relative my-3 flex items-center justify-between rounded-2xl bg-foreground px-5 py-4 text-background"
+                >
+                  <span aria-hidden className="absolute -inset-1 rounded-[1.25rem] bg-sage/40 blur-lg motion-safe:animate-pulse" />
+                  <span className="relative font-heading text-3xl italic">Black Friday</span>
+                  <span className="relative rounded-full border border-sage/50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-sage">3 days only</span>
+                </Link>
+              )}
               {navLinks.map((link) =>
                 link.name === "Studios" ? (
                   <div key={link.path} className="border-b border-border">
