@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { ArrowUpRight, Check, ChevronDown, ChevronUp, ShoppingBag, X } from "lucide-react";
 
-export type QuickItem = { label: string; price: number; link?: string };
+export type QuickItem = { label: string; price: number; link?: string; was?: number };
 export type QuickGroup = { reformer: QuickItem[]; mat: QuickItem[] };
-type Tab = "memberships" | "classes" | "new";
+type Tab = "bf" | "memberships" | "classes" | "new";
 
 const eur = (n: number) => `€${n}`;
-const tabs: [Tab, string][] = [["memberships", "Memberships"], ["classes", "Classes"], ["new", "New here"]];
+const baseTabs: [Tab, string][] = [["memberships", "Memberships"], ["classes", "Classes"], ["new", "New here"]];
 
 // Clarity custom events (documented client API: window.clarity("event", name)).
 // Measurement is optional — a missing recorder must never break a purchase.
@@ -19,11 +19,12 @@ const track = (name: string) => {
   }
 };
 
-const QuickBuyBar = ({ memberships, classes, intro }: { memberships: QuickGroup; classes: QuickGroup; intro: QuickGroup }) => {
-  const [tab, setTab] = useState<Tab>("memberships");
+const QuickBuyBar = ({ memberships, classes, intro, deals }: { memberships: QuickGroup; classes: QuickGroup; intro: QuickGroup; deals?: QuickGroup }) => {
+  const tabs: [Tab, string][] = deals ? [["bf", "Black Friday"], ...baseTabs] : baseTabs;
+  const [tab, setTab] = useState<Tab>(deals ? "bf" : "memberships");
   const [type, setType] = useState<"reformer" | "mat">("reformer");
   const [open, setOpen] = useState(false);
-  const source = tab === "memberships" ? memberships : tab === "classes" ? classes : intro;
+  const source = tab === "bf" && deals ? deals : tab === "memberships" ? memberships : tab === "classes" ? classes : intro;
   const items = source[type];
   const [picked, setPicked] = useState<Record<string, number>>({});
   const key = `${tab}-${type}`;
@@ -59,13 +60,13 @@ const QuickBuyBar = ({ memberships, classes, intro }: { memberships: QuickGroup;
                 </div>
 
                 <div className="overflow-y-auto px-4 py-4">
-                  <div className="grid grid-cols-3 gap-1 rounded-2xl bg-background/10 p-1" aria-label="What would you like to buy?">
+                  <div className={`grid ${deals ? "grid-cols-2" : "grid-cols-3"} gap-1 rounded-2xl bg-background/10 p-1`} aria-label="What would you like to buy?">
                     {tabs.map(([t, label]) => (
                       <button
                         key={t}
                         onClick={() => choose(t)}
                         aria-pressed={tab === t}
-                        className={`min-h-11 rounded-xl px-2 text-xs transition ${tab === t ? "bg-background text-foreground" : "text-background/75"}`}
+                        className={`min-h-11 rounded-xl px-2 text-xs transition ${tab === t ? "bg-background text-foreground" : t === "bf" ? "text-sage font-semibold" : "text-background/75"}`}
                       >
                         {label}
                       </button>
@@ -99,10 +100,16 @@ const QuickBuyBar = ({ memberships, classes, intro }: { memberships: QuickGroup;
                           {i === idx && <Check className="h-3 w-3" strokeWidth={3} />}
                         </span>
                         <span className="flex-1 text-sm">{it.label}</span>
-                        <span className="font-heading text-base italic">{eur(it.price)}</span>
+                        <span className="font-heading text-base italic">{it.was && <s className="mr-1.5 text-sm opacity-60">{eur(it.was)}</s>}{eur(it.price)}</span>
                       </button>
                     ))}
                   </div>
+                  {tab === "bf" && (
+                    <a href="/gift-cards" onClick={() => track("quickbuy_bf_vouchers")} className="mt-4 flex items-center justify-between gap-3 rounded-2xl border border-sage/60 px-4 py-3 text-sm">
+                      <span><span className="block font-heading italic text-base">15% off gift vouchers</span><span className="text-background/65">Any amount, discount at checkout</span></span>
+                      <ArrowUpRight className="h-4 w-4 shrink-0 text-sage" />
+                    </a>
+                  )}
                 </div>
 
                 <div className="border-t border-background/15 p-4">
@@ -142,7 +149,7 @@ const QuickBuyBar = ({ memberships, classes, intro }: { memberships: QuickGroup;
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block text-[10px] uppercase tracking-[0.2em] text-background/60">Quick buy</span>
-                  <span className="mt-0.5 block font-heading text-base italic">Class Packs & Memberships</span>
+                  <span className="mt-0.5 block font-heading text-base italic">{deals ? "Black Friday offers & more" : "Class Packs & Memberships"}</span>
                 </span>
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-background/10 text-background/90">
                   <ChevronUp className="h-4 w-4" />
@@ -168,7 +175,7 @@ const QuickBuyBar = ({ memberships, classes, intro }: { memberships: QuickGroup;
                   {items.map((it, i) => (
                     <button key={it.label} onClick={() => { track(`quickbuy_pick_${slug(it.label)}`); setPicked({ ...picked, [key]: i }); }}
                       className={`rounded-full border px-3 py-2 text-sm transition ${i === idx ? "border-sage bg-sage text-foreground" : "border-background/25 text-background/90"}`}>
-                      {it.label} · {eur(it.price)}
+                      {it.label} · {it.was && <s className="opacity-60">{eur(it.was)}</s>} {eur(it.price)}
                     </button>
                   ))}
                 </div>
