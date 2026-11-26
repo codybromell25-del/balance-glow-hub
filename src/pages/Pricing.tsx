@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { blackFridayPrice, isBlackFriday, GIFT_VOUCHER_DISCOUNT } from "@/lib/blackFriday";
 import { reformerMembershipPlans, matMembershipPlans, popUpMemberPrice, popUpPrice, type MembershipPlan } from "@/lib/membershipPlans";
 
 type ClassType = "reformer" | "mat";
@@ -37,7 +38,7 @@ export const data: Record<ClassType, { dropIn: number; plans: MembershipPlan[]; 
 };
 
 export const planItem = (p: MembershipPlan) => ({ label: p.classes === "Unlimited" ? "Unlimited monthly" : `${p.classes} classes / month`, price: p.price, link: p.link });
-export const packItem = (p: Pack) => ({ label: p.classes === 1 ? "1 class" : `${p.classes}-class pack`, price: p.price, link: p.link });
+export const packItem = (p: Pack) => ({ label: p.classes === 1 ? "1 class" : `${p.classes}-class pack`, price: blackFridayPrice(p.link) ?? p.price, link: p.link });
 const eur = (n: number) => `€${Number.isInteger(n) ? n : n.toFixed(2)}`;
 const gridCols: Record<number, string> = { 2: "lg:grid-cols-2 max-w-2xl mx-auto", 3: "lg:grid-cols-3 max-w-2xl mx-auto", 4: "lg:grid-cols-4", 5: "lg:grid-cols-5" };
 const isNum = (p: MembershipPlan): p is MembershipPlan & { classes: number } => typeof p.classes === "number";
@@ -197,12 +198,25 @@ const Pricing = () => {
             </div>
             <div className="rounded-3xl border border-border bg-card p-6 md:p-9">
               <h3 className="font-heading italic text-2xl pb-4 border-b border-border">Class packs</h3>
+              {isBlackFriday() && (
+                <p className="mt-4 text-xs text-foreground/70">
+                  <span className="inline-block mr-2 px-2 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">Black Friday</span>
+                  Three days only. Memberships excluded. <a href="/gift-cards" className="underline">{GIFT_VOUCHER_DISCOUNT}% off gift vouchers</a>
+                </p>
+              )}
               {d.packs.map((k) => (
                 <div key={k.classes} className="flex items-center gap-3 py-4 border-b border-border last:border-0 text-sm">
                   <p className="flex-1">
                     <span className="font-semibold">{k.classes} {k.classes === 1 ? "class" : "classes"}</span>
                   </p>
-                  <span className="font-heading text-2xl">{eur(k.price)}</span>
+                  {blackFridayPrice(k.link) !== undefined ? (
+                    <span className="flex items-baseline gap-2">
+                      <span className="font-heading text-base text-foreground/40 line-through">{eur(k.price)}</span>
+                      <span className="font-heading text-2xl">{eur(blackFridayPrice(k.link)!)}</span>
+                    </span>
+                  ) : (
+                    <span className="font-heading text-2xl">{eur(k.price)}</span>
+                  )}
                   <a href={k.link} target="_blank" rel="noopener noreferrer" className="w-14 text-right font-semibold text-sage-deep">Buy →</a>
                 </div>
               ))}

@@ -23,17 +23,18 @@ interface StudioInfo {
   heroPosition?: string;
 }
 
+import { withBlackFriday } from "@/lib/blackFriday";
 interface StudioPageProps {
   studioInfo: StudioInfo;
 }
 
-const classPacks: { classes: number; price: string; oldPrice?: string; description: string; link: string }[] = [
+const classPacks: { classes: number; price: string; oldPrice?: string; description: string; link: string }[] = withBlackFriday([
   { classes: 1, price: "€24", description: "Book any balance. class with this flexible single session.", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
   { classes: 3, price: "€65", description: "Get access to 3 classes to use whenever you like.", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
   { classes: 6, price: "€130", description: "Get access to 6 classes to use whenever you like.", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
   { classes: 10, price: "€215", description: "Get access to 10 classes to use whenever you like.", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992" },
   { classes: 20, price: "€400", description: "Get access to 20 classes to use whenever you like.", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
-];
+]);
 
 const StudioPage = ({ studioInfo }: StudioPageProps) => {
   const local = findStudioSchema(studioInfo.name);
@@ -432,7 +433,7 @@ const StudioPage = ({ studioInfo }: StudioPageProps) => {
                   {pack.oldPrice && (
                     <p className="text-xs text-muted-foreground mb-4">
                       <span className="inline-block px-2 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">
-                        Summer Sale
+                        Black Friday
                       </span>
                     </p>
                   )}

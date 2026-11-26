@@ -4,6 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight } from "lucide-react";
 import SEO from "@/components/SEO";
+import { isBlackFriday, GIFT_VOUCHER_DISCOUNT } from "@/lib/blackFriday";
 
 const GiftCards = () => {
   return (
@@ -24,6 +25,13 @@ const GiftCards = () => {
         <section className="py-8 md:py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
+              {isBlackFriday() && (
+                <div className="mb-8 rounded-2xl bg-foreground text-background px-6 py-5 text-center">
+                  <p className="text-[11px] uppercase tracking-[0.2em] mb-1">Black Friday · three days only</p>
+                  <p className="font-heading italic text-2xl md:text-3xl">{GIFT_VOUCHER_DISCOUNT}% off all gift vouchers</p>
+                  <p className="text-sm opacity-80 mt-2">Choose any amount, the discount comes off at checkout. Buy as many as you like for different people, on the website or the balance app.</p>
+                </div>
+              )}
               {/* Sexy Gift Card Tile */}
               <div className="relative group">
                 {/* Glow effect behind card */}

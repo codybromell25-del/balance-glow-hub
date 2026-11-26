@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import MembershipSection from "@/components/membership/MembershipSection";
 import SEO from "@/components/SEO";
+import { withBlackFriday } from "@/lib/blackFriday";
 import balanceLogo from "@/assets/balance-removebg-preview.png";
 import heroImgReformer from "@/assets/studio-blessington.jpg";
 import heroImgMat from "@/assets/balance-studio-interior-hero.jpg";
@@ -18,19 +19,19 @@ const sage = {
 type ClassType = "reformer" | "mat";
 
 type Pack = { classes: number; price: string; oldPrice?: string; link: string; featured?: boolean };
-const reformerPacks: Pack[] = [
+const reformerPacks: Pack[] = withBlackFriday([
   { classes: 1, price: "€24", link: "https://momence.com/balance/membership/Single-Reformer-Class/573997" },
   { classes: 3, price: "€65", link: "https://momence.com/Balance/membership/3-Reformer-Classes/573988" },
   { classes: 6, price: "€130", link: "https://momence.com/Balance/membership/6-Reformer-Classes/573990" },
   { classes: 10, price: "€215", link: "https://momence.com/Balance/membership/10-Reformer-Classes/573992", featured: true },
   { classes: 20, price: "€400", link: "https://momence.com/Balance/membership/20-Reformer-Classes/573995" },
-];
+]);
 
-const matPacks: Pack[] = [
+const matPacks: Pack[] = withBlackFriday([
   { classes: 1, price: "€15", link: "https://momence.com/m/573998" },
   { classes: 3, price: "€42", link: "https://momence.com/m/771509", featured: true },
   { classes: 6, price: "€84", link: "https://momence.com/m/771510" },
-];
+]);
 
 const MembershipOffers = () => {
   const [classType, setClassType] = useState<ClassType>("reformer");
@@ -198,7 +199,7 @@ const MembershipOffers = () => {
                         {pack.oldPrice && (
                           <p className="text-sm text-foreground/60 mt-1">
                             <span className="inline-block px-2 py-0.5 rounded-full bg-foreground text-background text-[10px] uppercase tracking-[0.18em]">
-                              Summer Sale
+                              Black Friday
                             </span>
                           </p>
                         )}
