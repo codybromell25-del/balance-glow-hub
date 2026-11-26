@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import TrackingConsent from "./components/TrackingConsent";
 import SiteQuickBuyBar from "./components/SiteQuickBuyBar";
+import BlackFridayPopup from "./components/BlackFridayPopup";
 import Index from "./pages/Index";
 import Events from "./pages/Events";
 import About from "./pages/About";
@@ -63,6 +64,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <TrackingConsent />
+        <BlackFridayPopup />
         <Routes>
           <Route path="/" element={<Index />} />
 
