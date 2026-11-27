@@ -112,7 +112,7 @@ const BlackFriday = () => (
                   <h2 className="font-heading text-3xl italic md:text-5xl">{GIFT_VOUCHER_DISCOUNT}% off all gift vouchers</h2>
                 </div>
                 <p className="mt-4 max-w-2xl text-sm leading-relaxed text-background/70 md:text-base">
-                  Choose any amount and buy as many as you like. The discount comes off at checkout, and vouchers can be used at all six studios.
+                  Choose any amount and buy as many as you like. Enter code <strong className="font-semibold tracking-wider text-background">BLACKFRIDAY15</strong> at checkout to get 15% off, and vouchers can be used at all six studios.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-background/65">
                   <span>Any amount</span><span>No expiry</span><span>Delivered by email</span>

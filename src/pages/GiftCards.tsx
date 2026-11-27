@@ -29,7 +29,7 @@ const GiftCards = () => {
                 <div className="mb-8 rounded-2xl bg-foreground text-background px-6 py-5 text-center">
                   <p className="font-heading italic text-sm md:text-base mb-1 text-background/85">Black Friday · three days only</p>
                   <p className="font-heading italic text-2xl md:text-3xl">{GIFT_VOUCHER_DISCOUNT}% off all gift vouchers</p>
-                  <p className="text-sm opacity-80 mt-2">Choose any amount, the discount comes off at checkout. Buy as many as you like for different people, on the website or the balance app.</p>
+                  <p className="text-sm opacity-80 mt-2">Choose any amount and enter code <strong className="font-semibold tracking-wider text-background">BLACKFRIDAY15</strong> at checkout. Buy as many as you like for different people, on the website or the balance app.</p>
                 </div>
               )}
               {/* Sexy Gift Card Tile */}

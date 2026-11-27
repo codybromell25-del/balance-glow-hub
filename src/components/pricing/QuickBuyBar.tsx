@@ -107,7 +107,7 @@ const QuickBuyBar = ({ memberships, classes, intro, deals }: { memberships: Quic
                   {tab === "bf" && (
                     <>
                       <a href="/gift-cards" onClick={() => track("quickbuy_bf_vouchers")} className="mt-4 flex items-center justify-between gap-3 rounded-2xl border border-sage/60 px-4 py-3 text-sm">
-                        <span><span className="block font-heading italic text-base">15% off gift vouchers</span><span className="text-background/65">Any amount, discount at checkout</span></span>
+                        <span><span className="block font-heading italic text-base">15% off gift vouchers</span><span className="text-background/65">Code BLACKFRIDAY15 at checkout</span></span>
                         <ArrowUpRight className="h-4 w-4 shrink-0 text-sage" />
                       </a>
                       <a href="/black-friday" onClick={() => track("quickbuy_bf_all_offers")} className="mt-3 flex min-h-11 items-center justify-center gap-2 text-sm font-semibold text-sage underline underline-offset-4">
