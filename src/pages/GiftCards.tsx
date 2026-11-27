@@ -24,7 +24,7 @@ const GiftCards = () => {
         {/* Gift Card CTA Section */}
         <section className="py-8 md:py-12">
           <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-3xl mx-auto">
               {isBlackFriday() && (
                 <div className="mb-8 rounded-2xl bg-foreground text-background px-6 py-5 text-center">
                   <p className="font-heading italic text-sm md:text-base mb-1 text-background/85">Black Friday · three days only</p>
@@ -32,49 +32,38 @@ const GiftCards = () => {
                   <p className="text-sm opacity-80 mt-2">Choose any amount and enter code <strong className="font-semibold tracking-wider text-background">BLACKFRIDAY15</strong> at checkout. Buy as many as you like for different people, on the website or the balance app.</p>
                 </div>
               )}
-              {/* Sexy Gift Card Tile */}
-              <div className="relative group">
-                {/* Glow effect behind card */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#A3C1AD] via-[#8fb39c] to-[#A3C1AD] rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
-                
-                <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
-                  {/* Top gradient bar */}
-                  <div className="h-2 relative overflow-hidden" style={{ background: 'linear-gradient(90deg, #b8d4c3 0%, #A3C1AD 50%, #8fb39c 100%)' }}>
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-black/10" />
-                  </div>
-                  
-                  <div className="p-10 md:p-14 text-center">
-                    {/* Icon */}
-                    <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}>
-                      <Gift className="w-10 h-10 text-white" />
+              <div className="relative overflow-hidden rounded-3xl border border-foreground/10 bg-card shadow-xl">
+                <div className="grid md:grid-cols-[1fr_1.1fr]">
+                  {/* Card visual */}
+                  <div className="relative flex items-center justify-center bg-[#A3C1AD]/30 p-8 md:p-10">
+                    <div className="relative aspect-[1.6/1] w-full max-w-[280px] -rotate-3 rounded-2xl bg-foreground p-5 text-background shadow-2xl">
+                      <div className="flex items-start justify-between">
+                        <span className="font-heading italic text-2xl">balance.</span>
+                        <Gift className="h-5 w-5 text-[#A3C1AD]" />
+                      </div>
+                      <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+                        <span className="font-heading italic text-sm text-background/80">a gift for you</span>
+                        <span className="text-[10px] tracking-[0.2em] text-background/60">6 STUDIOS</span>
+                      </div>
                     </div>
-                    
-                    {/* Title */}
-                    <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-                      Create Your Gift Card
+                  </div>
+                  {/* Copy + CTA */}
+                  <div className="flex flex-col justify-center p-6 sm:p-8 md:p-10 text-center md:text-left">
+                    <p className="font-heading italic text-sm text-muted-foreground mb-2">Digital gift card</p>
+                    <h2 className="text-2xl sm:text-3xl font-heading italic text-foreground mb-3">
+                      Create your gift card
                     </h2>
-                    
-                    {/* Description */}
-                    <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto leading-relaxed">
+                    <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                       Choose any amount and send it instantly. Valid at all 6 studios, never expires.
                     </p>
-                    
-                    {/* CTA Button */}
-                    <Button 
-                      asChild 
-                      size="lg"
-                      className="px-10 py-7 text-lg border-0 text-black shadow-xl hover:shadow-2xl hover:scale-[1.05] transition-all duration-300 rounded-full"
-                      style={{ background: 'linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)' }}
-                    >
+                    <Button asChild size="lg" className="w-full sm:w-auto h-auto min-h-12 whitespace-normal rounded-full border-0 px-6 py-3 text-base text-black shadow-md hover:opacity-90" style={{ background: "linear-gradient(180deg, #b8d4c3 0%, #A3C1AD 40%, #8fb39c 100%)" }}>
                       <a href="https://momence.com/balance/gift-card-checkout/62930" target="_blank" rel="noopener noreferrer">
-                        Create Gift Card Now
-                        <ArrowRight className="w-5 h-5 ml-2" />
+                        Create gift card
+                        <ArrowRight className="w-4 h-4 ml-2 shrink-0" />
                       </a>
                     </Button>
-                    
-                    {/* Small note */}
-                    <p className="text-sm text-muted-foreground mt-6 italic">
-                      The perfect gift for birthdays, holidays, or just because ♡
+                    <p className="text-sm text-muted-foreground mt-5 italic">
+                      For birthdays, holidays, or just because ♡
                     </p>
                   </div>
                 </div>
